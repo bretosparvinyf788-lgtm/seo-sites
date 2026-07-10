@@ -1,0 +1,1 @@
+run dedupe and sync latest guide across all languages; home latest 3; guides all
