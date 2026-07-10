@@ -1499,7 +1499,19 @@ html[lang="zh"] .footer-brand p{
   }
 }
 
+
+/* CSSBuy header logo */
+.brand-logo-img{height:39px;width:auto;display:block;object-fit:contain}
+.brand .mark.logo-mark{width:auto;height:auto;border-radius:0;background:transparent;color:inherit;display:flex;place-items:unset}
+.brand .brand-text{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+.footer-brand .brand-logo-img{height:39px}
+@media(max-width:760px){.brand-logo-img{height:34px}.footer-brand .brand-logo-img{height:34px}}
+
 </style>
+
+<link rel="icon" type="image/svg+xml" href="/assets/cssbuy-logo.svg">
+<link rel="shortcut icon" href="/assets/cssbuy-logo.svg">
+<link rel="apple-touch-icon" href="/assets/cssbuy-logo.svg">
 </head>
 <body>
 <div id="app" class="app-view"></div>
@@ -1555,7 +1567,7 @@ function header() {
   const languageOptions = [['en','English'],['es','Español'],['de','Deutsch'],['pt','Português'],['zh','中文']]
     .map(([code,label]) => `<option value="${code}" ${code===currentLang?'selected':''}>${label}</option>`).join('');
   return `<header class="top"><div class="wrap nav">
-    <a class="brand" href="#" onclick="event.preventDefault();setView('home')"><span class="mark">CSS</span><span>CSSBuyVip</span></a>
+    <a class="brand" href="#" onclick="event.preventDefault();setView('home')"><span class="mark logo-mark"><img class="brand-logo-img" src="/assets/cssbuy-logo.svg" alt="CSS Buy"></span><span class="brand-text">CSSBuyVip</span></a>
     <nav class="links">
       <a href="#" onclick="event.preventDefault();setView('home')">${u.nav[0]}</a>
       <a href="#" onclick="event.preventDefault();setView('home');setTimeout(()=>document.getElementById('quick-overview')?.scrollIntoView({behavior:'smooth'}),30)">${u.overviewNav || 'Overview'}</a>
@@ -1617,7 +1629,7 @@ function footer() {
     <div class="wrap">
       <div class="footer-grid">
         <div class="footer-brand">
-          <div class="brand"><span class="mark">CSS</span><span>CSSBuyVip</span></div>
+          <div class="brand"><span class="mark logo-mark"><img class="brand-logo-img" src="/assets/cssbuy-logo.svg" alt="CSS Buy"></span><span class="brand-text">CSSBuyVip</span></div>
           <p>${u.footer}</p>
         </div>
         <div class="footer-col">
