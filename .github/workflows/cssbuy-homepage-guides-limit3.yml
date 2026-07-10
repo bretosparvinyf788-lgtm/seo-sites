@@ -1,0 +1,77 @@
+name: CSSBuy Homepage Guides Limit 3
+
+on:
+  push:
+    paths:
+      - '.github/cssbuy-guides-limit3-trigger-*.txt'
+      - '.github/workflows/cssbuy-homepage-guides-limit3.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  limit-guides:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Keep homepage latest guides to 3 cards
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          import json
+          import re
+
+          path = Path('cssbuyvip/index.html')
+          text = path.read_text(encoding='utf-8')
+          m = re.search(r'const SITE_DATA = (\{.*?\});\nlet currentLang', text, re.S)
+          if not m:
+              raise SystemExit('SITE_DATA block not found')
+
+          data = json.loads(m.group(1))
+          new_article = {
+              "key": "transaction-checklist-20260710",
+              "title": "CSSBuy Transaction Checklist: From W2C Link to Warehouse Approval",
+              "excerpt": "Learn how to plan a safer CSSBuy haul with W2C links, seller checks, QC photos, warehouse handling, shipping estimates, coupons, returns and payment mistake prevention.",
+              "body": [
+                  ["CSSBuy Transaction Checklist: From W2C Link to Warehouse Approval", "A smart CSSBuy haul is not only about finding the cheapest W2C link. The real skill is controlling each transaction step: seller questions, item payment, warehouse QC, return timing, shipping estimates, coupons and final parcel submission."],
+                  ["Start With Transaction Planning", "CSSBuy's Buy For Me flow lets shoppers submit product links, pay for goods and domestic delivery, wait for CSSBuy to purchase, review warehouse inspection photos, submit international delivery and pay the international shipping deposit. Treat every step as a checkpoint instead of rushing from link to parcel."],
+                  ["Use W2C Links Like Purchase Orders", "Before adding a spreadsheet link, record the product name, color, size, version, seller price, domestic shipping and special notes. For 1688 listings, check minimum order quantities and seller rules before paying."],
+                  ["Contact Seller Before Risky Orders", "CSSBuy's Contact Seller service can help ask about stock, sizing, fabric, batch, color differences, return terms or unclear listing details. This is useful when reverse purchasing from images, Yupoo-style albums or spreadsheet links with incomplete information."],
+                  ["Make QC Your Approval Gate", "When the item reaches the warehouse, use QC photos to compare the product with your original link. Check color, size, visible defects, packaging, labels and whether the seller sent the correct variant. Do not submit international shipping until the item is worth shipping."],
+                  ["Plan Shipping Before Paying", "CSSBuy's Cost Calculator considers destination, weight, volume and commodity attributes. Shoes, bags, electronics, liquids, cosmetics, batteries and bulky clothing can affect available routes and shipping cost. Estimate before building the haul."],
+                  ["Returns, Storage and Consolidation", "CSSBuy mentions warehouse inspection, seller returns under timing conditions, consolidation, packaging options and up to 90 days of free warehouse storage. Use storage strategically: combine good items, return bad ones quickly and avoid shipping rushed parcels."],
+                  ["FAQ 1: Can I use CSSBuy with spreadsheet W2C links?", "Yes. Paste the product link into CSSBuy or manually submit details when the source requires extra information."],
+                  ["FAQ 2: When do I pay international shipping?", "You pay international shipping after items arrive at the warehouse and you submit them for delivery."],
+                  ["FAQ 3: What should I check in QC photos?", "Check size, color, quantity, visible defects, labels, packaging and whether the item matches the W2C source."],
+                  ["FAQ 4: Can CSSBuy contact the seller?", "Yes. CSSBuy provides a Contact Seller service for asking product questions before or during a transaction."],
+                  ["FAQ 5: Can CSSBuy consolidate several items?", "Yes. CSSBuy offers package consolidation so multiple warehouse items can be combined into one parcel."],
+                  ["FAQ 6: How do I avoid payment mistakes?", "Record item price, domestic shipping, quantity, selected variant, coupon proof and expected international freight before paying."],
+                  ["Final Thoughts", "A safer CSSBuy haul comes from treating the process as a transaction workflow: verify the link, ask seller questions, pay carefully, inspect QC, return fast if needed, consolidate and then ship."],
+                  ["Tags", "CSSBuy, CSSBuy spreadsheet, W2C links, CSSBuy QC photos, CSSBuy shipping, CSSBuy coupons, agent shopping, reverse purchasing, China warehouse, haul planning"],
+                  ["SEO Title", "CSSBuy Transaction Checklist: W2C Links, QC Photos, Warehouse Approval and Shipping"],
+                  ["SEO Description", "A practical CSSBuy transaction guide for W2C links, seller communication, QC photos, warehouse inspection, shipping estimates, coupons, returns and safer haul planning."]
+              ],
+              "tags": "CSSBuy, CSSBuy spreadsheet, W2C links, CSSBuy QC photos, CSSBuy shipping, CSSBuy coupons, agent shopping, reverse purchasing, China warehouse, haul planning",
+              "seo_title": "CSSBuy Transaction Checklist: W2C Links, QC Photos, Warehouse Approval and Shipping"
+          }
+
+          articles = data.setdefault('articles', {}).setdefault('en', [])
+          articles = [a for a in articles if a.get('key') != new_article['key'] and a.get('title') != new_article['title']]
+          data['articles']['en'] = [new_article] + articles[:2]
+
+          compact = json.dumps(data, ensure_ascii=False, separators=(',', ':'))
+          new_text = text[:m.start(1)] + compact + text[m.end(1):]
+          path.write_text(new_text, encoding='utf-8')
+          PY
+      - name: Commit homepage guides limit
+        run: |
+          if git diff --quiet; then
+            echo "No changes"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add cssbuyvip/index.html
+          git commit -m "Limit homepage guides to three latest articles"
+          git push
