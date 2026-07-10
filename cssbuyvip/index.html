@@ -1594,12 +1594,12 @@ function home() {
   <section class="section" id="categories"><div class="wrap"><div class="section-head"><div><div class="category-bigpill h2like">${u.catTitle}</div><p class="category-subtitle">${u.catSub}</p></div></div><div class="category-grid">${cats}</div></div></section>
   <section class="section" id="featured-products"><div class="wrap"><div class="section-head"><div><div class="products-bigpill h2like">${u.hotTitle}</div><p class="products-subtitle">${u.hotSub}</p></div></div><div class="product-grid">${prods}</div></div></section>
   <section class="section faq" id="faq"><div class="wrap"><h2>${u.faqTitle}</h2>${faqs}</div></section>
-  <section class="latest-guides" id="latest-guides"><div class="wrap"><div class="guides-head"><div><h2>${u.guidesTitle}</h2><p>${u.guidesLead}</p></div><a class="outline-link" href="/blog/">${u.viewAll}</a></div><div class="guide-grid">${cards}</div></div></section>
+  <section class="latest-guides" id="latest-guides"><div class="wrap"><div class="guides-head"><div><h2>${u.guidesTitle}</h2><p>${u.guidesLead}</p></div><a class="outline-link" href="#" onclick="event.preventDefault();setView('guides')">${u.viewAll}</a></div><div class="guide-grid">${cards}</div></div></section>
   </main>${footer()}`;
 }
 function guides() {
   const u = SITE_DATA.ui[currentLang];
-  const cards = SITE_DATA.articles[currentLang].map(a=>`<article class="guide-card"><h3>${esc(a.title)}</h3><p>${esc(a.excerpt)}</p><a class="guide-link" href="#" onclick="event.preventDefault();setView('article','${a.key}')">${u.readMore}</a></article>`).join('');
+  const cards = SITE_DATA.articles[currentLang].slice(0,3).map(a=>`<article class="guide-card"><h3>${esc(a.title)}</h3><p>${esc(a.excerpt)}</p><a class="guide-link" href="#" onclick="event.preventDefault();setView('article','${a.key}')">${u.readMore}</a></article>`).join('');
   return `${header()}<main><section class="hero"><div class="wrap"><span class="eyebrow">CSSBuy Guides</span><h1>${u.guidesTitle}</h1><p class="lead">${u.guidesLead}</p></div></section><section class="section"><div class="wrap"><div class="guide-grid">${cards}</div></div></section></main>${footer()}`;
 }
 function article() {
@@ -1630,7 +1630,7 @@ function footer() {
           <h3>${pages.title || 'Pages'}</h3>
           <a href="#" onclick="event.preventDefault();setView('home')">${pages.about || 'About Us'}</a>
           <a href="#" onclick="event.preventDefault();setView('home');setTimeout(()=>document.getElementById('faq')?.scrollIntoView({behavior:'smooth'}),30)">${pages.faq || 'FAQ'}</a>
-          <a href="/blog/">${pages.blog || 'Blog'}</a>
+          <a href="#" onclick="event.preventDefault();setView('guides')">${pages.blog || 'Blog'}</a>
           <a href="#" onclick="event.preventDefault();setView('home')">${pages.policy || 'Cookie Policy'}</a>
         </div>
       </div>
