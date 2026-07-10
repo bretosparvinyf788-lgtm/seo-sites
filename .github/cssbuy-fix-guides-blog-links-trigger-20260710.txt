@@ -1,0 +1,1 @@
+Trigger fix: show latest article in Chinese/English homepage guides, keep only 3 cards, and make View All open /blog/.
