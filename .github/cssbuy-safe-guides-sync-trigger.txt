@@ -1,0 +1,1 @@
+Run safe homepage guides sync on 2026-07-10. Preserve categories, featured products, product grid, category grid, and homepage layout. Only update SITE_DATA.articles.en to include the latest SEO guide as first of three homepage guides.
