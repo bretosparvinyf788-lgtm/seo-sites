@@ -1599,7 +1599,7 @@ function home() {
 }
 function guides() {
   const u = SITE_DATA.ui[currentLang];
-  const cards = SITE_DATA.articles[currentLang].slice(0,3).map(a=>`<article class="guide-card"><h3>${esc(a.title)}</h3><p>${esc(a.excerpt)}</p><a class="guide-link" href="#" onclick="event.preventDefault();setView('article','${a.key}')">${u.readMore}</a></article>`).join('');
+  const cards = SITE_DATA.articles[currentLang].map(a=>`<article class="guide-card"><h3>${esc(a.title)}</h3><p>${esc(a.excerpt)}</p><a class="guide-link" href="#" onclick="event.preventDefault();setView('article','${a.key}')">${u.readMore}</a></article>`).join('');
   return `${header()}<main><section class="hero"><div class="wrap"><span class="eyebrow">CSSBuy Guides</span><h1>${u.guidesTitle}</h1><p class="lead">${u.guidesLead}</p></div></section><section class="section"><div class="wrap"><div class="guide-grid">${cards}</div></div></section></main>${footer()}`;
 }
 function article() {
