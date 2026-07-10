@@ -1,0 +1,29 @@
+name: CSSBuy Sync Guides All Languages
+
+on:
+  push:
+    paths:
+      - '.github/cssbuy-sync-guides-all-langs-trigger-*.txt'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  sync-guides:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Sync latest guide into all languages
+        run: python3 cssbuyvip/tools/sync_latest_guides.py
+      - name: Commit SPA guide changes
+        run: |
+          git config user.name "actions-user"
+          git config user.email "actions@github.com"
+          git add cssbuyvip/index.html
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "Sync latest guide across all homepage languages"
+            git push
+          fi
