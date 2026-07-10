@@ -1,0 +1,87 @@
+name: Add CSSBuy SEO Guide
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  patch-guides:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Add SEO guide to homepage guide data
+        run: |
+          python3 <<'PY'
+          import json
+          from pathlib import Path
+
+          path = Path('cssbuyvip/index.html')
+          html = path.read_text(encoding='utf-8')
+
+          key = 'cssbuy-transaction-safe-haul-planning'
+          if '"key": "' + key + '"' in html or '"key":"' + key + '"' in html:
+              print('Article already exists in homepage SITE_DATA.')
+          else:
+              article = {
+                  "key": key,
+                  "title": "CSSBuy Transaction Checklist: From W2C Link to Warehouse Approval",
+                  "excerpt": "Learn how to plan a safer CSSBuy haul with W2C links, seller checks, QC photos, warehouse handling, shipping estimates, coupons, returns, and payment mistake prevention.",
+                  "body": [
+                      ["CSSBuy Transaction Checklist: From W2C Link to Warehouse Approval", "A smart CSSBuy haul is not only about finding the cheapest W2C link. The real skill is controlling each transaction step: seller questions, item payment, warehouse QC, return timing, shipping estimates, coupons, and final parcel submission. CSSBuy's official Buy For Me flow separates the purchase into product submission, payment for goods and Chinese domestic delivery, agent purchasing, warehouse inspection, parcel submission, international shipping deposit and tracking. That structure gives buyers several chances to prevent mistakes before a parcel leaves China."],
+                      ["Start With Transaction Planning", "Most beginners treat CSSBuy like a simple link converter: paste a Taobao, 1688, Yupoo, WeChat, JD, Tmall, Dangdang, No.1 or VIP Shop link, pay, and wait. That can work for basic orders, but it is not the safest way to build a haul. A better method is to plan the transaction before money moves. Confirm the product name, color, size, version, seller price, domestic shipping cost and any special note shown on the source page."],
+                      ["Treat Every W2C Link Like a Purchase Order", "A W2C link from a CSSBuy spreadsheet should be more than a shortcut. Before adding it to your cart, write down the exact product option and keep screenshots when the listing has multiple versions. For 1688 orders, be especially careful because some products may have minimum order quantities or different quality-control expectations. A cheap spreadsheet find can become expensive if you accidentally buy extra units or select the wrong bulk option."],
+                      ["Use Contact Seller Before Paying for Unclear Items", "If a listing is vague, use CSSBuy's Contact Seller service before submitting a risky order. CSSBuy says buyers can submit product information and ask the team to investigate or inquire about specific details, with results typically returned within one to two days. This is useful for reverse purchasing when you have a photo from social media, a seller album or a spreadsheet note but not enough clear product data."],
+                      ["Understand the Two-Payment System", "Many payment mistakes happen because new buyers expect one checkout. In a CSSBuy buying flow, the first payment usually covers the goods and Chinese domestic delivery so CSSBuy can purchase from the seller. Later, after the item reaches the warehouse and you submit the parcel, you pay the international shipping fee deposit. A low item price is not the same as the delivered cost."],
+                      ["Make Warehouse QC Your Approval Gate", "When an item arrives at the CSSBuy warehouse, CSSBuy provides warehouse quality inspection support and photos so the buyer can review the goods before international shipping. Compare QC photos against your original W2C listing and notes. Check item count, color, size tag, visible defects, packaging and whether the seller sent the correct variant. Do not approve blindly."],
+                      ["Decide Fast on Returns and Exchanges", "Returns are time-sensitive. CSSBuy states that buyers can return products to sellers within seven days if the item does not meet the required standard. That does not mean every seller accepts every return, but it does mean your review window matters. If QC shows a wrong size, wrong color, missing accessory or visible defect, contact support quickly with the order number, photo reference and the action you want."],
+                      ["Use Warehouse Storage Strategically", "CSSBuy's Ship For Me information mentions up to 90 days of free warehouse storage. This helps buyers consolidate multiple items instead of shipping one small item at a time. Use a haul sheet with columns for order date, seller, item status, warehouse arrival, QC approved, return deadline, estimated weight and shipping readiness."],
+                      ["Estimate Shipping Before Parcel Submission", "CSSBuy's Cost Calculator asks for destination country, product weight, volume and item attributes such as ordinary goods, electric items, liquids, knives, powder, shoes, bags, food, batteries, cosmetics, magnetic goods, watches, perfume, sea freight and electronic products. Use realistic numbers before you buy so the final parcel stage does not surprise you."],
+                      ["Use Coupons Without Creating Price Mistakes", "Coupons and discounts can help, but they should not distract from accurate order pricing. If a seller page shows a coupon, negotiated discount or app-only price, document it. The safest rule is to pay based on verifiable seller information, not wishful spreadsheet notes. A spreadsheet can guide you to a source, but the active seller page controls the transaction."],
+                      ["FAQ 1: Can I use CSSBuy with spreadsheet W2C links?", "Yes. Paste the product link into CSSBuy or manually submit details when the source requires extra information."],
+                      ["FAQ 2: Which marketplaces does CSSBuy support?", "CSSBuy officially references sources including Taobao, Tmall, JD, No.1, VIP Shop, Dangdang, 1688, Yupoo and WeChat-related purchasing."],
+                      ["FAQ 3: When do I pay for international shipping?", "You pay international shipping after items reach the warehouse and you submit them for delivery."],
+                      ["FAQ 4: Why are there two payments?", "The first payment covers product and China domestic delivery. The second covers international parcel shipping."],
+                      ["FAQ 5: What should I check in QC photos?", "Check size, color, quantity, visible defects, labels, version details and whether the item matches your W2C source."],
+                      ["FAQ 6: Can CSSBuy contact the seller for me?", "Yes. CSSBuy has a Contact Seller service for asking product questions before or during a transaction."],
+                      ["FAQ 7: How long does Contact Seller take?", "CSSBuy says results are usually provided within one to two days after inquiry submission."],
+                      ["FAQ 8: How long is CSSBuy free warehouse storage?", "CSSBuy states that it provides up to 90 days of free storage for warehouse packages."],
+                      ["FAQ 9: Can CSSBuy consolidate several items?", "Yes. CSSBuy offers package consolidation so multiple warehouse items can be combined into one parcel."],
+                      ["FAQ 10: What if QC shows a defect?", "Use the order note or customer service quickly and request return, exchange or seller confirmation."],
+                      ["FAQ 11: Are returns always possible?", "No. Return success depends on seller policy, timing, item condition and platform rules."],
+                      ["FAQ 12: Should I use the Cost Calculator before buying?", "Yes. Estimate destination, weight, volume and item attributes before committing to a haul."],
+                      ["FAQ 13: Why can shipping cost change after submission?", "The deposit is estimated. Final shipping depends on verified package size and weight."],
+                      ["FAQ 14: Can I request packaging changes?", "Yes. CSSBuy mentions options such as packaging removal, reinforcement, vacuum packaging and related parcel notes."],
+                      ["FAQ 15: How do I avoid payment mistakes?", "Record item price, domestic shipping, quantity, selected variant, coupon proof and expected international freight."],
+                      ["Final Thoughts", "The safest CSSBuy workflow is simple: verify the W2C link, ask seller questions, pay carefully, inspect QC, return fast if needed, consolidate approved items, and then ship. Good reverse purchasing is not about buying more links. It is about controlling every transaction step before the international parcel leaves the warehouse."],
+                      ["Tags", "CSSBuy, CSSBuy spreadsheet, W2C links, CSSBuy QC photos, CSSBuy shipping, CSSBuy coupons, agent shopping, reverse purchasing, China warehouse, haul planning"],
+                      ["SEO Title", "CSSBuy Transaction Checklist: From W2C Link to Warehouse Approval"],
+                      ["SEO Description", "A practical CSSBuy transaction guide for W2C links, seller communication, QC photos, warehouse inspection, shipping estimates, coupons, returns, exchanges and safer haul planning."]
+                  ],
+                  "tags": "CSSBuy, CSSBuy spreadsheet, W2C links, CSSBuy QC photos, CSSBuy shipping, CSSBuy coupons, agent shopping, reverse purchasing, China warehouse, haul planning",
+                  "seo_title": "CSSBuy Transaction Checklist: From W2C Link to Warehouse Approval"
+              }
+
+              article_json = json.dumps(article, ensure_ascii=False, separators=(',', ':'))
+              marker = '"articles": {"en": ['
+              if marker not in html:
+                  raise SystemExit('Could not find English articles array marker.')
+              html = html.replace(marker, marker + article_json + ',', 1)
+              path.write_text(html, encoding='utf-8')
+              print('Inserted SEO guide into homepage English guides list.')
+          PY
+
+      - name: Commit homepage guide update
+        run: |
+          if git diff --quiet; then
+            echo "No changes to commit"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add cssbuyvip/index.html
+          git commit -m "Add CSSBuy SEO guide to homepage guides"
+          git push
