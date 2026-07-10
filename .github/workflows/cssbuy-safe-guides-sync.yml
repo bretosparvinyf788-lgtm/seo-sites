@@ -1,0 +1,76 @@
+name: CSSBuy Safe Guides Sync
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/cssbuy-safe-guides-sync-trigger.txt'
+      - '.github/workflows/cssbuy-safe-guides-sync.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  sync-guides:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - name: Safely add latest article to homepage guides only
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          import re, json
+
+          path = Path('cssbuyvip/index.html')
+          html = path.read_text(encoding='utf-8')
+
+          m = re.search(r'const SITE_DATA = (\{.*?\});\nlet currentLang', html, re.S)
+          if not m:
+              raise SystemExit('SITE_DATA block not found; aborting without modifying homepage')
+
+          data = json.loads(m.group(1))
+
+          latest = {
+            "key": "cssbuy-transaction-checklist",
+            "title": "CSSBuy Transaction Checklist: From W2C Link to Warehouse Approval",
+            "excerpt": "A practical CSSBuy guide for safer agent-shopping transactions: W2C links, seller checks, QC photos, warehouse approval, returns, exchanges, shipping estimates and payment mistakes.",
+            "body": [
+              ["CSSBuy Transaction Checklist: From W2C Link to Warehouse Approval", "A smart CSSBuy haul is not only about finding the cheapest W2C link. The real skill is controlling each transaction step: seller questions, item payment, warehouse QC, return timing, shipping estimates, coupons, and final parcel submission. This article is available as a full SEO guide on the CSSBuyVip blog."],
+              ["Read the full guide", "Open the full article here: /blog/2026-07-10-cssbuy-transaction-safe-haul-planning.html"],
+              ["Key topics", "W2C link verification, Contact Seller usage, Buy For Me workflow, warehouse QC checking, return timing, free storage, package consolidation, cost calculation, coupons, and safer international parcel planning."],
+              ["Tags", "CSSBuy, CSSBuy spreadsheet, W2C links, CSSBuy QC photos, CSSBuy shipping, CSSBuy coupons, agent shopping, reverse purchasing, China warehouse, haul planning"],
+              ["SEO Title", "CSSBuy Transaction Checklist: From W2C Link to Warehouse Approval"],
+              ["SEO Description", "Learn how to plan safer CSSBuy transactions with W2C links, seller checks, QC photos, warehouse approval, returns, exchanges, shipping estimates and payment mistake prevention."]
+            ],
+            "tags": "CSSBuy, CSSBuy spreadsheet, W2C links, CSSBuy QC photos, CSSBuy shipping, CSSBuy coupons, agent shopping, reverse purchasing, China warehouse, haul planning",
+            "seo_title": "CSSBuy Transaction Checklist: From W2C Link to Warehouse Approval"
+          }
+
+          articles = data.setdefault('articles', {}).setdefault('en', [])
+          articles = [a for a in articles if a.get('key') != latest['key']]
+          data['articles']['en'] = [latest] + articles[:2]
+
+          new_json = json.dumps(data, ensure_ascii=False, separators=(',', ': '))
+          new_html = html[:m.start(1)] + new_json + html[m.end(1):]
+
+          # Safety checks: original homepage product/category structure must remain.
+          for required in ['"categories"', '"products"', 'featured-products', 'category-grid', 'product-grid']:
+              if required not in new_html:
+                  raise SystemExit(f'Safety check failed: missing {required}; aborting')
+
+          path.write_text(new_html, encoding='utf-8')
+          PY
+      - name: Commit homepage guides sync
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add cssbuyvip/index.html
+          if git diff --cached --quiet; then
+            echo "No homepage guide changes needed"
+          else
+            git commit -m "Safely sync latest CSSBuy SEO article into homepage guides"
+            git push
+          fi
