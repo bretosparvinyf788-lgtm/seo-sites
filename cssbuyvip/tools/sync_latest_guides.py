@@ -63,12 +63,16 @@ html = html[:m.start(1)] + new_json + html[m.end(1):]
 # Homepage Latest Guides should show newest 3 only; guides() remains unlimited.
 html = html.replace('const cards = SITE_DATA.articles[currentLang].map(a=>`<article class="guide-card">', 'const cards = SITE_DATA.articles[currentLang].slice(0,3).map(a=>`<article class="guide-card">', 1)
 
-for marker in ['category-grid', 'product-grid', 'featured-products', 'function home()', 'function guides()', '.slice(0,3).map', key]:
+# View All and footer Blog must open internal SPA #guides, never /blog/.
+html = html.replace('<a class="outline-link" href="/blog/">${u.viewAll}</a>', '<a class="outline-link" href="#" onclick="event.preventDefault();setView(\'guides\')">${u.viewAll}</a>')
+html = html.replace('<a href="/blog/">${pages.blog || \'Blog\'}</a>', '<a href="#" onclick="event.preventDefault();setView(\'guides\')">${pages.blog || \'Blog\'}</a>')
+
+for marker in ['category-grid', 'product-grid', 'featured-products', 'function home()', 'function guides()', '.slice(0,3).map', "setView('guides')", key]:
     if marker not in html:
         raise SystemExit('Safety stop after edit: missing marker ' + marker)
 
 if html != original:
     p.write_text(html, encoding='utf-8')
-    print('Updated homepage guides for all languages:', key)
+    print('Updated homepage guides for all languages and SPA View All:', key)
 else:
     print('No changes needed')
