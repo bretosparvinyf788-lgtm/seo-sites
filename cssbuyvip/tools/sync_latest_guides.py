@@ -25,54 +25,51 @@ latest = deepcopy(articles['en'][0])
 key = latest.get('key') or 'latest-cssbuy-guide'
 
 localized = {
-    'zh': {
-        'title': 'CSSBuy 最新交易与购物指南',
-        'excerpt': '最新 CSSBuy 实用文章，覆盖 W2C 链接、QC 照片、仓库检查、退换货、运输规划和安全下单流程。',
-        'tags': 'CSSBuy, CSSBuy 指南, W2C 链接, QC 照片, CSSBuy 运输, 代购, 反向代购'
-    },
-    'es': {
-        'title': 'Guía actualizada de compras y transacciones CSSBuy',
-        'excerpt': 'Artículo práctico sobre enlaces W2C, fotos QC, revisión de almacén, devoluciones, envíos y planificación segura con CSSBuy.',
-        'tags': 'CSSBuy, guía CSSBuy, enlaces W2C, fotos QC, envíos CSSBuy, compras con agente'
-    },
-    'de': {
-        'title': 'Aktueller CSSBuy Einkaufs- und Transaktionsleitfaden',
-        'excerpt': 'Praktischer CSSBuy-Artikel zu W2C Links, QC Fotos, Lagerprüfung, Rückgaben, Versandplanung und sicherem Bestellablauf.',
-        'tags': 'CSSBuy, CSSBuy Guide, W2C Links, QC Fotos, CSSBuy Versand, Agent Shopping'
-    },
-    'pt': {
-        'title': 'Guia atualizado de compras e transações CSSBuy',
-        'excerpt': 'Artigo prático sobre links W2C, fotos QC, verificação de armazém, devoluções, envio e planejamento seguro com CSSBuy.',
-        'tags': 'CSSBuy, guia CSSBuy, links W2C, fotos QC, envio CSSBuy, compras com agente'
-    }
+    'zh': {'title': 'CSSBuy 最新交易与购物指南','excerpt': '最新 CSSBuy 实用文章，覆盖 W2C 链接、QC 照片、仓库检查、退换货、运输规划和安全下单流程。','tags': 'CSSBuy, CSSBuy 指南, W2C 链接, QC 照片, CSSBuy 运输, 代购, 反向代购'},
+    'es': {'title': 'Guía actualizada de compras y transacciones CSSBuy','excerpt': 'Artículo práctico sobre enlaces W2C, fotos QC, revisión de almacén, devoluciones, envíos y planificación segura con CSSBuy.','tags': 'CSSBuy, guía CSSBuy, enlaces W2C, fotos QC, envíos CSSBuy, compras con agente'},
+    'de': {'title': 'Aktueller CSSBuy Einkaufs- und Transaktionsleitfaden','excerpt': 'Praktischer CSSBuy-Artikel zu W2C Links, QC Fotos, Lagerprüfung, Rückgaben, Versandplanung und sicherem Bestellablauf.','tags': 'CSSBuy, CSSBuy Guide, W2C Links, QC Fotos, CSSBuy Versand, Agent Shopping'},
+    'pt': {'title': 'Guia atualizado de compras e transações CSSBuy','excerpt': 'Artigo prático sobre links W2C, fotos QC, verificação de armazém, devoluções, envio e planejamento seguro com CSSBuy.','tags': 'CSSBuy, guia CSSBuy, links W2C, fotos QC, envio CSSBuy, compras com agente'}
 }
 
 for lang in ['en', 'zh', 'es', 'de', 'pt']:
     arr = articles.setdefault(lang, [])
     arr = [a for a in arr if a.get('key') != key]
-    if lang == 'en':
-        item = latest
-    else:
-        item = deepcopy(latest)
+    item = latest if lang == 'en' else deepcopy(latest)
+    if lang != 'en':
         item.update(localized[lang])
     articles[lang] = [item] + arr
 
 new_json = json.dumps(data, ensure_ascii=False, separators=(',', ':'))
 html = html[:m.start(1)] + new_json + html[m.end(1):]
 
-# Homepage Latest Guides should show newest 3 only; guides() remains unlimited.
-html = html.replace('const cards = SITE_DATA.articles[currentLang].map(a=>`<article class="guide-card">', 'const cards = SITE_DATA.articles[currentLang].slice(0,3).map(a=>`<article class="guide-card">', 1)
+# Force exact rendering rule: home() is limited to 3, guides() is unlimited.
+home_pat = r"function home\(\) \{(.*?)function guides\(\) \{"
+home_m = re.search(home_pat, html, re.S)
+if not home_m:
+    raise SystemExit('Could not isolate home() block')
+home_block = home_m.group(1)
+home_block = home_block.replace('SITE_DATA.articles[currentLang].slice(0,3).map', 'SITE_DATA.articles[currentLang].map')
+home_block = home_block.replace('SITE_DATA.articles[currentLang].map', 'SITE_DATA.articles[currentLang].slice(0,3).map', 1)
+home_block = home_block.replace('<a class="outline-link" href="/blog/">${u.viewAll}</a>', '<a class="outline-link" href="#" onclick="event.preventDefault();setView(\'guides\')">${u.viewAll}</a>')
+html = html[:home_m.start(1)] + home_block + html[home_m.end(1):]
 
-# View All and footer Blog must open internal SPA #guides, never /blog/.
-html = html.replace('<a class="outline-link" href="/blog/">${u.viewAll}</a>', '<a class="outline-link" href="#" onclick="event.preventDefault();setView(\'guides\')">${u.viewAll}</a>')
+guides_pat = r"function guides\(\) \{(.*?)function article\(\) \{"
+guides_m = re.search(guides_pat, html, re.S)
+if not guides_m:
+    raise SystemExit('Could not isolate guides() block')
+guides_block = guides_m.group(1).replace('SITE_DATA.articles[currentLang].slice(0,3).map', 'SITE_DATA.articles[currentLang].map')
+html = html[:guides_m.start(1)] + guides_block + html[guides_m.end(1):]
+
 html = html.replace('<a href="/blog/">${pages.blog || \'Blog\'}</a>', '<a href="#" onclick="event.preventDefault();setView(\'guides\')">${pages.blog || \'Blog\'}</a>')
 
-for marker in ['category-grid', 'product-grid', 'featured-products', 'function home()', 'function guides()', '.slice(0,3).map', "setView('guides')", key]:
+for marker in ['category-grid', 'product-grid', 'featured-products', 'function home()', 'function guides()', "setView('guides')", key]:
     if marker not in html:
         raise SystemExit('Safety stop after edit: missing marker ' + marker)
+if 'function guides()' in html and 'function guides() {\n  const u = SITE_DATA.ui[currentLang];\n  const cards = SITE_DATA.articles[currentLang].slice(0,3).map' in html:
+    raise SystemExit('Safety stop: guides() is still limited')
 
 if html != original:
     p.write_text(html, encoding='utf-8')
-    print('Updated homepage guides for all languages and SPA View All:', key)
+    print('Updated homepage latest 3, guides all, all languages:', key)
 else:
     print('No changes needed')
