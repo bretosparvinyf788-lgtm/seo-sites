@@ -31,13 +31,29 @@ localized = {
     'pt': {'title': 'Guia atualizado de compras e transações CSSBuy','excerpt': 'Artigo prático sobre links W2C, fotos QC, verificação de armazém, devoluções, envio e planejamento seguro com CSSBuy.','tags': 'CSSBuy, guia CSSBuy, links W2C, fotos QC, envio CSSBuy, compras com agente'}
 }
 
+def signature(article):
+    title = str(article.get('title', '')).strip().lower()
+    article_key = str(article.get('key', '')).strip().lower()
+    return article_key or title
+
+def dedupe(arr):
+    seen = set()
+    out = []
+    for article in arr:
+        sig = signature(article)
+        if not sig or sig in seen:
+            continue
+        seen.add(sig)
+        out.append(article)
+    return out
+
 for lang in ['en', 'zh', 'es', 'de', 'pt']:
-    arr = articles.setdefault(lang, [])
-    arr = [a for a in arr if a.get('key') != key]
+    arr = dedupe(articles.setdefault(lang, []))
+    arr = [a for a in arr if signature(a) != signature(latest) and a.get('title') != latest.get('title')]
     item = latest if lang == 'en' else deepcopy(latest)
     if lang != 'en':
         item.update(localized[lang])
-    articles[lang] = [item] + arr
+    articles[lang] = dedupe([item] + arr)
 
 new_json = json.dumps(data, ensure_ascii=False, separators=(',', ':'))
 html = html[:m.start(1)] + new_json + html[m.end(1):]
@@ -70,6 +86,6 @@ if 'function guides()' in html and 'function guides() {\n  const u = SITE_DATA.u
 
 if html != original:
     p.write_text(html, encoding='utf-8')
-    print('Updated homepage latest 3, guides all, all languages:', key)
+    print('Deduplicated homepage guides and restored all-articles view:', key)
 else:
     print('No changes needed')
