@@ -1,0 +1,92 @@
+name: Fix CSSBuy Guides Blog Links
+
+on:
+  push:
+    paths:
+      - '.github/cssbuy-fix-guides-blog-links-trigger-*.txt'
+      - '.github/workflows/cssbuy-fix-guides-blog-links.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  fix:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Patch homepage guides and blog link
+        run: |
+          python3 - <<'PY'
+          import json, re
+          from pathlib import Path
+
+          path = Path('cssbuyvip/index.html')
+          html = path.read_text(encoding='utf-8')
+
+          # Safety: never touch a broken/simplified homepage.
+          for required in ['"categories"', '"products"', 'featured-products', 'category-grid', 'product-grid', 'latest-guides']:
+              if required not in html:
+                  raise SystemExit(f'Safety stop: missing {required}')
+
+          m = re.search(r'const SITE_DATA = (\{.*?\});\nlet currentLang', html, re.S)
+          if not m:
+              raise SystemExit('SITE_DATA block not found')
+          data = json.loads(m.group(1))
+
+          en_article = {
+              'key': 'cssbuy-transaction-checklist-20260710',
+              'title': 'CSSBuy Transaction Checklist: From W2C Link to Warehouse Approval',
+              'excerpt': 'Learn how to plan a safer CSSBuy haul with W2C links, seller checks, QC photos, warehouse handling, shipping estimates, coupons, returns, and payment mistake prevention.',
+              'body': [
+                  ['CSSBuy Transaction Checklist: From W2C Link to Warehouse Approval', 'A smart CSSBuy haul is not only about finding the cheapest W2C link. The real skill is controlling each transaction step: seller questions, item payment, warehouse QC, return timing, shipping estimates, coupons, and final parcel submission.'],
+                  ['Read the full article', 'This SEO article is available as a standalone post in the full blog archive. Use the Blog link or open /blog/ to see every published CSSBuyVip article with the newest post first.']
+              ],
+              'tags': 'CSSBuy, CSSBuy spreadsheet, W2C links, QC photos, CSSBuy shipping, reverse purchasing, agent shopping, haul planning',
+              'seo_title': 'CSSBuy Transaction Checklist | W2C Links, QC Photos & Safer Haul Planning'
+          }
+          zh_article = {
+              'key': 'cssbuy-transaction-checklist-20260710',
+              'title': 'CSSBuy 交易检查清单：从 W2C 链接到仓库确认',
+              'excerpt': '学习如何通过 W2C 链接、卖家沟通、QC 照片、仓库检查、运费估算、优惠券、退换货和付款检查，更安全地规划 CSSBuy 购物清单。',
+              'body': [
+                  ['CSSBuy 交易检查清单：从 W2C 链接到仓库确认', '一份安全的 CSSBuy 购物清单，不只是找到便宜链接，而是要控制每一个交易环节：卖家询问、商品付款、仓库 QC、退换货时间、运费估算、优惠券和最终包裹提交。'],
+                  ['阅读完整文章', '完整 SEO 文章已发布在独立博客文章页。请点击 Blog 或打开 /blog/ 查看全部 CSSBuyVip 文章，最新文章排在最前面。']
+              ],
+              'tags': 'CSSBuy, CSSBuy 电子表格, W2C 链接, QC 照片, CSSBuy 运输, 反向代购, 代购指南, 购物清单规划',
+              'seo_title': 'CSSBuy 交易检查清单 | W2C 链接、QC 照片与安全下单'
+          }
+
+          def upsert_top_three(lang, article):
+              arr = data['articles'].setdefault(lang, [])
+              arr = [a for a in arr if a.get('key') != article['key']]
+              data['articles'][lang] = [article] + arr[:2]
+
+          upsert_top_three('en', en_article)
+          upsert_top_three('zh', zh_article)
+
+          new_json = json.dumps(data, ensure_ascii=False, separators=(',', ':'))
+          html = html[:m.start(1)] + new_json + html[m.end(1):]
+
+          # Make View All / 查看全部 open the full static blog archive instead of the SPA 3-card list.
+          html = html.replace("href=\"#\" onclick=\"event.preventDefault();setView('guides')\">${u.viewAll}</a>", "href=\"/blog/\">${u.viewAll}</a>")
+          html = html.replace("href=\"#\" onclick=\"event.preventDefault();setView('guides')\">${pages.blog || 'Blog'}</a>", "href=\"/blog/\">${pages.blog || 'Blog'}</a>")
+
+          # Keep the existing categories/products intact after patch.
+          for required in ['"categories"', '"products"', 'featured-products', 'category-grid', 'product-grid']:
+              if required not in html:
+                  raise SystemExit(f'Post-patch safety stop: missing {required}')
+
+          path.write_text(html, encoding='utf-8')
+          PY
+      - name: Commit changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          if git diff --quiet; then
+            echo "No changes"
+          else
+            git add cssbuyvip/index.html
+            git commit -m "Fix CSSBuy guides latest article and blog archive link"
+            git push
+          fi
