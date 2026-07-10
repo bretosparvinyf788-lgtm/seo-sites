@@ -1,0 +1,1 @@
+restore original three guide articles plus latest article to homepage SPA guides
