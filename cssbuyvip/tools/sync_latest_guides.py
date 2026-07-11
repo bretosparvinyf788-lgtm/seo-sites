@@ -1,51 +1,89 @@
-from pathlib import Path
+import base64
+import json
+import lzma
 import re
+from pathlib import Path
 
-p = Path('cssbuyvip/index.html')
-html = p.read_text(encoding='utf-8')
+PAGE = Path("cssbuyvip/index.html")
+TRIGGERS = Path(".github").glob("cssbuy-sync-guides-all-langs-trigger-*.txt")
+LANGS = ("en", "zh", "es", "de", "pt")
+
+html = PAGE.read_text(encoding="utf-8")
 original = html
+required = (
+    "const SITE_DATA = ",
+    "SITE_DATA.articles[currentLang].slice(0,3)",
+    "SITE_DATA.articles[currentLang].map",
+    "function home()",
+    "function guides()",
+    "function article()",
+    "category-grid",
+    "product-grid",
+    "featured-products",
+    "latest-guides",
+)
+missing = [marker for marker in required if marker not in html]
+if missing:
+    raise SystemExit("Safety stop: missing homepage markers: " + ", ".join(missing))
 
-core_missing = [m for m in ['function header()', 'function footer()', 'brand', '</head>', '</style>', 'category-grid', 'product-grid', 'featured-products'] if m not in html]
-if core_missing:
-    raise SystemExit('Safety stop: missing markers: ' + ', '.join(core_missing))
+trigger_files = sorted(TRIGGERS)
+if not trigger_files:
+    raise SystemExit("Safety stop: no article trigger payload found")
+trigger = trigger_files[-1]
+text = trigger.read_text(encoding="utf-8").strip()
+prefix = "CSSBUY_ARTICLE_LZMA_BASE64\n"
+if not text.startswith(prefix):
+    raise SystemExit("Safety stop: newest trigger is not an article payload: " + str(trigger))
+try:
+    payload = json.loads(lzma.decompress(base64.b64decode(text[len(prefix):])).decode("utf-8"))
+except Exception as exc:
+    raise SystemExit("Safety stop: invalid article payload: " + str(exc))
 
-# Replace all favicon declarations with a root-level versioned SVG so browser tabs do not keep the old cached icon.
-favicon = '''
-<link rel="icon" type="image/svg+xml" href="/favicon.svg?v=cssbuy-20260710">
-<link rel="shortcut icon" type="image/svg+xml" href="/favicon.svg?v=cssbuy-20260710">
-<link rel="apple-touch-icon" href="/favicon.svg?v=cssbuy-20260710">
-'''
-html = re.sub(r'\n<link rel="icon"[^>]*>\n<link rel="shortcut icon"[^>]*>\n<link rel="apple-touch-icon"[^>]*>\n', '\n', html)
-if '/favicon.svg?v=cssbuy-20260710' not in html.split('</head>')[0]:
-    html = html.replace('</head>', favicon + '</head>', 1)
+match = re.search(r"const SITE_DATA = (\{.*?\});\nlet currentLang", html, re.S)
+if not match:
+    raise SystemExit("Safety stop: SITE_DATA object was not found")
+data = json.loads(match.group(1))
+if not isinstance(data.get("articles"), dict):
+    raise SystemExit("Safety stop: SITE_DATA.articles is not an object")
 
-inline_logo = '''<svg class="brand-inline-logo" xmlns="http://www.w3.org/2000/svg" width="145" height="39" viewBox="0 0 145 39" role="img" aria-label="CSS Buy"><rect x="0" y="0" width="72" height="39" rx="4" fill="#65bd25"/><text x="8" y="28" font-family="Arial, Helvetica, sans-serif" font-size="26" font-weight="900" fill="#ffffff">CSS</text><text x="78" y="29" font-family="Arial, Helvetica, sans-serif" font-size="31" font-weight="900" font-style="italic" fill="#65bd25">Buy</text></svg>'''
+slug = payload.get("en", {}).get("key")
+if not slug or payload.get("en", {}).get("slug") != slug:
+    raise SystemExit("Safety stop: English article key/slug is invalid")
+english_body = payload["en"].get("body")
+if not isinstance(english_body, list):
+    raise SystemExit("Safety stop: English body is invalid")
+word_count = sum(len(str(section[1]).split()) for section in english_body if isinstance(section, list) and len(section) == 2)
+if not 1200 <= word_count <= 1800:
+    raise SystemExit(f"Safety stop: English body word count is {word_count}")
 
-force_css = '''
-/* CSSBuy header logo - inline forced visible */
-.brand{display:flex!important;align-items:center!important;gap:12px!important;min-width:145px!important}
-.brand .mark.logo-mark{width:145px!important;height:39px!important;min-width:145px!important;min-height:39px!important;border-radius:0!important;background:transparent!important;color:inherit!important;display:flex!important;align-items:center!important;justify-content:flex-start!important;box-shadow:none!important;padding:0!important;overflow:visible!important}
-.brand-inline-logo{display:block!important;width:145px!important;height:39px!important;opacity:1!important;visibility:visible!important;overflow:visible!important}
-.brand .brand-text{position:absolute!important;left:-9999px!important;width:1px!important;height:1px!important;overflow:hidden!important}
-.footer-brand .brand-inline-logo{width:145px!important;height:39px!important}
-@media(max-width:760px){.brand{min-width:126px!important}.brand .mark.logo-mark{width:126px!important;height:34px!important;min-width:126px!important;min-height:34px!important}.brand-inline-logo{width:126px!important;height:34px!important}.footer-brand .brand-inline-logo{width:126px!important;height:34px!important}}
-'''
-if 'CSSBuy header logo - inline forced visible' not in html:
-    html = html.replace('</style>', force_css + '\n</style>', 1)
+for lang in LANGS:
+    article = payload.get(lang)
+    existing = data["articles"].get(lang)
+    if not isinstance(article, dict) or not isinstance(existing, list):
+        raise SystemExit("Safety stop: missing article data for " + lang)
+    if article.get("key") != slug or article.get("slug") != slug:
+        raise SystemExit("Safety stop: localized slug mismatch for " + lang)
+    for field in ("title", "excerpt", "body", "seo_title", "seo_description", "tags", "publish_date"):
+        if not article.get(field):
+            raise SystemExit(f"Safety stop: {lang} article missing {field}")
+    if not isinstance(article["body"], list) or len(article["body"]) < 4:
+        raise SystemExit("Safety stop: localized body is not usable for " + lang)
+    deduped = [item for item in existing if item.get("key") != slug and item.get("slug") != slug and item.get("title") != article["title"]]
+    data["articles"][lang] = [article] + deduped
+    if [item.get("key") for item in data["articles"][lang]].count(slug) != 1:
+        raise SystemExit("Safety stop: duplicate article key in " + lang)
 
-new_a = '<a class="brand" href="#home" onclick="event.preventDefault();setView(\'home\')"><span class="mark logo-mark">' + inline_logo + '</span><span class="brand-text">CSSBuyVip</span></a>'
-new_div = '<div class="brand"><span class="mark logo-mark">' + inline_logo + '</span><span class="brand-text">CSSBuyVip</span></div>'
-
-html = re.sub(r'<a class="brand" href="(?:#|#home)" onclick="event\.preventDefault\(\);setView\(\'home\'\)"><span class="mark(?: logo-mark)?">(?:CSS|<img class="brand-logo-img" src="/assets/cssbuy-logo\.svg" alt="CSS Buy">|<svg.*?</svg>)</span><span(?: class="brand-text")?>CSSBuyVip</span></a>', new_a, html, flags=re.S)
-html = re.sub(r'<a class="brand" href="#" onclick="event\.preventDefault\(\);setView\(\'home\'\)"><span class="mark(?: logo-mark)?">(?:CSS|<img class="brand-logo-img" src="/assets/cssbuy-logo\.svg" alt="CSS Buy">|<svg.*?</svg>)</span><span(?: class="brand-text")?>CSSBuyVip</span></a>', new_a, html, flags=re.S)
-html = re.sub(r'<div class="brand"><span class="mark(?: logo-mark)?">(?:CSS|<img class="brand-logo-img" src="/assets/cssbuy-logo\.svg" alt="CSS Buy">|<svg.*?</svg>)</span><span(?: class="brand-text")?>CSSBuyVip</span></div>', new_div, html, flags=re.S)
-
-for marker in ['brand-inline-logo', '/favicon.svg?v=cssbuy-20260710', 'CSSBuy header logo - inline forced visible', 'category-grid', 'product-grid', 'featured-products', 'function header()', 'function home()']:
+payload_text = json.dumps(payload, ensure_ascii=False)
+if "/blog/" in payload_text:
+    raise SystemExit("Safety stop: article payload must not use /blog/")
+new_json = json.dumps(data, ensure_ascii=False, separators=(",", ":"))
+html = html[:match.start(1)] + new_json + html[match.end(1):]
+for marker in required + (slug,):
     if marker not in html:
-        raise SystemExit('Safety stop after edit: missing marker ' + marker)
+        raise SystemExit("Safety stop after update: missing marker " + marker)
 
-if html != original:
-    p.write_text(html, encoding='utf-8')
-    print('Applied inline CSSBuy logo and root cache-busted favicon')
+if html == original:
+    print("No changes needed")
 else:
-    print('No changes needed')
+    PAGE.write_text(html, encoding="utf-8")
+    print(f"Added {slug} to all language arrays; English body words: {word_count}; payload: {trigger.name}")
