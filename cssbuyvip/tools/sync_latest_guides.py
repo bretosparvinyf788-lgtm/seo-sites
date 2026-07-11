@@ -7,6 +7,7 @@ from pathlib import Path
 PAGE = Path("cssbuyvip/index.html")
 TRIGGERS = Path(".github").glob("cssbuy-sync-guides-all-langs-trigger-*.txt")
 LANGS = ("en", "zh", "es", "de", "pt")
+PREFIX = "CSSBUY_ARTICLE_LZMA_BASE64\n"
 
 html = PAGE.read_text(encoding="utf-8")
 original = html
@@ -26,16 +27,16 @@ missing = [marker for marker in required if marker not in html]
 if missing:
     raise SystemExit("Safety stop: missing homepage markers: " + ", ".join(missing))
 
-trigger_files = sorted(TRIGGERS)
-if not trigger_files:
+payload_files = []
+for candidate in TRIGGERS:
+    candidate_text = candidate.read_text(encoding="utf-8").strip()
+    if candidate_text.startswith(PREFIX):
+        payload_files.append((candidate.name, candidate, candidate_text))
+if not payload_files:
     raise SystemExit("Safety stop: no article trigger payload found")
-trigger = trigger_files[-1]
-text = trigger.read_text(encoding="utf-8").strip()
-prefix = "CSSBUY_ARTICLE_LZMA_BASE64\n"
-if not text.startswith(prefix):
-    raise SystemExit("Safety stop: newest trigger is not an article payload: " + str(trigger))
+_, trigger, text = sorted(payload_files)[-1]
 try:
-    payload = json.loads(lzma.decompress(base64.b64decode(text[len(prefix):])).decode("utf-8"))
+    payload = json.loads(lzma.decompress(base64.b64decode(text[len(PREFIX):])).decode("utf-8"))
 except Exception as exc:
     raise SystemExit("Safety stop: invalid article payload: " + str(exc))
 
