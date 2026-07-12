@@ -1,0 +1,1 @@
+rerun the validated 2026-07-12 payload after disabling the obsolete fixed-article workflow
