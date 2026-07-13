@@ -16,12 +16,18 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Publish validated 2026-07-13 multilingual guide
+        id: publish
         run: |
+          set +e
           mkdir -p /tmp/cssbuy-other-triggers
           find .github -maxdepth 1 -type f -name 'cssbuy-sync-guides-all-langs-trigger-*.txt' ! -name 'cssbuy-sync-guides-all-langs-trigger-20260713-daily-seo.txt' -exec mv {} /tmp/cssbuy-other-triggers/ \;
-          python3 cssbuyvip/tools/sync_latest_guides.py
+          python3 cssbuyvip/tools/sync_latest_guides.py > /tmp/cssbuy-sync.log 2>&1
+          status=$?
+          cat /tmp/cssbuy-sync.log
+          if [ "$status" -ne 0 ]; then exit "$status"; fi
           grep -q 'cssbuy-shipping-estimate-parcel-planning-weight-volume-route-limits-2026' cssbuyvip/index.html
       - name: Commit only cssbuyvip/index.html
+        if: success()
         run: |
           git config user.name "actions-user"
           git config user.email "actions@github.com"
@@ -32,3 +38,12 @@ jobs:
             git commit -m "Publish CSSBuy shipping estimate and parcel planning guide"
             git push
           fi
+      - name: Record publisher failure
+        if: failure()
+        run: |
+          git config user.name "actions-user"
+          git config user.email "actions@github.com"
+          cp /tmp/cssbuy-sync.log .github/cssbuy-publish-20260713-error.txt 2>/dev/null || echo "publisher failed before log creation" > .github/cssbuy-publish-20260713-error.txt
+          git add .github/cssbuy-publish-20260713-error.txt
+          git commit -m "Record CSSBuy publisher failure [skip ci]" || true
+          git push || true
