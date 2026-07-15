@@ -1,0 +1,1 @@
+v95: Mobile benefits section and four-step workflow cards are now two-column grids. Existing language, article, hero, category and product fixes are preserved.
