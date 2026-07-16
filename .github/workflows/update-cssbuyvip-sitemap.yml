@@ -1,0 +1,62 @@
+name: Update cssbuyvip.com Sitemap
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'cssbuyvip.com/**/*.html'
+      - 'tools/generate_cssbuyvip_sitemap.py'
+      - '.github/workflows/update-cssbuyvip-sitemap.yml'
+  schedule:
+    - cron: '25 1 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: cssbuyvip-com-sitemap
+  cancel-in-progress: false
+
+jobs:
+  update-sitemap:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Sync latest main branch
+        run: git pull --rebase origin main
+
+      - name: Generate sitemap
+        run: python3 tools/generate_cssbuyvip_sitemap.py
+
+      - name: Validate sitemap XML
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          import xml.etree.ElementTree as ET
+
+          path = Path('cssbuyvip.com/sitemap.xml')
+          root = ET.parse(path).getroot()
+          namespace = {'sm': 'http://www.sitemaps.org/schemas/sitemap/0.9'}
+          urls = root.findall('sm:url', namespace)
+          if not urls:
+              raise SystemExit('Sitemap contains no URLs')
+          print(f'Validated {len(urls)} sitemap URLs')
+          PY
+
+      - name: Commit sitemap when changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add cssbuyvip.com/sitemap.xml
+          if git diff --cached --quiet; then
+            echo "Sitemap is already current"
+            exit 0
+          fi
+          git commit -m "Auto-update cssbuyvip.com sitemap"
+          git push origin main
