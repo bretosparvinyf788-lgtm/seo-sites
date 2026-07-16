@@ -10,6 +10,24 @@ const HOMEPAGE_SEO = `
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"CSSBuyVip Spreadsheet","url":"https://cssbuyvip.shop/","description":"A product-first CSSBuy spreadsheet resource for W2C links, QC photos, product finds and category research.","potentialAction":{"@type":"SearchAction","target":"https://cssbuyvip.shop/#products","query-input":"required name=search_term_string"}}</script>
 `;
 
+function keepNavigationOnShop(html) {
+  const replacements = [
+    ["https://cssbuyvip.com/cssbuy-spreadsheet-guide.html", "/cssbuy-spreadsheet/"],
+    ["https://cssbuyvip.com/cssbuy-qc-finder.html", "/cssbuy-spreadsheet/"],
+    ["https://cssbuyvip.com/cssbuy-shipping-calculator.html", "/cssbuy-spreadsheet/"],
+    ["https://cssbuyvip.com/cssbuy-shipping-cost-guide.html", "/cssbuy-spreadsheet/"],
+    ["https://cssbuyvip.com/how-to-check-cssbuy-qc-photos.html", "/cssbuy-spreadsheet/"],
+    ["https://cssbuyvip.com/", "/cssbuy-spreadsheet/"],
+  ];
+  for (const [from, to] of replacements) html = html.replaceAll(from, to);
+
+  html = html.replaceAll("Complete CSSBuy Guide", "CSSBuy Spreadsheet Guide");
+  html = html.replaceAll("Read the Complete CSSBuy Guide", "Open the CSSBuy Spreadsheet Guide");
+  html = html.replaceAll("Open the Guide and QC Workflow", "Open the Spreadsheet Workflow");
+  html = html.replaceAll("Use the independent guide at cssbuyvip.com for detailed explanations of ordering, QC review and shipping planning.", "Use the guides and spreadsheet workflow on this site for product research, QC review and haul planning.");
+  return html;
+}
+
 function transformHomepage(html) {
   html = html.replace(
     /<title>[^<]*<\/title>/i,
@@ -37,15 +55,7 @@ function transformHomepage(html) {
     'href="https://kakobuymake.com/" rel="noopener">${u.sheet}',
     'href="/cssbuy-spreadsheet/" rel="noopener">${u.sheet}',
   );
-  html = html.replace(
-    '<a class="btn secondary" href="https://wa.me/15980058367" rel="noopener">${u.whatsapp}</a>',
-    '<a class="btn secondary" href="https://wa.me/15980058367" rel="noopener">${u.whatsapp}</a><a class="btn secondary" href="https://cssbuyvip.com/cssbuy-spreadsheet-guide.html" rel="noopener">Complete CSSBuy Guide</a>',
-  );
-  html = html.replaceAll(
-    "real KakobuyMake source pages",
-    "live product source pages",
-  );
-
+  html = html.replaceAll("real KakobuyMake source pages", "live product source pages");
   return html;
 }
 
@@ -57,17 +67,19 @@ export default {
 
     if (
       request.method !== "GET" ||
-      !HOMEPAGE_PATHS.has(url.pathname) ||
       !contentType.includes("text/html") ||
       response.status !== 200
     ) {
       return response;
     }
 
-    const html = transformHomepage(await response.text());
+    let html = await response.text();
+    if (HOMEPAGE_PATHS.has(url.pathname)) html = transformHomepage(html);
+    html = keepNavigationOnShop(html);
+
     const headers = new Headers(response.headers);
     headers.delete("content-length");
-    headers.set("x-cssbuyvip-seo", "shop-home-v2");
+    headers.set("x-cssbuyvip-seo", "shop-no-cross-domain-v3");
 
     return new Response(html, {
       status: response.status,
