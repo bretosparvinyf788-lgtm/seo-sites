@@ -9,6 +9,21 @@ const HOMEPAGE_SEO = `
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"CSSBuyVip Guide","url":"https://cssbuyvip.com/","description":"An independent CSSBuy tutorial hub covering spreadsheet use, QC photos, shipping, coupons, W2C links and agent workflows."}</script>
 `;
 
+function keepNavigationOnCom(html) {
+  const replacements = [
+    ["https://cssbuyvip.shop/cssbuy-spreadsheet-shoes/", "/cssbuy-qc-finder.html"],
+    ["https://cssbuyvip.shop/cssbuy-spreadsheet-categories/", "/cssbuy-spreadsheet-guide.html"],
+    ["https://cssbuyvip.shop/cssbuy-spreadsheet/", "/cssbuy-spreadsheet-guide.html"],
+    ["https://cssbuyvip.shop/", "/cssbuy-spreadsheet-guide.html"],
+  ];
+  for (const [from, to] of replacements) html = html.replaceAll(from, to);
+
+  html = html.replaceAll("Browse Product Spreadsheet", "Open CSSBuy Guide");
+  html = html.replaceAll("Browse the product spreadsheet", "Open the CSSBuy guide");
+  html = html.replaceAll("Open the product spreadsheet", "Open the CSSBuy guide");
+  return html;
+}
+
 function transformHomepage(html) {
   html = html.replace(
     /<title>[^<]*<\/title>/i,
@@ -35,10 +50,6 @@ function transformHomepage(html) {
   html = html.replace(
     '<a class="btn" href="https://kakobuymake.com/" target="_blank" rel="noopener">Spreadsheet</a>',
     '<a class="btn" href="/cssbuy-spreadsheet-guide.html">CSSBuy Guide</a>',
-  );
-  html = html.replace(
-    '<a class="btn alt dark-alt" href="#workflow">How it works</a>',
-    '<a class="btn alt dark-alt" href="#workflow">How it works</a><a class="btn alt dark-alt" href="https://cssbuyvip.shop/cssbuy-spreadsheet/" rel="noopener">Browse Product Spreadsheet</a>',
   );
   html = html.replaceAll(
     'href="https://kakobuymake.com/" target="_blank" rel="noopener">Open KakobuyMake Spreadsheet</a>',
@@ -80,17 +91,19 @@ export default {
 
     if (
       request.method !== "GET" ||
-      !HOMEPAGE_PATHS.has(url.pathname) ||
       !contentType.includes("text/html") ||
       response.status !== 200
     ) {
       return response;
     }
 
-    const html = transformHomepage(await response.text());
+    let html = await response.text();
+    if (HOMEPAGE_PATHS.has(url.pathname)) html = transformHomepage(html);
+    html = keepNavigationOnCom(html);
+
     const headers = new Headers(response.headers);
     headers.delete("content-length");
-    headers.set("x-cssbuyvip-seo", "com-home-v2");
+    headers.set("x-cssbuyvip-seo", "com-no-cross-domain-v3");
 
     return new Response(html, {
       status: response.status,
