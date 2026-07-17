@@ -1,0 +1,48 @@
+name: Clean cssbuyvip.com Article Source Boxes
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'cssbuyvip.com/**/*.html'
+      - 'tools/clean_cssbuyvip_article_sources.py'
+      - '.github/workflows/clean-cssbuyvip-article-sources.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: cssbuyvip-com-article-source-cleanup
+  cancel-in-progress: false
+
+jobs:
+  clean:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out main
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Sync latest main
+        run: git pull --rebase origin main
+
+      - name: Remove public source/reference boxes
+        run: |
+          python3 -m py_compile tools/clean_cssbuyvip_article_sources.py
+          python3 tools/clean_cssbuyvip_article_sources.py
+
+      - name: Commit cleanup when needed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add cssbuyvip.com tools/clean_cssbuyvip_article_sources.py
+          if git diff --cached --quiet; then
+            echo "Daily article pages already follow the no-source-box rule"
+            exit 0
+          fi
+          git commit -m "Remove public source boxes from cssbuyvip.com articles"
+          git push origin HEAD:main
