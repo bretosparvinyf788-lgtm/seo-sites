@@ -79,8 +79,88 @@ jobs:
           git add cssbuyvip.com/index.html cssbuyvip.com/all-seo-articles.html cssbuyvip.com/articles.html cssbuyvip.com/latest-guides.js cssbuyvip.com/sitemap.xml
           if git diff --cached --quiet; then
             echo "Article hub is already current"
-            exit 0
+          else
+            git commit -m "Publish cssbuyvip.com daily SEO article hub"
+            git pull --rebase origin main
+            git push origin main
           fi
-          git commit -m "Publish cssbuyvip.com daily SEO article hub"
+
+      - name: Verify live Cloudflare deployment
+        run: |
+          set -euo pipefail
+          ARTICLE_SLUG="$(python3 - <<'PY'
+          import json
+          from pathlib import Path
+          items = json.loads(Path('cssbuyvip.com/article-manifest.json').read_text(encoding='utf-8'))
+          items.sort(key=lambda item: item['published'], reverse=True)
+          print(items[0]['slug'])
+          PY
+          )"
+          ARTICLE_TITLE="$(python3 - <<'PY'
+          import json
+          from pathlib import Path
+          items = json.loads(Path('cssbuyvip.com/article-manifest.json').read_text(encoding='utf-8'))
+          items.sort(key=lambda item: item['published'], reverse=True)
+          print(items[0]['title'])
+          PY
+          )"
+          export ARTICLE_SLUG ARTICLE_TITLE
+
+          verified=0
+          for attempt in $(seq 1 30); do
+            stamp="${GITHUB_RUN_ID}-${attempt}"
+            if article_html="$(curl -fsSL --max-time 25 "https://cssbuyvip.com/${ARTICLE_SLUG}?verify=${stamp}")" \
+              && home_html="$(curl -fsSL --max-time 25 "https://cssbuyvip.com/?verify=${stamp}")" \
+              && archive_html="$(curl -fsSL --max-time 25 "https://cssbuyvip.com/all-seo-articles.html?verify=${stamp}")" \
+              && sitemap_xml="$(curl -fsSL --max-time 25 "https://cssbuyvip.com/sitemap.xml?verify=${stamp}")"; then
+              if printf '%s' "$article_html" | grep -Fq "$ARTICLE_TITLE" \
+                && printf '%s' "$home_html" | grep -Fq "/$ARTICLE_SLUG" \
+                && printf '%s' "$archive_html" | grep -Fq "/$ARTICLE_SLUG" \
+                && printf '%s' "$sitemap_xml" | grep -Fq "https://cssbuyvip.com/$ARTICLE_SLUG"; then
+                verified=1
+                break
+              fi
+            fi
+            sleep 10
+          done
+
+          if [ "$verified" -ne 1 ]; then
+            echo "Live deployment verification failed for $ARTICLE_SLUG" >&2
+            exit 1
+          fi
+
+          mkdir -p .github/deployment-verification
+          python3 - <<'PY'
+          import json
+          import os
+          from datetime import datetime, timezone
+          from pathlib import Path
+
+          slug = os.environ['ARTICLE_SLUG']
+          report = {
+              "status": "passed",
+              "checked_at": datetime.now(timezone.utc).isoformat(),
+              "domain": "cssbuyvip.com",
+              "article_url": f"https://cssbuyvip.com/{slug}",
+              "homepage": "https://cssbuyvip.com/",
+              "archive": "https://cssbuyvip.com/all-seo-articles.html",
+              "sitemap": "https://cssbuyvip.com/sitemap.xml",
+              "checks": {
+                  "article_title_present": True,
+                  "homepage_latest_guides_present": True,
+                  "archive_contains_article": True,
+                  "sitemap_contains_article": True
+              }
+          }
+          Path('.github/deployment-verification/cssbuyvip.com.json').write_text(
+              json.dumps(report, indent=2) + "\n",
+              encoding='utf-8'
+          )
+          PY
+
+      - name: Record successful live verification
+        run: |
+          git add .github/deployment-verification/cssbuyvip.com.json
+          git commit -m "Verify live cssbuyvip.com SEO deployment"
           git pull --rebase origin main
           git push origin main
