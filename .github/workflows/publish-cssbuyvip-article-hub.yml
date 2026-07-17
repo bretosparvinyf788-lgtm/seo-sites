@@ -1,0 +1,86 @@
+name: Publish cssbuyvip.com Article Hub
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'cssbuyvip.com/article-manifest.json'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: cssbuyvip-com-article-hub
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Sync latest main branch
+        run: git pull --rebase origin main
+
+      - name: Update homepage and complete article archive
+        run: python3 tools/update_cssbuyvip_article_hub.py
+
+      - name: Generate sitemap
+        run: python3 tools/generate_cssbuyvip_sitemap.py
+
+      - name: Validate publication
+        run: |
+          python3 - <<'PY'
+          import json
+          import re
+          import xml.etree.ElementTree as ET
+          from pathlib import Path
+
+          root = Path('cssbuyvip.com')
+          manifest = json.loads((root / 'article-manifest.json').read_text(encoding='utf-8'))
+          latest = sorted(manifest, key=lambda item: item['published'], reverse=True)[:3]
+          home = (root / 'index.html').read_text(encoding='utf-8')
+          archive = (root / 'all-seo-articles.html').read_text(encoding='utf-8')
+
+          section = re.search(
+              r'<section class="section"><div class="wrap"><section id="articles" class="panel">(.*?)</section></div></section>',
+              home,
+              re.S,
+          )
+          if not section:
+              raise SystemExit('Homepage article section not found')
+          cards = re.findall(r'<a class="article" href="/([^"]+)"', section.group(1))
+          expected = [item['slug'] for item in latest]
+          if cards != expected:
+              raise SystemExit(f'Homepage latest guides mismatch: {cards} != {expected}')
+
+          for item in manifest:
+              if f'href="/{item["slug"]}"' not in archive:
+                  raise SystemExit(f'Archive missing {item["slug"]}')
+
+          sitemap = ET.parse(root / 'sitemap.xml').getroot()
+          ns = {'sm': 'http://www.sitemaps.org/schemas/sitemap/0.9'}
+          urls = {node.text for node in sitemap.findall('sm:url/sm:loc', ns)}
+          newest_url = 'https://cssbuyvip.com/' + latest[0]['slug']
+          if newest_url not in urls:
+              raise SystemExit(f'Sitemap missing {newest_url}')
+          print(f'Validated {len(manifest)} archive articles and homepage latest 3')
+          PY
+
+      - name: Commit generated publication files
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add cssbuyvip.com/index.html cssbuyvip.com/all-seo-articles.html cssbuyvip.com/articles.html cssbuyvip.com/latest-guides.js cssbuyvip.com/sitemap.xml
+          if git diff --cached --quiet; then
+            echo "Article hub is already current"
+            exit 0
+          fi
+          git commit -m "Publish cssbuyvip.com daily SEO article hub"
+          git pull --rebase origin main
+          git push origin main
