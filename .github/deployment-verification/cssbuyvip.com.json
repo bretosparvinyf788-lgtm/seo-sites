@@ -1,0 +1,15 @@
+{
+  "status": "passed",
+  "checked_at": "2026-07-17T00:39:07.545165+00:00",
+  "domain": "cssbuyvip.com",
+  "article_url": "https://cssbuyvip.com/cssbuy-warehouse-storage-deadlines-2026.html",
+  "homepage": "https://cssbuyvip.com/",
+  "archive": "https://cssbuyvip.com/all-seo-articles.html",
+  "sitemap": "https://cssbuyvip.com/sitemap.xml",
+  "checks": {
+    "article_title_present": true,
+    "homepage_latest_guides_present": true,
+    "archive_contains_article": true,
+    "sitemap_contains_article": true
+  }
+}
