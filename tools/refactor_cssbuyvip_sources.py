@@ -3,6 +3,7 @@
 
 from __future__ import annotations
 
+import re
 from pathlib import Path
 
 SHOP_DIR = Path("cssbuyvip")
@@ -68,6 +69,26 @@ def refactor_shop() -> None:
     SHOP_INDEX.write_text(text, encoding="utf-8")
 
 
+def normalize_com_hero_actions(text: str) -> str:
+    """Keep the guide homepage focused: exactly two actions in the first screen."""
+    pattern = re.compile(
+        r'(<section class="hero full-bleed-hero">.*?<div class="actions">)'
+        r'\s*(?:<a\b[^>]*>.*?</a>\s*)+'
+        r'(</div>)',
+        re.DOTALL,
+    )
+    replacement = (
+        r'\1\n'
+        '        <a class="btn" href="/cssbuy-spreadsheet-guide.html">CSSBuy Guide</a>\n'
+        '        <a class="btn alt dark-alt" href="#workflow">How it works</a>\n'
+        r'      \2'
+    )
+    updated, count = pattern.subn(replacement, text, count=1)
+    if count != 1:
+        raise SystemExit("Safety stop: cssbuyvip.com hero action group not found")
+    return updated
+
+
 def refactor_com() -> None:
     text = COM_INDEX.read_text(encoding="utf-8")
     text = replace_if_present(text, "<title>CSSBuy VIP | Spacious CSSBuy Spreadsheet Guide</title>", "<title>CSSBuy QC & Shipping Guide 2026 – Coupons, Fees and Agent Help</title>")
@@ -81,7 +102,7 @@ def refactor_com() -> None:
     text = text.replace("Best CSSBuy Spreadsheet for QC-ready finds and smarter shipping.", "CSSBuy QC, Shipping, Coupons and Agent Guide for 2026.")
     text = text.replace("Browse a cleaner CSSBuy resource hub built for KakobuyMake: selected finds, QC photo checks, shipping guidance, category pages and daily SEO article updates.", "Use an independent CSSBuy guide hub for QC photo checks, shipping planning, coupons, service fees, W2C links and daily educational updates.")
     text = text.replace('<a class="btn" href="https://kakobuymake.com/" target="_blank" rel="noopener">Spreadsheet</a>', '<a class="btn" href="/cssbuy-spreadsheet-guide.html">CSSBuy Guide</a>')
-    text = text.replace('<a class="btn alt dark-alt" href="#workflow">How it works</a>', '<a class="btn alt dark-alt" href="#workflow">How it works</a><a class="btn alt dark-alt" href="/cssbuy-qc-finder.html">QC Finder</a><a class="btn alt dark-alt" href="/cssbuy-shipping-calculator.html">Shipping Calculator</a>', 1)
+    text = normalize_com_hero_actions(text)
     text = text.replace('href="https://kakobuymake.com/" target="_blank" rel="noopener">Open KakobuyMake Spreadsheet</a>', 'href="/cssbuy-spreadsheet-guide.html">Open CSSBuy Spreadsheet Guide</a>')
     wording = [("built for KakobuyMake", "built for CSSBuy product research"), ("Curated KakobuyMake links", "Curated CSSBuy product links"), ("main KakobuyMake sections", "main CSSBuy product categories"), ("KakobuyMake product discovery pages", "CSSBuy product research pages"), ("KakobuyMake discovery resources", "CSSBuy research and shipping resources"), ("KakobuyMake source pages", "product source pages"), ("KakobuyMake links", "CSSBuy product links"), ("KakobuyMake Spreadsheet", "CSSBuy Spreadsheet Guide"), ("KakobuyMake 电子表格", "CSSBuy 商品指南"), ("KakobuyMake 链接", "CSSBuy 商品链接"), ("KakobuyMake 的主要分类板块", "CSSBuy 商品主要分类板块"), ("KakobuyMake 发现资源", "CSSBuy 商品研究资源"), ("KakobuyMake 来源页面", "CSSBuy 商品来源页面"), ("para KakobuyMake", "para investigar productos con CSSBuy"), ("de KakobuyMake", "del catálogo de productos CSSBuy"), ("für KakobuyMake", "für die CSSBuy-Produktrecherche"), ("KakobuyMake-Bereiche", "CSSBuy-Produktkategorien"), ("KakobuyMake-Ressourcen", "CSSBuy-Recherche-Ressourcen"), ("pour KakobuyMake", "pour la recherche de produits CSSBuy")]
     for old, new in wording:
@@ -116,9 +137,21 @@ def validate() -> None:
     for item in ["CSSBuy Spreadsheet 2026 – W2C Links, QC Photos & Latest Finds", 'rel="canonical" href="https://cssbuyvip.shop/"', "const STATIC_GUIDE_URLS=", "/guides/best-cssbuy-spreadsheet-2026/", "/guides/cssbuy-shipping-cost-guide/", "/guides/cssbuy-qc-photos-guide/"]:
         if item not in shop:
             raise SystemExit(f"Shop validation failed: {item}")
-    for item in ["CSSBuy QC & Shipping Guide 2026 – Coupons, Fees and Agent Help", 'rel="canonical" href="https://cssbuyvip.com/"', "/cssbuy-qc-finder.html", "/cssbuy-shipping-calculator.html"]:
+    for item in ["CSSBuy QC & Shipping Guide 2026 – Coupons, Fees and Agent Help", 'rel="canonical" href="https://cssbuyvip.com/"']:
         if item not in com:
             raise SystemExit(f"Com validation failed: {item}")
+    for path in (COM_DIR / "cssbuy-qc-finder.html", COM_DIR / "cssbuy-shipping-calculator.html"):
+        if not path.exists():
+            raise SystemExit(f"Com tool page missing: {path}")
+    hero = re.search(
+        r'<section class="hero full-bleed-hero">.*?<div class="actions">(.*?)</div>',
+        com,
+        re.DOTALL,
+    )
+    if not hero or len(re.findall(r'<a\b', hero.group(1))) != 2:
+        raise SystemExit("Com validation failed: homepage hero must contain exactly two buttons")
+    if "/cssbuy-qc-finder.html" in hero.group(1) or "/cssbuy-shipping-calculator.html" in hero.group(1):
+        raise SystemExit("Com validation failed: tool buttons must not appear in the first screen")
     if "KakobuyMake" in com:
         raise SystemExit("Com validation failed: visible KakobuyMake wording remains")
     shop_html = " ".join(p.read_text(encoding="utf-8", errors="ignore") for p in SHOP_DIR.rglob("*.html"))
