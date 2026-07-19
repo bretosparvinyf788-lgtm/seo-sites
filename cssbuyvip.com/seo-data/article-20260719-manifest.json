@@ -1,0 +1,32 @@
+{
+  "domain": "cssbuyvip.com",
+  "publish_date": "2026-07-19",
+  "slug": "cssbuy-parcel-audit-2026",
+  "url_path": "/guides/cssbuy-parcel-audit-2026/",
+  "seo_title": "CSSBuy Parcel Audit 2026: QC, Weight and Shipping Checklist",
+  "meta_description": "Audit a CSSBuy parcel before international shipping with seven gates for order accuracy, QC photos, storage timing, chargeable weight, routes and cost.",
+  "h1": "CSSBuy Parcel Audit 2026: Seven Gates Before International Shipping",
+  "article_word_count": 1945,
+  "faq_count": 15,
+  "tags": [
+    "CSSBuy parcel audit",
+    "CSSBuy QC photos",
+    "CSSBuy shipping calculator",
+    "volumetric weight",
+    "warehouse storage",
+    "parcel planning"
+  ],
+  "structure_after_faq": ["Tags", "Internal navigation buttons"],
+  "validation": {
+    "indexable": true,
+    "canonical_present": true,
+    "article_schema_present": true,
+    "faq_schema_present": true,
+    "external_source_list_present": false,
+    "source_box_present": false,
+    "references_section_present": false,
+    "homepage_latest_count": 3,
+    "archive_history_count": 4,
+    "sitemap_entry_present": true
+  }
+}
