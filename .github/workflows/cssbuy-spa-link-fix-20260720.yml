@@ -1,0 +1,54 @@
+name: CSSBuy SPA article link correction 2026-07-20
+
+on:
+  push:
+    paths:
+      - '.github/workflows/cssbuy-spa-link-fix-20260720.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  fix-links:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out main
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+      - name: Keep all guide navigation inside the SPA
+        shell: bash
+        run: |
+          python - <<'PY'
+          import pathlib
+          path = pathlib.Path('cssbuyvip/index.html')
+          text = path.read_text(encoding='utf-8')
+          replacements = {
+            'const STATIC_GUIDE_URLS=["/guides/best-cssbuy-spreadsheet-2026/", "/guides/cssbuy-shipping-cost-guide/", "/guides/cssbuy-qc-photos-guide/"];\n': '',
+            'const cards = SITE_DATA.articles[currentLang].slice(0,3).map((a,i)=>`<article class="guide-card"><h3>${esc(a.title)}</h3><p>${esc(a.excerpt)}</p><a class="guide-link" href="${STATIC_GUIDE_URLS[i] || \'/guides/\'}">${u.readMore}</a></article>`).join(\'\');': 'const cards = SITE_DATA.articles[currentLang].slice(0,3).map(a=>`<article class="guide-card"><h3>${esc(a.title)}</h3><p>${esc(a.excerpt)}</p><a class="guide-link" href="#article-${a.key}" onclick="event.preventDefault();setView(\'article\',\'${a.key}\')">${u.readMore}</a></article>`).join(\'\');',
+            '<a class="outline-link" href="/guides/">${u.viewAll}</a>': '<a class="outline-link" href="#guides" onclick="event.preventDefault();setView(\'guides\')">${u.viewAll}</a>',
+            'const cards = SITE_DATA.articles[currentLang].map((a,i)=>`<article class="guide-card"><h3>${esc(a.title)}</h3><p>${esc(a.excerpt)}</p><a class="guide-link" href="${STATIC_GUIDE_URLS[i] || \'/guides/\'}">${u.readMore}</a></article>`).join(\'\');': 'const cards = SITE_DATA.articles[currentLang].map(a=>`<article class="guide-card"><h3>${esc(a.title)}</h3><p>${esc(a.excerpt)}</p><a class="guide-link" href="#article-${a.key}" onclick="event.preventDefault();setView(\'article\',\'${a.key}\')">${u.readMore}</a></article>`).join(\'\');',
+            '<p><a class="guide-link" href="/guides/">${u.backGuides}</a></p>': '<p><a class="guide-link" href="#guides" onclick="event.preventDefault();setView(\'guides\')">${u.backGuides}</a></p>'
+          }
+          for old, new in replacements.items():
+              count = text.count(old)
+              if count != 1:
+                  raise SystemExit(f'Expected one match, found {count}: {old[:80]}')
+              text = text.replace(old, new, 1)
+          if 'STATIC_GUIDE_URLS' in text:
+              raise SystemExit('Static guide URL dependency remains')
+          if '/blog/' in text:
+              raise SystemExit('Unexpected /blog/ dependency')
+          path.write_text(text, encoding='utf-8')
+          PY
+          git diff --check
+          test "$(git diff --name-only)" = "cssbuyvip/index.html"
+          grep -q "slice(0,3)" cssbuyvip/index.html
+          grep -q "#article-" cssbuyvip/index.html
+          grep -q "#guides" cssbuyvip/index.html
+          git config user.name 'CSSBuyVip SEO Automation'
+          git config user.email 'actions@users.noreply.github.com'
+          git add cssbuyvip/index.html
+          git commit -m 'Keep CSSBuy guide links inside the homepage SPA'
+          git push origin HEAD:main
