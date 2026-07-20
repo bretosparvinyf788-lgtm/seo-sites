@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Generate cssbuyvip.com/sitemap.xml from indexable static HTML files."""
+"""Generate cssbuyvip.com/sitemap.xml from static HTML and indexable worker routes."""
 
 from __future__ import annotations
 
@@ -14,6 +14,9 @@ SITE_DIR = Path("cssbuyvip.com")
 OUTPUT = SITE_DIR / "sitemap.xml"
 BASE_URL = "https://cssbuyvip.com"
 EXCLUDED_FILENAMES = {"404.html", "500.html", "articles.html"}
+VIRTUAL_ROUTES = {
+    f"{BASE_URL}/guides/cssbuy-parcel-audit-2026/": "2026-07-19",
+}
 
 ROBOTS_RE = re.compile(
     r'<meta\b[^>]*\bname=["\']robots["\'][^>]*\bcontent=["\']([^"\']*)["\'][^>]*>',
@@ -104,8 +107,22 @@ def main() -> None:
         seen.add(url)
         entries.append((url, git_lastmod(path)))
 
-    entries.sort(key=lambda item: (item[0] != BASE_URL + "/", item[1], item[0]), reverse=False)
-    if not entries or entries[0][0] != BASE_URL + "/":
+    for url, lastmod in VIRTUAL_ROUTES.items():
+        if url not in seen:
+            seen.add(url)
+            entries.append((url, lastmod))
+
+    homepage = BASE_URL + "/"
+    worker_path = SITE_DIR / "_worker.js"
+    if worker_path.exists():
+        worker_lastmod = git_lastmod(worker_path)
+        entries = [
+            (url, max(lastmod, worker_lastmod) if url == homepage else lastmod)
+            for url, lastmod in entries
+        ]
+
+    entries.sort(key=lambda item: (item[0] != homepage, item[1], item[0]), reverse=False)
+    if not entries or entries[0][0] != homepage:
         raise SystemExit("Safety stop: homepage was not included in the sitemap")
 
     lines = [
