@@ -1,0 +1,64 @@
+name: CSSBuy daily content update 2026-07-20
+
+on:
+  push:
+    paths:
+      - '.github/workflows/cssbuy-daily-content-update-20260720.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out main
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+      - name: Load staged article and update SPA data
+        shell: bash
+        run: |
+          git fetch origin automation/cssbuy-2026-07-20
+          git show origin/automation/cssbuy-2026-07-20:.automation/cssbuy-article-2026-07-20.json > /tmp/cssbuy-article.json
+          python - <<'PY'
+          import json, pathlib, re
+          path = pathlib.Path('cssbuyvip/index.html')
+          text = path.read_text(encoding='utf-8')
+          marker = 'const SITE_DATA = '
+          start = text.find(marker)
+          if start < 0:
+              raise SystemExit('SITE_DATA marker not found')
+          json_start = start + len(marker)
+          json_end = text.find(';\n', json_start)
+          if json_end < 0:
+              raise SystemExit('SITE_DATA terminator not found')
+          data = json.loads(text[json_start:json_end])
+          incoming = json.loads(pathlib.Path('/tmp/cssbuy-article.json').read_text(encoding='utf-8'))
+          for lang in ('en','zh','es','de','pt'):
+              arr = data.get('articles', {}).get(lang)
+              if not isinstance(arr, list):
+                  raise SystemExit(f'Missing article array: {lang}')
+              item = incoming[lang]
+              key = item['key']
+              arr[:] = [a for a in arr if a.get('key') != key and a.get('slug') != key]
+              arr.insert(0, item)
+              if arr[0].get('publish_date') != '2026-07-20':
+                  raise SystemExit(f'Newest date verification failed: {lang}')
+              top = [a.get('key') or a.get('slug') for a in arr[:3]]
+              if len(top) != 3 or len(set(top)) != 3:
+                  raise SystemExit(f'Top-three uniqueness failed: {lang}')
+          if not re.search(r'slice\(\s*0\s*,\s*3\s*\)', text):
+              raise SystemExit('Homepage first-three renderer not found')
+          new_json = json.dumps(data, ensure_ascii=False, separators=(',', ':'))
+          path.write_text(text[:json_start] + new_json + text[json_end:], encoding='utf-8')
+          PY
+          git diff --check
+          test "$(git diff --name-only)" = "cssbuyvip/index.html"
+          grep -q 'cssbuy-payment-ledger-price-edits-coupons-refunds-workflow-2026' cssbuyvip/index.html
+          git config user.name 'CSSBuyVip SEO Automation'
+          git config user.email 'actions@users.noreply.github.com'
+          git add cssbuyvip/index.html
+          git commit -m 'Publish CSSBuy payment ledger guide for 2026-07-20'
+          git push origin HEAD:main
