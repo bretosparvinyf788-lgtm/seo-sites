@@ -1611,32 +1611,31 @@ function overviewCards() {
   return `<div class="overview-card-grid">${cards.map(c => `<article class="overview-card"><div class="overview-icon">${c.icon}</div><h3>${esc(c.title)}</h3><p>${esc(c.desc)}</p></article>`).join('')}</div>`;
 }
 
-const STATIC_GUIDE_URLS=["/guides/best-cssbuy-spreadsheet-2026/", "/guides/cssbuy-shipping-cost-guide/", "/guides/cssbuy-qc-photos-guide/"];
 function home() {
   const u = SITE_DATA.ui[currentLang];
   const cats = SITE_DATA.categories[currentLang].map(c => `<a class="category-card card" href="${c.url}" rel="noopener"><span class="category-icon">${c.icon}</span><h3>${esc(c.title)}</h3><p>${esc(c.desc)}</p><span class="category-link">${u.openCat}</span></a>`).join('');
   const prods = SITE_DATA.products[currentLang].map((p,i) => `<article class="product-card card"><a href="${p.link}" rel="noopener" aria-label="${esc(p.title)}"><div class="product-media" style="background-image:url('${p.img}')"></div></a><div class="product-body"><div class="product-meta"><span>${u.hotPick}</span><span>${u.pick} ${String(i+1).padStart(2,'0')}</span></div><h3>${esc(p.title)}</h3><div class="product-price">${esc(p.price)}</div><div class="product-cta-row single-cta"><a class="outline-link primary-open" href="${p.link}" rel="noopener">${u.openProduct}</a></div></div></article>`).join('');
   const faqs = SITE_DATA.faq[currentLang].map((f,i)=>`<details ${i===0?'open':''}><summary>${esc(f[0])}</summary><p>${esc(f[1])}</p></details>`).join('');
-  const cards = SITE_DATA.articles[currentLang].slice(0,3).map((a,i)=>`<article class="guide-card"><h3>${esc(a.title)}</h3><p>${esc(a.excerpt)}</p><a class="guide-link" href="${STATIC_GUIDE_URLS[i] || '/guides/'}">${u.readMore}</a></article>`).join('');
+  const cards = SITE_DATA.articles[currentLang].slice(0,3).map(a=>`<article class="guide-card"><h3>${esc(a.title)}</h3><p>${esc(a.excerpt)}</p><a class="guide-link" href="#article-${a.key}" onclick="event.preventDefault();setView('article','${a.key}')">${u.readMore}</a></article>`).join('');
   return `${header()}<main>
   <section class="hero" id="home"><div class="wrap grid"><div><span class="eyebrow">${u.eyebrow}</span><h1>${u.h1}</h1><p class="lead">${u.lead}</p><div class="btns"><a class="btn" href="/cssbuy-spreadsheet/" rel="noopener">${u.sheet}</a><a class="btn secondary" href="https://wa.me/15980058367" rel="noopener">${u.whatsapp}</a></div></div></div></section>
   <section class="section" id="quick-overview"><div class="wrap"><div class="section-head"><div><div class="products-bigpill h2like">${u.overviewNav || 'Overview'}</div><p class="products-subtitle">${u.overview}</p></div></div><div class="overview-panel">${overviewCards()}</div></div></section>
   <section class="section" id="categories"><div class="wrap"><div class="section-head"><div><div class="category-bigpill h2like">${u.catTitle}</div><p class="category-subtitle">${u.catSub}</p></div></div><div class="category-grid">${cats}</div></div></section>
   <section class="section" id="featured-products"><div class="wrap"><div class="section-head"><div><div class="products-bigpill h2like">${u.hotTitle}</div><p class="products-subtitle">${u.hotSub}</p></div></div><div class="product-grid">${prods}</div></div></section>
   <section class="section faq" id="faq"><div class="wrap"><h2>${u.faqTitle}</h2>${faqs}</div></section>
-  <section class="latest-guides" id="latest-guides"><div class="wrap"><div class="guides-head"><div><h2>${u.guidesTitle}</h2><p>${u.guidesLead}</p></div><a class="outline-link" href="/guides/">${u.viewAll}</a></div><div class="guide-grid">${cards}</div></div></section>
+  <section class="latest-guides" id="latest-guides"><div class="wrap"><div class="guides-head"><div><h2>${u.guidesTitle}</h2><p>${u.guidesLead}</p></div><a class="outline-link" href="#guides" onclick="event.preventDefault();setView('guides')">${u.viewAll}</a></div><div class="guide-grid">${cards}</div></div></section>
   </main>${footer()}`;
 }
 function guides() {
   const u = SITE_DATA.ui[currentLang];
-  const cards = SITE_DATA.articles[currentLang].map((a,i)=>`<article class="guide-card"><h3>${esc(a.title)}</h3><p>${esc(a.excerpt)}</p><a class="guide-link" href="${STATIC_GUIDE_URLS[i] || '/guides/'}">${u.readMore}</a></article>`).join('');
+  const cards = SITE_DATA.articles[currentLang].map(a=>`<article class="guide-card"><h3>${esc(a.title)}</h3><p>${esc(a.excerpt)}</p><a class="guide-link" href="#article-${a.key}" onclick="event.preventDefault();setView('article','${a.key}')">${u.readMore}</a></article>`).join('');
   return `${header()}<main><section class="hero"><div class="wrap"><span class="eyebrow">CSSBuy Guides</span><h1>${u.guidesTitle}</h1><p class="lead">${u.guidesLead}</p></div></section><section class="section"><div class="wrap"><div class="guide-grid">${cards}</div></div></section></main>${footer()}`;
 }
 function article() {
   const u = SITE_DATA.ui[currentLang];
   const a = SITE_DATA.articles[currentLang].find(x=>x.key===currentArticle) || SITE_DATA.articles[currentLang][0];
   const body = a.body.map(s=>`<h2>${esc(s[0])}</h2><p>${esc(s[1])}</p>`).join('') + `<p><strong>Tags:</strong> ${esc(a.tags)}</p>`;
-  return `${header()}<main><section class="hero"><div class="wrap"><span class="eyebrow">CSSBuy SEO Guide</span><h1>${esc(a.title)}</h1><p class="lead">${esc(a.excerpt)}</p></div></section><section class="section"><div class="wrap article-body">${body}<p><a class="guide-link" href="/guides/">${u.backGuides}</a></p></div></section></main>${footer()}`;
+  return `${header()}<main><section class="hero"><div class="wrap"><span class="eyebrow">CSSBuy SEO Guide</span><h1>${esc(a.title)}</h1><p class="lead">${esc(a.excerpt)}</p></div></section><section class="section"><div class="wrap article-body">${body}<p><a class="guide-link" href="#guides" onclick="event.preventDefault();setView('guides')">${u.backGuides}</a></p></div></section></main>${footer()}`;
 }
 function footer() {
   const u = SITE_DATA.ui[currentLang];
