@@ -2,31 +2,28 @@ import articleA from "./seo-data/article-20260719-a.js";
 import articleB from "./seo-data/article-20260719-b.js";
 import articleC from "./seo-data/article-20260719-c.js";
 import articleD from "./seo-data/article-20260719-d.js";
-import archiveA from "./seo-data/archive-20260719-a.js";
-import archiveB from "./seo-data/archive-20260719-b.js";
 
 const HOME_PATHS = new Set(["/", "/index.html"]);
 const ARTICLE_GZIP_B64 = articleA + articleB + articleC + articleD;
-const ARCHIVE_GZIP_B64 = archiveA + archiveB;
 
 const LATEST = [
   {
+    href: "/guides/cssbuy-cost-ledger-2026/",
+    label: "New · July 20, 2026",
+    title: "CSSBuy Cost Ledger 2026: Fees, Deposits and Final Charges",
+    desc: "Track product payments, domestic freight, warehouse decisions, shipping deposits, dimensional billing and final account adjustments.",
+  },
+  {
     href: "/guides/cssbuy-parcel-audit-2026/",
-    label: "New · July 19, 2026",
-    title: "CSSBuy Parcel Audit 2026: Seven Gates Before International Shipping",
-    desc: "Audit order accuracy, QC evidence, storage timing, packaging, chargeable weight, route eligibility and landed cost before parcel payment.",
+    label: "July 19, 2026",
+    title: "CSSBuy Parcel Audit 2026: Seven Gates Before Shipping",
+    desc: "Audit order accuracy, QC evidence, storage timing, packaging, chargeable weight, route eligibility and landed cost.",
   },
   {
-    href: "/best-cssbuy-spreadsheet-2026-guide.html",
-    label: "Spreadsheet",
-    title: "Best CSSBuy Spreadsheet 2026 Guide",
-    desc: "Use product links, category research, warehouse QC and shipping-aware filters to build a safer CSSBuy haul.",
-  },
-  {
-    href: "/cssbuy-shipping-cost-guide.html",
-    label: "Shipping",
-    title: "CSSBuy Shipping Cost Guide",
-    desc: "Estimate parcel weight, compare packaging choices and avoid expensive mistakes before international shipping.",
+    href: "/cssbuy-spreadsheet-guide.html",
+    label: "July 17, 2026",
+    title: "CSSBuy Spreadsheet Guide 2026: QC, Shipping and W2C Help",
+    desc: "Move from product-link research to warehouse QC, weight planning and a more controlled buying workflow.",
   },
 ];
 
@@ -82,13 +79,6 @@ export default {
       return htmlResponse(await decodeGzipBase64(ARTICLE_GZIP_B64));
     }
 
-    if (
-      request.method === "GET" &&
-      (url.pathname === "/all-seo-articles" || url.pathname === "/all-seo-articles/")
-    ) {
-      return htmlResponse(await decodeGzipBase64(ARCHIVE_GZIP_B64));
-    }
-
     const response = await env.ASSETS.fetch(request);
     const type = response.headers.get("content-type") || "";
 
@@ -104,7 +94,7 @@ export default {
     const transformed = transformHomepage(await response.text());
     const headers = new Headers(response.headers);
     headers.delete("content-length");
-    headers.set("x-cssbuyvip-daily-seo", "2026-07-19");
+    headers.set("x-cssbuyvip-daily-seo", "2026-07-20");
 
     return new Response(transformed, {
       status: response.status,
