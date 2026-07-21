@@ -1,0 +1,9 @@
+file=cssbuyvip.com/guides/cssbuy-seller-communication-playbook-2026/index.html
+total_visible_article_words=1875
+narrative_words_before_faq=1508
+faq_count=15
+tag_items=6
+title_ok=1
+date_ok=1
+slug_ok=1
+forbidden_source_blocks=0
