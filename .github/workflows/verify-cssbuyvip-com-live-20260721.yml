@@ -1,0 +1,120 @@
+name: Verify cssbuyvip.com live 2026-07-21
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/cssbuyvip-com-live-verify-20260721.txt'
+      - '.github/workflows/verify-cssbuyvip-com-live-20260721.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: verify-cssbuyvip-com-live-20260721
+  cancel-in-progress: false
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Verify production URLs with retries
+        shell: bash
+        run: |
+          set -u
+          ARTICLE='https://cssbuyvip.com/guides/cssbuy-seller-communication-playbook-2026/'
+          HOME='https://cssbuyvip.com/'
+          ARCHIVE='https://cssbuyvip.com/all-seo-articles/'
+          SITEMAP='https://cssbuyvip.com/sitemap.xml'
+          REPORT='cssbuyvip.com/.live-verification-20260721.txt'
+          ARTICLE_TITLE='CSSBuy Seller Communication Guide 2026 | W2C & Order Notes'
+          ARTICLE_H1='CSSBuy Seller Communication Playbook: Turn Questions Into Order Controls'
+          ARTICLE_FAQ='CSSBuy Seller Communication FAQ'
+          ARTICLE_PATH='/guides/cssbuy-seller-communication-playbook-2026/'
+          success=0
+          : > "$REPORT"
+
+          for attempt in $(seq 1 18); do
+            stamp=$(date -u +%s)
+            article_body=$(mktemp)
+            home_body=$(mktemp)
+            archive_body=$(mktemp)
+            sitemap_body=$(mktemp)
+
+            article_code=$(curl -L --connect-timeout 15 --max-time 45 -sS -o "$article_body" -w '%{http_code}' "${ARTICLE}?verify=${stamp}" || echo 000)
+            home_code=$(curl -L --connect-timeout 15 --max-time 45 -sS -o "$home_body" -w '%{http_code}' "${HOME}?verify=${stamp}" || echo 000)
+            archive_code=$(curl -L --connect-timeout 15 --max-time 45 -sS -o "$archive_body" -w '%{http_code}' "${ARCHIVE}?verify=${stamp}" || echo 000)
+            sitemap_code=$(curl -L --connect-timeout 15 --max-time 45 -sS -o "$sitemap_body" -w '%{http_code}' "${SITEMAP}?verify=${stamp}" || echo 000)
+
+            article_ok=0
+            home_ok=0
+            archive_ok=0
+            sitemap_ok=0
+
+            if [[ "$article_code" == '200' ]] \
+              && grep -Fq "<title>${ARTICLE_TITLE}</title>" "$article_body" \
+              && grep -Fq "$ARTICLE_H1" "$article_body" \
+              && grep -Fq "$ARTICLE_FAQ" "$article_body" \
+              && grep -Fq 'CSSBuy Contact Seller' "$article_body" \
+              && ! grep -Fq 'Best CSSBuy Spreadsheet for QC-ready finds and smarter shipping.' "$article_body"; then
+              article_ok=1
+            fi
+
+            if [[ "$home_code" == '200' ]] \
+              && grep -Fq "$ARTICLE_PATH" "$home_body" \
+              && grep -Fq 'CSSBuy Seller Communication Playbook 2026' "$home_body" \
+              && [[ $(grep -Fo 'class="article"' "$home_body" | wc -l | tr -d ' ') -ge 3 ]]; then
+              home_ok=1
+            fi
+
+            if [[ "$archive_code" == '200' ]] \
+              && grep -Fq "$ARTICLE_PATH" "$archive_body" \
+              && grep -Fq 'CSSBuy Seller Communication Playbook 2026' "$archive_body"; then
+              archive_ok=1
+            fi
+
+            if [[ "$sitemap_code" == '200' ]] \
+              && grep -Fq "https://cssbuyvip.com${ARTICLE_PATH}" "$sitemap_body"; then
+              sitemap_ok=1
+            fi
+
+            {
+              echo "attempt=$attempt"
+              echo "checked_at_utc=$(date -u +'%Y-%m-%dT%H:%M:%SZ')"
+              echo "article_http=$article_code article_ok=$article_ok article_bytes=$(wc -c < "$article_body")"
+              echo "home_http=$home_code home_ok=$home_ok home_bytes=$(wc -c < "$home_body")"
+              echo "archive_http=$archive_code archive_ok=$archive_ok archive_bytes=$(wc -c < "$archive_body")"
+              echo "sitemap_http=$sitemap_code sitemap_ok=$sitemap_ok sitemap_bytes=$(wc -c < "$sitemap_body")"
+              echo "---"
+            } >> "$REPORT"
+
+            if [[ "$article_ok" == 1 && "$home_ok" == 1 && "$archive_ok" == 1 && "$sitemap_ok" == 1 ]]; then
+              success=1
+              break
+            fi
+
+            rm -f "$article_body" "$home_body" "$archive_body" "$sitemap_body"
+            sleep 20
+          done
+
+          {
+            echo "result=$([[ "$success" == 1 ]] && echo PASS || echo FAIL)"
+            echo "article_url=$ARTICLE"
+            echo "home_url=$HOME"
+            echo "archive_url=$ARCHIVE"
+            echo "sitemap_url=$SITEMAP"
+          } >> "$REPORT"
+
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add "$REPORT"
+          git commit -m "Record cssbuyvip.com live verification for 2026-07-21" || true
+          git push origin HEAD:main
+
+          [[ "$success" == 1 ]]
