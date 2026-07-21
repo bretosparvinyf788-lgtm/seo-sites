@@ -6,6 +6,7 @@ on:
       - main
     paths:
       - 'cssbuyvip.com/**/*.html'
+      - 'cssbuyvip.com/_worker.js'
       - 'tools/generate_cssbuyvip_sitemap.py'
       - '.github/workflows/update-cssbuyvip-sitemap.yml'
   schedule:
