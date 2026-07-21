@@ -24,6 +24,66 @@ jobs:
           ref: main
           fetch-depth: 0
 
+      - name: Validate article content in repository
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          import html as html_lib
+          import re
+
+          path = Path('cssbuyvip.com/guides/cssbuy-seller-communication-playbook-2026/index.html')
+          report = Path('cssbuyvip.com/.content-validation-20260721.txt')
+          text = path.read_text(encoding='utf-8')
+          match = re.search(r'<article class="article wrap">([\s\S]*?)</article>', text)
+          if not match:
+              raise SystemExit('Article element not found')
+          article_html = match.group(1)
+          narrative_html = article_html.split('<section class="faq">', 1)[0]
+
+          def visible_words(fragment: str) -> int:
+              clean = re.sub(r'<script\b[\s\S]*?</script>', ' ', fragment, flags=re.I)
+              clean = re.sub(r'<style\b[\s\S]*?</style>', ' ', clean, flags=re.I)
+              clean = re.sub(r'<[^>]+>', ' ', clean)
+              clean = html_lib.unescape(clean)
+              return len(re.findall(r"\b[A-Za-z0-9]+(?:[’'-][A-Za-z0-9]+)*\b", clean))
+
+          total_words = visible_words(article_html)
+          narrative_words = visible_words(narrative_html)
+          faq_count = len(re.findall(r'<details>', article_html))
+          tag_count = len(re.findall(r'<div class="tags">([\s\S]*?)</div>', article_html))
+          tag_items = len(re.findall(r'<div class="tags">[\s\S]*?</div>', article_html)) and len(re.findall(r'<span>', article_html.split('<div class="tags">',1)[1].split('</div>',1)[0]))
+          forbidden_patterns = [
+              r'<h[1-6][^>]*>\s*(?:Official\s+Sources?|Sources?|References?|Official\s+information\s+sources?)\s*</h[1-6]>',
+              r'class=["\'][^"\']*(?:source-box|references|sources-list)[^"\']*["\']',
+              r'官方消息来源|资料来源|核实来源',
+          ]
+          forbidden_hits = [p for p in forbidden_patterns if re.search(p, article_html, flags=re.I)]
+          title_ok = '<title>CSSBuy Seller Communication Guide 2026 | W2C & Order Notes</title>' in text
+          date_ok = 'datePublished":"2026-07-21"' in text and 'Published July 21, 2026' in text
+          slug_ok = 'cssbuy-seller-communication-playbook-2026' in text
+
+          lines = [
+              f'file={path}',
+              f'total_visible_article_words={total_words}',
+              f'narrative_words_before_faq={narrative_words}',
+              f'faq_count={faq_count}',
+              f'tag_items={tag_items}',
+              f'title_ok={int(title_ok)}',
+              f'date_ok={int(date_ok)}',
+              f'slug_ok={int(slug_ok)}',
+              f'forbidden_source_blocks={len(forbidden_hits)}',
+          ]
+          report.write_text('\n'.join(lines) + '\n', encoding='utf-8')
+
+          assert 1500 <= total_words <= 2000, total_words
+          assert narrative_words >= 1200, narrative_words
+          assert faq_count >= 10, faq_count
+          assert tag_items >= 5, tag_items
+          assert title_ok and date_ok and slug_ok
+          assert not forbidden_hits, forbidden_hits
+          print('\n'.join(lines))
+          PY
+
       - name: Verify production URLs with retries
         shell: bash
         run: |
@@ -66,10 +126,11 @@ jobs:
               article_ok=1
             fi
 
+            home_cards=$(grep -Fo 'class="article"' "$home_body" | wc -l | tr -d ' ')
             if [[ "$home_code" == '200' ]] \
               && grep -Fq "$ARTICLE_PATH" "$home_body" \
               && grep -Fq 'CSSBuy Seller Communication Playbook 2026' "$home_body" \
-              && [[ $(grep -Fo 'class="article"' "$home_body" | wc -l | tr -d ' ') -ge 3 ]]; then
+              && [[ "$home_cards" == '3' ]]; then
               home_ok=1
             fi
 
@@ -88,7 +149,7 @@ jobs:
               echo "attempt=$attempt"
               echo "checked_at_utc=$(date -u +'%Y-%m-%dT%H:%M:%SZ')"
               echo "article_http=$article_code article_ok=$article_ok article_bytes=$(wc -c < "$article_body")"
-              echo "home_http=$home_code home_ok=$home_ok home_bytes=$(wc -c < "$home_body")"
+              echo "home_http=$home_code home_ok=$home_ok home_cards=$home_cards home_bytes=$(wc -c < "$home_body")"
               echo "archive_http=$archive_code archive_ok=$archive_ok archive_bytes=$(wc -c < "$archive_body")"
               echo "sitemap_http=$sitemap_code sitemap_ok=$sitemap_ok sitemap_bytes=$(wc -c < "$sitemap_body")"
               echo "---"
@@ -113,8 +174,8 @@ jobs:
 
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add "$REPORT"
-          git commit -m "Record cssbuyvip.com live verification for 2026-07-21" || true
+          git add "$REPORT" cssbuyvip.com/.content-validation-20260721.txt
+          git commit -m "Record cssbuyvip.com content and live verification for 2026-07-21" || true
           git push origin HEAD:main
 
           [[ "$success" == 1 ]]
