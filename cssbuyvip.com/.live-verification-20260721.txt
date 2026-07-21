@@ -1,0 +1,12 @@
+attempt=1
+checked_at_utc=2026-07-21T02:02:02Z
+article_http=200 article_ok=1 article_bytes=23400
+home_http=200 home_ok=1 home_bytes=253497
+archive_http=200 archive_ok=1 archive_bytes=5826
+sitemap_http=200 sitemap_ok=1 sitemap_bytes=1403
+---
+result=PASS
+article_url=https://cssbuyvip.com/guides/cssbuy-seller-communication-playbook-2026/
+home_url=https://cssbuyvip.com/
+archive_url=https://cssbuyvip.com/all-seo-articles/
+sitemap_url=https://cssbuyvip.com/sitemap.xml
