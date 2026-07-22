@@ -68,4 +68,5 @@ jobs:
             exit 0
           fi
           git commit -m "Refactor CSSBuyVip source pages and static guide routes"
+          git pull --rebase origin main
           git push origin HEAD:main
