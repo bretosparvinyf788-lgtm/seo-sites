@@ -1,0 +1,90 @@
+name: Validate cssbuyvip.com Live Publication
+
+on:
+  pull_request:
+    paths:
+      - '.github/cssbuyvip-live-check-*.txt'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate-live:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Wait for production and validate article routes
+        shell: bash
+        run: |
+          set -u
+          ARTICLE='https://cssbuyvip.com/guides/cssbuy-return-exchange-decision-tree-2026/'
+          HOME='https://cssbuyvip.com/'
+          ARCHIVE='https://cssbuyvip.com/all-seo-articles/'
+          SITEMAP='https://cssbuyvip.com/sitemap.xml'
+
+          for attempt in $(seq 1 30); do
+            token="${GITHUB_RUN_ID}-${GITHUB_RUN_ATTEMPT}-${attempt}"
+            article_code=$(curl -L -sS --max-time 30 -o article.html -w '%{http_code}' "${ARTICLE}?check=${token}" || true)
+            home_code=$(curl -L -sS --max-time 30 -o home.html -w '%{http_code}' "${HOME}?check=${token}" || true)
+            archive_code=$(curl -L -sS --max-time 30 -o archive.html -w '%{http_code}' "${ARCHIVE}?check=${token}" || true)
+            sitemap_code=$(curl -L -sS --max-time 30 -o sitemap.xml -w '%{http_code}' "${SITEMAP}?check=${token}" || true)
+
+            echo "Attempt ${attempt}: article=${article_code} home=${home_code} archive=${archive_code} sitemap=${sitemap_code}"
+
+            if [ "$article_code" = 200 ] && [ "$home_code" = 200 ] && [ "$archive_code" = 200 ] && [ "$sitemap_code" = 200 ]; then
+              if python3 - <<'PY'
+from pathlib import Path
+import re
+
+article = Path('article.html').read_text(encoding='utf-8', errors='ignore')
+home = Path('home.html').read_text(encoding='utf-8', errors='ignore')
+archive = Path('archive.html').read_text(encoding='utf-8', errors='ignore')
+sitemap = Path('sitemap.xml').read_text(encoding='utf-8', errors='ignore')
+
+article_url = 'https://cssbuyvip.com/guides/cssbuy-return-exchange-decision-tree-2026/'
+required_article = [
+    '<title>CSSBuy Return & Exchange Guide 2026 | 7-Day Warehouse Clock</title>',
+    'CSSBuy Return Clock 2026: Decide Before Storage Becomes a Distraction',
+    'CSSBuy Returns and Exchanges FAQ',
+    'What conditions does CSSBuy publicly list for a return?',
+    'CSSBuy returns',
+]
+for marker in required_article:
+    assert marker in article, f'missing article marker: {marker}'
+assert 'Best CSSBuy Spreadsheet for QC-ready finds and smarter shipping.' not in article, 'article fell back to homepage'
+for forbidden in ('Official sources checked', '>Sources<', '>References<', '资料来源', '核实来源'):
+    assert forbidden.lower() not in article.lower(), f'forbidden source block: {forbidden}'
+
+section_match = re.search(r'<section id="articles" class="panel">([\s\S]*?)</section>', home)
+assert section_match, 'homepage article section missing'
+section = section_match.group(1)
+assert section.count('class="article"') == 3, f'homepage latest count is {section.count("class=\"article\"")}'
+for title in (
+    'CSSBuy Return Clock 2026: Returns and Exchanges',
+    'CSSBuy Seller Communication Playbook 2026',
+    'CSSBuy Cost Ledger 2026: Fees, Deposits and Final Charges',
+):
+    assert title in section, f'homepage missing latest title: {title}'
+assert 'CSSBuy Parcel Audit 2026' not in section, 'older article displaced a newer one'
+
+assert '/guides/cssbuy-return-exchange-decision-tree-2026/' in archive, 'archive missing article link'
+assert 'July 22, 2026' in archive, 'archive missing publish date'
+assert f'<loc>{article_url}</loc>' in sitemap, 'sitemap missing article URL'
+print('Live production validation passed')
+PY
+              then
+                echo 'Production publication is live and valid.'
+                exit 0
+              fi
+            fi
+
+            sleep 20
+          done
+
+          echo 'Production did not pass validation within the retry window.'
+          echo '--- article head ---'; head -40 article.html 2>/dev/null || true
+          echo '--- homepage article markers ---'; grep -n 'CSSBuy Return\|Latest SEO\|article-list' home.html 2>/dev/null | head -30 || true
+          echo '--- archive markers ---'; grep -n 'cssbuy-return-exchange' archive.html 2>/dev/null || true
+          echo '--- sitemap markers ---'; grep -n 'cssbuy-return-exchange' sitemap.xml 2>/dev/null || true
+          exit 1
