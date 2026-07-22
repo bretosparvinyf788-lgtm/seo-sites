@@ -1,0 +1,25 @@
+{
+  "status": "passed",
+  "checked_at": "2026-07-22T01:30:45Z",
+  "http_status": {
+    "article": "200",
+    "home": "200",
+    "archive": "200",
+    "sitemap": "200"
+  },
+  "checks": {
+    "article_title": true,
+    "article_h1": true,
+    "article_faq": true,
+    "article_not_homepage": true,
+    "homepage_section_found": true,
+    "homepage_latest_count": 3,
+    "homepage_new_title": true,
+    "homepage_latest_order": true,
+    "archive_link": true,
+    "archive_date": true,
+    "sitemap_link": true
+  },
+  "article_first_300_chars": "<!doctype html> <html lang=\"en\"> <head> <meta charset=\"utf-8\"> <meta name=\"viewport\" content=\"width=device-width,initial-scale=1\"> <title>CSSBuy Return & Exchange Guide 2026 | 7-Day Warehouse Clock</title> <meta name=\"description\" content=\"Use a practical CSSBuy return and exchange workflow for QC e",
+  "homepage_first_300_chars": "<!doctype html> <html lang=\"en\"> <head> <meta charset=\"utf-8\"> <meta name=\"viewport\" content=\"width=device-width,initial-scale=1\"> <title>CSSBuy QC & Shipping Guide 2026 \u2013 Coupons, Fees and Agent Help</title> <meta name=\"description\" content=\"Independent CSSBuy guide covering QC photo checks, shippi"
+}
