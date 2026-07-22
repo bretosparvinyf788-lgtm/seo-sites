@@ -1,0 +1,65 @@
+name: Diagnose July 22 cssbuyvip.com Production
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/cssbuyvip-live-diagnostic-20260722.trigger'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  diagnose:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+      - name: Fetch production routes and build diagnostic record
+        shell: bash
+        run: |
+          token="${GITHUB_RUN_ID}-$(date +%s)"
+          curl -L -sS --max-time 35 -o article.html -w '%{http_code}' "https://cssbuyvip.com/guides/cssbuy-return-exchange-decision-tree-2026/?diag=${token}" > article.code || true
+          curl -L -sS --max-time 35 -o home.html -w '%{http_code}' "https://cssbuyvip.com/?diag=${token}" > home.code || true
+          curl -L -sS --max-time 35 -o archive.html -w '%{http_code}' "https://cssbuyvip.com/all-seo-articles/?diag=${token}" > archive.code || true
+          curl -L -sS --max-time 35 -o sitemap.xml -w '%{http_code}' "https://cssbuyvip.com/sitemap.xml?diag=${token}" > sitemap.code || true
+          python3 - <<'PY'
+          from pathlib import Path
+          from datetime import datetime, timezone
+          import json, re
+          def read(path): return Path(path).read_text(encoding='utf-8',errors='ignore') if Path(path).exists() else ''
+          article=read('article.html'); home=read('home.html'); archive=read('archive.html'); sitemap=read('sitemap.xml')
+          codes={x:read(f'{x}.code').strip() for x in ('article','home','archive','sitemap')}
+          section_match=re.search(r'<section id="articles" class="panel">([\s\S]*?)</section>',home)
+          section=section_match.group(1) if section_match else ''
+          checks={
+            'article_title': '<title>CSSBuy Return & Exchange Guide 2026 | 7-Day Warehouse Clock</title>' in article,
+            'article_h1': 'CSSBuy Return Clock 2026: Decide Before Storage Becomes a Distraction' in article,
+            'article_faq': 'CSSBuy Returns and Exchanges FAQ' in article and article.count('<details>')==15,
+            'article_not_homepage': 'Best CSSBuy Spreadsheet for QC-ready finds and smarter shipping.' not in article,
+            'homepage_section_found': bool(section_match),
+            'homepage_latest_count': section.count('class="article"'),
+            'homepage_new_title': 'CSSBuy Return Clock 2026: Returns and Exchanges' in section,
+            'homepage_latest_order': all(x in section for x in ('CSSBuy Return Clock 2026: Returns and Exchanges','CSSBuy Seller Communication Playbook 2026','CSSBuy Cost Ledger 2026: Fees, Deposits and Final Charges')) and 'CSSBuy Parcel Audit 2026' not in section,
+            'archive_link': '/guides/cssbuy-return-exchange-decision-tree-2026/' in archive,
+            'archive_date': 'July 22, 2026' in archive,
+            'sitemap_link': '<loc>https://cssbuyvip.com/guides/cssbuy-return-exchange-decision-tree-2026/</loc>' in sitemap,
+          }
+          passed=all(v=='200' for v in codes.values()) and checks['article_title'] and checks['article_h1'] and checks['article_faq'] and checks['article_not_homepage'] and checks['homepage_section_found'] and checks['homepage_latest_count']==3 and checks['homepage_new_title'] and checks['homepage_latest_order'] and checks['archive_link'] and checks['archive_date'] and checks['sitemap_link']
+          record={'status':'passed' if passed else 'failed','checked_at':datetime.now(timezone.utc).strftime('%Y-%m-%dT%H:%M:%SZ'),'http_status':codes,'checks':checks,'article_first_300_chars':re.sub(r'\s+',' ',article[:300]),'homepage_first_300_chars':re.sub(r'\s+',' ',home[:300])}
+          Path('cssbuyvip.com/live-diagnostic-20260722.json').write_text(json.dumps(record,indent=2)+'\n',encoding='utf-8')
+          print(json.dumps(record,indent=2))
+          PY
+      - name: Commit production diagnostic
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git pull --rebase origin main
+          git add cssbuyvip.com/live-diagnostic-20260722.json
+          if ! git diff --cached --quiet; then
+            git commit -m 'Record July 22 cssbuyvip.com live diagnostic'
+            git push origin HEAD:main
+          fi
