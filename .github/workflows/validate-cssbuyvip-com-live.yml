@@ -59,7 +59,8 @@ for forbidden in ('Official sources checked', '>Sources<', '>References<', 'иµДж
 section_match = re.search(r'<section id="articles" class="panel">([\s\S]*?)</section>', home)
 assert section_match, 'homepage article section missing'
 section = section_match.group(1)
-assert section.count('class="article"') == 3, f'homepage latest count is {section.count("class=\"article\"")}'
+article_count = section.count('class="article"')
+assert article_count == 3, f'homepage latest count is {article_count}'
 for title in (
     'CSSBuy Return Clock 2026: Returns and Exchanges',
     'CSSBuy Seller Communication Playbook 2026',
