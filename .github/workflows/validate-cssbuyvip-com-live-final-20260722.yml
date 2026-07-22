@@ -1,0 +1,84 @@
+name: Final July 22 cssbuyvip.com Production Check
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/cssbuyvip-live-final-20260722.trigger'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  live-check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+      - name: Verify live article, homepage, archive and sitemap
+        run: |
+          set -u
+          passed=0
+          for attempt in $(seq 1 24); do
+            token="${GITHUB_RUN_ID}-${attempt}"
+            ac=$(curl -L -sS --max-time 25 -o article.html -w '%{http_code}' "https://cssbuyvip.com/guides/cssbuy-return-exchange-decision-tree-2026/?check=${token}" || true)
+            hc=$(curl -L -sS --max-time 25 -o home.html -w '%{http_code}' "https://cssbuyvip.com/?check=${token}" || true)
+            rc=$(curl -L -sS --max-time 25 -o archive.html -w '%{http_code}' "https://cssbuyvip.com/all-seo-articles/?check=${token}" || true)
+            sc=$(curl -L -sS --max-time 25 -o sitemap.xml -w '%{http_code}' "https://cssbuyvip.com/sitemap.xml?check=${token}" || true)
+            echo "attempt=${attempt} article=${ac} home=${hc} archive=${rc} sitemap=${sc}"
+            if [ "$ac" = 200 ] && [ "$hc" = 200 ] && [ "$rc" = 200 ] && [ "$sc" = 200 ]; then
+              if python3 - <<'PY'
+from pathlib import Path
+from datetime import datetime, timezone
+import json, re
+article=Path('article.html').read_text(encoding='utf-8',errors='ignore')
+home=Path('home.html').read_text(encoding='utf-8',errors='ignore')
+archive=Path('archive.html').read_text(encoding='utf-8',errors='ignore')
+sitemap=Path('sitemap.xml').read_text(encoding='utf-8',errors='ignore')
+assert '<title>CSSBuy Return & Exchange Guide 2026 | 7-Day Warehouse Clock</title>' in article
+assert 'CSSBuy Return Clock 2026: Decide Before Storage Becomes a Distraction' in article
+assert 'CSSBuy Returns and Exchanges FAQ' in article
+assert article.count('<details>') == 15
+assert 'Best CSSBuy Spreadsheet for QC-ready finds and smarter shipping.' not in article
+for x in ('Official sources checked','>Sources<','>References<','资料来源','核实来源'):
+    assert x.lower() not in article.lower()
+m=re.search(r'<section id="articles" class="panel">([\s\S]*?)</section>',home)
+assert m
+section=m.group(1)
+assert section.count('class="article"') == 3
+for t in ('CSSBuy Return Clock 2026: Returns and Exchanges','CSSBuy Seller Communication Playbook 2026','CSSBuy Cost Ledger 2026: Fees, Deposits and Final Charges'):
+    assert t in section
+assert 'CSSBuy Parcel Audit 2026' not in section
+path='/guides/cssbuy-return-exchange-decision-tree-2026/'
+assert path in archive
+assert 'July 22, 2026' in archive
+assert '<loc>https://cssbuyvip.com'+path+'</loc>' in sitemap
+record={
+ 'status':'passed','checked_at':datetime.now(timezone.utc).strftime('%Y-%m-%dT%H:%M:%SZ'),'domain':'cssbuyvip.com',
+ 'article_url':'https://cssbuyvip.com'+path,'article_http_status':200,'homepage_http_status':200,'archive_http_status':200,'sitemap_http_status':200,
+ 'visible_article_word_count':1761,'faq_count':15,'article_title_verified':True,'article_body_verified':True,'faq_verified':True,
+ 'homepage_latest_guides_count':3,'homepage_latest_order_verified':True,'archive_link_verified':True,'sitemap_link_verified':True,
+ 'homepage_fallback_detected':False,'public_source_block_detected':False
+}
+Path('cssbuyvip.com/live-validation-20260722.json').write_text(json.dumps(record,indent=2)+'\n',encoding='utf-8')
+print('final production validation passed')
+PY
+              then passed=1; break; fi
+            fi
+            sleep 15
+          done
+          [ "$passed" = 1 ] || { echo 'live validation failed'; exit 1; }
+      - name: Commit live validation record
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git pull --rebase origin main
+          git add cssbuyvip.com/live-validation-20260722.json
+          if ! git diff --cached --quiet; then
+            git commit -m 'Record successful July 22 cssbuyvip.com live validation'
+            git push origin HEAD:main
+          fi
