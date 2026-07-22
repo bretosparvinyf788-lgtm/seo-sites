@@ -8,6 +8,7 @@ PAGE = Path("cssbuyvip/index.html")
 TRIGGERS = Path(".github").glob("cssbuy-sync-guides-all-langs-trigger-*.txt")
 LANGS = ("en", "zh", "es", "de", "pt")
 PREFIX = "CSSBUY_ARTICLE_LZMA_BASE64\n"
+RAW_PREFIX = "CSSBUY_ARTICLE_JSON\n"
 
 html = PAGE.read_text(encoding="utf-8")
 original = html
@@ -30,13 +31,16 @@ if missing:
 payload_files = []
 for candidate in TRIGGERS:
     candidate_text = candidate.read_text(encoding="utf-8").strip()
-    if candidate_text.startswith(PREFIX):
+    if candidate_text.startswith(PREFIX) or candidate_text.startswith(RAW_PREFIX):
         payload_files.append((candidate.name, candidate, candidate_text))
 if not payload_files:
     raise SystemExit("Safety stop: no article trigger payload found")
 _, trigger, text = sorted(payload_files)[-1]
 try:
-    payload = json.loads(lzma.decompress(base64.b64decode(text[len(PREFIX):])).decode("utf-8"))
+    if text.startswith(PREFIX):
+        payload = json.loads(lzma.decompress(base64.b64decode(text[len(PREFIX):])).decode("utf-8"))
+    else:
+        payload = json.loads(text[len(RAW_PREFIX):])
 except Exception as exc:
     raise SystemExit("Safety stop: invalid article payload: " + str(exc))
 
