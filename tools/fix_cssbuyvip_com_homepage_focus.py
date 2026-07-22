@@ -73,6 +73,10 @@ def main() -> None:
         "Use this module for daily CSSBuy SEO updates and long-tail keyword growth.",
         "Practical guides for QC checks, shipping planning and safer haul decisions.",
     )
+    text = text.replace(
+        "A full English SEO guide explaining how to use CSSBuy spreadsheet finds with warehouse QC photos, category research, shipping estimates and smarter reverse-shopping decisions.",
+        "A detailed guide explaining how to use CSSBuy spreadsheet finds with warehouse QC photos, category research, shipping estimates and safer buying decisions.",
+    )
     text = replace_language_values(
         text,
         "articles_title",
@@ -124,6 +128,7 @@ def main() -> None:
         '<section id="article-qc"',
         "Latest SEO articles",
         "long-tail keyword growth",
+        "A full English SEO guide",
         "最新 SEO 文章",
         "长尾关键词增长",
         "Every seller is vetted",
