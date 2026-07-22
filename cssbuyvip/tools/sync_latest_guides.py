@@ -9,6 +9,7 @@ TRIGGERS = Path(".github").glob("cssbuy-sync-guides-all-langs-trigger-*.txt")
 LANGS = ("en", "zh", "es", "de", "pt")
 PREFIX = "CSSBUY_ARTICLE_LZMA_BASE64\n"
 RAW_PREFIX = "CSSBUY_ARTICLE_JSON\n"
+FILES_PREFIX = "CSSBUY_ARTICLE_JSON_FILES\n"
 
 html = PAGE.read_text(encoding="utf-8")
 original = html
@@ -31,7 +32,7 @@ if missing:
 payload_files = []
 for candidate in TRIGGERS:
     candidate_text = candidate.read_text(encoding="utf-8").strip()
-    if candidate_text.startswith(PREFIX) or candidate_text.startswith(RAW_PREFIX):
+    if candidate_text.startswith(PREFIX) or candidate_text.startswith(RAW_PREFIX) or candidate_text.startswith(FILES_PREFIX):
         payload_files.append((candidate.name, candidate, candidate_text))
 if not payload_files:
     raise SystemExit("Safety stop: no article trigger payload found")
@@ -39,8 +40,18 @@ _, trigger, text = sorted(payload_files)[-1]
 try:
     if text.startswith(PREFIX):
         payload = json.loads(lzma.decompress(base64.b64decode(text[len(PREFIX):])).decode("utf-8"))
-    else:
+    elif text.startswith(RAW_PREFIX):
         payload = json.loads(text[len(RAW_PREFIX):])
+    else:
+        payload = {}
+        for line in text[len(FILES_PREFIX):].splitlines():
+            path_text = line.strip()
+            if not path_text:
+                continue
+            part = json.loads(Path(path_text).read_text(encoding="utf-8"))
+            if not isinstance(part, dict) or len(part) != 1:
+                raise ValueError(f"invalid language payload file: {path_text}")
+            payload.update(part)
 except Exception as exc:
     raise SystemExit("Safety stop: invalid article payload: " + str(exc))
 
