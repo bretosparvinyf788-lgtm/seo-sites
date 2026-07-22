@@ -1,0 +1,77 @@
+name: Validate July 22 CSSBuy Article Source
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - '.github/cssbuyvip-local-validate-20260722.trigger'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  validate-source:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+      - name: Validate article source and record metrics
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          from html import unescape
+          from datetime import datetime, timezone
+          import json
+          import re
+
+          path = Path('cssbuyvip.com/guides/cssbuy-return-exchange-decision-tree-2026/index.html')
+          html = path.read_text(encoding='utf-8')
+          match = re.search(r'<article class="article wrap">([\s\S]*?)</article>', html)
+          assert match, 'article body missing'
+          body = match.group(1)
+          text = unescape(re.sub(r'<[^>]+>', ' ', body))
+          words = len(re.findall(r"\b[\w’'-]+\b", text))
+          faq_count = body.count('<details>')
+          assert 1500 <= words <= 2000, words
+          assert faq_count == 15, faq_count
+          for marker in (
+              '<title>CSSBuy Return & Exchange Guide 2026 | 7-Day Warehouse Clock</title>',
+              '<link rel="canonical" href="https://cssbuyvip.com/guides/cssbuy-return-exchange-decision-tree-2026/">',
+              'CSSBuy Returns and Exchanges FAQ',
+              '<div class="tags">',
+              '<div class="actions">',
+          ):
+              assert marker in html, marker
+          for forbidden in ('Official sources checked', '>Sources<', '>References<', '资料来源', '核实来源'):
+              assert forbidden.lower() not in html.lower(), forbidden
+          record = {
+              'status': 'passed',
+              'checked_at': datetime.now(timezone.utc).strftime('%Y-%m-%dT%H:%M:%SZ'),
+              'source_path': str(path),
+              'visible_article_word_count': words,
+              'faq_count': faq_count,
+              'title_verified': True,
+              'canonical_verified': True,
+              'tags_after_faq_verified': html.index('<div class="tags">') > html.index('</section>'),
+              'navigation_after_tags_verified': html.index('<div class="actions">') > html.index('<div class="tags">'),
+              'public_source_block_detected': False,
+          }
+          Path('cssbuyvip.com/local-validation-20260722.json').write_text(json.dumps(record, indent=2) + '\n', encoding='utf-8')
+          print(record)
+          PY
+      - name: Commit validation record
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git pull --rebase origin main
+          git add cssbuyvip.com/local-validation-20260722.json
+          if git diff --cached --quiet; then
+            echo 'Local validation record already current'
+          else
+            git commit -m 'Record July 22 CSSBuy article source validation'
+            git push origin HEAD:main
+          fi
