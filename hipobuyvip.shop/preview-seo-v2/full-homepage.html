@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>HipoBuyVIP 完整首页检查版本</title>
+<meta name="robots" content="noindex,nofollow,noarchive">
+<style>
+*{box-sizing:border-box}html,body{margin:0;height:100%;overflow:hidden;background:#202020;font-family:Arial,Helvetica,sans-serif}.review-bar{height:62px;background:#ffcf3f;border-bottom:2px solid #101010;display:flex;align-items:center;justify-content:space-between;gap:18px;padding:8px 16px;position:relative;z-index:10}.review-title{display:flex;align-items:center;gap:12px;min-width:0}.review-title b{font-size:13px;letter-spacing:.4px;white-space:nowrap}.review-title span{font-size:11px;color:#514b41;white-space:nowrap}.controls{display:flex;align-items:center;gap:8px;flex-wrap:wrap;justify-content:flex-end}.controls button,.controls a{border:2px solid #101010;background:#fff;color:#101010;padding:8px 11px;font-size:10px;font-weight:900;text-decoration:none;cursor:pointer}.controls button.active{background:#101010;color:#fff}.stage{height:calc(100vh - 62px);display:flex;justify-content:center;background:#2d2d2d;overflow:hidden}.frame-shell{width:100%;height:100%;background:#fff;transition:width .2s ease;box-shadow:0 0 28px rgba(0,0,0,.35)}.frame-shell.mobile{width:390px}.frame-shell.tablet{width:768px}iframe{display:block;width:100%;height:100%;border:0;background:#fff}@media(max-width:760px){.review-bar{height:94px;align-items:flex-start;flex-direction:column}.stage{height:calc(100vh - 94px)}.review-title span{display:none}.controls{justify-content:flex-start}.controls button,.controls a{padding:7px 9px}}
+</style>
+</head>
+<body>
+<div class="review-bar">
+  <div class="review-title"><b>完整首页检查版本</b><span>加载正式首页全部模块，仅在镜像中展示拟优化文案，不修改正式首页</span></div>
+  <div class="controls">
+    <button class="active" data-size="desktop">桌面版</button>
+    <button data-size="tablet">平板版</button>
+    <button data-size="mobile">手机版</button>
+    <a href="/preview-seo-v2/how-to-use-spreadsheet.html" target="_blank" rel="noopener">查看教程页</a>
+  </div>
+</div>
+<div class="stage"><div class="frame-shell" id="frameShell"><iframe id="siteFrame" src="/" title="HipoBuyVIP complete homepage preview"></iframe></div></div>
+<script>
+const shell=document.getElementById('frameShell');
+document.querySelectorAll('[data-size]').forEach(btn=>btn.addEventListener('click',()=>{
+  document.querySelectorAll('[data-size]').forEach(x=>x.classList.remove('active'));
+  btn.classList.add('active');
+  shell.className='frame-shell'+(btn.dataset.size==='desktop'?'':' '+btn.dataset.size);
+}));
+
+const frame=document.getElementById('siteFrame');
+frame.addEventListener('load',()=>{
+  try{
+    const d=frame.contentDocument;
+    if(!d) return;
+    d.documentElement.setAttribute('data-review-version','full-homepage-v2');
+    d.title='Hipobuy Spreadsheet 2026: Updated W2C Finds & QC Tools — Check Version';
+
+    const topbar=d.querySelector('.topbar');
+    if(topbar) topbar.textContent='UPDATED JULY 2026 · INDEPENDENT HIPOBUY BUYER RESEARCH · CHECK LIVE TERMS BEFORE ORDERING';
+
+    const edition=d.querySelector('.edition');
+    if(edition) edition.textContent='UPDATED JULY 22, 2026';
+
+    const label=d.querySelector('.lead-story .story-label');
+    if(label) label.textContent='UPDATED HIPOBUY SPREADSHEET · 2026';
+
+    const hero=d.querySelector('.lead-story h1');
+    if(hero) hero.innerHTML='Hipobuy<br><em>Spreadsheet</em><br>2026.';
+
+    const lead=d.querySelector('.lead-story > p');
+    if(lead){
+      lead.textContent='Browse updated Hipobuy W2C finds, product categories, QC checks and shipping tools. Compare links, inspect warehouse evidence and estimate chargeable parcel weight before ordering.';
+      if(!d.querySelector('.review-independent-note')){
+        const note=d.createElement('p');
+        note.className='review-independent-note';
+        note.textContent='HipoBuyVIP is an independent research resource and is not the official Hipobuy website.';
+        lead.insertAdjacentElement('afterend',note);
+      }
+    }
+
+    const searchNote=d.querySelector('.search-destination-note');
+    if(searchNote) searchNote.textContent='Search opens matching products in the linked external catalog. Return here to check QC, fees and shipping assumptions.';
+
+    const hubTitle=d.querySelector('#seo-topic-title');
+    if(hubTitle) hubTitle.textContent='Everything to check before placing an order';
+    const hubIntro=d.querySelector('.seo-topic-heading p');
+    if(hubIntro) hubIntro.textContent='Start with updated finds, then review warehouse evidence, chargeable weight, fees and coupon conditions using a separate focused tool.';
+
+    const guidesHeading=[...d.querySelectorAll('h2')].find(x=>/Three guides worth reading first|Latest three buyer guides/i.test(x.textContent));
+    if(guidesHeading) guidesHeading.textContent='Latest three Hipobuy buyer guides';
+
+    const style=d.createElement('style');
+    style.textContent=`
+      .review-independent-note{font:700 12px/1.5 Arial,sans-serif!important;color:#6e695f!important;border-left:5px solid #ff5538;padding-left:12px;margin:-12px 0 25px!important;max-width:650px}
+      .lead-story h1{font-size:clamp(58px,8vw,108px)!important}
+      @media(max-width:760px){.review-independent-note{font-size:10px!important;margin-top:-8px!important}.lead-story h1{font-size:54px!important;letter-spacing:-3.5px!important}}
+    `;
+    d.head.appendChild(style);
+  }catch(err){console.error('Preview transformation failed',err)}
+});
+</script>
+</body>
+</html>
