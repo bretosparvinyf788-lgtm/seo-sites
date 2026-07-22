@@ -1,0 +1,15 @@
+verified_at_utc=2026-07-22T09:14:58Z
+sitemap_url=https://litbuyvip.shop/sitemap.xml
+sitemap_http=200
+sitemap_contains_root=yes
+robots_url=https://litbuyvip.shop/robots.txt
+robots_http=200
+robots_allows_all=yes
+robots_references_sitemap=yes
+homepage_url=https://litbuyvip.shop/
+homepage_http=200
+homepage_index_follow=yes
+homepage_noindex_absent=yes
+homepage_no_store_no_cache_meta_absent=yes
+sitemap_sha256=777fb5f06cfbd86c3ce05218da62b0138d561350c7d92b44e305457a46286b8e
+robots_sha256=2a1027bf5896d08a20463674b85f02e150bb06ceb4dc6cf93348af5714f0c646
