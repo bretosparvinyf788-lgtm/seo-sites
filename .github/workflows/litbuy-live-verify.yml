@@ -1,0 +1,85 @@
+name: One-time LitBuy live verification
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - .github/workflows/litbuy-live-verify.yml
+
+permissions:
+  contents: write
+
+jobs:
+  verify-live-files:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out main
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Verify production URLs
+        shell: bash
+        run: |
+          set -u
+          sitemap_status="000"
+          robots_status="000"
+          homepage_status="000"
+
+          for attempt in $(seq 1 18); do
+            sitemap_status=$(curl -sS -L --max-time 25 -o /tmp/litbuy-sitemap.xml -w '%{http_code}' https://litbuyvip.shop/sitemap.xml || true)
+            robots_status=$(curl -sS -L --max-time 25 -o /tmp/litbuy-robots.txt -w '%{http_code}' https://litbuyvip.shop/robots.txt || true)
+            homepage_status=$(curl -sS -L --max-time 25 -o /tmp/litbuy-homepage.html -w '%{http_code}' https://litbuyvip.shop/ || true)
+
+            if [ "$sitemap_status" = "200" ] && \
+               [ "$robots_status" = "200" ] && \
+               [ "$homepage_status" = "200" ] && \
+               grep -Fq '<loc>https://litbuyvip.shop/</loc>' /tmp/litbuy-sitemap.xml && \
+               grep -Fq 'User-agent: *' /tmp/litbuy-robots.txt && \
+               grep -Fq 'Allow: /' /tmp/litbuy-robots.txt && \
+               grep -Fq 'Sitemap: https://litbuyvip.shop/sitemap.xml' /tmp/litbuy-robots.txt && \
+               grep -Fq 'content="index,follow" name="robots"' /tmp/litbuy-homepage.html && \
+               ! grep -Fqi 'content="noindex,nofollow"' /tmp/litbuy-homepage.html && \
+               ! grep -Eqi '<meta[^>]+http-equiv="Cache-Control"[^>]+(no-store|no-cache)' /tmp/litbuy-homepage.html; then
+              break
+            fi
+
+            if [ "$attempt" -eq 18 ]; then
+              echo "Live verification failed after $attempt attempts"
+              echo "sitemap_status=$sitemap_status"
+              echo "robots_status=$robots_status"
+              echo "homepage_status=$homepage_status"
+              exit 1
+            fi
+            sleep 10
+          done
+
+          mkdir -p .github
+          {
+            echo "verified_at_utc=$(date -u +'%Y-%m-%dT%H:%M:%SZ')"
+            echo "sitemap_url=https://litbuyvip.shop/sitemap.xml"
+            echo "sitemap_http=$sitemap_status"
+            echo "sitemap_contains_root=yes"
+            echo "robots_url=https://litbuyvip.shop/robots.txt"
+            echo "robots_http=$robots_status"
+            echo "robots_allows_all=yes"
+            echo "robots_references_sitemap=yes"
+            echo "homepage_url=https://litbuyvip.shop/"
+            echo "homepage_http=$homepage_status"
+            echo "homepage_index_follow=yes"
+            echo "homepage_noindex_absent=yes"
+            echo "homepage_no_store_no_cache_meta_absent=yes"
+            echo "sitemap_sha256=$(sha256sum /tmp/litbuy-sitemap.xml | awk '{print $1}')"
+            echo "robots_sha256=$(sha256sum /tmp/litbuy-robots.txt | awk '{print $1}')"
+          } > .github/litbuy-live-verification.txt
+
+      - name: Commit verification result
+        shell: bash
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add .github/litbuy-live-verification.txt
+          git commit -m "Verify live LitBuy SEO endpoints"
+          git push origin HEAD:main
