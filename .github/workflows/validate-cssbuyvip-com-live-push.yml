@@ -48,6 +48,9 @@ jobs:
             if [ "$article_code" = 200 ] && [ "$home_code" = 200 ] && [ "$archive_code" = 200 ] && [ "$sitemap_code" = 200 ]; then
               if ARTICLE_CODE="$article_code" HOME_CODE="$home_code" ARCHIVE_CODE="$archive_code" SITEMAP_CODE="$sitemap_code" python3 - <<'PY'
 from pathlib import Path
+from datetime import datetime, timezone
+from html import unescape
+import json
 import os
 import re
 
@@ -70,6 +73,16 @@ assert 'Best CSSBuy Spreadsheet for QC-ready finds and smarter shipping.' not in
 for forbidden in ('Official sources checked', '>Sources<', '>References<', '资料来源', '核实来源'):
     assert forbidden.lower() not in article.lower(), f'forbidden public source block: {forbidden}'
 
+fragment_match = re.search(r'<article class="article wrap">([\s\S]*?)</article>', article)
+assert fragment_match, 'visible article body missing'
+fragment = fragment_match.group(1)
+plain = unescape(re.sub(r'<[^>]+>', ' ', fragment))
+visible_words = len(re.findall(r"\b[\w’'-]+\b", plain))
+faq_count = fragment.count('<details>')
+print(f'Visible article words: {visible_words}; FAQ entries: {faq_count}')
+assert 1500 <= visible_words <= 2000, f'visible article word count is {visible_words}'
+assert faq_count == 15, f'FAQ count is {faq_count}'
+
 section_match = re.search(r'<section id="articles" class="panel">([\s\S]*?)</section>', home)
 assert section_match, 'homepage article section missing'
 section = section_match.group(1)
@@ -90,6 +103,29 @@ assert f'<loc>{article_url}</loc>' in sitemap, 'sitemap missing new guide URL'
 
 for name in ('ARTICLE_CODE', 'HOME_CODE', 'ARCHIVE_CODE', 'SITEMAP_CODE'):
     assert os.environ[name] == '200', f'{name} is not 200'
+
+record = {
+    'status': 'passed',
+    'checked_at': datetime.now(timezone.utc).strftime('%Y-%m-%dT%H:%M:%SZ'),
+    'domain': 'cssbuyvip.com',
+    'article_url': article_url,
+    'article_http_status': 200,
+    'homepage_http_status': 200,
+    'archive_http_status': 200,
+    'sitemap_http_status': 200,
+    'visible_article_word_count': visible_words,
+    'faq_count': faq_count,
+    'article_title_verified': True,
+    'article_body_verified': True,
+    'faq_verified': True,
+    'homepage_latest_guides_count': article_count,
+    'homepage_latest_order_verified': True,
+    'archive_link_verified': True,
+    'sitemap_link_verified': True,
+    'homepage_fallback_detected': False,
+    'public_source_block_detected': False,
+}
+Path('cssbuyvip.com/live-validation-20260722.json').write_text(json.dumps(record, indent=2) + '\n', encoding='utf-8')
 print('Live validation passed')
 PY
               then
@@ -116,28 +152,6 @@ PY
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git pull --rebase origin main
-          checked_at=$(date -u +'%Y-%m-%dT%H:%M:%SZ')
-          cat > cssbuyvip.com/live-validation-20260722.json <<EOF
-          {
-            "status": "passed",
-            "checked_at": "${checked_at}",
-            "domain": "cssbuyvip.com",
-            "article_url": "https://cssbuyvip.com/guides/cssbuy-return-exchange-decision-tree-2026/",
-            "article_http_status": 200,
-            "homepage_http_status": 200,
-            "archive_http_status": 200,
-            "sitemap_http_status": 200,
-            "article_title_verified": true,
-            "article_body_verified": true,
-            "faq_verified": true,
-            "homepage_latest_guides_count": 3,
-            "homepage_latest_order_verified": true,
-            "archive_link_verified": true,
-            "sitemap_link_verified": true,
-            "homepage_fallback_detected": false,
-            "public_source_block_detected": false
-          }
-          EOF
           git add cssbuyvip.com/live-validation-20260722.json
           if git diff --cached --quiet; then
             echo 'Validation record already current'
