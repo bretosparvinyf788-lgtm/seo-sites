@@ -1,0 +1,43 @@
+name: Fix CSSBuyVip.com Homepage Focus
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'tools/fix_cssbuyvip_com_homepage_focus.py'
+      - '.github/workflows/fix-cssbuyvip-com-homepage-focus.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: cssbuyvip-com-homepage-focus
+  cancel-in-progress: false
+
+jobs:
+  fix:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+      - name: Sync latest main
+        run: git pull --rebase origin main
+      - name: Compile cleanup script
+        run: python3 -m py_compile tools/fix_cssbuyvip_com_homepage_focus.py
+      - name: Clean homepage focus
+        run: python3 tools/fix_cssbuyvip_com_homepage_focus.py
+      - name: Commit homepage cleanup
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add cssbuyvip.com/index.html
+          if git diff --cached --quiet; then
+            echo "Homepage focus is already current"
+            exit 0
+          fi
+          git commit -m "Separate CSSBuy articles from homepage and improve trust copy"
+          git pull --rebase origin main
+          git push origin HEAD:main
