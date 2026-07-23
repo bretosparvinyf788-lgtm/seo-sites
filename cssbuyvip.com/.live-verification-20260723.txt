@@ -1,0 +1,16 @@
+local_word_count=1865
+local_forbidden_hits=[]
+local_ok=1
+---
+attempt=1
+checked_at_utc=2026-07-23T01:18:14Z
+article_http=200 article_ok=1 article_bytes=22642
+home_http=200 home_ok=1 home_bytes=223645
+archive_http=200 archive_ok=1 archive_bytes=6391
+sitemap_http=200 sitemap_ok=1 sitemap_bytes=1771
+---
+result=PASS
+article_url=https://cssbuyvip.com/guides/cssbuy-buy-for-me-vs-ship-for-me-2026/
+home_url=https://cssbuyvip.com/
+archive_url=https://cssbuyvip.com/all-seo-articles/
+sitemap_url=https://cssbuyvip.com/sitemap.xml
