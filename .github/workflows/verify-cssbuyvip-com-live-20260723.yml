@@ -1,0 +1,179 @@
+name: Verify cssbuyvip.com live 2026-07-23
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/cssbuyvip-com-live-verify-20260723.txt'
+      - '.github/workflows/verify-cssbuyvip-com-live-20260723.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: verify-cssbuyvip-com-live-20260723
+  cancel-in-progress: false
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Validate source and verify production URLs with retries
+        shell: bash
+        run: |
+          set -u
+          ARTICLE='https://cssbuyvip.com/guides/cssbuy-buy-for-me-vs-ship-for-me-2026/'
+          HOME='https://cssbuyvip.com/'
+          ARCHIVE='https://cssbuyvip.com/all-seo-articles/'
+          SITEMAP='https://cssbuyvip.com/sitemap.xml'
+          ARTICLE_FILE='cssbuyvip.com/guides/cssbuy-buy-for-me-vs-ship-for-me-2026/index.html'
+          REPORT='cssbuyvip.com/.live-verification-20260723.txt'
+          ARTICLE_TITLE='CSSBuy Buy For Me vs Ship For Me 2026 | Workflow Guide'
+          ARTICLE_H1='CSSBuy Buy For Me vs Ship For Me: Choose the Workflow Before You Pay'
+          ARTICLE_FAQ='CSSBuy Buy For Me vs Ship For Me FAQ'
+          ARTICLE_PATH='/guides/cssbuy-buy-for-me-vs-ship-for-me-2026/'
+          ARTICLE_CARD_TITLE='CSSBuy Buy For Me vs Ship For Me 2026'
+          success=0
+          : > "$REPORT"
+
+          python3 - "$ARTICLE_FILE" "$REPORT" <<'PY'
+          import html
+          import re
+          import sys
+          from pathlib import Path
+
+          article_path = Path(sys.argv[1])
+          report_path = Path(sys.argv[2])
+          raw = article_path.read_text(encoding='utf-8')
+          match = re.search(r'<article class="article wrap">(.*?)</article>', raw, re.S | re.I)
+          if not match:
+              visible = ''
+          else:
+              block = re.sub(r'<script\b.*?</script>', ' ', match.group(1), flags=re.S | re.I)
+              block = re.sub(r'<style\b.*?</style>', ' ', block, flags=re.S | re.I)
+              block = re.sub(r'<[^>]+>', ' ', block)
+              visible = html.unescape(block)
+          words = re.findall(r"\b[\w’'-]+\b", visible)
+          forbidden = [
+              'official sources', 'sources checked', 'references', '资料来源',
+              '核实来源', '官方消息来源', 'source list', 'source box'
+          ]
+          lowered = visible.lower()
+          forbidden_hits = [term for term in forbidden if term.lower() in lowered]
+          local_ok = 1500 <= len(words) <= 2000 and not forbidden_hits
+          with report_path.open('a', encoding='utf-8') as fh:
+              fh.write(f'local_word_count={len(words)}\n')
+              fh.write(f'local_forbidden_hits={forbidden_hits}\n')
+              fh.write(f'local_ok={1 if local_ok else 0}\n')
+              fh.write('---\n')
+          if not local_ok:
+              raise SystemExit(2)
+          PY
+          local_status=$?
+
+          if [[ "$local_status" != 0 ]]; then
+            echo 'result=FAIL_LOCAL_VALIDATION' >> "$REPORT"
+          else
+            for attempt in $(seq 1 18); do
+              stamp=$(date -u +%s)
+              article_body=$(mktemp)
+              home_body=$(mktemp)
+              archive_body=$(mktemp)
+              sitemap_body=$(mktemp)
+
+              article_code=$(curl -L --connect-timeout 15 --max-time 45 -sS -o "$article_body" -w '%{http_code}' "${ARTICLE}?verify=${stamp}" || echo 000)
+              home_code=$(curl -L --connect-timeout 15 --max-time 45 -sS -o "$home_body" -w '%{http_code}' "${HOME}?verify=${stamp}" || echo 000)
+              archive_code=$(curl -L --connect-timeout 15 --max-time 45 -sS -o "$archive_body" -w '%{http_code}' "${ARCHIVE}?verify=${stamp}" || echo 000)
+              sitemap_code=$(curl -L --connect-timeout 15 --max-time 45 -sS -o "$sitemap_body" -w '%{http_code}' "${SITEMAP}?verify=${stamp}" || echo 000)
+
+              article_ok=0
+              home_ok=0
+              archive_ok=0
+              sitemap_ok=0
+
+              if [[ "$article_code" == '200' ]] \
+                && grep -Fq "<title>${ARTICLE_TITLE}</title>" "$article_body" \
+                && grep -Fq "$ARTICLE_H1" "$article_body" \
+                && grep -Fq "$ARTICLE_FAQ" "$article_body" \
+                && grep -Fq 'The Ownership Test' "$article_body" \
+                && grep -Fq 'CSSBuy Buy For Me' "$article_body" \
+                && grep -Fq 'CSSBuy Ship For Me' "$article_body" \
+                && ! grep -Fiq 'Official Sources' "$article_body" \
+                && ! grep -Fiq '>Sources<' "$article_body" \
+                && ! grep -Fiq '>References<' "$article_body" \
+                && ! grep -Fq 'Best CSSBuy Spreadsheet for QC-ready finds and smarter shipping.' "$article_body"; then
+                article_ok=1
+              fi
+
+              home_check=$(python3 - "$home_body" "$ARTICLE_PATH" "$ARTICLE_CARD_TITLE" <<'PY'
+          import re, sys
+          text = open(sys.argv[1], encoding='utf-8', errors='ignore').read()
+          path, title = sys.argv[2], sys.argv[3]
+          section = re.search(r'<section id="articles" class="panel">(.*?)</section>', text, re.S | re.I)
+          if not section:
+              print(0)
+          else:
+              block = section.group(1)
+              cards = re.findall(r'class="article"', block)
+              print(1 if len(cards) == 3 and path in block and title in block else 0)
+          PY
+              )
+              if [[ "$home_code" == '200' && "$home_check" == '1' ]]; then home_ok=1; fi
+
+              archive_check=$(python3 - "$archive_body" "$ARTICLE_PATH" <<'PY'
+          import sys
+          text = open(sys.argv[1], encoding='utf-8', errors='ignore').read()
+          new_path = sys.argv[2]
+          old_path = '/guides/cssbuy-return-exchange-decision-tree-2026/'
+          print(1 if new_path in text and old_path in text and text.index(new_path) < text.index(old_path) else 0)
+          PY
+              )
+              if [[ "$archive_code" == '200' && "$archive_check" == '1' ]]; then archive_ok=1; fi
+
+              if [[ "$sitemap_code" == '200' ]] \
+                && grep -Fq "https://cssbuyvip.com${ARTICLE_PATH}" "$sitemap_body"; then
+                sitemap_ok=1
+              fi
+
+              {
+                echo "attempt=$attempt"
+                echo "checked_at_utc=$(date -u +'%Y-%m-%dT%H:%M:%SZ')"
+                echo "article_http=$article_code article_ok=$article_ok article_bytes=$(wc -c < "$article_body")"
+                echo "home_http=$home_code home_ok=$home_ok home_bytes=$(wc -c < "$home_body")"
+                echo "archive_http=$archive_code archive_ok=$archive_ok archive_bytes=$(wc -c < "$archive_body")"
+                echo "sitemap_http=$sitemap_code sitemap_ok=$sitemap_ok sitemap_bytes=$(wc -c < "$sitemap_body")"
+                echo '---'
+              } >> "$REPORT"
+
+              if [[ "$article_ok" == 1 && "$home_ok" == 1 && "$archive_ok" == 1 && "$sitemap_ok" == 1 ]]; then
+                success=1
+                rm -f "$article_body" "$home_body" "$archive_body" "$sitemap_body"
+                break
+              fi
+
+              rm -f "$article_body" "$home_body" "$archive_body" "$sitemap_body"
+              sleep 20
+            done
+
+            {
+              echo "result=$([[ "$success" == 1 ]] && echo PASS || echo FAIL_LIVE)"
+              echo "article_url=$ARTICLE"
+              echo "home_url=$HOME"
+              echo "archive_url=$ARCHIVE"
+              echo "sitemap_url=$SITEMAP"
+            } >> "$REPORT"
+          fi
+
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add "$REPORT"
+          git commit -m 'Record cssbuyvip.com live verification for 2026-07-23' || true
+          git push origin HEAD:main
+
+          [[ "$local_status" == 0 && "$success" == 1 ]]
