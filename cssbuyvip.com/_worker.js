@@ -2,22 +2,22 @@ const HOME_PATHS = new Set(["/", "/index.html"]);
 
 const LATEST = [
   {
+    href: "/guides/cssbuy-buy-for-me-vs-ship-for-me-2026/",
+    label: "New · July 23, 2026",
+    title: "CSSBuy Buy For Me vs Ship For Me 2026",
+    desc: "Choose who buys, who manages the seller, how the warehouse matches packages and where return responsibility sits.",
+  },
+  {
     href: "/guides/cssbuy-return-exchange-decision-tree-2026/",
-    label: "New · July 22, 2026",
+    label: "July 22, 2026",
     title: "CSSBuy Return Clock 2026: Returns and Exchanges",
-    desc: "Separate the return window from warehouse storage, build stronger QC evidence and choose approve, exchange or return before parcel submission.",
+    desc: "Separate the return window from warehouse storage, build stronger QC evidence and decide before parcel submission.",
   },
   {
     href: "/guides/cssbuy-seller-communication-playbook-2026/",
     label: "July 21, 2026",
     title: "CSSBuy Seller Communication Playbook 2026",
     desc: "Use Contact Seller, Expert Buy and Add Note to control W2C variants, prices, evidence, returns and parcel handoffs.",
-  },
-  {
-    href: "/guides/cssbuy-cost-ledger-2026/",
-    label: "July 20, 2026",
-    title: "CSSBuy Cost Ledger 2026: Fees, Deposits and Final Charges",
-    desc: "Track product payments, domestic freight, warehouse decisions, shipping deposits, dimensional billing and final account adjustments.",
   },
 ];
 
@@ -61,7 +61,7 @@ export default {
     const transformed = transformHomepage(await response.text());
     const headers = new Headers(response.headers);
     headers.delete("content-length");
-    headers.set("x-cssbuyvip-daily-seo", "2026-07-22-static-routes");
+    headers.set("x-cssbuyvip-daily-seo", "2026-07-23-static-routes");
 
     return new Response(transformed, {
       status: response.status,
