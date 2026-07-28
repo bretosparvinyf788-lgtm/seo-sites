@@ -1,4 +1,5 @@
 {
-  "action": "inspect",
-  "requested_at": "2026-07-28T02:08:00Z"
+  "action": "publish",
+  "requested_at": "2026-07-28T02:28:00Z",
+  "article": "guide-sugargoo-returns-exchanges.html"
 }
