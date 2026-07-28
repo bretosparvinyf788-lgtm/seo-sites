@@ -1,5 +1,6 @@
 {
-  "requested_at": "2026-07-28T02:38:00Z",
+  "requested_at": "2026-07-28T03:00:00Z",
   "article": "guide-sugargoo-returns-exchanges.html",
-  "verification_window_minutes": 60
+  "verification_window_minutes": 60,
+  "reporting_retry": true
 }
