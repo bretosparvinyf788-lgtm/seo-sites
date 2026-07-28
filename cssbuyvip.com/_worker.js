@@ -3,7 +3,7 @@ const HOME_PATHS = new Set(["/", "/index.html"]);
 
 const LATEST = [
   {
-    href: "/guides/cssbuy-ship-for-me-inbound-manifest-2026/",
+    href: "/guides/cssbuy-ship-for-me-intake-manifest-2026/",
     label: "New · July 28, 2026",
     title: "CSSBuy Ship For Me Intake Manifest 2026",
     desc: "Control domestic tracking, warehouse matching, QC questions, packaging instructions and consolidation decisions.",
