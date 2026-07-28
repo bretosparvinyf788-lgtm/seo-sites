@@ -1,0 +1,41 @@
+name: Sugargoo archive publish
+
+on:
+  push:
+    paths:
+      - 'sugargoovip.shop/job.json'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: sugargoo-archive-publish
+  cancel-in-progress: false
+
+jobs:
+  update-archive:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Run archive tool
+        run: python3 sugargoovip.shop/archive_tool.py
+
+      - name: Commit generated archive changes
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add sugargoovip.shop/site.tar.gz sugargoovip.shop/inspection 2>/dev/null || true
+          if git diff --cached --quiet; then
+            echo "No generated changes to commit."
+            exit 0
+          fi
+          ACTION=$(python3 -c "import json; print(json.load(open('sugargoovip.shop/job.json')).get('action','update'))")
+          git commit -m "Sugargoo archive ${ACTION} result"
+          git push origin HEAD:main
