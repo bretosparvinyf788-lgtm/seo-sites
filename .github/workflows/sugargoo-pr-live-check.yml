@@ -1,0 +1,71 @@
+name: Sugargoo PR live check
+
+on:
+  pull_request:
+    paths:
+      - 'sugargoovip.shop/pr-live-check.txt'
+
+permissions:
+  contents: read
+
+jobs:
+  verify-production:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Verify live Sugargoo publication
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p /tmp/sugargoo-live
+          ARTICLE='https://sugargoovip.shop/guide-sugargoo-returns-exchanges.html'
+          HOME='https://sugargoovip.shop/'
+          GUIDES='https://sugargoovip.shop/guides.html'
+          SITEMAP='https://sugargoovip.shop/sitemap.xml'
+          ROBOTS='https://sugargoovip.shop/robots.txt'
+
+          article_status=$(curl -L --connect-timeout 15 --max-time 45 -sS -o /tmp/sugargoo-live/article.html -w '%{http_code}' "$ARTICLE")
+          home_status=$(curl -L --connect-timeout 15 --max-time 45 -sS -o /tmp/sugargoo-live/home.html -w '%{http_code}' "$HOME")
+          guides_status=$(curl -L --connect-timeout 15 --max-time 45 -sS -o /tmp/sugargoo-live/guides.html -w '%{http_code}' "$GUIDES")
+          sitemap_status=$(curl -L --connect-timeout 15 --max-time 45 -sS -o /tmp/sugargoo-live/sitemap.xml -w '%{http_code}' "$SITEMAP")
+          robots_status=$(curl -L --connect-timeout 15 --max-time 45 -sS -o /tmp/sugargoo-live/robots.txt -w '%{http_code}' "$ROBOTS")
+
+          echo "HTTP article=$article_status homepage=$home_status guides=$guides_status sitemap=$sitemap_status robots=$robots_status"
+          test "$article_status" = 200
+          test "$home_status" = 200
+          test "$guides_status" = 200
+          test "$sitemap_status" = 200
+          test "$robots_status" = 200
+
+          python3 - <<'PY'
+from pathlib import Path
+root=Path('/tmp/sugargoo-live')
+article=(root/'article.html').read_text(encoding='utf-8',errors='replace')
+home=(root/'home.html').read_text(encoding='utf-8',errors='replace')
+guides=(root/'guides.html').read_text(encoding='utf-8',errors='replace')
+sitemap=(root/'sitemap.xml').read_text(encoding='utf-8',errors='replace')
+robots=(root/'robots.txt').read_text(encoding='utf-8',errors='replace')
+slug='guide-sugargoo-returns-exchanges.html'
+title='Sugargoo Returns & Exchanges Guide 2026: Fix Warehouse Problems Before Shipping'
+latest_start=home.find('<section aria-labelledby="latest-guides-title"')
+latest_end=home.find('<section class="finder',latest_start) if latest_start>=0 else -1
+latest=home[latest_start:latest_end] if latest_start>=0 and latest_end>latest_start else ''
+positions=[latest.find(slug),latest.find('guide-shipping-cost.html'),latest.find('guide-qc-photos.html')]
+checks={
+'article_title': title in article,
+'article_canonical': f'https://sugargoovip.shop/{slug}' in article,
+'article_body': 'The warehouse is a decision point, not a waiting room' in article and 'Do not submit the parcel while the case is open' in article,
+'article_faq': 'Frequently asked questions' in article and article.count('<details>')>=7,
+'article_not_home_fallback': 'Sugargoo Spreadsheet 2026' not in article,
+'homepage_has_new_article': slug in latest,
+'homepage_exactly_three_cards': latest.count('class="latest-guide-card')==3,
+'homepage_newest_first': all(p>=0 for p in positions) and positions==sorted(positions),
+'guides_has_all_articles': all(s in guides for s in [slug,'guide-shipping-cost.html','guide-qc-photos.html','guide-w2c-workflow.html']),
+'guides_newest_first': guides.find(slug)>=0 and guides.find(slug)<guides.find('guide-shipping-cost.html'),
+'sitemap_has_article': slug in sitemap,
+'robots_has_sitemap': 'sitemap.xml' in robots.lower(),
+}
+for name,value in checks.items(): print(f'CHECK {name}={str(value).lower()}')
+failed=[name for name,value in checks.items() if not value]
+if failed: raise SystemExit('FAILED: '+', '.join(failed))
+print('SUGARGOO_LIVE_VERIFICATION=PASSED')
+PY
