@@ -95,15 +95,13 @@ jobs:
               'robots': (root / 'robots.txt').is_file(),
           }
           print('FINAL_FILE_COUNT', sum(1 for p in root.rglob('*') if p.is_file()))
-          for key, value in checks.items():
-              print(key, value)
+          for key, value in checks.items(): print(key, value)
           failed = [key for key, value in checks.items() if not value]
-          if failed:
-              raise SystemExit('Verification failed: ' + ', '.join(failed))
+          if failed: raise SystemExit('Verification failed: ' + ', '.join(failed))
           print('USFANSVIP_SITE_VERIFICATION=PASSED')
           PY
 
-      - name: Commit only usfansvip.shop
+      - name: Commit only usfansvip.shop to PR branch
         shell: bash
         run: |
           set -euo pipefail
@@ -112,4 +110,4 @@ jobs:
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
           git add -A usfansvip.shop .usfansvip-logo
           git commit -m 'Deploy USFansVIP multilingual site with updated logo'
-          git push origin HEAD:main
+          git push origin HEAD:${{ github.head_ref }}
