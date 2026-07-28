@@ -1,0 +1,24 @@
+{
+  "es": {
+    "key": "cssbuy-parcel-evidence-pack-claims-tracking-damage-workflow-2026",
+    "slug": "cssbuy-parcel-evidence-pack-claims-tracking-damage-workflow-2026",
+    "title": "Archivo de pruebas para paquetes CSSBuy 2026: crea un historial antes del envío",
+    "excerpt": "Organiza el enlace W2C, las fotos QC, las medidas del paquete, la ruta, el seguimiento y el estado de entrega antes de que aparezca un problema.",
+    "body": [
+      ["Un problema de paquete también es un problema de pruebas","Un envío puede pasar por el vendedor, el almacén, el equipo de embalaje, la línea internacional, aduanas y el transportista final. Cada parte conoce solo una parte de la historia. Por eso conviene crear un archivo breve que muestre qué se pidió, qué llegó al almacén, qué se empaquetó, qué ruta se pagó y qué ocurrió después del despacho."],
+      ["Guarda una captura del pedido antes de que cambie el anuncio","Registra el enlace W2C original, vendedor, título, color, talla, modelo, cantidad, precio y transporte nacional en China. Si las opciones son confusas, escribe una descripción sencilla de la variante exacta. Los anuncios pueden modificarse o desaparecer, por lo que la captura del día del pedido es más útil que volver a abrir el enlace semanas después."],
+      ["Separa las imágenes del vendedor de las fotos QC","Las fotos del vendedor describen el producto ofrecido; las fotos del almacén muestran el artículo físico recibido. Mantén ambos grupos separados. Añade un estado para cada producto: pedido, recibido, QC revisado, foto extra solicitada, aprobado, cambio, devolución o eliminado del haul."],
+      ["Convierte el QC en una decisión","Anota qué decisión demuestra cada imagen. Para ropa, guarda pecho, largo, manga o cintura. Para calzado, talla, simetría y medida de plantilla. Para bolsos, dimensiones, herrajes y accesorios. Define antes qué resultado permite aprobar y qué defecto obliga a cambiar o devolver."],
+      ["Registra la estimación y el peso facturable","Guarda peso real, largo, ancho, alto, peso volumétrico, peso facturable, ruta y destino. CSSBuy explica que el depósito de envío usa el peso estimado, el método y el destino, mientras que el importe final se calcula con el tamaño y peso verificados. El divisor volumétrico depende de la línea."],
+      ["Congela el manifiesto antes de pagar","Enumera todos los pedidos incluidos, cantidades y decisiones de embalaje. Marca los artículos devueltos, retirados o dejados en almacén. Registra vacío, refuerzo, retirada de cajas o protección especial. Al recibir el paquete podrás comparar el contenido con una sola lista."],
+      ["Guarda ruta, restricciones y declaración","Anota el nombre exacto de la línea, plazo mostrado, método de seguimiento, restricciones y declaración enviada. La declaración debe describir razonablemente el contenido y cumplir las normas del destino. Baterías, líquidos, polvos y ciertos productos de marca pueden limitar las rutas disponibles."],
+      ["Crea una cronología de seguimiento","Registra despacho, primer escaneo, exportación, aduanas, entrega al operador local e intento de entrega. Distingue un periodo sin escaneos de una excepción confirmada. Guarda capturas cuando aparezcan devolución, daño, solicitud aduanera o entrega que no coincide con la realidad."],
+      ["Qué documentar si llega dañado o incompleto","Fotografía la caja cerrada, etiqueta, todos los lados, embalaje interior y productos afectados. Para faltantes, compara el contenido con el manifiesto. Usa My Parcel y Add Note para seguimiento, logística y detalles del paquete; usa My Order y Add Note para compra, verificación, devolución o reembolso."],
+      ["FAQ práctica","No necesitas guardar imágenes repetidas; conserva las que respaldan decisiones de talla, defecto, accesorio o embalaje. El depósito de envío puede ajustarse después. Mantén el archivo hasta que el paquete esté entregado, revisado y cualquier incidencia esté cerrada."]
+    ],
+    "seo_title": "Pruebas de paquete CSSBuy 2026 | Seguimiento y daños",
+    "seo_description": "Crea un archivo CSSBuy con W2C, QC, medidas, manifiesto, ruta, seguimiento y pruebas de daños o faltantes.",
+    "tags": "pruebas CSSBuy,seguimiento CSSBuy,fotos QC,daños de paquete,manifiesto de envío,W2C,reclamaciones CSSBuy",
+    "publish_date": "2026-07-28"
+  }
+}
