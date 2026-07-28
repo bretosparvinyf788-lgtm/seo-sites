@@ -1,0 +1,178 @@
+name: Deploy USFansVIP uploaded site
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.usfansvip-upload/**'
+
+permissions:
+  contents: write
+
+jobs:
+  deploy-upload:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+      - name: Rebuild uploaded site
+        shell: bash
+        run: |
+          set -euo pipefail
+          python -m pip install --quiet pillow==12.2.0
+          cat .usfansvip-upload/logo.part* | base64 --decode > /tmp/usfans-logo-512.png
+          python <<'PY'
+          from pathlib import Path
+          from PIL import Image
+          import hashlib, json, shutil
+
+          root = Path('usfansvip.shop')
+          logo_src = Path('/tmp/usfans-logo-512.png')
+          assets = root / 'assets'
+          assets.mkdir(parents=True, exist_ok=True)
+
+          css = '''
+          .site-logo{
+            width:42px;
+            height:42px;
+            display:block;
+            object-fit:contain;
+            border-radius:14px;
+            flex:0 0 42px;
+          }
+          @media(max-width:680px){
+            .site-logo{width:36px;height:36px;flex-basis:36px;border-radius:12px}
+          }
+          '''
+          favicons = '<link href="/assets/favicon.ico" rel="icon"/><link href="/assets/favicon-32.png" rel="icon" type="image/png"/><link href="/assets/apple-touch-icon.png" rel="apple-touch-icon"/>'
+          old_mark = '<span class="brand-mark">UV</span>'
+          new_mark = '<img alt="USFansVIP logo" class="site-logo" height="42" src="/assets/usfans-logo-128.png" width="42"/>'
+
+          html_files = sorted(root.rglob('*.html'))
+          if len(html_files) != 46:
+              raise SystemExit(f'Expected 46 HTML files, found {len(html_files)}')
+
+          for path in html_files:
+              text = path.read_text(encoding='utf-8')
+              if '.site-logo{' not in text:
+                  if '</style>' not in text:
+                      raise SystemExit(f'Missing </style> in {path}')
+                  text = text.replace('</style>', css + '</style>', 1)
+              if '/assets/favicon.ico' not in text:
+                  if '</head>' not in text:
+                      raise SystemExit(f'Missing </head> in {path}')
+                  text = text.replace('</head>', favicons + '</head>', 1)
+              rel = path.relative_to(root)
+              if rel == Path('index.html') or (len(rel.parts) == 2 and rel.name == 'index.html' and rel.parts[0] in {'ar','de','es','fr','ja','ko','pt','zh'}):
+                  if old_mark in text:
+                      text = text.replace(old_mark, new_mark, 1)
+                  elif new_mark not in text:
+                      raise SystemExit(f'Missing homepage brand marker in {path}')
+              path.write_text(text, encoding='utf-8')
+
+          base = Image.open(logo_src).convert('RGBA')
+          base.save(assets / 'usfans-logo-512.png', optimize=True)
+          sizes = {
+              'usfans-logo-128.png': (128,128),
+              'favicon-16.png': (16,16),
+              'favicon-32.png': (32,32),
+              'favicon-48.png': (48,48),
+              'favicon-64.png': (64,64),
+              'favicon-180.png': (180,180),
+              'apple-touch-icon.png': (180,180),
+              'favicon-192.png': (192,192),
+              'favicon-512.png': (512,512),
+          }
+          for name, size in sizes.items():
+              base.resize(size, Image.Resampling.LANCZOS).save(assets / name, optimize=True)
+          base.save(assets / 'favicon.ico', format='ICO', sizes=[(16,16),(32,32),(48,48),(64,64)])
+
+          for marker in root.glob('.upload-test-marker*'):
+              marker.unlink()
+
+          manifest = json.loads(r'''{
+  ".nojekyll": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "404.html": "33c9d74428a8de854cc4b23f16852d6a9f72a25c97677181b01940122b06f500",
+  "DEPLOY-README.txt": "b03831c10ad687be61fc880334fecb8553e9ac64baf090d5913e165b94c2e837",
+  "ar/guides/index.html": "aa163c5ab16cc002559c059cf5ecb23e1373bfbba3e914985e1df109eeeec610",
+  "ar/guides/usfans-fees-coupons-total-cost.html": "dc54da8e9d09c494847045b4b46e639dc6516389961efdf3f5aa693bb9427e66",
+  "ar/guides/usfans-qc-photos-guide.html": "6ef73022b7b937ab860b8570b924cd6749bb6d54b418a1543f578f1f21b5ddc6",
+  "ar/guides/usfans-shipping-cost-guide-2026.html": "1a3c277922984034c1aa39ed433f84e3bbf773b745aad7bbdefed314da152b32",
+  "ar/index.html": "9ddd3bf9296462d22a6d07b3afad01ed79d41e968fc85de8e003b4b6b89e33cb",
+  "assets/apple-touch-icon.png": "f150b313dd369859ef0f81ddfa423d735132693851642eaff0a5750a15fe8613",
+  "assets/article.css": "d091e7bb962edea0e6d3539931c6f3092ce4756fa37eaf61dd5d7c433e705de9",
+  "assets/favicon-16.png": "c421987a8f4982c8d2b4fe57a86bea924fc670761dc80f06743930ac89c1de26",
+  "assets/favicon-180.png": "f150b313dd369859ef0f81ddfa423d735132693851642eaff0a5750a15fe8613",
+  "assets/favicon-192.png": "fbe392dca17bf66155710956362b0a43222d7f256ea1c4d5c73433bb52705ffe",
+  "assets/favicon-32.png": "ac4e92eba5360c8c11c628383be5b23cbd363b2a2f8bfc4a610dccf7b9e20521",
+  "assets/favicon-48.png": "42b42b5679f683191dc2c59ebc835ea8b688a3161844dfff73d817d2b3915e72",
+  "assets/favicon-512.png": "30142ed349e73f5df5a2c3bee3fbc240df294075809d2a42eda43e484e560dea",
+  "assets/favicon-64.png": "5cecb887d1224e3c78bc372ecb5762a19ddf48fb1a739f803d9804288bc6498e",
+  "assets/favicon.ico": "3185170e9781ec3527093a8a402745dcacbddbe023b383e4ad634b060c0cd684",
+  "assets/usfans-logo-128.png": "52f8575cdad5f1daeff948c21bd805cae7b34f7539ff48716289d979ef1e6088",
+  "assets/usfans-logo-512.png": "30142ed349e73f5df5a2c3bee3fbc240df294075809d2a42eda43e484e560dea",
+  "de/guides/index.html": "6a9ea99f128414ef0c06958d5f772a274a80884cb73f334705559bb655095577",
+  "de/guides/usfans-fees-coupons-total-cost.html": "87eedd674f2a28ac133719b7a406eceaefcf119da590a6b4593b93f1fdd0be53",
+  "de/guides/usfans-qc-photos-guide.html": "4ee8773ad82a4083b9d8c5c4567335f3557f87edca18aefa953941bb9a346606",
+  "de/guides/usfans-shipping-cost-guide-2026.html": "1fbfc66ef077d189bc512dfbe9321336add7bbebc6564c344de7f70a473dcd98",
+  "de/index.html": "67ac1dbb5cb56507cff9394aa901f50a390d5200024b8af8655f9f3aeff69d74",
+  "es/guides/index.html": "671f1d58125d550902f91a4c25bdf538dee33b85dfe3a8fd872c6b65f29a162c",
+  "es/guides/usfans-fees-coupons-total-cost.html": "8fb8564120dfa14a1f735f8f784819311a03b12a5e22891b10b3bacf7467ab6e",
+  "es/guides/usfans-qc-photos-guide.html": "ec0d7b26397ab39243889fe6240cd4c95bfbc1f74e9885781916d420ece94f8f",
+  "es/guides/usfans-shipping-cost-guide-2026.html": "c682dd4ee38fd7dda2d61b8964bad90c0208ddc7b3f590700d223c43377ee60b",
+  "es/index.html": "c19c7e15cea7bdbb44f82b5ec4eff7e190d51183489d08e865b70a8a3f770cd3",
+  "fr/guides/index.html": "29c518be1e4c0327712a50fec860e619f0c2c06ac1dd6bf41fd097697c5be044",
+  "fr/guides/usfans-fees-coupons-total-cost.html": "cbf24885908c51a9172b375a6fb101423166ffe1b72c7859ebb647ff978a8e33",
+  "fr/guides/usfans-qc-photos-guide.html": "2861c77d7f5af3ea219d26fb5236758247722bfb1245d8d2ed578f1fb40c1ee8",
+  "fr/guides/usfans-shipping-cost-guide-2026.html": "e621a07700d483d9867908fb4afefcc110889407d04666f21a6b2b799643cbce",
+  "fr/index.html": "11353e5c82c09df4918f03b6ce52fb5cb18c77053534054132cf03cf41b558ac",
+  "guides/index.html": "988b199d6608c82aa86a15d8dcf5419e3062a5a69a9e0166209869008a2d62c3",
+  "guides/usfans-fees-coupons-total-cost.html": "6d94d9ee600d0b5212f2dd4f67de7be5c36405d8f053d0696990b453a1aae63e",
+  "guides/usfans-qc-photos-guide.html": "18409f556eb29b3686b7c3cbe2e5128166a2b1ace8d45159d678be176f8feedd",
+  "guides/usfans-shipping-cost-guide-2026.html": "23ecac40e2cf103fd2edf44d180fecc3b817b2539ebcc71cc0d0ba4a45437ccf",
+  "index.html": "cb67889f91ed3795140baffe359c3f63d0efd92cff32e078ccba9a1decdf5bd8",
+  "ja/guides/index.html": "e573fb09a82d3dc2e6b8b0fb61928cef53fc62e832f2f98f5de3804e4f6e30e7",
+  "ja/guides/usfans-fees-coupons-total-cost.html": "4c2a17719df601d03a1f03d2adb46e72ef296dae5b4779a9fc8f7903554d7e0c",
+  "ja/guides/usfans-qc-photos-guide.html": "2863b956e67380566d4312aafe984d2ae4df3f36dc1a1740af9fc21701922e31",
+  "ja/guides/usfans-shipping-cost-guide-2026.html": "afadab5fd6e1e05a066e6e608e6553e2b335f7ff82b4c92b39225d010f4edfaa",
+  "ja/index.html": "dcbd3bb02cc2a04d2e1f34e172b86f79c4d2fae1073fcc345175a35f0d7e500f",
+  "ko/guides/index.html": "1b0045ccb6819c63fc11dde2f0d6002c7c6ba49ab8c3385c5bb4910bbd45436e",
+  "ko/guides/usfans-fees-coupons-total-cost.html": "0ea3c19c43588f78e05895d92180aa2ea65222e11162814b06d3034bf4533403",
+  "ko/guides/usfans-qc-photos-guide.html": "da611b5806aef888d9e2899841964a3dfd4e0eb24ea16bc9433af9e0126e0d84",
+  "ko/guides/usfans-shipping-cost-guide-2026.html": "f4946654db4d4789b459b6c94a221816e0a9908bb1ff7e3ac6b3fb803205836d",
+  "ko/index.html": "47000ff2ffc97810f48d10fb2741234957ec5b64a494c53bb52894cde7b89e70",
+  "pt/guides/index.html": "cad748ebf434527d1b80784f8061e8a4e1c504c06a54c8173d51fc209f7cba58",
+  "pt/guides/usfans-fees-coupons-total-cost.html": "7822018e0535b799d2d0b1cecf81bd8c865f1286fd81d56f241e96c65e26e0c6",
+  "pt/guides/usfans-qc-photos-guide.html": "42f775853226abaf90f4d798dfe5eb0e7aa1eb0d8097e0b5a5a37a68cd76f68e",
+  "pt/guides/usfans-shipping-cost-guide-2026.html": "d6ca1f7771ecca4964d5bc4ff7365a6973f23f1eb50ac0bc559d73c96c88bcc2",
+  "pt/index.html": "539c6462278dc51d1630480f25bce6953f09e5498728921971cd7c6bc8aad584",
+  "robots.txt": "4d9f5c5bfdfc080c2e0dc73cd7f2225226a4df42c8a99df6b4f660613553eec3",
+  "sitemap.xml": "ac84344ccdb04798de9d03fee2e7b6346ae934115ddeae86fab78ddaef40cff1",
+  "zh/guides/index.html": "f0c0f29ee743b250da3975379b05e12ccca05d879f66c5a4ae1b2f7bbd6bd57c",
+  "zh/guides/usfans-fees-coupons-total-cost.html": "d3af25631adef6938e263f84c3d7c494bda0a6f2b3f42f7fff6be9f901ce843e",
+  "zh/guides/usfans-qc-photos-guide.html": "e1cb62c68c0f7000d8731a3a2c90e5fedc332fec04f093ad78e4cf19768e31c4",
+  "zh/guides/usfans-shipping-cost-guide-2026.html": "097e04810e1a2169a81a609705db8d1b4a6505dc7564a9dba495a7c587992864",
+  "zh/index.html": "322ced842144e65de851104fdec00bc82703d82ef1c14743d8eca101a6b95c2a"
+}
+''')
+          actual = {}
+          for p in sorted(root.rglob('*')):
+              if p.is_file():
+                  actual[str(p.relative_to(root))] = hashlib.sha256(p.read_bytes()).hexdigest()
+          missing = sorted(set(manifest)-set(actual))
+          extra = sorted(set(actual)-set(manifest))
+          bad = sorted(k for k in set(manifest)&set(actual) if manifest[k] != actual[k])
+          if missing or extra or bad:
+              print('MISSING', missing)
+              print('EXTRA', extra)
+              print('HASH_MISMATCH', bad)
+              raise SystemExit('Generated site does not exactly match uploaded package')
+          print(f'VERIFIED_FILES={len(actual)}')
+          PY
+          rm -rf .usfansvip-upload
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -A usfansvip.shop .usfansvip-upload
+          git commit -m 'Deploy USFansVIP multilingual site with updated logo'
+          git push origin HEAD:main
