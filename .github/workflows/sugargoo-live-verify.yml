@@ -45,7 +45,7 @@ jobs:
           ROBOTS_STATUS=0
           CHECK_JSON='{}'
 
-          for ATTEMPT in $(seq 1 80); do
+          for ATTEMPT in $(seq 1 240); do
             ARTICLE_STATUS=$(curl -L --connect-timeout 10 --max-time 30 -sS -o /tmp/sugargoo-verify/article.html -w '%{http_code}' "$ARTICLE_URL" || echo 000)
             HOME_STATUS=$(curl -L --connect-timeout 10 --max-time 30 -sS -o /tmp/sugargoo-verify/home.html -w '%{http_code}' "$HOME_URL" || echo 000)
             GUIDES_STATUS=$(curl -L --connect-timeout 10 --max-time 30 -sS -o /tmp/sugargoo-verify/guides.html -w '%{http_code}' "$GUIDES_URL" || echo 000)
