@@ -1,0 +1,40 @@
+name: Update LitBuy homepage guides
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "litbuyvip.shop/assets/latest-guides-20260728.js"
+      - "litbuyvip.shop/guides/**"
+      - ".github/scripts/patch_litbuy_homepage.py"
+      - ".github/workflows/litbuy-homepage-guides.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: litbuy-homepage-guides
+  cancel-in-progress: true
+
+jobs:
+  patch-homepage:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Attach latest-guides controller
+        run: python .github/scripts/patch_litbuy_homepage.py
+      - name: Commit homepage update
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add litbuyvip.shop/index.html
+          if git diff --cached --quiet; then
+            echo "Homepage is already current."
+          else
+            git commit -m "Update LitBuy homepage latest guides"
+            git push
+          fi
