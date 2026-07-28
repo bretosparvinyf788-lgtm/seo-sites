@@ -1,0 +1,164 @@
+name: Final verify cssbuyvip.com July 28 article
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/cssbuy-live-verify-20260728-final.txt'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: verify-cssbuyvip-com-20260728-final
+  cancel-in-progress: true
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Verify article, homepage, archive and sitemap in production
+        id: verify
+        continue-on-error: true
+        run: |
+          python3 - <<'PY'
+          import html as html_lib
+          import re
+          import time
+          import urllib.request
+          from pathlib import Path
+
+          article_url = 'https://cssbuyvip.com/guides/cssbuy-ship-for-me-inbound-manifest-2026/'
+          home_url = 'https://cssbuyvip.com/'
+          archive_url = 'https://cssbuyvip.com/all-seo-articles/'
+          sitemap_url = 'https://cssbuyvip.com/sitemap.xml'
+          link = '/guides/cssbuy-ship-for-me-inbound-manifest-2026/'
+          expected_title = 'CSSBuy Ship For Me Guide 2026 | Tracking & Warehouse Intake'
+
+          def fetch(url):
+              request = urllib.request.Request(url, headers={
+                  'User-Agent': 'CSSBuyVip-Production-Check/1.0',
+                  'Cache-Control': 'no-cache',
+              })
+              with urllib.request.urlopen(request, timeout=30) as response:
+                  return response.status, response.read().decode('utf-8', 'replace')
+
+          def visible_words(page):
+              match = re.search(r'<article\b[^>]*>([\s\S]*?)</article>', page, re.I)
+              text = match.group(1) if match else ''
+              text = re.sub(r'<script\b[\s\S]*?</script>', ' ', text, flags=re.I)
+              text = re.sub(r'<style\b[\s\S]*?</style>', ' ', text, flags=re.I)
+              text = re.sub(r'<[^>]+>', ' ', text)
+              text = html_lib.unescape(text)
+              return len(re.findall(r"\b[\w’'-]+\b", text))
+
+          final_errors = []
+          passed = None
+          for attempt in range(1, 25):
+              errors = []
+              pages = {}
+              stamp = '?verify=20260728-final-' + str(attempt)
+              for name, url in (
+                  ('article', article_url),
+                  ('home', home_url),
+                  ('archive', archive_url),
+                  ('sitemap', sitemap_url),
+              ):
+                  try:
+                      status, body = fetch(url + stamp)
+                      pages[name] = body
+                      if status != 200:
+                          errors.append(name + ' HTTP ' + str(status))
+                  except Exception as exc:
+                      errors.append(name + ' fetch error: ' + str(exc))
+
+              article = pages.get('article', '')
+              home = pages.get('home', '')
+              archive = pages.get('archive', '')
+              sitemap = pages.get('sitemap', '')
+              count = visible_words(article)
+              card_count = home.count('<a class="article"')
+
+              if '<title>' + expected_title + '</title>' not in article:
+                  errors.append('article title mismatch')
+              if 'CSSBuy Ship For Me Intake Manifest' not in article:
+                  errors.append('article content marker missing')
+              if 'CSSBuy Ship For Me FAQ' not in article or article.count('<details>') < 12:
+                  errors.append('FAQ incomplete')
+              if count < 1500 or count > 2000:
+                  errors.append('visible article word count outside range: ' + str(count))
+              forbidden = ('Official sources checked','<h2>Sources</h2>','<h2>References</h2>','资料来源','核实来源','source-box')
+              if any(token in article for token in forbidden):
+                  errors.append('public source block detected')
+              if 'Best CSSBuy Spreadsheet for QC-ready finds' in article:
+                  errors.append('article is homepage fallback')
+              if link not in home:
+                  errors.append('homepage missing article link')
+              if card_count != 3:
+                  errors.append('homepage latest card count: ' + str(card_count))
+              if home.find(link) == -1 or home.find(link) > home.find('/guides/cssbuy-buy-for-me-vs-ship-for-me-2026/'):
+                  errors.append('homepage newest order incorrect')
+              if link not in archive:
+                  errors.append('archive missing article link')
+              if archive.find(link) == -1 or archive.find(link) > archive.find('/guides/cssbuy-buy-for-me-vs-ship-for-me-2026/'):
+                  errors.append('archive newest order incorrect')
+              if 'https://cssbuyvip.com' + link not in sitemap:
+                  errors.append('sitemap missing article URL')
+
+              if not errors:
+                  passed = (attempt, count)
+                  break
+              final_errors = errors
+              print('Attempt', attempt, 'failed:', '; '.join(errors))
+              time.sleep(20)
+
+          report = Path('cssbuyvip.com/verification/2026-07-28.txt')
+          report.parent.mkdir(parents=True, exist_ok=True)
+          if passed:
+              attempt, count = passed
+              report.write_text(
+                  'PASS\n'
+                  'Article URL: ' + article_url + '\n'
+                  'Article HTTP: 200\n'
+                  'Visible article words: ' + str(count) + '\n'
+                  'FAQ entries: 12 or more\n'
+                  'Homepage HTTP: 200\n'
+                  'Homepage latest cards: 3\n'
+                  'Archive HTTP: 200\n'
+                  'Sitemap HTTP: 200\n'
+                  'Homepage, archive and sitemap contain the new permanent URL.\n'
+                  'No public source/reference block detected.\n'
+                  'Passed on polling attempt: ' + str(attempt) + '\n',
+                  encoding='utf-8',
+              )
+          else:
+              report.write_text('FAIL\n' + '\n'.join(final_errors) + '\n', encoding='utf-8')
+              raise SystemExit(1)
+          print(report.read_text())
+          PY
+
+      - name: Commit final verification report
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add cssbuyvip.com/verification/2026-07-28.txt
+          if git diff --cached --quiet; then
+            echo "Verification report unchanged"
+          else
+            git commit -m "Record final cssbuyvip.com July 28 production verification"
+            for attempt in 1 2 3 4 5; do
+              git pull --rebase origin main && git push origin HEAD:main && exit 0
+              sleep 5
+            done
+            exit 1
+          fi
+
+      - name: Fail workflow if production verification failed
+        if: steps.verify.outcome == 'failure'
+        run: exit 1
