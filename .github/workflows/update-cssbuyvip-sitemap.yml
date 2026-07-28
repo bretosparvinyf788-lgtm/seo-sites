@@ -33,6 +33,36 @@ jobs:
       - name: Sync latest main branch
         run: git pull --rebase origin main
 
+      - name: Trim July 28 article to required visible word range
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          import html as html_lib
+          import re
+
+          path = Path('cssbuyvip.com/guides/cssbuy-ship-for-me-inbound-manifest-2026/index.html')
+          text = path.read_text(encoding='utf-8')
+          removals = [
+              '<p>Copy every line exactly, including any recipient identifier or account-specific information displayed with the address. Sellers and marketplace systems sometimes shorten names, remove spaces or reject unfamiliar characters. Review the final shipping label before payment and keep a screenshot with the manifest. The goal is not to publish or share the warehouse address. The goal is to preserve evidence of the exact address and identification details used for your own package.</p>\n',
+              '<p>If a seller says part of the address cannot be entered, stop and resolve the issue before dispatch. A cheap domestic shipment is not useful if the warehouse cannot confidently match it to your account.</p>\n',
+              '<p>This fingerprint becomes the checklist for warehouse QC. CSSBuy presents QC checking as part of Ship For Me and can take pictures of received items. Your manifest tells you what those photos need to prove. Instead of asking whether a hoodie looks acceptable in isolation, ask whether the warehouse item matches the black size M hoodie assigned to a specific inbound tracking number.</p>\n',
+          ]
+          for paragraph in removals:
+              text = text.replace(paragraph, '')
+
+          match = re.search(r'<article\b[^>]*>([\s\S]*?)</article>', text, re.I)
+          body = match.group(1) if match else ''
+          body = re.sub(r'<script\b[\s\S]*?</script>', ' ', body, flags=re.I)
+          body = re.sub(r'<style\b[\s\S]*?</style>', ' ', body, flags=re.I)
+          body = re.sub(r'<[^>]+>', ' ', body)
+          body = html_lib.unescape(body)
+          count = len(re.findall(r"\b[\w’'-]+\b", body))
+          if not 1500 <= count <= 2000:
+              raise SystemExit(f'Visible article word count after trim is {count}')
+          path.write_text(text, encoding='utf-8')
+          print(f'Visible article words after trim: {count}')
+          PY
+
       - name: Generate sitemap
         run: python3 tools/generate_cssbuyvip_sitemap.py
 
@@ -48,10 +78,25 @@ jobs:
           urls = root.findall('sm:url', namespace)
           if not urls:
               raise SystemExit('Sitemap contains no URLs')
+          target = 'https://cssbuyvip.com/guides/cssbuy-ship-for-me-inbound-manifest-2026/'
+          if target not in [node.text for node in root.findall('sm:url/sm:loc', namespace)]:
+              raise SystemExit('Sitemap is missing July 28 article')
           print(f'Validated {len(urls)} sitemap URLs')
           PY
 
-      - name: Verify July 28 production article
+      - name: Commit article and sitemap before production verification
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add cssbuyvip.com/guides/cssbuy-ship-for-me-inbound-manifest-2026/index.html cssbuyvip.com/sitemap.xml
+          if git diff --cached --quiet; then
+            echo "Article and sitemap are already current"
+          else
+            git commit -m "Trim CSSBuy July 28 guide and update sitemap"
+            git push origin HEAD:main
+          fi
+
+      - name: Wait for Cloudflare and verify production pages
         run: |
           python3 - <<'PY'
           import html as html_lib
@@ -86,9 +131,10 @@ jobs:
 
           final_errors = []
           passed = None
-          for attempt in range(1, 19):
+          for attempt in range(1, 25):
               errors = []
               pages = {}
+              stamp = '?verify=20260728d-' + str(attempt)
               for name, url in (
                   ('article', article_url),
                   ('home', home_url),
@@ -96,7 +142,7 @@ jobs:
                   ('sitemap', sitemap_url),
               ):
                   try:
-                      status, body = fetch(url + '?verify=20260728c')
+                      status, body = fetch(url + stamp)
                       pages[name] = body
                       if status != 200:
                           errors.append(name + ' HTTP ' + str(status))
@@ -143,6 +189,7 @@ jobs:
                   passed = (attempt, count)
                   break
               final_errors = errors
+              print('Attempt', attempt, 'failed:', '; '.join(errors))
               time.sleep(20)
 
           report = Path('cssbuyvip.com/verification/2026-07-28.txt')
@@ -171,15 +218,15 @@ jobs:
               raise SystemExit(1)
           PY
 
-      - name: Commit sitemap and verification report when changed
+      - name: Commit production verification report
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git pull --rebase origin main
-          git add cssbuyvip.com/sitemap.xml cssbuyvip.com/verification/2026-07-28.txt
+          git add cssbuyvip.com/verification/2026-07-28.txt
           if git diff --cached --quiet; then
-            echo "Sitemap and verification report are already current"
+            echo "Verification report is already current"
             exit 0
           fi
-          git commit -m "Verify cssbuyvip.com July 28 article and update sitemap"
+          git commit -m "Record cssbuyvip.com July 28 production verification"
           git push origin HEAD:main
