@@ -1,12 +1,10 @@
 #!/usr/bin/env python3
-"""Inspect or update the SugargooVIP production archive.
-
-The workflow is intentionally driven by job.json so scheduled publishing can
-prepare changes without unpacking the binary archive through the GitHub API.
-"""
+"""Inspect or publish the SugargooVIP production archive."""
 from __future__ import annotations
 
+import html
 import json
+import re
 import shutil
 import tarfile
 import tempfile
@@ -17,58 +15,169 @@ JOB = ROOT / "job.json"
 ARCHIVE = ROOT / "site.tar.gz"
 INSPECTION = ROOT / "inspection"
 
+ARTICLE = {
+    "title": "Sugargoo Returns & Exchanges Guide 2026: Fix Warehouse Problems Before Shipping",
+    "short_title": "Sugargoo Returns & Exchanges Guide 2026",
+    "description": "A practical Sugargoo returns and exchanges guide for resolving wrong, damaged or uncertain items at the China warehouse before international shipping.",
+    "slug": "guide-sugargoo-returns-exchanges.html",
+    "date": "2026-07-28",
+    "display_date": "July 28, 2026",
+    "read_time": "12 min read",
+    "label": "Returns & exchanges · Fact checked",
+    "deck": "A warehouse-first system for documenting problems, choosing return or exchange, understanding responsibility and keeping disputed items out of international parcels.",
+    "tags": ["Sugargoo return", "Sugargoo refund", "Sugargoo exchange", "warehouse QC issue", "China shopping agent returns", "Taobao agent return", "reverse purchasing"],
+    "sections": [
+        ("The warehouse is a decision point, not a waiting room", """A reverse-purchase order feels finished when the seller ships, but that is exactly when the most important decision period begins. The product is now inside China, visible through warehouse photos, and still close enough to the domestic seller for a return or exchange to be practical. Once the item is packed into an international parcel, that leverage largely disappears.
+
+Sugargoo’s current workflow places quality checking after warehouse arrival and before overseas shipment. Official guidance says shopping-agent orders normally receive five free QC photos, and the platform can assist with seller communication when an issue is found. That makes the warehouse stage more than storage. It is a controlled checkpoint where you can compare the delivered item with the listing, identify who caused the problem, and choose whether to keep, clarify, exchange, or return it.
+
+The mistake is treating every concern the same. A wrong color is not the same as changing your mind. A missing strap is not the same as disliking the material. A blurry photo is not proof of a defect. The return path becomes faster when your request separates evidence, responsibility, and the remedy you actually want."""),
+        ("Start with the live order record", """Before opening a support request, rebuild the facts. Save the original marketplace link, selected variant, seller notes, order screenshots, and any message that changed the specification. Then compare those records with the warehouse entry and QC images. A seller may edit a listing after purchase, so the order snapshot is often more useful than the page you see today.
+
+Check five basics first: product identity, color, size or model, quantity, and included accessories. These are close to the standard scope described in Sugargoo’s official QC material. If the order says black, size XL, two pieces, with a detachable strap, write those promised details beside what arrived. Do not begin with a broad statement such as “quality is bad.” Give the agent a discrepancy that can be shown to the seller.
+
+For measurements or details outside the standard image set, request only the evidence that can change your decision. “Please photograph the inside size tag and measure chest width from armpit to armpit” is actionable. “Please check everything carefully” is not. Sugargoo also lists personalized photography as an optional paid service, while unclear standard QC photos can be raised with customer service for a retake."""),
+        ("Classify the issue before choosing a remedy", """Use four categories. First, seller-responsibility issues: wrong item, wrong variant, missing promised component, visible damage, or a material mismatch with the listing. Second, buyer-responsibility issues: ordering the wrong size, selecting the wrong color, or deciding that you no longer want the item. Third, uncertain-evidence issues: reflections, unclear angles, packaging that hides the product, or dimensions not shown. Fourth, logistics or handling issues, where damage may have occurred between seller and warehouse.
+
+This classification matters because domestic shipping charges, return freight, and deductions can depend on responsibility. Sugargoo’s official returns guide says personal-reason returns may leave the buyer responsible for domestic return costs and some non-refundable charges. Seller-fault cases may be handled differently. Exact deductions should be checked in the live request rather than copied from an old example.
+
+The category can also change the remedy. A wrong color usually calls for an exchange or return. A suspected scratch may call for one close-up first. A garment that matches the chosen size but does not fit your preference is usually a buyer-side problem. A crushed box matters only if the box was part of the promised product or the damage threatens the contents. Describe what happened without exaggeration; a precise claim is easier to approve."""),
+        ("Move quickly without inventing a deadline", """Return eligibility is time-sensitive. Sugargoo’s official 2025 returns guidance describes a short period after warehouse entry as the best time to apply, with later requests depending more heavily on seller negotiation. Marketplace rules, seller policies, product categories, and platform procedures can change, so the safest source is the deadline shown in your current order and the seller’s live return terms.
+
+The practical rule is simple: inspect new warehouse arrivals the same day you receive the notification. Do not wait until every item in a haul arrives before reviewing the first one. If you need extra evidence, request it immediately and keep the item out of any parcel submission. A return window can expire while you are waiting for unrelated products.
+
+This is also why warehouse storage time and return time must not be confused. An item may be allowed to remain stored much longer than the seller is willing to accept a return. Storage protects your consolidation schedule; it does not freeze marketplace after-sales rights. The countdown that matters for a problem item is the return or after-sales deadline, not the final storage date."""),
+        ("Write a request that the purchasing team can execute", """A useful request contains six parts: order number, exact item, promised specification, observed problem, evidence reference, and preferred resolution. For example: “Order 12345, black jacket size L. The order record shows a removable hood, but the warehouse photos do not show one. Please confirm whether it is inside the package. If it is missing, ask the seller for an exchange; if exchange stock is unavailable, request a return.”
+
+That message gives staff a decision tree. It avoids emotional language and tells them what outcome is acceptable. Attach or reference the most relevant image, not every screenshot you own. Mark the defect location when possible. For a measurement dispute, state both the seller’s chart and the warehouse measurement. For a quantity issue, show the quantity ordered and the number received.
+
+Ask for an exchange only when you are willing to wait for another domestic shipment and repeat QC. Ask for a return when the correct replacement is unavailable, the seller appears unreliable, or the item is no longer economical. If either remedy could work, state your priority. Clear priorities reduce back-and-forth while the seller’s return period continues to run."""),
+        ("Keep packaging and tags untouched", """Returnable condition is part of the claim. Official Sugargoo guidance emphasizes intact packaging, tags, accessories, gifts, and an unused condition for eligible returns. Do not request destructive checks, remove seals, or discard packaging while you are still deciding. Sealed products may receive exterior-only inspection, and opening them can affect whether a seller accepts the return.
+
+This creates a trade-off for electronics, cosmetics, collectibles, and factory-sealed goods. More inspection may provide more confidence, but opening can reduce return eligibility. Standard QC also does not establish electronic functionality or authenticity. Before ordering, decide whether preserving the seal or testing the item matters more, and confirm what services are actually available for that category.
+
+For clothing and shoes, keep all paper tags, spare parts, dust bags, boxes, and protective materials with the item. A missing accessory can weaken a personal-reason return even when the main product is unused. The easiest return is an item that can go back to the seller in substantially the same condition in which it reached the warehouse."""),
+        ("Understand the money path", """A successful return does not always mean every amount is restored. The product price, first domestic delivery charge, return freight, customization work, paid inspection services, and payment-related costs can be treated differently. Responsibility and seller policy determine much of the result. Read the amount shown in the return request before approving it, and ask which deductions are expected when the interface is unclear.
+
+Sugargoo’s official returns material says refunds are credited to the Sugargoo account balance, from which funds may be reused or, subject to the applicable method and rules, withdrawn. Processing is not a single instant event. The item may need seller approval, a domestic return address, warehouse dispatch, seller receipt, and refund confirmation. Watch the order status rather than assuming silence means completion.
+
+Keep a small record: request date, agreed remedy, expected deductions, domestic tracking number, seller receipt status, and credited amount. This is especially useful when several items are being returned at once. It also prevents you from counting an expected refund as available money before it actually appears in your balance."""),
+        ("Do not submit the parcel while the case is open", """The cleanest rule in the entire process is to isolate disputed items. Do not select them in the Packing Center, do not submit them for international shipping, and do not build a parcel plan that depends on their weight. Sugargoo’s QC guidance describes warehouse review as the final practical opportunity to request domestic return or replacement before overseas transit.
+
+You can continue preparing unaffected items, but remember that removing one product can change parcel weight, volume, route availability, and coupon value. Recalculate after the return or exchange is resolved. If a replacement arrives, inspect it as a new warehouse item rather than assuming the seller corrected everything.
+
+Package consolidation should happen only after each selected item has a clear status: accepted, replaced and rechecked, or removed through return. The official consolidation flow begins in the Packing Center, where you select arrived goods, submit the parcel, add the address and optional services, choose a route, and pay. Once you reach that stage, unresolved after-sales questions should already be closed.""")
+    ],
+    "faq": [
+        ("Can I return a Sugargoo order after it reaches the warehouse?", "Potentially, yes, if the seller and product remain eligible and the after-sales deadline has not expired. Apply promptly through the order and keep the item out of international parcel submission."),
+        ("Who pays domestic return shipping?", "It depends on responsibility and seller policy. Buyer-preference returns may leave return costs with the buyer, while confirmed seller-fault cases can be handled differently. Review the live deduction before approval."),
+        ("Should I request an exchange or a refund?", "Choose an exchange when the correct replacement is available and the extra wait is acceptable. Choose a return when replacement stock is uncertain, the seller is unreliable, or the item is no longer economical."),
+        ("What evidence should I provide?", "Use the order snapshot, selected variant, relevant listing promise, warehouse photo, and a concise description of the discrepancy. Request one targeted close-up or measurement when the current evidence is inconclusive."),
+        ("Can I submit the rest of my haul while one item is disputed?", "You can prepare unaffected goods, but do not include the disputed item in a parcel. Recalculate parcel weight, volume, route, and coupon use after the return or exchange is resolved."),
+        ("Do five free QC photos guarantee quality or authenticity?", "No. They are a visible-condition record. Standard QC cannot prove authenticity, long-term durability, fit, or electronic functionality, and sealed goods may receive exterior inspection only."),
+        ("Where does a completed refund go?", "Sugargoo’s official returns guidance says refunds are credited to the account balance. Reuse or withdrawal options depend on the applicable payment method and current platform rules.")
+    ],
+    "word_count": 1734
+}
+
+EXISTING_GUIDES = [
+    {"title":"Sugargoo Shipping Cost Guide 2026: Weight, Volume, Routes and Real Fees","short_title":"Sugargoo Shipping Cost Guide 2026","slug":"guide-shipping-cost.html","date":"2026-07-23","display_date":"July 23, 2026","read_time":"11 min read","word_count":"1,682","category":"Shipping guide","cover":"shipping","summary":"A fact-checked guide to actual and volumetric weight, route restrictions, consolidation, pre-packaging, coupons, customs and practical ways to control the final bill."},
+    {"title":"Sugargoo QC Photos Guide 2026: How to Inspect 5 Free Warehouse Photos","short_title":"How to Inspect 5 Free Sugargoo QC Photos","slug":"guide-qc-photos.html","date":"2026-07-22","display_date":"July 22, 2026","read_time":"12 min read","word_count":"1,656","category":"QC guide","cover":"qc","summary":"A practical guide to five free warehouse photos, targeted measurements, visible defects and the keep, exchange or return decision."},
+    {"title":"Sugargoo W2C Guide 2026: From Taobao or Weidian Link to Warehouse Approval","short_title":"Sugargoo W2C Guide: From Link to Warehouse","slug":"guide-w2c-workflow.html","date":"2026-07-21","display_date":"July 21, 2026","read_time":"12 min read","word_count":"1,643","category":"W2C buying guide","cover":"w2c","summary":"A practical workflow from live Taobao or Weidian verification through warehouse approval, consolidation and international tracking."}
+]
+OFFICIAL_CITATIONS = ["https://blog.sugargoo.com/sugargoo-returns-refunds-guide/","https://blog.sugargoo.com/sugargoo-qc-service-quality-check-guide/","https://blog.sugargoo.com/how-does-package-consolidation-work-at-sugargoo/","https://blog.sugargoo.com/how-to-buy-online-sugargoo/"]
+
+def esc(value: object) -> str:
+    return html.escape(str(value), quote=True)
+
+def section_id(title: str) -> str:
+    return re.sub(r"[^a-z0-9]+", "-", title.lower()).strip("-")
+
+def article_jsonld() -> str:
+    faq_entities=[{"@type":"Question","name":q,"acceptedAnswer":{"@type":"Answer","text":a}} for q,a in ARTICLE["faq"]]
+    data={"@context":"https://schema.org","@graph":[{"@type":"Article","headline":ARTICLE["title"],"description":ARTICLE["description"],"datePublished":ARTICLE["date"],"dateModified":ARTICLE["date"],"wordCount":ARTICLE["word_count"],"inLanguage":"en","keywords":", ".join(ARTICLE["tags"]),"mainEntityOfPage":{"@type":"WebPage","@id":f"https://sugargoovip.shop/{ARTICLE['slug']}"},"author":{"@type":"Organization","name":"SugargooVIP Editorial Team"},"publisher":{"@type":"Organization","name":"SugargooVIP","url":"https://sugargoovip.shop/"},"citation":OFFICIAL_CITATIONS},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://sugargoovip.shop/"},{"@type":"ListItem","position":2,"name":"Buyer Guides","item":"https://sugargoovip.shop/guides.html"},{"@type":"ListItem","position":3,"name":"Sugargoo Returns and Exchanges","item":f"https://sugargoovip.shop/{ARTICLE['slug']}"}]},{"@type":"FAQPage","mainEntity":faq_entities}]}
+    return json.dumps(data,ensure_ascii=False,separators=(",",":"))
+
+def render_article() -> str:
+    toc="".join(f'<a href="#{section_id(t)}">{i:02d}. {esc(t)}</a>' for i,(t,_) in enumerate(ARTICLE["sections"],1))+'<a href="#faq">FAQ</a>'
+    body=[]
+    for title,text in ARTICLE["sections"]:
+        paragraphs="".join(f"<p>{esc(p.strip())}</p>" for p in text.split("\n\n") if p.strip())
+        body.append(f'<section><h2 id="{section_id(title)}">{esc(title)}</h2>{paragraphs}</section>')
+    faq_html="".join(f'<details><summary>{esc(q)}</summary><p>{esc(a)}</p></details>' for q,a in ARTICLE["faq"])
+    tags_html="".join(f"<span>{esc(tag)}</span>" for tag in ARTICLE["tags"])
+    return f'''<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><title>{esc(ARTICLE['title'])} | SugargooVIP</title><meta content="{esc(ARTICLE['description'])}" name="description"/><meta content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" name="robots"/><link href="https://sugargoovip.shop/{esc(ARTICLE['slug'])}" rel="canonical"/><link href="assets/css/category-hub-v5.css" rel="stylesheet"/><link href="assets/css/article-v1.css" rel="stylesheet"/><meta content="article" property="og:type"/><meta content="{esc(ARTICLE['title'])}" property="og:title"/><meta content="{esc(ARTICLE['description'])}" property="og:description"/><meta content="https://sugargoovip.shop/{esc(ARTICLE['slug'])}" property="og:url"/><meta content="summary_large_image" name="twitter:card"/><script type="application/ld+json">{article_jsonld()}</script><link href="assets/css/unified-blue-v11.css" rel="stylesheet"/><link href="assets/css/borderless-v13.css" rel="stylesheet"/><link href="assets/img/favicon.png" rel="icon" sizes="192x192" type="image/png"/><link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180"/><link href="assets/css/logo-v20.css" rel="stylesheet"/><link href="assets/css/article-back-nav-v30.css" rel="stylesheet"/><style>.article-faq details{{border:1px solid rgba(30,80,150,.18);border-radius:14px;padding:1rem 1.1rem;margin:.8rem 0;background:#fff}}.article-faq summary{{font-weight:800;cursor:pointer}}.article-faq p{{margin:.75rem 0 0}}.article-tags{{display:flex;flex-wrap:wrap;gap:.55rem;margin-top:2rem;padding-top:1.5rem;border-top:1px solid rgba(30,80,150,.15)}}.article-tags span{{padding:.45rem .75rem;border-radius:999px;background:#eef6ff;font-size:.88rem}}</style></head><body class="article-page" style="--article-accent:#88c7ff"><div class="notice"><div class="frame"><span>Independent Sugargoo buyer resource</span><span>Facts checked July 28, 2026 · Independent buyer resource</span></div></div><header class="hub-header"><div class="frame nav-row"><a class="hub-brand brand-wordmark" href="index.html"><img alt="Sugargoo" class="brand-wordmark-img" src="assets/img/sugargoo-wordmark.png"/><span class="brand-accessible">SugargooVIP</span></a><nav><a href="index.html#departments">Categories</a><a href="spreadsheet.html">Spreadsheet</a><a href="w2c.html">W2C</a><a href="qc.html">QC</a><a href="shipping.html">Shipping</a><a href="guides.html">Guides</a></nav><div class="nav-end"><a class="main-link" href="https://kakobuymake.com/" rel="noopener" target="_blank">Product catalog ↗</a><button aria-label="Toggle navigation" class="mobile-toggle" type="button">☰</button></div></div></header><div aria-label="Article navigation" class="article-return-bar"><div class="article-return-inner"><div class="article-return-actions"><a class="article-return-link primary" href="guides.html">← Back to all guides</a><a class="article-return-link" href="index.html">Home</a></div><span class="article-return-label">SugargooVIP buyer guide</span></div></div><main><section class="article-hero"><div class="frame article-hero-grid"><div><span class="article-label">{esc(ARTICLE['label'])}</span><h1>{esc(ARTICLE['title'])}</h1><p class="article-deck">{esc(ARTICLE['deck'])}</p><div class="article-meta"><span>Published {esc(ARTICLE['display_date'])}</span><span>{esc(ARTICLE['read_time'])}</span><span>{ARTICLE['word_count']:,} words</span></div></div><div class="article-hero-card"><small>Independent buyer guide</small><strong>04</strong><p>Original English editorial content based on current Sugargoo official documentation. Seller policies, deductions and deadlines must be rechecked in the live order.</p></div></div></section><div class="frame article-shell"><aside class="article-toc"><span>On this page</span><nav>{toc}</nav></aside><article class="article-main"><p class="article-intro">A product problem is cheapest to solve while the item is still inside China. This guide turns the warehouse arrival, QC evidence and seller return window into a practical decision system.</p><div class="article-factbox"><b>Research standard</b><p>Facts were checked against Sugargoo’s official website and official blog on July 28, 2026. The analysis, examples, wording and decision framework below were written from scratch for SugargooVIP.</p></div>{''.join(body)}<section class="article-faq" id="faq"><h2>Frequently asked questions</h2>{faq_html}</section><div class="article-tags">{tags_html}</div><div class="article-next"><a href="guide-shipping-cost.html">Next: plan shipping cost after every item is approved →</a></div></article></div></main><footer class="hub-footer"><div class="frame footer-grid"><div><a class="hub-brand footer-logo brand-wordmark" href="index.html"><img alt="Sugargoo" class="brand-wordmark-img" src="assets/img/sugargoo-wordmark.png"/><span class="brand-accessible">SugargooVIP</span></a><p>An independent product-discovery and buyer-education resource. Not affiliated with Sugargoo.</p></div><div><b>Discover</b><a href="index.html#departments">Categories</a><a href="spreadsheet.html">Spreadsheet</a><a href="w2c.html">W2C</a></div><div><b>Plan</b><a href="qc.html">QC Guide</a><a href="shipping.html">Shipping</a><a href="coupons.html">Coupons &amp; Fees</a></div><div><b>Site</b><a href="guides.html">Guides</a><a href="about.html">About</a><a href="privacy.html">Privacy</a></div></div><div class="frame footer-bottom"><span>© 2026 SugargooVIP</span><span>Independent buyer resource</span></div></footer><script src="assets/js/category-hub-v5.js"></script></body></html>'''
+
+def home_item_list() -> list[dict]:
+    guides=[{"title":ARTICLE["title"],"slug":ARTICLE["slug"],"date":ARTICLE["date"]}, *[{"title":g["title"],"slug":g["slug"],"date":g["date"]} for g in EXISTING_GUIDES[:2]]]
+    return [{"@type":"ListItem","position":i,"item":{"@type":"Article","headline":g["title"],"url":f"https://sugargoovip.shop/{g['slug']}","datePublished":g["date"]}} for i,g in enumerate(guides,1)]
+
+def update_home_jsonld(page: str) -> str:
+    match=re.search(r'(<script type="application/ld\+json">)(.*?)(</script>)',page,re.S)
+    if not match: raise RuntimeError("Homepage JSON-LD was not found")
+    data=json.loads(match.group(2))
+    for node in data.get("@graph",[]):
+        if node.get("@type")=="CollectionPage":
+            for entity in node.get("mainEntity",[]):
+                if entity.get("@type")=="ItemList" and entity.get("name")=="Latest Sugargoo buyer guides":
+                    entity["numberOfItems"]=3; entity["itemListElement"]=home_item_list()
+    encoded=json.dumps(data,ensure_ascii=False,separators=(",",":"))
+    return page[:match.start(2)]+encoded+page[match.end(2):]
+
+def render_home_section() -> str:
+    return f'''<section aria-labelledby="latest-guides-title" class="latest-guides section-space" id="latest-guides"><div class="frame"><div class="latest-guides-head"><div><span>LATEST SUGARGOO GUIDES</span><h2 id="latest-guides-title">Guides that improve every purchase.</h2></div><div class="latest-guides-intro"><p>Three practical buyer guides covering returns, shipping costs and warehouse QC. Newest articles appear first.</p><a aria-label="Open the complete Sugargoo buyer guides list" data-open-guides="true" href="guides.html" role="link">View all buyer guides <b>↗</b></a></div></div><div class="latest-guides-grid"><article class="latest-guide-card latest-guide-featured" id="returns-guide"><a aria-label="Read Sugargoo returns and exchanges guide" class="latest-guide-cover latest-guide-w2c" href="{ARTICLE['slug']}"><span class="latest-guide-badge">Latest guide</span><svg aria-hidden="true" viewBox="0 0 220 160"><path d="M54 48h112v72H54z"></path><path d="M78 48V31h64v17M72 82h76"></path><path d="m91 104-20 20 20 20M71 124h78"></path></svg><strong>Returns &amp; Exchanges</strong><small>Evidence · Responsibility · Resolution</small></a><div class="latest-guide-body"><div class="latest-guide-meta"><time datetime="{ARTICLE['date']}">{ARTICLE['display_date']}</time><span>{ARTICLE['read_time']}</span></div><h3><a href="{ARTICLE['slug']}">{esc(ARTICLE['short_title'])}</a></h3><p>How to document a warehouse problem, choose exchange or return, protect eligibility and avoid shipping a disputed item overseas.</p><a class="latest-guide-link" href="{ARTICLE['slug']}">Read returns guide <span>→</span></a></div></article><article class="latest-guide-card" id="shipping-guide"><a aria-label="Read Sugargoo Shipping Cost guide" class="latest-guide-cover latest-guide-shipping" href="guide-shipping-cost.html"><svg aria-hidden="true" viewBox="0 0 220 160"><path d="M42 54 110 21l68 33-68 34-68-34Z"></path><path d="M42 54v57l68 32 68-32V54M110 88v55"></path><path d="M76 37l68 34M144 37 76 71"></path><circle cx="176" cy="122" r="26"></circle><path d="M176 106v17l11 7"></path></svg><strong>Shipping</strong><small>Actual weight · Volume · Route choice</small></a><div class="latest-guide-body"><div class="latest-guide-meta"><time datetime="2026-07-23">July 23, 2026</time><span>11 min read</span></div><h3><a href="guide-shipping-cost.html">Sugargoo Shipping Cost Guide 2026</a></h3><p>A practical breakdown of chargeable weight, parcel volume, route rules, consolidation, pre-packaging, coupons and destination costs.</p><a class="latest-guide-link" href="guide-shipping-cost.html">Read shipping guide <span>→</span></a></div></article><article class="latest-guide-card" id="qc-guide"><a aria-label="Read Sugargoo QC photos guide" class="latest-guide-cover latest-guide-qc" href="guide-qc-photos.html"><svg aria-hidden="true" viewBox="0 0 220 160"><rect height="78" rx="14" width="114" x="38" y="42"></rect><path d="m65 42 10-18h42l10 18"></path><circle cx="95" cy="81" r="24"></circle><path d="m145 113 34 31M156 103l30 30"></path><circle cx="149" cy="96" r="31"></circle></svg><strong>QC Photos</strong><small>Shape · Measurements · Visible defects</small></a><div class="latest-guide-body"><div class="latest-guide-meta"><time datetime="2026-07-22">July 22, 2026</time><span>12 min read</span></div><h3><a href="guide-qc-photos.html">How to Inspect 5 Free Sugargoo QC Photos</a></h3><p>How to use five free warehouse photos, request precise measurements and decide whether to keep, exchange or return an item.</p><a class="latest-guide-link" href="guide-qc-photos.html">Read QC guide <span>→</span></a></div></article></div></div></section>'''
+
+def render_guides() -> str:
+    newest={"title":ARTICLE["title"],"slug":ARTICLE["slug"],"date":ARTICLE["date"],"display_date":ARTICLE["display_date"],"read_time":ARTICLE["read_time"],"word_count":f"{ARTICLE['word_count']:,}","category":"Returns & exchanges guide","cover":"w2c","summary":ARTICLE["description"]}
+    guides=[newest,*EXISTING_GUIDES]
+    items=[{"@type":"ListItem","position":i,"item":{"@type":"Article","headline":g["title"],"url":f"https://sugargoovip.shop/{g['slug']}","datePublished":g["date"]}} for i,g in enumerate(guides,1)]
+    structured=json.dumps({"@context":"https://schema.org","@type":"CollectionPage","name":"Sugargoo Buyer Guides","url":"https://sugargoovip.shop/guides.html","mainEntity":{"@type":"ItemList","numberOfItems":len(guides),"itemListElement":items}},ensure_ascii=False,separators=(",",":"))
+    cards=[]
+    for i,g in enumerate(guides,1): cards.append(f'<article><a class="guide-directory-cover {g["cover"]}" href="{g["slug"]}"><span>{esc(g["category"])}</span><b>{i:02d}</b></a><div class="guide-directory-body"><h2><a href="{g["slug"]}">{esc(g["title"])}</a></h2><p>{esc(g["summary"])}</p><div class="guide-directory-meta"><span>{esc(g["display_date"])}</span><span>{esc(g["read_time"])}</span></div><a href="{g["slug"]}">Read the full {g["word_count"]}-word guide →</a></div></article>')
+    return f'''<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><title>Sugargoo Buyer Guides 2026: Returns, Shipping, QC Photos and W2C</title><meta content="Read four original, fact-checked Sugargoo buyer guides covering returns and exchanges, shipping costs, warehouse QC photos and the W2C workflow." name="description"/><meta content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" name="robots"/><link href="https://sugargoovip.shop/guides.html" rel="canonical"/><link href="assets/css/category-hub-v5.css" rel="stylesheet"/><link href="assets/css/article-v1.css" rel="stylesheet"/><script type="application/ld+json">{structured}</script><link href="assets/css/unified-blue-v11.css" rel="stylesheet"/><link href="assets/css/borderless-v13.css" rel="stylesheet"/><link href="assets/img/favicon.png" rel="icon" sizes="192x192" type="image/png"/><link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180"/><link href="assets/css/logo-v20.css" rel="stylesheet"/><link href="assets/css/guides-back-nav-v31.css" rel="stylesheet"/></head><body><div class="notice"><div class="frame"><span>Independent Sugargoo buyer resource</span><span>Facts checked July 28, 2026 · Independent buyer resource</span></div></div><header class="hub-header"><div class="frame nav-row"><a class="hub-brand brand-wordmark" href="index.html"><img alt="Sugargoo" class="brand-wordmark-img" src="assets/img/sugargoo-wordmark.png"/><span class="brand-accessible">SugargooVIP</span></a><nav><a href="index.html#departments">Categories</a><a href="spreadsheet.html">Spreadsheet</a><a href="w2c.html">W2C</a><a href="qc.html">QC</a><a href="shipping.html">Shipping</a><a href="guides.html">Guides</a></nav><div class="nav-end"><a class="main-link" href="https://kakobuymake.com/" rel="noopener" target="_blank">Product catalog ↗</a><button aria-label="Toggle navigation" class="mobile-toggle" type="button">☰</button></div></div></header><div aria-label="Guide directory navigation" class="guides-return-bar"><div class="guides-return-inner"><a class="guides-return-link" href="index.html">← Back to Home</a><span class="guides-return-label">All SugargooVIP buyer guides</span></div></div><main class="guides-page"><div class="frame"><div class="guides-page-head"><span class="article-label">Original English research</span><h1>Sugargoo Buyer Guides</h1><p>Four long-form reverse-shopping guides written from scratch after checking Sugargoo’s current official documentation. Every historical article remains available, newest first.</p></div><div class="guide-directory">{''.join(cards)}</div></div></main><footer class="hub-footer"><div class="frame footer-grid"><div><a class="hub-brand footer-logo brand-wordmark" href="index.html"><img alt="Sugargoo" class="brand-wordmark-img" src="assets/img/sugargoo-wordmark.png"/><span class="brand-accessible">SugargooVIP</span></a><p>An independent product-discovery and buyer-education resource. Not affiliated with Sugargoo.</p></div><div><b>Discover</b><a href="index.html#departments">Categories</a><a href="spreadsheet.html">Spreadsheet</a><a href="w2c.html">W2C</a></div><div><b>Plan</b><a href="qc.html">QC Guide</a><a href="shipping.html">Shipping</a><a href="coupons.html">Coupons &amp; Fees</a></div><div><b>Site</b><a href="guides.html">Guides</a><a href="about.html">About</a><a href="privacy.html">Privacy</a></div></div><div class="frame footer-bottom"><span>© 2026 SugargooVIP</span><span>Independent buyer resource</span></div></footer><script src="assets/js/category-hub-v5.js"></script></body></html>'''
+
+def patch_home(root: Path) -> None:
+    path=root/"index.html"; page=update_home_jsonld(path.read_text(encoding="utf-8")); start=page.index('<section aria-labelledby="latest-guides-title"'); end=page.index('<section class="finder',start); path.write_text(page[:start]+render_home_section()+page[end:],encoding="utf-8")
+
+def patch_sitemap(root: Path) -> None:
+    path=root/"sitemap.xml"; xml=path.read_text(encoding="utf-8"); xml=re.sub(r'(<loc>https://sugargoovip\.shop/</loc><lastmod>)[^<]+',r'\g<1>2026-07-28',xml); xml=re.sub(r'(<loc>https://sugargoovip\.shop/guides\.html</loc><lastmod>)[^<]+',r'\g<1>2026-07-28',xml); entry=f'  <url><loc>https://sugargoovip.shop/{ARTICLE["slug"]}</loc><lastmod>{ARTICLE["date"]}</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>\n'; marker='  <url><loc>https://sugargoovip.shop/guide-shipping-cost.html'; xml=xml if ARTICLE["slug"] in xml else xml.replace(marker,entry+marker); path.write_text(xml,encoding="utf-8")
+
+def validate(root: Path) -> dict:
+    article=(root/ARTICLE["slug"]).read_text(encoding="utf-8"); home=(root/"index.html").read_text(encoding="utf-8"); guides=(root/"guides.html").read_text(encoding="utf-8"); sitemap=(root/"sitemap.xml").read_text(encoding="utf-8"); prose="\n".join(t for _,t in ARTICLE["sections"])+"\n"+"\n".join(q+" "+a for q,a in ARTICLE["faq"]); count=len(re.findall(r"\b[\w’'-]+\b",prose)); latest=home[home.index('<section aria-labelledby="latest-guides-title"'):home.index('<section class="finder')]; slugs=[ARTICLE["slug"],*[g["slug"] for g in EXISTING_GUIDES]]; checks={"article_word_count":count,"word_count_in_range":1500<=count<=1800,"article_h1_present":f"<h1>{esc(ARTICLE['title'])}</h1>" in article,"article_faq_present":'id="faq"' in article and article.count("<details>")>=7,"homepage_latest_count":latest.count('class="latest-guide-card')==3,"homepage_newest_first":latest.index(ARTICLE["slug"])<latest.index("guide-shipping-cost.html")<latest.index("guide-qc-photos.html"),"homepage_no_old_fourth":"guide-w2c-workflow.html" not in latest,"guides_all_articles":all(s in guides for s in slugs),"guides_unique":all(guides.count(f'href="{s}"')>=2 for s in slugs),"sitemap_has_article":ARTICLE["slug"] in sitemap}
+    if not all(v for k,v in checks.items() if k!="article_word_count"): raise RuntimeError(f"Validation failed: {checks}")
+    return checks
+
+def copy_inspection(root: Path, report: dict|None=None) -> None:
+    if INSPECTION.exists(): shutil.rmtree(INSPECTION)
+    INSPECTION.mkdir(parents=True); files=sorted(p for p in root.rglob("*") if p.is_file()); manifest=[{"path":p.relative_to(root).as_posix(),"size":p.stat().st_size} for p in files]; preferred=[root/n for n in ("index.html","guides.html","sitemap.xml","robots.txt","_redirects")]; preferred.extend(sorted(root.glob("guide-*.html")))
+    for src in preferred:
+        if src.is_file():
+            dest=INSPECTION/src.relative_to(root); dest.parent.mkdir(parents=True,exist_ok=True); shutil.copy2(src,dest)
+    (INSPECTION/"manifest.json").write_text(json.dumps(manifest,indent=2,ensure_ascii=False)+"\n",encoding="utf-8")
+    if report is not None: (INSPECTION/"publish-report.json").write_text(json.dumps(report,indent=2,ensure_ascii=False)+"\n",encoding="utf-8")
+
+def repack(root: Path) -> None:
+    tmp=ARCHIVE.with_suffix(".tmp.gz")
+    with tarfile.open(tmp,"w:gz",compresslevel=9) as tf:
+        for path in sorted(root.rglob("*")): tf.add(path,arcname=path.relative_to(root),recursive=False)
+    tmp.replace(ARCHIVE)
 
 def inspect_archive() -> None:
-    if INSPECTION.exists():
-        shutil.rmtree(INSPECTION)
-    INSPECTION.mkdir(parents=True)
-
     with tempfile.TemporaryDirectory() as td:
-        extract_root = Path(td) / "site"
-        extract_root.mkdir()
-        with tarfile.open(ARCHIVE, "r:gz") as tf:
-            tf.extractall(extract_root)
+        root=Path(td)/"site"; root.mkdir()
+        with tarfile.open(ARCHIVE,"r:gz") as tf: tf.extractall(root)
+        copy_inspection(root)
 
-        files = sorted(p for p in extract_root.rglob("*") if p.is_file())
-        manifest = []
-        for path in files:
-            rel = path.relative_to(extract_root)
-            manifest.append({"path": rel.as_posix(), "size": path.stat().st_size})
-
-        preferred = []
-        for name in ("index.html", "guides.html", "sitemap.xml", "robots.txt", "_redirects", "styles.css", "style.css", "script.js"):
-            exact = extract_root / name
-            if exact.is_file():
-                preferred.append(exact)
-
-        preferred.extend(sorted(extract_root.glob("guide-*.html"))[:2])
-        preferred.extend(sorted(extract_root.glob("*.css"))[:4])
-        preferred.extend(sorted(extract_root.glob("*.js"))[:4])
-
-        seen = set()
-        for src in preferred:
-            rel = src.relative_to(extract_root)
-            if rel in seen:
-                continue
-            seen.add(rel)
-            dest = INSPECTION / rel
-            dest.parent.mkdir(parents=True, exist_ok=True)
-            shutil.copy2(src, dest)
-
-        (INSPECTION / "manifest.json").write_text(
-            json.dumps(manifest, indent=2, ensure_ascii=False) + "\n",
-            encoding="utf-8",
-        )
-
+def publish() -> None:
+    with tempfile.TemporaryDirectory() as td:
+        root=Path(td)/"site"; root.mkdir()
+        with tarfile.open(ARCHIVE,"r:gz") as tf: tf.extractall(root)
+        (root/ARTICLE["slug"]).write_text(render_article(),encoding="utf-8"); (root/"guides.html").write_text(render_guides(),encoding="utf-8"); patch_home(root); patch_sitemap(root); checks=validate(root); report={"status":"archive_validated","published_at":"2026-07-28","article":ARTICLE["slug"],"title":ARTICLE["title"],"checks":checks}; repack(root); copy_inspection(root,report)
 
 def main() -> None:
-    job = json.loads(JOB.read_text(encoding="utf-8"))
-    action = job.get("action")
-    if action == "inspect":
-        inspect_archive()
-        return
-    raise SystemExit(f"Unsupported action: {action!r}")
+    action=json.loads(JOB.read_text(encoding="utf-8")).get("action")
+    if action=="inspect": inspect_archive()
+    elif action=="publish": publish()
+    else: raise SystemExit(f"Unsupported action: {action!r}")
 
-
-if __name__ == "__main__":
-    main()
+if __name__=="__main__": main()
