@@ -1,0 +1,10 @@
+FAIL
+article title mismatch
+article content marker missing
+FAQ incomplete
+visible word count 0
+homepage missing new link
+homepage order incorrect
+archive missing new link
+archive order incorrect
+sitemap missing new URL
