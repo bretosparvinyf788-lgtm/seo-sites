@@ -1,0 +1,18 @@
+{
+  "status": "archive_validated",
+  "published_at": "2026-07-28",
+  "article": "guide-sugargoo-returns-exchanges.html",
+  "title": "Sugargoo Returns & Exchanges Guide 2026: Fix Warehouse Problems Before Shipping",
+  "checks": {
+    "article_word_count": 1734,
+    "word_count_in_range": true,
+    "article_h1_present": true,
+    "article_faq_present": true,
+    "homepage_latest_count": true,
+    "homepage_newest_first": true,
+    "homepage_no_old_fourth": true,
+    "guides_all_articles": true,
+    "guides_unique": true,
+    "sitemap_has_article": true
+  }
+}
