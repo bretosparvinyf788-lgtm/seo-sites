@@ -2,8 +2,14 @@ const HOME_PATHS = new Set(["/", "/index.html"]);
 
 const LATEST = [
   {
+    href: "/guides/cssbuy-ship-for-me-inbound-manifest-2026/",
+    label: "New · July 28, 2026",
+    title: "CSSBuy Ship For Me Intake Manifest 2026",
+    desc: "Control domestic tracking, warehouse matching, QC questions, packaging instructions and consolidation decisions.",
+  },
+  {
     href: "/guides/cssbuy-buy-for-me-vs-ship-for-me-2026/",
-    label: "New · July 23, 2026",
+    label: "July 23, 2026",
     title: "CSSBuy Buy For Me vs Ship For Me 2026",
     desc: "Choose who buys, who manages the seller, how the warehouse matches packages and where return responsibility sits.",
   },
@@ -12,12 +18,6 @@ const LATEST = [
     label: "July 22, 2026",
     title: "CSSBuy Return Clock 2026: Returns and Exchanges",
     desc: "Separate the return window from warehouse storage, build stronger QC evidence and decide before parcel submission.",
-  },
-  {
-    href: "/guides/cssbuy-seller-communication-playbook-2026/",
-    label: "July 21, 2026",
-    title: "CSSBuy Seller Communication Playbook 2026",
-    desc: "Use Contact Seller, Expert Buy and Add Note to control W2C variants, prices, evidence, returns and parcel handoffs.",
   },
 ];
 
@@ -61,7 +61,7 @@ export default {
     const transformed = transformHomepage(await response.text());
     const headers = new Headers(response.headers);
     headers.delete("content-length");
-    headers.set("x-cssbuyvip-daily-seo", "2026-07-23-static-routes");
+    headers.set("x-cssbuyvip-daily-seo", "2026-07-28-static-routes");
 
     return new Response(transformed, {
       status: response.status,
