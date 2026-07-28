@@ -1,7 +1,6 @@
 name: Update LitBuy homepage guides
 
 on:
-  create:
   push:
     branches: [main]
     paths:
