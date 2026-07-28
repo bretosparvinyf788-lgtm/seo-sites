@@ -1,0 +1,66 @@
+name: Temporary Superbuy guide archive update
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - .github/workflows/temp-superbuy-guide-archive-fix.yml
+
+permissions:
+  contents: write
+
+jobs:
+  update-guide-archive:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Add current article to the complete archive
+        shell: bash
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+
+          path = Path('superbuyvip.shop/guides/index.html')
+          text = path.read_text(encoding='utf-8')
+
+          article_anchor = "const articleData={\n shipping:{title:'Superbuy Shipping Guide 2026: Costs, Volumetric Weight & Smarter Parcel Planning'"
+          article_replacement = "const articleData={\n warehouse:{title:'Superbuy Warehouse Strategy 2026: Storage Deadlines, QC Decisions & Smarter Consolidation',desc:'A practical system for the 90-day storage clock, warehouse QC, after-sales timing, storage extensions and route-compatible parcel groups.',date:'July 28, 2026',read:'14 min read',url:'/guides/superbuy-warehouse-storage-strategy-2026/'},\n shipping:{title:'Superbuy Shipping Guide 2026: Costs, Volumetric Weight & Smarter Parcel Planning'"
+          if article_anchor not in text:
+              raise SystemExit('article archive insertion anchor was not found')
+          text = text.replace(article_anchor, article_replacement, 1)
+
+          card_anchor = 'function guideCard(k,a){return `<a class="guide" href="#/article/${k}"><div class="guide-cover"><span class="date">${a.date.toUpperCase()}</span><strong>${a.title}</strong></div><div class="guide-body"><p>${a.desc}</p><div class="read"><span>${a.read}</span><span>Read guide →</span></div></div></a>`}'
+          card_replacement = 'function guideCard(k,a){const href=a.url||`#/article/${k}`;return `<a class="guide" href="${href}"><div class="guide-cover"><span class="date">${a.date.toUpperCase()}</span><strong>${a.title}</strong></div><div class="guide-body"><p>${a.desc}</p><div class="read"><span>${a.read}</span><span>Read guide →</span></div></div></a>`}'
+          if card_anchor not in text:
+              raise SystemExit('guide card anchor was not found')
+          text = text.replace(card_anchor, card_replacement, 1)
+
+          path.write_text(text, encoding='utf-8')
+
+          required = [
+              'Superbuy Warehouse Strategy 2026',
+              'Superbuy Shipping Guide 2026',
+              'Superbuy QC Photos Guide 2026',
+              'Superbuy W2C Guide 2026',
+              "url:'/guides/superbuy-warehouse-storage-strategy-2026/'"
+          ]
+          for value in required:
+              if value not in text:
+                  raise SystemExit(f'missing archive value: {value}')
+          PY
+
+      - name: Commit archive update and remove temporary workflow
+        shell: bash
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add superbuyvip.shop/guides/index.html
+          git rm .github/workflows/temp-superbuy-guide-archive-fix.yml
+          git commit -m "Show all Superbuy articles in buyer guide archive"
+          git push origin main
