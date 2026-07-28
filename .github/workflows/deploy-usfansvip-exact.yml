@@ -1,0 +1,38 @@
+name: Deploy exact USFansVIP package
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - '.usfansvip-package/**'
+
+permissions:
+  contents: write
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
+          fetch-depth: 0
+      - name: Replace USFansVIP folder with uploaded package
+        shell: bash
+        run: |
+          set -euo pipefail
+          cat .usfansvip-package/site.part* | base64 --decode > /tmp/usfansvip-site.zip
+          echo '77fb3d3c581129eae36541d712dd361876045718f75dafa856ec4afc703ac693  /tmp/usfansvip-site.zip' | sha256sum -c -
+          rm -rf usfansvip.shop
+          unzip -q /tmp/usfansvip-site.zip -d .
+          test "$(find usfansvip.shop -type f | wc -l)" -eq 62
+          grep -q '/assets/usfans-logo-128.png' usfansvip.shop/index.html
+          test -f usfansvip.shop/assets/usfans-logo-512.png
+          test -f usfansvip.shop/assets/favicon.ico
+          rm -rf .usfansvip-package
+          rm -f .github/workflows/deploy-usfansvip-exact.yml
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -A usfansvip.shop .usfansvip-package .github/workflows/deploy-usfansvip-exact.yml
+          git commit -m 'Deploy USFansVIP multilingual site with updated logo'
+          git push origin HEAD:main
