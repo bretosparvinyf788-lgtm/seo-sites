@@ -1,0 +1,41 @@
+name: Run USFansVIP package deployment from PR
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - '.usfansvip-upload/**'
+
+permissions:
+  contents: write
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
+          fetch-depth: 0
+      - name: Execute prepared deployment
+        shell: bash
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          from pathlib import Path
+          lines = Path('.github/workflows/deploy-usfansvip-upload.yml').read_text().splitlines()
+          marker = '        run: |'
+          start = lines.index(marker) + 1
+          block = []
+          for line in lines[start:]:
+              if not line.strip():
+                  block.append('')
+              elif line.startswith('          '):
+                  block.append(line[10:])
+              else:
+                  break
+          if not block:
+              raise SystemExit('Prepared deployment block not found')
+          Path('/tmp/usfansvip-deploy.sh').write_text('\n'.join(block) + '\n')
+          PY
+          bash /tmp/usfansvip-deploy.sh
