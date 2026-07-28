@@ -1,9 +1,11 @@
 {
-  "checked_at_utc": "2026-07-28T14:21:38Z",
+  "checked_at_utc": "2026-07-28T14:48:14Z",
   "homepage_http": 200,
-  "homepage_contains_new_guide": false,
-  "article_http": 404,
-  "article_contains_expected_title": false,
+  "homepage_contains_new_guide": true,
+  "archive_http": 200,
+  "archive_contains_all_guides": false,
+  "article_http": 200,
+  "article_contains_expected_content": true,
   "sitemap_http": 200,
-  "sitemap_contains_new_url": false
+  "sitemap_contains_new_url": true
 }
