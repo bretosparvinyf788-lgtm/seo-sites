@@ -1,0 +1,275 @@
+name: Migrate and verify CSSBuy July 28 static route
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/cssbuy-route-migrate-20260728.txt'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: cssbuy-july28-route-migrate
+  cancel-in-progress: true
+
+jobs:
+  migrate-and-verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Sync latest main
+        run: git pull --rebase origin main
+
+      - name: Move article to an uncached permanent path
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          import html as html_lib
+          import re
+          import shutil
+
+          old_slug = 'cssbuy-ship-for-me-inbound-manifest-2026'
+          new_slug = 'cssbuy-ship-for-me-intake-manifest-2026'
+          old_dir = Path('cssbuyvip.com/guides') / old_slug
+          new_dir = Path('cssbuyvip.com/guides') / new_slug
+
+          if old_dir.exists() and not new_dir.exists():
+              shutil.move(str(old_dir), str(new_dir))
+          elif old_dir.exists() and new_dir.exists():
+              shutil.rmtree(old_dir)
+          if not new_dir.exists():
+              raise SystemExit('New article directory does not exist')
+
+          files = [
+              new_dir / 'index.html',
+              Path('cssbuyvip.com/_worker.js'),
+              Path('cssbuyvip.com/all-seo-articles/index.html'),
+          ]
+          for path in files:
+              text = path.read_text(encoding='utf-8')
+              text = text.replace(old_slug, new_slug)
+              path.write_text(text, encoding='utf-8')
+
+          article = (new_dir / 'index.html').read_text(encoding='utf-8')
+          article = article.replace(
+              'Slug: cssbuy-ship-for-me-inbound-manifest-2026',
+              'Slug: cssbuy-ship-for-me-intake-manifest-2026',
+          )
+          (new_dir / 'index.html').write_text(article, encoding='utf-8')
+
+          redirects_path = Path('cssbuyvip.com/_redirects')
+          redirects = redirects_path.read_text(encoding='utf-8').splitlines()
+          redirects = [line for line in redirects if old_slug not in line and new_slug not in line]
+          redirects.extend([
+              f'/guides/{old_slug} /guides/{new_slug}/ 301',
+              f'/guides/{old_slug}/ /guides/{new_slug}/ 301',
+              f'/guides/{old_slug}.html /guides/{new_slug}/ 301',
+              f'/guides/{new_slug} /guides/{new_slug}/ 301',
+              f'/guides/{new_slug}.html /guides/{new_slug}/ 301',
+          ])
+          redirects_path.write_text('\n'.join(redirects) + '\n', encoding='utf-8')
+
+          match = re.search(r'<article\b[^>]*>([\s\S]*?)</article>', article, re.I)
+          body = match.group(1) if match else ''
+          body = re.sub(r'<script\b[\s\S]*?</script>', ' ', body, flags=re.I)
+          body = re.sub(r'<style\b[\s\S]*?</style>', ' ', body, flags=re.I)
+          body = re.sub(r'<[^>]+>', ' ', body)
+          body = html_lib.unescape(body)
+          count = len(re.findall(r"\b[\w’'-]+\b", body))
+          if not 1500 <= count <= 2000:
+              raise SystemExit(f'Visible article word count is {count}')
+          if article.count('<details>') < 12:
+              raise SystemExit('FAQ count is below 12')
+          forbidden = ('Official sources checked','<h2>Sources</h2>','<h2>References</h2>','资料来源','核实来源','source-box')
+          if any(token in article for token in forbidden):
+              raise SystemExit('Public source block detected')
+          print(f'Local article validation passed with {count} visible words')
+          PY
+
+      - name: Regenerate sitemap and validate local links
+        run: |
+          python3 tools/generate_cssbuyvip_sitemap.py
+          python3 - <<'PY'
+          from pathlib import Path
+          import xml.etree.ElementTree as ET
+
+          slug = 'cssbuy-ship-for-me-intake-manifest-2026'
+          link = f'/guides/{slug}/'
+          article = Path(f'cssbuyvip.com/guides/{slug}/index.html')
+          worker = Path('cssbuyvip.com/_worker.js').read_text(encoding='utf-8')
+          archive = Path('cssbuyvip.com/all-seo-articles/index.html').read_text(encoding='utf-8')
+          if not article.exists():
+              raise SystemExit('Static article missing')
+          if link not in worker:
+              raise SystemExit('Homepage data missing new link')
+          if worker.count('href: "/guides/') < 3:
+              raise SystemExit('Homepage latest array is incomplete')
+          if link not in archive or archive.find(link) > archive.find('/guides/cssbuy-buy-for-me-vs-ship-for-me-2026/'):
+              raise SystemExit('Archive order is incorrect')
+          root = ET.parse('cssbuyvip.com/sitemap.xml').getroot()
+          ns = {'sm':'http://www.sitemaps.org/schemas/sitemap/0.9'}
+          urls = [node.text for node in root.findall('sm:url/sm:loc', ns)]
+          target = 'https://cssbuyvip.com' + link
+          if target not in urls:
+              raise SystemExit('Sitemap missing new URL')
+          if any('cssbuy-ship-for-me-inbound-manifest-2026' in url for url in urls):
+              raise SystemExit('Old duplicate URL remains in sitemap')
+          print('Local route, homepage, archive and sitemap validation passed')
+          PY
+
+      - name: Commit route migration
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add cssbuyvip.com/guides cssbuyvip.com/_worker.js cssbuyvip.com/all-seo-articles/index.html cssbuyvip.com/_redirects cssbuyvip.com/sitemap.xml
+          if git diff --cached --quiet; then
+            echo "Route migration already applied"
+          else
+            git commit -m "Move CSSBuy July 28 guide to final static route"
+            for attempt in 1 2 3 4 5; do
+              git pull --rebase origin main && git push origin HEAD:main && exit 0
+              sleep 5
+            done
+            exit 1
+          fi
+
+      - name: Verify final production URL
+        id: verify
+        continue-on-error: true
+        run: |
+          python3 - <<'PY'
+          import html as html_lib
+          import re
+          import time
+          import urllib.request
+          from pathlib import Path
+
+          slug = 'cssbuy-ship-for-me-intake-manifest-2026'
+          link = f'/guides/{slug}/'
+          article_url = 'https://cssbuyvip.com' + link
+          urls = {
+              'article': article_url,
+              'home': 'https://cssbuyvip.com/',
+              'archive': 'https://cssbuyvip.com/all-seo-articles/',
+              'sitemap': 'https://cssbuyvip.com/sitemap.xml',
+          }
+          expected_title = 'CSSBuy Ship For Me Guide 2026 | Tracking & Warehouse Intake'
+
+          def fetch(url):
+              req = urllib.request.Request(url, headers={
+                  'User-Agent':'CSSBuyVip-Production-Check/1.0',
+                  'Cache-Control':'no-cache',
+                  'Pragma':'no-cache',
+              })
+              with urllib.request.urlopen(req, timeout=30) as response:
+                  return response.status, response.headers.get('content-type',''), response.read().decode('utf-8','replace')
+
+          def words(page):
+              match = re.search(r'<article\b[^>]*>([\s\S]*?)</article>', page, re.I)
+              text = match.group(1) if match else ''
+              text = re.sub(r'<script\b[\s\S]*?</script>', ' ', text, flags=re.I)
+              text = re.sub(r'<style\b[\s\S]*?</style>', ' ', text, flags=re.I)
+              text = re.sub(r'<[^>]+>', ' ', text)
+              return len(re.findall(r"\b[\w’'-]+\b", html_lib.unescape(text)))
+
+          result = None
+          final_errors = []
+          for attempt in range(1, 31):
+              pages = {}
+              errors = []
+              for name, base in urls.items():
+                  try:
+                      status, ctype, body = fetch(base + '?verify=final-route-' + str(attempt))
+                      pages[name] = body
+                      if status != 200:
+                          errors.append(f'{name} HTTP {status}')
+                  except Exception as exc:
+                      errors.append(f'{name} fetch error: {exc}')
+
+              article = pages.get('article','')
+              home = pages.get('home','')
+              archive = pages.get('archive','')
+              sitemap = pages.get('sitemap','')
+              count = words(article)
+              if f'<title>{expected_title}</title>' not in article:
+                  errors.append('article title mismatch')
+              if 'CSSBuy Ship For Me Intake Manifest' not in article:
+                  errors.append('article content marker missing')
+              if article.count('<details>') < 12 or 'CSSBuy Ship For Me FAQ' not in article:
+                  errors.append('FAQ incomplete')
+              if not 1500 <= count <= 2000:
+                  errors.append(f'visible word count {count}')
+              forbidden = ('Official sources checked','<h2>Sources</h2>','<h2>References</h2>','资料来源','核实来源','source-box')
+              if any(token in article for token in forbidden):
+                  errors.append('source block detected')
+              if 'Best CSSBuy Spreadsheet for QC-ready finds' in article:
+                  errors.append('homepage fallback detected')
+              if link not in home:
+                  errors.append('homepage missing new link')
+              if home.count('<a class="article"') != 3:
+                  errors.append('homepage latest count not 3')
+              if home.find(link) == -1 or home.find(link) > home.find('/guides/cssbuy-buy-for-me-vs-ship-for-me-2026/'):
+                  errors.append('homepage order incorrect')
+              if link not in archive:
+                  errors.append('archive missing new link')
+              if archive.find(link) == -1 or archive.find(link) > archive.find('/guides/cssbuy-buy-for-me-vs-ship-for-me-2026/'):
+                  errors.append('archive order incorrect')
+              if 'https://cssbuyvip.com' + link not in sitemap:
+                  errors.append('sitemap missing new URL')
+              if not errors:
+                  result = (attempt, count)
+                  break
+              final_errors = errors
+              print('Attempt', attempt, 'failed:', '; '.join(errors))
+              time.sleep(20)
+
+          report = Path('cssbuyvip.com/verification/2026-07-28-final.txt')
+          report.parent.mkdir(parents=True, exist_ok=True)
+          if result:
+              attempt, count = result
+              report.write_text(
+                  'PASS\n'
+                  f'Article URL: {article_url}\n'
+                  'Article HTTP: 200\n'
+                  f'Visible article words: {count}\n'
+                  'FAQ entries: 12 or more\n'
+                  'Homepage HTTP: 200\n'
+                  'Homepage latest cards: 3\n'
+                  'Archive HTTP: 200\n'
+                  'Sitemap HTTP: 200\n'
+                  'Title, article body, FAQ, homepage, archive and sitemap checks passed.\n'
+                  'No homepage fallback or public source/reference block detected.\n'
+                  f'Passed on polling attempt: {attempt}\n',
+                  encoding='utf-8',
+              )
+          else:
+              report.write_text('FAIL\n' + '\n'.join(final_errors) + '\n', encoding='utf-8')
+              raise SystemExit(1)
+          print(report.read_text())
+          PY
+
+      - name: Commit final verification report
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add cssbuyvip.com/verification/2026-07-28-final.txt
+          if git diff --cached --quiet; then
+            echo "Final report unchanged"
+          else
+            git commit -m "Record final CSSBuy July 28 route verification"
+            for attempt in 1 2 3 4 5; do
+              git pull --rebase origin main && git push origin HEAD:main && exit 0
+              sleep 5
+            done
+            exit 1
+          fi
+
+      - name: Fail workflow when production verification fails
+        if: steps.verify.outcome == 'failure'
+        run: exit 1
