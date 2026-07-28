@@ -1,6 +1,7 @@
 name: Update LitBuy homepage guides
 
 on:
+  create:
   push:
     branches: [main]
     paths:
@@ -21,9 +22,10 @@ jobs:
   patch-homepage:
     runs-on: ubuntu-latest
     steps:
-      - name: Check out repository
+      - name: Check out main
         uses: actions/checkout@v4
         with:
+          ref: main
           fetch-depth: 0
       - name: Attach latest-guides controller
         run: python .github/scripts/patch_litbuy_homepage.py
@@ -31,10 +33,12 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git pull --ff-only origin main
+          python .github/scripts/patch_litbuy_homepage.py
           git add litbuyvip.shop/index.html
           if git diff --cached --quiet; then
             echo "Homepage is already current."
           else
             git commit -m "Update LitBuy homepage latest guides"
-            git push
+            git push origin HEAD:main
           fi
