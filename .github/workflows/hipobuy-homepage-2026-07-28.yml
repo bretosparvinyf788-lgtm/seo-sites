@@ -105,3 +105,5 @@ jobs:
           git rm .github/workflows/hipobuy-homepage-2026-07-28.yml
           git commit -m "Feature July 28 Hipobuy guide on homepage"
           git push origin HEAD:main
+
+# Triggered after workflow registration on main.
