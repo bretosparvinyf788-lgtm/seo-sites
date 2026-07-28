@@ -4,7 +4,7 @@ on:
   push:
     branches: [main]
     paths:
-      - '.github/workflows/hipobuy-homepage-2026-07-28.yml'
+      - 'hipobuyvip.shop/.publish/hipobuy-2026-07-28.flag'
 
 permissions:
   contents: write
@@ -27,29 +27,14 @@ jobs:
           text = path.read_text(encoding='utf-8')
           slug = 'hipobuy-return-exchange-evidence-warehouse-release-workflow-2026'
 
-          old_latest = '''<div class="story-grid">
-          <article class="story-card feature">
-          <a aria-label="Open Hipobuy W2C link control guide" class="story-art numeral" href="/guides/hipobuy-w2c-link-variant-seller-warehouse-exception-workflow-2026/">05</a>
-          <small>W2C ORDER CONTROL · 14 MIN</small>
-          <h3><a class="story-title-link" href="/guides/hipobuy-w2c-link-variant-seller-warehouse-exception-workflow-2026/">Hipobuy W2C Link Control 2026: Lock Variants, Seller Instructions and Warehouse Exceptions</a></h3>
-          <p>A link-to-parcel control system for exact variants, seller questions, payment checks and warehouse exceptions.</p>
-          <a href="/guides/hipobuy-w2c-link-variant-seller-warehouse-exception-workflow-2026/">READ STORY →</a>
-          </article>
-          <article class="story-card">
-          <a aria-label="Open Hipobuy two-payment workflow guide" class="story-art checker" href="/guides/hipobuy-two-payment-workflow-shipping-budget-2026/">PAY</a>
-          <small>PAYMENT WORKFLOW · 15 MIN</small>
-          <h3><a class="story-title-link" href="/guides/hipobuy-two-payment-workflow-shipping-budget-2026/">Hipobuy Two-Payment Workflow 2026: Avoid Shipping Cost Surprises</a></h3>
-          <p>Separate merchandise, domestic delivery and international freight while preventing duplicate-payment mistakes.</p>
-          <a href="/guides/hipobuy-two-payment-workflow-shipping-budget-2026/">READ STORY →</a>
-          </article>
-          <article class="story-card">
-          <a aria-label="Open Hipobuy buying workflow guide" class="story-art percentage" href="/guides/hipobuy-buying-workflow-2026/">01</a>
-          <small>BEGINNER GUIDE · 12 MIN</small>
-          <h3><a class="story-title-link" href="/guides/hipobuy-buying-workflow-2026/">Hipobuy Buying Workflow 2026: From Taobao or 1688 Link to Global Parcel</a></h3>
-          <p>A control-tower workflow for purchasing, warehouse review, storage, QC decisions and route selection.</p>
-          <a href="/guides/hipobuy-buying-workflow-2026/">READ STORY →</a>
-          </article>
-          </div><button class="mobile-all-guides" data-open-panel="guide-hub" type="button">VIEW ALL SEO ARTICLES →</button>'''
+          section_marker = '<section class="section guide-edition" id="buyer-stories">'
+          story_start_marker = '<div class="story-grid">'
+          story_end_marker = '</div><button class="mobile-all-guides"'
+          if text.count(section_marker) != 1:
+              raise SystemExit('buyer-stories section is missing or duplicated')
+          section_start = text.index(section_marker)
+          story_start = text.index(story_start_marker, section_start)
+          story_end = text.index(story_end_marker, story_start)
 
           new_latest = '''<div class="story-grid">
           <article class="story-card feature">
@@ -73,37 +58,65 @@ jobs:
           <p>Separate merchandise, domestic delivery and international freight while preventing duplicate-payment mistakes.</p>
           <a href="/guides/hipobuy-two-payment-workflow-shipping-budget-2026/">READ STORY →</a>
           </article>
-          </div><button class="mobile-all-guides" data-open-panel="guide-hub" type="button">VIEW ALL SEO ARTICLES →</button>'''
+          '''
+          text = text[:story_start] + new_latest + text[story_end:]
 
-          if text.count(old_latest) != 1:
-              raise SystemExit(f'Expected exactly one current Latest Guides block, found {text.count(old_latest)}')
-          text = text.replace(old_latest, new_latest, 1)
-
-          guide_button = '''<button onclick="window.location.href='/guides/hipobuy-return-exchange-evidence-warehouse-release-workflow-2026/'" type="button">
+          hub_start_marker = '<article class="embedded-panel seo-guide-panel guide-hub-panel" data-panel="guide-hub">'
+          hub_end_marker = '<article class="embedded-panel seo-guide-panel" data-panel="article-beginner">'
+          if text.count(hub_start_marker) != 1:
+              raise SystemExit('guide hub is missing or duplicated')
+          hub_start = text.index(hub_start_marker)
+          hub_end = text.index(hub_end_marker, hub_start)
+          current_hub = text[hub_start:hub_end]
+          new_button = '''<button onclick="window.location.href='/guides/hipobuy-return-exchange-evidence-warehouse-release-workflow-2026/'" type="button">
           <span>06 · JULY 28, 2026 · RETURN &amp; EXCHANGE CONTROL</span>
           <b>Hipobuy Return &amp; Exchange Decision Desk 2026: Evidence, Seller Timing and Warehouse Release</b>
           <small>Warehouse evidence, seller timing, return and exchange decisions, refund tracking and safe parcel release.</small>
           </button>
           '''
-          hub_anchor = '<div class="guide-hub-grid">\n'
-          if f"/guides/{slug}/" in text[text.index(hub_anchor):text.index(hub_anchor)+1000]:
-              raise SystemExit('New guide already exists near the top of All Buyer Guides')
-          if text.count(hub_anchor) != 1:
-              raise SystemExit(f'Expected exactly one guide hub anchor, found {text.count(hub_anchor)}')
-          text = text.replace(hub_anchor, hub_anchor + guide_button, 1)
+          anchor = '<div class="guide-hub-grid">\n'
+          if f'/guides/{slug}/' not in current_hub:
+              if current_hub.count(anchor) != 1:
+                  raise SystemExit('guide-hub grid anchor missing or duplicated')
+              updated_hub = current_hub.replace(anchor, anchor + new_button, 1)
+              text = text[:hub_start] + updated_hub + text[hub_end:]
 
-          if text.count(f'/guides/{slug}/') < 5:
-              raise SystemExit('Homepage insertion verification failed')
+          updated_section_start = text.index(section_marker)
+          updated_story_start = text.index(story_start_marker, updated_section_start)
+          updated_story_end = text.index(story_end_marker, updated_story_start)
+          latest = text[updated_story_start:updated_story_end]
+          if latest.count('<article class="story-card') != 3:
+              raise SystemExit('homepage must contain exactly three latest guide cards')
+          ordered = [slug, 'hipobuy-w2c-link-variant-seller-warehouse-exception-workflow-2026', 'hipobuy-two-payment-workflow-shipping-budget-2026']
+          positions = [latest.index(value) for value in ordered]
+          if positions != sorted(positions):
+              raise SystemExit('Latest Guides order is not newest first')
+
+          updated_hub_start = text.index(hub_start_marker)
+          updated_hub_end = text.index(hub_end_marker, updated_hub_start)
+          hub = text[updated_hub_start:updated_hub_end]
+          if hub.count('<button ') != 6:
+              raise SystemExit('All Buyer Guides must contain exactly six published guides')
+          for guide_slug in [slug, 'hipobuy-w2c-link-variant-seller-warehouse-exception-workflow-2026', 'hipobuy-two-payment-workflow-shipping-budget-2026', 'hipobuy-buying-workflow-2026', 'hipobuy-qc-photos-explained', 'hipobuy-shipping-coupons-costs']:
+              if hub.count(guide_slug) != 1:
+                  raise SystemExit(f'guide missing or duplicated: {guide_slug}')
+
+          for preserved in ['id="recently-checked"', 'id="qc-case"', 'id="shipping-lab"', 'id="buyer-stories"', 'id="buyer-reviews"', 'class="section faq-section"', 'class="main-category-grid"']:
+              if preserved not in text:
+                  raise SystemExit(f'preserved homepage structure missing: {preserved}')
+
           path.write_text(text, encoding='utf-8')
+          print('Homepage updated with the July 28 guide and six-guide archive.')
           PY
-      - name: Commit minimal homepage update and remove helper
+      - name: Commit minimal homepage update and remove helper files
         shell: bash
         run: |
-          git config user.name "seo-sites automation"
-          git config user.email "actions@users.noreply.github.com"
+          git diff --check
+          git diff --quiet -- hipobuyvip.shop/index.html && { echo "Expected homepage change was not produced"; exit 1; }
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add hipobuyvip.shop/index.html
           git rm .github/workflows/hipobuy-homepage-2026-07-28.yml
+          git rm hipobuyvip.shop/.publish/hipobuy-2026-07-28.flag
           git commit -m "Feature July 28 Hipobuy guide on homepage"
           git push origin HEAD:main
-
-# Triggered after workflow registration on main.
