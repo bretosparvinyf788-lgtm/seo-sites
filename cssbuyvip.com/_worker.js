@@ -1,3 +1,4 @@
+// Trigger production trim and verification for the July 28 static guide.
 const HOME_PATHS = new Set(["/", "/index.html"]);
 
 const LATEST = [
