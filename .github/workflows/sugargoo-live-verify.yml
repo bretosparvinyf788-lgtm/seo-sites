@@ -32,8 +32,6 @@ jobs:
           GUIDES_URL='https://sugargoovip.shop/guides.html'
           SITEMAP_URL='https://sugargoovip.shop/sitemap.xml'
           ROBOTS_URL='https://sugargoovip.shop/robots.txt'
-          ARTICLE_SLUG='guide-sugargoo-returns-exchanges.html'
-          TITLE='Sugargoo Returns & Exchanges Guide 2026: Fix Warehouse Problems Before Shipping'
 
           mkdir -p /tmp/sugargoo-verify
           FINAL_STATUS='failed'
@@ -138,7 +136,14 @@ PY
             exit 0
           fi
           git commit -m 'Record Sugargoo production verification [skip ci]'
-          git push origin HEAD:main
+          for attempt in 1 2 3 4 5; do
+            git pull --rebase origin main
+            if git push origin HEAD:main; then
+              exit 0
+            fi
+            sleep 3
+          done
+          exit 1
 
       - name: Fail when production checks did not pass
         if: steps.verify.outputs.status != 'passed'
