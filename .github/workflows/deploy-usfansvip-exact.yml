@@ -13,20 +13,27 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout deployment branch
+        uses: actions/checkout@v4
         with:
           ref: ${{ github.event.pull_request.head.sha }}
           fetch-depth: 1
           show-progress: false
-      - name: Update only usfansvip.shop
+
+      - name: Decode and verify logo
         shell: bash
         run: |
           set -euo pipefail
-          echo 'STEP decode-logo'
           cat .usfansvip-logo/logo.part* | base64 --decode > /tmp/usfans-logo-512.png
           echo '30142ed349e73f5df5a2c3bee3fbc240df294075809d2a42eda43e484e560dea  /tmp/usfans-logo-512.png' | sha256sum -c -
-          python -m pip install --quiet pillow
-          echo 'STEP update-site'
+
+      - name: Install image library
+        run: python -m pip install --quiet pillow
+
+      - name: Update usfansvip.shop files
+        shell: bash
+        run: |
+          set -euo pipefail
           python <<'PY'
           from pathlib import Path
           from PIL import Image
@@ -90,17 +97,24 @@ jobs:
           for name, size in sizes.items():
               base.resize(size, Image.Resampling.LANCZOS).save(assets / name, optimize=True)
           base.save(assets / 'favicon.ico', format='ICO', sizes=[(16,16),(32,32),(48,48),(64,64)])
-          if sum('/assets/favicon.ico' in p.read_text(encoding='utf-8') for p in html_files) != 46:
-              raise SystemExit('Not all HTML pages contain favicon links')
-          homepages = [root/'index.html'] + [root/lang/'index.html' for lang in sorted(languages)]
-          if not all('/assets/usfans-logo-128.png' in p.read_text(encoding='utf-8') for p in homepages):
-              raise SystemExit('Not all homepages contain the logo')
-          file_count = len([p for p in root.rglob('*') if p.is_file()])
-          if file_count != 62:
-              raise SystemExit(f'Final site file count is {file_count}, expected 62')
-          print('SITE_VERIFICATION=PASSED')
           PY
-          echo 'STEP commit-site'
+
+      - name: Verify final site folder
+        shell: bash
+        run: |
+          set -euo pipefail
+          test "$(find usfansvip.shop -type f | wc -l)" -eq 62
+          test "$(find usfansvip.shop -name '*.html' | wc -l)" -eq 46
+          test "$(grep -RIl '/assets/favicon.ico' usfansvip.shop --include='*.html' | wc -l)" -eq 46
+          test "$(grep -Rl '/assets/usfans-logo-128.png' usfansvip.shop/index.html usfansvip.shop/{ar,de,es,fr,ja,ko,pt,zh}/index.html | wc -l)" -eq 9
+          test -f usfansvip.shop/assets/usfans-logo-512.png
+          test -f usfansvip.shop/assets/favicon.ico
+          echo 'SITE_VERIFICATION=PASSED'
+
+      - name: Commit only site folder
+        shell: bash
+        run: |
+          set -euo pipefail
           rm -rf .usfansvip-logo
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
