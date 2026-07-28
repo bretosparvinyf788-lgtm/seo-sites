@@ -1,0 +1,250 @@
+[
+  {
+    "path": "404.html",
+    "size": 3206
+  },
+  {
+    "path": "README.md",
+    "size": 206
+  },
+  {
+    "path": "_headers",
+    "size": 252
+  },
+  {
+    "path": "_redirects",
+    "size": 129
+  },
+  {
+    "path": "about.html",
+    "size": 4092
+  },
+  {
+    "path": "assets/css/article-back-nav-v30.css",
+    "size": 1390
+  },
+  {
+    "path": "assets/css/article-v1.css",
+    "size": 7581
+  },
+  {
+    "path": "assets/css/benefits-static-v21.css",
+    "size": 733
+  },
+  {
+    "path": "assets/css/borderless-v13.css",
+    "size": 14793
+  },
+  {
+    "path": "assets/css/category-hub-v5.css",
+    "size": 44920
+  },
+  {
+    "path": "assets/css/cohesive-blue-v12.css",
+    "size": 12642
+  },
+  {
+    "path": "assets/css/editorial-v4.css",
+    "size": 16945
+  },
+  {
+    "path": "assets/css/faq10-static-v19.css",
+    "size": 1616
+  },
+  {
+    "path": "assets/css/first-layout-v10.css",
+    "size": 14555
+  },
+  {
+    "path": "assets/css/fullwidth-v14.css",
+    "size": 16094
+  },
+  {
+    "path": "assets/css/guides-back-nav-v31.css",
+    "size": 1222
+  },
+  {
+    "path": "assets/css/guides-clean-final-v29.css",
+    "size": 971
+  },
+  {
+    "path": "assets/css/guides-products-clean-v22.css",
+    "size": 454
+  },
+  {
+    "path": "assets/css/home-anchor-v16.css",
+    "size": 1186
+  },
+  {
+    "path": "assets/css/logo-v20.css",
+    "size": 1188
+  },
+  {
+    "path": "assets/css/mobile-compact-v23.css",
+    "size": 18570
+  },
+  {
+    "path": "assets/css/multilingual-v15.css",
+    "size": 2781
+  },
+  {
+    "path": "assets/css/nav-trimmed-v17.css",
+    "size": 2033
+  },
+  {
+    "path": "assets/css/styles.css",
+    "size": 36638
+  },
+  {
+    "path": "assets/css/title-layout-v18.css",
+    "size": 1926
+  },
+  {
+    "path": "assets/css/unified-blue-v11.css",
+    "size": 18783
+  },
+  {
+    "path": "assets/img/apple-touch-icon.png",
+    "size": 25614
+  },
+  {
+    "path": "assets/img/favicon.png",
+    "size": 25743
+  },
+  {
+    "path": "assets/img/logo.svg",
+    "size": 443
+  },
+  {
+    "path": "assets/img/products/asics-gel-kajana-8.webp",
+    "size": 110154
+  },
+  {
+    "path": "assets/img/products/camisa-prada.webp",
+    "size": 11466
+  },
+  {
+    "path": "assets/img/products/carhartt-bag.webp",
+    "size": 34986
+  },
+  {
+    "path": "assets/img/products/coach-backpack.webp",
+    "size": 68372
+  },
+  {
+    "path": "assets/img/products/dr-martens-tassel-loafers.webp",
+    "size": 36134
+  },
+  {
+    "path": "assets/img/products/gypsophila-ring.webp",
+    "size": 69616
+  },
+  {
+    "path": "assets/img/products/kenzo-tees.webp",
+    "size": 18266
+  },
+  {
+    "path": "assets/img/products/nike-benassi-slides.webp",
+    "size": 61818
+  },
+  {
+    "path": "assets/img/products/nike-masks.webp",
+    "size": 39624
+  },
+  {
+    "path": "assets/img/products/play-tshirt.webp",
+    "size": 34264
+  },
+  {
+    "path": "assets/img/products/ray-ban-glasses.webp",
+    "size": 41170
+  },
+  {
+    "path": "assets/img/products/supreme-b22-waist-bag.webp",
+    "size": 68714
+  },
+  {
+    "path": "assets/img/sugargoo-wordmark.png",
+    "size": 24014
+  },
+  {
+    "path": "assets/js/app.js",
+    "size": 10790
+  },
+  {
+    "path": "assets/js/category-hub-v5.js",
+    "size": 4095
+  },
+  {
+    "path": "assets/js/editorial-v4.js",
+    "size": 3370
+  },
+  {
+    "path": "assets/js/home-anchor-v16.js",
+    "size": 1959
+  },
+  {
+    "path": "assets/js/mobile-compact-v23.js",
+    "size": 1697
+  },
+  {
+    "path": "assets/js/multilingual-v15.js",
+    "size": 47890
+  },
+  {
+    "path": "coupons.html",
+    "size": 4444
+  },
+  {
+    "path": "data/products.json",
+    "size": 3946
+  },
+  {
+    "path": "guide-qc-photos.html",
+    "size": 22402
+  },
+  {
+    "path": "guide-shipping-cost.html",
+    "size": 23000
+  },
+  {
+    "path": "guide-w2c-workflow.html",
+    "size": 22571
+  },
+  {
+    "path": "guides.html",
+    "size": 6505
+  },
+  {
+    "path": "index.html",
+    "size": 51816
+  },
+  {
+    "path": "privacy.html",
+    "size": 3614
+  },
+  {
+    "path": "qc.html",
+    "size": 5249
+  },
+  {
+    "path": "robots.txt",
+    "size": 69
+  },
+  {
+    "path": "shipping.html",
+    "size": 4922
+  },
+  {
+    "path": "sitemap.xml",
+    "size": 1882
+  },
+  {
+    "path": "spreadsheet.html",
+    "size": 7490
+  },
+  {
+    "path": "w2c.html",
+    "size": 4651
+  }
+]
