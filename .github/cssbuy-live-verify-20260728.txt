@@ -1,1 +1,1 @@
-trigger 2026-07-28T10:04:30+08:00 final-production-verify
+trigger 2026-07-28T10:10:00+08:00 final-route-production-verify
