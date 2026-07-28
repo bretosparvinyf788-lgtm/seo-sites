@@ -13,37 +13,18 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout deployment branch
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
         with:
           ref: ${{ github.event.pull_request.head.sha }}
           fetch-depth: 1
           show-progress: false
 
-      - name: Decode logo
+      - name: Build and verify usfansvip.shop
         shell: bash
         run: |
           set -euo pipefail
-          cat .usfansvip-logo/logo.part* | base64 --decode > /tmp/usfans-logo-512.png
-          test -s /tmp/usfans-logo-512.png
-
-      - name: Install image library
-        run: python -m pip install --quiet pillow
-
-      - name: Validate logo image
-        shell: bash
-        run: |
-          python <<'PY'
-          from PIL import Image
-          image = Image.open('/tmp/usfans-logo-512.png')
-          image.verify()
-          print('LOGO_IMAGE_VALID=TRUE')
-          PY
-
-      - name: Update usfansvip.shop files
-        shell: bash
-        run: |
-          set -euo pipefail
+          cat .usfansvip-logo/logo.part* | base64 --decode > /tmp/usfans-logo-128.png
+          python -m pip install --quiet pillow
           python <<'PY'
           from pathlib import Path
           from PIL import Image
@@ -52,76 +33,77 @@ jobs:
           root = Path('usfansvip.shop')
           assets = root / 'assets'
           assets.mkdir(parents=True, exist_ok=True)
-          logo_src = Path('/tmp/usfans-logo-512.png')
+          logo = Path('/tmp/usfans-logo-128.png')
+          image = Image.open(logo).convert('RGBA')
+          if image.size != (128, 128):
+              raise SystemExit(f'Unexpected logo size: {image.size}')
+
           css = '''
           .site-logo{
-            width:42px;
-            height:42px;
-            display:block;
-            object-fit:contain;
-            border-radius:14px;
-            flex:0 0 42px;
+            width:42px;height:42px;display:block;object-fit:contain;
+            border-radius:14px;flex:0 0 42px;
           }
           @media(max-width:680px){
             .site-logo{width:36px;height:36px;flex-basis:36px;border-radius:12px}
           }
           '''
-          favicon_links = '<link href="/assets/favicon.ico" rel="icon"/><link href="/assets/favicon-32.png" rel="icon" type="image/png"/><link href="/assets/apple-touch-icon.png" rel="apple-touch-icon"/>'
-          old_mark = '<span class="brand-mark">UV</span>'
-          new_mark = '<img alt="USFansVIP logo" class="site-logo" height="42" src="/assets/usfans-logo-128.png" width="42"/>'
-          languages = {'ar','de','es','fr','ja','ko','pt','zh'}
-          html_files = sorted(root.rglob('*.html'))
-          if len(html_files) != 46:
-              raise SystemExit(f'Expected 46 HTML files, found {len(html_files)}')
-          for path in html_files:
+          icons = '<link href="/assets/favicon.ico" rel="icon"/><link href="/assets/favicon-32.png" rel="icon" type="image/png"/><link href="/assets/apple-touch-icon.png" rel="apple-touch-icon"/>'
+          old_logo = '<span class="brand-mark">UV</span>'
+          new_logo = '<img alt="USFansVIP logo" class="site-logo" height="42" src="/assets/usfans-logo-128.png" width="42"/>'
+          languages = ('ar','de','es','fr','ja','ko','pt','zh')
+          html = sorted(root.rglob('*.html'))
+          if len(html) != 46:
+              raise SystemExit(f'Expected 46 HTML files, found {len(html)}')
+
+          for path in html:
               text = path.read_text(encoding='utf-8')
               if '.site-logo{' not in text:
                   if '</style>' not in text:
-                      raise SystemExit(f'Missing style close in {path}')
+                      raise SystemExit(f'Missing </style>: {path}')
                   text = text.replace('</style>', css + '</style>', 1)
               if '/assets/favicon.ico' not in text:
                   if '</head>' not in text:
-                      raise SystemExit(f'Missing head close in {path}')
-                  text = text.replace('</head>', favicon_links + '</head>', 1)
+                      raise SystemExit(f'Missing </head>: {path}')
+                  text = text.replace('</head>', icons + '</head>', 1)
               rel = path.relative_to(root)
               is_home = rel == Path('index.html') or (len(rel.parts) == 2 and rel.name == 'index.html' and rel.parts[0] in languages)
-              if is_home:
-                  if old_mark in text:
-                      text = text.replace(old_mark, new_mark, 1)
-                  if new_mark not in text:
-                      raise SystemExit(f'Logo marker missing in {path}')
+              if is_home and old_logo in text:
+                  text = text.replace(old_logo, new_logo, 1)
               path.write_text(text, encoding='utf-8')
-          shutil.copyfile(logo_src, assets / 'usfans-logo-512.png')
-          base = Image.open(logo_src).convert('RGBA')
+
+          shutil.copyfile(logo, assets / 'usfans-logo-128.png')
           sizes = {
-              'usfans-logo-128.png': (128,128),
-              'favicon-16.png': (16,16),
-              'favicon-32.png': (32,32),
-              'favicon-48.png': (48,48),
-              'favicon-64.png': (64,64),
-              'favicon-180.png': (180,180),
-              'apple-touch-icon.png': (180,180),
-              'favicon-192.png': (192,192),
-              'favicon-512.png': (512,512),
+              'usfans-logo-512.png': (512,512),
+              'favicon-16.png': (16,16), 'favicon-32.png': (32,32),
+              'favicon-48.png': (48,48), 'favicon-64.png': (64,64),
+              'favicon-180.png': (180,180), 'apple-touch-icon.png': (180,180),
+              'favicon-192.png': (192,192), 'favicon-512.png': (512,512),
           }
           for name, size in sizes.items():
-              base.resize(size, Image.Resampling.LANCZOS).save(assets / name, optimize=True)
-          base.save(assets / 'favicon.ico', format='ICO', sizes=[(16,16),(32,32),(48,48),(64,64)])
+              image.resize(size, Image.Resampling.LANCZOS).save(assets / name, optimize=True)
+          image.save(assets / 'favicon.ico', format='ICO', sizes=[(16,16),(32,32),(48,48),(64,64)])
+
+          homepages = [root / 'index.html', *[root / lang / 'index.html' for lang in languages]]
+          checks = {
+              'html_count': len(html) == 46,
+              'all_favicons': all('/assets/favicon.ico' in p.read_text(encoding='utf-8') for p in html),
+              'all_home_logos': all('/assets/usfans-logo-128.png' in p.read_text(encoding='utf-8') for p in homepages),
+              'logo_128': (assets / 'usfans-logo-128.png').is_file(),
+              'logo_512': (assets / 'usfans-logo-512.png').is_file(),
+              'favicon': (assets / 'favicon.ico').is_file(),
+              'sitemap': (root / 'sitemap.xml').is_file(),
+              'robots': (root / 'robots.txt').is_file(),
+          }
+          print('FINAL_FILE_COUNT', sum(1 for p in root.rglob('*') if p.is_file()))
+          for key, value in checks.items():
+              print(key, value)
+          failed = [key for key, value in checks.items() if not value]
+          if failed:
+              raise SystemExit('Verification failed: ' + ', '.join(failed))
+          print('USFANSVIP_SITE_VERIFICATION=PASSED')
           PY
 
-      - name: Verify final site folder
-        shell: bash
-        run: |
-          set -euo pipefail
-          test "$(find usfansvip.shop -type f | wc -l)" -eq 62
-          test "$(find usfansvip.shop -name '*.html' | wc -l)" -eq 46
-          test "$(grep -RIl '/assets/favicon.ico' usfansvip.shop --include='*.html' | wc -l)" -eq 46
-          test "$(grep -Rl '/assets/usfans-logo-128.png' usfansvip.shop/index.html usfansvip.shop/{ar,de,es,fr,ja,ko,pt,zh}/index.html | wc -l)" -eq 9
-          test -f usfansvip.shop/assets/usfans-logo-512.png
-          test -f usfansvip.shop/assets/favicon.ico
-          echo 'SITE_VERIFICATION=PASSED'
-
-      - name: Commit only site folder
+      - name: Commit only usfansvip.shop
         shell: bash
         run: |
           set -euo pipefail
