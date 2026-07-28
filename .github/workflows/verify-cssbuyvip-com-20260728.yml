@@ -58,7 +58,7 @@ jobs:
               pages = {}
               for name, url in [('article',article_url),('home',home_url),('archive',archive_url),('sitemap',sitemap_url)]:
                   try:
-                      status, ctype, body = fetch(url + ('?verify=20260728' if name != 'sitemap' else '?verify=20260728'))
+                      status, ctype, body = fetch(url + '?verify=20260728b')
                       pages[name] = body
                       if status != 200:
                           errors.append(f'{name} HTTP {status}')
@@ -88,8 +88,9 @@ jobs:
               link = f'/guides/{slug}/'
               if link not in home:
                   errors.append('homepage missing article link')
-              if home.count('<a class="article"') != 3:
-                  errors.append(f'homepage latest card count is {home.count(chr(60)+"a class=\"article\"")}')
+              card_count = home.count('<a class="article"')
+              if card_count != 3:
+                  errors.append(f'homepage latest card count is {card_count}')
               if home.find(link) == -1 or home.find(link) > home.find('/guides/cssbuy-buy-for-me-vs-ship-for-me-2026/'):
                   errors.append('homepage newest order incorrect')
               if link not in archive:
@@ -100,7 +101,7 @@ jobs:
                   errors.append('sitemap missing article URL')
 
               if not errors:
-                  result = (attempt, wc, pages)
+                  result = (attempt, wc)
                   last_errors = []
                   break
               last_errors = errors
@@ -109,11 +110,11 @@ jobs:
           report = Path('cssbuyvip.com/verification/2026-07-28.txt')
           report.parent.mkdir(parents=True, exist_ok=True)
           if result:
-              attempt, wc, pages = result
+              attempt, wc = result
               report.write_text(
                   'PASS\n'
                   f'Article URL: {article_url}\n'
-                  f'Article HTTP: 200\n'
+                  'Article HTTP: 200\n'
                   f'Visible article words: {wc}\n'
                   'FAQ entries: 12 or more\n'
                   'Homepage HTTP: 200\n'
@@ -134,6 +135,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git pull --rebase origin main
           git add cssbuyvip.com/verification/2026-07-28.txt
           if git diff --cached --quiet; then
             echo "Verification report unchanged"
