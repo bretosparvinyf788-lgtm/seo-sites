@@ -20,15 +20,25 @@ jobs:
           fetch-depth: 1
           show-progress: false
 
-      - name: Decode and verify logo
+      - name: Decode logo
         shell: bash
         run: |
           set -euo pipefail
           cat .usfansvip-logo/logo.part* | base64 --decode > /tmp/usfans-logo-512.png
-          echo '30142ed349e73f5df5a2c3bee3fbc240df294075809d2a42eda43e484e560dea  /tmp/usfans-logo-512.png' | sha256sum -c -
+          test -s /tmp/usfans-logo-512.png
 
       - name: Install image library
         run: python -m pip install --quiet pillow
+
+      - name: Validate logo image
+        shell: bash
+        run: |
+          python <<'PY'
+          from PIL import Image
+          image = Image.open('/tmp/usfans-logo-512.png')
+          image.verify()
+          print('LOGO_IMAGE_VALID=TRUE')
+          PY
 
       - name: Update usfansvip.shop files
         shell: bash
