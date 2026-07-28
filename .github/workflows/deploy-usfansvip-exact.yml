@@ -16,14 +16,17 @@ jobs:
       - uses: actions/checkout@v4
         with:
           ref: ${{ github.event.pull_request.head.sha }}
-          fetch-depth: 0
+          fetch-depth: 1
+          show-progress: false
       - name: Update only usfansvip.shop
         shell: bash
         run: |
           set -euo pipefail
+          echo 'STEP decode-logo'
           cat .usfansvip-logo/logo.part* | base64 --decode > /tmp/usfans-logo-512.png
           echo '30142ed349e73f5df5a2c3bee3fbc240df294075809d2a42eda43e484e560dea  /tmp/usfans-logo-512.png' | sha256sum -c -
           python -m pip install --quiet pillow
+          echo 'STEP update-site'
           python <<'PY'
           from pathlib import Path
           from PIL import Image
@@ -33,7 +36,6 @@ jobs:
           assets = root / 'assets'
           assets.mkdir(parents=True, exist_ok=True)
           logo_src = Path('/tmp/usfans-logo-512.png')
-
           css = '''
           .site-logo{
             width:42px;
@@ -51,16 +53,18 @@ jobs:
           old_mark = '<span class="brand-mark">UV</span>'
           new_mark = '<img alt="USFansVIP logo" class="site-logo" height="42" src="/assets/usfans-logo-128.png" width="42"/>'
           languages = {'ar','de','es','fr','ja','ko','pt','zh'}
-
           html_files = sorted(root.rglob('*.html'))
           if len(html_files) != 46:
               raise SystemExit(f'Expected 46 HTML files, found {len(html_files)}')
-
           for path in html_files:
               text = path.read_text(encoding='utf-8')
               if '.site-logo{' not in text:
+                  if '</style>' not in text:
+                      raise SystemExit(f'Missing style close in {path}')
                   text = text.replace('</style>', css + '</style>', 1)
               if '/assets/favicon.ico' not in text:
+                  if '</head>' not in text:
+                      raise SystemExit(f'Missing head close in {path}')
                   text = text.replace('</head>', favicon_links + '</head>', 1)
               rel = path.relative_to(root)
               is_home = rel == Path('index.html') or (len(rel.parts) == 2 and rel.name == 'index.html' and rel.parts[0] in languages)
@@ -70,7 +74,6 @@ jobs:
                   if new_mark not in text:
                       raise SystemExit(f'Logo marker missing in {path}')
               path.write_text(text, encoding='utf-8')
-
           shutil.copyfile(logo_src, assets / 'usfans-logo-512.png')
           base = Image.open(logo_src).convert('RGBA')
           sizes = {
@@ -87,19 +90,20 @@ jobs:
           for name, size in sizes.items():
               base.resize(size, Image.Resampling.LANCZOS).save(assets / name, optimize=True)
           base.save(assets / 'favicon.ico', format='ICO', sizes=[(16,16),(32,32),(48,48),(64,64)])
-
           if sum('/assets/favicon.ico' in p.read_text(encoding='utf-8') for p in html_files) != 46:
               raise SystemExit('Not all HTML pages contain favicon links')
           homepages = [root/'index.html'] + [root/lang/'index.html' for lang in sorted(languages)]
           if not all('/assets/usfans-logo-128.png' in p.read_text(encoding='utf-8') for p in homepages):
               raise SystemExit('Not all homepages contain the logo')
-          if len([p for p in root.rglob('*') if p.is_file()]) != 62:
-              raise SystemExit('Final site file count is not 62')
+          file_count = len([p for p in root.rglob('*') if p.is_file()])
+          if file_count != 62:
+              raise SystemExit(f'Final site file count is {file_count}, expected 62')
+          print('SITE_VERIFICATION=PASSED')
           PY
+          echo 'STEP commit-site'
           rm -rf .usfansvip-logo
-          rm -f .github/workflows/deploy-usfansvip-exact.yml
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add -A usfansvip.shop .usfansvip-logo .github/workflows/deploy-usfansvip-exact.yml
+          git add -A usfansvip.shop .usfansvip-logo
           git commit -m 'Deploy USFansVIP multilingual site with updated logo'
           git push origin HEAD:main
