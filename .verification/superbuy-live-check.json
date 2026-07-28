@@ -1,0 +1,9 @@
+{
+  "checked_at_utc": "2026-07-28T14:21:38Z",
+  "homepage_http": 200,
+  "homepage_contains_new_guide": false,
+  "article_http": 404,
+  "article_contains_expected_title": false,
+  "sitemap_http": 200,
+  "sitemap_contains_new_url": false
+}
