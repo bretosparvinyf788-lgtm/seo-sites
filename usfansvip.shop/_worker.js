@@ -67,52 +67,9 @@ const mobileFixCss = `
 }
 `;
 
-const walletImage = `data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='900' height='900' viewBox='0 0 900 900'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop stop-color='%23ead9c5'/%3E%3Cstop offset='1' stop-color='%23d8e5de'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='900' height='900' rx='48' fill='url(%23g)'/%3E%3Crect x='160' y='270' width='580' height='330' rx='64' fill='%23fff' fill-opacity='.52'/%3E%3Ctext x='450' y='455' text-anchor='middle' font-family='Arial' font-size='58' font-weight='700' fill='%2318211f'%3EWallet + Belt%3C/text%3E%3C/svg%3E`;
-const pantsImage = `data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='900' height='900' viewBox='0 0 900 900'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop stop-color='%23d8e2ed'/%3E%3Cstop offset='1' stop-color='%23eee2d6'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='900' height='900' rx='48' fill='url(%23g)'/%3E%3Cpath d='M310 180h280l65 540H505l-55-265-55 265H245z' fill='%2318211f' fill-opacity='.23'/%3E%3Ctext x='450' y='790' text-anchor='middle' font-family='Arial' font-size='54' font-weight='700' fill='%2318211f'%3EGallery Pants%3C/text%3E%3C/svg%3E`;
-
-const extraProducts = `
-<a aria-label="Wallet + belt set" class="product-card" data-filter="accessories" data-search="wallet belt set leather accessories" href="https://kakobuymake.com/?a=index&amp;aid=2990&amp;c=View&amp;m=home" rel="noopener" target="_blank">
-  <div class="product-image"><img alt="Wallet and belt set product image" loading="lazy" src="${walletImage}"/><span class="product-no">09</span><span class="product-category">Accessories</span></div>
-  <div class="product-body"><div><small>Selected product</small><h3>Wallet + belt set</h3></div><div class="product-foot"><strong>$10</strong><span>Open product ↗</span></div></div>
-</a>
-<a aria-label="Gallery Dept pants" class="product-card" data-filter="bottoms" data-search="gallery dept pants bottoms trousers streetwear" href="https://kakobuymake.com/?a=index&amp;aid=2987&amp;c=View&amp;m=home" rel="noopener" target="_blank">
-  <div class="product-image"><img alt="Gallery Dept pants product image" loading="lazy" src="${pantsImage}"/><span class="product-no">10</span><span class="product-category">Bottoms</span></div>
-  <div class="product-body"><div><small>Selected product</small><h3>Gallery Dept pants</h3></div><div class="product-foot"><strong>$18</strong><span>Open product ↗</span></div></div>
-</a>`;
-
 class HeadHandler {
   element(element) {
     element.append(`<style id="usfansvip-mobile-grid-fix">${mobileFixCss}</style>`, { html: true });
-  }
-}
-
-class ProductGridHandler {
-  element(element) {
-    element.append(extraProducts, { html: true });
-  }
-}
-
-class AllFilterHandler {
-  element(element) {
-    element.setInnerContent('All 10');
-  }
-}
-
-class FeaturedCountHandler {
-  constructor() {
-    this.updated = false;
-  }
-  element(element) {
-    if (!this.updated) {
-      element.setInnerContent('Open the ten selected product cards');
-      this.updated = true;
-    }
-  }
-}
-
-class AccessoriesFilterHandler {
-  element(element) {
-    element.append(`<button class="filter" onclick="filterProducts('accessories',this)">Accessories</button>`, { html: true });
   }
 }
 
@@ -128,10 +85,6 @@ export default {
 
     return new HTMLRewriter()
       .on('head', new HeadHandler())
-      .on('#productGrid', new ProductGridHandler())
-      .on('#finds .filter.active', new AllFilterHandler())
-      .on('#finds .filters', new AccessoriesFilterHandler())
-      .on('#searchTool .tool-direct-card small', new FeaturedCountHandler())
       .transform(response);
   }
 };
