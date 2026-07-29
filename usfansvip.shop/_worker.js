@@ -99,8 +99,14 @@ class AllFilterHandler {
 }
 
 class FeaturedCountHandler {
+  constructor() {
+    this.updated = false;
+  }
   element(element) {
-    element.setInnerContent('Open the ten selected product cards');
+    if (!this.updated) {
+      element.setInnerContent('Open the ten selected product cards');
+      this.updated = true;
+    }
   }
 }
 
@@ -125,7 +131,7 @@ export default {
       .on('#productGrid', new ProductGridHandler())
       .on('#finds .filter.active', new AllFilterHandler())
       .on('#finds .filters', new AccessoriesFilterHandler())
-      .on('#searchTool .tool-direct-card:first-child small', new FeaturedCountHandler())
+      .on('#searchTool .tool-direct-card small', new FeaturedCountHandler())
       .transform(response);
   }
 };
