@@ -5,6 +5,10 @@ on:
     branches: [main]
     paths:
       - '.github/workflows/verify-cssbuyvip-com-july30.yml'
+  pull_request:
+    branches: [main]
+    paths:
+      - '.github/workflows/verify-cssbuyvip-com-july30.yml'
   workflow_dispatch:
 
 permissions:
@@ -44,6 +48,8 @@ jobs:
           archive = Path('/tmp/archive.html').read_text(encoding='utf-8', errors='ignore')
           sitemap = Path('/tmp/sitemap.xml').read_text(encoding='utf-8', errors='ignore')
           slug = 'cssbuy-restricted-item-route-filter-2026'
+          visible = re.sub(r'<script[\s\S]*?</script>|<style[\s\S]*?</style>|<[^>]+>', ' ', article, flags=re.I)
+          word_count = len(re.findall(r"\b[\w’'-]+\b", visible))
           checks = {
               'article_http_200': os.environ['ARTICLE_CODE'] == '200',
               'home_http_200': os.environ['HOME_CODE'] == '200',
@@ -53,6 +59,7 @@ jobs:
               'article_h1': 'CSSBuy Restricted Item Route Filter: Build a Shippable Haul Before Parcel Submission' in article,
               'article_body': 'Build the route plan before you build the haul' in article and 'Run the final parcel release check' in article,
               'article_faq': 'CSSBuy Restricted Item and Route FAQ' in article and article.count('<details>') >= 12,
+              'word_count_1500_2000': 1500 <= word_count <= 2000,
               'not_home_fallback': 'Best CSSBuy Spreadsheet for QC-ready finds and smarter shipping' not in article,
               'no_sources_box': not re.search(r'Official sources checked|>Sources<|>References<|官方消息来源|资料来源|核实来源', article, re.I),
               'home_new_link': slug in home,
@@ -60,8 +67,9 @@ jobs:
               'archive_new_link': slug in archive,
               'sitemap_new_link': slug in sitemap,
           }
-          failed = [k for k,v in checks.items() if not v]
+          print('visible_word_count=', word_count)
           print(checks)
+          failed = [k for k,v in checks.items() if not v]
           if failed:
               print('FAILED:', ', '.join(failed))
               sys.exit(1)
@@ -107,7 +115,7 @@ jobs:
             exit 1
           fi
       - name: Commit verification record
-        if: success()
+        if: success() && github.event_name != 'pull_request'
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
@@ -115,5 +123,3 @@ jobs:
           git add .verification/cssbuyvip-com-2026-07-30.json
           git commit -m "Verify July 30 cssbuyvip.com article in production" || exit 0
           git push origin HEAD:main
-
-# PR merge trigger: verifies production after the workflow already exists on main.
