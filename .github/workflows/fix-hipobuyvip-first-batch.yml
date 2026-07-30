@@ -1,8 +1,10 @@
 name: Fix HipoBuyVIP first batch
 
 on:
-  push:
+  pull_request:
+    branches: [main]
     paths:
+      - 'hipobuyvip.net/**'
       - '.github/workflows/fix-hipobuyvip-first-batch.yml'
   workflow_dispatch:
 
@@ -11,11 +13,12 @@ permissions:
 
 jobs:
   apply-fixes:
-    if: github.actor != 'github-actions[bot]'
+    if: github.actor != 'github-actions[bot]' && github.event.pull_request.head.repo.full_name == github.repository
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
         with:
+          ref: ${{ github.head_ref }}
           fetch-depth: 0
 
       - name: Apply static homepage fixes
@@ -42,34 +45,28 @@ jobs:
               '<div class="calculator"><h3 data-i18n="shippingCalcTitle">HipoBuy Shipping Cost Estimator</h3><div class="form-grid">': '<div class="calculator"><h3 id="chargeableWeightCalculatorTitle">HipoBuy Chargeable Weight Calculator</h3><p id="chargeableWeightScopeNote" style="margin:-8px 0 20px;color:#607392;font-size:13px;line-height:1.55">Estimates chargeable weight only, not the final shipping price.</p><div class="form-grid">',
           }
 
-          missing = []
           for old, new in replacements.items():
-              if old not in text:
-                  missing.append(old)
               text = text.replace(old, new)
 
-          # Remove the obsolete JS block that intercepts guide links and opens the in-page readers.
+          # Remove the obsolete script that intercepts article/list links and opens in-page readers.
           script_pattern = re.compile(r'<script\b[^>]*>.*?</script>', re.S | re.I)
-          removed_scripts = 0
-          def strip_obsolete_script(match):
-              nonlocal_removed = False
-              block = match.group(0)
-              if ('data-open-article' in block and 'articleReader' in block) or ('data-open-all-guides' in block and 'allGuidesReader' in block):
-                  return ''
-              return block
-
-          new_parts = []
+          parts = []
           last = 0
+          removed_scripts = 0
           for match in script_pattern.finditer(text):
-              new_parts.append(text[last:match.start()])
+              parts.append(text[last:match.start()])
               block = match.group(0)
-              if ('data-open-article' in block and 'articleReader' in block) or ('data-open-all-guides' in block and 'allGuidesReader' in block):
+              obsolete = (
+                  ('data-open-article' in block and 'articleReader' in block)
+                  or ('data-open-all-guides' in block and 'allGuidesReader' in block)
+              )
+              if obsolete:
                   removed_scripts += 1
               else:
-                  new_parts.append(block)
+                  parts.append(block)
               last = match.end()
-          new_parts.append(text[last:])
-          text = ''.join(new_parts)
+          parts.append(text[last:])
+          text = ''.join(parts)
 
           localized_script = r'''
 <script>
@@ -113,23 +110,18 @@ jobs:
 </script>
 '''
 
-          marker = '</body>'
           if 'chargeableWeightCalculatorTitle' in text and 'const calculatorLabels = {' not in text:
-              if marker not in text:
+              if '</body>' not in text:
                   raise SystemExit('Missing closing body tag')
-              text = text.replace(marker, localized_script + marker, 1)
-
-          if missing:
-              print('Warning: these exact source fragments were already changed or not found:')
-              for item in missing:
-                  print('-', item)
+              text = text.replace('</body>', localized_script + '</body>', 1)
 
           required = [
-              '/articles/',
+              'href="/articles/"',
               '/articles/how-to-use-hipobuy-spreadsheet-2026.html',
               '/articles/are-hipobuy-qc-photos-free.html',
               '/articles/how-hipobuy-shipping-cost-works.html',
-              '/contact/', '/privacy-policy/', '/terms/', '/disclaimer/',
+              'href="/contact/"', 'href="/privacy-policy/"',
+              'href="/terms/"', 'href="/disclaimer/"',
               'HipoBuy Chargeable Weight Calculator',
               'Estimates chargeable weight only, not the final shipping price.'
           ]
@@ -137,8 +129,16 @@ jobs:
               if item not in text:
                   raise SystemExit(f'Required output missing: {item}')
 
-          if 'href="#" data-i18n="contact"' in text or 'href="#all-guides" data-open-all-guides' in text:
-              raise SystemExit('Obsolete homepage links remain')
+          forbidden = [
+              'href="#all-guides" data-open-all-guides',
+              'href="#" data-i18n="contact"',
+              'href="#" data-i18n="privacy"',
+              'href="#" data-i18n="terms"',
+              'href="#" data-i18n="disclaimer"'
+          ]
+          for item in forbidden:
+              if item in text:
+                  raise SystemExit(f'Obsolete output remains: {item}')
 
           path.write_text(text, encoding='utf-8')
           print(f'Updated {path}; removed {removed_scripts} obsolete reader script block(s).')
@@ -149,7 +149,7 @@ jobs:
             git rm hipobuyvip.net/_worker.js
           fi
 
-      - name: Commit first-batch fixes
+      - name: Commit fixes to pull-request branch
         shell: bash
         run: |
           if git diff --quiet; then
@@ -158,6 +158,6 @@ jobs:
           fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add hipobuyvip.net/index.html .github/workflows/fix-hipobuyvip-first-batch.yml
+          git add hipobuyvip.net/index.html
           git commit -m "Fix HipoBuyVIP first-batch links and calculator"
-          git push origin HEAD:main
+          git push origin HEAD:${{ github.head_ref }}
