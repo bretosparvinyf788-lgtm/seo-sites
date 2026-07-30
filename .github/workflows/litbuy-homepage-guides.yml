@@ -4,7 +4,7 @@ on:
   push:
     branches: [main]
     paths:
-      - "litbuyvip.shop/assets/latest-guides-20260728.js"
+      - "litbuyvip.shop/assets/latest-guides.js"
       - "litbuyvip.shop/guides/**"
       - ".github/scripts/patch_litbuy_homepage.py"
       - ".github/workflows/litbuy-homepage-guides.yml"
