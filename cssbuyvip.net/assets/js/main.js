@@ -53,7 +53,7 @@ document.querySelectorAll('.language-option').forEach(option => {
   });
 });
 document.querySelectorAll('.mobile-nav a').forEach(a => a.addEventListener('click', closeMobile));
-window.addEventListener('resize', () => { if (window.innerWidth > 1000) closeMobile(); });
+window.addEventListener('resize', () => { if (window.innerWidth > 1120) closeMobile(); });
 
 function applyLanguage(lang) {
   const dict = translations[lang] || translations.en;
