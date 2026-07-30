@@ -1994,7 +1994,7 @@ body.reader-open{overflow:hidden}
         <input type="hidden" name="a" value="index">
         <input type="hidden" name="c" value="Search">
         <input type="hidden" name="m" value="home">
-        <input id="mainSiteSearchInput" name="keyword" aria-label="Search the product catalog" autocomplete="off" placeholder="Search the product catalog..." data-i18n-placeholder="heroSearchPlaceholder">
+        <input id="mainSiteSearchInput" name="keywords" aria-label="Search the product catalog" autocomplete="off" placeholder="Search the product catalog..." data-i18n-placeholder="heroSearchPlaceholder">
         <button class="search-submit" type="submit" aria-label="Search the product catalog">
           <svg viewBox="0 0 24 24" fill="none"><circle cx="11" cy="11" r="6.5" stroke="currentColor" stroke-width="2"/><path d="m16 16 4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
         </button>
@@ -2667,7 +2667,7 @@ function submitMainSiteSearch(event){
     a:'index',
     c:'Search',
     m:'home',
-    keyword:query
+    keywords:query
   });
 
   window.open('https://kakobuymake.com/?'+params.toString(),'_blank','noopener,noreferrer');
