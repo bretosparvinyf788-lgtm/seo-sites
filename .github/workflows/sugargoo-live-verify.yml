@@ -27,7 +27,7 @@ jobs:
         shell: bash
         run: |
           set -u
-          ARTICLE_URL='https://sugargoovip.shop/guide-sugargoo-returns-exchanges.html'
+          ARTICLE_URL='https://sugargoovip.shop/guide-sugargoo-packing-center-parcel.html'
           HOME_URL='https://sugargoovip.shop/'
           GUIDES_URL='https://sugargoovip.shop/guides.html'
           SITEMAP_URL='https://sugargoovip.shop/sitemap.xml'
@@ -43,7 +43,7 @@ jobs:
           ROBOTS_STATUS=0
           CHECK_JSON='{}'
 
-          for ATTEMPT in $(seq 1 240); do
+          for ATTEMPT in $(seq 1 80); do
             ARTICLE_STATUS=$(curl -L --connect-timeout 10 --max-time 30 -sS -o /tmp/sugargoo-verify/article.html -w '%{http_code}' "$ARTICLE_URL" || echo 000)
             HOME_STATUS=$(curl -L --connect-timeout 10 --max-time 30 -sS -o /tmp/sugargoo-verify/home.html -w '%{http_code}' "$HOME_URL" || echo 000)
             GUIDES_STATUS=$(curl -L --connect-timeout 10 --max-time 30 -sS -o /tmp/sugargoo-verify/guides.html -w '%{http_code}' "$GUIDES_URL" || echo 000)
@@ -56,30 +56,38 @@ from pathlib import Path
 
 root = Path('/tmp/sugargoo-verify')
 def read(name):
-    p = root / name
-    return p.read_text(encoding='utf-8', errors='replace') if p.exists() else ''
+    path = root / name
+    return path.read_text(encoding='utf-8', errors='replace') if path.exists() else ''
 
 article = read('article.html')
 home = read('home.html')
 guides = read('guides.html')
 sitemap = read('sitemap.xml')
 robots = read('robots.txt')
-slug = 'guide-sugargoo-returns-exchanges.html'
-title = 'Sugargoo Returns & Exchanges Guide 2026: Fix Warehouse Problems Before Shipping'
+slug = 'guide-sugargoo-packing-center-parcel.html'
+title = 'Sugargoo Packing Center Guide 2026: Build a Route-Ready Parcel Before You Pay'
 latest_start = home.find('<section aria-labelledby="latest-guides-title"')
 latest_end = home.find('<section class="finder', latest_start) if latest_start >= 0 else -1
 latest = home[latest_start:latest_end] if latest_start >= 0 and latest_end > latest_start else ''
-positions = [latest.find(slug), latest.find('guide-shipping-cost.html'), latest.find('guide-qc-photos.html')]
+latest_slugs = [slug, 'guide-sugargoo-returns-exchanges.html', 'guide-shipping-cost.html']
+all_slugs = [slug, 'guide-sugargoo-returns-exchanges.html', 'guide-shipping-cost.html', 'guide-qc-photos.html', 'guide-w2c-workflow.html']
+positions = [latest.find(value) for value in latest_slugs]
+archive_positions = [guides.find(value) for value in all_slugs]
 checks = {
     'article_title': title in article,
     'article_canonical': f'https://sugargoovip.shop/{slug}' in article,
-    'article_faq': 'Frequently asked questions' in article and article.count('<details>') >= 7,
+    'article_body': 'Treat the parcel as a shipping specification' in article and 'Track the handoff and learn from the completed shipment' in article,
+    'article_word_count': '1,758 words' in article,
+    'article_faq': 'Frequently asked questions' in article and article.count('<details>') >= 8,
     'article_not_home_fallback': 'Sugargoo Spreadsheet 2026' not in article,
+    'article_wording_fixed': 'They do not automatically select everything that has arrived' not in article,
     'homepage_has_new_article': slug in latest,
     'homepage_exactly_three_cards': latest.count('class="latest-guide-card') == 3,
-    'homepage_newest_first': all(p >= 0 for p in positions) and positions == sorted(positions),
-    'guides_has_all_articles': all(s in guides for s in [slug, 'guide-shipping-cost.html', 'guide-qc-photos.html', 'guide-w2c-workflow.html']),
-    'guides_newest_first': guides.find(slug) >= 0 and guides.find(slug) < guides.find('guide-shipping-cost.html'),
+    'homepage_newest_first': all(position >= 0 for position in positions) and positions == sorted(positions),
+    'homepage_excludes_older_articles': 'guide-qc-photos.html' not in latest and 'guide-w2c-workflow.html' not in latest,
+    'guides_has_all_articles': all(value in guides for value in all_slugs),
+    'guides_exactly_five_cards': guides.count('<article>') == 5,
+    'guides_newest_first': all(position >= 0 for position in archive_positions) and archive_positions == sorted(archive_positions),
     'sitemap_has_article': slug in sitemap,
     'robots_has_sitemap': 'sitemap.xml' in robots.lower(),
 }
@@ -89,7 +97,7 @@ PY
 
             if [ "$ARTICLE_STATUS" = '200' ] && [ "$HOME_STATUS" = '200' ] && [ "$GUIDES_STATUS" = '200' ] && [ "$SITEMAP_STATUS" = '200' ] && [ "$ROBOTS_STATUS" = '200' ] && python3 - "$CHECK_JSON" <<'PY'
 import json, sys
-checks=json.loads(sys.argv[1])
+checks = json.loads(sys.argv[1])
 raise SystemExit(0 if all(checks.values()) else 1)
 PY
             then
@@ -110,7 +118,7 @@ report = {
     'status': os.environ['FINAL_STATUS'],
     'verified_at': datetime.now(timezone.utc).isoformat(),
     'attempts': int(os.environ['ATTEMPT']),
-    'article': 'https://sugargoovip.shop/guide-sugargoo-returns-exchanges.html',
+    'article': 'https://sugargoovip.shop/guide-sugargoo-packing-center-parcel.html',
     'http_status': {
         'article': os.environ['ARTICLE_STATUS'],
         'homepage': os.environ['HOME_STATUS'],
