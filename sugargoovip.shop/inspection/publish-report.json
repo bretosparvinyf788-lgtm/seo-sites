@@ -1,18 +1,21 @@
 {
   "status": "archive_validated",
-  "published_at": "2026-07-28",
-  "article": "guide-sugargoo-returns-exchanges.html",
-  "title": "Sugargoo Returns & Exchanges Guide 2026: Fix Warehouse Problems Before Shipping",
+  "published_at": "2026-07-30",
+  "article": "guide-sugargoo-packing-center-parcel.html",
+  "title": "Sugargoo Packing Center Guide 2026: Build a Route-Ready Parcel Before You Pay",
   "checks": {
-    "article_word_count": 1734,
+    "article_word_count": 1758,
     "word_count_in_range": true,
     "article_h1_present": true,
+    "article_meta_description": true,
     "article_faq_present": true,
+    "article_canonical": true,
     "homepage_latest_count": true,
     "homepage_newest_first": true,
     "homepage_no_old_fourth": true,
     "guides_all_articles": true,
-    "guides_unique": true,
+    "guides_exact_card_count": true,
+    "guide_files_present": true,
     "sitemap_has_article": true
   }
 }
