@@ -1,0 +1,66 @@
+name: Diagnose cssbuyvip.com July 30 Production
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - '.github/workflows/diagnose-cssbuyvip-com-july30.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  diagnose:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Fetch production pages and create report
+        shell: bash
+        run: |
+          set -uo pipefail
+          ARTICLE='https://cssbuyvip.com/guides/cssbuy-restricted-item-route-filter-2026/'
+          HOME='https://cssbuyvip.com/'
+          ARCHIVE='https://cssbuyvip.com/all-seo-articles/'
+          SITEMAP='https://cssbuyvip.com/sitemap.xml'
+          article_code=$(curl -L -sS -o /tmp/article.html -w '%{http_code}' --max-time 30 "$ARTICLE" || true)
+          home_code=$(curl -L -sS -o /tmp/home.html -w '%{http_code}' --max-time 30 "$HOME" || true)
+          archive_code=$(curl -L -sS -o /tmp/archive.html -w '%{http_code}' --max-time 30 "$ARCHIVE" || true)
+          sitemap_code=$(curl -L -sS -o /tmp/sitemap.xml -w '%{http_code}' --max-time 30 "$SITEMAP" || true)
+          ARTICLE_CODE="$article_code" HOME_CODE="$home_code" ARCHIVE_CODE="$archive_code" SITEMAP_CODE="$sitemap_code" python3 - <<'PY'
+          import json, os, re
+          from pathlib import Path
+          def read(path):
+              return Path(path).read_text(encoding='utf-8', errors='ignore') if Path(path).exists() else ''
+          article, home, archive, sitemap = map(read, ['/tmp/article.html','/tmp/home.html','/tmp/archive.html','/tmp/sitemap.xml'])
+          slug='cssbuy-restricted-item-route-filter-2026'
+          visible=re.sub(r'<script[\s\S]*?</script>|<style[\s\S]*?</style>|<[^>]+>', ' ', article, flags=re.I)
+          report={
+            'article_http': os.environ.get('ARTICLE_CODE'),
+            'homepage_http': os.environ.get('HOME_CODE'),
+            'archive_http': os.environ.get('ARCHIVE_CODE'),
+            'sitemap_http': os.environ.get('SITEMAP_CODE'),
+            'article_bytes': len(article.encode()),
+            'visible_word_count': len(re.findall(r"\b[\w’'-]+\b", visible)),
+            'title_ok': '<title>CSSBuy Restricted Items Guide 2026 | Shipping Route Filter</title>' in article,
+            'h1_ok': 'CSSBuy Restricted Item Route Filter: Build a Shippable Haul Before Parcel Submission' in article,
+            'body_start_ok': 'Build the route plan before you build the haul' in article,
+            'body_end_ok': 'Run the final parcel release check' in article,
+            'faq_heading_ok': 'CSSBuy Restricted Item and Route FAQ' in article,
+            'faq_count': article.count('<details>'),
+            'not_homepage_fallback': 'Best CSSBuy Spreadsheet for QC-ready finds and smarter shipping' not in article,
+            'no_visible_sources_section': not bool(re.search(r'Official sources checked|>Sources<|>References<|官方消息来源|资料来源|核实来源', article, re.I)),
+            'homepage_has_new_slug': slug in home,
+            'homepage_has_expected_latest_three': all(x in home for x in [slug,'cssbuy-ship-for-me-intake-manifest-2026','cssbuy-buy-for-me-vs-ship-for-me-2026']),
+            'archive_has_new_slug': slug in archive,
+            'sitemap_has_new_slug': slug in sitemap,
+            'article_title_sample': re.search(r'<title>(.*?)</title>', article, re.I|re.S).group(1) if re.search(r'<title>(.*?)</title>', article, re.I|re.S) else None
+          }
+          Path('diagnostic').mkdir(exist_ok=True)
+          Path('diagnostic/report.json').write_text(json.dumps(report, indent=2)+'\n', encoding='utf-8')
+          print(json.dumps(report, indent=2))
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: cssbuyvip-com-july30-diagnostic
+          path: diagnostic/report.json
