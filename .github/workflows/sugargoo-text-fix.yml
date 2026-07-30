@@ -1,0 +1,49 @@
+name: Sugargoo article text fix
+
+on:
+  push:
+    paths:
+      - 'sugargoovip.shop/text-fix-request.json'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: sugargoo-article-text-fix
+  cancel-in-progress: false
+
+jobs:
+  patch-and-republish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Correct article wording and rebuild archive
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 - <<'PY'
+          from pathlib import Path
+          path = Path('sugargoovip.shop/archive_tool.py')
+          text = path.read_text(encoding='utf-8')
+          old = 'Plan backward from a route-ready parcel. They do not automatically select everything that has arrived. They first decide what can travel together, what still needs evidence, what creates a restriction and what may turn a light parcel into a bulky one.'
+          new = 'Plan backward from a route-ready parcel. Do not automatically select everything that has arrived. First decide what can travel together, what still needs evidence, what creates a restriction and what may turn a light parcel into a bulky one.'
+          if old not in text:
+              raise SystemExit('Expected text was not found')
+          path.write_text(text.replace(old, new, 1), encoding='utf-8')
+          PY
+          python3 sugargoovip.shop/archive_tool.py
+
+      - name: Commit corrected article and generated site archive
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add sugargoovip.shop/archive_tool.py sugargoovip.shop/site.tar.gz sugargoovip.shop/inspection
+          git commit -m 'Polish July 30 Sugargoo Packing Center guide'
+          git pull --rebase origin main
+          git push origin HEAD:main
