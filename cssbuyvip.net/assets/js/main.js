@@ -6,6 +6,29 @@ const languageMenu = document.getElementById('languageMenu');
 const languageTrigger = document.getElementById('languageTrigger');
 const languageCurrent = document.getElementById('languageCurrent');
 
+function setupCategoryLinks() {
+  document.querySelectorAll('a.category-card[href]').forEach(card => {
+    card.removeAttribute('target');
+    card.style.display = 'block';
+    card.style.position = 'relative';
+    card.style.zIndex = '20';
+    card.style.cursor = 'pointer';
+    card.style.pointerEvents = 'auto';
+    card.querySelectorAll('*').forEach(child => {
+      child.style.pointerEvents = 'none';
+    });
+  });
+}
+setupCategoryLinks();
+
+document.addEventListener('click', (event) => {
+  if (!(event.target instanceof Element)) return;
+  const card = event.target.closest('a.category-card[href]');
+  if (!card) return;
+  event.preventDefault();
+  window.location.assign(card.href);
+}, true);
+
 function closeMobile() {
   if (!mobileNav || !menuBtn) return;
   mobileNav.classList.remove('open');
