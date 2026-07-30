@@ -1,11 +1,21 @@
+from hashlib import sha256
 from pathlib import Path
+import re
 
 homepage = Path("litbuyvip.shop/index.html")
-html = homepage.read_text(encoding="utf-8")
-tag = '<script src="/assets/latest-guides-20260728.js?v=20260728" defer></script>'
+asset = Path("litbuyvip.shop/assets/latest-guides.js")
 
-if tag not in html:
-    if "</body>" not in html:
-        raise SystemExit("litbuyvip.shop/index.html has no closing body tag")
-    html = html.replace("</body>", f"  {tag}\n</body>", 1)
-    homepage.write_text(html, encoding="utf-8")
+html = homepage.read_text(encoding="utf-8")
+version = sha256(asset.read_bytes()).hexdigest()[:12]
+tag = f'<script src="/assets/latest-guides.js?v={version}" defer></script>'
+
+pattern = re.compile(
+    r'\s*<script src="/assets/latest-guides(?:-\d{8})?\.js(?:\?v=[^"]+)?" defer></script>\s*'
+)
+html = pattern.sub("\n", html)
+
+if "</body>" not in html:
+    raise SystemExit("litbuyvip.shop/index.html has no closing body tag")
+
+html = html.replace("</body>", f"  {tag}\n</body>", 1)
+homepage.write_text(html, encoding="utf-8")
