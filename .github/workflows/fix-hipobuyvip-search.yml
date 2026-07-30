@@ -1,0 +1,50 @@
+name: Fix HipoBuyVIP search parameter
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - .github/workflows/fix-hipobuyvip-search.yml
+
+permissions:
+  contents: write
+
+jobs:
+  fix-search:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Fix search field and query parameter
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+
+          path = Path('hipobuyvip.net/index.html')
+          text = path.read_text(encoding='utf-8')
+
+          original = text
+          text = text.replace('name="keyword"', 'name="keywords"')
+          text = text.replace('keyword:query', 'keywords:query')
+
+          if text == original:
+              raise SystemExit('No search parameter replacements were made.')
+
+          if 'name="keyword"' in text or 'keyword:query' in text:
+              raise SystemExit('Old singular search parameter still remains.')
+
+          if 'name="keywords"' not in text or 'keywords:query' not in text:
+              raise SystemExit('New plural search parameter was not written correctly.')
+
+          path.write_text(text, encoding='utf-8')
+          PY
+
+      - name: Commit search fix
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add hipobuyvip.net/index.html
+          git commit -m "Fix HipoBuyVIP product search parameter"
+          git push
