@@ -1,0 +1,15 @@
+{
+  "name": "CSSBuyVIP",
+  "short_name": "CSSBuyVIP",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#faf7f1",
+  "theme_color": "#a76308",
+  "icons": [
+    {
+      "src": "/assets/images/favicon.png",
+      "sizes": "256x256",
+      "type": "image/png"
+    }
+  ]
+}
