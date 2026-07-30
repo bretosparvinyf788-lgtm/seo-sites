@@ -1,0 +1,120 @@
+from pathlib import Path
+import re
+
+path = Path('hipobuyvip.net/index.html')
+text = path.read_text(encoding='utf-8')
+original = text
+
+replacements = {
+    '<a class="view-all-guides" href="#all-guides" data-open-all-guides>': '<a class="view-all-guides" href="/articles/">',
+    'href="#article-how-to-use-hipobuy-spreadsheet-2026" data-open-article="how-to-use-hipobuy-spreadsheet-2026"': 'href="/articles/how-to-use-hipobuy-spreadsheet-2026.html"',
+    'href="#article-are-hipobuy-qc-photos-free" data-open-article="are-hipobuy-qc-photos-free"': 'href="/articles/are-hipobuy-qc-photos-free.html"',
+    'href="#article-how-hipobuy-shipping-cost-works" data-open-article="how-hipobuy-shipping-cost-works"': 'href="/articles/how-hipobuy-shipping-cost-works.html"',
+    '<a href="#guides" data-i18n="allGuides">All Guides</a>': '<a href="/articles/" data-i18n="allGuides">All Guides</a>',
+    '<a href="#" data-i18n="contact">Contact</a>': '<a href="/contact/" data-i18n="contact">Contact</a>',
+    '<a href="#" data-i18n="privacy">Privacy</a>': '<a href="/privacy-policy/" data-i18n="privacy">Privacy</a>',
+    '<a href="#" data-i18n="terms">Terms</a>': '<a href="/terms/" data-i18n="terms">Terms</a>',
+    '<a href="#" data-i18n="disclaimer">Disclaimer</a>': '<a href="/disclaimer/" data-i18n="disclaimer">Disclaimer</a>',
+    '<div class="calculator"><h3 data-i18n="shippingCalcTitle">HipoBuy Shipping Cost Estimator</h3><div class="form-grid">': '<div class="calculator"><h3 id="chargeableWeightCalculatorTitle">HipoBuy Chargeable Weight Calculator</h3><p id="chargeableWeightScopeNote" style="margin:-8px 0 20px;color:#607392;font-size:13px;line-height:1.55">Estimates chargeable weight only, not the final shipping price.</p><div class="form-grid">',
+}
+
+for old, new in replacements.items():
+    text = text.replace(old, new)
+
+# Remove the obsolete script that intercepts article/list links and opens hidden in-page readers.
+script_pattern = re.compile(r'<script\b[^>]*>.*?</script>', re.S | re.I)
+parts = []
+last = 0
+removed_scripts = 0
+for match in script_pattern.finditer(text):
+    parts.append(text[last:match.start()])
+    block = match.group(0)
+    obsolete = (
+        ('data-open-article' in block and 'articleReader' in block)
+        or ('data-open-all-guides' in block and 'allGuidesReader' in block)
+    )
+    if obsolete:
+        removed_scripts += 1
+    else:
+        parts.append(block)
+    last = match.end()
+parts.append(text[last:])
+text = ''.join(parts)
+
+localized_script = r'''
+<script>
+(() => {
+  const calculatorLabels = {
+    en: 'HipoBuy Chargeable Weight Calculator',
+    zh: 'HipoBuy 计费重量计算器',
+    'zh-Hant': 'HipoBuy 計費重量計算器',
+    es: 'Calculadora de peso facturable de HipoBuy',
+    de: 'HipoBuy-Rechner für abrechnungsfähiges Gewicht',
+    fr: 'Calculateur de poids facturable HipoBuy',
+    pt: 'Calculadora de peso faturável HipoBuy',
+    it: 'Calcolatore del peso addebitabile HipoBuy',
+    ja: 'HipoBuy 課金重量計算機',
+    ko: 'HipoBuy 청구 중량 계산기',
+    ru: 'Калькулятор оплачиваемого веса HipoBuy'
+  };
+  const scopeNotes = {
+    en: 'Estimates chargeable weight only, not the final shipping price.',
+    zh: '仅估算计费重量，不代表最终国际运费。',
+    'zh-Hant': '僅估算計費重量，不代表最終國際運費。',
+    es: 'Solo estima el peso facturable, no el precio final del envío.',
+    de: 'Schätzt nur das abrechnungsfähige Gewicht, nicht den endgültigen Versandpreis.',
+    fr: 'Estime uniquement le poids facturable, pas le prix final de l’expédition.',
+    pt: 'Estima apenas o peso faturável, não o preço final do frete.',
+    it: 'Stima solo il peso addebitabile, non il prezzo finale della spedizione.',
+    ja: '課金重量のみを推定し、最終送料を示すものではありません。',
+    ko: '청구 중량만 추정하며 최종 배송비를 의미하지 않습니다.',
+    ru: 'Оценивает только оплачиваемый вес, а не окончательную стоимость доставки.'
+  };
+  function refreshCalculatorCopy(language) {
+    const selected = language || document.getElementById('languageSelect')?.value || 'en';
+    const heading = document.getElementById('chargeableWeightCalculatorTitle');
+    const note = document.getElementById('chargeableWeightScopeNote');
+    if (heading) heading.textContent = calculatorLabels[selected] || calculatorLabels.en;
+    if (note) note.textContent = scopeNotes[selected] || scopeNotes.en;
+  }
+  document.addEventListener('DOMContentLoaded', () => refreshCalculatorCopy(), { once: true });
+  document.addEventListener('hipobuyvip:languagechange', event => refreshCalculatorCopy(event.detail?.language));
+})();
+</script>
+'''
+
+if 'chargeableWeightCalculatorTitle' in text and 'const calculatorLabels = {' not in text:
+    if '</body>' not in text:
+        raise SystemExit('Missing closing body tag')
+    text = text.replace('</body>', localized_script + '</body>', 1)
+
+required = [
+    'href="/articles/"',
+    '/articles/how-to-use-hipobuy-spreadsheet-2026.html',
+    '/articles/are-hipobuy-qc-photos-free.html',
+    '/articles/how-hipobuy-shipping-cost-works.html',
+    'href="/contact/"',
+    'href="/privacy-policy/"',
+    'href="/terms/"',
+    'href="/disclaimer/"',
+    'HipoBuy Chargeable Weight Calculator',
+    'Estimates chargeable weight only, not the final shipping price.',
+]
+for item in required:
+    if item not in text:
+        raise SystemExit(f'Required output missing: {item}')
+
+forbidden = [
+    'href="#all-guides" data-open-all-guides',
+    'href="#" data-i18n="contact"',
+    'href="#" data-i18n="privacy"',
+    'href="#" data-i18n="terms"',
+    'href="#" data-i18n="disclaimer"',
+]
+for item in forbidden:
+    if item in text:
+        raise SystemExit(f'Obsolete output remains: {item}')
+
+path.write_text(text, encoding='utf-8')
+print(f'Updated {path}; removed {removed_scripts} obsolete reader script block(s).')
+print(f'Characters changed: {len(text) - len(original):+d}')
