@@ -123,3 +123,5 @@ jobs:
           git add .verification/cssbuyvip-com-2026-07-30.json
           git commit -m "Verify July 30 cssbuyvip.com article in production" || exit 0
           git push origin HEAD:main
+
+# Pull-request check exposes the live verification result to the connector.
