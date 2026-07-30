@@ -24,15 +24,21 @@ jobs:
           HOME="https://cssbuyvip.com/?$STAMP"
           ARCHIVE="https://cssbuyvip.com/all-seo-articles/?$STAMP"
           SITEMAP="https://cssbuyvip.com/sitemap.xml?$STAMP"
-          article_code=$(curl -L -sS -o /tmp/article.html -w '%{http_code}' --max-time 30 "$ARTICLE" || true)
-          home_code=$(curl -L -sS -o /tmp/home.html -w '%{http_code}' --max-time 30 "$HOME" || true)
-          archive_code=$(curl -L -sS -o /tmp/archive.html -w '%{http_code}' --max-time 30 "$ARCHIVE" || true)
-          sitemap_code=$(curl -L -sS -o /tmp/sitemap.xml -w '%{http_code}' --max-time 30 "$SITEMAP" || true)
+          article_code=$(curl -L -sS -D /tmp/article.headers -o /tmp/article.html -w '%{http_code}' --max-time 30 "$ARTICLE" || true)
+          home_code=$(curl -L -sS -D /tmp/home.headers -o /tmp/home.html -w '%{http_code}' --max-time 30 "$HOME" || true)
+          archive_code=$(curl -L -sS -D /tmp/archive.headers -o /tmp/archive.html -w '%{http_code}' --max-time 30 "$ARCHIVE" || true)
+          sitemap_code=$(curl -L -sS -D /tmp/sitemap.headers -o /tmp/sitemap.xml -w '%{http_code}' --max-time 30 "$SITEMAP" || true)
           ARTICLE_CODE="$article_code" HOME_CODE="$home_code" ARCHIVE_CODE="$archive_code" SITEMAP_CODE="$sitemap_code" python3 - <<'PY'
           import json, os, re
           from pathlib import Path
           def read(path):
               return Path(path).read_text(encoding='utf-8', errors='ignore') if Path(path).exists() else ''
+          def headers(path):
+              data={}
+              for line in read(path).splitlines():
+                  if ':' in line:
+                      k,v=line.split(':',1); data[k.strip().lower()]=v.strip()
+              return {k:data.get(k) for k in ['date','last-modified','etag','age','cf-cache-status','x-cssbuyvip-daily-seo','server']}
           article, home, archive, sitemap = map(read, ['/tmp/article.html','/tmp/home.html','/tmp/archive.html','/tmp/sitemap.xml'])
           local_article = read('cssbuyvip.com/guides/cssbuy-restricted-item-route-filter-2026/index.html')
           slug='cssbuy-restricted-item-route-filter-2026'
@@ -44,6 +50,10 @@ jobs:
             'homepage_http': os.environ.get('HOME_CODE'),
             'archive_http': os.environ.get('ARCHIVE_CODE'),
             'sitemap_http': os.environ.get('SITEMAP_CODE'),
+            'article_headers': headers('/tmp/article.headers'),
+            'homepage_headers': headers('/tmp/home.headers'),
+            'archive_headers': headers('/tmp/archive.headers'),
+            'sitemap_headers': headers('/tmp/sitemap.headers'),
             'article_bytes': len(article.encode()),
             'visible_word_count': visible_words(article),
             'local_static_word_count': visible_words(local_article),
@@ -71,4 +81,4 @@ jobs:
           name: cssbuyvip-com-july30-diagnostic
           path: diagnostic/report.json
 
-# Pull request trigger for cache-busted live and local diagnostics.
+# Pull request trigger for cache-busted live diagnostics with response headers.
