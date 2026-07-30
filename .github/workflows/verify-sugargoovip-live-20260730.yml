@@ -1,0 +1,171 @@
+name: Verify SugargooVIP July 30 Live Publication
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/verify-sugargoovip-live-20260730.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: verify-sugargoovip-live-20260730
+  cancel-in-progress: false
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Verify production pages
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p sugargoovip.shop/verification
+          python3 - <<'PY'
+          from pathlib import Path
+          from urllib.request import Request, urlopen
+          from urllib.error import HTTPError, URLError
+          from datetime import datetime, timezone
+          import json
+          import time
+
+          base = 'https://sugargoovip.shop'
+          urls = {
+              'article': f'{base}/guide-sugargoo-packing-center-parcel.html',
+              'homepage': f'{base}/',
+              'guides': f'{base}/guides.html',
+              'sitemap': f'{base}/sitemap.xml',
+              'robots': f'{base}/robots.txt',
+          }
+          new_slug = 'guide-sugargoo-packing-center-parcel.html'
+          all_slugs = [
+              new_slug,
+              'guide-sugargoo-returns-exchanges.html',
+              'guide-shipping-cost.html',
+              'guide-qc-photos.html',
+              'guide-w2c-workflow.html',
+          ]
+          expected_title = 'Sugargoo Packing Center Guide 2026: Build a Route-Ready Parcel Before You Pay'
+          report_path = Path('sugargoovip.shop/verification/2026-07-30-live-final.json')
+
+          def fetch(url, attempt):
+              joiner = '&' if '?' in url else '?'
+              target = f'{url}{joiner}verify=20260730-final-{attempt}-{int(time.time())}'
+              req = Request(target, headers={
+                  'User-Agent': 'Mozilla/5.0 SugargooVIP final production verifier',
+                  'Cache-Control': 'no-cache, no-store, max-age=0',
+                  'Pragma': 'no-cache',
+              })
+              try:
+                  with urlopen(req, timeout=30) as response:
+                      return {
+                          'status': response.status,
+                          'final_url': response.geturl(),
+                          'body': response.read().decode('utf-8', 'replace'),
+                      }
+              except HTTPError as exc:
+                  return {
+                      'status': exc.code,
+                      'final_url': exc.geturl(),
+                      'body': exc.read().decode('utf-8', 'replace'),
+                  }
+              except URLError as exc:
+                  return {'status': 0, 'final_url': target, 'body': str(exc)}
+
+          final_report = None
+          for attempt in range(1, 19):
+              pages = {name: fetch(url, attempt) for name, url in urls.items()}
+              article = pages['article']['body']
+              homepage = pages['homepage']['body']
+              guides = pages['guides']['body']
+              sitemap = pages['sitemap']['body']
+              robots = pages['robots']['body']
+
+              latest_start = homepage.find('<section aria-labelledby="latest-guides-title"')
+              latest_end = homepage.find('<section class="finder', latest_start) if latest_start >= 0 else -1
+              latest = homepage[latest_start:latest_end] if latest_start >= 0 and latest_end > latest_start else ''
+              latest_positions = [latest.find(slug) for slug in all_slugs[:3]]
+              guide_positions = [guides.find(slug) for slug in all_slugs]
+
+              checks = {
+                  'all_http_200': all(page['status'] == 200 for page in pages.values()),
+                  'article_title': expected_title in article,
+                  'article_canonical': f'{base}/{new_slug}' in article,
+                  'article_first_section': 'Treat the parcel as a shipping specification, not a pile of products' in article,
+                  'article_last_section': 'Track the handoff and learn from the completed shipment' in article,
+                  'article_word_count': '1,756 words' in article,
+                  'article_faq_visible': 'Frequently asked questions' in article and article.count('<details>') >= 8,
+                  'article_not_homepage_fallback': 'Sugargoo Spreadsheet 2026' not in article,
+                  'article_wording_corrected': 'They do not automatically select everything that has arrived' not in article and 'Do not automatically select everything that has arrived' in article,
+                  'homepage_latest_section_found': bool(latest),
+                  'homepage_exactly_three_cards': latest.count('class="latest-guide-card') == 3,
+                  'homepage_newest_first': all(pos >= 0 for pos in latest_positions) and latest_positions == sorted(latest_positions),
+                  'homepage_excludes_older_cards': all_slugs[3] not in latest and all_slugs[4] not in latest,
+                  'guides_contains_all_five': all(slug in guides for slug in all_slugs),
+                  'guides_exactly_five_cards': guides.count('<article>') == 5,
+                  'guides_newest_first': all(pos >= 0 for pos in guide_positions) and guide_positions == sorted(guide_positions),
+                  'sitemap_contains_article': new_slug in sitemap,
+                  'robots_references_sitemap': 'sitemap.xml' in robots.lower(),
+              }
+              passed = all(checks.values())
+              final_report = {
+                  'checked_at': datetime.now(timezone.utc).isoformat(),
+                  'attempt': attempt,
+                  'passed': passed,
+                  'pages': {
+                      name: {
+                          'requested_url': urls[name],
+                          'status': page['status'],
+                          'final_url': page['final_url'],
+                          'bytes': len(page['body'].encode('utf-8')),
+                      }
+                      for name, page in pages.items()
+                  },
+                  'checks': checks,
+              }
+              report_path.write_text(json.dumps(final_report, indent=2, ensure_ascii=False) + '\n', encoding='utf-8')
+              if passed:
+                  break
+              time.sleep(10)
+
+          print(json.dumps(final_report, indent=2, ensure_ascii=False))
+          PY
+
+      - name: Commit verification report
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git pull --rebase origin main
+          git add sugargoovip.shop/verification/2026-07-30-live-final.json
+          if git diff --cached --quiet; then
+            exit 0
+          fi
+          git commit -m 'Record final SugargooVIP live publication check'
+          for attempt in 1 2 3 4 5; do
+            if git push origin HEAD:main; then
+              exit 0
+            fi
+            git pull --rebase origin main
+            sleep $((attempt * 3))
+          done
+          exit 1
+
+      - name: Require all checks to pass
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          import json
+          report = json.loads(Path('sugargoovip.shop/verification/2026-07-30-live-final.json').read_text(encoding='utf-8'))
+          if not report.get('passed'):
+              raise SystemExit('Final production verification did not pass')
+          PY
