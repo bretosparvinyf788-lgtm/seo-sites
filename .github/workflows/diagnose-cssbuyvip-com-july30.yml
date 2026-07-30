@@ -64,3 +64,5 @@ jobs:
         with:
           name: cssbuyvip-com-july30-diagnostic
           path: diagnostic/report.json
+
+# Pull request trigger for one-shot live diagnostics.
