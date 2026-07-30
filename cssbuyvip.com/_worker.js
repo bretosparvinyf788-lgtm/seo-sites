@@ -1,10 +1,16 @@
-// Trigger production trim and verification for the July 28 static guide.
+// Serve static article routes directly and refresh the three newest homepage guides.
 const HOME_PATHS = new Set(["/", "/index.html"]);
 
 const LATEST = [
   {
+    href: "/guides/cssbuy-restricted-item-route-filter-2026/",
+    label: "New · July 30, 2026",
+    title: "CSSBuy Restricted Item Route Filter 2026",
+    desc: "Filter batteries, liquids, powders, branded goods and unknown materials before they restrict an entire parcel.",
+  },
+  {
     href: "/guides/cssbuy-ship-for-me-intake-manifest-2026/",
-    label: "New · July 28, 2026",
+    label: "July 28, 2026",
     title: "CSSBuy Ship For Me Intake Manifest 2026",
     desc: "Control domestic tracking, warehouse matching, QC questions, packaging instructions and consolidation decisions.",
   },
@@ -13,12 +19,6 @@ const LATEST = [
     label: "July 23, 2026",
     title: "CSSBuy Buy For Me vs Ship For Me 2026",
     desc: "Choose who buys, who manages the seller, how the warehouse matches packages and where return responsibility sits.",
-  },
-  {
-    href: "/guides/cssbuy-return-exchange-decision-tree-2026/",
-    label: "July 22, 2026",
-    title: "CSSBuy Return Clock 2026: Returns and Exchanges",
-    desc: "Separate the return window from warehouse storage, build stronger QC evidence and decide before parcel submission.",
   },
 ];
 
@@ -62,7 +62,7 @@ export default {
     const transformed = transformHomepage(await response.text());
     const headers = new Headers(response.headers);
     headers.delete("content-length");
-    headers.set("x-cssbuyvip-daily-seo", "2026-07-28-static-routes");
+    headers.set("x-cssbuyvip-daily-seo", "2026-07-30-static-routes");
 
     return new Response(transformed, {
       status: response.status,
