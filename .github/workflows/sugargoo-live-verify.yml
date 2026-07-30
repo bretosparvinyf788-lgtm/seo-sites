@@ -77,7 +77,7 @@ checks = {
     'article_title': title in article,
     'article_canonical': f'https://sugargoovip.shop/{slug}' in article,
     'article_body': 'Treat the parcel as a shipping specification' in article and 'Track the handoff and learn from the completed shipment' in article,
-    'article_word_count': '1,758 words' in article,
+    'article_word_count': '1,756 words' in article,
     'article_faq': 'Frequently asked questions' in article and article.count('<details>') >= 8,
     'article_not_home_fallback': 'Sugargoo Spreadsheet 2026' not in article,
     'article_wording_fixed': 'They do not automatically select everything that has arrived' not in article,
