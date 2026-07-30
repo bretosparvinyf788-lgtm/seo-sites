@@ -33,15 +33,20 @@ jobs:
           def read(path):
               return Path(path).read_text(encoding='utf-8', errors='ignore') if Path(path).exists() else ''
           article, home, archive, sitemap = map(read, ['/tmp/article.html','/tmp/home.html','/tmp/archive.html','/tmp/sitemap.xml'])
+          local_article = read('cssbuyvip.com/guides/cssbuy-restricted-item-route-filter-2026/index.html')
           slug='cssbuy-restricted-item-route-filter-2026'
-          visible=re.sub(r'<script[\s\S]*?</script>|<style[\s\S]*?</style>|<[^>]+>', ' ', article, flags=re.I)
+          def visible_words(html):
+              visible=re.sub(r'<script[\s\S]*?</script>|<style[\s\S]*?</style>|<[^>]+>', ' ', html, flags=re.I)
+              return len(re.findall(r"\b[\w’'-]+\b", visible))
           report={
             'article_http': os.environ.get('ARTICLE_CODE'),
             'homepage_http': os.environ.get('HOME_CODE'),
             'archive_http': os.environ.get('ARCHIVE_CODE'),
             'sitemap_http': os.environ.get('SITEMAP_CODE'),
             'article_bytes': len(article.encode()),
-            'visible_word_count': len(re.findall(r"\b[\w’'-]+\b", visible)),
+            'visible_word_count': visible_words(article),
+            'local_static_word_count': visible_words(local_article),
+            'local_static_faq_count': local_article.count('<details>'),
             'title_ok': '<title>CSSBuy Restricted Items Guide 2026 | Shipping Route Filter</title>' in article,
             'h1_ok': 'CSSBuy Restricted Item Route Filter: Build a Shippable Haul Before Parcel Submission' in article,
             'body_start_ok': 'Build the route plan before you build the haul' in article,
@@ -65,4 +70,4 @@ jobs:
           name: cssbuyvip-com-july30-diagnostic
           path: diagnostic/report.json
 
-# Pull request trigger for one-shot live diagnostics.
+# Pull request trigger for one-shot live and local diagnostics.
