@@ -1,0 +1,32 @@
+{
+  "status": "failed",
+  "verified_at": "2026-07-30T02:19:34.796248+00:00",
+  "article": "https://sugargoovip.shop/guide-sugargoo-packing-center-parcel.html",
+  "attempt": 6,
+  "statuses": {
+    "article": 404,
+    "homepage": 200,
+    "guides": 200,
+    "sitemap": 200,
+    "robots": 200
+  },
+  "checks": {
+    "all_http_200": false,
+    "article_title": false,
+    "article_canonical": false,
+    "article_body": false,
+    "article_word_count": false,
+    "article_faq": false,
+    "article_not_home_fallback": true,
+    "article_wording_fixed": true,
+    "homepage_new_article": false,
+    "homepage_exactly_three": true,
+    "homepage_newest_first": false,
+    "homepage_no_old_fourth": false,
+    "guides_all_five": false,
+    "guides_exactly_five_cards": false,
+    "guides_newest_first": false,
+    "sitemap_article": false,
+    "robots_sitemap": true
+  }
+}
