@@ -33,25 +33,33 @@ jobs:
       - name: Publish article into all language arrays
         run: python3 cssbuyvip/tools/sync_latest_guides.py
 
-      - name: Sort all guide arrays newest first
+      - name: Normalize word count and sort guide arrays newest first
         run: |
           python3 - <<'PY'
           import json
           import re
           from pathlib import Path
 
+          slug = 'cssbuy-replacement-order-map-stock-substitutions-rebuys-2026'
           path = Path('cssbuyvip/index.html')
           html = path.read_text(encoding='utf-8')
           match = re.search(r"const SITE_DATA = (\{.*?\});\nlet currentLang", html, re.S)
           if not match:
               raise SystemExit('SITE_DATA not found')
           data = json.loads(match.group(1))
+          english = next(item for item in data['articles']['en'] if item.get('slug') == slug)
+          def count_words():
+              return sum(len(str(section[1]).split()) for section in english['body'])
+          if count_words() > 1800 and english['body'][-1][0].startswith('Final rule:'):
+              english['body'].pop()
+          if count_words() > 1800:
+              english['body'] = [section for section in english['body'] if section[0] != 'A seven-column replacement map']
           for lang in ('en', 'zh', 'es', 'de', 'pt'):
-              articles = data['articles'][lang]
-              articles.sort(key=lambda item: item.get('publish_date', ''), reverse=True)
+              data['articles'][lang].sort(key=lambda item: item.get('publish_date', ''), reverse=True)
           new_json = json.dumps(data, ensure_ascii=False, separators=(',', ':'))
           html = html[:match.start(1)] + new_json + html[match.end(1):]
           path.write_text(html, encoding='utf-8')
+          print('Normalized English words:', count_words())
           PY
 
       - name: Validate homepage, article order and word count
