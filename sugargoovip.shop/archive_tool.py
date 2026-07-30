@@ -64,7 +64,7 @@ ARTICLE = {'title': 'Sugargoo Packing Center Guide 2026: Build a Route-Ready Par
           'Coupon eligibility, expiry, minimum spend and route conditions can vary. Confirm the live terms before payment and do not choose an unsuitable route merely to use a discount.'),
          ('What should I save after submitting the parcel?',
           'Keep the parcel number, selected item list, address, route, declaration details, final weight and dimensions, paid amount, coupon, add-ons, parcel photo and tracking history.')],
- 'word_count': 1758}
+ 'word_count': 1756}
 
 EXISTING_GUIDES = [{'title': 'Sugargoo Returns & Exchanges Guide 2026: Fix Warehouse Problems Before Shipping',
   'short_title': 'Sugargoo Returns & Exchanges Guide 2026',
