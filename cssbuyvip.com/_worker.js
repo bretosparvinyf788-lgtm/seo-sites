@@ -1,4 +1,5 @@
 // Serve static article routes directly and refresh the three newest homepage guides.
+// Deployment marker: 2026-07-30 restricted-item static publication.
 const HOME_PATHS = new Set(["/", "/index.html"]);
 
 const LATEST = [
