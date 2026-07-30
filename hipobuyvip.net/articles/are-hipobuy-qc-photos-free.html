@@ -1,0 +1,266 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+
+<link rel="icon" type="image/png" sizes="64x64" href="../assets/favicon.png">
+<link rel="apple-touch-icon" sizes="180x180" href="../assets/apple-touch-icon.png">
+<link rel="manifest" href="../site.webmanifest">
+
+<title>Are HipoBuy QC Photos Free? A Practical Warehouse Inspection Framework | HipoBuyVIP</title>
+<meta name="description" content="A product-specific QC method covering identity, construction, measurements, extra-photo requests, defects, and warehouse decisions.">
+<meta name="robots" content="index,follow">
+<link rel="canonical" href="https://hipobuyvip.net/articles/are-hipobuy-qc-photos-free.html">
+<style>
+:root{
+  --navy:#0b2d67;--blue:#176cff;--blue2:#65a8ff;--sky:#f2f8ff;
+  --line:#dbe8f7;--muted:#617493;--white:#fff;
+  --shadow:0 18px 48px rgba(25,70,118,.10);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--navy);background:#fff;-webkit-font-smoothing:antialiased}
+a{text-decoration:none;color:inherit}
+.container{width:min(1180px,calc(100% - 36px));margin:auto}
+.header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.93);backdrop-filter:blur(16px);border-bottom:1px solid #e3edf8}
+.nav{height:72px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+.brand{display:flex;align-items:center;gap:10px;font-size:21px;font-weight:900;letter-spacing:-.7px}
+.brand-mark-img{width:40px;height:40px;display:block;object-fit:contain}
+.navlinks{display:flex;align-items:center;gap:22px;font-size:13px;font-weight:780}
+.navlinks a:hover{color:var(--blue)}
+.nav-button{padding:11px 17px;border-radius:13px;background:var(--blue);color:#fff;font-weight:850}
+.article-hero{padding:82px 0 58px;background:linear-gradient(118deg,#f5faff 0%,#e8f4ff 55%,#d5ebff 100%);position:relative;overflow:hidden}
+.article-hero:after{content:"";position:absolute;width:380px;height:380px;border-radius:50%;right:-80px;top:-120px;background:rgba(255,255,255,.55)}
+.breadcrumb{font-size:13px;color:#5d7394;margin-bottom:23px}
+.breadcrumb a{color:var(--blue);font-weight:800}
+.category{display:inline-flex;padding:8px 12px;border:1px solid #cadff8;border-radius:999px;background:rgba(255,255,255,.78);color:var(--blue);font-size:11px;font-weight:900;letter-spacing:.1em;text-transform:uppercase}
+.article-hero h1{max-width:940px;font-size:clamp(42px,5vw,68px);line-height:1.04;letter-spacing:-3.4px;margin:20px 0}
+.lead{max-width:780px;color:#526b90;font-size:18px;line-height:1.7}
+.meta{display:flex;gap:18px;flex-wrap:wrap;margin-top:25px;color:#657b9b;font-size:13px;font-weight:700}
+.article-layout{display:grid;grid-template-columns:minmax(0,780px) 280px;gap:54px;align-items:start;padding:68px 0 90px}
+.article-body{font-family:Georgia,"Times New Roman",serif;color:#243b61;font-size:18px;line-height:1.88}
+.article-body>p:first-child{font-size:21px;color:#183766;line-height:1.75}
+.article-body h2{font-family:Inter,ui-sans-serif,system-ui,sans-serif;font-size:31px;line-height:1.2;color:var(--navy);letter-spacing:-1.1px;margin:56px 0 19px}
+.article-body p{margin:0 0 23px}
+.article-body blockquote{margin:25px 0;padding:18px 22px;border-left:4px solid var(--blue);background:#f2f7ff;border-radius:0 14px 14px 0;color:#284a7d;font-style:italic}
+.article-body ol{margin:22px 0 28px;padding-left:28px}
+.article-body li{padding-left:7px;margin-bottom:10px}
+.article-sidebar{position:sticky;top:94px}
+.sidebar-card{border:1px solid var(--line);border-radius:22px;background:#fff;padding:23px;box-shadow:var(--shadow);margin-bottom:18px}
+.sidebar-card h3{margin:0 0 13px;font-size:17px}
+.toc{display:grid;gap:10px}
+.toc a{font-size:13px;color:#607595;line-height:1.45}
+.toc a:hover{color:var(--blue)}
+.fact-note{border-radius:22px;padding:24px;background:linear-gradient(145deg,#176cff,#0f58d3);color:#fff}
+.fact-note h3{margin:0 0 12px}
+.fact-note p{color:#dceaff;font-size:13px;line-height:1.65;margin:0}
+.article-footer-nav{display:flex;justify-content:space-between;gap:14px;margin-top:56px;padding-top:28px;border-top:1px solid var(--line)}
+.article-footer-nav a{padding:13px 17px;border:1px solid #cddff5;border-radius:13px;color:var(--blue);font-family:Inter,ui-sans-serif,system-ui,sans-serif;font-weight:850}
+.research-box{margin-top:48px;border:1px solid #dce8f7;border-radius:18px;background:#f7fbff;padding:21px;font-family:Inter,ui-sans-serif,system-ui,sans-serif}
+.research-box strong{display:block;margin-bottom:8px}
+.research-box p{font-family:Inter,ui-sans-serif,system-ui,sans-serif;font-size:13px;line-height:1.65;color:#617493;margin:0}
+.footer{padding:44px 0;background:#0d2b61;color:#fff}
+.footer-row{display:flex;justify-content:space-between;gap:24px;align-items:center}
+.footer p{color:#b9cae7;font-size:12px;margin:0}
+.list-hero{padding:78px 0 54px;background:linear-gradient(120deg,#f4faff,#e2f1ff)}
+.list-hero h1{font-size:clamp(44px,5vw,66px);letter-spacing:-3px;line-height:1.04;margin:12px 0}
+.list-hero p{color:#577094;font-size:17px;line-height:1.7;max-width:720px}
+.guide-list{padding:72px 0 94px;background:#f7fbff}
+.guide-list-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.guide-list-card{display:flex;flex-direction:column;border:1px solid var(--line);border-radius:24px;overflow:hidden;background:#fff;box-shadow:var(--shadow);transition:.22s}
+.guide-list-card:hover{transform:translateY(-5px)}
+.guide-visual{height:210px;display:grid;place-items:center;color:var(--blue);background:linear-gradient(145deg,#e1efff,#f7fbff)}
+.guide-list-body{display:flex;flex:1;flex-direction:column;padding:25px}
+.guide-list-body small{color:var(--blue);font-weight:900;letter-spacing:.08em}
+.guide-list-body h2{font-size:23px;line-height:1.23;letter-spacing:-.6px;margin:11px 0}
+.guide-list-body p{color:var(--muted);line-height:1.65;font-size:14px}
+.guide-list-meta{margin-top:auto;padding-top:15px;display:flex;justify-content:space-between;color:#6b7f9d;font-size:12px}
+@media(max-width:900px){
+  .navlinks{display:none}
+  .article-layout{grid-template-columns:1fr}
+  .article-sidebar{position:static}
+  .guide-list-grid{grid-template-columns:1fr}
+}
+@media(max-width:620px){
+  .container{width:min(100% - 24px,1180px)}
+  .article-hero{padding-top:54px}
+  .article-hero h1{font-size:42px;letter-spacing:-2px}
+  .article-layout{padding-top:46px}
+  .article-body{font-size:17px}
+  .article-body h2{font-size:27px}
+  .footer-row{display:grid}
+}
+</style>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Are HipoBuy QC Photos Free? A Practical Warehouse Inspection Framework", "description": "A product-specific QC method covering identity, construction, measurements, extra-photo requests, defects, and warehouse decisions.", "datePublished": "2026-07-30", "dateModified": "2026-07-30", "author": {"@type": "Organization", "name": "HipoBuyVIP Editorial"}, "publisher": {"@type": "Organization", "name": "HipoBuyVIP"}, "mainEntityOfPage": "https://hipobuyvip.net/articles/are-hipobuy-qc-photos-free.html", "wordCount": 1767, "inLanguage": "en"}</script>
+
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="HipoBuyVIP">
+<meta property="og:title" content="Are HipoBuy QC Photos Free? A Practical Warehouse Inspection Framework | HipoBuyVIP">
+<meta property="og:description" content="A product-specific QC method covering identity, construction, measurements, extra-photo requests, defects, and warehouse decisions.">
+<meta property="og:url" content="https://hipobuyvip.net/articles/are-hipobuy-qc-photos-free.html">
+<meta property="og:image" content="https://hipobuyvip.net/assets/og-cover.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Are HipoBuy QC Photos Free? A Practical Warehouse Inspection Framework | HipoBuyVIP">
+<meta name="twitter:description" content="A product-specific QC method covering identity, construction, measurements, extra-photo requests, defects, and warehouse decisions.">
+<meta name="twitter:image" content="https://hipobuyvip.net/assets/og-cover.png">
+
+</head>
+<body>
+
+<header class="header">
+  <div class="container nav">
+    <a class="brand" href="../index.html">
+      <img class="brand-mark-img" src="../assets/favicon.png" alt="HipoBuyVIP logo"><span>HipoBuyVIP</span>
+    </a>
+    <nav class="navlinks">
+      <a href="../index.html#featured">Spreadsheet</a>
+      <a href="../index.html#categories">Categories</a>
+      <a href="../index.html#qc">QC Photos</a>
+      <a href="../index.html#shipping">Shipping</a>
+      <a href="../index.html#guides">Guides</a>
+      <a href="../index.html#faq">FAQ</a>
+    </nav>
+    <a class="nav-button" href="../index.html">Home</a>
+  </div>
+</header>
+
+<main>
+<section class="article-hero">
+  <div class="container">
+    <div class="breadcrumb"><a href="../index.html">Home</a> / <a href="index.html">Guides</a> / QC Inspection</div>
+    <span class="category">QC Inspection</span>
+    <h1>Are HipoBuy QC Photos Free? A Practical Warehouse Inspection Framework</h1>
+    <p class="lead">A product-specific QC method covering identity, construction, measurements, extra-photo requests, defects, and warehouse decisions.</p>
+    <div class="meta">
+      <span>Published July 30, 2026</span>
+      <span>1,767 words</span>
+      <span>Fact-checked against official public HipoBuy materials</span>
+    </div>
+  </div>
+</section>
+<div class="container article-layout">
+  <article class="article-body">
+    <p>The question “Are HipoBuy QC photos free?” sounds like a pricing question. In practice, it is a decision-quality question.</p>
+<p>A buyer does not benefit from five free photographs if none of them shows the size tag, heel alignment, interior label, hardware, or measurement that determines whether the item should be shipped. A buyer can also waste money requesting extra photos without first deciding what evidence is missing.</p>
+<p>HipoBuy’s public app landing page is built around the phrase “Search Anything with QC Photos,” and the service promotes a broad China-shopping workflow. The official app descriptions say HipoBuy can help users buy from marketplaces such as Taobao and 1688, manage purchases with professional buyers, store items free for 90 days, and ship to more than 200 countries and regions. However, the public landing pages do not currently state a universal number of free QC images for every product or a fixed public price for every additional photograph.</p>
+<p>That distinction matters. The correct answer is not “all QC is free” or “extra QC always costs a specific amount.” The correct answer is: standard warehouse photos are part of the inspection workflow promoted by HipoBuy, while the number, scope, and price of special photo requests should be confirmed in the live order interface.</p>
+<p>This guide explains how to extract real value from QC photos without treating them as a decorative gallery.</p>
+<h2 id="define-the-acceptance-criteria-before-the-item-arrives">Define the acceptance criteria before the item arrives</h2>
+<p>The strongest inspection begins before purchase.</p>
+<p>Write down what would make you reject the item. This sounds negative, but it creates a clear decision standard. For a shoe, rejection triggers might include the wrong size, obvious color mismatch, severe panel asymmetry, a detached sole edge, or visible crushing that affects the shoe rather than only the box. For clothing, triggers might include a wrong size tag, major print misplacement, damaged zipper, incorrect color, or measurements outside your tolerance. For a bag, they might include missing straps, broken hardware, severe shape distortion, or interior damage.</p>
+<p>Without these criteria, buyers often change their standards after seeing the photos. Excitement makes defects feel smaller; anxiety makes harmless details feel larger. A written threshold prevents both reactions.</p>
+<p>Keep the criteria observable. “High quality” is not observable. “Chest width must be at least 58 cm” is observable. “Logo must look perfect” is subjective. “Print must be centered within a reasonable visual margin” is more useful.</p>
+<h2 id="first-inspection-confirm-identity">First inspection: confirm identity</h2>
+<p>The first task is not judging craftsmanship. It is confirming that the warehouse received the item you ordered.</p>
+<p>Check the product type, color, selected variation, quantity, and size. Compare the warehouse photos with the live seller page and your order record. Sellers sometimes use one listing for multiple related items, and option names may be translated poorly. A clean photograph of the wrong variation is still a failed order.</p>
+<p>For shoes, check the size label on both shoes when possible. For clothing, check the sewn size tag and the selected order size. For sets, count every component. For bags, confirm removable straps, pouches, dust bags, or other included pieces only if the seller listing promised them.</p>
+<p>Identity errors should be handled immediately. There is little value in inspecting stitching on an item that is already the wrong size.</p>
+<h2 id="second-inspection-read-the-silhouette">Second inspection: read the silhouette</h2>
+<p>The overall shape often reveals more than a close-up.</p>
+<p>Look at the item straight on. Is it symmetrical? Does one shoe lean differently? Are jacket sleeves similar in length? Does a bag stand evenly? Are collars, pockets, panels, and prints positioned consistently?</p>
+<p>Silhouette inspection is especially important because warehouse photography can make small details look dramatic while hiding structural problems. A close-up may show clean stitching, but a full front view can reveal a rotated print, uneven pocket height, or distorted toe box.</p>
+<h2 id="third-inspection-examine-high-risk-construction-zones">Third inspection: examine high-risk construction zones</h2>
+<p>Different products fail in different places. A generic “looks good” review is not enough.</p>
+<p>For sneakers and footwear, inspect toe shape, heel alignment, sole bonding, panel stitching, lace-eyelet placement, and visible glue. Minor adhesive marks may be cosmetic; lifting or separation is more serious. Check whether the left and right shoes appear consistent.</p>
+<p>For hoodies, T-shirts, and jackets, inspect print placement, embroidery, zipper tracks, seams at the shoulders, pocket symmetry, cuff condition, and stains. Dark garments may require brighter lighting to reveal surface marks.</p>
+<p>For pants, review waist construction, pocket placement, distressing, leg symmetry, and hem condition. Fit depends heavily on measurements, so photos alone are usually insufficient.</p>
+<p>For bags, inspect the base, handles, strap anchors, zipper path, corners, glazing, interior, and hardware. A front-only photograph can miss the areas most likely to fail during use.</p>
+<p>For watches and accessories, inspect scratches, alignment, clasp closure, missing pieces, and protective-film condition. A photograph does not verify movement accuracy or material composition, so do not infer more than the image proves.</p>
+<h2 id="measurements-are-a-separate-evidence-class">Measurements are a separate evidence class</h2>
+<p>A measurement photo is not simply another angle. It converts an uncertain size label into usable data.</p>
+<p>Chinese marketplace sizing can differ from familiar regional standards. Two garments labeled “XL” can have very different chest widths and lengths. Seller size charts are useful, but the warehouse measurement helps confirm the actual received item.</p>
+<p>When requesting a measurement, specify the method:</p>
+<blockquote>“Measure chest width pit to pit with the garment laid flat.”</blockquote>
+<blockquote>“Measure total length from the highest shoulder point.”</blockquote>
+<blockquote>“Measure insole length from heel to toe.”</blockquote>
+<blockquote>“Measure bag width at the base.”</blockquote>
+<blockquote>“Photograph the tape and both endpoints in one frame.”</blockquote>
+<p>Requests such as “please measure size” are too vague. The warehouse may choose a dimension you do not need.</p>
+<p>Allow for small measurement variation caused by fabric tension, tape position, and camera perspective. The purpose is to catch meaningful mismatch, not to demand laboratory precision.</p>
+<h2 id="how-to-decide-whether-an-extra-photo-is-worth-requesting">How to decide whether an extra photo is worth requesting</h2>
+<p>Request another photo when the missing evidence could change the shipping decision.</p>
+<p>A good extra-photo request resolves one specific uncertainty. Examples include:</p>
+<blockquote>“Close-up of the zipper teeth and slider.”</blockquote>
+<blockquote>“Photo of the inside size tag.”</blockquote>
+<blockquote>“Straight rear view of both shoes together.”</blockquote>
+<blockquote>“Photo of the bag’s interior and removable strap.”</blockquote>
+<blockquote>“Measurement of sleeve length from shoulder seam to cuff.”</blockquote>
+<p>Do not request multiple random angles “just to be safe.” That creates more images without improving the decision.</p>
+<p>Use a simple value test:</p>
+<p>What do I not know? Could that unknown make me return the item? Can one photograph or measurement answer it?</p>
+<p>If all three answers are clear, the request is justified.</p>
+<p>Because HipoBuy does not publicly publish one universal extra-photo price on its landing pages, check the live warehouse or order interface before submitting. Service terms may depend on the request, product, or current platform rules.</p>
+<h2 id="what-qc-photos-cannot-prove">What QC photos cannot prove</h2>
+<p>QC photography has boundaries, and understanding them prevents false confidence.</p>
+<p>Photos cannot prove authenticity. They cannot reliably confirm long-term durability, internal materials, exact fabric composition, battery health, waterproofing, scent, or how an item feels in hand. Lighting can alter color, and image compression can hide texture.</p>
+<p>A photograph can show visible evidence at a moment in time. That is valuable, but it is not a warranty.</p>
+<p>The right response to these limitations is not abandoning QC. It is avoiding conclusions the photographs cannot support.</p>
+<h2 id="build-a-three-level-defect-system">Build a three-level defect system</h2>
+<p>Not every visible issue deserves the same response.</p>
+<p>Level one: presentation issues. Examples include a dented outer box, folded tissue, loose protective film, or minor packaging dust. These may not matter if you plan to remove packaging.</p>
+<p>Level two: cosmetic product issues. Examples include a small glue mark, light thread, minor scuff, or slightly uneven print. Decide based on price, visibility, intended use, and whether the defect is likely to worsen.</p>
+<p>Level three: functional or identity issues. Examples include wrong size, broken zipper, detached sole, cracked hardware, missing component, major stain, or severe asymmetry. These usually justify clarification, exchange, or return.</p>
+<p>This system stops buyers from treating every imperfection as catastrophic while still protecting them from real failures.</p>
+<h2 id="communicate-with-warehouse-staff-precisely">Communicate with warehouse staff precisely</h2>
+<p>A useful message is short, polite, and testable.</p>
+<p>Bad request:</p>
+<blockquote>“Can you check if it is good quality?”</blockquote>
+<p>Better request:</p>
+<blockquote>“Please confirm there is no tear around the right pocket seam and send one close-up.”</blockquote>
+<p>Bad request:</p>
+<blockquote>“Is the size correct?”</blockquote>
+<p>Better request:</p>
+<blockquote>“Please photograph the size tag and measure the chest width pit to pit.”</blockquote>
+<p>The staff member can answer the second version with evidence. The first version asks for an undefined opinion.</p>
+<p>HipoBuy’s official app information promotes professional buyers available around the clock. Professional support becomes more effective when the buyer supplies a clear inspection question.</p>
+<h2 id="approve-clarify-or-return">Approve, clarify, or return</h2>
+<p>After reviewing the available evidence, assign one decision.</p>
+<p>Approve when identity is correct and visible defects fall within your tolerance.</p>
+<p>Clarify when one missing piece of evidence could change the decision.</p>
+<p>Return or exchange when the item is wrong, materially damaged, incomplete, or outside a measurement threshold that matters.</p>
+<p>Before returning, check timing, seller conditions, domestic return shipping, and whether the problem is eligible for after-sales handling. The warehouse stage is where Chinese domestic return options may still be available; after international shipping, correction becomes far more difficult.</p>
+<p>Do not delay a clear decision simply because HipoBuy advertises 90 days of free storage. Storage is useful for consolidation, not for avoiding action on a questionable item.</p>
+<h2 id="qc-and-parcel-planning-should-connect">QC and parcel planning should connect</h2>
+<p>Inspection decisions affect shipping decisions.</p>
+<p>A crushed shoe box may be irrelevant if you plan to remove it. A structured bag should not be vacuum compressed. A fragile accessory may need reinforced packaging. A liquid or electronic item may limit route selection.</p>
+<p>When approving an item, add a short parcel note:</p>
+<blockquote>“Remove outer shoe box.”</blockquote>
+<blockquote>“Keep protective structure.”</blockquote>
+<blockquote>“Do not vacuum compress.”</blockquote>
+<blockquote>“Pack away from heavy footwear.”</blockquote>
+<blockquote>“Include detachable strap.”</blockquote>
+<p>This turns QC from a passive checkpoint into part of the shipping plan.</p>
+<h2 id="final-answer">Final answer</h2>
+<p>HipoBuy’s public positioning makes QC photography a central part of product discovery and warehouse decision-making, but its public landing pages do not currently publish a universal free-photo count or a single fixed extra-photo price for every order.</p>
+<p>The useful question is therefore not simply “Is it free?” It is “Does the available evidence answer the decision I need to make?”</p>
+<p>Start with acceptance criteria. Confirm identity before quality. Inspect the zones most likely to fail. Request extra evidence only when it can change the outcome. Then connect the inspection result to packaging and shipping.</p>
+<p>That method produces more value than collecting a large gallery of photos. Good QC is not measured by image count. It is measured by how confidently the buyer can approve, clarify, or reject the item before international shipping.</p>
+    <div class="research-box">
+      <strong>Research basis</strong>
+      <p>This independent article was checked against HipoBuy’s public website and app landing page, plus the current official HipoBuy listings on Google Play and Apple’s App Store. Publicly confirmed points used in the article include Taobao and 1688 purchasing support, 90-day free storage, delivery coverage to more than 200 countries and regions, a large shipping-line network, services advertised as fast as five days, the $300+ coupon-bundle promotion, and the platform’s QC-photo positioning. Prices, routes, photo allowances, fees, and eligibility can change inside the live account interface.</p>
+    </div>
+    <nav class="article-footer-nav"><a href="how-to-use-hipobuy-spreadsheet-2026.html">← Previous guide</a><a href="how-hipobuy-shipping-cost-works.html">Next guide →</a></nav>
+  </article>
+  <aside class="article-sidebar">
+    <div class="sidebar-card">
+      <h3>Inside this guide</h3>
+      <nav class="toc"><a href="#define-the-acceptance-criteria-before-the-item-arrives">Define the acceptance criteria before the item arrives</a><a href="#first-inspection-confirm-identity">First inspection: confirm identity</a><a href="#second-inspection-read-the-silhouette">Second inspection: read the silhouette</a><a href="#third-inspection-examine-high-risk-construction-zones">Third inspection: examine high-risk construction zones</a><a href="#measurements-are-a-separate-evidence-class">Measurements are a separate evidence class</a><a href="#how-to-decide-whether-an-extra-photo-is-worth-requesting">How to decide whether an extra photo is worth requesting</a><a href="#what-qc-photos-cannot-prove">What QC photos cannot prove</a><a href="#build-a-three-level-defect-system">Build a three-level defect system</a><a href="#communicate-with-warehouse-staff-precisely">Communicate with warehouse staff precisely</a><a href="#approve-clarify-or-return">Approve, clarify, or return</a><a href="#qc-and-parcel-planning-should-connect">QC and parcel planning should connect</a><a href="#final-answer">Final answer</a></nav>
+    </div>
+    <div class="fact-note">
+      <h3>Important</h3>
+      <p>HipoBuyVIP is an independent guide. Always verify live product availability, warehouse services, route eligibility, coupon conditions, and final charges inside HipoBuy before paying.</p>
+    </div>
+  </aside>
+</div>
+</main>
+
+<footer class="footer">
+  <div class="container footer-row">
+    <div class="brand"><img class="brand-mark-img" src="../assets/favicon.png" alt="HipoBuyVIP logo"><span>HipoBuyVIP</span></div>
+    <p>Independent buyer guide. Not affiliated with HipoBuy. Information checked July 30, 2026.</p>
+  </div>
+</footer>
+
+</body>
+</html>

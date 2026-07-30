@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+
+<link rel="icon" type="image/png" sizes="64x64" href="../assets/favicon.png">
+<link rel="apple-touch-icon" sizes="180x180" href="../assets/apple-touch-icon.png">
+<link rel="manifest" href="../site.webmanifest">
+
+<title>All HipoBuy Buyer Guides | HipoBuyVIP</title>
+<meta name="description" content="Read all HipoBuyVIP buyer guides covering spreadsheets, warehouse QC photos, international shipping costs, storage, routes, coupons, and parcel planning.">
+<meta name="robots" content="index,follow">
+<link rel="canonical" href="https://hipobuyvip.net/articles/">
+<style>
+:root{
+  --navy:#0b2d67;--blue:#176cff;--blue2:#65a8ff;--sky:#f2f8ff;
+  --line:#dbe8f7;--muted:#617493;--white:#fff;
+  --shadow:0 18px 48px rgba(25,70,118,.10);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--navy);background:#fff;-webkit-font-smoothing:antialiased}
+a{text-decoration:none;color:inherit}
+.container{width:min(1180px,calc(100% - 36px));margin:auto}
+.header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.93);backdrop-filter:blur(16px);border-bottom:1px solid #e3edf8}
+.nav{height:72px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+.brand{display:flex;align-items:center;gap:10px;font-size:21px;font-weight:900;letter-spacing:-.7px}
+.brand-mark-img{width:40px;height:40px;display:block;object-fit:contain}
+.navlinks{display:flex;align-items:center;gap:22px;font-size:13px;font-weight:780}
+.navlinks a:hover{color:var(--blue)}
+.nav-button{padding:11px 17px;border-radius:13px;background:var(--blue);color:#fff;font-weight:850}
+.article-hero{padding:82px 0 58px;background:linear-gradient(118deg,#f5faff 0%,#e8f4ff 55%,#d5ebff 100%);position:relative;overflow:hidden}
+.article-hero:after{content:"";position:absolute;width:380px;height:380px;border-radius:50%;right:-80px;top:-120px;background:rgba(255,255,255,.55)}
+.breadcrumb{font-size:13px;color:#5d7394;margin-bottom:23px}
+.breadcrumb a{color:var(--blue);font-weight:800}
+.category{display:inline-flex;padding:8px 12px;border:1px solid #cadff8;border-radius:999px;background:rgba(255,255,255,.78);color:var(--blue);font-size:11px;font-weight:900;letter-spacing:.1em;text-transform:uppercase}
+.article-hero h1{max-width:940px;font-size:clamp(42px,5vw,68px);line-height:1.04;letter-spacing:-3.4px;margin:20px 0}
+.lead{max-width:780px;color:#526b90;font-size:18px;line-height:1.7}
+.meta{display:flex;gap:18px;flex-wrap:wrap;margin-top:25px;color:#657b9b;font-size:13px;font-weight:700}
+.article-layout{display:grid;grid-template-columns:minmax(0,780px) 280px;gap:54px;align-items:start;padding:68px 0 90px}
+.article-body{font-family:Georgia,"Times New Roman",serif;color:#243b61;font-size:18px;line-height:1.88}
+.article-body>p:first-child{font-size:21px;color:#183766;line-height:1.75}
+.article-body h2{font-family:Inter,ui-sans-serif,system-ui,sans-serif;font-size:31px;line-height:1.2;color:var(--navy);letter-spacing:-1.1px;margin:56px 0 19px}
+.article-body p{margin:0 0 23px}
+.article-body blockquote{margin:25px 0;padding:18px 22px;border-left:4px solid var(--blue);background:#f2f7ff;border-radius:0 14px 14px 0;color:#284a7d;font-style:italic}
+.article-body ol{margin:22px 0 28px;padding-left:28px}
+.article-body li{padding-left:7px;margin-bottom:10px}
+.article-sidebar{position:sticky;top:94px}
+.sidebar-card{border:1px solid var(--line);border-radius:22px;background:#fff;padding:23px;box-shadow:var(--shadow);margin-bottom:18px}
+.sidebar-card h3{margin:0 0 13px;font-size:17px}
+.toc{display:grid;gap:10px}
+.toc a{font-size:13px;color:#607595;line-height:1.45}
+.toc a:hover{color:var(--blue)}
+.fact-note{border-radius:22px;padding:24px;background:linear-gradient(145deg,#176cff,#0f58d3);color:#fff}
+.fact-note h3{margin:0 0 12px}
+.fact-note p{color:#dceaff;font-size:13px;line-height:1.65;margin:0}
+.article-footer-nav{display:flex;justify-content:space-between;gap:14px;margin-top:56px;padding-top:28px;border-top:1px solid var(--line)}
+.article-footer-nav a{padding:13px 17px;border:1px solid #cddff5;border-radius:13px;color:var(--blue);font-family:Inter,ui-sans-serif,system-ui,sans-serif;font-weight:850}
+.research-box{margin-top:48px;border:1px solid #dce8f7;border-radius:18px;background:#f7fbff;padding:21px;font-family:Inter,ui-sans-serif,system-ui,sans-serif}
+.research-box strong{display:block;margin-bottom:8px}
+.research-box p{font-family:Inter,ui-sans-serif,system-ui,sans-serif;font-size:13px;line-height:1.65;color:#617493;margin:0}
+.footer{padding:44px 0;background:#0d2b61;color:#fff}
+.footer-row{display:flex;justify-content:space-between;gap:24px;align-items:center}
+.footer p{color:#b9cae7;font-size:12px;margin:0}
+.list-hero{padding:78px 0 54px;background:linear-gradient(120deg,#f4faff,#e2f1ff)}
+.list-hero h1{font-size:clamp(44px,5vw,66px);letter-spacing:-3px;line-height:1.04;margin:12px 0}
+.list-hero p{color:#577094;font-size:17px;line-height:1.7;max-width:720px}
+.guide-list{padding:72px 0 94px;background:#f7fbff}
+.guide-list-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.guide-list-card{display:flex;flex-direction:column;border:1px solid var(--line);border-radius:24px;overflow:hidden;background:#fff;box-shadow:var(--shadow);transition:.22s}
+.guide-list-card:hover{transform:translateY(-5px)}
+.guide-visual{height:210px;display:grid;place-items:center;color:var(--blue);background:linear-gradient(145deg,#e1efff,#f7fbff)}.guide-visual img{width:100%;height:100%;object-fit:cover;display:block}
+.guide-list-body{display:flex;flex:1;flex-direction:column;padding:25px}
+.guide-list-body small{color:var(--blue);font-weight:900;letter-spacing:.08em}
+.guide-list-body h2{font-size:23px;line-height:1.23;letter-spacing:-.6px;margin:11px 0}
+.guide-list-body p{color:var(--muted);line-height:1.65;font-size:14px}
+.guide-list-meta{margin-top:auto;padding-top:15px;display:flex;justify-content:space-between;color:#6b7f9d;font-size:12px}
+@media(max-width:900px){
+  .navlinks{display:none}
+  .article-layout{grid-template-columns:1fr}
+  .article-sidebar{position:static}
+  .guide-list-grid{grid-template-columns:1fr}
+}
+@media(max-width:620px){
+  .container{width:min(100% - 24px,1180px)}
+  .article-hero{padding-top:54px}
+  .article-hero h1{font-size:42px;letter-spacing:-2px}
+  .article-layout{padding-top:46px}
+  .article-body{font-size:17px}
+  .article-body h2{font-size:27px}
+  .footer-row{display:grid}
+}
+</style>
+
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="HipoBuyVIP">
+<meta property="og:title" content="All HipoBuy Buyer Guides | HipoBuyVIP">
+<meta property="og:description" content="Read all HipoBuyVIP buyer guides covering spreadsheets, warehouse QC photos, international shipping costs, storage, routes, coupons, and parcel planning.">
+<meta property="og:url" content="https://hipobuyvip.net/articles/">
+<meta property="og:image" content="https://hipobuyvip.net/assets/og-cover.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="All HipoBuy Buyer Guides | HipoBuyVIP">
+<meta name="twitter:description" content="Read all HipoBuyVIP buyer guides covering spreadsheets, warehouse QC photos, international shipping costs, storage, routes, coupons, and parcel planning.">
+<meta name="twitter:image" content="https://hipobuyvip.net/assets/og-cover.png">
+
+</head>
+<body>
+
+<header class="header">
+  <div class="container nav">
+    <a class="brand" href="../index.html">
+      <img class="brand-mark-img" src="../assets/favicon.png" alt="HipoBuyVIP logo"><span>HipoBuyVIP</span>
+    </a>
+    <nav class="navlinks">
+      <a href="../index.html#featured">Spreadsheet</a>
+      <a href="../index.html#categories">Categories</a>
+      <a href="../index.html#qc">QC Photos</a>
+      <a href="../index.html#shipping">Shipping</a>
+      <a href="../index.html#guides">Guides</a>
+      <a href="../index.html#faq">FAQ</a>
+    </nav>
+    <a class="nav-button" href="../index.html">Home</a>
+  </div>
+</header>
+
+<main>
+<section class="list-hero">
+  <div class="container">
+    <span class="category">Buyer Knowledge Center</span>
+    <h1>All HipoBuy Buyer Guides</h1>
+    <p>Original, research-led English guides written to solve real purchasing, warehouse-inspection, and international-shipping decisions.</p>
+  </div>
+</section>
+<section class="guide-list">
+  <div class="container guide-list-grid"><a class="guide-list-card" href="how-to-use-hipobuy-spreadsheet-2026.html">
+      <div class="guide-visual"><img src="../assets/guide-spreadsheet.png" alt="Spreadsheet strategy guide cover image"></div>
+      <div class="guide-list-body">
+        <small>SPREADSHEET STRATEGY</small>
+        <h2>How to Use a HipoBuy Spreadsheet in 2026: From Product Discovery to a Shippable Parcel</h2>
+        <p>A decision-led workflow for using HipoBuy spreadsheet links, checking live listings, reviewing QC evidence, and building an efficient parcel.</p>
+        <div class="guide-list-meta"><span>1,739 words</span><span>Read guide →</span></div>
+      </div>
+    </a>
+<a class="guide-list-card" href="are-hipobuy-qc-photos-free.html">
+      <div class="guide-visual"><img src="../assets/guide-qc.png" alt="QC inspection guide cover image"></div>
+      <div class="guide-list-body">
+        <small>QC INSPECTION</small>
+        <h2>Are HipoBuy QC Photos Free? A Practical Warehouse Inspection Framework</h2>
+        <p>A product-specific QC method covering identity, construction, measurements, extra-photo requests, defects, and warehouse decisions.</p>
+        <div class="guide-list-meta"><span>1,767 words</span><span>Read guide →</span></div>
+      </div>
+    </a>
+<a class="guide-list-card" href="how-hipobuy-shipping-cost-works.html">
+      <div class="guide-visual"><img src="../assets/guide-shipping.png" alt="Shipping operations guide cover image"></div>
+      <div class="guide-list-body">
+        <small>SHIPPING OPERATIONS</small>
+        <h2>How HipoBuy Shipping Cost Really Works: Weight, Volume, Routes, Storage, and Packing</h2>
+        <p>A practical explanation of chargeable weight, volumetric risk, route eligibility, consolidation, coupons, and total landed cost.</p>
+        <div class="guide-list-meta"><span>1,771 words</span><span>Read guide →</span></div>
+      </div>
+    </a></div>
+</section>
+</main>
+
+<footer class="footer">
+  <div class="container footer-row">
+    <div class="brand"><img class="brand-mark-img" src="../assets/favicon.png" alt="HipoBuyVIP logo"><span>HipoBuyVIP</span></div>
+    <p>Independent buyer guide. Not affiliated with HipoBuy. Information checked July 30, 2026.</p>
+  </div>
+</footer>
+
+</body>
+</html>
