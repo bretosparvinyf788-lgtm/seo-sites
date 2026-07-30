@@ -5,16 +5,20 @@
   X-Frame-Options: SAMEORIGIN
 
 /
-  Cache-Control: public, max-age=0, must-revalidate
+  Cache-Control: no-store, max-age=0
+  CDN-Cache-Control: no-store
 
 /assets/js/*
-  Cache-Control: public, max-age=0, must-revalidate
+  Cache-Control: no-store, max-age=0
+  CDN-Cache-Control: no-store
 
 /assets/css/*
-  Cache-Control: public, max-age=0, must-revalidate
+  Cache-Control: no-store, max-age=0
+  CDN-Cache-Control: no-store
 
 /assets/images/*
   Cache-Control: public, max-age=31536000, immutable
 
 /*.html
-  Cache-Control: public, max-age=0, must-revalidate
+  Cache-Control: no-store, max-age=0
+  CDN-Cache-Control: no-store
