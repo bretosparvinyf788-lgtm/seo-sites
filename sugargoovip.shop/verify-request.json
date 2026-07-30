@@ -1,6 +1,7 @@
 {
-  "requested_at": "2026-07-30T02:10:00Z",
+  "requested_at": "2026-07-30T02:20:00Z",
   "article": "guide-sugargoo-packing-center-parcel.html",
   "verification_window_minutes": 20,
-  "reporting_retry": true
+  "reporting_retry": true,
+  "expected_word_count": 1756
 }
