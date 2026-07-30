@@ -1,0 +1,116 @@
+name: Sugargoo quick live check
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/sugargoo-quick-live-check.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Check current production state
+        shell: bash
+        run: |
+          set -u
+          mkdir -p sugargoovip.shop/verification
+          python3 - <<'PY'
+          from pathlib import Path
+          from urllib.request import Request, urlopen
+          from urllib.error import HTTPError, URLError
+          from datetime import datetime, timezone
+          import json, time
+
+          urls = {
+              'article': 'https://sugargoovip.shop/guide-sugargoo-packing-center-parcel.html',
+              'homepage': 'https://sugargoovip.shop/',
+              'guides': 'https://sugargoovip.shop/guides.html',
+              'sitemap': 'https://sugargoovip.shop/sitemap.xml',
+              'robots': 'https://sugargoovip.shop/robots.txt',
+          }
+          slug = 'guide-sugargoo-packing-center-parcel.html'
+          title = 'Sugargoo Packing Center Guide 2026: Build a Route-Ready Parcel Before You Pay'
+          all_slugs = [slug, 'guide-sugargoo-returns-exchanges.html', 'guide-shipping-cost.html', 'guide-qc-photos.html', 'guide-w2c-workflow.html']
+          latest_slugs = all_slugs[:3]
+
+          def fetch(url, attempt):
+              request = Request(url + f'?quickcheck={attempt}-{int(time.time())}', headers={'User-Agent': 'Mozilla/5.0 SugargooVIP quick verifier', 'Cache-Control': 'no-cache'})
+              try:
+                  with urlopen(request, timeout=30) as response:
+                      return response.status, response.read().decode('utf-8', 'replace')
+              except HTTPError as exc:
+                  return exc.code, exc.read().decode('utf-8', 'replace')
+              except URLError as exc:
+                  return 0, str(exc)
+
+          result = None
+          last = {}
+          for attempt in range(1, 7):
+              pages = {}
+              statuses = {}
+              for name, url in urls.items():
+                  statuses[name], pages[name] = fetch(url, attempt)
+              article = pages['article']
+              homepage = pages['homepage']
+              guides = pages['guides']
+              sitemap = pages['sitemap']
+              robots = pages['robots']
+              start = homepage.find('<section aria-labelledby="latest-guides-title"')
+              end = homepage.find('<section class="finder', start) if start >= 0 else -1
+              latest = homepage[start:end] if start >= 0 and end > start else ''
+              latest_positions = [latest.find(value) for value in latest_slugs]
+              archive_positions = [guides.find(value) for value in all_slugs]
+              checks = {
+                  'all_http_200': all(status == 200 for status in statuses.values()),
+                  'article_title': title in article,
+                  'article_canonical': f'https://sugargoovip.shop/{slug}' in article,
+                  'article_body': 'Treat the parcel as a shipping specification' in article and 'Track the handoff and learn from the completed shipment' in article,
+                  'article_word_count': '1,756 words' in article,
+                  'article_faq': 'Frequently asked questions' in article and article.count('<details>') >= 8,
+                  'article_not_home_fallback': 'Sugargoo Spreadsheet 2026' not in article,
+                  'article_wording_fixed': 'They do not automatically select everything that has arrived' not in article,
+                  'homepage_new_article': slug in latest,
+                  'homepage_exactly_three': latest.count('class="latest-guide-card') == 3,
+                  'homepage_newest_first': all(position >= 0 for position in latest_positions) and latest_positions == sorted(latest_positions),
+                  'homepage_no_old_fourth': 'guide-qc-photos.html' not in latest and 'guide-w2c-workflow.html' not in latest,
+                  'guides_all_five': all(value in guides for value in all_slugs),
+                  'guides_exactly_five_cards': guides.count('<article>') == 5,
+                  'guides_newest_first': all(position >= 0 for position in archive_positions) and archive_positions == sorted(archive_positions),
+                  'sitemap_article': slug in sitemap,
+                  'robots_sitemap': 'sitemap.xml' in robots.lower(),
+              }
+              last = {'attempt': attempt, 'statuses': statuses, 'checks': checks}
+              if all(checks.values()):
+                  result = last
+                  break
+              time.sleep(10)
+
+          report = {
+              'status': 'passed' if result else 'failed',
+              'verified_at': datetime.now(timezone.utc).isoformat(),
+              'article': urls['article'],
+              **(result or last),
+          }
+          Path('sugargoovip.shop/verification/quick-live-check.json').write_text(json.dumps(report, indent=2) + '\n', encoding='utf-8')
+          PY
+
+      - name: Commit quick-check report
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git pull --rebase origin main
+          git add sugargoovip.shop/verification/quick-live-check.json
+          git commit -m 'Record SugargooVIP quick live check'
+          git push origin HEAD:main
