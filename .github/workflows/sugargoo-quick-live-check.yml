@@ -5,6 +5,7 @@ on:
     branches: [main]
     paths:
       - '.github/workflows/sugargoo-quick-live-check.yml'
+      - 'sugargoovip.shop/quick-check-request.json'
   workflow_dispatch:
 
 permissions:
