@@ -1,0 +1,59 @@
+name: Fix CSSBuyVIP desktop navigation
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/fix-cssbuyvip-desktop-nav.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  fix-nav:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Patch desktop navigation spacing
+        shell: bash
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+
+          css_path = Path('cssbuyvip.net/assets/css/style.css')
+          js_path = Path('cssbuyvip.net/assets/js/main.js')
+          workflow_path = Path('.github/workflows/fix-cssbuyvip-desktop-nav.yml')
+
+          css = css_path.read_text(encoding='utf-8')
+          css = css.replace(
+              '.nav{height:70px;display:flex;align-items:center;gap:24px}',
+              '.nav{height:70px;display:flex;align-items:center;gap:18px}',
+              1,
+          )
+          css = css.replace(
+              '.nav-link{font-size:12px;font-weight:800}',
+              '.desktop-nav{display:flex;align-items:center;gap:18px;white-space:nowrap;flex-shrink:0}.nav-link{display:inline-flex;align-items:center;font-size:12px;font-weight:800;white-space:nowrap}',
+              1,
+          )
+          compact = '@media(max-width:1240px) and (min-width:1121px){.nav{gap:12px}.header-brand{width:148px}.header-brand img{width:140px}.desktop-nav{gap:11px}.nav-link{font-size:11px}.language-menu{width:158px}.visit{padding:10px 13px;font-size:11px}}\n'
+          if compact not in css:
+              css = css.replace('@media(max-width:1000px){', compact + '@media(max-width:1120px){', 1)
+          else:
+              css = css.replace('@media(max-width:1000px){', '@media(max-width:1120px){', 1)
+          css_path.write_text(css, encoding='utf-8')
+
+          js = js_path.read_text(encoding='utf-8')
+          js = js.replace('window.innerWidth > 1000', 'window.innerWidth > 1120')
+          js_path.write_text(js, encoding='utf-8')
+
+          if workflow_path.exists():
+              workflow_path.unlink()
+          PY
+      - name: Commit navigation fix
+        shell: bash
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add cssbuyvip.net/assets/css/style.css cssbuyvip.net/assets/js/main.js .github/workflows/fix-cssbuyvip-desktop-nav.yml
+          git commit -m "Fix CSSBuyVIP desktop navigation spacing"
+          git push
