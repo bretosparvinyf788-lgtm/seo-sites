@@ -19,10 +19,11 @@ jobs:
         shell: bash
         run: |
           set -uo pipefail
-          ARTICLE='https://cssbuyvip.com/guides/cssbuy-restricted-item-route-filter-2026/'
-          HOME='https://cssbuyvip.com/'
-          ARCHIVE='https://cssbuyvip.com/all-seo-articles/'
-          SITEMAP='https://cssbuyvip.com/sitemap.xml'
+          STAMP="verify=20260730-$(date +%s)"
+          ARTICLE="https://cssbuyvip.com/guides/cssbuy-restricted-item-route-filter-2026/?$STAMP"
+          HOME="https://cssbuyvip.com/?$STAMP"
+          ARCHIVE="https://cssbuyvip.com/all-seo-articles/?$STAMP"
+          SITEMAP="https://cssbuyvip.com/sitemap.xml?$STAMP"
           article_code=$(curl -L -sS -o /tmp/article.html -w '%{http_code}' --max-time 30 "$ARTICLE" || true)
           home_code=$(curl -L -sS -o /tmp/home.html -w '%{http_code}' --max-time 30 "$HOME" || true)
           archive_code=$(curl -L -sS -o /tmp/archive.html -w '%{http_code}' --max-time 30 "$ARCHIVE" || true)
@@ -70,4 +71,4 @@ jobs:
           name: cssbuyvip-com-july30-diagnostic
           path: diagnostic/report.json
 
-# Pull request trigger for one-shot live and local diagnostics.
+# Pull request trigger for cache-busted live and local diagnostics.
