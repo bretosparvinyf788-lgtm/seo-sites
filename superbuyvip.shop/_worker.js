@@ -1,8 +1,10 @@
+const BUILD='20260730-1748';
 const SECURITY_HEADERS={
   'x-content-type-options':'nosniff',
   'referrer-policy':'strict-origin-when-cross-origin',
   'permissions-policy':'camera=(), microphone=(), geolocation=()',
-  'x-frame-options':'SAMEORIGIN'
+  'x-frame-options':'SAMEORIGIN',
+  'x-superbuyvip-build':BUILD
 };
 
 const HASH_REPLACEMENTS=[
@@ -26,7 +28,9 @@ const HASH_REPLACEMENTS=[
 function headersFor(response){
   const headers=new Headers(response.headers);
   for(const[name,value]of Object.entries(SECURITY_HEADERS))headers.set(name,value);
-  if((headers.get('content-type')||'').includes('text/html'))headers.set('cache-control','public, max-age=0, must-revalidate');
+  headers.set('cache-control','no-cache, no-store, must-revalidate');
+  headers.set('pragma','no-cache');
+  headers.set('expires','0');
   return headers;
 }
 
@@ -37,8 +41,11 @@ async function transformHtml(response,method){
   }
 
   html=html
-    .replace(/<a class="nav-cta" href="[^"]*"(?: target="_blank")?(?: rel="noopener")?>Browse Finds ↗<\/a>/g,'<a class="nav-cta" href="https://kakobuymake.com/" rel="noopener">Browse Finds ↗</a>')
-    .replace('</head>','<link rel="stylesheet" href="/assets/header-fix.css?v=20260730-1">\n</head>');
+    .replace(/<a class="nav-cta" href="[^"]*"(?: target="_blank")?(?: rel="noopener")?>Browse Finds ↗<\/a>/g,'<a class="nav-cta" href="https://kakobuymake.com/">Browse Finds ↗</a>')
+    .replace(/href="\/assets\/site\.css(?:\?[^\"]*)?"/g,`href="/assets/site.css?v=${BUILD}"`)
+    .replace(/src="\/assets\/site\.js(?:\?[^\"]*)?"/g,`src="/assets/site.js?v=${BUILD}"`)
+    .replace(/<link rel="stylesheet" href="\/assets\/header-fix\.css[^\"]*">\s*/g,'')
+    .replace('</head>',`<link rel="stylesheet" href="/assets/header-fix.css?v=${BUILD}">\n</head>`);
 
   return new Response(method==='HEAD'?null:html,{
     status:response.status,
