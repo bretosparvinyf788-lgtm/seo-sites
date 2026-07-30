@@ -1,0 +1,119 @@
+name: Publish CSSBuy Daily SEO 2026-07-30
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - '.github/cssbuy-sync-guides-all-langs-trigger-20260730-replacement-order-map.txt'
+      - '.github/cssbuy-article-20260730/*.json'
+      - '.github/workflows/cssbuy-publish-20260730.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: cssbuy-publish-20260730
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out main
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Sync latest main branch
+        run: git pull --rebase origin main
+
+      - name: Publish article into all language arrays
+        run: python3 cssbuyvip/tools/sync_latest_guides.py
+
+      - name: Sort all guide arrays newest first
+        run: |
+          python3 - <<'PY'
+          import json
+          import re
+          from pathlib import Path
+
+          path = Path('cssbuyvip/index.html')
+          html = path.read_text(encoding='utf-8')
+          match = re.search(r"const SITE_DATA = (\{.*?\});\nlet currentLang", html, re.S)
+          if not match:
+              raise SystemExit('SITE_DATA not found')
+          data = json.loads(match.group(1))
+          for lang in ('en', 'zh', 'es', 'de', 'pt'):
+              articles = data['articles'][lang]
+              articles.sort(key=lambda item: item.get('publish_date', ''), reverse=True)
+          new_json = json.dumps(data, ensure_ascii=False, separators=(',', ':'))
+          html = html[:match.start(1)] + new_json + html[match.end(1):]
+          path.write_text(html, encoding='utf-8')
+          PY
+
+      - name: Validate homepage, article order and word count
+        run: |
+          python3 - <<'PY'
+          import json
+          import re
+          from pathlib import Path
+
+          slug = 'cssbuy-replacement-order-map-stock-substitutions-rebuys-2026'
+          path = Path('cssbuyvip/index.html')
+          html = path.read_text(encoding='utf-8')
+          match = re.search(r"const SITE_DATA = (\{.*?\});\nlet currentLang", html, re.S)
+          if not match:
+              raise SystemExit('SITE_DATA not found')
+          data = json.loads(match.group(1))
+          for lang in ('en', 'zh', 'es', 'de', 'pt'):
+              articles = data['articles'][lang]
+              if not articles or articles[0].get('slug') != slug:
+                  raise SystemExit(f'{lang}: latest article is not first')
+              first_three = articles[:3]
+              keys = [a.get('slug') or a.get('key') for a in first_three]
+              dates = [a.get('publish_date', '') for a in first_three]
+              if len(first_three) != 3 or len(keys) != len(set(keys)):
+                  raise SystemExit(f'{lang}: latest three are not distinct')
+              if dates != sorted(dates, reverse=True):
+                  raise SystemExit(f'{lang}: latest three are not newest first: {dates}')
+          english = data['articles']['en'][0]
+          words = sum(len(str(section[1]).split()) for section in english['body'])
+          if not 1200 <= words <= 1800:
+              raise SystemExit(f'English body word count out of range: {words}')
+          for field in ('seo_title', 'seo_description', 'tags', 'slug', 'publish_date'):
+              if not english.get(field):
+                  raise SystemExit(f'English article missing {field}')
+          required = (
+              'SITE_DATA.articles[currentLang].slice(0,3)',
+              'SITE_DATA.articles[currentLang].map',
+              'function home()',
+              'function guides()',
+              'function article()',
+              'category-grid',
+              'product-grid',
+              'featured-products',
+              'latest-guides',
+              slug,
+          )
+          for marker in required:
+              if marker not in html:
+                  raise SystemExit(f'Missing marker: {marker}')
+          if '/blog/' in json.dumps(english):
+              raise SystemExit('Article payload contains /blog/')
+          print(f'Validated newest-first publication and {words} English words; dates: {[a.get("publish_date") for a in data["articles"]["en"][:3]]}')
+          PY
+
+      - name: Commit only homepage article data
+        run: |
+          git config user.name "actions-user"
+          git config user.email "actions@github.com"
+          git add cssbuyvip/index.html
+          if git diff --cached --quiet; then
+            echo "Article already published"
+            exit 0
+          fi
+          git commit -m "Publish July 30 CSSBuy replacement order guide"
+          git push origin HEAD:main
