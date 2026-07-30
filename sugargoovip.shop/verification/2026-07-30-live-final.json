@@ -1,0 +1,57 @@
+{
+  "checked_at": "2026-07-30T03:22:34.542530+00:00",
+  "attempt": 1,
+  "passed": true,
+  "pages": {
+    "article": {
+      "requested_url": "https://sugargoovip.shop/guide-sugargoo-packing-center-parcel.html",
+      "status": 200,
+      "final_url": "https://sugargoovip.shop/guide-sugargoo-packing-center-parcel?verify=20260730-final-1-1785381753",
+      "bytes": 25531
+    },
+    "homepage": {
+      "requested_url": "https://sugargoovip.shop/",
+      "status": 200,
+      "final_url": "https://sugargoovip.shop/?verify=20260730-final-1-1785381753",
+      "bytes": 52121
+    },
+    "guides": {
+      "requested_url": "https://sugargoovip.shop/guides.html",
+      "status": 200,
+      "final_url": "https://sugargoovip.shop/guides?verify=20260730-final-1-1785381753",
+      "bytes": 8602
+    },
+    "sitemap": {
+      "requested_url": "https://sugargoovip.shop/sitemap.xml",
+      "status": 200,
+      "final_url": "https://sugargoovip.shop/sitemap.xml?verify=20260730-final-1-1785381754",
+      "bytes": 2230
+    },
+    "robots": {
+      "requested_url": "https://sugargoovip.shop/robots.txt",
+      "status": 200,
+      "final_url": "https://sugargoovip.shop/robots.txt?verify=20260730-final-1-1785381754",
+      "bytes": 1905
+    }
+  },
+  "checks": {
+    "all_http_200": true,
+    "article_title": true,
+    "article_canonical": true,
+    "article_first_section": true,
+    "article_last_section": true,
+    "article_word_count": true,
+    "article_faq_visible": true,
+    "article_not_homepage_fallback": true,
+    "article_wording_corrected": true,
+    "homepage_latest_section_found": true,
+    "homepage_exactly_three_cards": true,
+    "homepage_newest_first": true,
+    "homepage_excludes_older_cards": true,
+    "guides_contains_all_five": true,
+    "guides_exactly_five_cards": true,
+    "guides_newest_first": true,
+    "sitemap_contains_article": true,
+    "robots_references_sitemap": true
+  }
+}
