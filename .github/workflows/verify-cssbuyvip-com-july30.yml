@@ -35,11 +35,12 @@ jobs:
           ARCHIVE='https://cssbuyvip.com/all-seo-articles/'
           SITEMAP='https://cssbuyvip.com/sitemap.xml'
           success=0
-          for attempt in $(seq 1 24); do
-            article_code=$(curl -L -sS -o /tmp/article.html -w '%{http_code}' --max-time 30 "$ARTICLE" || true)
-            home_code=$(curl -L -sS -o /tmp/home.html -w '%{http_code}' --max-time 30 "$HOME" || true)
-            archive_code=$(curl -L -sS -o /tmp/archive.html -w '%{http_code}' --max-time 30 "$ARCHIVE" || true)
-            sitemap_code=$(curl -L -sS -o /tmp/sitemap.xml -w '%{http_code}' --max-time 30 "$SITEMAP" || true)
+          for attempt in $(seq 1 90); do
+            stamp="?verify=20260730-long-${attempt}-$(date +%s)"
+            article_code=$(curl -L -sS -o /tmp/article.html -w '%{http_code}' --max-time 30 "${ARTICLE}${stamp}" || true)
+            home_code=$(curl -L -sS -o /tmp/home.html -w '%{http_code}' --max-time 30 "${HOME}${stamp}" || true)
+            archive_code=$(curl -L -sS -o /tmp/archive.html -w '%{http_code}' --max-time 30 "${ARCHIVE}${stamp}" || true)
+            sitemap_code=$(curl -L -sS -o /tmp/sitemap.xml -w '%{http_code}' --max-time 30 "${SITEMAP}${stamp}" || true)
             if ARTICLE_CODE="$article_code" HOME_CODE="$home_code" ARCHIVE_CODE="$archive_code" SITEMAP_CODE="$sitemap_code" python3 - <<'PY'
           import os, re, sys
           from pathlib import Path
@@ -109,9 +110,10 @@ jobs:
             'no_visible_sources_section': True
           }
           Path('.verification/cssbuyvip-com-2026-07-30.json').write_text(json.dumps(data, indent=2) + '\n', encoding='utf-8')
+          print(json.dumps(data, indent=2))
           PY
           else
-            printf '{"status":"failed","reason":"Production checks did not pass within retry window"}\n' > .verification/cssbuyvip-com-2026-07-30.json
+            printf '{"status":"failed","reason":"Production checks did not pass within extended retry window"}\n' > .verification/cssbuyvip-com-2026-07-30.json
             exit 1
           fi
       - name: Commit verification record
@@ -123,3 +125,5 @@ jobs:
           git add .verification/cssbuyvip-com-2026-07-30.json
           git commit -m "Verify July 30 cssbuyvip.com article in production" || exit 0
           git push origin HEAD:main
+
+# Extended cache-busted production check.
