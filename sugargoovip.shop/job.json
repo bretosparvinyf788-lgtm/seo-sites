@@ -1,12 +1,7 @@
 {
-  "action": "publish_article",
-  "requested_at": "2026-07-31T01:42:00Z",
-  "parts": [
-    "jobs/2026-07-31-diy-order.part1",
-    "jobs/2026-07-31-diy-order.part2",
-    "jobs/2026-07-31-diy-order.part3",
-    "jobs/2026-07-31-diy-order.part4",
-    "jobs/2026-07-31-diy-order.part5",
-    "jobs/2026-07-31-diy-order.part6"
-  ]
+  "action": "verify_article",
+  "requested_at": "2026-07-31T01:52:00Z",
+  "article": "guide-sugargoo-diy-order-status.html",
+  "expected_word_count": 1597,
+  "expected_guide_count": 6
 }
