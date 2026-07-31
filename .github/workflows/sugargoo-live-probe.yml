@@ -1,0 +1,106 @@
+name: Sugargoo live publication probe
+
+on:
+  push:
+    paths:
+      - 'sugargoovip.shop/probe-request.json'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: sugargoo-live-probe
+  cancel-in-progress: true
+
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Fetch live pages and build report
+        shell: bash
+        run: |
+          set -u
+          mkdir -p /tmp/sugargoo-probe
+          CACHE="probe-${GITHUB_RUN_ID}"
+          ARTICLE_STATUS=$(curl -L --connect-timeout 10 --max-time 30 -sS -o /tmp/sugargoo-probe/article.html -w '%{http_code}' "https://sugargoovip.shop/guide-sugargoo-diy-order-status.html?${CACHE}" || echo 000)
+          HOME_STATUS=$(curl -L --connect-timeout 10 --max-time 30 -sS -o /tmp/sugargoo-probe/home.html -w '%{http_code}' "https://sugargoovip.shop/?${CACHE}" || echo 000)
+          GUIDES_STATUS=$(curl -L --connect-timeout 10 --max-time 30 -sS -o /tmp/sugargoo-probe/guides.html -w '%{http_code}' "https://sugargoovip.shop/guides.html?${CACHE}" || echo 000)
+          SITEMAP_STATUS=$(curl -L --connect-timeout 10 --max-time 30 -sS -o /tmp/sugargoo-probe/sitemap.xml -w '%{http_code}' "https://sugargoovip.shop/sitemap.xml?${CACHE}" || echo 000)
+          ROBOTS_STATUS=$(curl -L --connect-timeout 10 --max-time 30 -sS -o /tmp/sugargoo-probe/robots.txt -w '%{http_code}' "https://sugargoovip.shop/robots.txt?${CACHE}" || echo 000)
+          export ARTICLE_STATUS HOME_STATUS GUIDES_STATUS SITEMAP_STATUS ROBOTS_STATUS
+          python3 - <<'PY'
+import json, os
+from datetime import datetime, timezone
+from pathlib import Path
+
+root = Path('/tmp/sugargoo-probe')
+def read(name):
+    p = root / name
+    return p.read_text(encoding='utf-8', errors='replace') if p.exists() else ''
+
+article = read('article.html')
+home = read('home.html')
+guides = read('guides.html')
+sitemap = read('sitemap.xml')
+robots = read('robots.txt')
+slug = 'guide-sugargoo-diy-order-status.html'
+title = 'Sugargoo DIY Order & Order Status Guide 2026: Control the Purchase Before Warehouse'
+latest_start = home.find('<section aria-labelledby="latest-guides-title"')
+latest_end = home.find('<section class="finder', latest_start) if latest_start >= 0 else -1
+latest = home[latest_start:latest_end] if latest_start >= 0 and latest_end > latest_start else ''
+latest_slugs = [slug, 'guide-sugargoo-packing-center-parcel.html', 'guide-sugargoo-returns-exchanges.html']
+all_slugs = [slug, 'guide-sugargoo-packing-center-parcel.html', 'guide-sugargoo-returns-exchanges.html', 'guide-shipping-cost.html', 'guide-qc-photos.html', 'guide-w2c-workflow.html']
+positions = [latest.find(x) for x in latest_slugs]
+archive_positions = [guides.find(x) for x in all_slugs]
+checks = {
+  'article_title': title in article,
+  'article_canonical': f'https://sugargoovip.shop/{slug}' in article,
+  'article_body': 'Start with an order brief, not a shopping link' in article and 'Turn each order into a reusable record' in article,
+  'article_word_count': '1,597 words' in article,
+  'article_faq': 'Frequently asked questions' in article and article.count('<details>') >= 8,
+  'article_not_home_fallback': 'Sugargoo Spreadsheet 2026' not in article,
+  'homepage_exactly_three_cards': latest.count('class="latest-guide-card') == 3,
+  'homepage_newest_first': all(p >= 0 for p in positions) and positions == sorted(positions),
+  'guides_has_all_articles': all(x in guides for x in all_slugs),
+  'guides_exactly_six_cards': guides.count('<article>') == 6,
+  'guides_newest_first': all(p >= 0 for p in archive_positions) and archive_positions == sorted(archive_positions),
+  'sitemap_has_article': slug in sitemap,
+  'robots_has_sitemap': 'sitemap.xml' in robots.lower(),
+}
+http_status = {
+  'article': os.environ['ARTICLE_STATUS'],
+  'homepage': os.environ['HOME_STATUS'],
+  'guides': os.environ['GUIDES_STATUS'],
+  'sitemap': os.environ['SITEMAP_STATUS'],
+  'robots': os.environ['ROBOTS_STATUS'],
+}
+report = {
+  'status': 'passed' if all(v == '200' for v in http_status.values()) and all(checks.values()) else 'failed',
+  'verified_at': datetime.now(timezone.utc).isoformat(),
+  'article': f'https://sugargoovip.shop/{slug}',
+  'http_status': http_status,
+  'checks': checks,
+  'lengths': {name: len(value) for name, value in {'article': article, 'homepage': home, 'guides': guides, 'sitemap': sitemap, 'robots': robots}.items()},
+}
+Path('sugargoovip.shop/live-probe.json').write_text(json.dumps(report, indent=2) + '\n', encoding='utf-8')
+PY
+
+      - name: Commit probe report
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add sugargoovip.shop/live-probe.json
+          git commit -m 'Record Sugargoo live publication probe [skip ci]'
+          for attempt in 1 2 3 4 5; do
+            git pull --rebase origin main
+            if git push origin HEAD:main; then exit 0; fi
+            sleep 3
+          done
+          exit 1
