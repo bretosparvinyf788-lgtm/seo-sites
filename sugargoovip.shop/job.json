@@ -1,5 +1,12 @@
 {
-  "action": "publish",
-  "requested_at": "2026-07-30T01:58:00Z",
-  "article": "guide-sugargoo-packing-center-parcel.html"
+  "action": "publish_article",
+  "requested_at": "2026-07-31T01:42:00Z",
+  "parts": [
+    "jobs/2026-07-31-diy-order.part1",
+    "jobs/2026-07-31-diy-order.part2",
+    "jobs/2026-07-31-diy-order.part3",
+    "jobs/2026-07-31-diy-order.part4",
+    "jobs/2026-07-31-diy-order.part5",
+    "jobs/2026-07-31-diy-order.part6"
+  ]
 }
