@@ -1,0 +1,35 @@
+problem."
+      ],
+      [
+        "Turn each order into a reusable record",
+        "After approval, record the actual seller price, domestic freight, time from payment to purchase, seller dispatch time, warehouse arrival date, QC result, and whether the link required DIY Order. This separates seller behavior from platform behavior and helps identify the real cause of a delay or mistake.\n\nFor repeat purchases, open the live listing again. Price, stock, and option structure may have changed. Use the previous order as a checklist, not proof that the current product is identical.\n\nA controlled Sugargoo purchase has four evidence points: the live listing, the order brief, the status history, and the warehouse result. The normal link flow handles stable listings; DIY Order rescues products automation cannot read; status checks show when intervention is still possible; and QC compares visible delivery with the original instruction. This system cannot remove every seller or shipping risk, but it prevents avoidable ambiguity from becoming an international parcel problem."
+      ]
+    ],
+    "faq": [
+      [
+        "What is Sugargoo DIY Order?",
+        "It is the manual submission route for products that cannot be imported correctly from a link or come from a less common source."
+      ],
+      [
+        "Should I use DIY Order for every purchase?",
+        "No. Use the normal link flow when the listing loads correctly. Use DIY Order when the parser fails or the deal needs manual details."
+      ],
+      [
+        "What belongs in the remarks field?",
+        "State the exact variation, quantity, model or size, required accessories, customization, substitution rule, and any point that must be confirmed."
+      ],
+      [
+        "What does Purchasing mean?",
+        "The agent is generally buying the item or coordinating with the seller. Report errors quickly, but cancellation can depend on how far the seller has progressed."
+      ],
+      [
+        "Can I cancel after the seller ships?",
+        "At the Shipped stage, the issue usually becomes a domestic return or exchange request rather than a simple cancellation."
+      ],
+      [
+        "Do five free QC photos guarantee correctness?",
+        "No. They support visible checks but cannot guarantee authenticity, fit, durability, or every function."
+      ],
+      [
+        "How can I reduce communication delays?",
+        "Answer all open questions in one message with the order number, acceptable option, price or 
