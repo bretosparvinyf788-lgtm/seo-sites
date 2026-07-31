@@ -1,0 +1,31 @@
+{
+  "action": "publish_article",
+  "requested_at": "2026-07-31T01:35:00Z",
+  "article": {
+    "title": "Sugargoo DIY Order & Order Status Guide 2026: Control the Purchase Before Warehouse",
+    "short_title": "Sugargoo DIY Order & Status Guide 2026",
+    "description": "Learn when to use Sugargoo DIY Order, how to write precise purchase notes, read order statuses, manage seller questions and verify warehouse arrival.",
+    "slug": "guide-sugargoo-diy-order-status.html",
+    "date": "2026-07-31",
+    "display_date": "July 31, 2026",
+    "read_time": "12 min read",
+    "label": "DIY Order · Fact checked",
+    "deck": "A practical control system for manual links, precise purchase instructions, status decisions, seller communication and warehouse verification.",
+    "intro": "A product link tells an agent where to look. A controlled order tells the agent exactly what to buy, when to stop, and how to verify the result.",
+    "tags": [
+      "Sugargoo DIY Order",
+      "Sugargoo order status",
+      "Sugargoo manual order",
+      "Sugargoo purchasing status",
+      "unrecognized Taobao link",
+      "Sugargoo seller communication",
+      "reverse purchasing workflow"
+    ],
+    "sections": [
+      [
+        "Start with an order brief, not a shopping link",
+        "Many failed agent purchases begin with an incomplete instruction. A buyer pastes a link, assumes the listing explains everything, and notices the ambiguity only after the agent has paid the seller. Changing a color, size, bundle, logo option, or accessory can then require cancellation, seller approval, or a domestic return.\n\nTreat every Sugargoo purchase as a small order brief. Before paying, record the product name, seller, selected variation, quantity, visible price, domestic shipping charge, and any detail that would make the item unacceptable. Save a screenshot of the listing and chosen option because pages can change or disappear.\n\nSugargoo’s current official flow starts with pasting a Taobao, Tmall, or 1688 link, selecting size, color, and quantity, then paying for the order. The agent confirms the request with the seller and buys on the customer’s behalf. That process is efficient when the page loads correctly. Your responsibility is to make the handoff unambiguous before purchasing begins."
+      ],
+      [
+        "Use the normal link flow when the listing is stable",
+        "The standard link route should be the first choice when Sugargoo reads the product page correctly. It keeps the listing, av
