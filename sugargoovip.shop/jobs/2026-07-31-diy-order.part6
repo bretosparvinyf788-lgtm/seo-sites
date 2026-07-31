@@ -1,0 +1,49 @@
+freight limit, and action to take if unavailable."
+      ],
+      [
+        "What records should I keep?",
+        "Save the live listing, selected option, screenshots, notes, status history, seller messages, warehouse arrival, QC images, and final decision."
+      ]
+    ],
+    "word_count": 1597
+  },
+  "guide": {
+    "category": "DIY Order & status guide",
+    "cover": "w2c",
+    "home_label": "DIY Order",
+    "home_detail": "Manual links · Status · Seller messages",
+    "home_summary": "How to submit unrecognized product links, write precise purchase notes, manage order statuses and verify warehouse arrival.",
+    "home_link": "Read DIY Order guide"
+  },
+  "existing_prepend": [
+    {
+      "title": "Sugargoo Packing Center Guide 2026: Build a Route-Ready Parcel Before You Pay",
+      "short_title": "Sugargoo Packing Center Guide 2026",
+      "slug": "guide-sugargoo-packing-center-parcel.html",
+      "date": "2026-07-30",
+      "display_date": "July 30, 2026",
+      "read_time": "12 min read",
+      "word_count": "1,756",
+      "category": "Packing Center guide",
+      "cover": "shipping",
+      "summary": "A practical Sugargoo Packing Center workflow for consolidating warehouse items, checking route restrictions, estimating chargeable weight and reviewing a parcel before international shipping.",
+      "home_label": "Packing Center",
+      "home_detail": "Contents · Route · Final review",
+      "home_summary": "A route-first checklist for consolidating approved items, controlling parcel size and reviewing every detail before payment.",
+      "home_link": "Read packing guide"
+    }
+  ],
+  "official_citations": [
+    "https://blog.sugargoo.com/how-to-use-diy-order-on-sugargoo/",
+    "https://blog.sugargoo.com/how-to-cancel-order-on-sugargoo/",
+    "https://blog.sugargoo.com/how-to-use-taobao-product-link-with-sugargoo/",
+    "https://blog.sugargoo.com/about/"
+  ],
+  "facts_date": "July 31, 2026",
+  "article_number": 6,
+  "next_link": "guide-sugargoo-packing-center-parcel.html",
+  "next_text": "Next: build a route-ready parcel after warehouse approval →",
+  "guides_title": "Sugargoo Buyer Guides 2026: DIY Order, Packing Center, Returns, Shipping, QC and W2C",
+  "guides_description": "Read six original, fact-checked Sugargoo buyer guides covering DIY orders, Packing Center planning, returns, shipping costs, QC photos and W2C.",
+  "home_intro": "Three practical buyer guides covering DIY orders, parcel planning and warehouse returns. Newest articles appear first."
+}
