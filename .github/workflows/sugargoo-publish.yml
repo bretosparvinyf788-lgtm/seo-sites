@@ -22,8 +22,8 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Run archive tool
-        run: python3 sugargoovip.shop/archive_tool.py
+      - name: Run article publisher
+        run: python3 sugargoovip.shop/publish_job.py
 
       - name: Commit generated archive changes
         shell: bash
