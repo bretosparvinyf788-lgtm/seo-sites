@@ -2,8 +2,7 @@ name: Sugargoo PR live check
 
 on:
   pull_request:
-    paths:
-      - 'sugargoovip.shop/pr-live-check.txt'
+    types: [opened, synchronize, reopened]
 
 permissions:
   contents: read
