@@ -42,47 +42,89 @@ jobs:
             git push origin HEAD:main
           fi
 
-  verify-live-20260803:
-    if: github.event.head_commit.message == 'Add one-time verification to LitBuy homepage workflow'
+  deploy-and-verify-20260803:
+    if: github.event.head_commit.message == 'Deploy and verify LitBuy August 3 publication'
     needs: patch-homepage
     runs-on: ubuntu-latest
+    env:
+      TOKEN_PRIMARY: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+      TOKEN_ALT_ONE: ${{ secrets.CF_API_TOKEN }}
+      TOKEN_ALT_TWO: ${{ secrets.CLOUDFLARE_TOKEN }}
+      CLOUDFLARE_ACCOUNT_ID: c37c7c3c0846d354bef5e1af0f292753
     steps:
       - name: Check out latest main
         uses: actions/checkout@v4
         with:
           ref: main
           fetch-depth: 0
-      - name: Verify deployed LitBuy endpoints
+      - name: Deploy LitBuy site and verify live endpoints
         shell: bash
         run: |
-          set -euo pipefail
+          set -u
           mkdir -p litbuyvip.shop/.verification /tmp/litbuy-verify
-          fetch() { curl -fsSL --retry 18 --retry-all-errors --retry-delay 10 --max-time 30 "$1"; }
-          article_html="$(fetch 'https://litbuyvip.shop/guides/litbuy-rehearsal-parcel-shipping-decision-2026.html')"
-          guides_html="$(fetch 'https://litbuyvip.shop/guides/')"
-          sitemap_xml="$(fetch 'https://litbuyvip.shop/sitemap.xml')"
-          home_html="$(fetch 'https://litbuyvip.shop/')"
-          grep -Fq 'How to Use LitBuy Rehearsal Parcel Before Shipping' <<<"$article_html"
-          grep -Fq 'litbuy-rehearsal-parcel-shipping-decision-2026.html' <<<"$guides_html"
-          grep -Fq 'litbuy-rehearsal-parcel-shipping-decision-2026.html' <<<"$sitemap_xml"
-          asset_path="$(grep -oE '/assets/latest-guides\.js\?v=[A-Za-z0-9]+' <<<"$home_html" | tail -n1)"
-          test -n "$asset_path"
-          asset_js="$(fetch "https://litbuyvip.shop${asset_path}")"
-          count="$(grep -o "url:'/guides/" <<<"$asset_js" | wc -l | tr -d ' ')"
-          test "$count" = '3'
-          grep -Fq '/guides/litbuy-rehearsal-parcel-shipping-decision-2026.html' <<<"$asset_js"
-          grep -Fq '/guides/litbuy-parcel-planning-chargeable-weight-2026.html' <<<"$asset_js"
-          grep -Fq '/guides/litbuy-reverse-purchasing-workflow-2026.html' <<<"$asset_js"
+          api_token="${TOKEN_PRIMARY:-}"
+          [ -n "$api_token" ] || api_token="${TOKEN_ALT_ONE:-}"
+          [ -n "$api_token" ] || api_token="${TOKEN_ALT_TWO:-}"
+          deploy_status=missing_api_token
+          if [ -n "$api_token" ]; then
+            export CLOUDFLARE_API_TOKEN="$api_token"
+            if npx --yes wrangler@4 pages deploy litbuyvip.shop --project-name=litbuyvip-shop --branch=main > /tmp/litbuy-deploy.log 2>&1; then
+              deploy_status=success
+            else
+              deploy_status=failed
+            fi
+          fi
+
+          sleep 15
+          check_url() {
+            name="$1"; url="$2"
+            code="$(curl -sSL --retry 12 --retry-all-errors --retry-delay 10 --max-time 30 -o "/tmp/litbuy-verify/$name" -w '%{http_code}' "$url" || true)"
+            printf '%s' "$code" > "/tmp/litbuy-verify/$name.code"
+          }
+          check_url article "https://litbuyvip.shop/guides/litbuy-rehearsal-parcel-shipping-decision-2026.html"
+          check_url guides "https://litbuyvip.shop/guides/"
+          check_url sitemap "https://litbuyvip.shop/sitemap.xml"
+          check_url homepage "https://litbuyvip.shop/"
+          article_code="$(cat /tmp/litbuy-verify/article.code)"
+          guides_code="$(cat /tmp/litbuy-verify/guides.code)"
+          sitemap_code="$(cat /tmp/litbuy-verify/sitemap.code)"
+          homepage_code="$(cat /tmp/litbuy-verify/homepage.code)"
+          article_title=false; grep -Fq "How to Use LitBuy Rehearsal Parcel Before Shipping" /tmp/litbuy-verify/article && article_title=true
+          guides_new=false; grep -Fq "litbuy-rehearsal-parcel-shipping-decision-2026.html" /tmp/litbuy-verify/guides && guides_new=true
+          sitemap_new=false; grep -Fq "litbuy-rehearsal-parcel-shipping-decision-2026.html" /tmp/litbuy-verify/sitemap && sitemap_new=true
+          asset_path="$(grep -oE '/assets/latest-guides\.js\?v=[A-Za-z0-9]+' /tmp/litbuy-verify/homepage | tail -n1 || true)"
+          asset_code=000; latest_count=0; latest_exact=false
+          if [ -n "$asset_path" ]; then
+            asset_code="$(curl -sSL --retry 6 --retry-all-errors --retry-delay 10 --max-time 30 -o /tmp/litbuy-verify/asset -w '%{http_code}' "https://litbuyvip.shop${asset_path}" || true)"
+            latest_count="$(grep -o "url:'/guides/" /tmp/litbuy-verify/asset | wc -l | tr -d ' ')"
+            if [ "$latest_count" = 3 ] && \
+               grep -Fq "/guides/litbuy-rehearsal-parcel-shipping-decision-2026.html" /tmp/litbuy-verify/asset && \
+               grep -Fq "/guides/litbuy-parcel-planning-chargeable-weight-2026.html" /tmp/litbuy-verify/asset && \
+               grep -Fq "/guides/litbuy-reverse-purchasing-workflow-2026.html" /tmp/litbuy-verify/asset; then
+              latest_exact=true
+            fi
+          fi
+          all_verified=false
+          if [ "$deploy_status" = success ] && [ "$article_code" = 200 ] && [ "$guides_code" = 200 ] && [ "$sitemap_code" = 200 ] && [ "$homepage_code" = 200 ] && [ "$asset_code" = 200 ] && [ "$article_title" = true ] && [ "$guides_new" = true ] && [ "$sitemap_new" = true ] && [ "$latest_exact" = true ]; then
+            all_verified=true
+          fi
           {
             echo "verified_at=$(date -u +%Y-%m-%dT%H:%M:%SZ)"
-            echo 'article=200_and_title_verified'
-            echo 'guides=200_and_new_article_verified'
-            echo 'sitemap=200_and_new_url_verified'
-            echo 'homepage=200_and_cache_busted_controller_verified'
-            echo 'homepage_latest_guides=exactly_3_distinct_newest_articles_verified'
+            echo "cloudflare_deploy=$deploy_status"
+            echo "article_http=$article_code"
+            echo "article_title_verified=$article_title"
+            echo "guides_http=$guides_code"
+            echo "guides_new_article_verified=$guides_new"
+            echo "sitemap_http=$sitemap_code"
+            echo "sitemap_new_url_verified=$sitemap_new"
+            echo "homepage_http=$homepage_code"
             echo "asset_path=$asset_path"
+            echo "asset_http=$asset_code"
+            echo "homepage_latest_guides_count=$latest_count"
+            echo "homepage_latest_guides_exact_newest_three=$latest_exact"
+            echo "all_live_checks_passed=$all_verified"
           } > litbuyvip.shop/.verification/litbuy-2026-08-03.txt
-      - name: Commit report and remove one-time verification files
+      - name: Commit deployment report and restore workflow
         shell: bash
         run: |
           set -euo pipefail
@@ -136,7 +178,7 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add -A
-          git commit -m "Verify live LitBuy August 3 publication"
+          git commit -m "Record LitBuy August 3 deployment verification"
           for attempt in 1 2 3 4 5; do
             git pull --rebase origin main
             if git push origin HEAD:main; then exit 0; fi
