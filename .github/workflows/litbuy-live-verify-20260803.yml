@@ -1,0 +1,59 @@
+name: LitBuy live verification 2026-08-03
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/litbuy-live-verify-20260803.yml"
+
+permissions:
+  contents: write
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - name: Wait for Pages deployment and verify endpoints
+        shell: bash
+        run: |
+          set -euo pipefail
+          article="https://litbuyvip.shop/guides/litbuy-rehearsal-parcel-shipping-decision-2026.html"
+          guides="https://litbuyvip.shop/guides/"
+          sitemap="https://litbuyvip.shop/sitemap.xml"
+          home="https://litbuyvip.shop/"
+          mkdir -p litbuyvip.shop/.verification
+          fetch() { curl -fsSL --retry 12 --retry-all-errors --retry-delay 10 --max-time 30 "$1"; }
+          article_html="$(fetch "$article")"
+          guides_html="$(fetch "$guides")"
+          sitemap_xml="$(fetch "$sitemap")"
+          home_html="$(fetch "$home")"
+          grep -Fq "How to Use LitBuy Rehearsal Parcel Before Shipping" <<<"$article_html"
+          grep -Fq "litbuy-rehearsal-parcel-shipping-decision-2026.html" <<<"$guides_html"
+          grep -Fq "litbuy-rehearsal-parcel-shipping-decision-2026.html" <<<"$sitemap_xml"
+          asset_path="$(grep -oE '/assets/latest-guides\.js\?v=[A-Za-z0-9]+' <<<"$home_html" | tail -n1)"
+          test -n "$asset_path"
+          asset_js="$(fetch "https://litbuyvip.shop${asset_path}")"
+          test "$(grep -o "url:'/guides/" <<<"$asset_js" | wc -l | tr -d ' ')" = "3"
+          grep -Fq "/guides/litbuy-rehearsal-parcel-shipping-decision-2026.html" <<<"$asset_js"
+          grep -Fq "/guides/litbuy-parcel-planning-chargeable-weight-2026.html" <<<"$asset_js"
+          grep -Fq "/guides/litbuy-reverse-purchasing-workflow-2026.html" <<<"$asset_js"
+          {
+            echo "verified_at=$(date -u +%Y-%m-%dT%H:%M:%SZ)"
+            echo "article=200_and_title_verified"
+            echo "guides=200_and_new_article_verified"
+            echo "sitemap=200_and_new_url_verified"
+            echo "homepage=200_and_cache_busted_controller_verified"
+            echo "homepage_latest_guides=exactly_3_distinct_newest_articles_verified"
+            echo "asset_path=$asset_path"
+          } > litbuyvip.shop/.verification/litbuy-2026-08-03.txt
+      - name: Commit verification report
+        shell: bash
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add litbuyvip.shop/.verification/litbuy-2026-08-03.txt
+          git commit -m "Verify live LitBuy August 3 publication"
+          git push origin main
