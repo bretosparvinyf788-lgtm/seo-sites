@@ -1,4 +1,5 @@
-verified_at=2026-08-03T01:30:21Z
+verified_at=2026-08-03T01:34:29Z
+cloudflare_deploy=missing_api_token
 article_http=200
 article_title_verified=false
 guides_http=200
