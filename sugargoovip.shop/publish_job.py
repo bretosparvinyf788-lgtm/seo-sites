@@ -2,6 +2,7 @@
 """Publish a SugargooVIP article described by job.json using the existing archive engine."""
 from __future__ import annotations
 
+import base64
 import importlib.util
 import json
 import re
@@ -11,6 +12,7 @@ ROOT = Path(__file__).resolve().parent
 JOB = ROOT / "job.json"
 ENGINE = ROOT / "archive_tool.py"
 
+
 def load_engine():
     spec = importlib.util.spec_from_file_location("sugargoo_archive_engine", ENGINE)
     if spec is None or spec.loader is None:
@@ -19,9 +21,13 @@ def load_engine():
     spec.loader.exec_module(module)
     return module
 
+
 def main() -> None:
     trigger = json.loads(JOB.read_text(encoding="utf-8"))
-    if trigger.get("parts"):
+    if trigger.get("payload_base64"):
+        encoded = (ROOT / trigger["payload_base64"]).read_text(encoding="utf-8")
+        job = json.loads(base64.b64decode(encoded).decode("utf-8"))
+    elif trigger.get("parts"):
         payload = "".join((ROOT / part).read_text(encoding="utf-8") for part in trigger["parts"])
         job = json.loads(payload)
     else:
@@ -68,6 +74,7 @@ def main() -> None:
     mod.all_guides = all_guides
 
     original_jsonld = mod.article_jsonld
+
     def article_jsonld():
         encoded = original_jsonld()
         data = json.loads(encoded)
@@ -77,9 +84,11 @@ def main() -> None:
                 if len(items) >= 3:
                     items[2]["name"] = article["short_title"]
         return json.dumps(data, ensure_ascii=False, separators=(",", ":"))
+
     mod.article_jsonld = article_jsonld
 
     original_render_article = mod.render_article
+
     def render_article():
         page = original_render_article()
         page = page.replace("Facts checked July 30, 2026", f"Facts checked {facts_date}")
@@ -99,9 +108,11 @@ def main() -> None:
             "Product availability, seller terms, payment conditions and service rules must be rechecked in the live account.",
         )
         return page
+
     mod.render_article = render_article
 
     original_render_home = mod.render_home_section
+
     def render_home_section():
         page = original_render_home()
         return re.sub(
@@ -111,9 +122,11 @@ def main() -> None:
             count=1,
             flags=re.S,
         )
+
     mod.render_home_section = render_home_section
 
     original_render_guides = mod.render_guides
+
     def render_guides():
         page = original_render_guides()
         count = len(all_guides())
@@ -135,6 +148,7 @@ def main() -> None:
             flags=re.S,
         )
         return page
+
     mod.render_guides = render_guides
 
     def patch_sitemap(root: Path) -> None:
@@ -149,9 +163,10 @@ def main() -> None:
                 raise RuntimeError("Sitemap insertion marker not found")
             xml = xml.replace(marker, entry + marker, 1)
         path.write_text(xml, encoding="utf-8")
-    mod.patch_sitemap = patch_sitemap
 
+    mod.patch_sitemap = patch_sitemap
     mod.publish()
+
 
 if __name__ == "__main__":
     main()
