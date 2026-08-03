@@ -1,3 +1,4 @@
+# Production verification trigger v2
 name: Verify cssbuyvip.com August 3 Article
 
 on:
@@ -88,7 +89,7 @@ jobs:
           done
           mkdir -p .verification
           if [ "$success" -eq 1 ]; then
-            ARTICLE_CODE="$article_code" HOME_CODE="$home_code" ARCHIVE_CODE="$archive_code" SITEMAP_CODE="$sitemap_code" python3 - <<'PY'
+            python3 - <<'PY'
           import json, re
           from html import unescape
           from pathlib import Path
