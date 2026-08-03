@@ -1,0 +1,40 @@
+name: Sugargoo publisher diagnostic
+
+on:
+  issues:
+    types: [opened]
+
+permissions:
+  issues: write
+  contents: read
+
+jobs:
+  diagnose:
+    if: startsWith(github.event.issue.title, 'Sugargoo diagnose 2026-08-03')
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Run publisher diagnostic
+        id: diagnostic
+        shell: bash
+        run: |
+          set +e
+          python3 sugargoovip.shop/publish_job.py > /tmp/publisher.log 2>&1
+          CODE=$?
+          echo "code=$CODE" >> "$GITHUB_OUTPUT"
+          tail -c 5500 /tmp/publisher.log > /tmp/publisher-tail.log
+          exit 0
+      - name: Comment diagnostic
+        if: always()
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require('fs');
+            const code = '${{ steps.diagnostic.outputs.code }}';
+            const log = fs.existsSync('/tmp/publisher-tail.log') ? fs.readFileSync('/tmp/publisher-tail.log', 'utf8') : 'No log file was produced.';
+            await github.rest.issues.createComment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.issue.number,
+              body: `Publisher exit code: **${code || 'unknown'}**\n\n\`\`\`text\n${log}\n\`\`\``
+            });
