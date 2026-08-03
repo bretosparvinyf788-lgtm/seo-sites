@@ -1,125 +1,87 @@
-name: Verify cssbuyvip.com July 30 Article
+name: Verify cssbuyvip.com August 3 Live Publication
 
 on:
-  push:
-    branches: [main]
-    paths:
-      - '.github/workflows/verify-cssbuyvip-com-july30.yml'
   pull_request:
     branches: [main]
     paths:
       - '.github/workflows/verify-cssbuyvip-com-july30.yml'
-  workflow_dispatch:
 
 permissions:
-  contents: write
+  contents: read
 
 concurrency:
-  group: verify-cssbuyvip-com-july30
+  group: verify-cssbuyvip-com-aug03-pr
   cancel-in-progress: false
 
 jobs:
   verify:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-        with:
-          ref: main
-          fetch-depth: 0
-      - name: Wait for production and verify pages
+      - name: Verify production article, homepage, archive and sitemap
         shell: bash
         run: |
           set -euo pipefail
-          ARTICLE='https://cssbuyvip.com/guides/cssbuy-restricted-item-route-filter-2026/'
+          ARTICLE='https://cssbuyvip.com/guides/cssbuy-delivery-day-evidence-protocol-2026/'
           HOME='https://cssbuyvip.com/'
           ARCHIVE='https://cssbuyvip.com/all-seo-articles/'
           SITEMAP='https://cssbuyvip.com/sitemap.xml'
-          success=0
-          for attempt in $(seq 1 24); do
+          for attempt in $(seq 1 12); do
             article_code=$(curl -L -sS -o /tmp/article.html -w '%{http_code}' --max-time 30 "$ARTICLE" || true)
             home_code=$(curl -L -sS -o /tmp/home.html -w '%{http_code}' --max-time 30 "$HOME" || true)
             archive_code=$(curl -L -sS -o /tmp/archive.html -w '%{http_code}' --max-time 30 "$ARCHIVE" || true)
             sitemap_code=$(curl -L -sS -o /tmp/sitemap.xml -w '%{http_code}' --max-time 30 "$SITEMAP" || true)
             if ARTICLE_CODE="$article_code" HOME_CODE="$home_code" ARCHIVE_CODE="$archive_code" SITEMAP_CODE="$sitemap_code" python3 - <<'PY'
-          import os, re, sys
+          import json, os, re, sys
+          from html import unescape
           from pathlib import Path
           article = Path('/tmp/article.html').read_text(encoding='utf-8', errors='ignore')
           home = Path('/tmp/home.html').read_text(encoding='utf-8', errors='ignore')
           archive = Path('/tmp/archive.html').read_text(encoding='utf-8', errors='ignore')
           sitemap = Path('/tmp/sitemap.xml').read_text(encoding='utf-8', errors='ignore')
-          slug = 'cssbuy-restricted-item-route-filter-2026'
-          visible = re.sub(r'<script[\s\S]*?</script>|<style[\s\S]*?</style>|<[^>]+>', ' ', article, flags=re.I)
-          word_count = len(re.findall(r"\b[\w’'-]+\b", visible))
+          slug = 'cssbuy-delivery-day-evidence-protocol-2026'
+          article_match = re.search(r'<article\b[^>]*>([\s\S]*?)</article>', article, re.I)
+          article_html = article_match.group(1) if article_match else ''
+          visible = re.sub(r'<script[\s\S]*?</script>|<style[\s\S]*?</style>|<[^>]+>', ' ', article_html, flags=re.I)
+          word_count = len(re.findall(r"\b[\w’'-]+\b", unescape(visible)))
+          latest_match = re.search(r'<section id="articles" class="panel">([\s\S]*?)</section>', home, re.I)
+          latest_html = latest_match.group(1) if latest_match else ''
+          latest_slugs = re.findall(r'href="/guides/([^/"]+)/"', latest_html)
           checks = {
-              'article_http_200': os.environ['ARTICLE_CODE'] == '200',
-              'home_http_200': os.environ['HOME_CODE'] == '200',
-              'archive_http_200': os.environ['ARCHIVE_CODE'] == '200',
-              'sitemap_http_200': os.environ['SITEMAP_CODE'] == '200',
-              'article_title': '<title>CSSBuy Restricted Items Guide 2026 | Shipping Route Filter</title>' in article,
-              'article_h1': 'CSSBuy Restricted Item Route Filter: Build a Shippable Haul Before Parcel Submission' in article,
-              'article_body': 'Build the route plan before you build the haul' in article and 'Run the final parcel release check' in article,
-              'article_faq': 'CSSBuy Restricted Item and Route FAQ' in article and article.count('<details>') >= 12,
-              'word_count_1500_2000': 1500 <= word_count <= 2000,
-              'not_home_fallback': 'Best CSSBuy Spreadsheet for QC-ready finds and smarter shipping' not in article,
-              'no_sources_box': not re.search(r'Official sources checked|>Sources<|>References<|官方消息来源|资料来源|核实来源', article, re.I),
-              'home_new_link': slug in home,
-              'home_latest_three': all(x in home for x in [slug, 'cssbuy-ship-for-me-intake-manifest-2026', 'cssbuy-buy-for-me-vs-ship-for-me-2026']),
-              'archive_new_link': slug in archive,
-              'sitemap_new_link': slug in sitemap,
+            'article_http_200': os.environ['ARTICLE_CODE'] == '200',
+            'homepage_http_200': os.environ['HOME_CODE'] == '200',
+            'archive_http_200': os.environ['ARCHIVE_CODE'] == '200',
+            'sitemap_http_200': os.environ['SITEMAP_CODE'] == '200',
+            'title_ok': '<title>CSSBuy Delivery Evidence Guide 2026 | Parcel Problems</title>' in article,
+            'h1_ok': 'CSSBuy Delivery-Day Evidence Protocol: Inspect, Record and Resolve Parcel Problems' in article,
+            'body_ok': 'The parcel is not finished when the tracking page says delivered' in article and 'The delivery-day decision sequence' in article,
+            'faq_ok': 'Frequently Asked Questions' in article and article.count('<details>') == 12,
+            'article_word_count_1500_2000': 1500 <= word_count <= 2000,
+            'not_homepage_fallback': 'Best CSSBuy Spreadsheet for QC-ready finds and smarter shipping' not in article,
+            'no_sources_section': not re.search(r'Official sources checked|>Sources<|>References<|官方消息来源|资料来源|核实来源', article, re.I),
+            'no_external_links_in_article': not re.search(r'<a[^>]+href=["\']https?://', article_html, re.I),
+            'homepage_latest_three_exact': latest_slugs == [slug, 'cssbuy-restricted-item-route-filter-2026', 'cssbuy-ship-for-me-intake-manifest-2026'],
+            'archive_link_ok': slug in archive,
+            'sitemap_link_ok': slug in sitemap,
           }
-          print('visible_word_count=', word_count)
-          print(checks)
-          failed = [k for k,v in checks.items() if not v]
+          result = {
+            'article_url': 'https://cssbuyvip.com/guides/cssbuy-delivery-day-evidence-protocol-2026/',
+            'article_word_count': word_count,
+            'faq_count': article.count('<details>'),
+            'latest_slugs': latest_slugs,
+            'checks': checks,
+          }
+          print('PRODUCTION_VERIFICATION=' + json.dumps(result, sort_keys=True))
+          failed = [name for name, passed in checks.items() if not passed]
           if failed:
-              print('FAILED:', ', '.join(failed))
-              sys.exit(1)
+            print('FAILED_CHECKS=' + ','.join(failed))
+            sys.exit(1)
           PY
             then
-              success=1
-              break
+              echo 'PRODUCTION_STATUS=PASSED'
+              exit 0
             fi
-            echo "Attempt $attempt failed; waiting for production deployment"
-            sleep 30
+            echo "Attempt $attempt did not pass; retrying"
+            sleep 15
           done
-          mkdir -p .verification
-          if [ "$success" -eq 1 ]; then
-            python3 - <<'PY'
-          import json, re
-          from pathlib import Path
-          article = Path('/tmp/article.html').read_text(encoding='utf-8', errors='ignore')
-          visible = re.sub(r'<script[\s\S]*?</script>|<style[\s\S]*?</style>|<[^>]+>', ' ', article, flags=re.I)
-          words = re.findall(r"\b[\w’'-]+\b", visible)
-          data = {
-            'status': 'passed',
-            'verified_at_utc': __import__('datetime').datetime.now(__import__('datetime').timezone.utc).isoformat(),
-            'article_url': 'https://cssbuyvip.com/guides/cssbuy-restricted-item-route-filter-2026/',
-            'article_http': 200,
-            'homepage_http': 200,
-            'archive_http': 200,
-            'sitemap_http': 200,
-            'visible_word_count': len(words),
-            'title_ok': True,
-            'h1_ok': True,
-            'body_ok': True,
-            'faq_count': article.count('<details>'),
-            'homepage_link_ok': True,
-            'archive_link_ok': True,
-            'sitemap_link_ok': True,
-            'not_homepage_fallback': True,
-            'no_visible_sources_section': True
-          }
-          Path('.verification/cssbuyvip-com-2026-07-30.json').write_text(json.dumps(data, indent=2) + '\n', encoding='utf-8')
-          PY
-          else
-            printf '{"status":"failed","reason":"Production checks did not pass within retry window"}\n' > .verification/cssbuyvip-com-2026-07-30.json
-            exit 1
-          fi
-      - name: Commit verification record
-        if: success() && github.event_name != 'pull_request'
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git pull --rebase origin main
-          git add .verification/cssbuyvip-com-2026-07-30.json
-          git commit -m "Verify July 30 cssbuyvip.com article in production" || exit 0
-          git push origin HEAD:main
+          echo 'PRODUCTION_STATUS=FAILED'
+          exit 1
