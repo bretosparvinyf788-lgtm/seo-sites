@@ -1,0 +1,78 @@
+{
+  "zh": {
+    "key": "cssbuy-parcel-release-checklist-final-24-hours-2026",
+    "slug": "cssbuy-parcel-release-checklist-final-24-hours-2026",
+    "title": "CSSBuy 包裹放行清单 2026：支付国际运费前的最后 24 小时",
+    "excerpt": "在付款前核对包裹清单、QC、包装要求、线路兼容性、地址、申报和运费押金。",
+    "seo_title": "CSSBuy 包裹放行清单 2026｜最终发货检查",
+    "seo_description": "用最终清单检查 CSSBuy 商品选择、QC、包装、线路、地址、申报、运费押金和发货证据。",
+    "tags": "CSSBuy 包裹放行, 最终发货清单, CSSBuy QC, 包裹清单, 体积重, 包装备注, 运费押金",
+    "publish_date": "2026-08-03",
+    "body": [
+      ["最后 24 小时是一道放行程序", "不要因为商品都已入库就立即付款。将商品选择、QC、包装、线路、地址、申报和付款视为七个必须同时通过的控制点。任何未完成的换货、退款或缺件都应阻止包裹放行。"],
+      ["冻结最终包裹清单", "记录订单号、商品、规格、数量和包装决定，并标记退货、取消或留仓商品。最后临时加入商品时，必须重新检查尺寸、线路、申报和预算。"],
+      ["重新检查 QC 和包装", "打开最新仓库照片，确认颜色、尺码、型号、数量、配件和明显问题。为每个商品分别注明去包装、真空压缩、加固或保留结构，避免一条笼统备注影响整个包裹。"],
+      ["使用实时运费计算器", "按最终重量、尺寸、目的地和商品属性重新计算。分别记录实重和体积重，并准备一个兼容的备用线路。电池、液体、粉末、磁性和电子商品不会因为去盒而变成普通商品。"],
+      ["核对地址、申报和付款", "逐字检查收件人、街道、房号、城市、邮编、国家和电话。申报应与冻结清单保持合理一致。运费押金与最终核实费用分开记录，不要把尚未到账的退款计入可用余额。"],
+      ["保存发货快照", "付款前保存商品选择、包装备注、预估重量和尺寸、线路、地址、申报和支付金额。包裹生成后用包裹号命名档案，并保留到签收和售后结束。"],
+      ["常见问题", "临时加入商品需要重新完成全部检查。真空包装只适合可安全压缩的衣物。未解决的退换货、身份不清、关键 QC 缺失、线路不兼容、地址未确认或费用超预算，都应立即暂停放行。"]
+    ]
+  },
+  "es": {
+    "key": "cssbuy-parcel-release-checklist-final-24-hours-2026",
+    "slug": "cssbuy-parcel-release-checklist-final-24-hours-2026",
+    "title": "Checklist de liberación de paquete CSSBuy 2026: las últimas 24 horas antes de pagar",
+    "excerpt": "Una revisión final de manifiesto, QC, embalaje, ruta, dirección, declaración y depósito de envío internacional.",
+    "seo_title": "Checklist final de paquete CSSBuy 2026",
+    "seo_description": "Revisa selección, QC, embalaje, ruta, dirección, declaración, depósito y pruebas antes de liberar un paquete CSSBuy.",
+    "tags": "liberación paquete CSSBuy, checklist envío, QC CSSBuy, manifiesto, peso volumétrico, embalaje, depósito de envío",
+    "publish_date": "2026-08-03",
+    "body": [
+      ["Las últimas 24 horas son un control de salida", "No pagues solo porque todos los artículos aparecen en el almacén. El paquete se libera únicamente cuando contenido, QC, embalaje, ruta, dirección, declaración y dinero coinciden."],
+      ["Congela el manifiesto", "Registra pedido, producto, variante, cantidad y decisión de embalaje. Marca devoluciones, cancelaciones y artículos que permanecerán almacenados. Cualquier añadido de última hora exige repetir toda la revisión."],
+      ["Cierra excepciones y revisa QC", "Un cambio pendiente, reembolso no recibido, cantidad incompleta o foto decisiva ausente bloquea el envío. Abre las imágenes más recientes y confirma identidad, talla, color, accesorios y condición visible."],
+      ["Asigna embalaje por artículo", "Decide por producto qué caja se retira, qué prenda puede comprimirse y qué objeto necesita refuerzo. Una instrucción general puede dañar artículos con necesidades diferentes."],
+      ["Recalcula rutas y pesos", "Usa el calculador en vivo con peso, dimensiones, destino y atributos reales. Guarda peso real y volumétrico, una ruta preferida y una alternativa compatible. Retirar embalaje no cambia una batería, líquido o imán en mercancía ordinaria."],
+      ["Confirma dirección, declaración y pago", "Comprueba todos los campos de entrega y que la declaración sea coherente con el manifiesto. Registra el depósito separado del ajuste final y cuenta solo reembolsos ya acreditados."],
+      ["FAQ", "Un artículo añadido al final obliga a repetir el control. El embalaje al vacío no siempre reduce el precio. Cualquier devolución abierta, identidad incierta, ruta incompatible, dirección dudosa o coste superior al límite debe detener la liberación."]
+    ]
+  },
+  "de": {
+    "key": "cssbuy-parcel-release-checklist-final-24-hours-2026",
+    "slug": "cssbuy-parcel-release-checklist-final-24-hours-2026",
+    "title": "CSSBuy-Paketfreigabe 2026: die letzten 24 Stunden vor der Zahlung",
+    "excerpt": "Finale Prüfung von Manifest, QC, Verpackung, Route, Adresse, Deklaration und internationaler Versandanzahlung.",
+    "seo_title": "CSSBuy Paketfreigabe-Checkliste 2026",
+    "seo_description": "Prüfe CSSBuy-Auswahl, QC, Verpackung, Route, Adresse, Deklaration, Anzahlung und Versandnachweise vor der Freigabe.",
+    "tags": "CSSBuy Paketfreigabe, Versandcheckliste, CSSBuy QC, Paketmanifest, Volumengewicht, Verpackung, Versandanzahlung",
+    "publish_date": "2026-08-03",
+    "body": [
+      ["Die letzten 24 Stunden sind ein Freigabeprozess", "Zahle nicht nur, weil alle Artikel im Lager sichtbar sind. Inhalt, QC, Verpackung, Route, Adresse, Deklaration und Geldstatus müssen gleichzeitig stimmen."],
+      ["Manifest einfrieren", "Erfasse Bestellnummer, Artikel, Variante, Menge und Verpackungsentscheidung. Rückgaben, Stornierungen und im Lager verbleibende Ware werden klar markiert. Ein später Zusatz startet die Prüfung neu."],
+      ["Offene Entscheidungen schließen", "Ein offener Umtausch, nicht gutgeschriebene Erstattung, Fehlmenge oder fehlendes QC-Detail blockiert die Freigabe. Prüfe die neuesten Lagerbilder auf Identität, Größe, Farbe, Zubehör und sichtbaren Zustand."],
+      ["Verpackung pro Produkt festlegen", "Lege für jeden Artikel fest, ob Verpackung entfernt, Kleidung komprimiert oder empfindliche Ware verstärkt wird. Eine pauschale Anweisung passt nicht zu gemischten Produkten."],
+      ["Routen und Gewichte neu berechnen", "Nutze den Live-Rechner mit realistischem Gewicht, Maßen, Ziel und Warenattributen. Notiere Ist- und Volumengewicht sowie eine kompatible Ersatzroute. Das Entfernen einer Box ändert keine Batterie oder Flüssigkeit in normale Ware."],
+      ["Adresse, Deklaration und Zahlung bestätigen", "Prüfe alle Empfängerdaten Zeichen für Zeichen und gleiche die Deklaration mit dem Manifest ab. Versandanzahlung und spätere Korrektur werden getrennt dokumentiert; erwartete Erstattungen zählen erst nach Gutschrift."],
+      ["FAQ", "Späte Artikel erfordern eine neue Komplettprüfung. Vakuumverpackung spart nicht immer Kosten. Offene Rückgaben, unklare Identität, fehlende QC-Daten, inkompatible Route, unsichere Adresse oder Budgetüberschreitung stoppen die Freigabe."]
+    ]
+  },
+  "pt": {
+    "key": "cssbuy-parcel-release-checklist-final-24-hours-2026",
+    "slug": "cssbuy-parcel-release-checklist-final-24-hours-2026",
+    "title": "Checklist de liberação de pacote CSSBuy 2026: as últimas 24 horas antes do pagamento",
+    "excerpt": "Revisão final de manifesto, QC, embalagem, rota, endereço, declaração e depósito de frete internacional.",
+    "seo_title": "Checklist final de pacote CSSBuy 2026",
+    "seo_description": "Confira seleção, QC, embalagem, rota, endereço, declaração, depósito e evidências antes de liberar um pacote CSSBuy.",
+    "tags": "liberação pacote CSSBuy, checklist de envio, QC CSSBuy, manifesto, peso volumétrico, embalagem, depósito de frete",
+    "publish_date": "2026-08-03",
+    "body": [
+      ["As últimas 24 horas são um controle de liberação", "Não pague apenas porque todos os itens aparecem no armazém. Conteúdo, QC, embalagem, rota, endereço, declaração e dinheiro precisam concordar."],
+      ["Congele o manifesto", "Registre pedido, produto, variante, quantidade e decisão de embalagem. Marque devoluções, cancelamentos e itens que ficarão armazenados. Qualquer inclusão tardia exige repetir a revisão."],
+      ["Feche exceções e revise o QC", "Troca pendente, reembolso não creditado, quantidade incompleta ou foto decisiva ausente bloqueiam o envio. Abra as imagens mais recentes e confirme identidade, tamanho, cor, acessórios e condição visível."],
+      ["Defina embalagem por item", "Decida por produto o que pode ser removido, quais roupas podem ser comprimidas e quais objetos precisam de reforço. Uma instrução geral pode prejudicar itens com necessidades diferentes."],
+      ["Recalcule rotas e pesos", "Use a calculadora ao vivo com peso, dimensões, destino e atributos reais. Registre peso real e volumétrico, uma rota principal e uma alternativa compatível. Remover a caixa não muda bateria, líquido ou ímã em mercadoria comum."],
+      ["Confirme endereço, declaração e pagamento", "Verifique todos os campos de entrega e mantenha a declaração coerente com o manifesto. Registre o depósito separado do ajuste final e conte apenas reembolsos já creditados."],
+      ["FAQ", "Um item adicionado no final exige nova revisão completa. Embalagem a vácuo nem sempre reduz o custo. Devolução aberta, identidade incerta, QC faltando, rota incompatível, endereço duvidoso ou custo acima do limite devem interromper a liberação."]
+    ]
+  }
+}
