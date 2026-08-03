@@ -1,7 +1,7 @@
 {
   "status": "failed",
-  "verified_at": "2026-08-03T02:11:53.665267+00:00",
-  "attempts": 36,
+  "verified_at": "2026-08-03T02:21:54.909119+00:00",
+  "attempts": 42,
   "article": "https://sugargoovip.shop/guide-sugargoo-payment-coupons-budget.html",
   "title": "Sugargoo Payment & Coupon Guide 2026: Control the Two-Stage Checkout Without Budget Surprises",
   "http_status": {
@@ -17,15 +17,11 @@
     "article_body": false,
     "article_word_count": false,
     "article_faq": false,
-    "article_not_home_fallback": false,
-    "homepage_has_new_article": false,
-    "homepage_exactly_three_cards": true,
-    "homepage_newest_first": false,
-    "homepage_excludes_older_articles": false,
-    "guides_has_all_articles": false,
-    "guides_expected_card_count": false,
-    "guides_newest_first": false,
-    "sitemap_has_article": false,
-    "robots_has_sitemap": true
+    "article_not_home_fallback": true,
+    "homepage_three_latest": false,
+    "homepage_excludes_older": false,
+    "guides_all_seven": false,
+    "sitemap_article": false,
+    "robots_sitemap": true
   }
 }
