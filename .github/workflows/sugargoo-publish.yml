@@ -27,11 +27,18 @@ jobs:
         shell: bash
         run: |
           python3 - <<'PY'
+          import base64
           import json
           from pathlib import Path
           root = Path('sugargoovip.shop')
           trigger = json.loads((root / 'job.json').read_text(encoding='utf-8'))
-          if trigger.get('parts'):
+          if trigger.get('payload_base64_parts'):
+              encoded = ''.join((root / part).read_text(encoding='utf-8') for part in trigger['payload_base64_parts'])
+              job = json.loads(base64.b64decode(encoded).decode('utf-8'))
+          elif trigger.get('payload_base64'):
+              encoded = (root / trigger['payload_base64']).read_text(encoding='utf-8')
+              job = json.loads(base64.b64decode(encoded).decode('utf-8'))
+          elif trigger.get('parts'):
               payload = ''.join((root / part).read_text(encoding='utf-8') for part in trigger['parts'])
               job = json.loads(payload)
           else:
