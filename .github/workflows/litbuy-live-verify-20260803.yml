@@ -16,39 +16,58 @@ jobs:
       - uses: actions/checkout@v4
         with:
           ref: main
-      - name: Verify deployed LitBuy endpoints
+      - name: Check deployed LitBuy endpoints
         shell: bash
         run: |
-          set -euo pipefail
-          article="https://litbuyvip.shop/guides/litbuy-rehearsal-parcel-shipping-decision-2026.html"
-          guides="https://litbuyvip.shop/guides/"
-          sitemap="https://litbuyvip.shop/sitemap.xml"
-          home="https://litbuyvip.shop/"
-          mkdir -p litbuyvip.shop/.verification
-          fetch() { curl -fsSL --retry 18 --retry-all-errors --retry-delay 10 --max-time 30 "$1"; }
-          article_html="$(fetch "$article")"
-          guides_html="$(fetch "$guides")"
-          sitemap_xml="$(fetch "$sitemap")"
-          home_html="$(fetch "$home")"
-          grep -Fq "How to Use LitBuy Rehearsal Parcel Before Shipping" <<<"$article_html"
-          grep -Fq "litbuy-rehearsal-parcel-shipping-decision-2026.html" <<<"$guides_html"
-          grep -Fq "litbuy-rehearsal-parcel-shipping-decision-2026.html" <<<"$sitemap_xml"
-          asset_path="$(grep -oE '/assets/latest-guides\.js\?v=[A-Za-z0-9]+' <<<"$home_html" | tail -n1)"
-          test -n "$asset_path"
-          asset_js="$(fetch "https://litbuyvip.shop${asset_path}")"
-          count="$(grep -o "url:'/guides/" <<<"$asset_js" | wc -l | tr -d ' ')"
-          test "$count" = "3"
-          grep -Fq "/guides/litbuy-rehearsal-parcel-shipping-decision-2026.html" <<<"$asset_js"
-          grep -Fq "/guides/litbuy-parcel-planning-chargeable-weight-2026.html" <<<"$asset_js"
-          grep -Fq "/guides/litbuy-reverse-purchasing-workflow-2026.html" <<<"$asset_js"
+          set -u
+          mkdir -p litbuyvip.shop/.verification /tmp/litbuy-verify
+          check_url() {
+            name="$1"; url="$2"
+            code="$(curl -sSL --retry 3 --retry-all-errors --retry-delay 5 --max-time 30 -o "/tmp/litbuy-verify/$name" -w '%{http_code}' "$url" || true)"
+            printf '%s' "$code" > "/tmp/litbuy-verify/$name.code"
+          }
+          check_url article "https://litbuyvip.shop/guides/litbuy-rehearsal-parcel-shipping-decision-2026.html"
+          check_url guides "https://litbuyvip.shop/guides/"
+          check_url sitemap "https://litbuyvip.shop/sitemap.xml"
+          check_url homepage "https://litbuyvip.shop/"
+
+          article_code="$(cat /tmp/litbuy-verify/article.code)"
+          guides_code="$(cat /tmp/litbuy-verify/guides.code)"
+          sitemap_code="$(cat /tmp/litbuy-verify/sitemap.code)"
+          homepage_code="$(cat /tmp/litbuy-verify/homepage.code)"
+          article_title=false; grep -Fq "How to Use LitBuy Rehearsal Parcel Before Shipping" /tmp/litbuy-verify/article && article_title=true
+          guides_new=false; grep -Fq "litbuy-rehearsal-parcel-shipping-decision-2026.html" /tmp/litbuy-verify/guides && guides_new=true
+          sitemap_new=false; grep -Fq "litbuy-rehearsal-parcel-shipping-decision-2026.html" /tmp/litbuy-verify/sitemap && sitemap_new=true
+          asset_path="$(grep -oE '/assets/latest-guides\.js\?v=[A-Za-z0-9]+' /tmp/litbuy-verify/homepage | tail -n1 || true)"
+          asset_code="000"; latest_count="0"; latest_exact=false
+          if [ -n "$asset_path" ]; then
+            asset_code="$(curl -sSL --retry 3 --retry-all-errors --retry-delay 5 --max-time 30 -o /tmp/litbuy-verify/asset -w '%{http_code}' "https://litbuyvip.shop${asset_path}" || true)"
+            latest_count="$(grep -o "url:'/guides/" /tmp/litbuy-verify/asset | wc -l | tr -d ' ')"
+            if [ "$latest_count" = "3" ] && \
+               grep -Fq "/guides/litbuy-rehearsal-parcel-shipping-decision-2026.html" /tmp/litbuy-verify/asset && \
+               grep -Fq "/guides/litbuy-parcel-planning-chargeable-weight-2026.html" /tmp/litbuy-verify/asset && \
+               grep -Fq "/guides/litbuy-reverse-purchasing-workflow-2026.html" /tmp/litbuy-verify/asset; then
+              latest_exact=true
+            fi
+          fi
+          all_verified=false
+          if [ "$article_code" = "200" ] && [ "$guides_code" = "200" ] && [ "$sitemap_code" = "200" ] && [ "$homepage_code" = "200" ] && [ "$asset_code" = "200" ] && [ "$article_title" = true ] && [ "$guides_new" = true ] && [ "$sitemap_new" = true ] && [ "$latest_exact" = true ]; then
+            all_verified=true
+          fi
           {
             echo "verified_at=$(date -u +%Y-%m-%dT%H:%M:%SZ)"
-            echo "article=200_and_title_verified"
-            echo "guides=200_and_new_article_verified"
-            echo "sitemap=200_and_new_url_verified"
-            echo "homepage=200_and_cache_busted_controller_verified"
-            echo "homepage_latest_guides=exactly_3_distinct_newest_articles_verified"
+            echo "article_http=$article_code"
+            echo "article_title_verified=$article_title"
+            echo "guides_http=$guides_code"
+            echo "guides_new_article_verified=$guides_new"
+            echo "sitemap_http=$sitemap_code"
+            echo "sitemap_new_url_verified=$sitemap_new"
+            echo "homepage_http=$homepage_code"
             echo "asset_path=$asset_path"
+            echo "asset_http=$asset_code"
+            echo "homepage_latest_guides_count=$latest_count"
+            echo "homepage_latest_guides_exact_newest_three=$latest_exact"
+            echo "all_live_checks_passed=$all_verified"
           } > litbuyvip.shop/.verification/litbuy-2026-08-03.txt
       - name: Commit verification report
         shell: bash
