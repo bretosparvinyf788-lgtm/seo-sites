@@ -1,16 +1,16 @@
 name: LitBuy live verification 2026-08-03
 
 on:
-  issues:
-    types: [opened]
+  push:
+    branches: [main]
+    paths:
+      - "litbuyvip.shop/.verification/run-20260803.flag"
 
 permissions:
   contents: write
-  issues: write
 
 jobs:
   verify:
-    if: github.event.issue.title == 'Verify LitBuy August 3 2026 publication'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -54,9 +54,10 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
+          rm -f litbuyvip.shop/.verification/run-20260803.flag
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add litbuyvip.shop/.verification/litbuy-2026-08-03.txt
+          git add -A litbuyvip.shop/.verification
           git commit -m "Verify live LitBuy August 3 publication"
           for attempt in 1 2 3 4 5; do
             git pull --rebase origin main
@@ -64,13 +65,3 @@ jobs:
             sleep 3
           done
           exit 1
-      - name: Comment on completion
-        uses: actions/github-script@v7
-        with:
-          script: |
-            await github.rest.issues.createComment({
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              issue_number: context.issue.number,
-              body: 'LitBuy August 3 live publication verified successfully.'
-            });
