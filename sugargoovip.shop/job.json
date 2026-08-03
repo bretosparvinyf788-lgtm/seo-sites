@@ -1,7 +1,10 @@
 {
-  "action": "verify_article",
-  "requested_at": "2026-07-31T01:52:00Z",
-  "article": "guide-sugargoo-diy-order-status.html",
-  "expected_word_count": 1597,
-  "expected_guide_count": 6
+  "action": "publish_article",
+  "requested_at": "2026-08-03T01:42:00Z",
+  "payload_base64_parts": [
+    "jobs/2026-08-03-payment-coupons.b64.part1",
+    "jobs/2026-08-03-payment-coupons.b64.part2",
+    "jobs/2026-08-03-payment-coupons.b64.part3",
+    "jobs/2026-08-03-payment-coupons.b64.part4"
+  ]
 }
