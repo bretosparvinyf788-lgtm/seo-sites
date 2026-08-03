@@ -24,7 +24,13 @@ def load_engine():
 
 def main() -> None:
     trigger = json.loads(JOB.read_text(encoding="utf-8"))
-    if trigger.get("payload_base64"):
+    if trigger.get("payload_base64_parts"):
+        encoded = "".join(
+            (ROOT / part).read_text(encoding="utf-8")
+            for part in trigger["payload_base64_parts"]
+        )
+        job = json.loads(base64.b64decode(encoded).decode("utf-8"))
+    elif trigger.get("payload_base64"):
         encoded = (ROOT / trigger["payload_base64"]).read_text(encoding="utf-8")
         job = json.loads(base64.b64decode(encoded).decode("utf-8"))
     elif trigger.get("parts"):
