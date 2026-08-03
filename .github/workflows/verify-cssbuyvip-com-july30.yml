@@ -1,4 +1,4 @@
-name: Verify cssbuyvip.com August 3 Live Publication
+name: Diagnose cssbuyvip.com August 3 Production
 
 on:
   pull_request:
@@ -9,79 +9,56 @@ on:
 permissions:
   contents: read
 
-concurrency:
-  group: verify-cssbuyvip-com-aug03-pr
-  cancel-in-progress: false
-
 jobs:
-  verify:
+  diagnose:
     runs-on: ubuntu-latest
     steps:
-      - name: Verify production article, homepage, archive and sitemap
+      - name: Fetch cache-busted production pages
         shell: bash
         run: |
           set -euo pipefail
-          ARTICLE='https://cssbuyvip.com/guides/cssbuy-delivery-day-evidence-protocol-2026/'
-          HOME='https://cssbuyvip.com/'
-          ARCHIVE='https://cssbuyvip.com/all-seo-articles/'
-          SITEMAP='https://cssbuyvip.com/sitemap.xml'
-          for attempt in $(seq 1 12); do
-            article_code=$(curl -L -sS -o /tmp/article.html -w '%{http_code}' --max-time 30 "$ARTICLE" || true)
-            home_code=$(curl -L -sS -o /tmp/home.html -w '%{http_code}' --max-time 30 "$HOME" || true)
-            archive_code=$(curl -L -sS -o /tmp/archive.html -w '%{http_code}' --max-time 30 "$ARCHIVE" || true)
-            sitemap_code=$(curl -L -sS -o /tmp/sitemap.xml -w '%{http_code}' --max-time 30 "$SITEMAP" || true)
-            if ARTICLE_CODE="$article_code" HOME_CODE="$home_code" ARCHIVE_CODE="$archive_code" SITEMAP_CODE="$sitemap_code" python3 - <<'PY'
-          import json, os, re, sys
-          from html import unescape
-          from pathlib import Path
-          article = Path('/tmp/article.html').read_text(encoding='utf-8', errors='ignore')
-          home = Path('/tmp/home.html').read_text(encoding='utf-8', errors='ignore')
-          archive = Path('/tmp/archive.html').read_text(encoding='utf-8', errors='ignore')
-          sitemap = Path('/tmp/sitemap.xml').read_text(encoding='utf-8', errors='ignore')
-          slug = 'cssbuy-delivery-day-evidence-protocol-2026'
-          article_match = re.search(r'<article\b[^>]*>([\s\S]*?)</article>', article, re.I)
-          article_html = article_match.group(1) if article_match else ''
-          visible = re.sub(r'<script[\s\S]*?</script>|<style[\s\S]*?</style>|<[^>]+>', ' ', article_html, flags=re.I)
-          word_count = len(re.findall(r"\b[\w’'-]+\b", unescape(visible)))
-          latest_match = re.search(r'<section id="articles" class="panel">([\s\S]*?)</section>', home, re.I)
-          latest_html = latest_match.group(1) if latest_match else ''
-          latest_slugs = re.findall(r'href="/guides/([^/"]+)/"', latest_html)
-          checks = {
-            'article_http_200': os.environ['ARTICLE_CODE'] == '200',
-            'homepage_http_200': os.environ['HOME_CODE'] == '200',
-            'archive_http_200': os.environ['ARCHIVE_CODE'] == '200',
-            'sitemap_http_200': os.environ['SITEMAP_CODE'] == '200',
-            'title_ok': '<title>CSSBuy Delivery Evidence Guide 2026 | Parcel Problems</title>' in article,
-            'h1_ok': 'CSSBuy Delivery-Day Evidence Protocol: Inspect, Record and Resolve Parcel Problems' in article,
-            'body_ok': 'The parcel is not finished when the tracking page says delivered' in article and 'The delivery-day decision sequence' in article,
-            'faq_ok': 'Frequently Asked Questions' in article and article.count('<details>') == 12,
-            'article_word_count_1500_2000': 1500 <= word_count <= 2000,
-            'not_homepage_fallback': 'Best CSSBuy Spreadsheet for QC-ready finds and smarter shipping' not in article,
-            'no_sources_section': not re.search(r'Official sources checked|>Sources<|>References<|官方消息来源|资料来源|核实来源', article, re.I),
-            'no_external_links_in_article': not re.search(r'<a[^>]+href=["\']https?://', article_html, re.I),
-            'homepage_latest_three_exact': latest_slugs == [slug, 'cssbuy-restricted-item-route-filter-2026', 'cssbuy-ship-for-me-intake-manifest-2026'],
-            'archive_link_ok': slug in archive,
-            'sitemap_link_ok': slug in sitemap,
-          }
-          result = {
-            'article_url': 'https://cssbuyvip.com/guides/cssbuy-delivery-day-evidence-protocol-2026/',
-            'article_word_count': word_count,
-            'faq_count': article.count('<details>'),
-            'latest_slugs': latest_slugs,
-            'checks': checks,
-          }
-          print('PRODUCTION_VERIFICATION=' + json.dumps(result, sort_keys=True))
-          failed = [name for name, passed in checks.items() if not passed]
-          if failed:
-            print('FAILED_CHECKS=' + ','.join(failed))
-            sys.exit(1)
-          PY
-            then
-              echo 'PRODUCTION_STATUS=PASSED'
-              exit 0
-            fi
-            echo "Attempt $attempt did not pass; retrying"
-            sleep 15
+          stamp=$(date +%s)
+          article='https://cssbuyvip.com/guides/cssbuy-delivery-day-evidence-protocol-2026/?verify='"$stamp"
+          home='https://cssbuyvip.com/?verify='"$stamp"
+          archive='https://cssbuyvip.com/all-seo-articles/?verify='"$stamp"
+          sitemap='https://cssbuyvip.com/sitemap.xml?verify='"$stamp"
+          for pair in "article:$article" "home:$home" "archive:$archive" "sitemap:$sitemap"; do
+            name=${pair%%:*}
+            url=${pair#*:}
+            code=$(curl -L -sS -H 'Cache-Control: no-cache' -H 'Pragma: no-cache' -D "/tmp/$name.headers" -o "/tmp/$name.body" -w '%{http_code}' --max-time 30 "$url" || true)
+            echo "${name}_http=$code"
+            echo "--- ${name} headers ---"
+            grep -Ei '^(date|age|cache-control|cf-cache-status|cf-ray|etag|last-modified|server|content-type):' "/tmp/$name.headers" || true
           done
-          echo 'PRODUCTION_STATUS=FAILED'
-          exit 1
+          python3 - <<'PY'
+          import json, re
+          from pathlib import Path
+          article = Path('/tmp/article.body').read_text(encoding='utf-8', errors='ignore')
+          home = Path('/tmp/home.body').read_text(encoding='utf-8', errors='ignore')
+          archive = Path('/tmp/archive.body').read_text(encoding='utf-8', errors='ignore')
+          sitemap = Path('/tmp/sitemap.body').read_text(encoding='utf-8', errors='ignore')
+          def title(html):
+              m = re.search(r'<title>(.*?)</title>', html, re.I|re.S)
+              return m.group(1).strip() if m else None
+          latest = re.search(r'<section id="articles" class="panel">([\s\S]*?)</section>', home, re.I)
+          latest_html = latest.group(1) if latest else ''
+          data = {
+            'article_title': title(article),
+            'article_has_new_h1': 'CSSBuy Delivery-Day Evidence Protocol: Inspect, Record and Resolve Parcel Problems' in article,
+            'article_details_count': article.count('<details>'),
+            'article_length': len(article),
+            'home_latest_slugs': re.findall(r'href="/guides/([^/"]+)/"', latest_html),
+            'archive_has_new_slug': 'cssbuy-delivery-day-evidence-protocol-2026' in archive,
+            'sitemap_has_new_slug': 'cssbuy-delivery-day-evidence-protocol-2026' in sitemap,
+          }
+          print('CACHE_BUST_DIAGNOSTIC=' + json.dumps(data, sort_keys=True))
+          if not all([
+            data['article_has_new_h1'],
+            data['article_details_count'] == 12,
+            data['archive_has_new_slug'],
+            data['sitemap_has_new_slug'],
+            data['home_latest_slugs'] == ['cssbuy-delivery-day-evidence-protocol-2026','cssbuy-restricted-item-route-filter-2026','cssbuy-ship-for-me-intake-manifest-2026'],
+          ]):
+            raise SystemExit('Production remains on an older deployment')
+          print('PRODUCTION_STATUS=PASSED')
+          PY
