@@ -2,6 +2,20 @@
   'use strict';
   const ARTICLES=[
     {
+      url:'/guides/litbuy-rehearsal-parcel-shipping-decision-2026.html',
+      copy:{
+        en:{meta:'Rehearsal parcel · August 3, 2026',title:'Use LitBuy Rehearsal Parcel Before Shipping',dek:'Turn QC evidence, packaging instructions and packed-parcel data into a smarter international shipping decision.'},
+        zh:{meta:'预演包裹 · 2026年8月3日',title:'国际发货前使用 LitBuy 预演包裹',dek:'利用 QC 证据、包装要求和包裹数据，做出更合理的国际运输决策。'},
+        es:{meta:'Paquete de ensayo · 3 agosto 2026',title:'Usa el paquete de ensayo LitBuy antes del envío',dek:'Convierte el QC, las instrucciones de embalaje y los datos del paquete en una mejor decisión de envío.'},
+        fr:{meta:'Colis de répétition · 3 août 2026',title:'Utiliser le colis de répétition LitBuy avant l’envoi',dek:'Transformez le QC, les consignes d’emballage et les données du colis en meilleure décision d’expédition.'},
+        de:{meta:'Probeverpackung · 3. August 2026',title:'LitBuy-Probeverpackung vor dem Versand nutzen',dek:'Nutzen Sie QC, Verpackungsanweisungen und Paketdaten für eine bessere Versandentscheidung.'},
+        pt:{meta:'Pacote de ensaio · 3 agosto 2026',title:'Use o pacote de ensaio LitBuy antes do envio',dek:'Transforme QC, instruções de embalagem e dados do pacote em uma decisão de envio mais inteligente.'},
+        ja:{meta:'リハーサル梱包 · 2026年8月3日',title:'発送前にLitBuyリハーサル梱包を使う方法',dek:'QC、梱包指示、実測データを国際配送の判断に活用する実践ガイド。'},
+        ko:{meta:'리허설 포장 · 2026년 8월 3일',title:'국제 배송 전 LitBuy 리허설 포장 활용법',dek:'QC 자료, 포장 요청과 포장 데이터를 더 나은 배송 결정에 활용하는 안내서입니다.'},
+        ar:{meta:'الطرد التجريبي · 3 أغسطس 2026',title:'استخدم طرد LitBuy التجريبي قبل الشحن',dek:'حوّل فحص الجودة وتعليمات التغليف وبيانات الطرد إلى قرار شحن دولي أفضل.'}
+      }
+    },
+    {
       url:'/guides/litbuy-parcel-planning-chargeable-weight-2026.html',
       copy:{
         en:{meta:'Parcel planning · July 30, 2026',title:'Plan a LitBuy Parcel Before Checkout',dek:'Control chargeable weight, route risk, warehouse decisions and consolidation before low prices become a costly box.'},
@@ -63,11 +77,7 @@
   function rebuild(){
     const grid=document.querySelector('#guides .guides');
     if(!grid) return;
-    const original=[...grid.querySelectorAll('article.guide:not(.litbuy-latest-guide)')];
-    const qc=original.find(function(card){return card.querySelector('[data-guide="qc"]');});
-    if(!qc) return;
-    qc.classList.remove('feature');
-    grid.replaceChildren(articleCard(ARTICLES[0],0),articleCard(ARTICLES[1],1),qc);
+    grid.replaceChildren(...ARTICLES.slice(0,3).map(articleCard));
     const button=document.getElementById('allGuidesBtn');
     if(button && !button.dataset.litbuyAllGuides){
       const replacement=button.cloneNode(true);
