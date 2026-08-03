@@ -1,22 +1,22 @@
 name: LitBuy live verification 2026-08-03
 
 on:
-  push:
-    branches: [main]
-    paths:
-      - ".github/workflows/litbuy-live-verify-20260803.yml"
+  issues:
+    types: [opened]
 
 permissions:
   contents: write
+  issues: write
 
 jobs:
   verify:
+    if: github.event.issue.title == 'Verify LitBuy August 3 2026 publication'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
         with:
           ref: main
-      - name: Wait for Pages deployment and verify endpoints
+      - name: Verify deployed LitBuy endpoints
         shell: bash
         run: |
           set -euo pipefail
@@ -25,7 +25,7 @@ jobs:
           sitemap="https://litbuyvip.shop/sitemap.xml"
           home="https://litbuyvip.shop/"
           mkdir -p litbuyvip.shop/.verification
-          fetch() { curl -fsSL --retry 12 --retry-all-errors --retry-delay 10 --max-time 30 "$1"; }
+          fetch() { curl -fsSL --retry 18 --retry-all-errors --retry-delay 10 --max-time 30 "$1"; }
           article_html="$(fetch "$article")"
           guides_html="$(fetch "$guides")"
           sitemap_xml="$(fetch "$sitemap")"
@@ -36,7 +36,8 @@ jobs:
           asset_path="$(grep -oE '/assets/latest-guides\.js\?v=[A-Za-z0-9]+' <<<"$home_html" | tail -n1)"
           test -n "$asset_path"
           asset_js="$(fetch "https://litbuyvip.shop${asset_path}")"
-          test "$(grep -o "url:'/guides/" <<<"$asset_js" | wc -l | tr -d ' ')" = "3"
+          count="$(grep -o "url:'/guides/" <<<"$asset_js" | wc -l | tr -d ' ')"
+          test "$count" = "3"
           grep -Fq "/guides/litbuy-rehearsal-parcel-shipping-decision-2026.html" <<<"$asset_js"
           grep -Fq "/guides/litbuy-parcel-planning-chargeable-weight-2026.html" <<<"$asset_js"
           grep -Fq "/guides/litbuy-reverse-purchasing-workflow-2026.html" <<<"$asset_js"
@@ -52,8 +53,24 @@ jobs:
       - name: Commit verification report
         shell: bash
         run: |
+          set -euo pipefail
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add litbuyvip.shop/.verification/litbuy-2026-08-03.txt
           git commit -m "Verify live LitBuy August 3 publication"
-          git push origin main
+          for attempt in 1 2 3 4 5; do
+            git pull --rebase origin main
+            if git push origin HEAD:main; then exit 0; fi
+            sleep 3
+          done
+          exit 1
+      - name: Comment on completion
+        uses: actions/github-script@v7
+        with:
+          script: |
+            await github.rest.issues.createComment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.issue.number,
+              body: 'LitBuy August 3 live publication verified successfully.'
+            });
