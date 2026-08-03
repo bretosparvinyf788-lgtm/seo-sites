@@ -1,4 +1,4 @@
-name: Sugargoo issue live verification
+name: Sugargoo issue publish and verify
 
 on:
   issues:
@@ -8,9 +8,13 @@ permissions:
   contents: write
   issues: write
 
+concurrency:
+  group: sugargoo-issue-publish
+  cancel-in-progress: false
+
 jobs:
-  verify-production:
-    if: startsWith(github.event.issue.title, 'Sugargoo live verify 2026-07-31')
+  publish-production:
+    if: startsWith(github.event.issue.title, 'Sugargoo publish 2026-08-03 payment')
     runs-on: ubuntu-latest
     steps:
       - name: Check out repository
@@ -18,110 +22,187 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Fetch and validate production pages
+      - name: Build production archive
+        id: publish
+        shell: bash
+        run: |
+          set +e
+          python3 sugargoovip.shop/publish_job.py > /tmp/sugargoo-publish.log 2>&1
+          CODE=$?
+          cat /tmp/sugargoo-publish.log
+          echo "code=$CODE" >> "$GITHUB_OUTPUT"
+          if [ "$CODE" = '0' ]; then
+            echo "status=passed" >> "$GITHUB_OUTPUT"
+          else
+            echo "status=failed" >> "$GITHUB_OUTPUT"
+          fi
+          exit 0
+
+      - name: Commit generated archive
+        id: commit_archive
+        if: steps.publish.outputs.status == 'passed'
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add sugargoovip.shop/site.tar.gz sugargoovip.shop/inspection
+          if git diff --cached --quiet; then
+            echo 'No generated archive changes found.'
+          else
+            git commit -m 'Sugargoo archive publish_article result'
+            for attempt in 1 2 3 4 5; do
+              git pull --rebase origin main
+              if git push origin HEAD:main; then break; fi
+              if [ "$attempt" = '5' ]; then exit 1; fi
+              sleep 3
+            done
+          fi
+
+      - name: Wait for deployment and verify production
         id: verify
+        if: steps.publish.outputs.status == 'passed'
         shell: bash
         run: |
           set +e
           mkdir -p /tmp/sugargoo-live
-          CACHE="issue-${GITHUB_RUN_ID}-$(date +%s)"
-          ARTICLE='https://sugargoovip.shop/guide-sugargoo-diy-order-status.html'
-          HOME='https://sugargoovip.shop/'
-          GUIDES='https://sugargoovip.shop/guides.html'
-          SITEMAP='https://sugargoovip.shop/sitemap.xml'
-          ROBOTS='https://sugargoovip.shop/robots.txt'
+          FINAL_STATUS='failed'
+          ATTEMPT=0
+          ARTICLE_STATUS=000
+          HOME_STATUS=000
+          GUIDES_STATUS=000
+          SITEMAP_STATUS=000
+          ROBOTS_STATUS=000
+          CHECK_JSON='{}'
+          SLUG='guide-sugargoo-payment-coupons-budget.html'
+          TITLE='Sugargoo Payment & Coupon Guide 2026: Control the Two-Stage Checkout Without Budget Surprises'
 
-          ARTICLE_STATUS=$(curl -L --connect-timeout 15 --max-time 45 -sS -o /tmp/sugargoo-live/article.html -w '%{http_code}' "${ARTICLE}?${CACHE}")
-          HOME_STATUS=$(curl -L --connect-timeout 15 --max-time 45 -sS -o /tmp/sugargoo-live/home.html -w '%{http_code}' "${HOME}?${CACHE}")
-          GUIDES_STATUS=$(curl -L --connect-timeout 15 --max-time 45 -sS -o /tmp/sugargoo-live/guides.html -w '%{http_code}' "${GUIDES}?${CACHE}")
-          SITEMAP_STATUS=$(curl -L --connect-timeout 15 --max-time 45 -sS -o /tmp/sugargoo-live/sitemap.xml -w '%{http_code}' "${SITEMAP}?${CACHE}")
-          ROBOTS_STATUS=$(curl -L --connect-timeout 15 --max-time 45 -sS -o /tmp/sugargoo-live/robots.txt -w '%{http_code}' "${ROBOTS}?${CACHE}")
-          export ARTICLE_STATUS HOME_STATUS GUIDES_STATUS SITEMAP_STATUS ROBOTS_STATUS
+          for ATTEMPT in $(seq 1 42); do
+            CACHE="issue-${GITHUB_RUN_ID}-${ATTEMPT}-$(date +%s)"
+            ARTICLE_STATUS=$(curl -L --connect-timeout 15 --max-time 45 -sS -o /tmp/sugargoo-live/article.html -w '%{http_code}' "https://sugargoovip.shop/${SLUG}?${CACHE}" || echo 000)
+            HOME_STATUS=$(curl -L --connect-timeout 15 --max-time 45 -sS -o /tmp/sugargoo-live/home.html -w '%{http_code}' "https://sugargoovip.shop/?${CACHE}" || echo 000)
+            GUIDES_STATUS=$(curl -L --connect-timeout 15 --max-time 45 -sS -o /tmp/sugargoo-live/guides.html -w '%{http_code}' "https://sugargoovip.shop/guides.html?${CACHE}" || echo 000)
+            SITEMAP_STATUS=$(curl -L --connect-timeout 15 --max-time 45 -sS -o /tmp/sugargoo-live/sitemap.xml -w '%{http_code}' "https://sugargoovip.shop/sitemap.xml?${CACHE}" || echo 000)
+            ROBOTS_STATUS=$(curl -L --connect-timeout 15 --max-time 45 -sS -o /tmp/sugargoo-live/robots.txt -w '%{http_code}' "https://sugargoovip.shop/robots.txt?${CACHE}" || echo 000)
+            export ARTICLE_STATUS HOME_STATUS GUIDES_STATUS SITEMAP_STATUS ROBOTS_STATUS
 
+            CHECK_JSON=$(python3 - <<'PY'
+          import json
+          from pathlib import Path
+          root=Path('/tmp/sugargoo-live')
+          def read(name):
+              path=root/name
+              return path.read_text(encoding='utf-8',errors='replace') if path.exists() else ''
+          article=read('article.html')
+          home=read('home.html')
+          guides=read('guides.html')
+          sitemap=read('sitemap.xml')
+          robots=read('robots.txt')
+          slug='guide-sugargoo-payment-coupons-budget.html'
+          title='Sugargoo Payment & Coupon Guide 2026: Control the Two-Stage Checkout Without Budget Surprises'
+          latest_slugs=[slug,'guide-sugargoo-diy-order-status.html','guide-sugargoo-packing-center-parcel.html']
+          all_slugs=[slug,'guide-sugargoo-diy-order-status.html','guide-sugargoo-packing-center-parcel.html','guide-sugargoo-returns-exchanges.html','guide-shipping-cost.html','guide-qc-photos.html','guide-w2c-workflow.html']
+          latest_start=home.find('<section aria-labelledby="latest-guides-title"')
+          latest_end=home.find('<section class="finder',latest_start) if latest_start>=0 else -1
+          latest=home[latest_start:latest_end] if latest_start>=0 and latest_end>latest_start else ''
+          positions=[latest.find(value) for value in latest_slugs]
+          archive_positions=[guides.find(value) for value in all_slugs]
+          checks={
+              'article_title': title in article,
+              'article_canonical': f'https://sugargoovip.shop/{slug}' in article,
+              'article_body': 'One haul creates two checkouts, not one' in article and 'Run a final audit at both payment gates' in article,
+              'article_word_count': '1,705 words' in article,
+              'article_faq': 'Frequently asked questions' in article and article.count('<details>')>=8,
+              'article_not_home_fallback': title in article and '<h1>Sugargoo Spreadsheet 2026</h1>' not in article,
+              'homepage_has_new_article': slug in latest,
+              'homepage_exactly_three_cards': latest.count('class="latest-guide-card')==3,
+              'homepage_newest_first': all(position>=0 for position in positions) and positions==sorted(positions),
+              'homepage_excludes_older_articles': all(value not in latest for value in all_slugs[3:]),
+              'guides_has_all_articles': all(value in guides for value in all_slugs),
+              'guides_exactly_seven_cards': guides.count('<article>')==7,
+              'guides_newest_first': all(position>=0 for position in archive_positions) and archive_positions==sorted(archive_positions),
+              'sitemap_has_article': slug in sitemap,
+              'robots_has_sitemap': 'sitemap.xml' in robots.lower(),
+          }
+          print(json.dumps(checks,separators=(',',':')))
+          PY
+          )
+
+            if [ "$ARTICLE_STATUS" = '200' ] && [ "$HOME_STATUS" = '200' ] && [ "$GUIDES_STATUS" = '200' ] && [ "$SITEMAP_STATUS" = '200' ] && [ "$ROBOTS_STATUS" = '200' ] && python3 - "$CHECK_JSON" <<'PY'
+          import json,sys
+          checks=json.loads(sys.argv[1])
+          raise SystemExit(0 if all(checks.values()) else 1)
+          PY
+            then
+              FINAL_STATUS='passed'
+              break
+            fi
+            sleep 10
+          done
+
+          export FINAL_STATUS ATTEMPT ARTICLE_STATUS HOME_STATUS GUIDES_STATUS SITEMAP_STATUS ROBOTS_STATUS CHECK_JSON SLUG TITLE
           python3 - <<'PY'
-import json, os
-from datetime import datetime, timezone
-from pathlib import Path
-root=Path('/tmp/sugargoo-live')
-def read(name):
-    p=root/name
-    return p.read_text(encoding='utf-8',errors='replace') if p.exists() else ''
-article=read('article.html'); home=read('home.html'); guides=read('guides.html'); sitemap=read('sitemap.xml'); robots=read('robots.txt')
-slug='guide-sugargoo-diy-order-status.html'
-title='Sugargoo DIY Order & Order Status Guide 2026: Control the Purchase Before Warehouse'
-latest_start=home.find('<section aria-labelledby="latest-guides-title"')
-latest_end=home.find('<section class="finder',latest_start) if latest_start>=0 else -1
-latest=home[latest_start:latest_end] if latest_start>=0 and latest_end>latest_start else ''
-latest_slugs=[slug,'guide-sugargoo-packing-center-parcel.html','guide-sugargoo-returns-exchanges.html']
-all_slugs=[slug,'guide-sugargoo-packing-center-parcel.html','guide-sugargoo-returns-exchanges.html','guide-shipping-cost.html','guide-qc-photos.html','guide-w2c-workflow.html']
-positions=[latest.find(x) for x in latest_slugs]
-archive_positions=[guides.find(x) for x in all_slugs]
-checks={
- 'article_title': title in article,
- 'article_canonical': f'https://sugargoovip.shop/{slug}' in article,
- 'article_body': 'Start with an order brief, not a shopping link' in article and 'Turn each order into a reusable record' in article,
- 'article_word_count': '1,597 words' in article,
- 'article_faq': 'Frequently asked questions' in article and article.count('<details>')>=8,
- 'article_not_home_fallback': 'Sugargoo Spreadsheet 2026' not in article,
- 'homepage_has_new_article': slug in latest,
- 'homepage_exactly_three_cards': latest.count('class="latest-guide-card')==3,
- 'homepage_newest_first': all(p>=0 for p in positions) and positions==sorted(positions),
- 'homepage_excludes_older_articles': all(x not in latest for x in ['guide-shipping-cost.html','guide-qc-photos.html','guide-w2c-workflow.html']),
- 'guides_has_all_articles': all(x in guides for x in all_slugs),
- 'guides_exactly_six_cards': guides.count('<article>')==6,
- 'guides_newest_first': all(p>=0 for p in archive_positions) and archive_positions==sorted(archive_positions),
- 'sitemap_has_article': slug in sitemap,
- 'robots_has_sitemap': 'sitemap.xml' in robots.lower(),
-}
-http_status={
- 'article':os.environ.get('ARTICLE_STATUS','000'),
- 'homepage':os.environ.get('HOME_STATUS','000'),
- 'guides':os.environ.get('GUIDES_STATUS','000'),
- 'sitemap':os.environ.get('SITEMAP_STATUS','000'),
- 'robots':os.environ.get('ROBOTS_STATUS','000'),
-}
-passed=all(v=='200' for v in http_status.values()) and all(checks.values())
-report={
- 'status':'passed' if passed else 'failed',
- 'verified_at':datetime.now(timezone.utc).isoformat(),
- 'article':f'https://sugargoovip.shop/{slug}',
- 'http_status':http_status,
- 'checks':checks,
- 'lengths':{'article':len(article),'homepage':len(home),'guides':len(guides),'sitemap':len(sitemap),'robots':len(robots)},
-}
-Path('sugargoovip.shop/live-verification.json').write_text(json.dumps(report,indent=2)+'\n',encoding='utf-8')
-print(json.dumps(report,indent=2))
-Path('/tmp/sugargoo-live/status.txt').write_text(report['status'],encoding='utf-8')
-PY
-          echo "status=$(cat /tmp/sugargoo-live/status.txt)" >> "$GITHUB_OUTPUT"
+          import json,os
+          from datetime import datetime,timezone
+          from pathlib import Path
+          report={
+              'status':os.environ['FINAL_STATUS'],
+              'verified_at':datetime.now(timezone.utc).isoformat(),
+              'attempts':int(os.environ['ATTEMPT']),
+              'article':f"https://sugargoovip.shop/{os.environ['SLUG']}",
+              'title':os.environ['TITLE'],
+              'http_status':{
+                  'article':os.environ['ARTICLE_STATUS'],
+                  'homepage':os.environ['HOME_STATUS'],
+                  'guides':os.environ['GUIDES_STATUS'],
+                  'sitemap':os.environ['SITEMAP_STATUS'],
+                  'robots':os.environ['ROBOTS_STATUS'],
+              },
+              'checks':json.loads(os.environ['CHECK_JSON']),
+          }
+          Path('sugargoovip.shop/live-verification.json').write_text(json.dumps(report,indent=2)+'\n',encoding='utf-8')
+          print(json.dumps(report,indent=2))
+          PY
+          echo "status=$FINAL_STATUS" >> "$GITHUB_OUTPUT"
+          exit 0
 
       - name: Commit verification report
+        if: steps.publish.outputs.status == 'passed'
         shell: bash
         run: |
           set -euo pipefail
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
           git add sugargoovip.shop/live-verification.json
-          git commit -m 'Record July 31 Sugargoo production verification [skip ci]'
-          for attempt in 1 2 3 4 5; do
-            git pull --rebase origin main
-            if git push origin HEAD:main; then exit 0; fi
-            sleep 3
-          done
-          exit 1
+          if git diff --cached --quiet; then
+            echo 'No verification report change.'
+          else
+            git commit -m 'Record August 3 Sugargoo production verification [skip ci]'
+            for attempt in 1 2 3 4 5; do
+              git pull --rebase origin main
+              if git push origin HEAD:main; then break; fi
+              if [ "$attempt" = '5' ]; then exit 1; fi
+              sleep 3
+            done
+          fi
 
-      - name: Comment verification result
+      - name: Comment result
+        if: always()
         uses: actions/github-script@v7
         with:
           script: |
-            const status = '${{ steps.verify.outputs.status }}';
+            const published = '${{ steps.publish.outputs.status }}';
+            const verified = '${{ steps.verify.outputs.status }}';
+            const body = published !== 'passed'
+              ? 'Sugargoo publication: **FAILED DURING ARCHIVE BUILD**. Review the workflow log for the publisher error.'
+              : `Sugargoo publication archive: **PUBLISHED**. Production verification: **${(verified || 'failed').toUpperCase()}**. See \`sugargoovip.shop/live-verification.json\` for HTTP and content checks.`;
             await github.rest.issues.createComment({
               owner: context.repo.owner,
               repo: context.repo.repo,
               issue_number: context.issue.number,
-              body: `Sugargoo production verification: **${status.toUpperCase()}**. See \`sugargoovip.shop/live-verification.json\` for HTTP and content checks.`
+              body
             });
 
-      - name: Fail when checks did not pass
-        if: steps.verify.outputs.status != 'passed'
+      - name: Fail when publication or verification did not pass
+        if: steps.publish.outputs.status != 'passed' || steps.verify.outputs.status != 'passed'
         run: exit 1
