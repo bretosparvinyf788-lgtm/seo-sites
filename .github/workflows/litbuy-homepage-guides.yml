@@ -41,3 +41,105 @@ jobs:
             git commit -m "Update LitBuy homepage latest guides"
             git push origin HEAD:main
           fi
+
+  verify-live-20260803:
+    if: github.event.head_commit.message == 'Add one-time verification to LitBuy homepage workflow'
+    needs: patch-homepage
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out latest main
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+      - name: Verify deployed LitBuy endpoints
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p litbuyvip.shop/.verification /tmp/litbuy-verify
+          fetch() { curl -fsSL --retry 18 --retry-all-errors --retry-delay 10 --max-time 30 "$1"; }
+          article_html="$(fetch 'https://litbuyvip.shop/guides/litbuy-rehearsal-parcel-shipping-decision-2026.html')"
+          guides_html="$(fetch 'https://litbuyvip.shop/guides/')"
+          sitemap_xml="$(fetch 'https://litbuyvip.shop/sitemap.xml')"
+          home_html="$(fetch 'https://litbuyvip.shop/')"
+          grep -Fq 'How to Use LitBuy Rehearsal Parcel Before Shipping' <<<"$article_html"
+          grep -Fq 'litbuy-rehearsal-parcel-shipping-decision-2026.html' <<<"$guides_html"
+          grep -Fq 'litbuy-rehearsal-parcel-shipping-decision-2026.html' <<<"$sitemap_xml"
+          asset_path="$(grep -oE '/assets/latest-guides\.js\?v=[A-Za-z0-9]+' <<<"$home_html" | tail -n1)"
+          test -n "$asset_path"
+          asset_js="$(fetch "https://litbuyvip.shop${asset_path}")"
+          count="$(grep -o "url:'/guides/" <<<"$asset_js" | wc -l | tr -d ' ')"
+          test "$count" = '3'
+          grep -Fq '/guides/litbuy-rehearsal-parcel-shipping-decision-2026.html' <<<"$asset_js"
+          grep -Fq '/guides/litbuy-parcel-planning-chargeable-weight-2026.html' <<<"$asset_js"
+          grep -Fq '/guides/litbuy-reverse-purchasing-workflow-2026.html' <<<"$asset_js"
+          {
+            echo "verified_at=$(date -u +%Y-%m-%dT%H:%M:%SZ)"
+            echo 'article=200_and_title_verified'
+            echo 'guides=200_and_new_article_verified'
+            echo 'sitemap=200_and_new_url_verified'
+            echo 'homepage=200_and_cache_busted_controller_verified'
+            echo 'homepage_latest_guides=exactly_3_distinct_newest_articles_verified'
+            echo "asset_path=$asset_path"
+          } > litbuyvip.shop/.verification/litbuy-2026-08-03.txt
+      - name: Commit report and remove one-time verification files
+        shell: bash
+        run: |
+          set -euo pipefail
+          cat > .github/workflows/litbuy-homepage-guides.yml <<'YAML'
+          name: Update LitBuy homepage guides
+
+          on:
+            push:
+              branches: [main]
+              paths:
+                - "litbuyvip.shop/assets/latest-guides.js"
+                - "litbuyvip.shop/guides/**"
+                - ".github/scripts/patch_litbuy_homepage.py"
+                - ".github/workflows/litbuy-homepage-guides.yml"
+            workflow_dispatch:
+
+          permissions:
+            contents: write
+
+          concurrency:
+            group: litbuy-homepage-guides
+            cancel-in-progress: true
+
+          jobs:
+            patch-homepage:
+              runs-on: ubuntu-latest
+              steps:
+                - name: Check out main
+                  uses: actions/checkout@v4
+                  with:
+                    ref: main
+                    fetch-depth: 0
+                - name: Attach latest-guides controller
+                  run: python .github/scripts/patch_litbuy_homepage.py
+                - name: Commit homepage update
+                  run: |
+                    git config user.name "github-actions[bot]"
+                    git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+                    git pull --ff-only origin main
+                    python .github/scripts/patch_litbuy_homepage.py
+                    git add litbuyvip.shop/index.html
+                    if git diff --cached --quiet; then
+                      echo "Homepage is already current."
+                    else
+                      git commit -m "Update LitBuy homepage latest guides"
+                      git push origin HEAD:main
+                    fi
+          YAML
+          rm -f .github/workflows/litbuy-live-verify-20260803.yml
+          rm -f litbuyvip.shop/.verification/run-20260803.flag
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -m "Verify live LitBuy August 3 publication"
+          for attempt in 1 2 3 4 5; do
+            git pull --rebase origin main
+            if git push origin HEAD:main; then exit 0; fi
+            sleep 3
+          done
+          exit 1
