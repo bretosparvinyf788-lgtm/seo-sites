@@ -1,0 +1,13 @@
+verified_at=2026-08-03T01:30:21Z
+article_http=200
+article_title_verified=false
+guides_http=200
+guides_new_article_verified=false
+sitemap_http=200
+sitemap_new_url_verified=false
+homepage_http=200
+asset_path=/assets/latest-guides.js?v=47c24daf7d27
+asset_http=200
+homepage_latest_guides_count=2
+homepage_latest_guides_exact_newest_three=false
+all_live_checks_passed=false
