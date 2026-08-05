@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/><meta content="width=device-width,initial-scale=1,viewport-fit=cover" name="viewport"/>
+<title>CSSBuy Buyer Guides | QC, Shipping and Total Cost</title>
+<meta content="Read original CSSBuy buyer guides covering QC photo inspection, chargeable shipping weight, service fees, coupons, storage deadlines and parcel planning." name="description"/>
+<meta content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" name="robots"/>
+<link href="../assets/favicon.png" rel="icon" type="image/png"/>
+<style>
+:root{
+  --green:#8cff2c;--green2:#6fd018;--white:#f7fff0;--muted:#a7bb98;
+  --line:rgba(140,255,44,.22);--panel:#0d130a;--bg:#050804;--max:1180px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:radial-gradient(circle at top,#10170c 0%,#060905 48%,#030503 100%);color:var(--white);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.72}
+a{color:inherit;text-decoration:none}
+img{display:block;max-width:100%}
+.container{width:min(var(--max),calc(100% - 40px));margin:auto}
+.header{position:sticky;top:0;z-index:30;background:rgba(4,7,3,.92);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.nav{height:76px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.brand{display:flex;align-items:center;gap:10px}.brand img{width:145px}.vip{padding:6px 9px;border:1px solid var(--line);border-radius:9px;color:var(--green);font-size:9px;font-weight:950;letter-spacing:.14em}
+.navlinks{display:flex;gap:12px;flex-wrap:wrap}
+.btn{min-height:42px;padding:0 17px;border-radius:999px;border:1px solid var(--line);display:inline-flex;align-items:center;justify-content:center;font-size:12px;font-weight:900}
+.btn.green{background:var(--green);color:#071005;border-color:var(--green)}
+.hero{padding:88px 0 72px;border-bottom:1px solid var(--line);position:relative;overflow:hidden}
+.hero:before{content:"";position:absolute;width:560px;height:560px;border-radius:50%;right:-260px;top:-300px;border:1px solid var(--line);box-shadow:0 0 120px rgba(140,255,44,.12)}
+.eyebrow{display:inline-flex;align-items:center;gap:10px;color:var(--green);font-size:11px;font-weight:950;letter-spacing:.14em;text-transform:uppercase;margin-bottom:18px}
+.eyebrow:before{content:"";width:28px;height:3px;border-radius:99px;background:var(--green)}
+h1{font-size:clamp(48px,7vw,94px);line-height:.92;letter-spacing:-.065em;margin:0;max-width:960px}
+.subtitle{font-size:clamp(17px,2vw,22px);max-width:800px;margin:24px 0 0;color:#cedfc2}
+.meta{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px}
+.meta span{padding:9px 13px;border:1px solid var(--line);border-radius:999px;color:#c7dab9;font-size:11px;font-weight:850}
+.article-layout{display:grid;grid-template-columns:minmax(0,1fr) 260px;gap:54px;padding:70px 0 100px}
+.article{min-width:0}
+.article h2{font-size:clamp(30px,4vw,48px);line-height:1.02;letter-spacing:-.045em;margin:60px 0 18px;color:var(--white)}
+.article h3{font-size:23px;line-height:1.2;margin:36px 0 12px;color:var(--green)}
+.article p{font-size:17px;color:#c1d2b5;margin:0 0 20px}
+.article ul,.article ol{margin:0 0 26px;padding-left:24px;color:#c1d2b5}
+.article li{margin-bottom:10px}
+.article .decision{border-left:3px solid var(--green);background:rgba(140,255,44,.07);padding:14px 17px;border-radius:0 14px 14px 0}
+.sidebar{position:sticky;top:105px;align-self:start;display:grid;gap:14px}
+.sidecard{padding:20px;border:1px solid var(--line);border-radius:20px;background:linear-gradient(180deg,rgba(16,24,12,.96),rgba(8,12,7,.96))}
+.sidecard strong{display:block;color:var(--green);font-size:13px;text-transform:uppercase;letter-spacing:.1em;margin-bottom:10px}
+.sidecard p{font-size:13px;margin:0;color:var(--muted)}
+.editorial{margin-top:54px;padding:22px;border:1px solid var(--line);border-radius:20px;background:rgba(140,255,44,.05)}
+.editorial strong{color:var(--green)}
+.next-guides{padding:60px 0 90px;border-top:1px solid var(--line)}
+.next-guides h2{font-size:42px;letter-spacing:-.045em;margin:0 0 26px}
+.guide-list{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.guide-card{padding:24px;border:1px solid var(--line);border-radius:22px;background:linear-gradient(180deg,rgba(16,24,12,.96),rgba(8,12,7,.96));transition:.2s}
+.guide-card:hover{transform:translateY(-4px);border-color:rgba(140,255,44,.48)}
+.guide-card span{font-size:10px;text-transform:uppercase;letter-spacing:.1em;color:var(--green);font-weight:900}
+.guide-card h3{font-size:21px;line-height:1.15;margin:13px 0 10px}
+.guide-card p{font-size:13px;color:var(--muted);margin:0}
+.footer{border-top:1px solid var(--line);padding:32px 0;color:#839778;font-size:12px}
+@media(max-width:900px){.article-layout{grid-template-columns:1fr}.sidebar{position:static;grid-template-columns:repeat(2,1fr)}.guide-list{grid-template-columns:1fr}}
+@media(max-width:620px){.container{width:min(var(--max),calc(100% - 24px))}.navlinks .home-label{display:none}.hero{padding:62px 0 50px}.article-layout{padding:48px 0 72px}.article p{font-size:16px}.sidebar{grid-template-columns:1fr}.nav{height:68px}.brand img{width:125px}}
+
+.guides-hero{padding:90px 0 64px;border-bottom:1px solid var(--line)}
+.guides-hero h1{max-width:950px}
+.guides-wrap{padding:60px 0 100px;display:grid;gap:18px}
+.guide-row{display:grid;grid-template-columns:100px 1fr;gap:24px;padding:30px;border:1px solid var(--line);border-radius:26px;background:linear-gradient(180deg,rgba(16,24,12,.96),rgba(8,12,7,.96))}
+.guide-row .num{font-size:56px;line-height:1;color:var(--green);font-weight:950;letter-spacing:-.05em}
+.guide-row span{font-size:11px;text-transform:uppercase;letter-spacing:.1em;color:var(--green);font-weight:900}
+.guide-row h2{font-size:clamp(30px,4vw,52px);line-height:1;letter-spacing:-.045em;margin:12px 0}
+.guide-row p{max-width:830px;color:var(--muted);margin:0 0 20px}
+@media(max-width:620px){.guide-row{grid-template-columns:1fr;padding:22px}.guide-row .num{font-size:34px}}
+</style>
+<link href="https://cssbuyvip.org/guides/" rel="canonical"/><link href="../manifest.webmanifest" rel="manifest"/><meta content="website" property="og:type"/><meta content="CSSBuy Buyer Guides | QC, Shipping and Total Cost" property="og:title"/><meta content="Read original CSSBuy buyer guides covering QC photo inspection, chargeable shipping weight, service fees, coupons, storage deadlines and parcel planning." property="og:description"/><meta content="https://cssbuyvip.org/guides/" property="og:url"/><meta content="https://cssbuyvip.org/assets/og-cover.jpg" property="og:image"/><meta content="CSSBuyVIP" property="og:site_name"/><meta content="summary_large_image" name="twitter:card"/><meta content="CSSBuy Buyer Guides | QC, Shipping and Total Cost" name="twitter:title"/><meta content="Read original CSSBuy buyer guides covering QC photo inspection, chargeable shipping weight, service fees, coupons, storage deadlines and parcel planning." name="twitter:description"/><meta content="https://cssbuyvip.org/assets/og-cover.jpg" name="twitter:image"/></head>
+<body>
+<header class="header"><div class="container nav">
+<a class="brand" href="../#guides"><img alt="CSS Buy" height="160" src="../assets/cssbuy-logo.webp" width="480"/><span class="vip">VIP</span></a>
+<div class="navlinks"><a class="btn green" href="../index.html#guides">Back to Homepage ↗</a></div>
+</div></header>
+<main>
+<section class="guides-hero"><div class="container">
+<span class="eyebrow">All Buyer Guides</span>
+<h1>Long-form CSSBuy guides built around real buyer decisions.</h1>
+<p class="subtitle">Three exclusive English articles, each written from scratch at 1,500–1,800 words and fact-checked against current CSSBuy official information.</p>
+<div class="meta"><span>3 original articles</span><span>5,183 total words</span><span>Updated August 4, 2026</span></div>
+</div></section>
+<section><div class="container guides-wrap">
+<article class="guide-row">
+<div class="num">01</div>
+<div>
+<span>QC Strategy · 1,671 words</span>
+<h2>CSSBuy QC Photos Are a Decision Tool, Not a Green Light</h2>
+<p>A warehouse inspection framework for identifying order errors, prioritizing defects, requesting useful measurements, and deciding whether an item belongs in an international parcel.</p>
+<a class="btn green" href="cssbuy-qc-photo-inspection-framework/">Read Full Article →</a>
+</div>
+</article>
+<article class="guide-row">
+<div class="num">02</div>
+<div>
+<span>Shipping Strategy · 1,774 words</span>
+<h2>The CSSBuy Shipping Cost Is Built Before Checkout</h2>
+<p>A chargeable-weight playbook for package consolidation, volumetric weight, box removal, vacuum packing, route eligibility, and final freight reconciliation.</p>
+<a class="btn green" href="cssbuy-shipping-chargeable-weight-playbook/">Read Full Article →</a>
+</div>
+</article>
+<article class="guide-row">
+<div class="num">03</div>
+<div>
+<span>Cost Control · 1,738 words</span>
+<h2>The CSSBuy Cost Ledger</h2>
+<p>A practical method for controlling service fees, coupons, membership rates, domestic freight, international shipping deposits, and warehouse deadlines.</p>
+<a class="btn green" href="cssbuy-cost-ledger-fees-coupons-storage/">Read Full Article →</a>
+</div>
+</article></div></section>
+</main>
+<footer class="footer"><div class="container">Independent CSSBuy Spreadsheet, W2C, QC and shipping information. Not affiliated with or operated by CSSBuy.</div></footer>
+</body></html>

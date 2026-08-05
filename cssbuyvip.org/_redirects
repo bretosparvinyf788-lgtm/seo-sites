@@ -1,0 +1,5 @@
+# Clean URL redirects for Cloudflare Pages
+/guides /guides/ 301
+/guides/cssbuy-qc-photo-inspection-framework /guides/cssbuy-qc-photo-inspection-framework/ 301
+/guides/cssbuy-shipping-chargeable-weight-playbook /guides/cssbuy-shipping-chargeable-weight-playbook/ 301
+/guides/cssbuy-cost-ledger-fees-coupons-storage /guides/cssbuy-cost-ledger-fees-coupons-storage/ 301
