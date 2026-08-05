@@ -57,6 +57,7 @@ def main() -> None:
     guide_title = job.get("guides_title", "Sugargoo Buyer Guides 2026")
     guide_description = job.get("guides_description", "Read original, fact-checked Sugargoo buyer guides.")
     home_intro = job.get("home_intro", "Three practical Sugargoo buyer guides. Newest articles appear first.")
+    home_intro = home_intro.replace("DIV order", "DIY order")
 
     mod.ARTICLE = article
     mod.OFFICIAL_CITATIONS = citations
