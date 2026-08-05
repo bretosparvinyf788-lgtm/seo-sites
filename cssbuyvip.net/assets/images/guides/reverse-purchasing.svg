@@ -1,5 +1,153 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 960 540" role="img" aria-labelledby="title desc">
-<title id="title">CSSBuy reverse purchasing guide illustration</title>
-<desc id="desc">A reverse shopping workflow from product selection through warehouse storage, parcel shipping and delivery.</desc>
-<image width="960" height="540" preserveAspectRatio="xMidYMid slice" href="data:image/webp;base64,UklGRpgIAA...TRUNCATED..." xlink:href="data:image/webp;base64,UklGRpgIAA...TRUNCATED..."/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 540" role="img" aria-labelledby="title desc">
+  <title id="title">CSSBuy reverse purchasing guide illustration</title>
+  <desc id="desc">A four-stage reverse purchasing workflow from order submission to warehouse inspection, consolidation and international delivery.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#eef8f5"/>
+      <stop offset="1" stop-color="#dcefeb"/>
+    </linearGradient>
+    <linearGradient id="panel" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="1" stop-color="#f7fbfa"/>
+    </linearGradient>
+    <linearGradient id="box" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#d99b58"/>
+      <stop offset="1" stop-color="#b96d2d"/>
+    </linearGradient>
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="170%">
+      <feDropShadow dx="0" dy="12" stdDeviation="14" flood-color="#173d38" flood-opacity=".16"/>
+    </filter>
+    <filter id="soft" x="-30%" y="-30%" width="160%" height="170%">
+      <feDropShadow dx="0" dy="6" stdDeviation="7" flood-color="#173d38" flood-opacity=".12"/>
+    </filter>
+    <pattern id="dots" width="22" height="22" patternUnits="userSpaceOnUse">
+      <circle cx="4" cy="4" r="2" fill="#7aa99f" opacity=".22"/>
+    </pattern>
+  </defs>
+
+  <rect width="960" height="540" rx="28" fill="url(#bg)"/>
+  <circle cx="890" cy="58" r="128" fill="#b9ddd5" opacity=".35"/>
+  <circle cx="84" cy="500" r="135" fill="#c9e8e1" opacity=".45"/>
+  <rect x="694" y="360" width="250" height="155" fill="url(#dots)" opacity=".72"/>
+
+  <g filter="url(#shadow)">
+    <rect x="42" y="52" width="390" height="436" rx="28" fill="url(#panel)"/>
+  </g>
+
+  <rect x="74" y="84" width="220" height="42" rx="12" fill="#2f6b5f"/>
+  <text x="184" y="112" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="700" fill="#fff" letter-spacing="1.1">PRACTICAL GUIDE</text>
+
+  <text x="74" y="180" font-family="Arial, Helvetica, sans-serif" font-size="46" font-weight="800" fill="#123b39">
+    <tspan x="74" dy="0">CSSBuy Reverse</tspan>
+    <tspan x="74" dy="54">Purchasing</tspan>
+  </text>
+  <text x="74" y="300" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="600" fill="#44736b">
+    <tspan x="74" dy="0">A two-checkout workflow for</tspan>
+    <tspan x="74" dy="31">safer, smarter international hauls</tspan>
+  </text>
+
+  <g transform="translate(74 372)">
+    <g>
+      <circle cx="24" cy="24" r="24" fill="#dcefea"/>
+      <path d="M13 18h22l-2 17H15z" fill="none" stroke="#2f6b5f" stroke-width="3" stroke-linejoin="round"/>
+      <path d="M18 18c0-8 12-8 12 0" fill="none" stroke="#2f6b5f" stroke-width="3" stroke-linecap="round"/>
+      <text x="24" y="65" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="700" fill="#2f6b5f">ORDER</text>
+    </g>
+    <path d="M63 24h38" stroke="#80aaa1" stroke-width="3" stroke-linecap="round"/>
+    <path d="M94 18l8 6-8 6" fill="none" stroke="#80aaa1" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    <g transform="translate(112)">
+      <circle cx="24" cy="24" r="24" fill="#dcefea"/>
+      <path d="M14 18h20v19H14z" fill="none" stroke="#2f6b5f" stroke-width="3"/>
+      <path d="M12 18l12-8 12 8" fill="none" stroke="#2f6b5f" stroke-width="3" stroke-linejoin="round"/>
+      <path d="M20 37v-10h8v10" fill="none" stroke="#2f6b5f" stroke-width="3"/>
+      <text x="24" y="65" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="700" fill="#2f6b5f">CHECK</text>
+    </g>
+    <path d="M175 24h38" stroke="#80aaa1" stroke-width="3" stroke-linecap="round"/>
+    <path d="M206 18l8 6-8 6" fill="none" stroke="#80aaa1" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    <g transform="translate(224)">
+      <circle cx="24" cy="24" r="24" fill="#dcefea"/>
+      <path d="M12 19l12-7 12 7-12 7z" fill="none" stroke="#2f6b5f" stroke-width="3" stroke-linejoin="round"/>
+      <path d="M12 19v15l12 7 12-7V19M24 26v15" fill="none" stroke="#2f6b5f" stroke-width="3" stroke-linejoin="round"/>
+      <text x="24" y="65" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="700" fill="#2f6b5f">PACK</text>
+    </g>
+  </g>
+
+  <g transform="translate(456 42) scale(.82)">
+    <path d="M31 236C82 114 239 91 384 138" fill="none" stroke="#74a99e" stroke-width="3" stroke-dasharray="9 12" opacity=".72"/>
+    <path d="M370 128l20 13-23 6" fill="#74a99e" opacity=".78"/>
+
+    <g filter="url(#soft)" transform="translate(6 44)">
+      <rect x="0" y="0" width="218" height="154" rx="20" fill="#fff"/>
+      <rect x="0" y="0" width="218" height="35" rx="20" fill="#2f6b5f"/>
+      <rect x="0" y="18" width="218" height="17" fill="#2f6b5f"/>
+      <circle cx="20" cy="17" r="4" fill="#f8d6b3"/>
+      <circle cx="34" cy="17" r="4" fill="#cde8e2"/>
+      <circle cx="48" cy="17" r="4" fill="#fff" opacity=".75"/>
+      <rect x="24" y="55" width="70" height="76" rx="10" fill="#e7f4f0"/>
+      <path d="M44 72l15-10 15 10-6 13v31H50V85z" fill="#2f6b5f" opacity=".9"/>
+      <rect x="112" y="58" width="78" height="11" rx="5" fill="#c2dcd6"/>
+      <rect x="112" y="79" width="58" height="9" rx="4" fill="#e0ece9"/>
+      <rect x="112" y="98" width="68" height="9" rx="4" fill="#e0ece9"/>
+      <rect x="112" y="119" width="52" height="12" rx="6" fill="#e88a3d"/>
+      <text x="109" y="151" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="700" fill="#2f6b5f">1. SUBMIT THE PRODUCT</text>
+    </g>
+
+    <g filter="url(#soft)" transform="translate(258 7)">
+      <rect x="0" y="0" width="175" height="132" rx="20" fill="#fff"/>
+      <rect x="20" y="23" width="135" height="82" rx="10" fill="#e8f3f0"/>
+      <path d="M42 52h92v53H42z" fill="#c88a45"/>
+      <path d="M42 52l46-24 46 24-46 24z" fill="#e4ae72"/>
+      <path d="M88 76v29" stroke="#9b5c28" stroke-width="4"/>
+      <circle cx="133" cy="30" r="20" fill="#2f6b5f"/>
+      <path d="M124 30l6 6 12-14" fill="none" stroke="#fff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+      <text x="87.5" y="124" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="700" fill="#2f6b5f">2. WAREHOUSE CHECK</text>
+    </g>
+
+    <g filter="url(#shadow)" transform="translate(92 225)">
+      <ellipse cx="190" cy="220" rx="205" ry="38" fill="#7aa99f" opacity=".19"/>
+      <path d="M82 100h218v160H82z" fill="url(#box)"/>
+      <path d="M82 100l109-58 109 58-109 58z" fill="#e8b77f"/>
+      <path d="M191 158v102" stroke="#995722" stroke-width="5" opacity=".75"/>
+      <path d="M82 100l109 58 109-58" fill="none" stroke="#a96329" stroke-width="4"/>
+      <path d="M148 195h86v34h-86z" rx="8" fill="#f6eadb" opacity=".93"/>
+      <text x="191" y="218" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="800" fill="#2f6b5f">CSSBuy</text>
+
+      <g transform="translate(112 15)">
+        <path d="M20 72c16-27 41-40 68-36 27 4 49 21 62 48l-17 14-16-20v53H52V78L37 98z" fill="#244b48"/>
+        <path d="M73 36c0 14 19 14 19 0" fill="none" stroke="#d9ece7" stroke-width="5" stroke-linecap="round"/>
+        <rect x="68" y="73" width="34" height="22" rx="8" fill="#e88a3d"/>
+      </g>
+
+      <g transform="translate(208 39)">
+        <path d="M7 72c17-4 28-14 37-30 12 13 25 22 45 27 9 2 14 7 14 14H16c-9 0-14-7-9-11z" fill="#f6f8f7" stroke="#2f6b5f" stroke-width="4" stroke-linejoin="round"/>
+        <path d="M25 73h70" stroke="#9fbdb7" stroke-width="4"/>
+        <path d="M45 49c10 13 21 18 38 22" fill="none" stroke="#e88a3d" stroke-width="4" stroke-linecap="round"/>
+      </g>
+
+      <g transform="translate(6 163)" filter="url(#soft)">
+        <circle cx="45" cy="45" r="45" fill="#fff"/>
+        <path d="M25 48h39l-4 23H30z" fill="none" stroke="#2f6b5f" stroke-width="4" stroke-linejoin="round"/>
+        <path d="M35 48c0-14 20-14 20 0" fill="none" stroke="#2f6b5f" stroke-width="4" stroke-linecap="round"/>
+        <circle cx="66" cy="25" r="14" fill="#e88a3d"/>
+        <text x="66" y="30" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="800" fill="#fff">¥</text>
+      </g>
+
+      <g transform="translate(306 132)">
+        <circle cx="76" cy="76" r="70" fill="#cfe7e1"/>
+        <circle cx="76" cy="76" r="52" fill="none" stroke="#2f6b5f" stroke-width="4" opacity=".8"/>
+        <path d="M24 76h104M76 24c-22 23-22 81 0 104M76 24c22 23 22 81 0 104" fill="none" stroke="#2f6b5f" stroke-width="3" opacity=".7"/>
+        <path d="M30 52c28 16 64 16 92 0M30 100c28-16 64-16 92 0" fill="none" stroke="#2f6b5f" stroke-width="3" opacity=".55"/>
+        <path d="M4 18l49 17-18 12-9 29-9-23-23-9z" fill="#fff" stroke="#2f6b5f" stroke-width="3" stroke-linejoin="round" transform="translate(93 -5) rotate(18)"/>
+        <text x="76" y="166" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="800" fill="#2f6b5f">3. CONSOLIDATE &amp; SHIP</text>
+      </g>
+
+      <g transform="translate(144 290)" filter="url(#soft)">
+        <rect x="0" y="0" width="132" height="42" rx="21" fill="#2f6b5f"/>
+        <path d="M18 22l8 8 15-17" fill="none" stroke="#fff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+        <text x="86" y="27" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="800" fill="#fff">PARCEL READY</text>
+      </g>
+    </g>
+  </g>
+
+  <text x="918" y="515" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="700" fill="#5f8f86" opacity=".8">CSSBUYVIP.NET • 2026 BUYER RESEARCH</text>
 </svg>
