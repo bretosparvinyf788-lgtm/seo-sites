@@ -1,0 +1,31 @@
+name: Publish CSSBuyVip article update
+
+on:
+  push:
+    paths:
+      - 'cssbuyvip.com/.publish-2026-08-05'
+
+permissions:
+  contents: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Patch CSSBuyVip pages
+        run: python scripts/publish_cssbuyvip_2026_08_05.py
+      - name: Commit published pages
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add cssbuyvip.com/index.html cssbuyvip.com/all-seo-articles/index.html cssbuyvip.com/guides/index.html cssbuyvip.com/sitemap.xml
+          if git diff --cached --quiet; then
+            echo "No page changes required"
+          else
+            git commit -m "Publish CSSBuy clothing size verification update"
+            git push
+          fi
