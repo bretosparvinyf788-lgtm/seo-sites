@@ -1,0 +1,44 @@
+name: Publish Superbuy August 5 guide
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - superbuyvip.shop/.publish/superbuy-2026-08-05.flag
+
+permissions:
+  contents: write
+
+concurrency:
+  group: superbuyvip-publish-20260805
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Patch and validate Superbuy publication
+        run: python .github/scripts/publish_superbuy_20260805.py
+
+      - name: Commit production update
+        run: |
+          git diff --check
+          git diff --quiet -- superbuyvip.shop/index.html && { echo "Expected homepage change was not produced"; exit 1; }
+          git diff --quiet -- superbuyvip.shop/guides/index.html && { echo "Expected guide archive change was not produced"; exit 1; }
+          git diff --quiet -- superbuyvip.shop/sitemap.xml && { echo "Expected sitemap change was not produced"; exit 1; }
+          rm -f .github/scripts/publish_superbuy_20260805.py
+          rm -f .github/workflows/publish-superbuy-20260805.yml
+          rm -f superbuyvip.shop/.publish/superbuy-2026-08-05.flag
+          git config user.name "seo-sites automation"
+          git config user.email "actions@users.noreply.github.com"
+          git add -A
+          git commit -m "Feature August 5 Superbuy first-parcel guide"
+          git pull --rebase origin main
+          git push origin HEAD:main
