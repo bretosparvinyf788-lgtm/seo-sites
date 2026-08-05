@@ -2,6 +2,20 @@
   'use strict';
   const ARTICLES=[
     {
+      url:'/guides/litbuy-warehouse-queue-qc-storage-return-window-2026.html',
+      copy:{
+        en:{meta:'Warehouse control · August 5, 2026',title:'Manage a LitBuy Warehouse Queue Without Losing the Return Window',dek:'Coordinate QC evidence, seller deadlines, storage age and parcel compatibility before accepted items leave China.'},
+        zh:{meta:'仓库管理 · 2026年8月5日',title:'管理 LitBuy 仓库队列，避免错过退换窗口',dek:'在商品离开中国前，协调 QC 证据、卖家时限、仓储时间和包裹兼容性。'},
+        es:{meta:'Control de almacén · 5 agosto 2026',title:'Gestiona la cola del almacén LitBuy sin perder devoluciones',dek:'Coordina QC, plazos del vendedor, tiempo de almacenamiento y compatibilidad antes del envío.'},
+        fr:{meta:'Gestion d’entrepôt · 5 août 2026',title:'Gérer la file d’entrepôt LitBuy sans perdre le délai de retour',dek:'Coordonnez QC, délais vendeur, durée de stockage et compatibilité avant l’expédition.'},
+        de:{meta:'Lagerkontrolle · 5. August 2026',title:'LitBuy-Lagerbestand verwalten, ohne die Rückgabefrist zu verlieren',dek:'Koordinieren Sie QC, Verkäuferfristen, Lagerdauer und Paketkompatibilität vor dem Versand.'},
+        pt:{meta:'Controle de armazém · 5 agosto 2026',title:'Gerencie a fila do armazém LitBuy sem perder a devolução',dek:'Coordene QC, prazos do vendedor, tempo de armazenamento e compatibilidade antes do envio.'},
+        ja:{meta:'倉庫管理 · 2026年8月5日',title:'返品期限を逃さずLitBuy倉庫キューを管理する方法',dek:'QC、販売者期限、保管日数、荷物の適合性を発送前に管理する実践ガイド。'},
+        ko:{meta:'창고 관리 · 2026년 8월 5일',title:'반품 기한을 놓치지 않는 LitBuy 창고 대기열 관리법',dek:'QC 자료, 판매자 기한, 보관 기간과 포장 호환성을 출고 전에 관리하는 안내서입니다.'},
+        ar:{meta:'إدارة المستودع · 5 أغسطس 2026',title:'إدارة قائمة مستودع LitBuy دون فقدان مهلة الإرجاع',dek:'نسّق فحص الجودة ومواعيد البائع ومدة التخزين وتوافق الطرد قبل الشحن.'}
+      }
+    },
+    {
       url:'/guides/litbuy-rehearsal-parcel-shipping-decision-2026.html',
       copy:{
         en:{meta:'Rehearsal parcel · August 3, 2026',title:'Use LitBuy Rehearsal Parcel Before Shipping',dek:'Turn QC evidence, packaging instructions and packed-parcel data into a smarter international shipping decision.'},
