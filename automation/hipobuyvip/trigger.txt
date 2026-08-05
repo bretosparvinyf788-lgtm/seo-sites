@@ -1,1 +1,1 @@
-Publish the August 5, 2026 HipoBuyVIP warehouse storage guide through the pull-request workflow.
+Publish the August 5, 2026 HipoBuyVIP electronics buying protocol for hipobuyvip.shop.
