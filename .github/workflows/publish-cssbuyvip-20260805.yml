@@ -1,0 +1,60 @@
+name: Publish CSSBuyVip August 5 Guide
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'tools/publish_cssbuyvip_20260805.py'
+      - 'tools/cssbuyvip_20260805_en.json'
+      - 'tools/cssbuyvip_20260805_localized.json'
+      - '.github/workflows/publish-cssbuyvip-20260805.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: publish-cssbuyvip-20260805
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out main
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Sync main
+        run: git pull --rebase origin main
+
+      - name: Publish and validate
+        run: |
+          python3 -m py_compile tools/publish_cssbuyvip_20260805.py
+          python3 tools/publish_cssbuyvip_20260805.py
+
+      - name: Validate article rendering contract
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          text = Path('cssbuyvip/index.html').read_text(encoding='utf-8')
+          key = 'cssbuy-warehouse-calendar-return-storage-deadlines-2026'
+          assert text.count(f'"key":"{key}"') == 5
+          assert 'SITE_DATA.articles[currentLang].slice(0,3)' in text
+          assert 'SITE_DATA.articles[currentLang].map' in text
+          assert 'category-grid' in text
+          assert 'product-grid' in text
+          assert 'featured-products' in text
+          print('SPA article and protected sections validated')
+          PY
+
+      - name: Commit only the homepage update
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add cssbuyvip/index.html
+          git rm tools/publish_cssbuyvip_20260805.py tools/cssbuyvip_20260805_en.json tools/cssbuyvip_20260805_localized.json .github/workflows/publish-cssbuyvip-20260805.yml
+          git commit -m "Publish CSSBuy warehouse calendar guide for 2026-08-05"
+          git push origin HEAD:main
