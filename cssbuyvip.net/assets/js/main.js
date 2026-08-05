@@ -74,3 +74,24 @@ function applyLanguage(lang) {
 let initialLanguage = 'en';
 try { initialLanguage = localStorage.getItem('cssbuyvip-language') || 'en'; } catch (e) {}
 applyLanguage(initialLanguage);
+
+function featureLatestCSSBuyGuide() {
+  const guideGrid = document.querySelector('#guides .guides');
+  if (!guideGrid) return;
+
+  const existing = guideGrid.querySelector('a[href="guides/cssbuy-reverse-purchasing-guide-2026/"]');
+  if (!existing) {
+    const card = document.createElement('article');
+    card.className = 'guide card';
+    card.innerHTML = '<a href="guides/cssbuy-reverse-purchasing-guide-2026/">' +
+      '<div class="guide-image"><img src="assets/images/guides/reverse-purchasing.svg" alt="CSSBuy Reverse Purchasing Guide"></div>' +
+      '<div class="guide-body"><small>Reverse Purchasing • Updated August 2026 • 1,769 words • 11 min read</small>' +
+      '<h3>CSSBuy Reverse Purchasing Guide 2026: The Two-Checkout Workflow</h3>' +
+      '<p>A reverse purchase is not one checkout. It is a controlled sequence of acquisition, warehouse verification and parcel release. This guide shows how to keep every decision connected…</p>' +
+      '<span class="read-more">Read Full Article →</span></div></a>';
+    guideGrid.prepend(card);
+  }
+
+  Array.from(guideGrid.querySelectorAll('article.guide')).slice(3).forEach(card => card.remove());
+}
+featureLatestCSSBuyGuide();
