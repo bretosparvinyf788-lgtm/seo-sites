@@ -2386,13 +2386,9 @@ section:has(#articles){
         <a class="view-all-btn" href="/guides/">View All</a>
       </div>
       <div class="article-list">
-                  
-          
-                                                                                <a class="article" href="/best-cssbuy-spreadsheet-2026-guide.html"><small>Featured</small><b>Best CSSBuy Spreadsheet 2026 Guide: Build Safer Hauls with QC Photos, Seller Filtering and Shipping Planning</b><span>A detailed guide explaining how to use CSSBuy spreadsheet finds with warehouse QC photos, category research, shipping estimates and safer buying decisions.</span></a>
-          <a class="article" href="/cssbuy-shipping-cost-guide.html"><small>Shipping</small><b>CSSBuy Shipping Cost Guide: Estimate Parcel Weight, Avoid Expensive Mistakes and Ship Smarter</b><span>A detailed CSSBuy shipping guide covering parcel planning, cost estimation, packaging choices, warehouse timing and when to split or simplify a haul.</span></a>
-          <a class="article" href="/how-to-check-cssbuy-qc-photos.html"><small>QC Guide</small><b>How to Check CSSBuy QC Photos: A Practical Warehouse Inspection Checklist for New Buyers</b><span>A buyer-focused CSSBuy QC guide explaining how to inspect warehouse photos for shoes, clothing, bags, accessories and parcel-ready items before shipping.</span></a>
-
-
+        <a class="article" href="/guides/cssbuy-clothing-size-verification-workflow-2026/"><small>Sizing Guide</small><b>CSSBuy Clothing Size Verification Workflow 2026: From Seller Chart to Warehouse Measurements</b><span>Compare a reference garment, seller chart, warehouse tag and key measurements before approving, exchanging or returning clothing.</span></a>
+        <a class="article" href="/guides/cssbuy-delivery-day-evidence-protocol-2026/"><small>Parcel Evidence</small><b>CSSBuy Delivery-Day Evidence Protocol 2026</b><span>Record the unopened carton, opening sequence and item count before reporting missing or damaged parcel contents.</span></a>
+        <a class="article" href="/guides/cssbuy-restricted-item-route-filter-2026/"><small>Route Planning</small><b>CSSBuy Restricted Item Route Filter 2026</b><span>Filter batteries, liquids, powders, branded goods and unknown materials before they restrict an entire parcel.</span></a>
       </div>
     </section></div></section>
 
@@ -2752,6 +2748,35 @@ document.addEventListener('DOMContentLoaded', function(){
     });
   });
 });
+</script>
+
+
+<script id="SEO_LATEST_PATCH_20260805">
+(function(){
+  const latest = [
+    {href:'/guides/cssbuy-clothing-size-verification-workflow-2026/', tag:'Sizing Guide', title:'CSSBuy Clothing Size Verification Workflow 2026: From Seller Chart to Warehouse Measurements', desc:'Compare a reference garment, seller chart, warehouse tag and key measurements before approving, exchanging or returning clothing.'},
+    {href:'/guides/cssbuy-delivery-day-evidence-protocol-2026/', tag:'Parcel Evidence', title:'CSSBuy Delivery-Day Evidence Protocol 2026', desc:'Record the unopened carton, opening sequence and item count before reporting missing or damaged parcel contents.'},
+    {href:'/guides/cssbuy-restricted-item-route-filter-2026/', tag:'Route Planning', title:'CSSBuy Restricted Item Route Filter 2026', desc:'Filter batteries, liquids, powders, branded goods and unknown materials before they restrict an entire parcel.'}
+  ];
+  function applyLatest(){
+    document.querySelectorAll('#articles .article').forEach(function(card,i){
+      const item=latest[i]; if(!item) return;
+      card.setAttribute('href',item.href);
+      const small=card.querySelector('small'), title=card.querySelector('b'), desc=card.querySelector('span');
+      if(small) small.textContent=item.tag;
+      if(title) title.textContent=item.title;
+      if(desc) desc.textContent=item.desc;
+    });
+    const viewAll=document.querySelector('#articles .view-all-btn');
+    if(viewAll) viewAll.setAttribute('href','/all-seo-articles/');
+  }
+  document.addEventListener('DOMContentLoaded',function(){
+    [0,80,250,800].forEach(function(ms){setTimeout(applyLatest,ms)});
+    document.querySelectorAll('.langs a,.lang-switch a').forEach(function(a){
+      a.addEventListener('click',function(){setTimeout(applyLatest,120)});
+    });
+  });
+})();
 </script>
 
 </body>
