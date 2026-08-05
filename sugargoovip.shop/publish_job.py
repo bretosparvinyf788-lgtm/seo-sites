@@ -42,6 +42,10 @@ def main() -> None:
         raise SystemExit("publish_job.py requires action=publish_article")
 
     mod = load_engine()
+    # The archive engine's built-in ARTICLE is itself an existing historical guide.
+    # Preserve it before replacing ARTICLE with the newly queued publication.
+    engine_primary_guide = mod.all_guides()[0]
+
     article = job["article"]
     guide = job["guide"]
     previous = job.get("existing_prepend", [])
@@ -56,7 +60,20 @@ def main() -> None:
 
     mod.ARTICLE = article
     mod.OFFICIAL_CITATIONS = citations
-    mod.EXISTING_GUIDES = [*previous, *mod.EXISTING_GUIDES]
+
+    # Merge caller-supplied recent guides, the engine's original primary guide,
+    # and the remaining archive guides. Dedupe by slug so every historical
+    # article remains visible without duplicate cards on repeated runs.
+    merged_guides = [*previous, engine_primary_guide, *mod.EXISTING_GUIDES]
+    deduped_guides = []
+    seen_slugs = {article["slug"]}
+    for existing in merged_guides:
+        slug = existing["slug"]
+        if slug in seen_slugs:
+            continue
+        seen_slugs.add(slug)
+        deduped_guides.append(existing)
+    mod.EXISTING_GUIDES = deduped_guides
 
     def all_guides():
         newest = {
