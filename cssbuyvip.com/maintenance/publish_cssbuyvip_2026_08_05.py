@@ -1,7 +1,7 @@
 from pathlib import Path
 import re
 
-ROOT = Path(__file__).resolve().parents[1]
+ROOT = Path(__file__).resolve().parents[2]
 SITE = ROOT / "cssbuyvip.com"
 DATE = "2026-08-05"
 SLUG = "cssbuy-clothing-size-verification-workflow-2026"
