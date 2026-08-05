@@ -1,0 +1,82 @@
+{
+  "zh": {
+    "key": "cssbuy-warehouse-calendar-return-storage-deadlines-2026",
+    "slug": "cssbuy-warehouse-calendar-return-storage-deadlines-2026",
+    "title": "CSSBuy 仓库日历 2026：7 天、30 天与 90 天的包裹计划",
+    "excerpt": "用截止日期管理 QC、退换货、敏感商品仓储、合包和国际发货，避免商品因为等待过久而失去处理空间。",
+    "seo_title": "CSSBuy 仓库日历 2026｜仓储、QC 与退货",
+    "seo_description": "按照 7 天、30 天和 90 天节点安排 CSSBuy QC、退货、敏感商品仓储、合包、包装和发货。",
+    "tags": "CSSBuy 仓库, CSSBuy 退货, CSSBuy QC, 90天仓储, 敏感商品, 合包, 国际运费",
+    "publish_date": "2026-08-05",
+    "body": [
+      ["仓库管理的核心是时间", "商品入库后应记录订单号、规格、数量、入库日期、商品属性和最晚处理日期。不要只按品类整理，因为 QC、退货和仓储并不是同一个时间窗口。"],
+      ["先完成入库身份核对", "商品到仓后尽快确认款式、颜色、尺码、数量、配件和明显瑕疵。QC 图片无法证明隐藏材质或长期耐用性，但可以帮助确认仓库收到的实物是否与订单基本一致。"],
+      ["把七天视为退货决策线", "CSSBuy 当前说明中，协助退货通常要求卖家接受、商品入库少于七天并由买家承担国内退货运费。最好在第三或第四天前完成通过、补拍、换货或退货决定。"],
+      ["区分退货时钟和仓储时钟", "较长的仓储时间不代表退货机会仍然存在。QC 通过后把商品移入合包队列；发现问题则立即处理，不要因为还有仓储天数而拖延。"],
+      ["敏感商品单独管理", "电池、液体、粉末、香水、磁性商品和部分电子产品会限制线路，也可能适用更短仓储期限。以账户中实际显示的分类和截止日期为准，无法确认时及时询问客服。"],
+      ["按批次合包而不是无限加购", "为每一批商品设定主题和结束日期。批次关闭后停止临时加购，开始比较实重、体积重、包装方式和可用线路。"],
+      ["付款前设置预算检查点", "商品和国内运费与国际运费是两个阶段。记录已支付成本、当前国际运费估算和最终称重可能产生的高位预算，只有三项都可接受时才提交包裹。"],
+      ["常见问题", "并非所有商品都应默认拥有相同仓储期限。官方页面目前既有一般 90 天说明，也有普通商品 90 天、敏感商品 30 天的表述，因此应以具体订单页面为准。每件商品都应在入库后尽快检查，合包可以稍后进行。"]
+    ]
+  },
+  "es": {
+    "key": "cssbuy-warehouse-calendar-return-storage-deadlines-2026",
+    "slug": "cssbuy-warehouse-calendar-return-storage-deadlines-2026",
+    "title": "Calendario de almacén CSSBuy 2026: plan de 7, 30 y 90 días",
+    "excerpt": "Un sistema por fechas para revisar QC, proteger devoluciones, separar artículos sensibles, consolidar y enviar antes de que el almacenamiento se convierta en un coste.",
+    "seo_title": "Calendario CSSBuy 2026 | Almacén y devoluciones",
+    "seo_description": "Organiza QC, devoluciones, artículos sensibles, consolidación, embalaje y envío de CSSBuy con un calendario de 7, 30 y 90 días.",
+    "tags": "almacén CSSBuy, devoluciones CSSBuy, QC CSSBuy, almacenamiento 90 días, artículos sensibles, consolidación",
+    "publish_date": "2026-08-05",
+    "body": [
+      ["El almacén se controla por fechas", "Registra cada pedido desde el estado de llegada al almacén: número, variante, cantidad, fecha, clasificación y último día seguro para decidir. La fecha de compra no sustituye al reloj real del almacén."],
+      ["Revisa la identidad en cuanto llegue", "Confirma producto, color, talla, cantidad, accesorios y daños visibles con las fotos de QC. La inspección no demuestra materiales ocultos ni durabilidad, pero sí ayuda a verificar lo recibido."],
+      ["Convierte el día siete en un límite interno", "La guía actual de CSSBuy relaciona la ayuda de devolución con la aceptación del vendedor, menos de siete días en almacén y el pago del envío doméstico de retorno. Decide antes del día tres o cuatro."],
+      ["No mezcles devolución y almacenamiento", "Un artículo puede conservar días de almacén y haber perdido ya una opción práctica de devolución. Aprueba, solicita una comprobación concreta o inicia la corrección sin esperar."],
+      ["Separa los artículos sensibles", "Baterías, líquidos, polvos, perfumes, imanes y ciertos electrónicos pueden reducir las rutas y tener un plazo diferente. Usa la clasificación y fecha mostradas en la cuenta."],
+      ["Cierra la consolidación por tandas", "Define una tanda con propósito y fecha de cierre. Cuando termine, deja de añadir compras y compara peso real, peso volumétrico, embalaje y rutas compatibles."],
+      ["Haz un control de presupuesto", "Separa el coste de productos y transporte nacional del depósito de envío internacional. Añade un margen para la medición final y servicios opcionales antes de liberar el paquete."],
+      ["Preguntas frecuentes", "No presupongas que todos los pedidos tienen el mismo plazo. La información oficial muestra una regla general de noventa días y páginas que distinguen artículos comunes y sensibles. El pedido concreto debe mandar."]
+    ]
+  },
+  "de": {
+    "key": "cssbuy-warehouse-calendar-return-storage-deadlines-2026",
+    "slug": "cssbuy-warehouse-calendar-return-storage-deadlines-2026",
+    "title": "CSSBuy-Lagerkalender 2026: Der 7-, 30- und 90-Tage-Plan",
+    "excerpt": "Ein fristbasierter Ablauf für QC, Rückgaben, sensible Waren, Konsolidierung und Versand, bevor Lagerzeit zusätzliche Kosten verursacht.",
+    "seo_title": "CSSBuy Lagerkalender 2026 | Lagerung & Rückgabe",
+    "seo_description": "Plane CSSBuy-QC, Rückgaben, sensible Artikel, Konsolidierung, Verpackung und Versand mit einem 7-, 30- und 90-Tage-Kalender.",
+    "tags": "CSSBuy Lager, CSSBuy Rückgabe, CSSBuy QC, 90 Tage Lagerung, sensible Artikel, Konsolidierung",
+    "publish_date": "2026-08-05",
+    "body": [
+      ["Lagerplanung beginnt mit Fristen", "Erfasse Bestellnummer, Variante, Menge, Lagereingang, Warenklasse und spätesten Entscheidungstag. Das Einkaufsdatum ist weniger wichtig als der tatsächliche Status im Lager."],
+      ["Prüfe die Identität sofort", "Kontrolliere Produkt, Farbe, Größe, Menge, Zubehör und sichtbare Schäden anhand der QC-Bilder. Die Prüfung ersetzt keine Materialanalyse, bestätigt aber, was tatsächlich angekommen ist."],
+      ["Nutze sieben Tage als Entscheidungsgrenze", "Die aktuelle CSSBuy-Hilfe verbindet Rückgabeunterstützung mit Verkäuferzustimmung, weniger als sieben Tagen im Lager und bezahltem Inlandsrückversand. Entscheide besser bis Tag drei oder vier."],
+      ["Trenne Rückgabe- und Lagerfrist", "Eine lange Lagerfrist hält das Rückgaberecht nicht automatisch offen. Genehmigte Artikel gehen in die Konsolidierung; ungeklärte Artikel benötigen sofortige Maßnahmen."],
+      ["Führe sensible Waren separat", "Batterien, Flüssigkeiten, Pulver, Parfüm, magnetische Waren und manche Elektronik können Versandlinien einschränken und andere Lagerfristen haben. Maßgeblich ist die Anzeige im Konto."],
+      ["Schließe Konsolidierungswellen", "Gib jeder Welle einen Zweck und ein Enddatum. Danach werden keine spontanen Artikel ergänzt; stattdessen vergleichst du Realgewicht, Volumengewicht, Verpackung und Routen."],
+      ["Setze einen Budgetprüfpunkt", "Trenne Produkt- und Inlandsversandkosten von der internationalen Versandanzahlung. Plane einen Puffer für Endmaße und Zusatzleistungen ein."],
+      ["Häufige Frage", "Verlasse dich nicht pauschal auf eine identische Frist. Offizielle CSSBuy-Seiten nennen allgemein neunzig Tage und unterscheiden an anderer Stelle gewöhnliche und sensible Waren. Die konkrete Bestellung ist entscheidend."]
+    ]
+  },
+  "pt": {
+    "key": "cssbuy-warehouse-calendar-return-storage-deadlines-2026",
+    "slug": "cssbuy-warehouse-calendar-return-storage-deadlines-2026",
+    "title": "Calendário de armazém CSSBuy 2026: plano de 7, 30 e 90 dias",
+    "excerpt": "Um sistema de prazos para QC, devoluções, itens sensíveis, consolidação e envio antes que o armazenamento vire custo.",
+    "seo_title": "Calendário CSSBuy 2026 | Armazém e devoluções",
+    "seo_description": "Planeje QC, devoluções, itens sensíveis, consolidação, embalagem e envio da CSSBuy com um calendário de 7, 30 e 90 dias.",
+    "tags": "armazém CSSBuy, devolução CSSBuy, QC CSSBuy, armazenamento 90 dias, itens sensíveis, consolidação",
+    "publish_date": "2026-08-05",
+    "body": [
+      ["O armazém deve ser gerido por datas", "Registre número do pedido, variante, quantidade, data de entrada, classificação e último dia seguro para decidir. A data da compra não substitui o relógio do armazém."],
+      ["Faça a conferência assim que chegar", "Verifique produto, cor, tamanho, quantidade, acessórios e danos visíveis nas imagens de QC. A inspeção não comprova materiais internos, mas ajuda a confirmar o item recebido."],
+      ["Trate o sétimo dia como limite", "A orientação atual da CSSBuy liga a ajuda na devolução à aceitação do vendedor, menos de sete dias no armazém e pagamento do frete doméstico de retorno. Decida até o terceiro ou quarto dia."],
+      ["Separe devolução de armazenamento", "Um item pode ter muito tempo de armazenamento e já não ter uma devolução prática. Aprove, peça uma verificação específica ou inicie a correção sem adiar."],
+      ["Gerencie itens sensíveis à parte", "Baterias, líquidos, pós, perfumes, ímãs e alguns eletrônicos podem reduzir as rotas e ter prazos diferentes. Use a classificação e a data exibidas na conta."],
+      ["Feche ondas de consolidação", "Dê objetivo e data final a cada lote. Depois do fechamento, pare de adicionar compras e compare peso real, peso volumétrico, embalagem e rotas compatíveis."],
+      ["Faça uma checagem de orçamento", "Separe produto e frete doméstico do depósito de envio internacional. Reserve margem para medição final e serviços opcionais antes de liberar o pacote."],
+      ["Perguntas frequentes", "Não presuma que todos os pedidos têm o mesmo prazo. Páginas oficiais mostram uma regra geral de noventa dias e também distinguem itens comuns e sensíveis. O pedido específico deve orientar a decisão."]
+    ]
+  }
+}
