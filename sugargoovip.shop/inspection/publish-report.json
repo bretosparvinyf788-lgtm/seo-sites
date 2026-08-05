@@ -1,10 +1,10 @@
 {
   "status": "archive_validated",
-  "published_at": "2026-08-03",
-  "article": "guide-sugargoo-payment-coupons-budget.html",
-  "title": "Sugargoo Payment & Coupon Guide 2026: Control the Two-Stage Checkout Without Budget Surprises",
+  "published_at": "2026-08-05",
+  "article": "guide-sugargoo-order-evidence-chain.html",
+  "title": "Sugargoo Evidence Chain Guide 2026: Preserve the Proof Behind Every Order Decision",
   "checks": {
-    "article_word_count": 1731,
+    "article_word_count": 1708,
     "word_count_in_range": true,
     "article_h1_present": true,
     "article_meta_description": true,
