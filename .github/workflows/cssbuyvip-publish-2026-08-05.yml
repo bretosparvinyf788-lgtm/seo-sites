@@ -8,6 +8,10 @@ on:
 permissions:
   contents: write
 
+concurrency:
+  group: cssbuyvip-com-publish-2026-08-05
+  cancel-in-progress: false
+
 jobs:
   publish:
     runs-on: ubuntu-latest
@@ -15,7 +19,10 @@ jobs:
       - name: Check out repository
         uses: actions/checkout@v4
         with:
+          ref: main
           fetch-depth: 0
+      - name: Sync current main
+        run: git pull --rebase origin main
       - name: Patch CSSBuyVip pages
         run: python scripts/publish_cssbuyvip_2026_08_05.py
       - name: Commit published pages
@@ -27,5 +34,11 @@ jobs:
             echo "No page changes required"
           else
             git commit -m "Publish CSSBuy clothing size verification update"
-            git push
+            for attempt in 1 2 3; do
+              if git push origin HEAD:main; then
+                exit 0
+              fi
+              git pull --rebase origin main
+            done
+            exit 1
           fi
