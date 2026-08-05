@@ -6,6 +6,7 @@ on:
       - main
     paths:
       - automation/hipobuyvip/publish.py
+      - automation/hipobuyvip/trigger.txt
   workflow_dispatch:
 
 permissions:
@@ -36,5 +37,6 @@ jobs:
             echo "No publication changes detected."
           else
             git commit -m "Publish HipoBuyVIP warehouse storage guide"
+            git pull --rebase origin main
             git push origin main
           fi
