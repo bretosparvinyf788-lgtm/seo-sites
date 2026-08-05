@@ -1,0 +1,40 @@
+name: Publish HipoBuyVIP SEO Article
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - automation/hipobuyvip/publish.py
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: hipobuyvip-seo-publish
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Apply HipoBuyVIP article update
+        run: python automation/hipobuyvip/publish.py
+
+      - name: Commit published files
+        run: |
+          git config user.name "HipoBuyVIP SEO Publisher"
+          git config user.email "actions@users.noreply.github.com"
+          git add hipobuyvip.net
+          if git diff --cached --quiet; then
+            echo "No publication changes detected."
+          else
+            git commit -m "Publish HipoBuyVIP warehouse storage guide"
+            git push origin main
+          fi
