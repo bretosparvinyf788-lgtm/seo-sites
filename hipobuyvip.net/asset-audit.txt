@@ -1,0 +1,5 @@
+HipoBuyVIP asset repair audit
+Copied assets: 17
+Rewritten text files: 2
+Unresolved image/icon references: 1
+hipobuyvip.net/index.html -> window.location.href
