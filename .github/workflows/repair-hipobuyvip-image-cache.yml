@@ -1,0 +1,147 @@
+name: Repair HipoBuyVIP image cache
+
+on:
+  issues:
+    types: [opened]
+
+permissions:
+  contents: write
+  issues: write
+
+jobs:
+  repair:
+    if: github.event.issue.title == 'Run HipoBuyVIP image cache repair'
+    runs-on: ubuntu-latest
+    env:
+      ASSET_VERSION: hipobuy-20260806-1505
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Version every local image reference
+        shell: bash
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import os
+          import re
+
+          root = Path('hipobuyvip.net')
+          version = os.environ['ASSET_VERSION']
+          changed = []
+          image_ext = r'(?:png|jpe?g|webp|gif|svg|ico)'
+
+          attr = re.compile(
+              rf'(?P<prefix>\b(?:src|href)=["\'])(?P<path>(?:\.\./|\./|/)?assets/[^"\']+?\.{image_ext})(?:\?[^"\']*)?(?P<quote>["\'])',
+              re.I,
+          )
+          css = re.compile(
+              rf'(?P<prefix>url\(["\']?)(?P<path>(?:\.\./|\./|/)?assets/[^"\')]+?\.{image_ext})(?:\?[^"\')\s]*)?(?P<suffix>["\']?\))',
+              re.I,
+          )
+
+          for page in root.rglob('*'):
+              if not page.is_file() or page.suffix.lower() not in {'.html', '.css'}:
+                  continue
+              original = page.read_text(encoding='utf-8', errors='ignore')
+              text = original.replace('assets/generated/', 'assets/')
+              text = attr.sub(lambda m: f'{m.group("prefix")}{m.group("path")}?v={version}{m.group("quote")}', text)
+              text = css.sub(lambda m: f'{m.group("prefix")}{m.group("path")}?v={version}{m.group("suffix")}', text)
+              if text != original:
+                  page.write_text(text, encoding='utf-8')
+                  changed.append(str(page))
+
+          headers = root / '_headers'
+          text = headers.read_text(encoding='utf-8')
+          text = re.sub(
+              r'(/assets/\*\n)  Cache-Control:.*',
+              r'\1  Cache-Control: public, max-age=0, must-revalidate',
+              text,
+          )
+          headers.write_text(text, encoding='utf-8')
+
+          homepage = (root / 'index.html').read_text(encoding='utf-8')
+          required = [
+              f'assets/e1cf08f4a01263e0.png?v={version}',
+              f'assets/af6e653f7fc61b9f.jpg?v={version}',
+              f'assets/46622da6456ec6cb.webp?v={version}',
+              f'assets/88b48672060c890a.png?v={version}',
+              f'assets/f95852b5aa9496e2.png?v={version}',
+          ]
+          for item in required:
+              if item not in homepage:
+                  raise SystemExit(f'Missing versioned homepage asset: {item}')
+          if 'assets/generated/' in homepage:
+              raise SystemExit('Legacy generated asset path remains in homepage')
+
+          print(f'Versioned image references in {len(changed)} HTML/CSS files')
+          print('\n'.join(changed))
+          PY
+
+      - name: Commit cache-busted assets
+        shell: bash
+        run: |
+          rm -f hipobuyvip.net/LIVE-ASSET-DIAGNOSTIC-TRIGGER.txt
+          rm -f hipobuyvip.net/live-asset-diagnostic.txt
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A hipobuyvip.net
+          git rm .github/workflows/repair-hipobuyvip-image-cache.yml
+          git commit -m "Force-refresh HipoBuyVIP image assets"
+          git pull --rebase origin main
+          git push origin HEAD:main
+
+      - name: Wait for Cloudflare production deployment
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -e
+          homepage="https://hipobuyvip.net/?verify_asset_version=${ASSET_VERSION}"
+          found=0
+          for attempt in $(seq 1 36); do
+            body="$(curl -fsSL --max-time 30 -H 'Cache-Control: no-cache' "$homepage" || true)"
+            if printf '%s' "$body" | grep -q "assets/e1cf08f4a01263e0.png?v=${ASSET_VERSION}"; then
+              found=1
+              echo "Production HTML contains the new asset version on attempt $attempt"
+              break
+            fi
+            echo "Waiting for Cloudflare deployment: attempt $attempt/36"
+            sleep 10
+          done
+          if [ "$found" -ne 1 ]; then
+            gh issue comment "${{ github.event.issue.number }}" --body "The repository repair was committed, but the production HTML did not expose asset version \`${ASSET_VERSION}\` within six minutes. Check the latest Cloudflare Pages deployment and its build settings."
+            exit 1
+          fi
+
+          report="Production asset version: ${ASSET_VERSION}\n"
+          for asset in \
+            "e1cf08f4a01263e0.png" \
+            "af6e653f7fc61b9f.jpg" \
+            "46622da6456ec6cb.webp" \
+            "88b48672060c890a.png" \
+            "f95852b5aa9496e2.png"; do
+            url="https://hipobuyvip.net/assets/${asset}?v=${ASSET_VERSION}"
+            headers="$(mktemp)"
+            body="$(mktemp)"
+            status="$(curl -sS -L --max-time 45 -D "$headers" -o "$body" -w '%{http_code}' "$url")"
+            content_type="$(awk 'BEGIN{IGNORECASE=1} /^content-type:/{gsub("\r",""); print $2; exit}' "$headers")"
+            bytes="$(wc -c < "$body" | tr -d ' ')"
+            signature="$(od -An -tx1 -N8 "$body" | tr -d ' \n')"
+            case "$asset" in
+              *.png) expected="89504e470d0a1a0a" ;;
+              *.jpg|*.jpeg) expected_prefix="ffd8ff" ;;
+              *.webp) expected="52494646" ;;
+            esac
+            [ "$status" = "200" ] || { echo "$asset returned $status"; exit 1; }
+            [[ "$content_type" == image/* ]] || { echo "$asset returned $content_type"; exit 1; }
+            if [ -n "${expected:-}" ]; then [[ "$signature" == "$expected"* ]] || exit 1; fi
+            if [ -n "${expected_prefix:-}" ]; then [[ "$signature" == "$expected_prefix"* ]] || exit 1; fi
+            report+="- ${asset}: HTTP ${status}, ${content_type}, ${bytes} bytes\n"
+            unset expected expected_prefix
+            rm -f "$headers" "$body"
+          done
+          gh issue comment "${{ github.event.issue.number }}" --body "$(printf '%b' "$report")\nThe production HTML and all tested versioned images are live and valid."
+          gh issue close "${{ github.event.issue.number }}" --reason completed
