@@ -1,1 +1,0 @@
-Temporary marker for the HipoBuyVIP live asset diagnostic. The issue-triggered workflow removes itself after recording the production response report.
