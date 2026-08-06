@@ -1,0 +1,139 @@
+name: Repair HipoBuyVIP image assets
+
+on:
+  issues:
+    types: [opened]
+
+permissions:
+  contents: write
+  issues: write
+
+jobs:
+  repair:
+    if: github.event.issue.title == 'Run HipoBuyVIP image asset repair'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Flatten generated assets and rewrite references
+        shell: bash
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          from urllib.parse import urlsplit
+          import re
+          import shutil
+
+          root = Path('hipobuyvip.net')
+          generated = root / 'assets' / 'generated'
+          stable = root / 'assets'
+
+          if not generated.is_dir():
+              raise SystemExit('Missing hipobuyvip.net/assets/generated directory')
+
+          copied = 0
+          for source in generated.rglob('*'):
+              if not source.is_file():
+                  continue
+              destination = stable / source.name
+              if not destination.exists() or destination.read_bytes() != source.read_bytes():
+                  shutil.copy2(source, destination)
+                  copied += 1
+
+          text_suffixes = {'.html', '.css', '.js', '.json', '.xml', '.txt', '.webmanifest'}
+          changed_files = []
+          for path in root.rglob('*'):
+              if not path.is_file() or path.suffix.lower() not in text_suffixes:
+                  continue
+              try:
+                  original = path.read_text(encoding='utf-8')
+              except UnicodeDecodeError:
+                  continue
+              updated = original.replace('assets/generated/', 'assets/')
+              if updated != original:
+                  path.write_text(updated, encoding='utf-8')
+                  changed_files.append(str(path))
+
+          headers = root / '_headers'
+          if headers.exists():
+              original = headers.read_text(encoding='utf-8')
+              updated = re.sub(
+                  r'\n/assets/generated/\*\n(?:  .+\n?)+',
+                  '\n',
+                  original,
+                  flags=re.M,
+              )
+              if updated != original:
+                  headers.write_text(updated.rstrip() + '\n', encoding='utf-8')
+                  changed_files.append(str(headers))
+
+          missing = []
+          attr_pattern = re.compile(r'''(?:src|href)=["']([^"']+)["']''', re.I)
+          css_pattern = re.compile(r'''url\(["']?([^"')]+)''', re.I)
+
+          def check_reference(page, reference):
+              reference = reference.strip()
+              if not reference or reference.startswith(('#', 'data:', 'mailto:', 'tel:', 'javascript:')):
+                  return
+              parsed = urlsplit(reference)
+              if parsed.scheme or parsed.netloc:
+                  return
+              clean = parsed.path
+              if not clean or clean.endswith('/'):
+                  return
+              if clean.startswith('/'):
+                  target = root / clean.lstrip('/')
+              else:
+                  target = (page.parent / clean).resolve()
+              try:
+                  target.relative_to(root.resolve())
+              except ValueError:
+                  return
+              if not target.exists():
+                  missing.append((str(page), reference))
+
+          for page in root.rglob('*'):
+              if not page.is_file() or page.suffix.lower() not in {'.html', '.css'}:
+                  continue
+              text = page.read_text(encoding='utf-8', errors='ignore')
+              for ref in attr_pattern.findall(text):
+                  check_reference(page, ref)
+              for ref in css_pattern.findall(text):
+                  check_reference(page, ref)
+
+          if missing:
+              print('Missing local assets after repair:')
+              for page, reference in missing:
+                  print(f'- {page}: {reference}')
+              raise SystemExit(f'{len(missing)} unresolved local asset reference(s)')
+
+          remaining = []
+          for path in root.rglob('*'):
+              if path.is_file() and path.suffix.lower() in text_suffixes:
+                  text = path.read_text(encoding='utf-8', errors='ignore')
+                  if 'assets/generated/' in text:
+                      remaining.append(str(path))
+          if remaining:
+              raise SystemExit('Generated asset references remain: ' + ', '.join(remaining))
+
+          print(f'Copied {copied} assets into hipobuyvip.net/assets/')
+          print(f'Rewrote {len(set(changed_files))} text files')
+          print('All local HTML/CSS asset references resolve in the repository.')
+          PY
+
+      - name: Commit repaired assets
+        shell: bash
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add hipobuyvip.net
+          git rm .github/workflows/repair-hipobuyvip-assets.yml
+          if git diff --cached --quiet; then
+            echo "No changes required"
+            exit 0
+          fi
+          git commit -m "Fix HipoBuyVIP missing image assets"
+          git push origin HEAD:main
