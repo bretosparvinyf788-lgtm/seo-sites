@@ -2,6 +2,20 @@
   'use strict';
   const ARTICLES=[
     {
+      url:'/guides/litbuy-route-first-buying-shipping-restrictions-2026.html',
+      copy:{
+        en:{meta:'Route planning · August 7, 2026',title:'Build a Route-First LitBuy Haul Before You Buy',dek:'Screen shipping restrictions, packaging, QC evidence and parcel compatibility before a low domestic price becomes an awkward shipment.'},
+        zh:{meta:'线路规划 · 2026年8月7日',title:'购买前先规划 LitBuy 国际运输线路',dek:'在低价商品进入仓库前，先检查运输限制、包装、QC 证据和包裹兼容性。'},
+        es:{meta:'Planificación de ruta · 7 agosto 2026',title:'Planifica la ruta de tu compra LitBuy antes de comprar',dek:'Revisa restricciones, embalaje, QC y compatibilidad antes de que un precio bajo se convierta en un envío difícil.'},
+        fr:{meta:'Planification de ligne · 7 août 2026',title:'Planifier la route LitBuy avant l’achat',dek:'Vérifiez restrictions, emballage, QC et compatibilité avant qu’un prix bas ne devienne un envoi compliqué.'},
+        de:{meta:'Routenplanung · 7. August 2026',title:'LitBuy-Versandroute vor dem Kauf planen',dek:'Prüfen Sie Einschränkungen, Verpackung, QC und Paketkompatibilität, bevor ein günstiger Einkauf teuer wird.'},
+        pt:{meta:'Planejamento de rota · 7 agosto 2026',title:'Planeje a rota LitBuy antes da compra',dek:'Verifique restrições, embalagem, QC e compatibilidade antes que um preço baixo vire um envio difícil.'},
+        ja:{meta:'配送ルート設計 · 2026年8月7日',title:'購入前にLitBuyの配送ルートを設計する方法',dek:'低価格の商品が扱いにくい荷物になる前に、制限・梱包・QC・同梱適合性を確認します。'},
+        ko:{meta:'배송 경로 계획 · 2026년 8월 7일',title:'구매 전에 LitBuy 배송 경로부터 설계하기',dek:'저렴한 상품이 까다로운 국제 배송이 되기 전에 제한, 포장, QC, 합배송 호환성을 점검합니다.'},
+        ar:{meta:'تخطيط مسار الشحن · 7 أغسطس 2026',title:'خطط لمسار شحن LitBuy قبل الشراء',dek:'افحص القيود والتغليف وفحص الجودة وتوافق الطرد قبل أن يتحول السعر المنخفض إلى شحنة معقدة.'}
+      }
+    },
+    {
       url:'/guides/litbuy-warehouse-queue-qc-storage-return-window-2026.html',
       copy:{
         en:{meta:'Warehouse control · August 5, 2026',title:'Manage a LitBuy Warehouse Queue Without Losing the Return Window',dek:'Coordinate QC evidence, seller deadlines, storage age and parcel compatibility before accepted items leave China.'},
