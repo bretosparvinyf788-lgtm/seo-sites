@@ -79,18 +79,38 @@ function featureLatestCSSBuyGuide() {
   const guideGrid = document.querySelector('#guides .guides');
   if (!guideGrid) return;
 
-  const existing = guideGrid.querySelector('a[href="guides/cssbuy-reverse-purchasing-guide-2026/"]');
-  if (!existing) {
+  const latestGuides = [
+    {
+      href: 'guides/cssbuy-warehouse-timing-guide-2026/',
+      image: 'assets/images/guides/warehouse-timing.svg',
+      alt: 'CSSBuy Warehouse Timing Guide',
+      meta: 'Warehouse Strategy • Updated August 2026 • 1,720 words • 11 min read',
+      title: 'CSSBuy Warehouse Timing Guide 2026: The 7-Day, 30-Day and 90-Day Clock',
+      excerpt: 'The warehouse is not a parking lot. Learn how to manage QC, return timing, ordinary and sensitive storage, consolidation and parcel release before deadlines start making decisions for you…'
+    },
+    {
+      href: 'guides/cssbuy-reverse-purchasing-guide-2026/',
+      image: 'assets/images/guides/reverse-purchasing.svg',
+      alt: 'CSSBuy Reverse Purchasing Guide',
+      meta: 'Reverse Purchasing • Updated August 2026 • 1,769 words • 11 min read',
+      title: 'CSSBuy Reverse Purchasing Guide 2026: The Two-Checkout Workflow',
+      excerpt: 'A reverse purchase is not one checkout. It is a controlled sequence of acquisition, warehouse verification and parcel release. This guide shows how to keep every decision connected…'
+    }
+  ];
+
+  latestGuides.slice().reverse().forEach(guide => {
+    const existingAnchor = guideGrid.querySelector(`a[href="${guide.href}"]`);
+    if (existingAnchor) existingAnchor.closest('article.guide')?.remove();
     const card = document.createElement('article');
     card.className = 'guide card';
-    card.innerHTML = '<a href="guides/cssbuy-reverse-purchasing-guide-2026/">' +
-      '<div class="guide-image"><img src="assets/images/guides/reverse-purchasing.svg" alt="CSSBuy Reverse Purchasing Guide"></div>' +
-      '<div class="guide-body"><small>Reverse Purchasing • Updated August 2026 • 1,769 words • 11 min read</small>' +
-      '<h3>CSSBuy Reverse Purchasing Guide 2026: The Two-Checkout Workflow</h3>' +
-      '<p>A reverse purchase is not one checkout. It is a controlled sequence of acquisition, warehouse verification and parcel release. This guide shows how to keep every decision connected…</p>' +
+    card.innerHTML = '<a href="' + guide.href + '">' +
+      '<div class="guide-image"><img src="' + guide.image + '" alt="' + guide.alt + '"></div>' +
+      '<div class="guide-body"><small>' + guide.meta + '</small>' +
+      '<h3>' + guide.title + '</h3>' +
+      '<p>' + guide.excerpt + '</p>' +
       '<span class="read-more">Read Full Article →</span></div></a>';
     guideGrid.prepend(card);
-  }
+  });
 
   Array.from(guideGrid.querySelectorAll('article.guide')).slice(3).forEach(card => card.remove());
 }
