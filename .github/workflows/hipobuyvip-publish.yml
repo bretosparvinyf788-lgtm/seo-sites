@@ -1,0 +1,33 @@
+name: Publish HipoBuyVIP guide
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'hipobuyvip.net/.automation/run-*.txt'
+
+permissions:
+  contents: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+      - name: Apply latest HipoBuyVIP guide manifest
+        run: python3 hipobuyvip.net/.automation/publish_latest.py
+      - name: Commit generated index updates
+        run: |
+          if git diff --quiet -- hipobuyvip.net/index.html hipobuyvip.net/articles/index.html hipobuyvip.net/sitemap.xml; then
+            echo "No index changes required."
+            exit 0
+          fi
+          git config user.name "hipobuyvip-publisher"
+          git config user.email "actions@users.noreply.github.com"
+          git add hipobuyvip.net/index.html hipobuyvip.net/articles/index.html hipobuyvip.net/sitemap.xml
+          git commit -m "Publish latest HipoBuyVIP buyer guide"
+          git push origin HEAD:main
