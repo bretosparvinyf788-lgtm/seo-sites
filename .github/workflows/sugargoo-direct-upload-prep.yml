@@ -1,0 +1,70 @@
+name: Prepare Sugargoo Pages direct upload
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/sugargoo-direct-upload-prep.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  prepare:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+      - name: Build direct upload metadata
+        shell: bash
+        run: |
+          set -euo pipefail
+          rm -rf /tmp/sugargoo-dist sugargoovip.shop/direct-upload
+          mkdir -p /tmp/sugargoo-dist sugargoovip.shop/direct-upload/files
+          tar -xzf sugargoovip.shop/site.tar.gz -C /tmp/sugargoo-dist
+          python3 -m pip install --quiet blake3
+          python3 - <<'PY'
+          import base64, json, mimetypes
+          from pathlib import Path
+          from blake3 import blake3
+          root=Path('/tmp/sugargoo-dist')
+          out=Path('sugargoovip.shop/direct-upload')
+          manifest={}
+          meta={}
+          for p in sorted(x for x in root.rglob('*') if x.is_file()):
+              rel=p.relative_to(root).as_posix()
+              raw=p.read_bytes()
+              ext=Path(rel).suffix[1:]
+              token=base64.b64encode(raw).decode('ascii') + ext
+              h=blake3(token.encode('ascii')).hexdigest()[:32]
+              path='/' + rel
+              manifest[path]=h
+              meta[h]={'path':path,'size':len(raw),'contentType':mimetypes.guess_type(rel)[0] or 'application/octet-stream'}
+          (out/'manifest.json').write_text(json.dumps(manifest,sort_keys=True,separators=(',',':')),encoding='utf-8')
+          (out/'meta.json').write_text(json.dumps(meta,sort_keys=True,separators=(',',':')),encoding='utf-8')
+          (out/'stats.json').write_text(json.dumps({'files':len(manifest),'bytes':sum(v['size'] for v in meta.values())},indent=2),encoding='utf-8')
+          stage={'index.html','guides.html','sitemap.xml','guide-sugargoo-warehouse-storage-timing.html'}
+          for rel in stage:
+              p=root/rel
+              if p.exists():
+                  encoded=base64.b64encode(p.read_bytes()).decode('ascii')
+                  wrapped='\n'.join(encoded[i:i+76] for i in range(0,len(encoded),76))+'\n'
+                  safe=rel.replace('/','__')+'.b64'
+                  (out/'files'/safe).write_text(wrapped,encoding='ascii')
+          PY
+      - name: Commit direct upload metadata
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add sugargoovip.shop/direct-upload
+          if git diff --cached --quiet; then
+            echo "No direct-upload metadata changes"
+            exit 0
+          fi
+          git commit -m "Prepare Sugargoo direct upload metadata"
+          git push origin HEAD:main
