@@ -1,10 +1,14 @@
 {
   "action": "publish_article",
-  "requested_at": "2026-08-05T02:10:00Z",
+  "requested_at": "2026-08-07T01:36:43Z",
   "payload_base64_parts": [
-    "jobs/2026-08-05-order-evidence.b64.part1",
-    "jobs/2026-08-05-order-evidence.b64.part2",
-    "jobs/2026-08-05-order-evidence.b64.part3",
-    "jobs/2026-08-05-order-evidence.b64.part4"
+    "jobs/2026-08-07-warehouse-timing-v2.b64.part1",
+    "jobs/2026-08-07-warehouse-timing-v2.b64.part2",
+    "jobs/2026-08-07-warehouse-timing-v2.b64.part3",
+    "jobs/2026-08-07-warehouse-timing-v2.b64.part4",
+    "jobs/2026-08-07-warehouse-timing-v2.b64.part5",
+    "jobs/2026-08-07-warehouse-timing-v2.b64.part6",
+    "jobs/2026-08-07-warehouse-timing-v2.b64.part7",
+    "jobs/2026-08-07-warehouse-timing-v2.b64.part8"
   ]
 }
