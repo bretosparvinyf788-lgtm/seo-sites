@@ -1,0 +1,1 @@
+Rebuild HipoBuyVIP on Cloudflare Pages using the current August 7 guide manifest.
