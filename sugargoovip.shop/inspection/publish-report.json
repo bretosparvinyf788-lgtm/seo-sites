@@ -1,10 +1,10 @@
 {
   "status": "archive_validated",
-  "published_at": "2026-08-05",
-  "article": "guide-sugargoo-order-evidence-chain.html",
-  "title": "Sugargoo Evidence Chain Guide 2026: Preserve the Proof Behind Every Order Decision",
+  "published_at": "2026-08-07",
+  "article": "guide-sugargoo-warehouse-storage-timing.html",
+  "title": "Sugargoo Warehouse Timing Guide 2026: Manage Storage, QC and Returns Without Rushing Your Parcel",
   "checks": {
-    "article_word_count": 1708,
+    "article_word_count": 1720,
     "word_count_in_range": true,
     "article_h1_present": true,
     "article_meta_description": true,
