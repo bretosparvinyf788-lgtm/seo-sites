@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 540" role="img" aria-labelledby="title desc">
+  <title id="title">CSSBuy warehouse timing guide illustration</title>
+  <desc id="desc">A CSSBuy warehouse planning graphic showing seven-day returns, thirty-day sensitive-item storage and ninety-day ordinary storage.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#eef8f5"/><stop offset="1" stop-color="#dcefeb"/></linearGradient>
+    <linearGradient id="panel" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ffffff"/><stop offset="1" stop-color="#f7fbfa"/></linearGradient>
+    <linearGradient id="box" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#e0a261"/><stop offset="1" stop-color="#b96d2d"/></linearGradient>
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="170%"><feDropShadow dx="0" dy="12" stdDeviation="14" flood-color="#173d38" flood-opacity=".16"/></filter>
+    <filter id="soft" x="-30%" y="-30%" width="160%" height="170%"><feDropShadow dx="0" dy="6" stdDeviation="7" flood-color="#173d38" flood-opacity=".12"/></filter>
+    <pattern id="dots" width="22" height="22" patternUnits="userSpaceOnUse"><circle cx="4" cy="4" r="2" fill="#7aa99f" opacity=".22"/></pattern>
+  </defs>
+  <rect width="960" height="540" rx="28" fill="url(#bg)"/>
+  <circle cx="882" cy="68" r="130" fill="#b9ddd5" opacity=".36"/>
+  <circle cx="92" cy="510" r="138" fill="#c9e8e1" opacity=".44"/>
+  <rect x="690" y="360" width="250" height="155" fill="url(#dots)" opacity=".72"/>
+  <g filter="url(#shadow)"><rect x="42" y="52" width="392" height="436" rx="28" fill="url(#panel)"/></g>
+  <rect x="74" y="84" width="222" height="42" rx="12" fill="#2f6b5f"/>
+  <text x="185" y="112" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="18" font-weight="700" fill="#fff" letter-spacing="1.1">WAREHOUSE GUIDE</text>
+  <text x="74" y="178" font-family="Arial,Helvetica,sans-serif" font-size="43" font-weight="800" fill="#123b39"><tspan x="74">CSSBuy Warehouse</tspan><tspan x="74" dy="51">Timing Strategy</tspan></text>
+  <text x="74" y="294" font-family="Arial,Helvetica,sans-serif" font-size="21" font-weight="600" fill="#44736b"><tspan x="74">Manage QC, returns, storage</tspan><tspan x="74" dy="30">and parcel release by deadline</tspan></text>
+  <g transform="translate(73 352)">
+    <g><circle cx="42" cy="42" r="39" fill="#e7f4f0" stroke="#2f6b5f" stroke-width="3"/><text x="42" y="40" text-anchor="middle" font-family="Arial" font-size="29" font-weight="800" fill="#2f6b5f">7</text><text x="42" y="59" text-anchor="middle" font-family="Arial" font-size="10" font-weight="700" fill="#2f6b5f">DAYS</text><text x="42" y="100" text-anchor="middle" font-family="Arial" font-size="11" font-weight="700" fill="#2f6b5f">RETURN CHECK</text></g>
+    <path d="M92 42h34" stroke="#80aaa1" stroke-width="3" stroke-linecap="round"/><path d="M119 36l8 6-8 6" fill="none" stroke="#80aaa1" stroke-width="3"/>
+    <g transform="translate(137)"><circle cx="42" cy="42" r="39" fill="#f6eadb" stroke="#c78646" stroke-width="3"/><text x="42" y="40" text-anchor="middle" font-family="Arial" font-size="29" font-weight="800" fill="#a25f28">30</text><text x="42" y="59" text-anchor="middle" font-family="Arial" font-size="10" font-weight="700" fill="#a25f28">DAYS</text><text x="42" y="100" text-anchor="middle" font-family="Arial" font-size="11" font-weight="700" fill="#a25f28">SENSITIVE</text></g>
+    <path d="M229 42h34" stroke="#80aaa1" stroke-width="3" stroke-linecap="round"/><path d="M256 36l8 6-8 6" fill="none" stroke="#80aaa1" stroke-width="3"/>
+    <g transform="translate(274)"><circle cx="42" cy="42" r="39" fill="#dcefea" stroke="#2f6b5f" stroke-width="3"/><text x="42" y="40" text-anchor="middle" font-family="Arial" font-size="29" font-weight="800" fill="#2f6b5f">90</text><text x="42" y="59" text-anchor="middle" font-family="Arial" font-size="10" font-weight="700" fill="#2f6b5f">DAYS</text><text x="42" y="100" text-anchor="middle" font-family="Arial" font-size="11" font-weight="700" fill="#2f6b5f">ORDINARY</text></g>
+  </g>
+  <g transform="translate(465 55)">
+    <g filter="url(#soft)"><rect x="38" y="60" width="390" height="260" rx="22" fill="#fff"/><path d="M65 120h336v170H65z" fill="#e6f2ef"/><path d="M54 120l179-70 180 70z" fill="#7aab9f"/><rect x="80" y="150" width="80" height="120" rx="8" fill="#c6ded8"/><rect x="180" y="150" width="80" height="120" rx="8" fill="#c6ded8"/><rect x="280" y="150" width="100" height="120" rx="8" fill="#c6ded8"/><path d="M95 174h50M95 198h50M195 174h50M195 198h50M296 174h68M296 198h68" stroke="#6f9f96" stroke-width="7" stroke-linecap="round"/><rect x="166" y="94" width="134" height="40" rx="12" fill="#2f6b5f"/><text x="233" y="120" text-anchor="middle" font-family="Arial" font-size="18" font-weight="800" fill="#fff">CSSBuy</text></g>
+    <g filter="url(#soft)" transform="translate(5 290)"><path d="M45 45h128v90H45z" fill="url(#box)"/><path d="M45 45L109 10l64 35-64 35z" fill="#e8b77f"/><path d="M109 80v55" stroke="#9c5b26" stroke-width="4"/><path d="M45 45l64 35 64-35" fill="none" stroke="#a96329" stroke-width="4"/><circle cx="180" cy="43" r="34" fill="#2f6b5f"/><path d="M163 43l11 11 24-28" fill="none" stroke="#fff" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/></g>
+    <g filter="url(#soft)" transform="translate(230 304)"><rect width="210" height="128" rx="18" fill="#fff"/><rect x="24" y="24" width="52" height="70" rx="8" fill="#e7f4f0"/><path d="M34 49l15 15 27-34" fill="none" stroke="#2f6b5f" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/><rect x="92" y="28" width="90" height="12" rx="6" fill="#bdd8d2"/><rect x="92" y="54" width="74" height="10" rx="5" fill="#dce9e6"/><rect x="92" y="76" width="84" height="10" rx="5" fill="#dce9e6"/><text x="105" y="113" text-anchor="middle" font-family="Arial" font-size="12" font-weight="800" fill="#2f6b5f">QC → PLAN → RELEASE</text></g>
+  </g>
+  <text x="918" y="515" text-anchor="end" font-family="Arial,Helvetica,sans-serif" font-size="12" font-weight="700" fill="#5f8f86" opacity=".8">CSSBUYVIP.NET • 2026 BUYER RESEARCH</text>
+</svg>
