@@ -1,0 +1,40 @@
+name: Sugargoo article publish
+
+on:
+  push:
+    paths:
+      - 'sugargoovip.shop/job.json'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: sugargoo-article-publish
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Run reusable Sugargoo publisher
+        run: python3 sugargoovip.shop/publish_job.py
+
+      - name: Commit generated site archive
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add sugargoovip.shop/site.tar.gz sugargoovip.shop/inspection
+          if git diff --cached --quiet; then
+            echo "No generated changes to commit."
+            exit 0
+          fi
+          git commit -m "Sugargoo archive publish_article result"
+          git push origin HEAD:main
