@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" role="img" aria-labelledby="title desc">
+<title id="title">CSSBuy Returns and Refunds Guide 2026</title>
+<desc id="desc">Green and white buyer guide cover showing a seven-day return window, warehouse inspection, evidence notes and a return parcel workflow.</desc>
+<defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f7fbf6"/><stop offset="1" stop-color="#e5f1e5"/></linearGradient>
+  <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="12" stdDeviation="18" flood-color="#1d3c2b" flood-opacity=".14"/></filter>
+</defs>
+<rect width="1200" height="675" rx="34" fill="url(#bg)"/>
+<circle cx="1080" cy="72" r="150" fill="#d6ead7" opacity=".65"/>
+<circle cx="992" cy="590" r="120" fill="#edf6ee"/>
+<g font-family="Arial, Helvetica, sans-serif">
+  <text x="64" y="82" font-size="34" font-weight="700" fill="#49a443">CSS</text><text x="126" y="82" font-size="34" font-weight="700" fill="#28332e">Buy</text>
+  <rect x="64" y="126" width="265" height="52" rx="14" fill="#4f9f4a"/>
+  <text x="87" y="161" font-size="21" font-weight="700" fill="#fff" letter-spacing="2">COMPLETE GUIDE 2026</text>
+  <text x="64" y="242" font-size="52" font-weight="800" fill="#173428">CSSBUY RETURNS</text>
+  <text x="64" y="301" font-size="52" font-weight="800" fill="#173428">&amp; REFUNDS</text>
+  <text x="64" y="353" font-size="25" font-weight="600" fill="#47705a">Inspect, document and resolve problems</text>
+  <text x="64" y="386" font-size="25" font-weight="600" fill="#47705a">before international shipping.</text>
+</g>
+<g filter="url(#shadow)">
+  <rect x="660" y="88" width="390" height="470" rx="30" fill="#fff"/>
+  <rect x="720" y="55" width="270" height="66" rx="18" fill="#2f6248"/>
+  <circle cx="855" cy="55" r="26" fill="#fff" stroke="#2f6248" stroke-width="12"/>
+  <text x="721" y="168" font-family="Arial, Helvetica, sans-serif" font-size="32" font-weight="800" fill="#244c38">RETURN CHECKLIST</text>
+  <g font-family="Arial, Helvetica, sans-serif" font-size="23" fill="#33483c">
+    <circle cx="724" cy="224" r="18" fill="#57a855"/><path d="M715 224l7 7 13-16" fill="none" stroke="#fff" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/><text x="760" y="232">Check arrival date</text>
+    <circle cx="724" cy="286" r="18" fill="#57a855"/><path d="M715 286l7 7 13-16" fill="none" stroke="#fff" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/><text x="760" y="294">Compare SKU &amp; QC photos</text>
+    <circle cx="724" cy="348" r="18" fill="#57a855"/><path d="M715 348l7 7 13-16" fill="none" stroke="#fff" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/><text x="760" y="356">Save evidence</text>
+    <circle cx="724" cy="410" r="18" fill="#57a855"/><path d="M715 410l7 7 13-16" fill="none" stroke="#fff" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/><text x="760" y="418">Use My Order → Add Note</text>
+    <circle cx="724" cy="472" r="18" fill="#57a855"/><path d="M715 472l7 7 13-16" fill="none" stroke="#fff" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/><text x="760" y="480">Confirm return freight</text>
+  </g>
+</g>
+<g font-family="Arial, Helvetica, sans-serif">
+  <rect x="64" y="454" width="248" height="82" rx="22" fill="#fff" stroke="#bdd9c1" stroke-width="2"/>
+  <circle cx="105" cy="495" r="24" fill="#4f9f4a"/><text x="97" y="504" font-size="26" font-weight="800" fill="#fff">7</text>
+  <text x="140" y="489" font-size="19" font-weight="700" fill="#173428">7-DAY WINDOW</text><text x="140" y="515" font-size="16" fill="#5a7163">Act quickly after arrival</text>
+  <rect x="328" y="454" width="248" height="82" rx="22" fill="#fff" stroke="#bdd9c1" stroke-width="2"/>
+  <circle cx="369" cy="495" r="24" fill="#4f9f4a"/><path d="M358 495l8 8 15-18" fill="none" stroke="#fff" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="404" y="489" font-size="19" font-weight="700" fill="#173428">EVIDENCE FIRST</text><text x="404" y="515" font-size="16" fill="#5a7163">Photos + exact mismatch</text>
+</g>
+<g filter="url(#shadow)">
+  <rect x="606" y="520" width="172" height="105" rx="14" fill="#d9ad70"/><path d="M606 548h172" stroke="#b8864d" stroke-width="5"/><path d="M692 520v105" stroke="#b8864d" stroke-width="5"/>
+  <path d="M805 571c46-46 102-46 148-4" fill="none" stroke="#4f9f4a" stroke-width="10" stroke-linecap="round"/><path d="M936 551l23 18-25 15" fill="none" stroke="#4f9f4a" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M827 561l-24 16 23 18" fill="none" stroke="#4f9f4a" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<text x="64" y="606" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="700" fill="#355c46">Warehouse evidence → seller decision → return/refund resolution</text>
+</svg>
