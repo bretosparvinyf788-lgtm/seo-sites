@@ -1,25 +1,25 @@
 // Serve static article routes directly and refresh the three newest homepage guides.
-// Deployment marker: 2026-08-03 delivery-evidence static publication.
+// Deployment marker: 2026-08-12 warehouse-storage publication.
 const HOME_PATHS = new Set(["/", "/index.html"]);
 
 const LATEST = [
   {
-    href: "/guides/cssbuy-delivery-day-evidence-protocol-2026/",
-    label: "New · August 3, 2026",
-    title: "CSSBuy Delivery-Day Evidence Protocol 2026",
-    desc: "Record the unopened carton, opening sequence and item count before reporting missing or damaged parcel contents.",
+    href: "/guides/cssbuy-warehouse-storage-deadline-planner-2026/",
+    label: "New · August 12, 2026",
+    title: "CSSBuy Warehouse Storage Deadline Planner 2026",
+    desc: "Track each In Warehouse date, separate return and storage clocks, flag sensitive items, and decide when to ship or extend storage.",
   },
   {
-    href: "/guides/cssbuy-restricted-item-route-filter-2026/",
-    label: "July 30, 2026",
-    title: "CSSBuy Restricted Item Route Filter 2026",
-    desc: "Filter batteries, liquids, powders, branded goods and unknown materials before they restrict an entire parcel.",
+    href: "/guides/cssbuy-packaging-decision-matrix-2026/",
+    label: "August 7, 2026",
+    title: "CSSBuy Packaging Decision Matrix 2026",
+    desc: "Choose consolidation, clothing compression, fragile-item reinforcement and box removal according to dimensional weight and product risk.",
   },
   {
-    href: "/guides/cssbuy-ship-for-me-intake-manifest-2026/",
-    label: "July 28, 2026",
-    title: "CSSBuy Ship For Me Intake Manifest 2026",
-    desc: "Control domestic tracking, warehouse matching, QC questions, packaging instructions and consolidation decisions.",
+    href: "/guides/cssbuy-clothing-size-verification-workflow-2026/",
+    label: "August 5, 2026",
+    title: "CSSBuy Clothing Size Verification Workflow 2026",
+    desc: "Compare a reference garment, seller chart, warehouse tag and key measurements before approving, exchanging or returning clothing.",
   },
 ];
 
@@ -63,7 +63,7 @@ export default {
     const transformed = transformHomepage(await response.text());
     const headers = new Headers(response.headers);
     headers.delete("content-length");
-    headers.set("x-cssbuyvip-daily-seo", "2026-08-03-static-routes");
+    headers.set("x-cssbuyvip-daily-seo", "2026-08-12-storage-deadline");
 
     return new Response(transformed, {
       status: response.status,
