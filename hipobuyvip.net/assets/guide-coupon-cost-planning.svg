@@ -1,0 +1,113 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675" role="img" aria-labelledby="title desc">
+<title id="title">HipoBuy coupon and cost planning guide</title>
+<desc id="desc">Blue editorial illustration showing a coupon bundle, payment planning, quality control and parcel budgeting for HipoBuy reverse purchasing.</desc>
+<defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0" stop-color="#eaf5ff"/>
+    <stop offset=".54" stop-color="#cfe8ff"/>
+    <stop offset="1" stop-color="#9fcaff"/>
+  </linearGradient>
+  <linearGradient id="panel" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#ffffff"/>
+    <stop offset="1" stop-color="#eff7ff"/>
+  </linearGradient>
+  <linearGradient id="blue" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0" stop-color="#2f83ff"/>
+    <stop offset="1" stop-color="#0d56c9"/>
+  </linearGradient>
+  <linearGradient id="ticket" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0" stop-color="#176cff"/>
+    <stop offset="1" stop-color="#0b4fb8"/>
+  </linearGradient>
+  <filter id="shadow" x="-30%" y="-30%" width="160%" height="170%">
+    <feDropShadow dx="0" dy="18" stdDeviation="18" flood-color="#0a2b63" flood-opacity=".18"/>
+  </filter>
+  <filter id="soft" x="-30%" y="-30%" width="160%" height="170%">
+    <feDropShadow dx="0" dy="10" stdDeviation="12" flood-color="#0a2b63" flood-opacity=".12"/>
+  </filter>
+</defs>
+<rect width="1200" height="675" rx="32" fill="url(#bg)"/>
+<circle cx="1094" cy="70" r="190" fill="#fff" opacity=".32"/>
+<circle cx="120" cy="625" r="225" fill="#fff" opacity=".25"/>
+
+<g filter="url(#shadow)">
+  <rect x="70" y="88" width="450" height="500" rx="30" fill="url(#panel)" stroke="#fff" stroke-width="3"/>
+</g>
+<rect x="106" y="124" width="172" height="40" rx="20" fill="#e3f0ff"/>
+<circle cx="130" cy="144" r="7" fill="#176cff"/>
+<text x="148" y="150" font-family="Inter,Arial,sans-serif" font-size="15" font-weight="800" letter-spacing="1.1" fill="#176cff">COST PLANNING</text>
+<text x="106" y="224" font-family="Inter,Arial,sans-serif" font-size="48" font-weight="900" fill="#0a2b63">Make the Coupon</text>
+<text x="106" y="278" font-family="Inter,Arial,sans-serif" font-size="48" font-weight="900" fill="#0a2b63">Work for the Haul</text>
+<text x="106" y="326" font-family="Inter,Arial,sans-serif" font-size="21" font-weight="650" fill="#607392">Products → Payment → QC → Parcel</text>
+
+<g transform="translate(106 370)">
+  <rect width="355" height="160" rx="22" fill="#f7fbff" stroke="#d4e7fb" stroke-width="2"/>
+  <circle cx="34" cy="37" r="15" fill="#e6f1ff"/>
+  <text x="28" y="44" font-family="Inter,Arial,sans-serif" font-size="19" font-weight="900" fill="#176cff">1</text>
+  <text x="62" y="44" font-family="Inter,Arial,sans-serif" font-size="18" font-weight="850" fill="#173b70">Budget before browsing</text>
+  <circle cx="34" cy="80" r="15" fill="#dff6ec"/>
+  <text x="28" y="87" font-family="Inter,Arial,sans-serif" font-size="19" font-weight="900" fill="#149864">2</text>
+  <text x="62" y="87" font-family="Inter,Arial,sans-serif" font-size="18" font-weight="850" fill="#173b70">Verify before paying</text>
+  <circle cx="34" cy="123" r="15" fill="#fff0df"/>
+  <text x="28" y="130" font-family="Inter,Arial,sans-serif" font-size="19" font-weight="900" fill="#d17921">3</text>
+  <text x="62" y="130" font-family="Inter,Arial,sans-serif" font-size="18" font-weight="850" fill="#173b70">Ship the efficient cart</text>
+</g>
+
+<!-- coupon ticket -->
+<g transform="translate(572 108) rotate(-4)" filter="url(#shadow)">
+  <path d="M18 0h258c0 17 14 31 31 31v96c-17 0-31 14-31 31H18c0-17-14-31-31-31V31C4 31 18 17 18 0z" fill="url(#ticket)"/>
+  <circle cx="234" cy="79" r="34" fill="#fff" opacity=".15"/>
+  <text x="30" y="55" font-family="Inter,Arial,sans-serif" font-size="18" font-weight="850" letter-spacing="1.3" fill="#cfe5ff">NEW-USER BUNDLE</text>
+  <text x="30" y="108" font-family="Inter,Arial,sans-serif" font-size="48" font-weight="950" fill="#fff">$300+</text>
+  <text x="184" y="108" font-family="Inter,Arial,sans-serif" font-size="20" font-weight="800" fill="#dceaff">COUPONS</text>
+</g>
+
+<!-- calculator -->
+<g transform="translate(902 104)" filter="url(#soft)">
+  <rect width="190" height="235" rx="28" fill="#fff" stroke="#d5e7fa" stroke-width="3"/>
+  <rect x="25" y="25" width="140" height="54" rx="13" fill="#eaf4ff"/>
+  <text x="145" y="61" text-anchor="end" font-family="Inter,Arial,sans-serif" font-size="25" font-weight="900" fill="#0a2b63">PLAN</text>
+  <g fill="#dceaff">
+    <rect x="25" y="101" width="36" height="28" rx="9"/><rect x="77" y="101" width="36" height="28" rx="9"/><rect x="129" y="101" width="36" height="28" rx="9"/>
+    <rect x="25" y="143" width="36" height="28" rx="9"/><rect x="77" y="143" width="36" height="28" rx="9"/><rect x="129" y="143" width="36" height="28" rx="9"/>
+    <rect x="25" y="185" width="88" height="28" rx="9"/>
+  </g>
+  <rect x="129" y="185" width="36" height="28" rx="9" fill="#176cff"/>
+</g>
+
+<!-- payment cards -->
+<g transform="translate(575 333)" filter="url(#soft)">
+  <rect x="0" y="26" width="250" height="152" rx="24" fill="#fff" stroke="#d6e7fa" stroke-width="3"/>
+  <rect x="24" y="53" width="82" height="18" rx="9" fill="#bcd6f4"/>
+  <rect x="24" y="88" width="154" height="14" rx="7" fill="#e1edf9"/>
+  <rect x="24" y="116" width="110" height="14" rx="7" fill="#e1edf9"/>
+  <circle cx="194" cy="73" r="23" fill="#176cff" opacity=".85"/>
+  <circle cx="219" cy="73" r="23" fill="#65a8ff" opacity=".85"/>
+  <rect x="65" y="0" width="250" height="152" rx="24" fill="url(#blue)" opacity=".96" transform="rotate(6 190 76)"/>
+  <text x="105" y="65" font-family="Inter,Arial,sans-serif" font-size="17" font-weight="850" fill="#dceaff">PAYMENT CHECK</text>
+  <text x="105" y="104" font-family="Inter,Arial,sans-serif" font-size="28" font-weight="950" fill="#fff">COST ≠ PRICE</text>
+  <path d="M104 126h126" stroke="#bcd8ff" stroke-width="10" stroke-linecap="round"/>
+</g>
+
+<!-- QC and parcel -->
+<g transform="translate(868 376)" filter="url(#shadow)">
+  <rect width="254" height="176" rx="28" fill="#fff" stroke="#d5e7fa" stroke-width="3"/>
+  <path d="M26 79 84 48l61 27-60 35z" fill="#e7bb86"/>
+  <path d="M26 79v58l59 26v-53z" fill="#bf7d3c"/>
+  <path d="M85 110v53l60-34V75z" fill="#9d622a"/>
+  <circle cx="196" cy="70" r="33" fill="#e9f3ff"/>
+  <circle cx="190" cy="64" r="18" fill="none" stroke="#176cff" stroke-width="6"/>
+  <path d="m204 78 17 17" stroke="#176cff" stroke-width="7" stroke-linecap="round"/>
+  <circle cx="202" cy="132" r="22" fill="#dff6ec"/>
+  <path d="m192 132 7 7 14-17" fill="none" stroke="#149864" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+
+<path d="M570 287 C700 270 785 291 870 338" fill="none" stroke="#fff" stroke-width="6" stroke-linecap="round" stroke-dasharray="5 18" opacity=".9"/>
+<path d="M810 553 C910 601 1027 597 1114 542" fill="none" stroke="#fff" stroke-width="6" stroke-linecap="round" stroke-dasharray="5 18" opacity=".7"/>
+
+<g font-family="Inter,Arial,sans-serif" font-weight="850" fill="#0a2b63">
+  <g transform="translate(560 565)"><rect width="190" height="40" rx="20" fill="#fff" opacity=".9"/><circle cx="24" cy="20" r="7" fill="#176cff"/><text x="42" y="26" font-size="15">1 · PROMOTION</text></g>
+  <g transform="translate(765 565)"><rect width="176" height="40" rx="20" fill="#fff" opacity=".9"/><circle cx="24" cy="20" r="7" fill="#176cff"/><text x="42" y="26" font-size="15">2 · PAYMENT</text></g>
+  <g transform="translate(956 565)"><rect width="164" height="40" rx="20" fill="#fff" opacity=".9"/><circle cx="24" cy="20" r="7" fill="#176cff"/><text x="42" y="26" font-size="15">3 · PARCEL</text></g>
+</g>
+</svg>
