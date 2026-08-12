@@ -2,6 +2,20 @@
   'use strict';
   const ARTICLES=[
     {
+      url:'/guides/litbuy-parcel-consolidation-split-or-combine-2026.html',
+      copy:{
+        en:{meta:'Parcel strategy · August 12, 2026',title:'Split or Consolidate a LitBuy Parcel?',dek:'Use QC, route compatibility, packaging needs and live freight comparisons to decide when one box is efficient and when two are smarter.'},
+        zh:{meta:'包裹策略 · 2026年8月12日',title:'LitBuy 包裹应该合包还是拆分？',dek:'结合 QC、线路兼容性、包装需求和实时运费比较，判断什么时候合包更划算，什么时候拆分更合理。'},
+        es:{meta:'Estrategia de paquete · 12 agosto 2026',title:'¿Dividir o consolidar un paquete LitBuy?',dek:'Usa QC, compatibilidad de ruta, embalaje y comparaciones de envío para decidir entre uno o varios paquetes.'},
+        fr:{meta:'Stratégie colis · 12 août 2026',title:'Faut-il séparer ou consolider un colis LitBuy ?',dek:'Utilisez le QC, la compatibilité des lignes, l’emballage et les estimations de fret pour choisir la meilleure structure.'},
+        de:{meta:'Paketstrategie · 12. August 2026',title:'LitBuy-Paket teilen oder zusammenfassen?',dek:'Nutzen Sie QC, Routenkompatibilität, Verpackung und Frachtvergleiche, um die beste Paketstruktur zu wählen.'},
+        pt:{meta:'Estratégia de pacote · 12 agosto 2026',title:'Dividir ou consolidar um pacote LitBuy?',dek:'Use QC, compatibilidade de rota, embalagem e comparações de frete para escolher a melhor estrutura.'},
+        ja:{meta:'荷物戦略 · 2026年8月12日',title:'LitBuy荷物は分割か同梱か？',dek:'QC、配送互換性、梱包条件、送料比較から、1箱と複数箱のどちらが合理的か判断します。'},
+        ko:{meta:'포장 전략 · 2026년 8월 12일',title:'LitBuy 배송은 합배송할까 분할할까?',dek:'QC, 배송 경로 호환성, 포장 요구와 운임 비교를 이용해 한 박스와 분할 배송 중 더 나은 선택을 판단합니다.'},
+        ar:{meta:'استراتيجية الطرد · 12 أغسطس 2026',title:'هل تقسّم طرد LitBuy أم تجمعه؟',dek:'استخدم فحص الجودة وتوافق المسار والتغليف ومقارنة الشحن لاختيار هيكل الطرد الأفضل.'}
+      }
+    },
+    {
       url:'/guides/litbuy-route-first-buying-shipping-restrictions-2026.html',
       copy:{
         en:{meta:'Route planning · August 7, 2026',title:'Build a Route-First LitBuy Haul Before You Buy',dek:'Screen shipping restrictions, packaging, QC evidence and parcel compatibility before a low domestic price becomes an awkward shipment.'},
@@ -27,48 +41,6 @@
         ja:{meta:'倉庫管理 · 2026年8月5日',title:'返品期限を逃さずLitBuy倉庫キューを管理する方法',dek:'QC、販売者期限、保管日数、荷物の適合性を発送前に管理する実践ガイド。'},
         ko:{meta:'창고 관리 · 2026년 8월 5일',title:'반품 기한을 놓치지 않는 LitBuy 창고 대기열 관리법',dek:'QC 자료, 판매자 기한, 보관 기간과 포장 호환성을 출고 전에 관리하는 안내서입니다.'},
         ar:{meta:'إدارة المستودع · 5 أغسطس 2026',title:'إدارة قائمة مستودع LitBuy دون فقدان مهلة الإرجاع',dek:'نسّق فحص الجودة ومواعيد البائع ومدة التخزين وتوافق الطرد قبل الشحن.'}
-      }
-    },
-    {
-      url:'/guides/litbuy-rehearsal-parcel-shipping-decision-2026.html',
-      copy:{
-        en:{meta:'Rehearsal parcel · August 3, 2026',title:'Use LitBuy Rehearsal Parcel Before Shipping',dek:'Turn QC evidence, packaging instructions and packed-parcel data into a smarter international shipping decision.'},
-        zh:{meta:'预演包裹 · 2026年8月3日',title:'国际发货前使用 LitBuy 预演包裹',dek:'利用 QC 证据、包装要求和包裹数据，做出更合理的国际运输决策。'},
-        es:{meta:'Paquete de ensayo · 3 agosto 2026',title:'Usa el paquete de ensayo LitBuy antes del envío',dek:'Convierte el QC, las instrucciones de embalaje y los datos del paquete en una mejor decisión de envío.'},
-        fr:{meta:'Colis de répétition · 3 août 2026',title:'Utiliser le colis de répétition LitBuy avant l’envoi',dek:'Transformez le QC, les consignes d’emballage et les données du colis en meilleure décision d’expédition.'},
-        de:{meta:'Probeverpackung · 3. August 2026',title:'LitBuy-Probeverpackung vor dem Versand nutzen',dek:'Nutzen Sie QC, Verpackungsanweisungen und Paketdaten für eine bessere Versandentscheidung.'},
-        pt:{meta:'Pacote de ensaio · 3 agosto 2026',title:'Use o pacote de ensaio LitBuy antes do envio',dek:'Transforme QC, instruções de embalagem e dados do pacote em uma decisão de envio mais inteligente.'},
-        ja:{meta:'リハーサル梱包 · 2026年8月3日',title:'発送前にLitBuyリハーサル梱包を使う方法',dek:'QC、梱包指示、実測データを国際配送の判断に活用する実践ガイド。'},
-        ko:{meta:'리허설 포장 · 2026년 8월 3일',title:'국제 배송 전 LitBuy 리허설 포장 활용법',dek:'QC 자료, 포장 요청과 포장 데이터를 더 나은 배송 결정에 활용하는 안내서입니다.'},
-        ar:{meta:'الطرد التجريبي · 3 أغسطس 2026',title:'استخدم طرد LitBuy التجريبي قبل الشحن',dek:'حوّل فحص الجودة وتعليمات التغليف وبيانات الطرد إلى قرار شحن دولي أفضل.'}
-      }
-    },
-    {
-      url:'/guides/litbuy-parcel-planning-chargeable-weight-2026.html',
-      copy:{
-        en:{meta:'Parcel planning · July 30, 2026',title:'Plan a LitBuy Parcel Before Checkout',dek:'Control chargeable weight, route risk, warehouse decisions and consolidation before low prices become a costly box.'},
-        zh:{meta:'包裹规划 · 2026年7月30日',title:'下单前规划 LitBuy 国际包裹',dek:'在低价商品变成高额运费前，控制计费重量、线路风险、仓库决策与合包方式。'},
-        es:{meta:'Planificación · 30 julio 2026',title:'Planifica tu paquete LitBuy antes de comprar',dek:'Controla el peso facturable, el riesgo de ruta, las decisiones de almacén y la consolidación.'},
-        fr:{meta:'Planification · 30 juillet 2026',title:'Planifier un colis LitBuy avant l’achat',dek:'Maîtrisez le poids facturable, les risques de ligne, les décisions d’entrepôt et la consolidation.'},
-        de:{meta:'Paketplanung · 30. Juli 2026',title:'LitBuy-Paket vor dem Kauf planen',dek:'Kontrollieren Sie Abrechnungsgewicht, Versandrisiken, Lagerentscheidungen und Konsolidierung.'},
-        pt:{meta:'Planejamento · 30 julho 2026',title:'Planeje o pacote LitBuy antes da compra',dek:'Controle peso faturável, risco de rota, decisões no armazém e consolidação.'},
-        ja:{meta:'荷物設計 · 2026年7月30日',title:'購入前にLitBuy荷物を設計する方法',dek:'課金重量、配送リスク、倉庫判断、同梱を事前に管理する実践ガイド。'},
-        ko:{meta:'포장 계획 · 2026년 7월 30일',title:'결제 전에 LitBuy 국제 배송 상자 설계하기',dek:'청구 중량, 배송 경로 위험, 창고 판단과 합배송을 미리 관리하는 실전 가이드입니다.'},
-        ar:{meta:'تخطيط الطرد · 30 يوليو 2026',title:'خطط لطرد LitBuy قبل الشراء',dek:'تحكم في الوزن المحاسبي ومخاطر المسار وقرارات المستودع وتجميع المنتجات.'}
-      }
-    },
-    {
-      url:'/guides/litbuy-reverse-purchasing-workflow-2026.html',
-      copy:{
-        en:{meta:'Workflow · July 28, 2026',title:'LitBuy Reverse Purchasing: Product Link to Parcel',dek:'A practical low-risk workflow for sourcing, warehouse QC, consolidation and international shipping.'},
-        zh:{meta:'反向代购 · 2026年7月28日',title:'LitBuy 反向代购：从商品链接到国际包裹',dek:'从选品、仓库 QC、合包到国际运输的低风险实操流程。'},
-        es:{meta:'Compra inversa · 28 julio 2026',title:'Compra inversa con LitBuy: del enlace al paquete',dek:'Flujo práctico para compra, QC de almacén, consolidación y envío internacional.'},
-        fr:{meta:'Achat inversé · 28 juillet 2026',title:'Achat inversé LitBuy : du lien au colis',dek:'Méthode pratique pour l’achat, le QC, la consolidation et l’expédition internationale.'},
-        de:{meta:'Reverse Purchasing · 28. Juli 2026',title:'LitBuy Reverse Purchasing: vom Link zum Paket',dek:'Praktischer Ablauf für Einkauf, Lager-QC, Konsolidierung und internationalen Versand.'},
-        pt:{meta:'Compra reversa · 28 julho 2026',title:'Compra reversa LitBuy: do link ao pacote',dek:'Fluxo prático para compra, QC, consolidação e envio internacional.'},
-        ja:{meta:'代理購入 · 2026年7月28日',title:'LitBuy代理購入：商品リンクから国際配送まで',dek:'仕入れ、倉庫QC、同梱、国際発送を低リスクで進める実用フロー。'},
-        ko:{meta:'역구매 · 2026년 7월 28일',title:'LitBuy 역구매: 상품 링크부터 국제 배송까지',dek:'구매, 창고 QC, 합배송, 국제 배송을 위한 실용적인 저위험 절차입니다.'},
-        ar:{meta:'الشراء العكسي · 28 يوليو 2026',title:'الشراء العكسي عبر LitBuy: من الرابط إلى الطرد',dek:'مسار عملي للشراء وفحص المستودع وتجميع المنتجات والشحن الدولي.'}
       }
     }
   ];
