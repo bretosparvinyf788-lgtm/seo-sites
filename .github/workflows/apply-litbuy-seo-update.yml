@@ -54,4 +54,5 @@ jobs:
           git rm -r litbuyvip.org/.scheduled/2026-08-12
           git rm .github/workflows/apply-litbuy-seo-update.yml
           git commit -m "Publish LitBuy parcel preflight guide"
+          git pull --rebase origin main
           git push origin main
