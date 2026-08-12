@@ -81,6 +81,14 @@ function featureLatestCSSBuyGuide() {
 
   const latestGuides = [
     {
+      href: 'guides/cssbuy-returns-refunds-guide-2026/',
+      image: 'assets/images/guides/returns-refunds.svg',
+      alt: 'CSSBuy Returns and Refunds Guide',
+      meta: 'Returns & After-Sales • Updated August 2026 • 1,784 words • 11 min read',
+      title: 'CSSBuy Returns & Refunds Guide 2026: The Warehouse Evidence Workflow',
+      excerpt: 'A return is a short decision window, not a late checkout option. Learn how to inspect warehouse arrivals, document mismatches, use My Order correctly and resolve problems before international shipping…'
+    },
+    {
       href: 'guides/cssbuy-warehouse-timing-guide-2026/',
       image: 'assets/images/guides/warehouse-timing.svg',
       alt: 'CSSBuy Warehouse Timing Guide',
