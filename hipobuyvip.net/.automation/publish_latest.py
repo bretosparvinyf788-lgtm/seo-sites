@@ -10,6 +10,21 @@ ROOT_INDEX = SITE / "index.html"
 ARTICLES_INDEX = SITE / "articles" / "index.html"
 SITEMAP = SITE / "sitemap.xml"
 
+# This guide was published before the dated-manifest flow was introduced.
+# Keep it in the all-guides list and sitemap on every future build.
+LEGACY_ORDER_GUIDE = {
+    "date": "2026-08-05",
+    "display_date": "August 5, 2026",
+    "slug": "how-to-order-with-hipobuy-link-to-warehouse-2026",
+    "title": "How to Order with HipoBuy in 2026: A Link-to-Warehouse Verification System",
+    "short_title": "How to Order with HipoBuy in 2026",
+    "category": "Order Workflow",
+    "description": "A practical HipoBuy ordering system for verifying live product links, variants, buyer notes, warehouse evidence, and parcel compatibility.",
+    "word_count": 1773,
+    "cover": "guide-order-workflow.svg",
+    "alt": "HipoBuy product link, purchasing note, warehouse inspection and parcel workflow guide cover image",
+}
+
 
 def latest_manifest() -> dict:
     manifests = sorted(AUTO.glob("20??-??-??.json"))
@@ -59,6 +74,7 @@ def patch_homepage(text: str, m: dict) -> str:
         if f'/articles/{m["slug"]}.html' in card:
             continue
         kept.append(card)
+    # Homepage intentionally displays the newest three guides only.
     cards = [new] + kept[:2]
     replacement = match.group(1) + "\n" + "\n".join(cards) + match.group(3)
     return text[: match.start()] + replacement + text[match.end() :]
@@ -77,6 +93,13 @@ def patch_articles_index(text: str, m: dict) -> str:
     existing = re.findall(r'<a class="guide-list-card".*?</a>', old_inner, flags=re.S)
     new = list_card(m)
     cards = [new] + [c for c in existing if f'href="{m["slug"]}.html"' not in c]
+
+    legacy_href = f'href="{LEGACY_ORDER_GUIDE["slug"]}.html"'
+    if not any(legacy_href in card for card in cards):
+        # New guide, Aug 7 guide, then the Aug 5 order guide: newest-first ordering.
+        insert_at = min(2, len(cards))
+        cards.insert(insert_at, list_card(LEGACY_ORDER_GUIDE))
+
     replacement = match.group(1) + "\n" + "\n".join(cards) + match.group(3)
     updated = text[: match.start()] + replacement + text[match.end() :]
     updated = re.sub(
@@ -87,9 +110,22 @@ def patch_articles_index(text: str, m: dict) -> str:
     return updated
 
 
+def ensure_sitemap_article(text: str, article: dict, before_slug: str | None = None) -> str:
+    article_url = f"https://hipobuyvip.net/articles/{article['slug']}.html"
+    if article_url in text:
+        return text
+    block = f'''  <url>\n    <loc>{article_url}</loc>\n    <lastmod>{article['date']}</lastmod>\n    <changefreq>monthly</changefreq>\n    <priority>0.8</priority>\n  </url>\n'''
+    marker = None
+    if before_slug:
+        marker = f'  <url>\n    <loc>https://hipobuyvip.net/articles/{before_slug}.html</loc>'
+    pos = text.find(marker) if marker else -1
+    if pos == -1:
+        pos = text.find('</urlset>')
+    return text[:pos] + block + text[pos:]
+
+
 def patch_sitemap(text: str, m: dict) -> str:
     date = m["date"]
-    slug = m["slug"]
     text = re.sub(
         r'(<loc>https://hipobuyvip\.net/</loc>\s*<lastmod>)\d{4}-\d{2}-\d{2}(</lastmod>)',
         rf'\g<1>{date}\2',
@@ -102,14 +138,8 @@ def patch_sitemap(text: str, m: dict) -> str:
         text,
         count=1,
     )
-    article_url = f"https://hipobuyvip.net/articles/{slug}.html"
-    if article_url not in text:
-        block = f'''  <url>\n    <loc>{article_url}</loc>\n    <lastmod>{date}</lastmod>\n    <changefreq>monthly</changefreq>\n    <priority>0.8</priority>\n  </url>\n'''
-        marker = '  <url>\n    <loc>https://hipobuyvip.net/articles/hipobuy-90-day-free-storage-consolidation-guide.html</loc>'
-        pos = text.find(marker)
-        if pos == -1:
-            pos = text.find('</urlset>')
-        text = text[:pos] + block + text[pos:]
+    text = ensure_sitemap_article(text, m, "hipobuy-reverse-purchasing-control-point-workflow-2026")
+    text = ensure_sitemap_article(text, LEGACY_ORDER_GUIDE, "hipobuy-90-day-free-storage-consolidation-guide")
     return text
 
 
