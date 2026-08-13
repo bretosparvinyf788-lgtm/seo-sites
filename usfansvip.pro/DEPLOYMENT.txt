@@ -1,0 +1,21 @@
+USFansVIP.pro complete static deployment package
+
+GitHub Pages
+1. Upload every file in this folder to the repository root.
+2. In repository Settings > Pages, select Deploy from a branch.
+3. Select the branch and the root folder, then save.
+
+Cloudflare Pages
+1. Connect the repository or upload this folder with Direct Upload.
+2. Framework preset: None.
+3. Build command: leave empty.
+4. Build output directory: / (repository root).
+
+Domain
+The canonical domain, robots.txt and sitemap.xml are configured for:
+https://usfansvip.pro/
+
+Important
+Keep index.html, favicon.svg, robots.txt, sitemap.xml and _headers together in
+the deployment root. The page styling, scripts, product imagery, USFans logo,
+multilingual content and buyer guides are embedded in index.html.
