@@ -1,0 +1,95 @@
+{
+  "SLUG": "guide-sugargoo-diy-order-link-rescue.html",
+  "TITLE": "Sugargoo DIY Order Guide 2026: Rescue Broken Taobao and 1688 Links Without Losing Product Details",
+  "SHORT": "Sugargoo DIY Order & Link Rescue 2026",
+  "DATE": "2026-08-14",
+  "DISPLAY": "August 14, 2026",
+  "META": "A practical Sugargoo DIY Order guide for fixing broken Taobao and 1688 links, preserving exact SKUs, controlling remarks, checking shipping risk and verifying QC.",
+  "DECK": "A manual-order recovery system for turning a failed marketplace link into a precise, checkable purchase instruction before money or parcel space is committed.",
+  "TAGS": [
+    "Sugargoo DIY Order",
+    "Taobao link not working",
+    "1688 manual order",
+    "Sugargoo W2C",
+    "Sugargoo QC photos",
+    "China shopping agent",
+    "reverse purchasing"
+  ],
+  "SOURCES": [
+    "https://blog.sugargoo.com/how-to-use-diy-order-on-sugargoo/",
+    "https://blog.sugargoo.com/taobao-link-converter-not-working/",
+    "https://blog.sugargoo.com/how-to-copy-taobao-links-properly/",
+    "https://blog.sugargoo.com/how-does-ordering-from-sugargoo-work-learn-how-to-buy-from-china-step-by-step/",
+    "https://blog.sugargoo.com/shipping-restrictions-sensitive-prohibited-items/",
+    "https://blog.sugargoo.com/how-to-order-from-china/taobao-agent-questions-for-new-buyer/"
+  ],
+  "SECTIONS": [
+    [
+      "Treat a broken product link as a data problem, not a dead end",
+      "\nAutomatic product parsing is convenient, but it should never be the only copy of your buying instructions. A Taobao or 1688 link can fail because it is shortened, redirected, expired, tied to a campaign page, or missing the item identifier a proxy needs to read the listing. Sugargoo’s current official guidance on link conversion recommends using a complete product page URL, and its DIY Order feature exists for situations where the normal import flow cannot recognize the item.\n\nThe practical response is not to keep pasting the same broken link. Open the source page in a normal browser. Confirm that the listing still exists, copy the final expanded URL after any redirect, and save a screenshot showing the product title, selected option and current price. If the clean URL still does not parse, move to a manual order while the source information is visible.\n\nThink of this as building a portable order record. The URL is one field, not the order itself. If you preserve the seller, product, variant, quantity, price and visual reference independently, a parser failure becomes an inconvenience instead of a purchasing mistake.\n"
+    ],
+    [
+      "Know when Sugargoo DIY Order is the better route",
+      "\nSugargoo describes DIY Order as a manual ordering option for products that cannot be fetched normally or that come from less-common platforms. Its official guide says the form can be used with a product link when available, along with a product name, store name, remarks and images. That makes DIY Order useful when automation is failing, but it is not a shortcut for submitting vague instructions.\n\nUse the manual route when you have enough source evidence to specify exactly what should be purchased. Good examples include a short link that will not resolve inside the agent search, a listing on a marketplace that is not automatically parsed, or a product with options that the imported page is not loading correctly. If the source itself is unclear, fix that first.\n\nA useful rule is simple: DIY Order should replace the import mechanism, not the research step. You still need to understand the listing. Manual entry gives you more control over the instruction packet, which is valuable only when the information you enter is accurate.\n"
+    ],
+    [
+      "Build a SKU packet before you touch the manual form",
+      "\nThe highest-risk field in a manual order is not the URL; it is the specification. On Chinese marketplaces, one listing may contain many colors, sizes, bundles, materials or model revisions. Sugargoo’s normal buying flow asks users to choose size, color and quantity before checkout. When you switch to DIY Order, recreate that selection logic explicitly.\n\nMake a compact SKU packet with six lines: exact product name, seller or store name, variant text as written by the seller, quantity, current unit price and any non-negotiable detail. For clothing, record measurements or the seller’s exact size label rather than assuming your usual Western size means the same thing. For electronics or accessories, capture the connector type, version, capacity, color and bundle contents when those options exist.\n\nAdd one screenshot of the selected option and one wider screenshot that shows where that option sits on the listing. Do not rely on a translated color name if the seller uses similar shades. If there is a seller SKU code, include it. The goal is to make your order understandable even if the original page changes.\n"
+    ],
+    [
+      "Separate price, quantity and domestic delivery instead of guessing",
+      "\nSugargoo’s DIY Order instructions ask for the unit price, purchase quantity and local shipping fee from the seller to the Sugargoo warehouse. Those numbers should be treated as separate inputs. A common mistake is to copy the boldest price on a 1688 listing even though that price applies only above a quantity threshold, or to assume the seller’s domestic shipping is free because it is not prominent on the page.\n\nBefore submitting, select your real quantity on the source listing and note whether the displayed unit price changes. Check for minimum-order rules, tiered pricing and variation-specific prices. Then look for the seller-to-warehouse shipping charge. Sugargoo’s official DIY guidance says that if you do not know the domestic fee, you can explain that in the remarks so the purchasing team can confirm it rather than inventing a number.\n\nThis is also why a manual order should not be built from an old spreadsheet screenshot alone. Price and stock are live seller facts. Use the current listing as the financial source of truth, and treat community posts only as discovery tools.\n"
+    ],
+    [
+      "Write remarks like an exception list, not a paragraph of wishes",
+      "\nThe remarks field is most useful when it contains instructions the normal fields cannot express. Keep it short, testable and prioritized. For example: “Black only; size 43; no substitute color; contact me if this option is sold out.” That is clearer than a long message mixing sizing preferences, shipping hopes and unrelated questions.\n\nSeparate must-have conditions from preferences. A must-have condition should stop or pause the purchase if it cannot be met. A preference is nice to have but not worth blocking the order. If you need the buyer to confirm a seller detail before purchasing, say exactly what must be confirmed. If the item can be purchased only from the linked seller, state that.\n\nAvoid asking the purchasing team to guarantee authenticity, long-term performance or other facts that cannot be established from a listing or normal warehouse inspection. Sugargoo’s workflow provides purchasing assistance and later QC, but that does not turn uncertain seller claims into guarantees. Precise remarks reduce ambiguity; they do not eliminate product risk.\n"
+    ],
+    [
+      "Screen shipping sensitivity before the order reaches the warehouse",
+      "\nA manual order can be technically purchasable and still be a bad international-shipping candidate. Sugargoo’s official restriction guidance distinguishes ordinary goods from sensitive or prohibited categories and notes that products involving batteries, liquids and similar characteristics can have route limitations. Oversized or overweight goods may also need different logistics options.\n\nDo this check before paying the domestic order. Record whether the product contains a battery, liquid, powder, magnet, branded component, sharp part or other characteristic that could affect transport. Do not try to disguise or omit a relevant product property to gain access to a cheaper route. Route eligibility depends on the item, destination and current logistics rules.\n\nIf you are uncertain, use the live platform information or customer service to clarify the category before purchase. The key decision is not “Can Sugargoo buy this?” but “Will I still have a practical route to my destination after it arrives?” A manual order that becomes stranded because its shipping profile was ignored is not a successful order.\n"
+    ],
+    [
+      "Use warehouse QC to compare against the packet you created",
+      "\nOnce the seller ships and the item reaches Sugargoo’s warehouse, the process changes from instruction to verification. Sugargoo’s current buying materials say warehouse processing includes quality checking and five free product photos for agent-purchased goods. Those images are most useful when you already know what they are supposed to prove.\n\nOpen your saved SKU packet next to the QC images. First check the highest-cost errors: wrong model, wrong color, wrong size label, wrong quantity or missing major components. Then look for visible defects, damage and obvious discrepancies with the listing. If an essential detail is not visible, decide whether an additional photo or measurement service is available and worth requesting before international shipment.\n\nDo not let the fact that you used a manual order lower your verification standard. It should do the opposite. A DIY Order creates a clearer written specification, so you have a better baseline for comparing what arrived. Resolve any mismatch while the item is still in China and while domestic after-sales options may still be available.\n"
+    ],
+    [
+      "Close the loop before parcel submission",
+      "\nMake sure the manual-order decision survives the handoff into international shipping. When you are satisfied with QC, mark the item approved and add it to your parcel plan with its actual warehouse information. If the item turned out bulkier, heavier or more shipping-sensitive than expected, revisit your route and cost assumptions instead of forcing it into the original plan.\n\nKeep the original link, screenshots, DIY remarks, warehouse photos and any seller or support messages together until delivery. This record helps if you need to understand a price adjustment, identify a wrong variation, or explain an after-sales problem. It also improves your next purchase because you can see which parts of your manual specification were useful and which were missing.\n\nThe purpose of DIY Order is not to make unusual listings effortless. It gives you a controlled fallback when automatic product import breaks. Used well, it turns a fragile W2C link into a structured purchase instruction: identify the source, encode the SKU, confirm the money, flag shipping risks, verify QC and only then release the item into an international parcel.\n"
+    ]
+  ],
+  "FAQ": [
+    [
+      "What should I try before creating a Sugargoo DIY Order?",
+      "Open the product page directly, let redirects finish, copy the final full URL, confirm that the listing is still active and try that clean link in Sugargoo. If the page still cannot be parsed but the product information is clear, a DIY Order is a practical fallback."
+    ],
+    [
+      "What information should I include in a DIY Order?",
+      "Include the product link if available, product name, seller or store, exact variant, quantity, unit price, domestic shipping information, concise remarks and useful screenshots. The more specific the SKU packet is, the less room there is for interpretation."
+    ],
+    [
+      "Can I leave the domestic shipping fee blank if I do not know it?",
+      "Sugargoo’s official DIY Order guide says users who are unsure of the local shipping fee can explain that in the remarks so the purchasing team can confirm it. Do not invent a fee just to complete your estimate."
+    ],
+    [
+      "Is DIY Order only for Taobao and 1688?",
+      "No. Sugargoo describes it as a manual route for links that cannot be recognized and for less-common platforms. Whether an item can actually be purchased or shipped still depends on the seller, product and current platform rules."
+    ],
+    [
+      "Can I use a screenshot without a live product link?",
+      "A screenshot can support a manual order, but it is weaker than a live seller page because stock, price and options may change. Use screenshots as evidence of the intended item and variation, not as a substitute for checking current seller information whenever a live source is available."
+    ],
+    [
+      "Does a successful DIY purchase guarantee the item can ship internationally?",
+      "No. Purchasing and international route eligibility are separate questions. Sensitive, restricted, oversized or overweight goods can face route limits, and prohibited items cannot be made shippable by using a manual order."
+    ],
+    [
+      "How should I check a DIY Order after it reaches the warehouse?",
+      "Compare the warehouse QC photos with the exact specification packet you saved before purchase. Check model, color, size, quantity, major components and visible condition first, then request any essential extra view or measurement that the standard photos do not answer."
+    ],
+    [
+      "What is the biggest mistake with manual orders?",
+      "Submitting a vague description and expecting the buying team to infer the intended SKU. Manual ordering works best when the user replaces automatic parsing with a precise written specification, not when the user removes the specification entirely."
+    ]
+  ],
+  "WORD_COUNT": 1799
+}
