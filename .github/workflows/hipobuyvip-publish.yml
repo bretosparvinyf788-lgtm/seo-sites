@@ -1,0 +1,36 @@
+name: Publish HipoBuyVIP guide indexes
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'hipobuyvip.net/.publish/*.flag'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Update HipoBuyVIP homepage, guide list, and sitemap
+        run: python hipobuyvip.net/.automation/publish_latest.py
+
+      - name: Commit generated index updates
+        run: |
+          if git diff --quiet -- hipobuyvip.net/index.html hipobuyvip.net/articles/index.html hipobuyvip.net/sitemap.xml; then
+            echo "No generated changes."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add hipobuyvip.net/index.html hipobuyvip.net/articles/index.html hipobuyvip.net/sitemap.xml
+          git commit -m "Publish latest HipoBuyVIP guide indexes"
+          git push
