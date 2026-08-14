@@ -1,0 +1,16 @@
+{
+  "name": "SugargooVIP Store",
+  "short_name": "SugargooVIP",
+  "description": "Independent Sugargoo product-link discovery, QC checks and buyer guides.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#fffaf5",
+  "theme_color": "#ff7a18",
+  "icons": [
+    {
+      "src": "/favicon.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
