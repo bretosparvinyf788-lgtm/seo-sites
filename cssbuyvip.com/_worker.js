@@ -1,11 +1,17 @@
 // Serve static article routes directly and refresh the three newest homepage guides.
-// Deployment marker: 2026-08-12 warehouse-storage publication.
+// Deployment marker: 2026-08-14 order-processing publication.
 const HOME_PATHS = new Set(["/", "/index.html"]);
 
 const LATEST = [
   {
+    href: "/guides/cssbuy-order-processing-timeline-2026/",
+    label: "New · August 14, 2026",
+    title: "CSSBuy Order Processing Timeline 2026",
+    desc: "Separate CSSBuy handling, seller dispatch, domestic tracking, warehouse intake and QC so you know which missing event actually needs action.",
+  },
+  {
     href: "/guides/cssbuy-warehouse-storage-deadline-planner-2026/",
-    label: "New · August 12, 2026",
+    label: "August 12, 2026",
     title: "CSSBuy Warehouse Storage Deadline Planner 2026",
     desc: "Track each In Warehouse date, separate return and storage clocks, flag sensitive items, and decide when to ship or extend storage.",
   },
@@ -14,12 +20,6 @@ const LATEST = [
     label: "August 7, 2026",
     title: "CSSBuy Packaging Decision Matrix 2026",
     desc: "Choose consolidation, clothing compression, fragile-item reinforcement and box removal according to dimensional weight and product risk.",
-  },
-  {
-    href: "/guides/cssbuy-clothing-size-verification-workflow-2026/",
-    label: "August 5, 2026",
-    title: "CSSBuy Clothing Size Verification Workflow 2026",
-    desc: "Compare a reference garment, seller chart, warehouse tag and key measurements before approving, exchanging or returning clothing.",
   },
 ];
 
@@ -63,7 +63,7 @@ export default {
     const transformed = transformHomepage(await response.text());
     const headers = new Headers(response.headers);
     headers.delete("content-length");
-    headers.set("x-cssbuyvip-daily-seo", "2026-08-12-storage-deadline");
+    headers.set("x-cssbuyvip-daily-seo", "2026-08-14-order-processing");
 
     return new Response(transformed, {
       status: response.status,
