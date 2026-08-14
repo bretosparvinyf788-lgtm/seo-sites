@@ -40,6 +40,16 @@ function articleFromStaticPage(config) {
 
 const automationArticles = [
   articleFromStaticPage({
+    key: 'cssbuy-1688-buying-guide-moq-price-seller-verification-2026',
+    file: 'guides/cssbuy-1688-buying-guide-moq-price-seller-verification-2026/index.html',
+    title: 'CSSBuy 1688 Buying Guide 2026: MOQ, Price Edits, Seller Questions and Return Windows',
+    excerpt: 'Control 1688 orders before payment with MOQ checks, seller questions, documented price edits, clear agent notes, warehouse verification and faster return decisions.',
+    seo_title: 'CSSBuy 1688 Buying Guide 2026: MOQ, Price Edits & Seller Checks',
+    seo_description: 'A practical CSSBuy 1688 buying guide for MOQ rules, price edits, seller questions, Expert Buy, Add Note, warehouse inspection and return timing in 2026.',
+    tags: 'CSSBuy 1688, 1688 agent, minimum order quantity, CSSBuy price edit, Contact Seller, Expert Buy, Add Note, CSSBuy returns',
+    publish_date: '2026-08-14'
+  }),
+  articleFromStaticPage({
     key: 'cssbuy-ship-for-me-forwarding-consolidation-guide-2026',
     file: 'guides/cssbuy-ship-for-me-forwarding-consolidation-guide-2026/index.html',
     title: 'CSSBuy Ship For Me 2026: A Forwarding, Consolidation and Packaging Workflow',
