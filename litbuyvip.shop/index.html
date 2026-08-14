@@ -929,7 +929,7 @@ document.getElementById('qcBtn').addEventListener('click',()=>{const val=documen
     if(!initial) document.getElementById('top')?.scrollIntoView({block:'start'});
   }
   document.querySelectorAll('.langSelect').forEach(s=>s.addEventListener('change',()=>switchLanguage(s.value)));
-  let initial='zh';
+  let initial='en';
   try{const saved=localStorage.getItem('litbuyvip-preview-language');if(SUPPORTED.includes(saved))initial=saved;}catch(e){}
   switchLanguage(initial,true);
   window.litbuyvipSwitchLanguage=switchLanguage;
