@@ -1,0 +1,16 @@
+SUPERBUYVIP.ORG STATIC DEPLOYMENT
+
+GITHUB PAGES
+1. Upload every file and folder in this directory to the repository root.
+2. In Settings > Pages, select Deploy from a branch.
+3. Select main and /(root), then save.
+4. The included CNAME file assigns superbuyvip.org as the custom domain.
+
+CLOUDFLARE PAGES CONNECTED TO GITHUB
+1. Connect the repository in Cloudflare Pages.
+2. Framework preset: None.
+3. Build command: leave empty.
+4. Build output directory: /
+5. Deploy and attach superbuyvip.org as the custom domain.
+
+Do not delete the guides, assets, robots.txt, sitemap.xml, CNAME, or .nojekyll files.

@@ -1,0 +1,13 @@
+GOOGLE SEARCH CONSOLE SETUP
+
+The homepage contains this placeholder verification value:
+REPLACE_WITH_GSC_TOKEN
+
+For URL-prefix verification:
+1. Open index.html.
+2. Replace REPLACE_WITH_GSC_TOKEN with the content value supplied by Google.
+3. Commit and redeploy.
+4. Verify https://superbuyvip.org/ in Search Console.
+5. Submit https://superbuyvip.org/sitemap.xml.
+
+For Domain-property verification, add Google's TXT record in the DNS dashboard instead; no file edit is required.
