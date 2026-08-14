@@ -2,6 +2,20 @@
   'use strict';
   const ARTICLES=[
     {
+      url:'/guides/litbuy-total-cost-budget-before-buying-2026.html',
+      copy:{
+        en:{meta:'Cost control · August 14, 2026',title:'Build a LitBuy Total-Cost Budget Before You Buy',dek:'Use product cost, QC evidence, freight scenarios and parcel planning to decide whether a cheap domestic listing still makes sense after shipping.'},
+        zh:{meta:'成本控制 · 2026年8月14日',title:'购买前建立 LitBuy 总成本预算',dek:'结合商品价格、QC 证据、运费场景和包裹规划，判断低价商品在国际运输后是否仍然划算。'},
+        es:{meta:'Control de costes · 14 agosto 2026',title:'Crea un presupuesto total de LitBuy antes de comprar',dek:'Combina precio, QC, escenarios de envío y planificación del paquete para saber si una oferta sigue siendo rentable.'},
+        fr:{meta:'Maîtrise des coûts · 14 août 2026',title:'Construire un budget LitBuy complet avant l’achat',dek:'Combinez prix, QC, scénarios de fret et structure du colis pour vérifier si une bonne affaire reste vraiment rentable.'},
+        de:{meta:'Kostenkontrolle · 14. August 2026',title:'LitBuy-Gesamtkosten vor dem Kauf planen',dek:'Verbinden Sie Produktpreis, QC, Frachtszenarien und Paketplanung, um echte Gesamtkosten vor dem Versand einzuschätzen.'},
+        pt:{meta:'Controle de custos · 14 agosto 2026',title:'Monte um orçamento total da LitBuy antes de comprar',dek:'Use preço, QC, cenários de frete e planejamento do pacote para saber se uma oferta ainda compensa após o envio.'},
+        ja:{meta:'コスト管理 · 2026年8月14日',title:'購入前にLitBuyの総コスト予算を作る方法',dek:'商品価格、QC、送料シナリオ、梱包計画を使い、海外発送後も本当に割安かを判断します。'},
+        ko:{meta:'비용 관리 · 2026년 8월 14일',title:'구매 전에 LitBuy 총비용 예산 세우기',dek:'상품 가격, QC, 운임 시나리오와 포장 계획을 이용해 해외 배송 후에도 실제로 저렴한지 판단합니다.'},
+        ar:{meta:'ضبط التكلفة · 14 أغسطس 2026',title:'ابنِ ميزانية التكلفة الكاملة في LitBuy قبل الشراء',dek:'استخدم سعر المنتج وفحص الجودة وسيناريوهات الشحن وتخطيط الطرد لمعرفة إن كانت الصفقة ما تزال مجدية بعد الشحن.'}
+      }
+    },
+    {
       url:'/guides/litbuy-parcel-consolidation-split-or-combine-2026.html',
       copy:{
         en:{meta:'Parcel strategy · August 12, 2026',title:'Split or Consolidate a LitBuy Parcel?',dek:'Use QC, route compatibility, packaging needs and live freight comparisons to decide when one box is efficient and when two are smarter.'},
@@ -27,20 +41,6 @@
         ja:{meta:'配送ルート設計 · 2026年8月7日',title:'購入前にLitBuyの配送ルートを設計する方法',dek:'低価格の商品が扱いにくい荷物になる前に、制限・梱包・QC・同梱適合性を確認します。'},
         ko:{meta:'배송 경로 계획 · 2026년 8월 7일',title:'구매 전에 LitBuy 배송 경로부터 설계하기',dek:'저렴한 상품이 까다로운 국제 배송이 되기 전에 제한, 포장, QC, 합배송 호환성을 점검합니다.'},
         ar:{meta:'تخطيط مسار الشحن · 7 أغسطس 2026',title:'خطط لمسار شحن LitBuy قبل الشراء',dek:'افحص القيود والتغليف وفحص الجودة وتوافق الطرد قبل أن يتحول السعر المنخفض إلى شحنة معقدة.'}
-      }
-    },
-    {
-      url:'/guides/litbuy-warehouse-queue-qc-storage-return-window-2026.html',
-      copy:{
-        en:{meta:'Warehouse control · August 5, 2026',title:'Manage a LitBuy Warehouse Queue Without Losing the Return Window',dek:'Coordinate QC evidence, seller deadlines, storage age and parcel compatibility before accepted items leave China.'},
-        zh:{meta:'仓库管理 · 2026年8月5日',title:'管理 LitBuy 仓库队列，避免错过退换窗口',dek:'在商品离开中国前，协调 QC 证据、卖家时限、仓储时间和包裹兼容性。'},
-        es:{meta:'Control de almacén · 5 agosto 2026',title:'Gestiona la cola del almacén LitBuy sin perder devoluciones',dek:'Coordina QC, plazos del vendedor, tiempo de almacenamiento y compatibilidad antes del envío.'},
-        fr:{meta:'Gestion d’entrepôt · 5 août 2026',title:'Gérer la file d’entrepôt LitBuy sans perdre le délai de retour',dek:'Coordonnez QC, délais vendeur, durée de stockage et compatibilité avant l’expédition.'},
-        de:{meta:'Lagerkontrolle · 5. August 2026',title:'LitBuy-Lagerbestand verwalten, ohne die Rückgabefrist zu verlieren',dek:'Koordinieren Sie QC, Verkäuferfristen, Lagerdauer und Paketkompatibilität vor dem Versand.'},
-        pt:{meta:'Controle de armazém · 5 agosto 2026',title:'Gerencie a fila do armazém LitBuy sem perder a devolução',dek:'Coordene QC, prazos do vendedor, tempo de armazenamento e compatibilidade antes do envio.'},
-        ja:{meta:'倉庫管理 · 2026年8月5日',title:'返品期限を逃さずLitBuy倉庫キューを管理する方法',dek:'QC、販売者期限、保管日数、荷物の適合性を発送前に管理する実践ガイド。'},
-        ko:{meta:'창고 관리 · 2026년 8월 5일',title:'반품 기한을 놓치지 않는 LitBuy 창고 대기열 관리법',dek:'QC 자료, 판매자 기한, 보관 기간과 포장 호환성을 출고 전에 관리하는 안내서입니다.'},
-        ar:{meta:'إدارة المستودع · 5 أغسطس 2026',title:'إدارة قائمة مستودع LitBuy دون فقدان مهلة الإرجاع',dek:'نسّق فحص الجودة ومواعيد البائع ومدة التخزين وتوافق الطرد قبل الشحن.'}
       }
     }
   ];
