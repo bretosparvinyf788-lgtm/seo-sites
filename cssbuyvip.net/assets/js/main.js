@@ -14,9 +14,7 @@ function setupCategoryLinks() {
     card.style.zIndex = '20';
     card.style.cursor = 'pointer';
     card.style.pointerEvents = 'auto';
-    card.querySelectorAll('*').forEach(child => {
-      child.style.pointerEvents = 'none';
-    });
+    card.querySelectorAll('*').forEach(child => { child.style.pointerEvents = 'none'; });
   });
 }
 setupCategoryLinks();
@@ -81,6 +79,14 @@ function featureLatestCSSBuyGuide() {
 
   const latestGuides = [
     {
+      href: 'guides/cssbuy-parcel-packing-guide-2026/',
+      image: 'assets/images/guides/parcel-packing.svg',
+      alt: 'CSSBuy Parcel Packing Guide',
+      meta: 'Parcel Strategy • Updated August 2026 • 1,756 words • 11 min read',
+      title: 'CSSBuy Parcel Packing Guide 2026: Consolidation, Volume Weight & Protection',
+      excerpt: 'A parcel is a logistics decision, not just a box. Learn how to consolidate compatible orders, reduce low-value volume, choose vacuum or reinforcement and protect shipping-line eligibility…'
+    },
+    {
       href: 'guides/cssbuy-returns-refunds-guide-2026/',
       image: 'assets/images/guides/returns-refunds.svg',
       alt: 'CSSBuy Returns and Refunds Guide',
@@ -95,14 +101,6 @@ function featureLatestCSSBuyGuide() {
       meta: 'Warehouse Strategy • Updated August 2026 • 1,720 words • 11 min read',
       title: 'CSSBuy Warehouse Timing Guide 2026: The 7-Day, 30-Day and 90-Day Clock',
       excerpt: 'The warehouse is not a parking lot. Learn how to manage QC, return timing, ordinary and sensitive storage, consolidation and parcel release before deadlines start making decisions for you…'
-    },
-    {
-      href: 'guides/cssbuy-reverse-purchasing-guide-2026/',
-      image: 'assets/images/guides/reverse-purchasing.svg',
-      alt: 'CSSBuy Reverse Purchasing Guide',
-      meta: 'Reverse Purchasing • Updated August 2026 • 1,769 words • 11 min read',
-      title: 'CSSBuy Reverse Purchasing Guide 2026: The Two-Checkout Workflow',
-      excerpt: 'A reverse purchase is not one checkout. It is a controlled sequence of acquisition, warehouse verification and parcel release. This guide shows how to keep every decision connected…'
     }
   ];
 
