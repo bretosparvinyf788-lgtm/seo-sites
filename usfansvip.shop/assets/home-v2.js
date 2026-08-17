@@ -17,3 +17,4 @@ const switcher=document.querySelector('.language-switcher');const languageButton
 languageButton.addEventListener('click',event=>{event.stopPropagation();const open=switcher.classList.toggle('open');languageButton.setAttribute('aria-expanded',String(open))});
 document.addEventListener('click',()=>{switcher.classList.remove('open');languageButton.setAttribute('aria-expanded','false')});
 document.getElementById('heroSearch').addEventListener('keydown',event=>{if(event.key==='Enter')searchProducts()});
+// Product images refreshed 2026-08-17
