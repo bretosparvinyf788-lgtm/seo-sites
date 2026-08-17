@@ -40,6 +40,16 @@ function articleFromStaticPage(config) {
 
 const automationArticles = [
   articleFromStaticPage({
+    key: 'cssbuy-order-parcel-support-routing-guide-2026',
+    file: 'guides/cssbuy-order-parcel-support-routing-guide-2026/index.html',
+    title: 'CSSBuy Order & Parcel Support Guide 2026: Contact Seller, Add Note and Faster Problem Resolution',
+    excerpt: 'Route CSSBuy questions to the right place with Contact Seller, order Add Note, My Parcel, QC evidence, parcel remarks and cleaner website bug reports.',
+    seo_title: 'CSSBuy Support Guide 2026: Add Note, Orders & Parcels',
+    seo_description: 'A practical CSSBuy 2026 support workflow for Contact Seller, Add Note, My Order, My Parcel, QC issues, packaging remarks, live chat and website bug reports.',
+    tags: 'CSSBuy support, CSSBuy Add Note, CSSBuy My Order, CSSBuy My Parcel, Contact Seller, CSSBuy tracking, CSSBuy QC, CSSBuy website',
+    publish_date: '2026-08-17'
+  }),
+  articleFromStaticPage({
     key: 'cssbuy-1688-buying-guide-moq-price-seller-verification-2026',
     file: 'guides/cssbuy-1688-buying-guide-moq-price-seller-verification-2026/index.html',
     title: 'CSSBuy 1688 Buying Guide 2026: MOQ, Price Edits, Seller Questions and Return Windows',
