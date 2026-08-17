@@ -1,0 +1,122 @@
+name: Apply LitBuy guide 2026-08-17
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - .github/workflows/apply-litbuy-20260817.yml
+
+permissions:
+  contents: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Install delta utility
+        run: sudo apt-get update && sudo apt-get install -y zstd
+
+      - name: Apply verified LitBuy files
+        shell: bash
+        run: |
+          set -euo pipefail
+          expected_base="eedb2611645dce20c12b88b90fe5a6426833b5e584a5a9d8ccc6f2eb62b7070d"
+          expected_final="541255d9bf4fe2ae5ef7ba897baa76cf369e57d123caf181068d36ba3bb1bbc9"
+          actual_base="$(sha256sum litbuyvip.org/index.html | cut -d' ' -f1)"
+          test "$actual_base" = "$expected_base"
+          zstd -d --patch-from=litbuyvip.org/index.html \
+            litbuyvip.org/.scheduled/2026-08-17/index.delta.zst \
+            -o litbuyvip.org/index.next.html
+          actual_final="$(sha256sum litbuyvip.org/index.next.html | cut -d' ' -f1)"
+          test "$actual_final" = "$expected_final"
+          mv litbuyvip.org/index.next.html litbuyvip.org/index.html
+          cp litbuyvip.org/.scheduled/2026-08-17/sitemap.xml litbuyvip.org/sitemap.xml
+          cp litbuyvip.org/.scheduled/2026-08-17/litbuy-warehouse-return-exchange.webp \
+            litbuyvip.org/assets/litbuy-warehouse-return-exchange.webp
+
+      - name: Validate article and site wiring
+        shell: bash
+        run: |
+          set -euo pipefail
+          node <<'NODE'
+          const fs = require('fs');
+          const source = fs.readFileSync('litbuyvip.org/index.html', 'utf8');
+          const start = source.indexOf('wu=[') + 4;
+          if (start < 4) throw new Error('Article data array not found');
+          let depth = 0, end = -1, quoted = false, escaped = false;
+          for (let i = start; i < source.length; i++) {
+            const c = source[i];
+            if (quoted) {
+              if (escaped) escaped = false;
+              else if (c === '\\') escaped = true;
+              else if (c === '"') quoted = false;
+              continue;
+            }
+            if (c === '"') { quoted = true; continue; }
+            if (c === '{') depth++;
+            else if (c === '}' && --depth === 0) { end = i + 1; break; }
+          }
+          const article = JSON.parse(source.slice(start, end));
+          const prose = article.intro + ' ' + article.sections.flatMap(s => s.paragraphs).join(' ');
+          const words = prose.match(/\b[\w’'-]+\b/g) || [];
+          if (article.slug !== 'litbuy-warehouse-return-exchange-evidence') throw new Error('Wrong newest slug');
+          if (words.length !== 1662) throw new Error(`Expected 1662 words, found ${words.length}`);
+          if (/(https?:\/\/|www\.|\.com\b|\.org\b)/i.test(prose)) throw new Error('URL found in article body');
+          if (article.sections.length !== 10) throw new Error('Unexpected section count');
+          const slugs = [
+            'litbuy-warehouse-return-exchange-evidence',
+            'litbuy-purchasing-vs-forwarding-workflow',
+            'litbuy-parcel-preflight-audit',
+            'litbuy-spreadsheet-decision-ledger',
+            'litbuy-qc-photo-reading-protocol',
+            'litbuy-shipping-cost-parcel-engineering'
+          ];
+          for (const slug of slugs) if (!source.includes(slug)) throw new Error(`Missing ${slug}`);
+          if (!source.includes('children:wu.slice(0,3).map')) throw new Error('Homepage latest-three mapping missing');
+          if (!source.includes('children:wu.map')) throw new Error('All-guides mapping missing');
+          for (const marker of ['litbuyvip-article-schema','rel="canonical"','property="og:type"']) {
+            if (!source.includes(marker)) throw new Error(`SEO marker missing: ${marker}`);
+          }
+          const titles = [
+            'LitBuy Returns and Exchanges at the Warehouse: Build an Evidence File That Sellers Can Act On',
+            'LitBuy Purchasing vs Forwarding: Choose the Right Workflow Before You Order',
+            'The LitBuy Parcel Preflight: Audit Every Item Before You Submit'
+          ];
+          const sectionStart = source.indexOf('<section class="guides section" id="guides">');
+          const sectionEnd = source.indexOf('</section>', sectionStart);
+          const staticGuides = source.slice(sectionStart, sectionEnd);
+          const positions = titles.map(title => staticGuides.indexOf(title));
+          if (positions.some(p => p < 0) || !(positions[0] < positions[1] && positions[1] < positions[2])) {
+            throw new Error('Static homepage order invalid');
+          }
+          console.log(`Validated ${words.length} words and ${slugs.length} retained guides.`);
+          NODE
+          test "$(stat -c %s litbuyvip.org/assets/litbuy-warehouse-return-exchange.webp)" = "76462"
+          file litbuyvip.org/assets/litbuy-warehouse-return-exchange.webp | grep -q '1600x900'
+          python3 - <<'PY'
+          import xml.etree.ElementTree as ET
+          root = ET.parse('litbuyvip.org/sitemap.xml').getroot()
+          urls = [e.text for e in root.findall('.//{http://www.sitemaps.org/schemas/sitemap/0.9}loc')]
+          assert len(urls) == 8
+          assert len(urls) == len(set(urls))
+          assert urls[0] == 'https://litbuyvip.org/'
+          assert urls[2] == 'https://litbuyvip.org/guides/litbuy-warehouse-return-exchange-evidence'
+          PY
+
+      - name: Commit final site files
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add litbuyvip.org/index.html litbuyvip.org/sitemap.xml \
+            litbuyvip.org/assets/litbuy-warehouse-return-exchange.webp
+          git rm -r litbuyvip.org/.scheduled/2026-08-17
+          git rm .github/workflows/apply-litbuy-20260817.yml
+          git commit -m "Publish LitBuy warehouse returns guide"
+          git pull --rebase origin main
+          git push origin main
