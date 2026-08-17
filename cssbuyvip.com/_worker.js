@@ -1,5 +1,5 @@
 // Serve static article routes directly and refresh the three newest homepage guides.
-// Deployment marker: 2026-08-17 top-up payment recovery publication.
+// Final deployment marker: 2026-08-17 top-up payment recovery publication.
 const HOME_PATHS = new Set(["/", "/index.html"]);
 
 const LATEST = [
