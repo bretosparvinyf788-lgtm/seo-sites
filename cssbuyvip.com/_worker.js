@@ -1,11 +1,17 @@
 // Serve static article routes directly and refresh the three newest homepage guides.
-// Deployment marker: 2026-08-14 order-processing publication.
+// Deployment marker: 2026-08-17 top-up payment recovery publication.
 const HOME_PATHS = new Set(["/", "/index.html"]);
 
 const LATEST = [
   {
+    href: "/guides/cssbuy-top-up-not-received-payment-recovery-2026/",
+    label: "New · August 17, 2026",
+    title: "CSSBuy Top-Up Not Received 2026",
+    desc: "Recover a charged-bank, missing-balance payment incident with a clean evidence packet, the right support route and duplicate-payment controls.",
+  },
+  {
     href: "/guides/cssbuy-order-processing-timeline-2026/",
-    label: "New · August 14, 2026",
+    label: "August 14, 2026",
     title: "CSSBuy Order Processing Timeline 2026",
     desc: "Separate CSSBuy handling, seller dispatch, domestic tracking, warehouse intake and QC so you know which missing event actually needs action.",
   },
@@ -14,12 +20,6 @@ const LATEST = [
     label: "August 12, 2026",
     title: "CSSBuy Warehouse Storage Deadline Planner 2026",
     desc: "Track each In Warehouse date, separate return and storage clocks, flag sensitive items, and decide when to ship or extend storage.",
-  },
-  {
-    href: "/guides/cssbuy-packaging-decision-matrix-2026/",
-    label: "August 7, 2026",
-    title: "CSSBuy Packaging Decision Matrix 2026",
-    desc: "Choose consolidation, clothing compression, fragile-item reinforcement and box removal according to dimensional weight and product risk.",
   },
 ];
 
@@ -63,7 +63,7 @@ export default {
     const transformed = transformHomepage(await response.text());
     const headers = new Headers(response.headers);
     headers.delete("content-length");
-    headers.set("x-cssbuyvip-daily-seo", "2026-08-14-order-processing");
+    headers.set("x-cssbuyvip-daily-seo", "2026-08-17-top-up-recovery");
 
     return new Response(transformed, {
       status: response.status,
