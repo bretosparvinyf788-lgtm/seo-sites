@@ -16,4 +16,6 @@ Connect the repository, leave the build command empty, and set the output direct
 - Ten-category and ten-product mobile two-column layouts
 - Buyer guide library
 - Three crawlable article pages
-- robots.txt, sitemap.xml, _headers and 404.html
+- Canonical host and legacy HTML redirects
+- WebSite, CollectionPage, ItemList, BreadcrumbList and Article structured data
+- robots.txt, sitemap.xml, _headers, _redirects and 404.html
