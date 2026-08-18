@@ -1,22 +1,22 @@
 # LitBuyVIP Pro deployment package
 
-This folder is ready for a static deployment on Cloudflare Pages, GitHub Pages,
-Netlify, or another static host.
+Static, build-free deployment package for `https://litbuyvip.pro/`.
 
 ## Deploy
 
-Upload every file in this folder to the root of the website repository or static
-hosting project. No build command is required. If the platform asks for an output
-directory, choose the repository root (`.`).
+Publish the complete `litbuyvip.pro` directory as the site root. No package
+installation or build command is required.
 
-## Included
+## Structure
 
-- `index.html` — complete self-contained website
-- `robots.txt` — crawler access rules
-- `sitemap.xml` — canonical sitemap for `https://litbuyvip.pro/`
-- `_headers` — recommended Cloudflare Pages response headers
-- `_redirects` — redirects `/index.html` to the canonical homepage
+- `index.html` — optimized English homepage
+- `spreadsheet/` — crawlable current product preview
+- `guides/` — guide archive and four independent long-form articles
+- `es/`, `de/`, `fr/`, `pt/`, `it/`, `pl/`, `zh/` — localized landing pages
+- `assets/` — cacheable styles, scripts, logos, product images and article art
+- `favicon.png`, `favicon.ico`, `apple-touch-icon.png` — stable site icons
+- `robots.txt`, `sitemap.xml` — crawler discovery files
+- `_headers`, `_redirects` — Cloudflare Pages headers and canonical redirects
 
-The website images, favicon, styling, scripts, multilingual content, buyer-guide
-list, and three full articles are embedded in `index.html`, so no asset folder or
-package installation is required.
+The `www` hostname rule is included in `_redirects`. The custom domain must also
+be attached to the same Cloudflare Pages project so requests reach this rule.
