@@ -1,0 +1,2152 @@
+{
+  "EN": {
+    "nav": {
+      "spreadsheet": "Spreadsheet",
+      "categories": "Categories",
+      "guides": "Buyer Guides",
+      "faq": "FAQ",
+      "explore": "Explore sheet",
+      "language": "Language",
+      "menu": "Toggle menu"
+    },
+    "hero": {
+      "eyebrow": "Independently curated for smarter hauls",
+      "title": "Find better pieces.",
+      "accent": "Build a sharper haul.",
+      "desc": "One clean LitBuy spreadsheet for product discovery, QC-aware shortlisting and practical shipping decisions—without the endless scrolling.",
+      "placeholder": "Paste a product link or search a keyword",
+      "search": "Search products",
+      "searchLabel": "Search products",
+      "finds": "curated finds",
+      "categories": "clear categories",
+      "reviews": "link reviews",
+      "weekly": "Weekly"
+    },
+    "categories": {
+      "kicker": "SHOP BY CATEGORY",
+      "title": "Start with what you actually want.",
+      "description": "Every category opens the matching collection on the main spreadsheet, so you can move straight from discovery to live products.",
+      "open": "Open {name} on the main spreadsheet",
+      "items": [
+        {
+          "name": "Shoes / Slippers",
+          "description": "Sneakers, slides & everyday pairs"
+        },
+        {
+          "name": "T-shirt",
+          "description": "Graphic, logo & everyday tees"
+        },
+        {
+          "name": "Fashion Clothing",
+          "description": "Jackets, knitwear & seasonal layers"
+        },
+        {
+          "name": "Hoodies",
+          "description": "Pullover, zip-up & fleece styles"
+        },
+        {
+          "name": "Pants / Trousers",
+          "description": "Denim, cargos & relaxed fits"
+        },
+        {
+          "name": "Leather Belt",
+          "description": "Classic and statement belts"
+        },
+        {
+          "name": "Fashion Bag",
+          "description": "Crossbody, totes & travel bags"
+        },
+        {
+          "name": "Perfume",
+          "description": "Fragrance and scent selections"
+        },
+        {
+          "name": "Electronics",
+          "description": "Mobile, desk & everyday tech"
+        },
+        {
+          "name": "Other Stuff",
+          "description": "Accessories, gifts & extra finds"
+        }
+      ]
+    },
+    "products": {
+      "kicker": "THE CURATED SHEET",
+      "title": "Ten fresh finds.",
+      "title2": "Zero spreadsheet fatigue.",
+      "editor": "EDITOR'S PICK",
+      "mainItem": "MAIN-SITE ITEM",
+      "live": "Live listing",
+      "view": "View product",
+      "note": "Prices are discovery references and may change on the live listing.",
+      "openAll": "Open full spreadsheet",
+      "openLabel": "Open {name} on the main site"
+    },
+    "planner": {
+      "kicker": "PARCEL PLANNER",
+      "title": "See whether space or scale drives your cost.",
+      "description": "Estimate dimensional weight before submission. Enter your expected outer carton size and compare it with actual weight. The higher figure is often the planning weight.",
+      "steps": [
+        "Use centimetres and kilograms",
+        "Confirm the divisor for your selected route",
+        "Treat the result as an estimate, not a quote"
+      ],
+      "estimator": "VOLUMETRIC WEIGHT ESTIMATOR",
+      "actual": "Actual parcel weight",
+      "length": "Length",
+      "width": "Width",
+      "height": "Height",
+      "divisor": "Volumetric divisor",
+      "dimensional": "DIMENSIONAL",
+      "planning": "PLANNING WEIGHT"
+    },
+    "process": {
+      "kicker": "A BETTER SYSTEM",
+      "title": "From link to doorstep, with fewer surprises.",
+      "description": "Our structure mirrors the decisions a careful buyer actually makes.",
+      "items": [
+        {
+          "title": "Discover",
+          "description": "Search a curated category instead of starting from a blank marketplace."
+        },
+        {
+          "title": "Inspect",
+          "description": "Compare variants and read warehouse photos using a repeatable checklist."
+        },
+        {
+          "title": "Consolidate",
+          "description": "Group compatible products and reduce avoidable parcel volume."
+        },
+        {
+          "title": "Ship",
+          "description": "Choose a route by cost, restrictions, tracking and timing—not price alone."
+        }
+      ]
+    },
+    "guides": {
+      "kicker": "LATEST BUYER GUIDES",
+      "title": "Original research for smarter parcels.",
+      "viewAll": "View all buyer guides",
+      "readFull": "Read full article",
+      "open": "Open {title}",
+      "library": "RESEARCH LIBRARY",
+      "allTitle": "All LitBuy buyer guides.",
+      "allDescription": "Practical, independent notes for better product checks, parcel planning and buying decisions.",
+      "backHome": "Back to homepage",
+      "readGuide": "Read guide",
+      "backAll": "All buyer guides",
+      "inGuide": "IN THIS GUIDE",
+      "buyerNote": "Independent buyer note",
+      "buyerNoteText": "Product listings, route rules, prices and platform features can change. Confirm current information inside the ordering service before paying or submitting a parcel.",
+      "originalEnglish": "Original English article",
+      "minRead": "min read"
+    },
+    "faq": {
+      "kicker": "BUYER FAQ",
+      "title": "Questions to settle before you ship.",
+      "description": "Independent, practical answers for the decisions that matter between finding a product and submitting an international parcel.",
+      "answers": "practical answers",
+      "updated": "updated for 2026",
+      "topics": [
+        "QC review",
+        "Packaging",
+        "Shipping lines"
+      ],
+      "topicsLabel": "FAQ topics",
+      "start": "NOT SURE WHERE TO START?",
+      "startText": "Begin with product checks, review your warehouse photos, then compare parcel size and route restrictions.",
+      "instruction": "OPEN ONE ANSWER AT A TIME ↓",
+      "items": [
+        [
+          "What is a LitBuy spreadsheet?",
+          "It is an independently organised discovery list that groups source products into searchable categories. Use it to find candidates faster, then confirm the live listing, selected variant and current availability before ordering."
+        ],
+        [
+          "Is every product permanently verified?",
+          "No listing should be treated as permanently verified. Sellers, batches, prices and links change. This site uses review dates and practical product notes, but your final decision should always include the current source page and the warehouse evidence for your unit."
+        ],
+        [
+          "What should I check before purchasing?",
+          "Confirm the exact color, size, model, seller activity, item measurements and any important included accessories. Save a note describing your chosen variant so you can compare it with the item received at the warehouse."
+        ],
+        [
+          "How should I review QC photos?",
+          "Check identity first, then overall shape, construction lines and fine details. Compare pairs together and request one targeted close-up when lighting, angle or distance makes an issue uncertain."
+        ],
+        [
+          "Why can shipping cost more than expected?",
+          "International freight can depend on both scale weight and parcel dimensions. Bulky retail packaging, restricted product attributes and a route-specific charging method can raise the billable amount."
+        ],
+        [
+          "Can packaging be removed to save space?",
+          "Packaging removal can reduce volume for durable items, but it may also reduce protection or resale presentation. Keep structure and cushioning for fragile, collectible or shape-sensitive products."
+        ],
+        [
+          "Should I ship everything in one parcel?",
+          "Not automatically. Consolidate compatible standard items, but assess batteries, liquids, magnets, fragile goods and oversized pieces separately because one special item can restrict available lines."
+        ],
+        [
+          "How do I choose between shipping lines?",
+          "Compare charge method, route limits, tracking, estimated transit range, delivery handoff and compensation conditions. Choose according to parcel value, replaceability and deadline—not price alone."
+        ],
+        [
+          "Can the calculator predict my final shipping fee?",
+          "It is a planning tool that compares actual and dimensional weight using the divisor you enter. Your warehouse measurement and the selected line’s current rules determine the final quote."
+        ],
+        [
+          "Does LitBuyVIP sell the listed products?",
+          "LitBuyVIP is a discovery and education site. Product buttons lead to the shopping destination, where price, availability, ordering, service terms and payment are handled."
+        ]
+      ]
+    },
+    "footer": {
+      "description": "Independent product discovery and parcel-planning guidance for international buyers.",
+      "discover": "DISCOVER",
+      "categories": "Categories",
+      "sheet": "Curated sheet",
+      "guides": "Buyer guides",
+      "tools": "TOOLS",
+      "qc": "QC checklist",
+      "shipping": "Shipping FAQ",
+      "parcel": "Parcel planning",
+      "notice": "NOTICE",
+      "noticeText": "Independent informational site. Not the official LitBuy platform.",
+      "tagline": "Find what's worth the heat."
+    }
+  },
+  "DE": {
+    "nav": {
+      "spreadsheet": "Produktliste",
+      "categories": "Kategorien",
+      "guides": "Kaufratgeber",
+      "faq": "FAQ",
+      "explore": "Liste öffnen",
+      "language": "Sprache",
+      "menu": "Menü öffnen"
+    },
+    "hero": {
+      "eyebrow": "Unabhängig kuratiert für bessere Hauls",
+      "title": "Bessere Produkte finden.",
+      "accent": "Cleverer einkaufen.",
+      "desc": "Eine übersichtliche LitBuy-Liste für Produktsuche, QC-Prüfung und fundierte Versandentscheidungen—ohne endloses Scrollen.",
+      "placeholder": "Produktlink einfügen oder Suchbegriff eingeben",
+      "search": "Produkte suchen",
+      "searchLabel": "Produkte suchen",
+      "finds": "kuratierte Produkte",
+      "categories": "klare Kategorien",
+      "reviews": "Link-Prüfungen",
+      "weekly": "Wöchentlich"
+    },
+    "categories": {
+      "kicker": "NACH KATEGORIE SHOPPEN",
+      "title": "Beginne mit dem, was du wirklich suchst.",
+      "description": "Jede Kategorie öffnet die passende Sammlung auf der Hauptliste und führt direkt von der Entdeckung zu aktuellen Produkten.",
+      "open": "{name} in der Hauptliste öffnen",
+      "items": [
+        {
+          "name": "Schuhe / Slipper",
+          "description": "Sneaker, Slides und Alltagsschuhe"
+        },
+        {
+          "name": "T-Shirts",
+          "description": "Grafik-, Logo- und Alltagsshirts"
+        },
+        {
+          "name": "Modebekleidung",
+          "description": "Jacken, Strickwaren und saisonale Lagen"
+        },
+        {
+          "name": "Hoodies",
+          "description": "Pullover, Zip-Hoodies und Fleece"
+        },
+        {
+          "name": "Hosen",
+          "description": "Jeans, Cargos und lockere Schnitte"
+        },
+        {
+          "name": "Ledergürtel",
+          "description": "Klassische und auffällige Gürtel"
+        },
+        {
+          "name": "Modetaschen",
+          "description": "Umhängetaschen, Totes und Reisetaschen"
+        },
+        {
+          "name": "Parfüm",
+          "description": "Düfte und ausgewählte Parfüms"
+        },
+        {
+          "name": "Elektronik",
+          "description": "Mobile Geräte, Schreibtisch- und Alltagstechnik"
+        },
+        {
+          "name": "Sonstiges",
+          "description": "Accessoires, Geschenke und weitere Funde"
+        }
+      ]
+    },
+    "products": {
+      "kicker": "DIE KURATIERTE LISTE",
+      "title": "Zehn frische Funde.",
+      "title2": "Kein Listen-Chaos.",
+      "editor": "REDAKTIONS-TIPP",
+      "mainItem": "HAUPTSEITEN-ARTIKEL",
+      "live": "Aktuelles Angebot",
+      "view": "Produkt ansehen",
+      "note": "Preise dienen der Orientierung und können sich im aktuellen Angebot ändern.",
+      "openAll": "Vollständige Liste öffnen",
+      "openLabel": "{name} auf der Hauptseite öffnen"
+    },
+    "planner": {
+      "kicker": "PAKETPLANER",
+      "title": "Erkenne, ob Volumen oder Gewicht die Kosten bestimmt.",
+      "description": "Schätze das Volumengewicht vor dem Versand. Gib die erwarteten Außenmaße des Kartons ein und vergleiche sie mit dem tatsächlichen Gewicht. Der höhere Wert ist oft das Planungsgewicht.",
+      "steps": [
+        "Zentimeter und Kilogramm verwenden",
+        "Teiler der gewählten Route prüfen",
+        "Ergebnis als Schätzung, nicht als Angebot behandeln"
+      ],
+      "estimator": "VOLUMENGEWICHT-RECHNER",
+      "actual": "Tatsächliches Paketgewicht",
+      "length": "Länge",
+      "width": "Breite",
+      "height": "Höhe",
+      "divisor": "Volumengewicht-Teiler",
+      "dimensional": "VOLUMENGEWICHT",
+      "planning": "PLANUNGSGEWICHT"
+    },
+    "process": {
+      "kicker": "EIN BESSERES SYSTEM",
+      "title": "Vom Link bis zur Haustür—mit weniger Überraschungen.",
+      "description": "Unsere Struktur folgt den Entscheidungen, die sorgfältige Käufer tatsächlich treffen.",
+      "items": [
+        {
+          "title": "Entdecken",
+          "description": "Durchsuche eine kuratierte Kategorie statt einen leeren Marktplatz."
+        },
+        {
+          "title": "Prüfen",
+          "description": "Vergleiche Varianten und bewerte Lagerfotos mit einer festen Checkliste."
+        },
+        {
+          "title": "Bündeln",
+          "description": "Kombiniere passende Produkte und reduziere unnötiges Paketvolumen."
+        },
+        {
+          "title": "Versenden",
+          "description": "Wähle nach Kosten, Einschränkungen, Tracking und Zeit—nicht nur nach Preis."
+        }
+      ]
+    },
+    "guides": {
+      "kicker": "NEUESTE KAUFRATGEBER",
+      "title": "Eigene Recherche für bessere Pakete.",
+      "viewAll": "Alle Kaufratgeber",
+      "readFull": "Vollständigen Artikel lesen",
+      "open": "{title} öffnen",
+      "library": "RECHERCHE-BIBLIOTHEK",
+      "allTitle": "Alle LitBuy-Kaufratgeber.",
+      "allDescription": "Praktische, unabhängige Hinweise für Produktprüfung, Paketplanung und Kaufentscheidungen.",
+      "backHome": "Zurück zur Startseite",
+      "readGuide": "Ratgeber lesen",
+      "backAll": "Alle Kaufratgeber",
+      "inGuide": "IN DIESEM RATGEBER",
+      "buyerNote": "Unabhängiger Käuferhinweis",
+      "buyerNoteText": "Produktangebote, Routenregeln, Preise und Plattformfunktionen können sich ändern. Prüfe die aktuellen Angaben im Bestelldienst, bevor du bezahlst oder ein Paket einreichst.",
+      "originalEnglish": "Englischer Originalartikel",
+      "minRead": "Min. Lesezeit"
+    },
+    "faq": {
+      "kicker": "KÄUFER-FAQ",
+      "title": "Fragen, die du vor dem Versand klären solltest.",
+      "description": "Unabhängige, praktische Antworten für die wichtigen Entscheidungen zwischen Produktsuche und internationalem Paketversand.",
+      "answers": "praktische Antworten",
+      "updated": "für 2026 aktualisiert",
+      "topics": [
+        "QC-Prüfung",
+        "Verpackung",
+        "Versandlinien"
+      ],
+      "topicsLabel": "FAQ-Themen",
+      "start": "NICHT SICHER, WO DU ANFANGEN SOLLST?",
+      "startText": "Beginne mit der Produktprüfung, kontrolliere die Lagerfotos und vergleiche dann Paketgröße und Routenbeschränkungen.",
+      "instruction": "JEWEILS EINE ANTWORT ÖFFNEN ↓",
+      "items": [
+        [
+          "Was ist eine LitBuy-Produktliste?",
+          "Eine unabhängig organisierte Entdeckungsliste, die Produkte in durchsuchbare Kategorien einordnet. Nutze sie zum schnelleren Finden und prüfe vor der Bestellung das aktuelle Angebot, die gewählte Variante und die Verfügbarkeit."
+        ],
+        [
+          "Ist jedes Produkt dauerhaft geprüft?",
+          "Nein. Verkäufer, Chargen, Preise und Links ändern sich. Die Seite nutzt Prüfdaten und praktische Hinweise, aber die endgültige Entscheidung sollte immer auf der aktuellen Quellseite und den Lagerbelegen deines eigenen Artikels beruhen."
+        ],
+        [
+          "Was sollte ich vor dem Kauf prüfen?",
+          "Prüfe genaue Farbe, Größe, Modell, Verkäuferaktivität, Maße und wichtige Zubehörteile. Speichere eine Notiz zur gewählten Variante, damit du sie mit dem im Lager eingetroffenen Artikel vergleichen kannst."
+        ],
+        [
+          "Wie sollte ich QC-Fotos prüfen?",
+          "Prüfe zuerst die Identität, dann Gesamtform, Konstruktionslinien und Details. Vergleiche Paare gemeinsam und fordere eine gezielte Nahaufnahme an, wenn Licht, Winkel oder Abstand einen Punkt unklar machen."
+        ],
+        [
+          "Warum kann der Versand teurer als erwartet sein?",
+          "Internationale Fracht kann nach Waagengewicht und Paketmaßen berechnet werden. Große Verkaufsverpackungen, eingeschränkte Produkteigenschaften und routenspezifische Berechnungsmethoden können das abrechenbare Gewicht erhöhen."
+        ],
+        [
+          "Kann Verpackung entfernt werden, um Platz zu sparen?",
+          "Das Entfernen von Verpackung kann bei robusten Artikeln Volumen sparen, aber auch Schutz oder Präsentation mindern. Bewahre Struktur und Polsterung bei zerbrechlichen, sammelbaren oder formempfindlichen Produkten."
+        ],
+        [
+          "Sollte ich alles in einem Paket versenden?",
+          "Nicht automatisch. Bündele kompatible Standardartikel, prüfe aber Batterien, Flüssigkeiten, Magnete, zerbrechliche und übergroße Waren separat, da ein Spezialartikel die verfügbaren Linien einschränken kann."
+        ],
+        [
+          "Wie wähle ich zwischen Versandlinien?",
+          "Vergleiche Berechnungsmethode, Routenlimits, Tracking, geschätzte Laufzeit, Zustellübergabe und Entschädigungsbedingungen. Entscheide nach Paketwert, Ersetzbarkeit und Termin—nicht nur nach Preis."
+        ],
+        [
+          "Kann der Rechner die endgültigen Versandkosten vorhersagen?",
+          "Er vergleicht tatsächliches und Volumengewicht mit dem eingegebenen Teiler. Die Lagermessung und die aktuellen Regeln der gewählten Linie bestimmen das endgültige Angebot."
+        ],
+        [
+          "Verkauft LitBuyVIP die gelisteten Produkte?",
+          "LitBuyVIP ist eine Entdeckungs- und Informationsseite. Produktbuttons führen zum Einkaufsziel, wo Preis, Verfügbarkeit, Bestellung, Servicebedingungen und Zahlung abgewickelt werden."
+        ]
+      ]
+    },
+    "footer": {
+      "description": "Unabhängige Produktsuche und Paketplanung für internationale Käufer.",
+      "discover": "ENTDECKEN",
+      "categories": "Kategorien",
+      "sheet": "Kuratierte Liste",
+      "guides": "Kaufratgeber",
+      "tools": "WERKZEUGE",
+      "qc": "QC-Checkliste",
+      "shipping": "Versand-FAQ",
+      "parcel": "Paketplanung",
+      "notice": "HINWEIS",
+      "noticeText": "Unabhängige Informationsseite. Nicht die offizielle LitBuy-Plattform.",
+      "tagline": "Finde, was die Hitze wert ist."
+    }
+  },
+  "FR": {
+    "nav": {
+      "spreadsheet": "Sélection",
+      "categories": "Catégories",
+      "guides": "Guides d'achat",
+      "faq": "FAQ",
+      "explore": "Voir la sélection",
+      "language": "Langue",
+      "menu": "Ouvrir le menu"
+    },
+    "hero": {
+      "eyebrow": "Sélection indépendante pour de meilleurs colis",
+      "title": "Trouvez de meilleures pièces.",
+      "accent": "Composez un meilleur haul.",
+      "desc": "Une sélection LitBuy claire pour découvrir des produits, contrôler le QC et préparer l'expédition—sans défilement interminable.",
+      "placeholder": "Collez un lien ou recherchez un produit",
+      "search": "Rechercher",
+      "searchLabel": "Rechercher des produits",
+      "finds": "produits sélectionnés",
+      "categories": "catégories claires",
+      "reviews": "contrôles des liens",
+      "weekly": "Chaque semaine"
+    },
+    "categories": {
+      "kicker": "ACHETER PAR CATÉGORIE",
+      "title": "Commencez par ce que vous cherchez vraiment.",
+      "description": "Chaque catégorie ouvre la collection correspondante sur la sélection principale afin de passer directement de la découverte aux produits actifs.",
+      "open": "Ouvrir {name} dans la sélection principale",
+      "items": [
+        {
+          "name": "Chaussures / Claquettes",
+          "description": "Baskets, claquettes et chaussures quotidiennes"
+        },
+        {
+          "name": "T-shirts",
+          "description": "T-shirts graphiques, à logo et basiques"
+        },
+        {
+          "name": "Vêtements mode",
+          "description": "Vestes, mailles et pièces saisonnières"
+        },
+        {
+          "name": "Sweats à capuche",
+          "description": "Pulls, zippés et modèles polaires"
+        },
+        {
+          "name": "Pantalons",
+          "description": "Jeans, cargos et coupes décontractées"
+        },
+        {
+          "name": "Ceintures en cuir",
+          "description": "Ceintures classiques et affirmées"
+        },
+        {
+          "name": "Sacs mode",
+          "description": "Bandoulières, cabas et sacs de voyage"
+        },
+        {
+          "name": "Parfums",
+          "description": "Parfums et sélections olfactives"
+        },
+        {
+          "name": "Électronique",
+          "description": "Tech mobile, bureau et quotidienne"
+        },
+        {
+          "name": "Autres articles",
+          "description": "Accessoires, cadeaux et autres trouvailles"
+        }
+      ]
+    },
+    "products": {
+      "kicker": "LA SÉLECTION CURATÉE",
+      "title": "Dix nouvelles trouvailles.",
+      "title2": "Aucune fatigue de tableau.",
+      "editor": "CHOIX DE LA RÉDACTION",
+      "mainItem": "ARTICLE DU SITE PRINCIPAL",
+      "live": "Annonce active",
+      "view": "Voir le produit",
+      "note": "Les prix sont indicatifs et peuvent changer sur l'annonce active.",
+      "openAll": "Ouvrir toute la sélection",
+      "openLabel": "Ouvrir {name} sur le site principal"
+    },
+    "planner": {
+      "kicker": "PLANIFICATEUR DE COLIS",
+      "title": "Voyez si le volume ou le poids détermine votre coût.",
+      "description": "Estimez le poids volumétrique avant l'envoi. Saisissez les dimensions extérieures prévues du carton et comparez-les au poids réel. La valeur la plus élevée sert souvent de poids de planification.",
+      "steps": [
+        "Utiliser les centimètres et kilogrammes",
+        "Confirmer le diviseur de la ligne choisie",
+        "Considérer le résultat comme une estimation"
+      ],
+      "estimator": "ESTIMATEUR DE POIDS VOLUMÉTRIQUE",
+      "actual": "Poids réel du colis",
+      "length": "Longueur",
+      "width": "Largeur",
+      "height": "Hauteur",
+      "divisor": "Diviseur volumétrique",
+      "dimensional": "VOLUMÉTRIQUE",
+      "planning": "POIDS DE PLANIFICATION"
+    },
+    "process": {
+      "kicker": "UNE MEILLEURE MÉTHODE",
+      "title": "Du lien à la livraison, avec moins de surprises.",
+      "description": "Notre structure suit les décisions qu'un acheteur attentif prend réellement.",
+      "items": [
+        {
+          "title": "Découvrir",
+          "description": "Explorez une catégorie sélectionnée plutôt qu'une place de marché vide."
+        },
+        {
+          "title": "Inspecter",
+          "description": "Comparez les variantes et examinez les photos d'entrepôt avec une liste fixe."
+        },
+        {
+          "title": "Regrouper",
+          "description": "Regroupez les produits compatibles et réduisez le volume évitable."
+        },
+        {
+          "title": "Expédier",
+          "description": "Choisissez selon le coût, les restrictions, le suivi et le délai—pas seulement le prix."
+        }
+      ]
+    },
+    "guides": {
+      "kicker": "DERNIERS GUIDES D'ACHAT",
+      "title": "Des recherches originales pour de meilleurs colis.",
+      "viewAll": "Voir tous les guides",
+      "readFull": "Lire l'article complet",
+      "open": "Ouvrir {title}",
+      "library": "BIBLIOTHÈQUE DE RECHERCHE",
+      "allTitle": "Tous les guides d'achat LitBuy.",
+      "allDescription": "Des notes pratiques et indépendantes pour mieux contrôler les produits, planifier les colis et décider.",
+      "backHome": "Retour à l'accueil",
+      "readGuide": "Lire le guide",
+      "backAll": "Tous les guides",
+      "inGuide": "DANS CE GUIDE",
+      "buyerNote": "Note indépendante",
+      "buyerNoteText": "Les annonces, règles de ligne, prix et fonctions peuvent changer. Vérifiez les informations actuelles dans le service de commande avant de payer ou d'envoyer un colis.",
+      "originalEnglish": "Article original en anglais",
+      "minRead": "min de lecture"
+    },
+    "faq": {
+      "kicker": "FAQ ACHETEURS",
+      "title": "Les questions à régler avant l'expédition.",
+      "description": "Des réponses indépendantes et pratiques pour les décisions importantes entre la découverte d'un produit et l'envoi international.",
+      "answers": "réponses pratiques",
+      "updated": "mises à jour pour 2026",
+      "topics": [
+        "Contrôle QC",
+        "Emballage",
+        "Lignes d'expédition"
+      ],
+      "topicsLabel": "Thèmes de la FAQ",
+      "start": "VOUS NE SAVEZ PAS PAR OÙ COMMENCER ?",
+      "startText": "Commencez par contrôler le produit, examinez les photos d'entrepôt, puis comparez le volume et les restrictions de ligne.",
+      "instruction": "OUVRIR UNE RÉPONSE À LA FOIS ↓",
+      "items": [
+        [
+          "Qu'est-ce qu'une sélection LitBuy ?",
+          "C'est une liste indépendante qui regroupe les produits sources en catégories consultables. Utilisez-la pour trouver plus vite, puis confirmez l'annonce active, la variante choisie et la disponibilité avant de commander."
+        ],
+        [
+          "Chaque produit est-il vérifié en permanence ?",
+          "Non. Les vendeurs, lots, prix et liens changent. Le site utilise des dates de contrôle et des notes pratiques, mais votre décision finale doit s'appuyer sur la page source actuelle et les preuves d'entrepôt de votre propre article."
+        ],
+        [
+          "Que vérifier avant l'achat ?",
+          "Confirmez la couleur, la taille, le modèle, l'activité du vendeur, les mesures et les accessoires importants. Enregistrez une note sur la variante choisie pour la comparer à l'article reçu à l'entrepôt."
+        ],
+        [
+          "Comment examiner les photos QC ?",
+          "Vérifiez d'abord l'identité, puis la forme générale, les lignes de construction et les détails. Comparez les paires ensemble et demandez un gros plan ciblé lorsque la lumière, l'angle ou la distance crée un doute."
+        ],
+        [
+          "Pourquoi l'expédition peut-elle coûter plus cher que prévu ?",
+          "Le fret international peut dépendre du poids réel et des dimensions du colis. Un emballage volumineux, des attributs restreints et une méthode de calcul propre à la ligne peuvent augmenter le poids facturable."
+        ],
+        [
+          "Peut-on retirer l'emballage pour gagner de la place ?",
+          "Retirer l'emballage peut réduire le volume des articles solides, mais aussi diminuer la protection ou la présentation. Gardez la structure et le rembourrage pour les produits fragiles, de collection ou sensibles à la forme."
+        ],
+        [
+          "Faut-il tout expédier dans un seul colis ?",
+          "Pas automatiquement. Regroupez les articles standards compatibles, mais évaluez séparément batteries, liquides, aimants, objets fragiles et volumineux, car un seul article spécial peut limiter les lignes disponibles."
+        ],
+        [
+          "Comment choisir une ligne d'expédition ?",
+          "Comparez le mode de calcul, les limites, le suivi, le délai estimé, la remise finale et les conditions d'indemnisation. Choisissez selon la valeur, la possibilité de remplacement et l'échéance—pas seulement le prix."
+        ],
+        [
+          "Le calculateur peut-il prévoir le prix final ?",
+          "Il compare le poids réel et volumétrique avec le diviseur saisi. La mesure de l'entrepôt et les règles actuelles de la ligne choisie déterminent le devis final."
+        ],
+        [
+          "LitBuyVIP vend-il les produits affichés ?",
+          "LitBuyVIP est un site de découverte et d'information. Les boutons mènent à la destination d'achat où sont gérés prix, disponibilité, commande, conditions et paiement."
+        ]
+      ]
+    },
+    "footer": {
+      "description": "Découverte indépendante de produits et conseils de planification de colis pour les acheteurs internationaux.",
+      "discover": "DÉCOUVRIR",
+      "categories": "Catégories",
+      "sheet": "Sélection curatée",
+      "guides": "Guides d'achat",
+      "tools": "OUTILS",
+      "qc": "Liste QC",
+      "shipping": "FAQ expédition",
+      "parcel": "Planification du colis",
+      "notice": "AVIS",
+      "noticeText": "Site d'information indépendant. Ce n'est pas la plateforme officielle LitBuy.",
+      "tagline": "Trouvez ce qui mérite la flamme."
+    }
+  },
+  "ES": {
+    "nav": {
+      "spreadsheet": "Selección",
+      "categories": "Categorías",
+      "guides": "Guías de compra",
+      "faq": "FAQ",
+      "explore": "Ver selección",
+      "language": "Idioma",
+      "menu": "Abrir menú"
+    },
+    "hero": {
+      "eyebrow": "Selección independiente para mejores compras",
+      "title": "Encuentra mejores productos.",
+      "accent": "Crea un pedido más inteligente.",
+      "desc": "Una selección LitBuy clara para descubrir productos, revisar el QC y planificar el envío—sin desplazarte eternamente.",
+      "placeholder": "Pega un enlace o busca un producto",
+      "search": "Buscar productos",
+      "searchLabel": "Buscar productos",
+      "finds": "productos seleccionados",
+      "categories": "categorías claras",
+      "reviews": "revisiones de enlaces",
+      "weekly": "Semanal"
+    },
+    "categories": {
+      "kicker": "COMPRAR POR CATEGORÍA",
+      "title": "Empieza por lo que realmente buscas.",
+      "description": "Cada categoría abre la colección correspondiente en la selección principal para pasar directamente del descubrimiento a productos activos.",
+      "open": "Abrir {name} en la selección principal",
+      "items": [
+        {
+          "name": "Zapatos / Chanclas",
+          "description": "Zapatillas, chanclas y pares de diario"
+        },
+        {
+          "name": "Camisetas",
+          "description": "Camisetas gráficas, con logo y básicas"
+        },
+        {
+          "name": "Ropa de moda",
+          "description": "Chaquetas, punto y capas de temporada"
+        },
+        {
+          "name": "Sudaderas",
+          "description": "Pulóveres, cremalleras y forro polar"
+        },
+        {
+          "name": "Pantalones",
+          "description": "Vaqueros, cargos y cortes relajados"
+        },
+        {
+          "name": "Cinturones de cuero",
+          "description": "Cinturones clásicos y llamativos"
+        },
+        {
+          "name": "Bolsos de moda",
+          "description": "Bandoleras, totes y bolsas de viaje"
+        },
+        {
+          "name": "Perfumes",
+          "description": "Fragancias y selecciones aromáticas"
+        },
+        {
+          "name": "Electrónica",
+          "description": "Tecnología móvil, de escritorio y diaria"
+        },
+        {
+          "name": "Otros artículos",
+          "description": "Accesorios, regalos y otros hallazgos"
+        }
+      ]
+    },
+    "products": {
+      "kicker": "LA SELECCIÓN CURADA",
+      "title": "Diez hallazgos nuevos.",
+      "title2": "Cero fatiga de hoja.",
+      "editor": "ELECCIÓN EDITORIAL",
+      "mainItem": "ARTÍCULO DEL SITIO PRINCIPAL",
+      "live": "Anuncio activo",
+      "view": "Ver producto",
+      "note": "Los precios son referencias y pueden cambiar en el anuncio activo.",
+      "openAll": "Abrir selección completa",
+      "openLabel": "Abrir {name} en el sitio principal"
+    },
+    "planner": {
+      "kicker": "PLANIFICADOR DE PAQUETES",
+      "title": "Descubre si el espacio o el peso marca el coste.",
+      "description": "Estima el peso volumétrico antes del envío. Introduce el tamaño exterior previsto de la caja y compáralo con el peso real. La cifra mayor suele ser el peso de planificación.",
+      "steps": [
+        "Usa centímetros y kilogramos",
+        "Confirma el divisor de la ruta elegida",
+        "Trata el resultado como estimación, no presupuesto"
+      ],
+      "estimator": "ESTIMADOR DE PESO VOLUMÉTRICO",
+      "actual": "Peso real del paquete",
+      "length": "Largo",
+      "width": "Ancho",
+      "height": "Alto",
+      "divisor": "Divisor volumétrico",
+      "dimensional": "VOLUMÉTRICO",
+      "planning": "PESO DE PLANIFICACIÓN"
+    },
+    "process": {
+      "kicker": "UN SISTEMA MEJOR",
+      "title": "Del enlace a tu puerta, con menos sorpresas.",
+      "description": "Nuestra estructura refleja las decisiones que toma un comprador cuidadoso.",
+      "items": [
+        {
+          "title": "Descubrir",
+          "description": "Busca en una categoría curada en vez de empezar en un mercado vacío."
+        },
+        {
+          "title": "Inspeccionar",
+          "description": "Compara variantes y revisa fotos del almacén con una lista repetible."
+        },
+        {
+          "title": "Consolidar",
+          "description": "Agrupa productos compatibles y reduce volumen evitable."
+        },
+        {
+          "title": "Enviar",
+          "description": "Elige por coste, restricciones, seguimiento y plazo—no solo por precio."
+        }
+      ]
+    },
+    "guides": {
+      "kicker": "ÚLTIMAS GUÍAS DE COMPRA",
+      "title": "Investigación original para mejores paquetes.",
+      "viewAll": "Ver todas las guías",
+      "readFull": "Leer artículo completo",
+      "open": "Abrir {title}",
+      "library": "BIBLIOTECA DE INVESTIGACIÓN",
+      "allTitle": "Todas las guías de LitBuy.",
+      "allDescription": "Notas prácticas e independientes para revisar productos, planificar paquetes y tomar decisiones.",
+      "backHome": "Volver al inicio",
+      "readGuide": "Leer guía",
+      "backAll": "Todas las guías",
+      "inGuide": "EN ESTA GUÍA",
+      "buyerNote": "Nota independiente",
+      "buyerNoteText": "Los anuncios, reglas de ruta, precios y funciones pueden cambiar. Confirma la información actual en el servicio de pedidos antes de pagar o enviar un paquete.",
+      "originalEnglish": "Artículo original en inglés",
+      "minRead": "min de lectura"
+    },
+    "faq": {
+      "kicker": "FAQ DEL COMPRADOR",
+      "title": "Preguntas que debes resolver antes de enviar.",
+      "description": "Respuestas independientes y prácticas para las decisiones importantes entre encontrar un producto y enviar un paquete internacional.",
+      "answers": "respuestas prácticas",
+      "updated": "actualizadas para 2026",
+      "topics": [
+        "Revisión QC",
+        "Embalaje",
+        "Líneas de envío"
+      ],
+      "topicsLabel": "Temas de FAQ",
+      "start": "¿NO SABES POR DÓNDE EMPEZAR?",
+      "startText": "Empieza revisando el producto y las fotos del almacén; después compara el tamaño del paquete y las restricciones de ruta.",
+      "instruction": "ABRE UNA RESPUESTA CADA VEZ ↓",
+      "items": [
+        [
+          "¿Qué es una selección LitBuy?",
+          "Es una lista independiente que agrupa productos de origen en categorías consultables. Úsala para encontrar candidatos más rápido y confirma el anuncio activo, la variante elegida y la disponibilidad antes de pedir."
+        ],
+        [
+          "¿Todos los productos están verificados permanentemente?",
+          "No. Vendedores, lotes, precios y enlaces cambian. El sitio usa fechas de revisión y notas prácticas, pero tu decisión final debe incluir la página fuente actual y las pruebas del almacén de tu propia unidad."
+        ],
+        [
+          "¿Qué debo revisar antes de comprar?",
+          "Confirma color, talla, modelo, actividad del vendedor, medidas y accesorios importantes. Guarda una nota de la variante elegida para compararla con el artículo recibido en el almacén."
+        ],
+        [
+          "¿Cómo debo revisar las fotos QC?",
+          "Comprueba primero la identidad, después la forma general, líneas de construcción y detalles. Compara pares juntos y solicita un primer plano concreto si la luz, el ángulo o la distancia crean dudas."
+        ],
+        [
+          "¿Por qué el envío puede costar más de lo esperado?",
+          "El transporte internacional puede depender del peso real y de las dimensiones. Un embalaje voluminoso, atributos restringidos y un método de cobro específico de la ruta pueden elevar el peso facturable."
+        ],
+        [
+          "¿Puedo quitar el embalaje para ahorrar espacio?",
+          "Quitar embalaje puede reducir el volumen de artículos resistentes, pero también la protección o presentación. Conserva estructura y acolchado para productos frágiles, coleccionables o sensibles a la forma."
+        ],
+        [
+          "¿Debo enviarlo todo en un solo paquete?",
+          "No automáticamente. Consolida artículos estándar compatibles, pero evalúa por separado baterías, líquidos, imanes, objetos frágiles y grandes porque un artículo especial puede limitar las líneas disponibles."
+        ],
+        [
+          "¿Cómo elijo entre líneas de envío?",
+          "Compara método de cobro, límites, seguimiento, plazo estimado, entrega final y condiciones de compensación. Elige según valor, posibilidad de reemplazo y fecha límite—no solo precio."
+        ],
+        [
+          "¿Puede la calculadora predecir el precio final?",
+          "Es una herramienta que compara el peso real y volumétrico con el divisor indicado. La medición del almacén y las reglas actuales de la línea elegida determinan el presupuesto final."
+        ],
+        [
+          "¿LitBuyVIP vende los productos mostrados?",
+          "LitBuyVIP es un sitio de descubrimiento e información. Los botones llevan al destino de compra, donde se gestionan precio, disponibilidad, pedido, condiciones y pago."
+        ]
+      ]
+    },
+    "footer": {
+      "description": "Descubrimiento independiente de productos y planificación de paquetes para compradores internacionales.",
+      "discover": "DESCUBRIR",
+      "categories": "Categorías",
+      "sheet": "Selección curada",
+      "guides": "Guías de compra",
+      "tools": "HERRAMIENTAS",
+      "qc": "Lista QC",
+      "shipping": "FAQ de envío",
+      "parcel": "Planificación",
+      "notice": "AVISO",
+      "noticeText": "Sitio informativo independiente. No es la plataforma oficial de LitBuy.",
+      "tagline": "Encuentra lo que merece el fuego."
+    }
+  },
+  "IT": {
+    "nav": {
+      "spreadsheet": "Selezione",
+      "categories": "Categorie",
+      "guides": "Guide acquisto",
+      "faq": "FAQ",
+      "explore": "Apri selezione",
+      "language": "Lingua",
+      "menu": "Apri menu"
+    },
+    "hero": {
+      "eyebrow": "Selezione indipendente per acquisti migliori",
+      "title": "Trova prodotti migliori.",
+      "accent": "Crea un haul più intelligente.",
+      "desc": "Una selezione LitBuy ordinata per scoprire prodotti, controllare il QC e pianificare la spedizione—senza scorrere all'infinito.",
+      "placeholder": "Incolla un link o cerca un prodotto",
+      "search": "Cerca prodotti",
+      "searchLabel": "Cerca prodotti",
+      "finds": "prodotti selezionati",
+      "categories": "categorie chiare",
+      "reviews": "revisioni dei link",
+      "weekly": "Ogni settimana"
+    },
+    "categories": {
+      "kicker": "ACQUISTA PER CATEGORIA",
+      "title": "Parti da ciò che cerchi davvero.",
+      "description": "Ogni categoria apre la raccolta corrispondente nella selezione principale, così passi direttamente dalla scoperta ai prodotti attivi.",
+      "open": "Apri {name} nella selezione principale",
+      "items": [
+        {
+          "name": "Scarpe / Ciabatte",
+          "description": "Sneaker, slide e scarpe quotidiane"
+        },
+        {
+          "name": "T-shirt",
+          "description": "Magliette grafiche, con logo e basic"
+        },
+        {
+          "name": "Abbigliamento moda",
+          "description": "Giacche, maglieria e strati stagionali"
+        },
+        {
+          "name": "Felpe con cappuccio",
+          "description": "Pullover, zip e modelli in pile"
+        },
+        {
+          "name": "Pantaloni",
+          "description": "Jeans, cargo e vestibilità comode"
+        },
+        {
+          "name": "Cinture in pelle",
+          "description": "Cinture classiche e di carattere"
+        },
+        {
+          "name": "Borse moda",
+          "description": "Tracolle, tote e borse da viaggio"
+        },
+        {
+          "name": "Profumi",
+          "description": "Fragranze e selezioni di profumi"
+        },
+        {
+          "name": "Elettronica",
+          "description": "Tecnologia mobile, da scrivania e quotidiana"
+        },
+        {
+          "name": "Altri articoli",
+          "description": "Accessori, regali e altre scoperte"
+        }
+      ]
+    },
+    "products": {
+      "kicker": "LA SELEZIONE CURATA",
+      "title": "Dieci nuove scoperte.",
+      "title2": "Niente fatica da foglio.",
+      "editor": "SCELTA EDITORIALE",
+      "mainItem": "ARTICOLO DEL SITO PRINCIPALE",
+      "live": "Inserzione attiva",
+      "view": "Vedi prodotto",
+      "note": "I prezzi sono indicativi e possono cambiare nell'inserzione attiva.",
+      "openAll": "Apri selezione completa",
+      "openLabel": "Apri {name} sul sito principale"
+    },
+    "planner": {
+      "kicker": "PIANIFICATORE PACCHI",
+      "title": "Scopri se spazio o peso determina il costo.",
+      "description": "Stima il peso volumetrico prima dell'invio. Inserisci le dimensioni esterne previste della scatola e confrontale con il peso reale. Il valore più alto è spesso il peso di pianificazione.",
+      "steps": [
+        "Usa centimetri e chilogrammi",
+        "Conferma il divisore della linea scelta",
+        "Considera il risultato una stima, non un preventivo"
+      ],
+      "estimator": "CALCOLO PESO VOLUMETRICO",
+      "actual": "Peso reale del pacco",
+      "length": "Lunghezza",
+      "width": "Larghezza",
+      "height": "Altezza",
+      "divisor": "Divisore volumetrico",
+      "dimensional": "VOLUMETRICO",
+      "planning": "PESO DI PIANIFICAZIONE"
+    },
+    "process": {
+      "kicker": "UN SISTEMA MIGLIORE",
+      "title": "Dal link alla porta, con meno sorprese.",
+      "description": "La nostra struttura segue le decisioni reali di un acquirente attento.",
+      "items": [
+        {
+          "title": "Scopri",
+          "description": "Cerca in una categoria curata invece di partire da un marketplace vuoto."
+        },
+        {
+          "title": "Controlla",
+          "description": "Confronta le varianti e leggi le foto di magazzino con una lista ripetibile."
+        },
+        {
+          "title": "Consolida",
+          "description": "Raggruppa prodotti compatibili e riduci il volume evitabile."
+        },
+        {
+          "title": "Spedisci",
+          "description": "Scegli per costo, restrizioni, tracking e tempi—non solo per prezzo."
+        }
+      ]
+    },
+    "guides": {
+      "kicker": "ULTIME GUIDE ALL'ACQUISTO",
+      "title": "Ricerca originale per pacchi migliori.",
+      "viewAll": "Vedi tutte le guide",
+      "readFull": "Leggi l'articolo completo",
+      "open": "Apri {title}",
+      "library": "BIBLIOTECA DI RICERCA",
+      "allTitle": "Tutte le guide LitBuy.",
+      "allDescription": "Note pratiche e indipendenti per controllare prodotti, pianificare pacchi e decidere meglio.",
+      "backHome": "Torna alla home",
+      "readGuide": "Leggi guida",
+      "backAll": "Tutte le guide",
+      "inGuide": "IN QUESTA GUIDA",
+      "buyerNote": "Nota indipendente",
+      "buyerNoteText": "Inserzioni, regole di rotta, prezzi e funzioni possono cambiare. Conferma le informazioni attuali nel servizio ordini prima di pagare o inviare un pacco.",
+      "originalEnglish": "Articolo originale in inglese",
+      "minRead": "min di lettura"
+    },
+    "faq": {
+      "kicker": "FAQ ACQUIRENTI",
+      "title": "Domande da chiarire prima della spedizione.",
+      "description": "Risposte indipendenti e pratiche per le decisioni importanti tra la scoperta di un prodotto e l'invio internazionale.",
+      "answers": "risposte pratiche",
+      "updated": "aggiornate per il 2026",
+      "topics": [
+        "Controllo QC",
+        "Imballaggio",
+        "Linee di spedizione"
+      ],
+      "topicsLabel": "Argomenti FAQ",
+      "start": "NON SAI DA DOVE INIZIARE?",
+      "startText": "Inizia dai controlli del prodotto, esamina le foto di magazzino e poi confronta dimensioni e restrizioni di rotta.",
+      "instruction": "APRI UNA RISPOSTA ALLA VOLTA ↓",
+      "items": [
+        [
+          "Cos'è una selezione LitBuy?",
+          "È una lista indipendente che raggruppa i prodotti sorgente in categorie ricercabili. Usala per trovare candidati più rapidamente, poi conferma inserzione attiva, variante scelta e disponibilità prima dell'ordine."
+        ],
+        [
+          "Ogni prodotto è verificato in modo permanente?",
+          "No. Venditori, lotti, prezzi e link cambiano. Il sito usa date di revisione e note pratiche, ma la decisione finale deve includere la pagina sorgente attuale e le prove di magazzino della tua unità."
+        ],
+        [
+          "Cosa devo controllare prima dell'acquisto?",
+          "Conferma colore, taglia, modello, attività del venditore, misure e accessori importanti. Salva una nota sulla variante scelta per confrontarla con l'articolo arrivato in magazzino."
+        ],
+        [
+          "Come devo esaminare le foto QC?",
+          "Controlla prima l'identità, poi forma generale, linee costruttive e dettagli. Confronta le coppie insieme e chiedi un primo piano mirato quando luce, angolo o distanza creano dubbi."
+        ],
+        [
+          "Perché la spedizione può costare più del previsto?",
+          "Il trasporto internazionale può dipendere dal peso reale e dalle dimensioni. Imballaggi ingombranti, attributi soggetti a restrizioni e metodi di calcolo specifici possono aumentare il peso fatturabile."
+        ],
+        [
+          "Posso rimuovere l'imballaggio per risparmiare spazio?",
+          "Rimuovere l'imballaggio può ridurre il volume degli articoli resistenti, ma anche protezione o presentazione. Mantieni struttura e imbottitura per prodotti fragili, da collezione o sensibili alla forma."
+        ],
+        [
+          "Devo spedire tutto in un solo pacco?",
+          "Non automaticamente. Consolida articoli standard compatibili, ma valuta separatamente batterie, liquidi, magneti, prodotti fragili e fuori misura perché un articolo speciale può limitare le linee disponibili."
+        ],
+        [
+          "Come scelgo tra le linee di spedizione?",
+          "Confronta metodo di calcolo, limiti, tracking, tempi stimati, consegna finale e condizioni di rimborso. Scegli in base a valore, sostituibilità e scadenza—non solo al prezzo."
+        ],
+        [
+          "Il calcolatore può prevedere il costo finale?",
+          "Confronta peso reale e volumetrico usando il divisore inserito. La misura del magazzino e le regole attuali della linea scelta determinano il preventivo finale."
+        ],
+        [
+          "LitBuyVIP vende i prodotti elencati?",
+          "LitBuyVIP è un sito di scoperta e informazione. I pulsanti portano alla destinazione d'acquisto, dove vengono gestiti prezzo, disponibilità, ordine, condizioni e pagamento."
+        ]
+      ]
+    },
+    "footer": {
+      "description": "Scoperta indipendente di prodotti e pianificazione pacchi per acquirenti internazionali.",
+      "discover": "SCOPRI",
+      "categories": "Categorie",
+      "sheet": "Selezione curata",
+      "guides": "Guide acquisto",
+      "tools": "STRUMENTI",
+      "qc": "Lista QC",
+      "shipping": "FAQ spedizione",
+      "parcel": "Pianificazione pacco",
+      "notice": "AVVISO",
+      "noticeText": "Sito informativo indipendente. Non è la piattaforma ufficiale LitBuy.",
+      "tagline": "Trova ciò che vale il fuoco."
+    }
+  },
+  "PT": {
+    "nav": {
+      "spreadsheet": "Planilha",
+      "categories": "Categorias",
+      "guides": "Guias de compra",
+      "faq": "FAQ",
+      "explore": "Abrir planilha",
+      "language": "Idioma",
+      "menu": "Abrir menu"
+    },
+    "hero": {
+      "eyebrow": "Curadoria independente para compras melhores",
+      "title": "Encontre peças melhores.",
+      "accent": "Monte uma compra mais inteligente.",
+      "desc": "Uma planilha LitBuy organizada para descobrir produtos, avaliar o QC e planejar o envio—sem rolagem interminável.",
+      "placeholder": "Cole um link ou pesquise uma palavra-chave",
+      "search": "Pesquisar produtos",
+      "searchLabel": "Pesquisar produtos",
+      "finds": "achados selecionados",
+      "categories": "categorias claras",
+      "reviews": "revisões de links",
+      "weekly": "Semanalmente"
+    },
+    "categories": {
+      "kicker": "COMPRE POR CATEGORIA",
+      "title": "Comece pelo que você realmente procura.",
+      "description": "Cada categoria abre a coleção correspondente na planilha principal para você ir direto da descoberta aos produtos ativos.",
+      "open": "Abrir {name} na planilha principal",
+      "items": [
+        {
+          "name": "Calçados / Chinelos",
+          "description": "Tênis, slides e pares para o dia a dia"
+        },
+        {
+          "name": "Camisetas",
+          "description": "Estampadas, com logo e básicas"
+        },
+        {
+          "name": "Roupas de moda",
+          "description": "Jaquetas, malhas e peças sazonais"
+        },
+        {
+          "name": "Moletons",
+          "description": "Pulôveres, zíperes e fleece"
+        },
+        {
+          "name": "Calças",
+          "description": "Jeans, cargos e cortes relaxados"
+        },
+        {
+          "name": "Cintos de couro",
+          "description": "Modelos clássicos e marcantes"
+        },
+        {
+          "name": "Bolsas",
+          "description": "Transversais, totes e de viagem"
+        },
+        {
+          "name": "Perfumes",
+          "description": "Fragrâncias e seleções de aromas"
+        },
+        {
+          "name": "Eletrônicos",
+          "description": "Tecnologia móvel, de mesa e diária"
+        },
+        {
+          "name": "Outros itens",
+          "description": "Acessórios, presentes e achados extras"
+        }
+      ]
+    },
+    "products": {
+      "kicker": "A PLANILHA SELECIONADA",
+      "title": "Dez novos achados.",
+      "title2": "Sem cansaço de planilha.",
+      "editor": "ESCOLHA DO EDITOR",
+      "mainItem": "ITEM DO SITE PRINCIPAL",
+      "live": "Anúncio ativo",
+      "view": "Ver produto",
+      "note": "Os preços são referências e podem mudar no anúncio ativo.",
+      "openAll": "Abrir planilha completa",
+      "openLabel": "Abrir {name} no site principal"
+    },
+    "planner": {
+      "kicker": "PLANEJADOR DE PACOTE",
+      "title": "Descubra se espaço ou peso determina o custo.",
+      "description": "Estime o peso volumétrico antes do envio. Informe as dimensões externas esperadas e compare com o peso real. O maior valor costuma ser o peso de planejamento.",
+      "steps": [
+        "Use centímetros e quilogramas",
+        "Confirme o divisor da rota escolhida",
+        "Trate o resultado como estimativa, não orçamento"
+      ],
+      "estimator": "CALCULADORA DE PESO VOLUMÉTRICO",
+      "actual": "Peso real do pacote",
+      "length": "Comprimento",
+      "width": "Largura",
+      "height": "Altura",
+      "divisor": "Divisor volumétrico",
+      "dimensional": "VOLUMÉTRICO",
+      "planning": "PESO DE PLANEJAMENTO"
+    },
+    "process": {
+      "kicker": "UM SISTEMA MELHOR",
+      "title": "Do link à sua porta, com menos surpresas.",
+      "description": "Nossa estrutura acompanha as decisões reais de um comprador cuidadoso.",
+      "items": [
+        {
+          "title": "Descubra",
+          "description": "Pesquise uma categoria selecionada em vez de começar num marketplace vazio."
+        },
+        {
+          "title": "Inspecione",
+          "description": "Compare variantes e fotos do armazém com uma lista de verificação."
+        },
+        {
+          "title": "Consolide",
+          "description": "Agrupe produtos compatíveis e reduza o volume evitável."
+        },
+        {
+          "title": "Envie",
+          "description": "Escolha por custo, restrições, rastreio e prazo—não só por preço."
+        }
+      ]
+    },
+    "guides": {
+      "kicker": "GUIAS MAIS RECENTES",
+      "title": "Pesquisa original para pacotes melhores.",
+      "viewAll": "Ver todos os guias",
+      "readFull": "Ler artigo completo",
+      "open": "Abrir {title}",
+      "library": "BIBLIOTECA DE PESQUISA",
+      "allTitle": "Todos os guias LitBuy.",
+      "allDescription": "Notas práticas e independentes para verificar produtos, planejar pacotes e decidir melhor.",
+      "backHome": "Voltar à página inicial",
+      "readGuide": "Ler guia",
+      "backAll": "Todos os guias",
+      "inGuide": "NESTE GUIA",
+      "buyerNote": "Nota independente",
+      "buyerNoteText": "Anúncios, regras de rota, preços e recursos podem mudar. Confirme as informações atuais no serviço antes de pagar ou enviar um pacote.",
+      "originalEnglish": "Artigo original em inglês",
+      "minRead": "min de leitura"
+    },
+    "faq": {
+      "kicker": "FAQ DO COMPRADOR",
+      "title": "Perguntas a resolver antes do envio.",
+      "description": "Respostas independentes e práticas para as decisões entre encontrar um produto e enviar um pacote internacional.",
+      "answers": "respostas práticas",
+      "updated": "atualizadas para 2026",
+      "topics": [
+        "Revisão QC",
+        "Embalagem",
+        "Rotas de envio"
+      ],
+      "topicsLabel": "Tópicos do FAQ",
+      "start": "NÃO SABE POR ONDE COMEÇAR?",
+      "startText": "Comece verificando o produto e as fotos do armazém; depois compare o tamanho do pacote e as restrições da rota.",
+      "instruction": "ABRA UMA RESPOSTA POR VEZ ↓",
+      "items": [
+        [
+          "O que é uma planilha LitBuy?",
+          "É uma lista independente que organiza produtos em categorias pesquisáveis. Use-a para encontrar opções mais rápido e confirme o anúncio ativo, a variante escolhida e a disponibilidade antes de comprar."
+        ],
+        [
+          "Todos os produtos são verificados permanentemente?",
+          "Não. Vendedores, lotes, preços e links mudam. O site usa datas de revisão e notas práticas, mas sua decisão final deve considerar a página atual e as evidências do armazém da sua unidade."
+        ],
+        [
+          "O que devo verificar antes da compra?",
+          "Confirme cor, tamanho, modelo, atividade do vendedor, medidas e acessórios importantes. Salve uma nota da variante escolhida para compará-la com o item recebido no armazém."
+        ],
+        [
+          "Como devo analisar as fotos QC?",
+          "Confira primeiro a identidade, depois a forma geral, linhas de construção e detalhes. Compare pares juntos e peça um close específico quando luz, ângulo ou distância gerarem dúvida."
+        ],
+        [
+          "Por que o frete pode custar mais que o esperado?",
+          "O frete internacional pode depender do peso real e das dimensões. Embalagem volumosa, atributos restritos e métodos específicos da rota podem elevar o peso faturável."
+        ],
+        [
+          "Posso remover a embalagem para economizar espaço?",
+          "Remover embalagens pode reduzir o volume de itens resistentes, mas também a proteção ou apresentação. Mantenha estrutura e acolchoamento para produtos frágeis, colecionáveis ou sensíveis à forma."
+        ],
+        [
+          "Devo enviar tudo em um único pacote?",
+          "Não automaticamente. Consolide itens padrão compatíveis, mas avalie baterias, líquidos, ímãs, frágeis e volumes grandes separadamente, pois um item especial pode limitar as rotas."
+        ],
+        [
+          "Como escolher entre as rotas de envio?",
+          "Compare método de cobrança, limites, rastreio, prazo estimado, entrega final e compensação. Escolha conforme valor, possibilidade de reposição e prazo—não apenas preço."
+        ],
+        [
+          "A calculadora prevê o valor final do frete?",
+          "Ela compara peso real e volumétrico usando o divisor informado. A medição do armazém e as regras atuais da rota escolhida determinam o orçamento final."
+        ],
+        [
+          "O LitBuyVIP vende os produtos listados?",
+          "O LitBuyVIP é um site de descoberta e informação. Os botões levam ao destino de compra, onde preço, disponibilidade, pedido, condições e pagamento são administrados."
+        ]
+      ]
+    },
+    "footer": {
+      "description": "Descoberta independente de produtos e planejamento de pacotes para compradores internacionais.",
+      "discover": "DESCOBRIR",
+      "categories": "Categorias",
+      "sheet": "Planilha selecionada",
+      "guides": "Guias de compra",
+      "tools": "FERRAMENTAS",
+      "qc": "Lista QC",
+      "shipping": "FAQ de envio",
+      "parcel": "Planejamento",
+      "notice": "AVISO",
+      "noticeText": "Site informativo independente. Não é a plataforma oficial LitBuy.",
+      "tagline": "Encontre o que vale o fogo."
+    }
+  },
+  "NL": {
+    "nav": {
+      "spreadsheet": "Productlijst",
+      "categories": "Categorieën",
+      "guides": "Koopgidsen",
+      "faq": "FAQ",
+      "explore": "Open lijst",
+      "language": "Taal",
+      "menu": "Menu openen"
+    },
+    "hero": {
+      "eyebrow": "Onafhankelijk geselecteerd voor betere aankopen",
+      "title": "Vind betere producten.",
+      "accent": "Bouw een slimmere haul.",
+      "desc": "Eén overzichtelijke LitBuy-lijst voor productontdekking, QC-controle en praktische verzendkeuzes—zonder eindeloos scrollen.",
+      "placeholder": "Plak een productlink of zoekwoord",
+      "search": "Producten zoeken",
+      "searchLabel": "Producten zoeken",
+      "finds": "geselecteerde vondsten",
+      "categories": "duidelijke categorieën",
+      "reviews": "linkcontroles",
+      "weekly": "Wekelijks"
+    },
+    "categories": {
+      "kicker": "WINKEL PER CATEGORIE",
+      "title": "Begin met wat je echt zoekt.",
+      "description": "Elke categorie opent de passende collectie in de hoofdlijst, zodat je direct naar actuele producten gaat.",
+      "open": "Open {name} in de hoofdlijst",
+      "items": [
+        {
+          "name": "Schoenen / Slippers",
+          "description": "Sneakers, slides en dagelijkse paren"
+        },
+        {
+          "name": "T-shirts",
+          "description": "Grafische, logo- en basicshirts"
+        },
+        {
+          "name": "Modekleding",
+          "description": "Jassen, breisels en seizoenslagen"
+        },
+        {
+          "name": "Hoodies",
+          "description": "Pullovers, ritsmodellen en fleece"
+        },
+        {
+          "name": "Broeken",
+          "description": "Denim, cargo's en losse pasvormen"
+        },
+        {
+          "name": "Leren riemen",
+          "description": "Klassieke en opvallende riemen"
+        },
+        {
+          "name": "Modetassen",
+          "description": "Crossbody's, shoppers en reistassen"
+        },
+        {
+          "name": "Parfum",
+          "description": "Geuren en parfumselecties"
+        },
+        {
+          "name": "Elektronica",
+          "description": "Mobiele, bureau- en dagelijkse tech"
+        },
+        {
+          "name": "Overige items",
+          "description": "Accessoires, cadeaus en extra vondsten"
+        }
+      ]
+    },
+    "products": {
+      "kicker": "DE GESELECTEERDE LIJST",
+      "title": "Tien nieuwe vondsten.",
+      "title2": "Geen lijstmoeheid.",
+      "editor": "KEUZE VAN DE REDACTIE",
+      "mainItem": "ITEM OP HOOFDSITE",
+      "live": "Actieve aanbieding",
+      "view": "Bekijk product",
+      "note": "Prijzen zijn ter oriëntatie en kunnen in de actieve aanbieding veranderen.",
+      "openAll": "Volledige lijst openen",
+      "openLabel": "Open {name} op de hoofdsite"
+    },
+    "planner": {
+      "kicker": "PAKKETPLANNER",
+      "title": "Zie of ruimte of gewicht je kosten bepaalt.",
+      "description": "Schat het volumegewicht vóór verzending. Vul de verwachte buitenmaten in en vergelijk die met het werkelijke gewicht. Het hoogste getal is vaak het planningsgewicht.",
+      "steps": [
+        "Gebruik centimeters en kilogrammen",
+        "Controleer de deler van je route",
+        "Zie het resultaat als schatting, niet als offerte"
+      ],
+      "estimator": "VOLUMEGEWICHTCALCULATOR",
+      "actual": "Werkelijk pakketgewicht",
+      "length": "Lengte",
+      "width": "Breedte",
+      "height": "Hoogte",
+      "divisor": "Volumetrische deler",
+      "dimensional": "VOLUMEGEWICHT",
+      "planning": "PLANNINGSGEWICHT"
+    },
+    "process": {
+      "kicker": "EEN BETER SYSTEEM",
+      "title": "Van link tot voordeur, met minder verrassingen.",
+      "description": "Onze structuur volgt de keuzes die een zorgvuldige koper echt maakt.",
+      "items": [
+        {
+          "title": "Ontdek",
+          "description": "Zoek in een geselecteerde categorie in plaats van op een leeg platform."
+        },
+        {
+          "title": "Controleer",
+          "description": "Vergelijk varianten en magazijnfoto's met een vaste checklist."
+        },
+        {
+          "title": "Bundel",
+          "description": "Groepeer passende producten en beperk onnodig volume."
+        },
+        {
+          "title": "Verzend",
+          "description": "Kies op kosten, beperkingen, tracking en tijd—niet alleen prijs."
+        }
+      ]
+    },
+    "guides": {
+      "kicker": "NIEUWSTE KOOPGIDSEN",
+      "title": "Origineel onderzoek voor betere pakketten.",
+      "viewAll": "Alle koopgidsen",
+      "readFull": "Lees volledig artikel",
+      "open": "Open {title}",
+      "library": "ONDERZOEKSBIBLIOTHEEK",
+      "allTitle": "Alle LitBuy-koopgidsen.",
+      "allDescription": "Praktische, onafhankelijke notities voor productcontrole, pakketplanning en betere beslissingen.",
+      "backHome": "Terug naar startpagina",
+      "readGuide": "Lees gids",
+      "backAll": "Alle koopgidsen",
+      "inGuide": "IN DEZE GIDS",
+      "buyerNote": "Onafhankelijke kopersnotitie",
+      "buyerNoteText": "Aanbiedingen, routeregels, prijzen en functies kunnen veranderen. Controleer de actuele informatie in de bestelservice voordat je betaalt of een pakket indient.",
+      "originalEnglish": "Origineel Engels artikel",
+      "minRead": "min leestijd"
+    },
+    "faq": {
+      "kicker": "KOPERS-FAQ",
+      "title": "Vragen om vóór verzending te beantwoorden.",
+      "description": "Onafhankelijke, praktische antwoorden voor de keuzes tussen een product vinden en internationaal verzenden.",
+      "answers": "praktische antwoorden",
+      "updated": "bijgewerkt voor 2026",
+      "topics": [
+        "QC-controle",
+        "Verpakking",
+        "Verzendroutes"
+      ],
+      "topicsLabel": "FAQ-onderwerpen",
+      "start": "WEET JE NIET WAAR TE BEGINNEN?",
+      "startText": "Begin met productcontrole en magazijnfoto's; vergelijk daarna pakketgrootte en routebeperkingen.",
+      "instruction": "OPEN ÉÉN ANTWOORD PER KEER ↓",
+      "items": [
+        [
+          "Wat is een LitBuy-productlijst?",
+          "Het is een onafhankelijk georganiseerde lijst die bronproducten in doorzoekbare categorieën groepeert. Vind sneller kandidaten en controleer vóór bestellen de actieve aanbieding, variant en beschikbaarheid."
+        ],
+        [
+          "Is elk product permanent geverifieerd?",
+          "Nee. Verkopers, partijen, prijzen en links veranderen. Deze site gebruikt controledatums en praktische notities, maar baseer je eindbeslissing ook op de actuele bronpagina en magazijnfoto's van jouw item."
+        ],
+        [
+          "Wat moet ik vóór aankoop controleren?",
+          "Controleer kleur, maat, model, verkopersactiviteit, afmetingen en belangrijke accessoires. Bewaar een notitie van je variant om met het ontvangen magazijnitem te vergelijken."
+        ],
+        [
+          "Hoe beoordeel ik QC-foto's?",
+          "Controleer eerst de identiteit, daarna vorm, constructielijnen en details. Vergelijk paren samen en vraag een gerichte close-up als licht, hoek of afstand iets onduidelijk maakt."
+        ],
+        [
+          "Waarom kan verzending duurder zijn dan verwacht?",
+          "Internationale vracht kan afhangen van werkelijk gewicht en afmetingen. Grote winkelverpakkingen, beperkte kenmerken en routespecifieke berekeningen kunnen het factureerbare gewicht verhogen."
+        ],
+        [
+          "Kan ik verpakking verwijderen om ruimte te besparen?",
+          "Dat kan het volume van stevige items verkleinen, maar ook bescherming of presentatie verminderen. Behoud structuur en demping voor breekbare, verzamelbare of vormgevoelige producten."
+        ],
+        [
+          "Moet ik alles in één pakket verzenden?",
+          "Niet automatisch. Bundel compatibele standaarditems, maar beoordeel batterijen, vloeistoffen, magneten, breekbare en grote goederen apart omdat één speciaal item routes kan beperken."
+        ],
+        [
+          "Hoe kies ik tussen verzendroutes?",
+          "Vergelijk tariefmethode, limieten, tracking, verwachte looptijd, eindbezorging en vergoeding. Kies op waarde, vervangbaarheid en deadline—niet alleen prijs."
+        ],
+        [
+          "Kan de calculator de uiteindelijke prijs voorspellen?",
+          "Hij vergelijkt werkelijk en volumegewicht met de ingevoerde deler. De magazijnmeting en actuele regels van de gekozen route bepalen de uiteindelijke offerte."
+        ],
+        [
+          "Verkoopt LitBuyVIP de getoonde producten?",
+          "LitBuyVIP is een ontdek- en informatiesite. Productknoppen leiden naar de winkelbestemming, waar prijs, beschikbaarheid, bestelling, voorwaarden en betaling worden geregeld."
+        ]
+      ]
+    },
+    "footer": {
+      "description": "Onafhankelijke productontdekking en pakketplanning voor internationale kopers.",
+      "discover": "ONTDEK",
+      "categories": "Categorieën",
+      "sheet": "Geselecteerde lijst",
+      "guides": "Koopgidsen",
+      "tools": "HULPMIDDELEN",
+      "qc": "QC-checklist",
+      "shipping": "Verzend-FAQ",
+      "parcel": "Pakketplanning",
+      "notice": "LET OP",
+      "noticeText": "Onafhankelijke informatiesite. Niet het officiële LitBuy-platform.",
+      "tagline": "Vind wat de hitte waard is."
+    }
+  },
+  "PL": {
+    "nav": {
+      "spreadsheet": "Lista produktów",
+      "categories": "Kategorie",
+      "guides": "Poradniki",
+      "faq": "FAQ",
+      "explore": "Otwórz listę",
+      "language": "Język",
+      "menu": "Otwórz menu"
+    },
+    "hero": {
+      "eyebrow": "Niezależna selekcja dla lepszych zakupów",
+      "title": "Znajdź lepsze produkty.",
+      "accent": "Zbuduj mądrzejszy haul.",
+      "desc": "Przejrzysta lista LitBuy do odkrywania produktów, kontroli QC i planowania wysyłki—bez niekończącego się przewijania.",
+      "placeholder": "Wklej link lub wpisz słowo kluczowe",
+      "search": "Szukaj produktów",
+      "searchLabel": "Szukaj produktów",
+      "finds": "wybrane produkty",
+      "categories": "jasne kategorie",
+      "reviews": "kontrole linków",
+      "weekly": "Co tydzień"
+    },
+    "categories": {
+      "kicker": "KUPUJ WEDŁUG KATEGORII",
+      "title": "Zacznij od tego, czego naprawdę szukasz.",
+      "description": "Każda kategoria otwiera odpowiednią kolekcję na głównej liście i prowadzi prosto do aktywnych produktów.",
+      "open": "Otwórz {name} na głównej liście",
+      "items": [
+        {
+          "name": "Buty / Klapki",
+          "description": "Sneakersy, klapki i pary na co dzień"
+        },
+        {
+          "name": "T-shirty",
+          "description": "Koszulki z grafiką, logo i basic"
+        },
+        {
+          "name": "Odzież modowa",
+          "description": "Kurtki, dzianiny i warstwy sezonowe"
+        },
+        {
+          "name": "Bluzy z kapturem",
+          "description": "Bluzy, modele na zamek i polar"
+        },
+        {
+          "name": "Spodnie",
+          "description": "Jeansy, cargo i luźne kroje"
+        },
+        {
+          "name": "Paski skórzane",
+          "description": "Klasyczne i wyraziste paski"
+        },
+        {
+          "name": "Torby",
+          "description": "Listonoszki, shopperki i torby podróżne"
+        },
+        {
+          "name": "Perfumy",
+          "description": "Zapachy i wybrane perfumy"
+        },
+        {
+          "name": "Elektronika",
+          "description": "Technologia mobilna, biurowa i codzienna"
+        },
+        {
+          "name": "Inne",
+          "description": "Akcesoria, prezenty i dodatkowe znaleziska"
+        }
+      ]
+    },
+    "products": {
+      "kicker": "WYBRANA LISTA",
+      "title": "Dziesięć świeżych znalezisk.",
+      "title2": "Bez zmęczenia arkuszem.",
+      "editor": "WYBÓR REDAKCJI",
+      "mainItem": "PRODUKT Z GŁÓWNEJ STRONY",
+      "live": "Aktywna oferta",
+      "view": "Zobacz produkt",
+      "note": "Ceny są orientacyjne i mogą zmienić się w aktywnej ofercie.",
+      "openAll": "Otwórz pełną listę",
+      "openLabel": "Otwórz {name} na głównej stronie"
+    },
+    "planner": {
+      "kicker": "PLANER PACZKI",
+      "title": "Sprawdź, czy koszt zależy od rozmiaru czy wagi.",
+      "description": "Oszacuj wagę gabarytową przed wysyłką. Wpisz zewnętrzne wymiary kartonu i porównaj je z wagą rzeczywistą. Wyższa wartość często jest wagą rozliczeniową.",
+      "steps": [
+        "Używaj centymetrów i kilogramów",
+        "Potwierdź dzielnik wybranej trasy",
+        "Traktuj wynik jako szacunek, nie ofertę"
+      ],
+      "estimator": "KALKULATOR WAGI GABARYTOWEJ",
+      "actual": "Rzeczywista waga paczki",
+      "length": "Długość",
+      "width": "Szerokość",
+      "height": "Wysokość",
+      "divisor": "Dzielnik gabarytowy",
+      "dimensional": "GABARYTOWA",
+      "planning": "WAGA PLANOWANA"
+    },
+    "process": {
+      "kicker": "LEPSZY SYSTEM",
+      "title": "Od linku do drzwi, z mniejszą liczbą niespodzianek.",
+      "description": "Nasz układ odzwierciedla decyzje podejmowane przez uważnego kupującego.",
+      "items": [
+        {
+          "title": "Odkrywaj",
+          "description": "Przeszukuj wybraną kategorię zamiast zaczynać od pustego marketplace'u."
+        },
+        {
+          "title": "Sprawdzaj",
+          "description": "Porównuj warianty i zdjęcia magazynowe według stałej listy."
+        },
+        {
+          "title": "Łącz",
+          "description": "Grupuj zgodne produkty i ograniczaj zbędną objętość."
+        },
+        {
+          "title": "Wysyłaj",
+          "description": "Wybieraj według kosztu, ograniczeń, śledzenia i czasu—nie tylko ceny."
+        }
+      ]
+    },
+    "guides": {
+      "kicker": "NAJNOWSZE PORADNIKI",
+      "title": "Oryginalne badania dla lepszych paczek.",
+      "viewAll": "Zobacz wszystkie poradniki",
+      "readFull": "Czytaj cały artykuł",
+      "open": "Otwórz {title}",
+      "library": "BIBLIOTEKA PORADNIKÓW",
+      "allTitle": "Wszystkie poradniki LitBuy.",
+      "allDescription": "Praktyczne, niezależne wskazówki dotyczące kontroli produktów, planowania paczek i decyzji zakupowych.",
+      "backHome": "Wróć na stronę główną",
+      "readGuide": "Czytaj poradnik",
+      "backAll": "Wszystkie poradniki",
+      "inGuide": "W TYM PORADNIKU",
+      "buyerNote": "Niezależna uwaga",
+      "buyerNoteText": "Oferty, zasady tras, ceny i funkcje mogą się zmieniać. Przed płatnością lub nadaniem paczki potwierdź aktualne informacje w usłudze zamówień.",
+      "originalEnglish": "Oryginalny artykuł po angielsku",
+      "minRead": "min czytania"
+    },
+    "faq": {
+      "kicker": "FAQ KUPUJĄCEGO",
+      "title": "Pytania do wyjaśnienia przed wysyłką.",
+      "description": "Niezależne, praktyczne odpowiedzi dotyczące decyzji między znalezieniem produktu a wysłaniem paczki za granicę.",
+      "answers": "praktycznych odpowiedzi",
+      "updated": "aktualizacja 2026",
+      "topics": [
+        "Kontrola QC",
+        "Pakowanie",
+        "Trasy wysyłki"
+      ],
+      "topicsLabel": "Tematy FAQ",
+      "start": "NIE WIESZ, OD CZEGO ZACZĄĆ?",
+      "startText": "Zacznij od kontroli produktu i zdjęć magazynowych, a potem porównaj rozmiar paczki i ograniczenia trasy.",
+      "instruction": "OTWIERAJ JEDNĄ ODPOWIEDŹ ↓",
+      "items": [
+        [
+          "Czym jest lista LitBuy?",
+          "To niezależnie uporządkowana lista produktów podzielonych na przeszukiwalne kategorie. Użyj jej, aby szybciej znaleźć kandydatów, a przed zakupem potwierdź aktywną ofertę, wariant i dostępność."
+        ],
+        [
+          "Czy każdy produkt jest stale weryfikowany?",
+          "Nie. Sprzedawcy, partie, ceny i linki się zmieniają. Strona używa dat kontroli i praktycznych notatek, ale ostateczna decyzja powinna uwzględniać bieżącą stronę źródłową i dowody magazynowe twojej sztuki."
+        ],
+        [
+          "Co sprawdzić przed zakupem?",
+          "Potwierdź kolor, rozmiar, model, aktywność sprzedawcy, wymiary i ważne dodatki. Zapisz wybrany wariant, aby porównać go z produktem dostarczonym do magazynu."
+        ],
+        [
+          "Jak oceniać zdjęcia QC?",
+          "Najpierw sprawdź tożsamość produktu, potem kształt, linie konstrukcyjne i detale. Porównuj pary razem i poproś o konkretne zbliżenie, gdy światło lub kąt budzą wątpliwości."
+        ],
+        [
+          "Dlaczego wysyłka może kosztować więcej?",
+          "Koszt międzynarodowy może zależeć od wagi rzeczywistej i wymiarów. Duże opakowania, ograniczone cechy produktu i sposób naliczania na trasie mogą zwiększyć wagę rozliczeniową."
+        ],
+        [
+          "Czy można usunąć opakowanie, by oszczędzić miejsce?",
+          "Może to zmniejszyć objętość trwałych rzeczy, ale też ochronę lub prezentację. Zachowaj konstrukcję i amortyzację dla produktów kruchych, kolekcjonerskich i wrażliwych na kształt."
+        ],
+        [
+          "Czy wysyłać wszystko w jednej paczce?",
+          "Nie zawsze. Łącz zgodne standardowe produkty, ale osobno oceń baterie, płyny, magnesy, rzeczy kruche i duże, bo jeden specjalny przedmiot może ograniczyć dostępne trasy."
+        ],
+        [
+          "Jak wybrać trasę wysyłki?",
+          "Porównaj sposób naliczania, limity, śledzenie, przewidywany czas, doręczenie końcowe i zasady rekompensaty. Wybieraj według wartości, możliwości wymiany i terminu—nie tylko ceny."
+        ],
+        [
+          "Czy kalkulator poda ostateczną cenę?",
+          "Porównuje wagę rzeczywistą i gabarytową z podanym dzielnikiem. Ostateczną wycenę określają pomiar magazynu i aktualne zasady wybranej trasy."
+        ],
+        [
+          "Czy LitBuyVIP sprzedaje pokazane produkty?",
+          "LitBuyVIP jest stroną informacyjną i odkrywczą. Przyciski prowadzą do miejsca zakupu, gdzie obsługiwane są cena, dostępność, zamówienie, warunki i płatność."
+        ]
+      ]
+    },
+    "footer": {
+      "description": "Niezależne odkrywanie produktów i planowanie paczek dla kupujących międzynarodowo.",
+      "discover": "ODKRYWAJ",
+      "categories": "Kategorie",
+      "sheet": "Wybrana lista",
+      "guides": "Poradniki",
+      "tools": "NARZĘDZIA",
+      "qc": "Lista QC",
+      "shipping": "FAQ wysyłkowe",
+      "parcel": "Planowanie paczki",
+      "notice": "UWAGA",
+      "noticeText": "Niezależna strona informacyjna. Nie jest oficjalną platformą LitBuy.",
+      "tagline": "Znajdź to, co jest warte ognia."
+    }
+  },
+  "RU": {
+    "nav": {
+      "spreadsheet": "Таблица",
+      "categories": "Категории",
+      "guides": "Гайды",
+      "faq": "FAQ",
+      "explore": "Открыть таблицу",
+      "language": "Язык",
+      "menu": "Открыть меню"
+    },
+    "hero": {
+      "eyebrow": "Независимый отбор для разумных покупок",
+      "title": "Находите лучшие вещи.",
+      "accent": "Собирайте продуманный заказ.",
+      "desc": "Удобная таблица LitBuy для поиска товаров, проверки QC и планирования доставки—без бесконечной прокрутки.",
+      "placeholder": "Вставьте ссылку или введите запрос",
+      "search": "Найти товары",
+      "searchLabel": "Найти товары",
+      "finds": "отобранных товаров",
+      "categories": "понятных категорий",
+      "reviews": "проверки ссылок",
+      "weekly": "Еженедельно"
+    },
+    "categories": {
+      "kicker": "ПОКУПКИ ПО КАТЕГОРИЯМ",
+      "title": "Начните с того, что действительно ищете.",
+      "description": "Каждая категория открывает соответствующую подборку в основной таблице и ведёт прямо к актуальным товарам.",
+      "open": "Открыть {name} в основной таблице",
+      "items": [
+        {
+          "name": "Обувь / Шлёпанцы",
+          "description": "Кроссовки, слайды и повседневная обувь"
+        },
+        {
+          "name": "Футболки",
+          "description": "Принты, логотипы и базовые модели"
+        },
+        {
+          "name": "Модная одежда",
+          "description": "Куртки, трикотаж и сезонные слои"
+        },
+        {
+          "name": "Худи",
+          "description": "Пуловеры, модели на молнии и флис"
+        },
+        {
+          "name": "Брюки",
+          "description": "Джинсы, карго и свободный крой"
+        },
+        {
+          "name": "Кожаные ремни",
+          "description": "Классические и акцентные модели"
+        },
+        {
+          "name": "Модные сумки",
+          "description": "Кросс-боди, шопперы и дорожные сумки"
+        },
+        {
+          "name": "Парфюмерия",
+          "description": "Ароматы и подборки парфюма"
+        },
+        {
+          "name": "Электроника",
+          "description": "Мобильная и повседневная техника"
+        },
+        {
+          "name": "Другое",
+          "description": "Аксессуары, подарки и прочие находки"
+        }
+      ]
+    },
+    "products": {
+      "kicker": "ОТОБРАННАЯ ТАБЛИЦА",
+      "title": "Десять свежих находок.",
+      "title2": "Без усталости от таблиц.",
+      "editor": "ВЫБОР РЕДАКЦИИ",
+      "mainItem": "ТОВАР С ОСНОВНОГО САЙТА",
+      "live": "Активное объявление",
+      "view": "Смотреть товар",
+      "note": "Цены указаны для ориентира и могут измениться в активном объявлении.",
+      "openAll": "Открыть всю таблицу",
+      "openLabel": "Открыть {name} на основном сайте"
+    },
+    "planner": {
+      "kicker": "ПЛАНИРОВЩИК ПОСЫЛКИ",
+      "title": "Поймите, что влияет на стоимость: объём или вес.",
+      "description": "Оцените объёмный вес до отправки. Введите внешние размеры коробки и сравните с фактическим весом. Для расчёта часто берётся большее значение.",
+      "steps": [
+        "Используйте сантиметры и килограммы",
+        "Уточните делитель выбранного маршрута",
+        "Считайте результат оценкой, а не точной ценой"
+      ],
+      "estimator": "КАЛЬКУЛЯТОР ОБЪЁМНОГО ВЕСА",
+      "actual": "Фактический вес",
+      "length": "Длина",
+      "width": "Ширина",
+      "height": "Высота",
+      "divisor": "Объёмный делитель",
+      "dimensional": "ОБЪЁМНЫЙ",
+      "planning": "РАСЧЁТНЫЙ ВЕС"
+    },
+    "process": {
+      "kicker": "БОЛЕЕ УМНЫЙ ПОДХОД",
+      "title": "От ссылки до двери—с меньшим числом сюрпризов.",
+      "description": "Структура повторяет реальные решения внимательного покупателя.",
+      "items": [
+        {
+          "title": "Ищите",
+          "description": "Начинайте с отобранной категории, а не с пустого маркетплейса."
+        },
+        {
+          "title": "Проверяйте",
+          "description": "Сравнивайте варианты и фото склада по единому чек-листу."
+        },
+        {
+          "title": "Объединяйте",
+          "description": "Группируйте совместимые товары и сокращайте лишний объём."
+        },
+        {
+          "title": "Отправляйте",
+          "description": "Выбирайте по цене, ограничениям, отслеживанию и сроку."
+        }
+      ]
+    },
+    "guides": {
+      "kicker": "СВЕЖИЕ ГАЙДЫ",
+      "title": "Оригинальные исследования для лучших посылок.",
+      "viewAll": "Все гайды",
+      "readFull": "Читать статью",
+      "open": "Открыть {title}",
+      "library": "БИБЛИОТЕКА ГАЙДОВ",
+      "allTitle": "Все гайды LitBuy.",
+      "allDescription": "Практические независимые заметки о проверке товаров, планировании посылок и покупках.",
+      "backHome": "На главную",
+      "readGuide": "Читать гайд",
+      "backAll": "Все гайды",
+      "inGuide": "В ЭТОМ ГАЙДЕ",
+      "buyerNote": "Независимая заметка",
+      "buyerNoteText": "Объявления, правила маршрутов, цены и функции могут меняться. Перед оплатой или отправкой посылки проверьте актуальную информацию в сервисе заказа.",
+      "originalEnglish": "Оригинал на английском",
+      "minRead": "мин чтения"
+    },
+    "faq": {
+      "kicker": "FAQ ПОКУПАТЕЛЯ",
+      "title": "Вопросы, которые стоит решить до отправки.",
+      "description": "Независимые практические ответы о решениях между поиском товара и международной отправкой.",
+      "answers": "практических ответов",
+      "updated": "обновлено для 2026",
+      "topics": [
+        "Проверка QC",
+        "Упаковка",
+        "Маршруты"
+      ],
+      "topicsLabel": "Темы FAQ",
+      "start": "НЕ ЗНАЕТЕ, С ЧЕГО НАЧАТЬ?",
+      "startText": "Сначала проверьте товар и складские фото, затем сравните размер посылки и ограничения маршрута.",
+      "instruction": "ОТКРЫВАЙТЕ ПО ОДНОМУ ОТВЕТУ ↓",
+      "items": [
+        [
+          "Что такое таблица LitBuy?",
+          "Это независимый список, который группирует исходные товары по доступным для поиска категориям. Используйте его для быстрого поиска, а перед заказом проверьте актуальное объявление, вариант и наличие."
+        ],
+        [
+          "Каждый товар проверяется постоянно?",
+          "Нет. Продавцы, партии, цены и ссылки меняются. Сайт указывает даты проверки и заметки, но окончательное решение должно учитывать текущую страницу и складские фото именно вашей единицы."
+        ],
+        [
+          "Что проверить перед покупкой?",
+          "Уточните цвет, размер, модель, активность продавца, замеры и важные аксессуары. Сохраните выбранный вариант, чтобы сравнить его с поступившим на склад товаром."
+        ],
+        [
+          "Как оценивать фотографии QC?",
+          "Сначала проверьте сам товар, затем форму, линии конструкции и детали. Сравнивайте парные предметы вместе и просите конкретный крупный план, если свет или ракурс мешают оценке."
+        ],
+        [
+          "Почему доставка может оказаться дороже?",
+          "Стоимость может зависеть от реального веса и размеров. Крупная упаковка, ограничения товара и метод расчёта маршрута способны увеличить оплачиваемый вес."
+        ],
+        [
+          "Можно ли убрать упаковку ради экономии места?",
+          "Для прочных вещей это может сократить объём, но также уменьшить защиту. Сохраняйте каркас и наполнение для хрупких, коллекционных и чувствительных к форме товаров."
+        ],
+        [
+          "Стоит ли отправлять всё одной посылкой?",
+          "Не всегда. Объединяйте совместимые стандартные вещи, но отдельно оценивайте батареи, жидкости, магниты, хрупкие и крупные товары: один особый предмет может ограничить маршруты."
+        ],
+        [
+          "Как выбрать маршрут доставки?",
+          "Сравните метод тарификации, лимиты, отслеживание, ожидаемый срок, последнюю милю и компенсацию. Выбирайте с учётом ценности, заменяемости и срока—не только цены."
+        ],
+        [
+          "Калькулятор покажет окончательную цену?",
+          "Он сравнивает реальный и объёмный вес по введённому делителю. Итоговую цену определяют измерение склада и актуальные правила выбранного маршрута."
+        ],
+        [
+          "LitBuyVIP продаёт указанные товары?",
+          "LitBuyVIP — сайт для поиска и обучения. Кнопки ведут в место покупки, где обрабатываются цена, наличие, заказ, условия и оплата."
+        ]
+      ]
+    },
+    "footer": {
+      "description": "Независимый поиск товаров и планирование посылок для международных покупателей.",
+      "discover": "НАЙТИ",
+      "categories": "Категории",
+      "sheet": "Подборка",
+      "guides": "Гайды",
+      "tools": "ИНСТРУМЕНТЫ",
+      "qc": "Чек-лист QC",
+      "shipping": "FAQ доставки",
+      "parcel": "Планирование",
+      "notice": "ВАЖНО",
+      "noticeText": "Независимый информационный сайт. Неофициальная платформа LitBuy.",
+      "tagline": "Найдите то, что стоит огня."
+    }
+  },
+  "ZH": {
+    "nav": {
+      "spreadsheet": "商品表格",
+      "categories": "商品分类",
+      "guides": "买家指南",
+      "faq": "常见问题",
+      "explore": "打开表格",
+      "language": "语言",
+      "menu": "打开菜单"
+    },
+    "hero": {
+      "eyebrow": "独立筛选，让购物更省心",
+      "title": "找到更好的商品。",
+      "accent": "更聪明地组合包裹。",
+      "desc": "一份清晰的 LitBuy 商品表格，帮助你发现商品、检查 QC 并规划运输，无需反复翻找。",
+      "placeholder": "粘贴商品链接或输入关键词",
+      "search": "搜索商品",
+      "searchLabel": "搜索商品",
+      "finds": "精选商品",
+      "categories": "清晰分类",
+      "reviews": "链接检查",
+      "weekly": "每周"
+    },
+    "categories": {
+      "kicker": "按分类查找",
+      "title": "从你真正想买的商品开始。",
+      "description": "每个分类都会打开主站中对应的真实商品集合，让你从发现商品直接进入当前在售页面。",
+      "open": "在主站打开{name}",
+      "items": [
+        {
+          "name": "鞋子 / 拖鞋",
+          "description": "运动鞋、拖鞋与日常鞋款"
+        },
+        {
+          "name": "T恤",
+          "description": "印花、Logo 与基础款 T 恤"
+        },
+        {
+          "name": "时尚服饰",
+          "description": "夹克、针织与季节性外套"
+        },
+        {
+          "name": "连帽卫衣",
+          "description": "套头、拉链与抓绒款式"
+        },
+        {
+          "name": "裤装",
+          "description": "牛仔裤、工装裤与宽松版型"
+        },
+        {
+          "name": "皮带",
+          "description": "经典与个性皮带款式"
+        },
+        {
+          "name": "时尚包袋",
+          "description": "斜挎包、托特包与旅行包"
+        },
+        {
+          "name": "香水",
+          "description": "香氛与香水精选"
+        },
+        {
+          "name": "电子产品",
+          "description": "移动、桌面与日常数码产品"
+        },
+        {
+          "name": "其他商品",
+          "description": "配饰、礼物与更多发现"
+        }
+      ]
+    },
+    "products": {
+      "kicker": "精选商品表格",
+      "title": "十件全新发现。",
+      "title2": "告别表格筛选疲劳。",
+      "editor": "编辑精选",
+      "mainItem": "主站商品",
+      "live": "当前在售",
+      "view": "查看商品",
+      "note": "价格仅供发现商品时参考，请以实时商品页面为准。",
+      "openAll": "打开完整商品表格",
+      "openLabel": "在主站打开{name}"
+    },
+    "planner": {
+      "kicker": "包裹规划器",
+      "title": "判断体积还是重量在影响运费。",
+      "description": "提交包裹前先估算体积重量。输入预计外箱尺寸并与实际重量比较，较大的数值通常更接近计费重量。",
+      "steps": [
+        "使用厘米和千克",
+        "确认所选路线使用的体积除数",
+        "计算结果仅作估算，并非最终报价"
+      ],
+      "estimator": "体积重量计算器",
+      "actual": "包裹实际重量",
+      "length": "长度",
+      "width": "宽度",
+      "height": "高度",
+      "divisor": "体积除数",
+      "dimensional": "体积重量",
+      "planning": "规划重量"
+    },
+    "process": {
+      "kicker": "更好的购物流程",
+      "title": "从商品链接到收货，减少意外情况。",
+      "description": "网站结构按照谨慎买家真正需要做出的决定来设计。",
+      "items": [
+        {
+          "title": "发现",
+          "description": "从精选分类开始查找，无需面对空白且杂乱的市场页面。"
+        },
+        {
+          "title": "检查",
+          "description": "比较商品版本，并使用固定清单检查仓库 QC 图片。"
+        },
+        {
+          "title": "合包",
+          "description": "将适合的商品组合，减少可以避免的包裹体积。"
+        },
+        {
+          "title": "运输",
+          "description": "综合运费、限制、追踪和时效选择路线，而不是只看低价。"
+        }
+      ]
+    },
+    "guides": {
+      "kicker": "最新买家指南",
+      "title": "用原创调研规划更好的包裹。",
+      "viewAll": "查看全部买家指南",
+      "readFull": "阅读全文",
+      "open": "打开{title}",
+      "library": "指南资料库",
+      "allTitle": "全部 LitBuy 买家指南。",
+      "allDescription": "围绕商品检查、包裹规划和购买决策的实用独立建议。",
+      "backHome": "返回首页",
+      "readGuide": "阅读指南",
+      "backAll": "全部买家指南",
+      "inGuide": "本篇内容",
+      "buyerNote": "独立买家提示",
+      "buyerNoteText": "商品、路线规则、价格和平台功能可能变化。付款或提交包裹前，请在实际下单服务中再次确认最新信息。",
+      "originalEnglish": "英文原创文章",
+      "minRead": "分钟阅读"
+    },
+    "faq": {
+      "kicker": "买家常见问题",
+      "title": "发货前需要确认的问题。",
+      "description": "针对从发现商品到提交国际包裹之间重要决策的独立、实用解答。",
+      "answers": "条实用解答",
+      "updated": "已更新至 2026 年",
+      "topics": [
+        "QC 检查",
+        "包裹包装",
+        "运输路线"
+      ],
+      "topicsLabel": "常见问题主题",
+      "start": "不知道从哪里开始？",
+      "startText": "先检查商品与仓库照片，再比较包裹尺寸和运输路线限制。",
+      "instruction": "每次展开一个答案 ↓",
+      "items": [
+        [
+          "什么是 LitBuy 商品表格？",
+          "它是一份独立整理的商品发现清单，将来源商品归入可搜索的分类。你可以用它更快找到候选商品，但下单前仍需确认实时页面、所选规格和当前库存。"
+        ],
+        [
+          "所有商品都会永久通过验证吗？",
+          "不会。卖家、批次、价格和链接都会变化。本网站提供检查日期和实用说明，但最终决定应结合当前来源页面以及你所购商品的仓库实拍证据。"
+        ],
+        [
+          "购买前应该检查什么？",
+          "确认准确的颜色、尺码、型号、卖家活跃度、商品尺寸以及重要配件。保存所选规格说明，以便与到达仓库的实际商品对照。"
+        ],
+        [
+          "应该怎样查看 QC 图片？",
+          "先确认商品身份，再检查整体轮廓、结构线与细节。成对商品要放在一起比较；如果光线、角度或距离影响判断，应请求一张针对性的近照。"
+        ],
+        [
+          "为什么运费可能高于预期？",
+          "国际运费可能同时受到实际重量和包裹尺寸影响。体积较大的零售包装、受限商品属性以及路线特定的计费方式都会提高计费重量。"
+        ],
+        [
+          "可以去掉包装来节省空间吗？",
+          "耐用商品去掉包装可能降低体积，但也会减少保护或影响展示。易碎、收藏类或对形状敏感的商品应保留支撑结构与缓冲材料。"
+        ],
+        [
+          "所有商品都应该放在一个包裹里吗？",
+          "不一定。可以合并相容的普通商品，但电池、液体、磁性、易碎和超大商品应单独评估，因为一件特殊商品就可能限制整个包裹可选的路线。"
+        ],
+        [
+          "如何选择运输路线？",
+          "比较计费方式、路线限制、物流追踪、预计时效、末端派送和赔付条件。应根据包裹价值、是否容易补买和收货期限选择，而不是只看价格。"
+        ],
+        [
+          "计算器可以预测最终运费吗？",
+          "它会使用你输入的除数比较实际重量和体积重量。最终报价仍由仓库测量结果和所选路线的当前规则决定。"
+        ],
+        [
+          "LitBuyVIP 会销售页面里的商品吗？",
+          "LitBuyVIP 是商品发现与信息网站。商品按钮会前往实际购物页面，价格、库存、下单、服务条款与付款均由购物目的地处理。"
+        ]
+      ]
+    },
+    "footer": {
+      "description": "为国际买家提供独立商品发现与包裹规划指南。",
+      "discover": "发现商品",
+      "categories": "商品分类",
+      "sheet": "精选表格",
+      "guides": "买家指南",
+      "tools": "实用工具",
+      "qc": "QC 检查表",
+      "shipping": "运输问答",
+      "parcel": "包裹规划",
+      "notice": "说明",
+      "noticeText": "本网站为独立信息网站，并非 LitBuy 官方平台。",
+      "tagline": "找到真正值得关注的商品。"
+    }
+  }
+}
