@@ -1,0 +1,268 @@
+{
+  "en": [
+    {"title":"Warehouse QC questions buyers actually need answered","items":[
+      ["What can Superbuy warehouse photos reliably verify?","Visible identity, color, quantity, obvious damage, approximate measurements and surface alignment."],
+      ["What can warehouse photos not prove?","Authenticity, composition, odor, internal construction, electrical safety, waterproofing or durability."],
+      ["When is an extra photo worth requesting?","When one angle or measurement can change the accept, exchange or return decision."],
+      ["How should clothing measurements be checked?","Compare the same flat measurement with a garment you already wear comfortably."],
+      ["Why should shoes be photographed as a pair?","Paired views expose mismatched toes, panels, heels, eyelets and sole lengths."],
+      ["Does 90-day free storage define the return deadline?","No. Storage time and the seller's return window are separate deadlines."],
+      ["How should a buyer handle an unclear 1688 variant?","Preserve original option text, quantity, unit and configuration; pause unresolved orders."],
+      ["Should every small cosmetic flaw cause a return?","No. Compare it with acceptance limits, replacement feasibility and total correction cost."],
+      ["Why does packaging belong in the QC decision?","Boxes and restricted components can change routes, volumetric weight and protection needs."],
+      ["What is the most useful final QC record?","A dated variant, evidence, unresolved risk, decision, reason and next deadline." ]
+    ]},
+    {"title":"Landed-cost and parcel-planning questions","items":[
+      ["Is the international shipping deposit the final charge?","No. Carrier-confirmed weight and dimensions determine the final charge and adjustment."],
+      ["Does the 6,000 volumetric divisor apply to every route?","No. Live routes may use another divisor, rounding rule or minimum increment."],
+      ["Should buyers always remove shoe boxes?","Only when savings outweigh lost structure, protection, presentation or collector value."],
+      ["Is one consolidated parcel always cheaper than two?","No. Mixed parcels can lose routes, exceed limits or concentrate excessive value."],
+      ["What is the first-weight charge?","The route's minimum starting block, repeated across several very small parcels."],
+      ["How should shared shipping cost be allocated?","Use actual or dimensional contribution, then assign item-specific services directly."],
+      ["When should restricted-goods eligibility be checked?","Before payment, because restricted categories can sharply reduce available routes."],
+      ["What makes a packaging service financially sensible?","It should reduce a named failure risk at a proportionate cost."],
+      ["Why include customs and delay in the cost model?","Landed cost includes taxes, time loss, damage exposure and correction costs."],
+      ["Which number should close the parcel record?","Final confirmed freight plus customs, direct services, damage and delivery time." ]
+    ]},
+    {"title":"Spreadsheet operations and evidence questions","items":[
+      ["What is the minimum useful product-row record?","ID, title, marketplace, seller, variant, quantity, price, shipping, URL, date and status."],
+      ["Why is saving only the product link insufficient?","Listings change; a link does not preserve the evidence behind your decision."],
+      ["What should a variant fingerprint contain?","Model, color, size, material, version, quantity, original option and image reference."],
+      ["How should stale listings be handled?","Mark them outdated, preserve history and require a fresh review before recommendation."],
+      ["Should seller and product quality share one score?","No. Separate seller performance from fit, construction, condition and landed value."],
+      ["What happens when an item reaches the warehouse?","Trigger identity, QC, measurements, packaging assessment, decision and next deadline."],
+      ["What separates item-ready from parcel-ready?","Parcel-ready additionally confirms route, urgency, packaging, size and shipment risk."],
+      ["How should buyer-agent messages be recorded?","Save date, exact question, answer, supporting evidence and resulting decision."],
+      ["Which rows need attention during weekly review?","Unanswered inquiries, undecided arrivals, storage limits, unplanned items and incomplete outcomes."],
+      ["What makes a public spreadsheet trustworthy?","Evidence dates, precise variants, measurable QC, visible uncertainty, history and delivery outcomes." ]
+    ]}
+  ],
+  "de": [
+    {"title":"Praktische Fragen zur Qualitätskontrolle im Lager","items":[
+      ["Was können Superbuy-Lagerfotos zuverlässig belegen?","Sie belegen sichtbare Identität, Farbe, Menge, offensichtliche Schäden, ungefähre Maße und Oberflächenausrichtung zum Aufnahmezeitpunkt."],
+      ["Was können Lagerfotos nicht beweisen?","Sie beweisen weder Echtheit noch Faserzusammensetzung, Geruch, Innenkonstruktion, elektrische Sicherheit, Wasserdichtigkeit oder Langzeithaltbarkeit."],
+      ["Wann lohnt sich ein zusätzliches Foto?","Wenn ein bestimmter Winkel oder ein Maß die Entscheidung über Annahme, Umtausch oder Rückgabe tatsächlich verändern kann."],
+      ["Wie sollten Kleidungsmaße geprüft werden?","Vergleiche dieselbe flach gemessene Stelle mit einem eigenen, gut passenden Kleidungsstück; verlasse dich nicht nur auf S, M oder L."],
+      ["Warum sollten Schuhe gemeinsam fotografiert werden?","Die Paaransicht macht Unterschiede bei Zehenform, Panelhöhe, Ferse, Ösen und Sohlenlänge sichtbar."],
+      ["Bestimmen 90 Tage kostenlose Lagerung die Rückgabefrist?","Nein. Lagerdauer und Rückgabefrist des Verkäufers sind getrennt; die Verkäuferfrist kann deutlich früher enden."],
+      ["Wie behandelt man eine unklare 1688-Variante?","Originaltext, Menge, Einheit und genaue Konfiguration sichern und die Bestellung pausieren, wenn die Auswahl weiter mehrdeutig bleibt."],
+      ["Muss jeder kleine Schönheitsfehler zur Rückgabe führen?","Nein. Vergleiche ihn mit deiner Akzeptanzgrenze, Ersatzmöglichkeit, Inlandskosten und erwarteten Gesamtkosten."],
+      ["Warum gehört Verpackung zur QC-Entscheidung?","Starre Kartons, Batterien, Flüssigkeiten und zerbrechliche Teile beeinflussen Route, Volumengewicht und Schutzbedarf."],
+      ["Wie sieht ein guter QC-Abschluss aus?","Dokumentiere Variante, geprüfte Belege, offenes Risiko, Entscheidung, Begründung und nächste Frist in einem datierten Eintrag." ]
+    ]},
+    {"title":"Fragen zu Gesamtkosten und Paketplanung","items":[
+      ["Ist die internationale Versandanzahlung der Endpreis?","Nein. Die Spedition bestätigt Gewicht und Maße; daraus entstehen Endpreis und mögliche Kontokorrektur."],
+      ["Gilt der Volumenteiler 6.000 für jede Route?","Nein. Er ist eine Planungsreferenz; Live-Routen können andere Teiler, Rundungen oder Mindestschritte verwenden."],
+      ["Sollten Schuhkartons immer entfernt werden?","Nur wenn die Volumenersparnis den Verlust an Stabilität, Schutz, Präsentation oder Sammlerwert rechtfertigt."],
+      ["Ist ein gemeinsames Paket immer billiger als zwei?","Nein. Mischwaren können eine günstige Route verlieren, Limits überschreiten oder zu viel Wert konzentrieren."],
+      ["Was bedeutet Erstgewicht?","Es ist der mindestens berechnete Startblock einer Route; mehrere Kleinstpakete können diese Grundkosten wiederholen."],
+      ["Wie werden gemeinsame Versandkosten verteilt?","Nutze den höheren Beitrag aus tatsächlichem Gewicht oder Volumen und ordne direkte Dienste dem verursachenden Artikel zu."],
+      ["Wann müssen Warenbeschränkungen geprüft werden?","Vor der Zahlung, weil Batterien, Flüssigkeiten, Pulver, Lebensmittel, Medizin und Markenwaren mögliche Routen einschränken."],
+      ["Wann ist ein Verpackungsdienst wirtschaftlich sinnvoll?","Wenn er ein benanntes Risiko wie Stoß, Feuchtigkeit, Verformung oder ungedeckten Verlust angemessen reduziert."],
+      ["Warum gehören Zoll und Verzögerung ins Kostenmodell?","Weil Gesamtkosten auch wahrscheinliche Steuern, Zeitverlust, Schaden und Korrekturen umfassen."],
+      ["Welche Zahl schließt den Paketdatensatz ab?","Die endgültige bestätigte Versandgebühr nach Korrekturen, ergänzt um Zoll, Dienste, Schaden und Laufzeit." ]
+    ]},
+    {"title":"Fragen zum Tabellenbetrieb und zu Belegen","items":[
+      ["Was ist der Mindestdatensatz einer Produktzeile?","Interne ID, Titel, Marktplatz, Verkäufer, Variante, Menge, Preis, Inlandsversand, URL, Belegdatum und Status."],
+      ["Warum reicht der Produktlink allein nicht?","Angebote können Optionen, Bilder, Preise oder Zielseiten ändern; der Link konserviert den damaligen Entscheidungsstand nicht."],
+      ["Was gehört in einen Varianten-Fingerabdruck?","Modell, Farbe, Größe, Material, Version, Menge, Originaloption und eine erkennbare Bildreferenz."],
+      ["Wie werden veraltete Angebote behandelt?","Als geändert oder veraltet markieren, nützliche Historie bewahren und vor neuer Empfehlung erneut prüfen."],
+      ["Sollten Verkäufer und Produkt dieselbe Bewertung erhalten?","Nein. Genauigkeit, Kommunikation und Problemlösung getrennt von Passform, Konstruktion, Zustand und Gesamtwert bewerten."],
+      ["Was löst ein Lagereingang aus?","Identitätsprüfung, sichtbare QC, Maße, Verpackungsprüfung, datierte Entscheidung und nächste Aktionsfrist."],
+      ["Was unterscheidet Artikel- und Paketbereitschaft?","Artikelbereit bedeutet QC bestanden; paketbereit umfasst zusätzlich Route, Dringlichkeit, Verpackung, Größe und Risiko."],
+      ["Wie werden Agentennachrichten dokumentiert?","Datum, genaue Frage, Antwort, Bild oder Messung und die daraus folgende Entscheidung speichern."],
+      ["Welche Zeilen brauchen die wöchentliche Prüfung?","Offene Anfragen, unentschiedene Eingänge, nahende Lagergrenzen, artikelbereite Waren ohne Paketplan und Ergebnisse nach Lieferung."],
+      ["Was macht eine öffentliche Tabelle vertrauenswürdig?","Belegdaten, genaue Varianten, messbare QC-Notizen, sichtbare Unsicherheit, Änderungshistorie und Lieferergebnisse." ]
+    ]}
+  ],
+  "fr": [
+    {"title":"Questions pratiques sur le contrôle qualité en entrepôt","items":[
+      ["Que peuvent vérifier de façon fiable les photos d’entrepôt Superbuy ?","Elles montrent l’identité visible, la couleur, la quantité, les dégâts évidents, des mesures approximatives et l’alignement de surface au moment de la prise."],
+      ["Que ne prouvent pas les photos d’entrepôt ?","Elles ne prouvent ni l’authenticité, ni la composition, l’odeur, la construction interne, la sécurité électrique, l’étanchéité ou la durabilité."],
+      ["Quand demander une photo supplémentaire ?","Lorsqu’un angle ou une mesure précise peut réellement changer la décision d’accepter, d’échanger ou de retourner."],
+      ["Comment contrôler les mesures d’un vêtement ?","Comparez la même mesure à plat avec un vêtement personnel qui vous va bien, sans vous fier uniquement à S, M ou L."],
+      ["Pourquoi photographier les chaussures ensemble ?","La vue de la paire révèle les différences de forme, hauteur des panneaux, talon, œillets et longueur de semelle."],
+      ["Les 90 jours de stockage gratuit déterminent-ils le délai de retour ?","Non. Le stockage et le retour vendeur suivent deux calendriers distincts, et le second peut expirer beaucoup plus tôt."],
+      ["Comment gérer une variante 1688 ambiguë ?","Conservez le texte original, traduisez quantité et unité, notez la configuration exacte et suspendez si l’annonce reste ambiguë."],
+      ["Tout petit défaut esthétique impose-t-il un retour ?","Non. Comparez-le à votre seuil d’acceptation, au coût du retour intérieur, à la possibilité de remplacement et au coût total."],
+      ["Pourquoi l’emballage fait-il partie du contrôle qualité ?","Boîtes rigides, batteries, liquides et pièces fragiles peuvent modifier l’itinéraire, le poids volumétrique et la protection nécessaire."],
+      ["Quel est le meilleur relevé final de contrôle ?","Consignez variante, preuves consultées, risque restant, décision, motif et prochaine échéance dans une entrée datée." ]
+    ]},
+    {"title":"Questions sur le coût rendu et la préparation du colis","items":[
+      ["L’acompte d’expédition internationale est-il le prix final ?","Non. Le transporteur confirme poids et dimensions, qui déterminent le prix final et l’ajustement éventuel du compte."],
+      ["Le diviseur volumétrique 6 000 vaut-il pour toutes les lignes ?","Non. C’est une référence de planification; une ligne active peut appliquer un autre diviseur, arrondi ou minimum."],
+      ["Faut-il toujours retirer les boîtes à chaussures ?","Seulement si l’économie de volume compense la perte de structure, protection, présentation ou valeur de collection."],
+      ["Un seul colis consolidé est-il toujours moins cher ?","Non. Un colis mixte peut perdre une ligne avantageuse, dépasser une limite ou concentrer trop de valeur."],
+      ["Qu’est-ce que le premier poids ?","C’est le bloc minimum facturé par la ligne; plusieurs très petits colis peuvent répéter ce coût de base."],
+      ["Comment répartir le transport commun entre les produits ?","Utilisez la plus forte contribution entre poids réel et volume, puis attribuez chaque service direct à l’article concerné."],
+      ["Quand vérifier l’admissibilité des marchandises restreintes ?","Avant de payer, car batteries, liquides, poudres, aliments, médicaments et marques peuvent réduire les lignes possibles."],
+      ["Quand un service d’emballage est-il rentable ?","Lorsqu’il réduit un risque nommé—choc, humidité, déformation ou perte non couverte—à un coût proportionné à l’article."],
+      ["Pourquoi inclure douane et retard dans le modèle ?","Parce que le coût rendu comprend aussi taxes probables, temps perdu, dommages et corrections."],
+      ["Quel chiffre ferme le dossier du colis ?","Le prix final confirmé après ajustement, auquel s’ajoutent douane, services directs, dommages et délai." ]
+    ]},
+    {"title":"Questions sur la feuille de calcul et les preuves","items":[
+      ["Quel est le minimum utile pour une ligne produit ?","ID interne, titre capturé, place de marché, vendeur, variante, quantité, prix, livraison intérieure, URL, date de preuve et statut."],
+      ["Pourquoi le lien produit seul ne suffit-il pas ?","Une annonce peut modifier options, images, prix ou destination; le lien ne conserve pas l’état qui fondait la décision."],
+      ["Que contient l’empreinte d’une variante ?","Modèle, couleur, taille, matière, version, quantité, texte original de l’option et référence d’image identifiable."],
+      ["Comment traiter une annonce périmée ?","Marquez-la modifiée ou obsolète, gardez l’historique utile et imposez une nouvelle vérification avant recommandation."],
+      ["Vendeur et produit doivent-ils partager la même note ?","Non. Évaluez précision, communication et résolution séparément de la coupe, construction, état et valeur rendue."],
+      ["Que déclenche l’arrivée en entrepôt ?","Contrôle d’identité, QC visible, mesures, analyse de l’emballage, décision datée et prochaine échéance."],
+      ["Quelle différence entre article prêt et colis prêt ?","L’article prêt a passé le QC; le colis prêt convient aussi à une ligne, une urgence, un emballage, une taille et un risque."],
+      ["Comment enregistrer les messages de l’agent ?","Conservez date, question exacte, réponse, photo ou mesure justificative et décision qui en découle."],
+      ["Quelles lignes vérifier chaque semaine ?","Demandes sans réponse, arrivées sans décision, limites de stockage proches, articles prêts sans plan et livraisons sans résultat."],
+      ["Qu’est-ce qui rend une feuille publique crédible ?","Dates de preuve, variantes précises, notes QC mesurables, incertitude visible, historique des changements et résultats après livraison." ]
+    ]}
+  ],
+  "es": [
+    {"title":"Preguntas prácticas sobre el control de calidad en almacén","items":[
+      ["¿Qué pueden verificar de forma fiable las fotos del almacén de Superbuy?","Identidad visible, color, cantidad, daños evidentes, medidas aproximadas y alineación superficial en el momento de la foto."],
+      ["¿Qué no pueden demostrar las fotos del almacén?","No demuestran autenticidad, composición, olor, construcción interna, seguridad eléctrica, impermeabilidad ni durabilidad futura."],
+      ["¿Cuándo merece la pena pedir una foto adicional?","Cuando un ángulo o una medida concreta puede cambiar la decisión de aceptar, cambiar o devolver."],
+      ["¿Cómo deben comprobarse las medidas de una prenda?","Compara la misma medida en plano con una prenda propia que te quede bien; no dependas solo de S, M o L."],
+      ["¿Por qué deben fotografiarse juntos los dos zapatos?","La vista del par revela diferencias de puntera, paneles, talón, ojales y longitud de suela."],
+      ["¿Los 90 días de almacenamiento gratuito determinan el plazo de devolución?","No. Almacenamiento y devolución del vendedor son plazos distintos, y el segundo puede terminar mucho antes."],
+      ["¿Cómo se gestiona una variante ambigua de 1688?","Guarda el texto original, traduce cantidad y unidad, registra la configuración exacta y pausa si la oferta sigue siendo ambigua."],
+      ["¿Todo defecto cosmético pequeño exige devolución?","No. Compáralo con tu límite de aceptación, la posibilidad de reemplazo, el coste nacional y el coste total previsto."],
+      ["¿Por qué el embalaje forma parte del QC?","Cajas rígidas, baterías, líquidos y piezas frágiles pueden cambiar rutas, peso volumétrico y protección necesaria."],
+      ["¿Cuál es el registro final de QC más útil?","Anota variante, pruebas revisadas, riesgo pendiente, decisión, motivo y próximo plazo en una entrada fechada." ]
+    ]},
+    {"title":"Preguntas sobre coste total y planificación del paquete","items":[
+      ["¿El depósito de envío internacional es el precio final?","No. El transportista confirma peso y dimensiones, que determinan el cargo final y cualquier ajuste de la cuenta."],
+      ["¿El divisor volumétrico 6.000 se aplica a todas las rutas?","No. Es una referencia; una ruta activa puede usar otro divisor, redondeo o incremento mínimo."],
+      ["¿Hay que retirar siempre las cajas de zapatos?","Solo si el ahorro de volumen compensa la pérdida de estructura, protección, presentación o valor de colección."],
+      ["¿Un paquete consolidado siempre es más barato que dos?","No. Un paquete mixto puede perder una ruta favorable, superar límites o concentrar demasiado valor."],
+      ["¿Qué es el primer peso?","Es el bloque inicial mínimo facturable; varios paquetes muy pequeños pueden repetir ese coste base."],
+      ["¿Cómo se reparte el envío común entre productos?","Usa la mayor contribución entre peso real y espacio dimensional y asigna cada servicio directo al artículo causante."],
+      ["¿Cuándo se comprueba la admisión de mercancías restringidas?","Antes de pagar, porque baterías, líquidos, polvos, alimentos, medicinas y marcas pueden reducir las rutas."],
+      ["¿Cuándo tiene sentido económico un servicio de embalaje?","Cuando reduce un riesgo concreto—golpe, humedad, deformación o pérdida no cubierta—a un coste proporcionado."],
+      ["¿Por qué incluir aduanas y retrasos en el modelo?","Porque el coste total también incluye impuestos probables, tiempo perdido, daños y correcciones."],
+      ["¿Qué cifra cierra el registro del paquete?","El cargo final confirmado tras ajustes, más aduanas, servicios directos, daños y tiempo de entrega." ]
+    ]},
+    {"title":"Preguntas sobre operaciones de hoja de cálculo y pruebas","items":[
+      ["¿Cuál es el registro mínimo útil de una fila de producto?","ID interno, título capturado, mercado, vendedor, variante, cantidad, precio, envío nacional, URL, fecha de prueba y estado."],
+      ["¿Por qué no basta con guardar el enlace?","Las ofertas cambian opciones, imágenes, precios o destinos; el enlace no conserva el estado que sustentó la decisión."],
+      ["¿Qué contiene una huella de variante?","Modelo, color, talla, material, versión, cantidad, texto original de la opción y una referencia visual identificable."],
+      ["¿Cómo se tratan las ofertas antiguas?","Márcalas como cambiadas u obsoletas, conserva el historial útil y exige una nueva revisión antes de recomendarlas."],
+      ["¿Vendedor y producto deben compartir puntuación?","No. Puntúa exactitud, comunicación y solución por separado de ajuste, construcción, estado y valor total."],
+      ["¿Qué ocurre cuando llega un artículo al almacén?","Activa identidad, QC visible, medidas, evaluación del embalaje, decisión fechada y siguiente plazo de acción."],
+      ["¿Qué diferencia hay entre artículo listo y paquete listo?","El artículo listo aprobó QC; el paquete listo también encaja en ruta, urgencia, embalaje, tamaño y riesgo."],
+      ["¿Cómo se registran los mensajes del agente?","Guarda fecha, pregunta exacta, respuesta, foto o medida de apoyo y la decisión resultante."],
+      ["¿Qué filas necesitan revisión semanal?","Consultas sin respuesta, llegadas sin decisión, límites próximos, artículos listos sin plan y entregas sin resultado."],
+      ["¿Qué hace fiable una hoja pública?","Fechas de prueba, variantes precisas, notas QC medibles, incertidumbre visible, historial de cambios y resultados tras la entrega." ]
+    ]}
+  ],
+  "it": [
+    {"title":"Domande pratiche sul controllo qualità in magazzino","items":[
+      ["Che cosa possono verificare con affidabilità le foto del magazzino Superbuy?","Identità visibile, colore, quantità, danni evidenti, misure approssimative e allineamento superficiale al momento dello scatto."],
+      ["Che cosa non possono dimostrare le foto del magazzino?","Non dimostrano autenticità, composizione, odore, struttura interna, sicurezza elettrica, impermeabilità o durata nel tempo."],
+      ["Quando vale la pena richiedere una foto aggiuntiva?","Quando un’angolazione o una misura specifica può cambiare la decisione di accettare, sostituire o restituire."],
+      ["Come controllare le misure di un capo?","Confronta la stessa misura in piano con un tuo capo che veste bene; non basarti solo sulle etichette S, M o L."],
+      ["Perché le scarpe vanno fotografate insieme?","La vista della coppia mostra differenze di punta, pannelli, tallone, occhielli e lunghezza della suola."],
+      ["I 90 giorni di deposito gratuito definiscono il termine di reso?","No. Deposito e reso del venditore hanno scadenze separate, e la seconda può terminare molto prima."],
+      ["Come gestire una variante 1688 poco chiara?","Conserva il testo originale, traduci quantità e unità, registra la configurazione e sospendi se l’offerta resta ambigua."],
+      ["Ogni piccolo difetto estetico richiede un reso?","No. Confrontalo con la soglia di accettazione, la sostituibilità, il costo interno e il costo totale previsto."],
+      ["Perché l’imballaggio rientra nel QC?","Scatole rigide, batterie, liquidi e parti fragili possono cambiare rotta, peso volumetrico e protezione necessaria."],
+      ["Qual è il registro QC finale più utile?","Annota variante, prove esaminate, rischio aperto, decisione, motivo e prossima scadenza in una voce datata." ]
+    ]},
+    {"title":"Domande sul costo totale e sulla pianificazione del pacco","items":[
+      ["L’anticipo per la spedizione internazionale è il prezzo finale?","No. Il vettore conferma peso e dimensioni, determinando l’addebito finale e l’eventuale rettifica del conto."],
+      ["Il divisore volumetrico 6.000 vale per ogni rotta?","No. È un riferimento; una rotta attiva può usare divisore, arrotondamento o incremento minimo diversi."],
+      ["Bisogna sempre rimuovere le scatole delle scarpe?","Solo se il risparmio di volume compensa la perdita di struttura, protezione, presentazione o valore da collezione."],
+      ["Un unico pacco consolidato costa sempre meno di due?","No. Un pacco misto può perdere una rotta conveniente, superare limiti o concentrare troppo valore."],
+      ["Che cos’è il primo peso?","È il blocco iniziale minimo fatturabile; più pacchi piccolissimi possono ripetere questo costo base."],
+      ["Come ripartire la spedizione comune tra i prodotti?","Usa il contributo maggiore fra peso reale e spazio dimensionale, assegnando i servizi diretti all’articolo responsabile."],
+      ["Quando verificare l’ammissibilità delle merci limitate?","Prima del pagamento: batterie, liquidi, polveri, alimenti, medicinali e marchi possono restringere le rotte."],
+      ["Quando un servizio d’imballaggio è economicamente sensato?","Quando riduce un rischio definito—urto, umidità, deformazione o perdita scoperta—a un costo proporzionato."],
+      ["Perché includere dogana e ritardi nel modello?","Perché il costo totale comprende anche imposte probabili, tempo perso, danni e correzioni."],
+      ["Quale cifra chiude il registro del pacco?","L’addebito finale confermato dopo le rettifiche, più dogana, servizi diretti, danni e tempi di consegna." ]
+    ]},
+    {"title":"Domande sulla gestione del foglio e sulle prove","items":[
+      ["Qual è il record minimo utile per una riga prodotto?","ID interno, titolo acquisito, marketplace, venditore, variante, quantità, prezzo, spedizione nazionale, URL, data e stato."],
+      ["Perché il solo link del prodotto non basta?","Le inserzioni possono cambiare opzioni, immagini, prezzi o destinazione; il link non conserva lo stato decisionale."],
+      ["Che cosa contiene l’impronta di una variante?","Modello, colore, taglia, materiale, versione, quantità, testo originale dell’opzione e riferimento immagine."],
+      ["Come gestire le inserzioni obsolete?","Segnale come modificate o scadute, conserva lo storico utile e imponi una nuova verifica prima di raccomandarle."],
+      ["Venditore e prodotto devono avere lo stesso punteggio?","No. Valuta accuratezza, comunicazione e soluzione separatamente da vestibilità, costruzione, stato e valore totale."],
+      ["Che cosa avviene all’arrivo in magazzino?","Partono controllo identità, QC visibile, misure, valutazione imballo, decisione datata e prossima scadenza."],
+      ["Qual è la differenza tra articolo pronto e pacco pronto?","Articolo pronto significa QC superato; pacco pronto include anche rotta, urgenza, imballo, dimensioni e rischio."],
+      ["Come registrare i messaggi dell’agente?","Salva data, domanda esatta, risposta, foto o misura di supporto e decisione conseguente."],
+      ["Quali righe richiedono controllo settimanale?","Richieste senza risposta, arrivi senza decisione, limiti vicini, articoli pronti senza piano e consegne senza esito."],
+      ["Che cosa rende affidabile un foglio pubblico?","Date delle prove, varianti precise, note QC misurabili, incertezza visibile, cronologia modifiche ed esiti dopo la consegna." ]
+    ]}
+  ],
+  "pt": [
+    {"title":"Perguntas práticas sobre controle de qualidade no armazém","items":[
+      ["O que as fotos do armazém da Superbuy podem confirmar com segurança?","Identidade visível, cor, quantidade, danos óbvios, medidas aproximadas e alinhamento superficial no momento das fotos."],
+      ["O que as fotos do armazém não conseguem provar?","Elas não provam autenticidade, composição, odor, construção interna, segurança elétrica, impermeabilidade ou durabilidade futura."],
+      ["Quando vale pedir uma foto adicional?","Quando um ângulo ou medida específica pode alterar a decisão de aceitar, trocar ou devolver."],
+      ["Como conferir medidas de roupas?","Compare a mesma medida plana com uma peça sua que vista bem; não dependa apenas de S, M ou L."],
+      ["Por que os dois calçados devem aparecer juntos?","A imagem do par revela diferenças na biqueira, painéis, calcanhar, ilhoses e comprimento da sola."],
+      ["Os 90 dias de armazenamento gratuito definem o prazo de devolução?","Não. Armazenamento e devolução do vendedor têm prazos separados, e o segundo pode terminar bem antes."],
+      ["Como lidar com uma variante 1688 ambígua?","Guarde o texto original, traduza quantidade e unidade, registre a configuração e pause se o anúncio continuar ambíguo."],
+      ["Todo pequeno defeito cosmético exige devolução?","Não. Compare com seu limite de aceitação, possibilidade de troca, custo doméstico e custo total esperado."],
+      ["Por que a embalagem faz parte do QC?","Caixas rígidas, baterias, líquidos e peças frágeis podem mudar rota, peso volumétrico e proteção necessária."],
+      ["Qual é o registro final de QC mais útil?","Anote variante, evidências vistas, risco aberto, decisão, motivo e próximo prazo em uma entrada datada." ]
+    ]},
+    {"title":"Perguntas sobre custo total e planejamento do pacote","items":[
+      ["O depósito do frete internacional é o preço final?","Não. A transportadora confirma peso e dimensões, definindo a cobrança final e eventual ajuste na conta."],
+      ["O divisor volumétrico 6.000 vale para todas as rotas?","Não. É uma referência; a rota ativa pode usar outro divisor, arredondamento ou incremento mínimo."],
+      ["As caixas de sapato devem ser sempre removidas?","Somente quando a economia de volume compensar a perda de estrutura, proteção, apresentação ou valor de coleção."],
+      ["Um pacote consolidado é sempre mais barato que dois?","Não. Um pacote misto pode perder uma rota favorável, exceder limites ou concentrar valor demais."],
+      ["O que é o primeiro peso?","É o bloco inicial mínimo cobrado; vários pacotes muito pequenos podem repetir esse custo básico."],
+      ["Como ratear o frete comum entre produtos?","Use a maior contribuição entre peso real e espaço dimensional e atribua serviços diretos ao item causador."],
+      ["Quando verificar a aceitação de mercadorias restritas?","Antes do pagamento, pois baterias, líquidos, pós, alimentos, remédios e marcas podem reduzir as rotas."],
+      ["Quando um serviço de embalagem faz sentido financeiro?","Quando reduz um risco definido—impacto, umidade, deformação ou perda sem cobertura—a um custo proporcional."],
+      ["Por que incluir alfândega e atrasos no modelo?","Porque o custo total inclui impostos prováveis, tempo perdido, danos e correções, não só o frete exibido."],
+      ["Qual número encerra o registro do pacote?","A cobrança final confirmada após ajustes, somada a alfândega, serviços diretos, danos e prazo de entrega." ]
+    ]},
+    {"title":"Perguntas sobre operação da planilha e evidências","items":[
+      ["Qual é o registro mínimo útil de uma linha de produto?","ID interno, título capturado, marketplace, vendedor, variante, quantidade, preço, frete doméstico, URL, data da evidência e status."],
+      ["Por que salvar apenas o link não basta?","Anúncios mudam opções, imagens, preços ou destino; o link não preserva o estado que sustentou a decisão."],
+      ["O que compõe a impressão digital da variante?","Modelo, cor, tamanho, material, versão, quantidade, texto original da opção e uma referência visual identificável."],
+      ["Como tratar anúncios antigos?","Marque como alterados ou desatualizados, preserve o histórico útil e exija nova revisão antes de recomendar."],
+      ["Vendedor e produto devem compartilhar a mesma nota?","Não. Avalie precisão, comunicação e solução separadamente de ajuste, construção, condição e valor total."],
+      ["O que acontece quando um item chega ao armazém?","Inicie identidade, QC visível, medidas, avaliação da embalagem, decisão datada e próximo prazo de ação."],
+      ["Qual a diferença entre item pronto e pacote pronto?","Item pronto passou no QC; pacote pronto também se encaixa em rota, urgência, embalagem, tamanho e risco."],
+      ["Como registrar mensagens do agente?","Guarde data, pergunta exata, resposta, foto ou medida de apoio e a decisão resultante."],
+      ["Quais linhas precisam de revisão semanal?","Consultas sem resposta, chegadas sem decisão, limites próximos, itens prontos sem plano e entregas sem resultado."],
+      ["O que torna uma planilha pública confiável?","Datas de evidência, variantes precisas, notas QC mensuráveis, incerteza visível, histórico e resultados pós-entrega." ]
+    ]}
+  ],
+  "zh": [
+    {"title":"仓库质检中买家真正需要弄清的十个问题","items":[
+      ["Superbuy 仓库照片能够可靠确认什么？","可以确认拍摄当时可见的商品身份、颜色、数量、明显破损、近似尺寸以及表面位置是否对齐。"],
+      ["仓库照片不能证明什么？","不能证明真伪、纤维成分、气味、内部结构、电气安全、防水能力或长期耐用性。"],
+      ["什么时候值得申请补拍照片？","当某个具体角度或尺寸能够直接改变接受、换货或退货决定时才值得补拍。"],
+      ["服装尺寸应该怎样核对？","用仓库平铺测量值对比自己合身衣物的同一位置，不要只依赖 S、M、L 标签。"],
+      ["为什么鞋子必须成对拍摄？","同框照片更容易发现鞋头、鞋面板块、后跟、鞋孔和鞋底长度之间的不一致。"],
+      ["90 天免费仓储是否等于退货期限？","不是。仓储期限和卖家退货期限是两套时间，后者通常可能更早结束。"],
+      ["1688 规格描述不清时怎么办？","保存原始选项文字，翻译数量和单位，记录准确配置；仍有歧义就暂停下单。"],
+      ["出现轻微外观问题就必须退货吗？","不一定。应结合预设接受标准、换货可行性、境内费用和预计到手成本判断。"],
+      ["为什么包装也属于质检决策？","硬盒、电池、液体和易碎部件会改变可选线路、体积重量以及所需保护方式。"],
+      ["最有用的最终质检记录是什么？","在一条带日期的记录中写明规格、已查证据、未解风险、决定、理由和下一期限。" ]
+    ]},
+    {"title":"到手成本与包裹规划的十个关键问题","items":[
+      ["国际运费预付款是最终费用吗？","不是。承运商确认的实际重量和尺寸决定最终费用，并产生相应的账户差额调整。"],
+      ["体积重除数 6000 适用于所有线路吗？","不是。它只是常见规划参考，实际线路可能使用其他除数、进位方式或最低计费单位。"],
+      ["鞋盒是不是都应该去掉？","只有体积节省足以补偿结构、保护、展示或收藏价值损失时才应该去掉。"],
+      ["一个合箱包裹一定比两个包裹便宜吗？","不一定。混装可能失去优惠线路、超过限制，或让单个包裹集中太高货值。"],
+      ["什么是首重？","首重是线路最低计费的起始重量区间，多个很小包裹可能重复承担这项基础费用。"],
+      ["共同运费应该怎样分摊到商品？","按实际重量与体积占用中较高的贡献分摊，并把专项服务费用归到对应商品。"],
+      ["什么时候检查敏感或受限商品线路？","付款前。电池、液体、粉末、食品、药品和品牌商品都可能缩小线路范围。"],
+      ["怎样判断包装服务是否值得？","它应当针对冲击、潮湿、变形或未覆盖损失等明确风险，费用也要与商品价值相称。"],
+      ["为什么关税和延误也要写进成本模型？","因为到手成本不仅是页面运费，还包括可能的税费、时间损失、破损和补救成本。"],
+      ["用哪个数字关闭包裹成本记录？","使用调整后的承运商最终确认运费，再加入关税、专项服务、损失和实际时效。" ]
+    ]},
+    {"title":"表格运营与证据管理的十个关键问题","items":[
+      ["商品行至少要保存哪些内容？","内部编号、抓取标题、平台、卖家、准确规格、数量、商品价、境内运费、网址、证据日期和状态。"],
+      ["为什么只保存商品链接不够？","商品页可能更换选项、图片、价格或跳转目标，链接无法保留当时做决定的页面状态。"],
+      ["规格指纹应该包含什么？","型号、颜色、尺码、材料、版本、数量、原始选项文字以及一张可识别图片的引用。"],
+      ["过期商品链接应该怎样处理？","标记为已变化或过期，保留有用历史，再次推荐前必须重新检查。"],
+      ["卖家质量和商品质量应该共用一个评分吗？","不应该。卖家描述、沟通和处理能力要与商品版型、做工、状态和到手价值分开评分。"],
+      ["商品进入仓库后应该触发什么流程？","立即核对身份、可见质检、尺寸和包装，记录带日期的决定以及下一行动期限。"],
+      ["商品可发和包裹可发有什么区别？","商品可发表示通过质检；包裹可发还要满足线路、时效、包装、尺寸和风险要求。"],
+      ["代购客服沟通应该怎样记录？","保存日期、准确问题、回复、相关照片或测量值，以及随后作出的决定。"],
+      ["每周检查应该筛选哪些行？","未回复咨询、到仓未决定、临近仓储期限、已通过但无包裹计划、已签收但无结果的记录。"],
+      ["公开表格怎样建立可信度？","展示证据日期、准确规格、可测量质检说明、明确的不确定性、变化历史和收货结果。" ]
+    ]}
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "name": "SuperBuyVIP",
+  "short_name": "SuperBuyVIP",
+  "description": "Independent Superbuy spreadsheet research, QC checklists and parcel planning.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f8f9f7",
+  "theme_color": "#e63b2e",
+  "icons": [
+    { "src": "/favicon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" }
+  ]
+}

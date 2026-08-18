@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://superbuyvip.pro/sitemap.xml
