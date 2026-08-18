@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://litbuyvip.pro/</loc><lastmod>2026-08-18</lastmod><changefreq>daily</changefreq><priority>1.0</priority></url>
-  <url><loc>https://litbuyvip.pro/guides/</loc><lastmod>2026-08-18</lastmod><changefreq>daily</changefreq><priority>0.9</priority></url>
-  <url><loc>https://litbuyvip.pro/guides/litbuy-forwarding-vs-agent-purchase.html</loc><lastmod>2026-08-18</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://litbuyvip.pro/</loc><lastmod>2026-08-18</lastmod></url>
+  <url><loc>https://litbuyvip.pro/spreadsheet/</loc><lastmod>2026-08-18</lastmod></url>
+  <url><loc>https://litbuyvip.pro/guides/</loc><lastmod>2026-08-18</lastmod></url>
+  <url><loc>https://litbuyvip.pro/guides/litbuy-forwarding-vs-agent-purchase/</loc><lastmod>2026-08-18</lastmod></url>
+  <url><loc>https://litbuyvip.pro/guides/litbuy-qc-workflow/</loc><lastmod>2026-08-18</lastmod></url>
+  <url><loc>https://litbuyvip.pro/guides/litbuy-shipping-cost-planning/</loc><lastmod>2026-08-18</lastmod></url>
+  <url><loc>https://litbuyvip.pro/guides/litbuy-beginner-buying-process/</loc><lastmod>2026-08-18</lastmod></url>
+  <url><loc>https://litbuyvip.pro/es/</loc><lastmod>2026-08-18</lastmod></url>
+  <url><loc>https://litbuyvip.pro/de/</loc><lastmod>2026-08-18</lastmod></url>
+  <url><loc>https://litbuyvip.pro/fr/</loc><lastmod>2026-08-18</lastmod></url>
+  <url><loc>https://litbuyvip.pro/pt/</loc><lastmod>2026-08-18</lastmod></url>
+  <url><loc>https://litbuyvip.pro/it/</loc><lastmod>2026-08-18</lastmod></url>
+  <url><loc>https://litbuyvip.pro/pl/</loc><lastmod>2026-08-18</lastmod></url>
+  <url><loc>https://litbuyvip.pro/zh/</loc><lastmod>2026-08-18</lastmod></url>
 </urlset>
