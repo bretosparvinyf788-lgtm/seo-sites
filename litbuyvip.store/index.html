@@ -893,6 +893,27 @@
         position: relative;
         padding: 16px;
       }
+      .story-img.warehouse {
+        background:
+          radial-gradient(circle at 50% 51%, var(--acid) 0 7%, transparent 7.5%),
+          radial-gradient(circle at 50% 51%, transparent 0 24%, #ffffff50 24.5% 25.5%, transparent 26%),
+          repeating-conic-gradient(from -90deg at 50% 51%, #ffffff55 0 1deg, transparent 1deg 30deg),
+          linear-gradient(135deg, var(--blue), var(--ink) 70%);
+      }
+      .story-img.warehouse:after {
+        content: "90 FREE / 120 MAX";
+        position: absolute;
+        left: 50%;
+        top: 51%;
+        transform: translate(-50%, -50%);
+        width: 150px;
+        padding-top: 178px;
+        color: #fff;
+        text-align: center;
+        font-size: 9px;
+        font-weight: 900;
+        letter-spacing: 0.12em;
+      }
       .story-img span {
         background: var(--acid);
         color: var(--ink);
@@ -949,6 +970,12 @@
       .mini.qc {
         background-image: linear-gradient(90deg, #06162a22, #06162aa8),
           url("../public/images/qc-guide.png");
+      }
+      .mini.order {
+        background:
+          linear-gradient(145deg, transparent 0 42%, #dfff43 42% 48%, transparent 48%),
+          repeating-linear-gradient(0deg, #ffffff18 0 1px, transparent 1px 23px),
+          linear-gradient(135deg, #3158ff, #06162a 72%);
       }
       .mini.ship {
         background-image: linear-gradient(90deg, #06162a22, #06162aa8),
@@ -3762,40 +3789,39 @@
           <a href="guides/index.html">VIEW ALL BUYER GUIDES ↗</a>
         </div>
         <div class="stories">
-          <a class="lead" href="guides/two-stage-cart.html"
-            ><div class="story-img"><span>START HERE</span><b>01</b></div>
+          <a class="lead" href="guides/warehouse-timing-control.html"
+            ><div class="story-img warehouse"><span>WAREHOUSE CLOCK</span><b>04</b></div>
             <div class="story-copy">
-              <small>AUG 11, 2026 · 9 MIN READ</small>
+              <small>AUG 18, 2026 · 13 MIN READ</small>
               <h3>
-                A Practical LitBuy Spreadsheet Workflow: From Link to Warehouse
+                How to Time a LitBuy Haul Without Rushing or Over-Storing
               </h3>
               <p>
-                A decision-first method for reading listings, choosing variants
-                and avoiding preventable order notes.
+                Control staggered arrivals, QC decisions, delayed sellers and
+                parcel cutoffs with one warehouse clock.
               </p>
               <strong>READ THE FIELD NOTE ↗</strong>
             </div></a
           >
           <div class="stack">
-            <a href="guides/qc-evidence-checklist.html"
+            <a href="guides/two-stage-cart.html"
+              ><div class="mini order"></div>
+              <div>
+                <small>ORDER CONTROL · 12 MIN</small>
+                <h3>The Two-Stage Cart</h3>
+                <p>
+                  Turn a marketplace link into a verified warehouse decision.
+                </p>
+                <strong>READ GUIDE ↗</strong>
+              </div></a
+            ><a href="guides/qc-evidence-checklist.html"
               ><div class="mini qc"></div>
               <div>
-                <small>QC FIELD GUIDE · 11 MIN</small>
+                <small>QC FIELD GUIDE · 13 MIN</small>
                 <h3>The QC Checklist That Catches Expensive Mistakes</h3>
                 <p>
                   Inspect visible condition, variant accuracy and the details
                   that become expensive after export.
-                </p>
-                <strong>READ GUIDE ↗</strong>
-              </div></a
-            ><a href="guides/parcel-architecture.html"
-              ><div class="mini ship"></div>
-              <div>
-                <small>SHIPPING LOGIC · 10 MIN</small>
-                <h3>Plan a LitBuy Parcel Before the Quote Surprises You</h3>
-                <p>
-                  A framework for weight, volume, route restrictions and landed
-                  cost.
                 </p>
                 <strong>READ GUIDE ↗</strong>
               </div></a
