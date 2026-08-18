@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Superbuy Warehouse Planning: QC, Storage and Shipping Spreadsheet | SuperbuyVIP</title>
+<meta name="description" content="Build a deadline-first Superbuy spreadsheet for warehouse QC, seller return windows, 90-day storage planning, parcel scenarios and shipping decisions.">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<link rel="canonical" href="https://superbuyvip.net/guides/superbuy-warehouse-planning/">
+<link rel="icon" href="../../favicon.ico" sizes="any">
+<link rel="icon" type="image/png" href="../../favicon.png">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Superbuy Warehouse Planning: QC, Storage and Shipping Spreadsheet">
+<meta property="og:description" content="Build a deadline-first Superbuy spreadsheet for warehouse QC, seller return windows, 90-day storage planning, parcel scenarios and shipping decisions.">
+<meta property="og:url" content="https://superbuyvip.net/guides/superbuy-warehouse-planning/">
+<meta property="article:published_time" content="2026-08-18">
+<meta name="twitter:card" content="summary">
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"BlogPosting","@id":"https://superbuyvip.net/guides/superbuy-warehouse-planning/#article","headline":"Superbuy warehouse planning: build a deadline-first spreadsheet for QC, storage and shipping","description":"Build a deadline-first Superbuy spreadsheet for warehouse QC, seller return windows, 90-day storage planning, parcel scenarios and shipping decisions.","datePublished":"2026-08-18","dateModified":"2026-08-18","inLanguage":"en","wordCount":1668,"mainEntityOfPage":"https://superbuyvip.net/guides/superbuy-warehouse-planning/","author":{"@type":"Organization","name":"SuperbuyVIP Editorial Desk"},"publisher":{"@type":"Organization","name":"SuperbuyVIP","url":"https://superbuyvip.net/"}},{"@type":"FAQPage","@id":"https://superbuyvip.net/guides/superbuy-warehouse-planning/#faq","mainEntity":[{"@type":"Question","name":"When should I start the warehouse deadline tracker?","acceptedAnswer":{"@type":"Answer","text":"Create the row before paying for the item, then fill the warehouse-arrival date when the item is stocked. Starting early preserves the exact option, price and requirement you approved instead of relying on memory when QC photos appear."}},{"@type":"Question","name":"Does 90 days of free storage mean I can wait 90 days to inspect?","acceptedAnswer":{"@type":"Answer","text":"No. Storage duration and seller after-sales time are separate. Review photos as soon as they appear, identify missing evidence and make a keep, clarify or return decision while a seller response may still be practical."}},{"@type":"Question","name":"What is the best single QC status system?","acceptedAnswer":{"@type":"Answer","text":"Use three states: approve, clarify and return. Add one sentence of evidence beside the state. This keeps uncertain items out of parcel submission and prevents a later reviewer from guessing why an item was accepted."}},{"@type":"Question","name":"Are three standard photos enough?","acceptedAnswer":{"@type":"Answer","text":"They may be enough for visible identity and condition, but not for every purchasing risk. Request an additional image or measurement only when a specific answer would change your decision, and describe the angle or endpoints precisely."}},{"@type":"Question","name":"How do I estimate shipping before all items arrive?","acceptedAnswer":{"@type":"Answer","text":"Use a range. Combine estimated weights, add a packing allowance and create a high case for bulky packaging or volumetric charging. Replace estimates with warehouse measurements as each item arrives, while retaining the original forecast for comparison."}},{"@type":"Question","name":"Should I always consolidate everything into one parcel?","acceptedAnswer":{"@type":"Answer","text":"No. Consolidation can reduce duplicated base charges, but a bulky, fragile or sensitive item may limit routes or increase chargeable volume. Compare one-parcel and two-parcel scenarios before deciding which structure is genuinely cheaper and safer."}},{"@type":"Question","name":"When should retail packaging be removed?","acceptedAnswer":{"@type":"Answer","text":"Remove it when the box adds avoidable volume and does not provide necessary protection, resale value or product identification. For fragile goods, the original structure may be useful. Record exceptions instead of applying one rule to the whole parcel."}},{"@type":"Question","name":"How should I handle an item approaching day 90?","acceptedAnswer":{"@type":"Answer","text":"Do not wait for day 90. Trigger an internal warning earlier, confirm its QC status and either assign it to a parcel, investigate storage extension or make another permitted disposition decision. The goal is to preserve time for action."}},{"@type":"Question","name":"What happens after the free-storage period?","acceptedAnswer":{"@type":"Answer","text":"Superbuy's current fee page states that storage after 90 days is charged at CN¥0.1 per item per day, with a maximum storage period of 180 days. Check the live account rules before relying on any old spreadsheet entry."}},{"@type":"Question","name":"How do 1688 orders change the inspection plan?","acceptedAnswer":{"@type":"Answer","text":"Superbuy publishes separate standards for 1688 purchases, including limitations on quantity checks, sampling and after-sales support in certain cases. Record the seller class, quantity assumptions and inspection limits before placing a bulk order."}},{"@type":"Question","name":"What evidence should I save after parcel submission?","acceptedAnswer":{"@type":"Answer","text":"Keep the final item list, packing requests, declared information, selected route, deposit estimate and screenshots of the submitted parcel. When the final charge or delivered condition differs, this record makes a focused enquiry much easier."}},{"@type":"Question","name":"What makes this spreadsheet useful after delivery?","acceptedAnswer":{"@type":"Answer","text":"Add actual shipping cost, delivery date, condition on arrival and any claim outcome. The gap between forecast and result improves the next parcel model. A finished haul should become evidence for future buying, not disappear into order history."}}]}]}</script>
+<style>
+:root{--ink:#07111d;--paper:#f7f3ea;--white:#fffdf8;--orange:#ff6a32;--yellow:#ffd66b;--muted:#526575;--line:#bcc7ce}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;line-height:1.7}a{color:inherit}.top{position:sticky;top:0;z-index:5;background:rgba(7,17,29,.97);color:#fff;border-bottom:1px solid #344657}.nav{width:min(1160px,calc(100% - 32px));height:68px;margin:auto;display:flex;align-items:center;justify-content:space-between;gap:20px}.brand{text-decoration:none;font-size:21px;font-weight:900;letter-spacing:-.04em}.brand b{color:var(--orange)}.navlinks{display:flex;gap:18px;font-size:13px;font-weight:800}.navlinks a{text-decoration:none}.hero{border-bottom:2px solid var(--ink);background:var(--yellow);overflow:hidden}.heroInner{width:min(1160px,calc(100% - 32px));margin:auto;padding:78px 0 70px;position:relative}.heroInner:after{content:"18\A AUG";white-space:pre;position:absolute;right:0;bottom:-20px;font-size:clamp(90px,20vw,250px);line-height:.72;font-weight:950;letter-spacing:-.09em;color:rgba(7,17,29,.08)}.kicker{display:inline-block;background:var(--ink);color:#fff;padding:7px 10px;font-size:11px;font-weight:900;letter-spacing:.13em;text-transform:uppercase}.hero h1{position:relative;z-index:1;max-width:980px;margin:24px 0 18px;font-size:clamp(48px,7.5vw,94px);line-height:.9;letter-spacing:-.068em}.hero p{position:relative;z-index:1;max-width:750px;margin:0;font-size:18px;color:#263643}.layout{width:min(1160px,calc(100% - 32px));margin:0 auto;display:grid;grid-template-columns:minmax(0,760px) 260px;gap:72px;align-items:start}.articleBody{background:var(--white);margin:-22px 0 80px;padding:64px clamp(22px,6vw,70px) 80px;border:2px solid var(--ink);box-shadow:10px 10px 0 var(--orange)}.articleBody .label{display:none}.articleBody h1,.articleBody .dek{display:none}.articleBody h2{font-size:clamp(29px,4vw,42px);line-height:1.08;letter-spacing:-.04em;margin:54px 0 14px}.articleBody h2:first-of-type{margin-top:0}.articleBody h3{font-size:20px;line-height:1.25;margin:34px 0 8px}.articleBody p,.articleBody li{color:#354856}.articleBody p{margin:0 0 17px}.articleBody table{width:100%;border-collapse:collapse;margin:26px 0;font-size:13px}.articleBody th,.articleBody td{border:1px solid var(--line);padding:12px;text-align:left;vertical-align:top}.articleBody th{background:#e8eef1}.articleBody ol{padding-left:22px}.articleBody li{margin:7px 0}.articleBody .note{background:var(--yellow);color:var(--ink);padding:20px;border-left:6px solid var(--orange);margin-top:44px}.side{position:sticky;top:100px;padding-top:48px}.sideBox{border-top:6px solid var(--orange);background:var(--ink);color:#fff;padding:24px}.sideBox b{display:block;font-size:11px;letter-spacing:.13em;text-transform:uppercase;color:var(--yellow)}.sideBox p{color:#b7c4cf;font-size:13px}.sideBox dl{margin:24px 0 0}.sideBox dt{font-size:10px;color:#8295a5;text-transform:uppercase}.sideBox dd{margin:2px 0 17px;font-weight:850}.footer{background:var(--ink);color:#aab8c4;padding:28px 16px;text-align:center;font-size:12px}.footer a{color:#fff}
+@media(max-width:880px){.layout{grid-template-columns:1fr}.side{display:none}.articleBody{margin-top:0}.heroInner{padding:58px 0}.hero h1{font-size:clamp(44px,12vw,72px)}}@media(max-width:560px){.navlinks a:first-child{display:none}.hero p{font-size:15px}.articleBody{padding:44px 20px 60px;box-shadow:6px 6px 0 var(--orange)}.articleBody table{display:block;overflow-x:auto}.articleBody h2{margin-top:44px}}
+</style>
+</head>
+<body>
+<header class="top"><nav class="nav"><a class="brand" href="../../">SUPERBUY<b>VIP</b></a><div class="navlinks"><a href="../">All guides</a><a href="../../#guides">Homepage guides</a></div></nav></header>
+<section class="hero"><div class="heroInner"><span class="kicker">Warehouse Operations Guide · August 18, 2026</span><h1>Build a deadline-first Superbuy warehouse plan.</h1><p>Control QC evidence, seller deadlines, storage exposure and parcel cost before the warehouse becomes an expensive waiting room.</p></div></section>
+<main class="layout"><article class="articleBody"><span class="label">Warehouse Operations Guide · August 18, 2026</span>
+<h1 id="articleTitle">Superbuy warehouse planning: build a deadline-first spreadsheet for QC, storage and shipping</h1>
+<p class="dek">A parcel becomes expensive long before the international invoice appears. This practical method turns a Superbuy spreadsheet into a warehouse control board, so every item has an evidence gate, a real deadline and a clear exit plan.</p>
+
+<h2>Stop treating the warehouse as a waiting room</h2>
+<p>The most common planning error is to view the warehouse as a passive space where purchases can sit until the haul feels complete. In reality, several clocks start at different moments. A seller's after-sales window may already be running when the item arrives. The warehouse storage clock begins when the item is stocked. A coupon or shipping route may change before the rest of the haul is ready. If those clocks are hidden, consolidation becomes delay disguised as efficiency.</p>
+<p>Superbuy currently describes a shopping-agent flow in two financial stages: first, the buyer pays for the item and Chinese domestic delivery; later, the buyer submits warehouse items for international delivery and pays a shipping deposit. The platform also states that warehouse inspection photos are provided and that purchased items receive 90 days of free storage. Those features are useful, but they do not replace the buyer's own decision calendar.</p>
+
+<h2>Give every item one operational row</h2>
+<p>A product row should not end with a title and price. Add fields for marketplace, seller, exact variation, order date, seller dispatch date, warehouse arrival, photographed condition, measured weight, return decision, last safe action date, free-storage day 90, parcel group and unresolved restriction. The purpose is not to collect data for its own sake. Each field should either prove what was ordered, reveal what arrived or trigger a next action.</p>
+<table>
+<tr><th>Control field</th><th>What to record</th><th>Decision it supports</th></tr>
+<tr><td>Variation proof</td><td>Size, color, model, quantity and dated price</td><td>Confirms the agent is buying the intended option</td></tr>
+<tr><td>QC gate</td><td>Approve, clarify or return, plus the reason</td><td>Prevents silent acceptance of an unresolved defect</td></tr>
+<tr><td>Deadline</td><td>Seller window and internal action date</td><td>Leaves time for questions and return handling</td></tr>
+<tr><td>Parcel assignment</td><td>Planned parcel, route class and packing note</td><td>Connects warehouse choices to landed cost</td></tr>
+</table>
+<p>Use a fixed vocabulary. “Looks okay” is not a useful QC status. “Approve after chest-width confirmation” is. “Ship later” is not a parcel plan. “Parcel B, remove retail box, standard-goods route” can be acted on.</p>
+
+<h2>Run QC as an evidence gate</h2>
+<p>Superbuy's public guidance says items are inspected after reaching the warehouse and photos are made available for review. Its main service page currently advertises three free QC photos. Treat those images as an initial evidence set, not a universal certification. Standard views can confirm visible model, color, quantity presented, obvious damage and broad workmanship. They cannot prove fiber composition, internal electronics, long-term durability or authenticity.</p>
+<p>Before ordering, write one rejection condition and one measurement that matters. For a jacket, the rejection condition might be a damaged zipper and the decisive measurement might be chest width. For shoes, it may be a mismatched pair and removable insole length. When photos arrive, compare them against the prewritten test. If the standard images cannot answer it, request a precise angle or measurement promptly. A narrow request produces better evidence than “please check quality.”</p>
+
+<h2>Separate the return clock from the storage clock</h2>
+<p>Free storage is not an extended seller warranty. Superbuy's current fee explanation says purchased items receive 90 days of free storage after arrival. It also states that storage beyond the free period is charged at CN¥0.1 per item per day, that the maximum storage period is 180 days, and that an item may be treated as abandoned and disposed of if no parcel order or feedback is provided after that point. These are operational boundaries, not targets.</p>
+<p>Create three dates: the seller-facing deadline, your internal decision deadline and the warehouse day-90 date. Put the internal deadline several days before the seller-facing deadline so the agent has time to communicate and process a request. Use day 75 as a management warning for anything still unassigned to a parcel. The safest haul is not the one that uses every free day; it is the one that preserves choices.</p>
+
+<h2>Budget the parcel before it exists</h2>
+<p>The item price is only stage one. Superbuy explains that the international shipping deposit depends on estimated weight, the selected method and the destination. Its forwarding guidance also notes that the final fee is based on package size and weight verified by the logistics provider, with a difference reconciled after shipment. Your spreadsheet should therefore keep estimated item weight, warehouse weight and likely chargeable weight in separate columns.</p>
+<p>Build low, working and high parcel scenarios. The low case assumes compact packing and actual weight. The working case uses warehouse measurements and a modest packing allowance. The high case assumes a bulky box or volumetric charging. Do not distribute shipping cost equally across products. Allocate it by weight or space. This exposes the large, cheap item that consumes more delivery budget than several higher-priced compact items.</p>
+
+<h2>Write an exit brief before parcel submission</h2>
+<p>Once every item passes its evidence gate, convert the spreadsheet into a parcel brief. State which items belong together, which retail boxes may be removed, which pieces need reinforcement, whether insurance is being considered and which items may restrict route availability. Superbuy's guidance lists optional requests such as package removal, reinforcement and insurance, and advises buyers to include requirements when submitting the parcel.</p>
+<p>Then perform a final contradiction check. A request to remove all packaging may conflict with protection for fragile goods. Combining standard clothing with a sensitive item may reduce available routes. Waiting for one low-value preorder may push several completed items toward storage fees. If one item creates most of the uncertainty, model a second parcel rather than forcing consolidation.</p>
+
+<h2>A seven-step weekly warehouse review</h2>
+<ol>
+<li>Sort all warehouse rows by the nearest action deadline.</li>
+<li>Resolve every “clarify” status before reviewing future purchases.</li>
+<li>Compare recorded warehouse weight with the original estimate.</li>
+<li>Flag products that change route eligibility or parcel dimensions.</li>
+<li>Move items with complete evidence into a named parcel group.</li>
+<li>Recalculate low, working and high landed-cost scenarios.</li>
+<li>Record the next action, owner and date before closing the sheet.</li>
+</ol>
+<p>This review takes less time than reconstructing an order history after a deadline is missed. More importantly, it changes the spreadsheet from a discovery list into an operating record.</p>
+
+<h2>Frequently asked questions</h2>
+<h3>1. When should I start the warehouse deadline tracker?</h3>
+<p>Create the row before paying for the item, then fill the warehouse-arrival date when the item is stocked. Starting early preserves the exact option, price and requirement you approved instead of relying on memory when QC photos appear.</p>
+
+<h3>2. Does 90 days of free storage mean I can wait 90 days to inspect?</h3>
+<p>No. Storage duration and seller after-sales time are separate. Review photos as soon as they appear, identify missing evidence and make a keep, clarify or return decision while a seller response may still be practical.</p>
+
+<h3>3. What is the best single QC status system?</h3>
+<p>Use three states: approve, clarify and return. Add one sentence of evidence beside the state. This keeps uncertain items out of parcel submission and prevents a later reviewer from guessing why an item was accepted.</p>
+
+<h3>4. Are three standard photos enough?</h3>
+<p>They may be enough for visible identity and condition, but not for every purchasing risk. Request an additional image or measurement only when a specific answer would change your decision, and describe the angle or endpoints precisely.</p>
+
+<h3>5. How do I estimate shipping before all items arrive?</h3>
+<p>Use a range. Combine estimated weights, add a packing allowance and create a high case for bulky packaging or volumetric charging. Replace estimates with warehouse measurements as each item arrives, while retaining the original forecast for comparison.</p>
+
+<h3>6. Should I always consolidate everything into one parcel?</h3>
+<p>No. Consolidation can reduce duplicated base charges, but a bulky, fragile or sensitive item may limit routes or increase chargeable volume. Compare one-parcel and two-parcel scenarios before deciding which structure is genuinely cheaper and safer.</p>
+
+<h3>7. When should retail packaging be removed?</h3>
+<p>Remove it when the box adds avoidable volume and does not provide necessary protection, resale value or product identification. For fragile goods, the original structure may be useful. Record exceptions instead of applying one rule to the whole parcel.</p>
+
+<h3>8. How should I handle an item approaching day 90?</h3>
+<p>Do not wait for day 90. Trigger an internal warning earlier, confirm its QC status and either assign it to a parcel, investigate storage extension or make another permitted disposition decision. The goal is to preserve time for action.</p>
+
+<h3>9. What happens after the free-storage period?</h3>
+<p>Superbuy's current fee page states that storage after 90 days is charged at CN¥0.1 per item per day, with a maximum storage period of 180 days. Check the live account rules before relying on any old spreadsheet entry.</p>
+
+<h3>10. How do 1688 orders change the inspection plan?</h3>
+<p>Superbuy publishes separate standards for 1688 purchases, including limitations on quantity checks, sampling and after-sales support in certain cases. Record the seller class, quantity assumptions and inspection limits before placing a bulk order.</p>
+
+<h3>11. What evidence should I save after parcel submission?</h3>
+<p>Keep the final item list, packing requests, declared information, selected route, deposit estimate and screenshots of the submitted parcel. When the final charge or delivered condition differs, this record makes a focused enquiry much easier.</p>
+
+<h3>12. What makes this spreadsheet useful after delivery?</h3>
+<p>Add actual shipping cost, delivery date, condition on arrival and any claim outcome. The gap between forecast and result improves the next parcel model. A finished haul should become evidence for future buying, not disappear into order history.</p>
+
+<p class="note"><strong>Practical rule:</strong> every warehouse item needs an evidence decision, a deadline and a parcel destination. If any one of those is blank, the item is not ready to wait, return or ship.</p></article><aside class="side"><div class="sideBox"><b>Reading brief</b><p>An independent, fact-checked operating guide based on Superbuy's public service and fee information reviewed on August 18, 2026.</p><dl><dt>Reading time</dt><dd>12 minutes</dd><dt>Article length</dt><dd>1,668 words</dd><dt>Detailed FAQ</dt><dd>12 answers</dd><dt>External links in article</dt><dd>None</dd></dl></div></aside></main>
+<footer class="footer">Independent buyer research · Not affiliated with Superbuy · <a href="../../">Return to SuperbuyVIP</a></footer>
+</body>
+</html>
