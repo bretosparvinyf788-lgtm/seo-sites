@@ -52,3 +52,4 @@ for html in SITE.rglob('*.html'):
         print(f'updated {html}: externalized {count} inline image(s), {len(original)} -> {len(updated)} chars')
 
 print('Optimization complete; kakobuymake outbound URLs preserved exactly.')
+# Trigger the optimization workflow after workflow installation.
