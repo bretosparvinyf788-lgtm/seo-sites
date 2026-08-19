@@ -1,0 +1,35 @@
+name: Optimize LitBuyVIP Store
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/optimize-litbuyvip-store.yml'
+      - '.github/scripts/optimize_litbuyvip_store.py'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  optimize:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Externalize inline images and strengthen homepage SEO
+        run: python .github/scripts/optimize_litbuyvip_store.py
+      - name: Commit optimized site files
+        shell: bash
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add litbuyvip.store
+          if git diff --cached --quiet; then
+            echo "No LitBuyVIP optimization changes to commit."
+            exit 0
+          fi
+          git commit -m "Optimize litbuyvip.store HTML and inline assets [skip ci]"
+          git push
