@@ -9,6 +9,6 @@ This folder is ready for a static GitHub or Cloudflare Pages deployment.
 3. Commit the files to the publishing branch.
 4. For GitHub Pages, select **Deploy from a branch** and choose the repository root.
 
-No build command or framework is required. The homepage, all-guides view, three complete articles, translations, images, logo, VIP badge and favicon are embedded in `index.html`.
+No build command or framework is required. The homepage remains in `index.html`; the buyer-guide library is available at `guides/index.html`, and every guide has its own crawlable directory URL.
 
-The site uses hash-based article routes so every guide works on GitHub Pages and when `index.html` is opened locally.
+The deployment package also includes an XML sitemap, per-page canonical URLs, structured data, an editorial and data policy, and visible review metadata. Keep the complete directory structure when publishing so `/guides/`, all seven article URLs and `/editorial-policy/` continue to resolve correctly.
