@@ -1,0 +1,660 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>
+      USFans Spreadsheet Price Audit: Calculate the Real Order Cost |
+      USFansVIP.store
+    </title>
+    <meta
+      name="description"
+      content="A practical method for checking variant prices, Chinese domestic shipping, minimum quantities, currency conversion and freight exposure before paying for a USFans order."
+    />
+    <link
+      rel="canonical"
+      href="https://usfansvip.store/guides/usfans-spreadsheet-price-audit-before-payment/"
+    />
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    <meta property="og:type" content="article" />
+    <meta
+      property="og:title"
+      content="USFans Spreadsheet Price Audit: Calculate the Real Order Cost | USFansVIP.store"
+    />
+    <meta
+      property="og:description"
+      content="A practical method for checking variant prices, Chinese domestic shipping, minimum quantities, currency conversion and freight exposure before paying for a USFans order."
+    />
+    <meta
+      property="og:url"
+      content="https://usfansvip.store/guides/usfans-spreadsheet-price-audit-before-payment/"
+    />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "USFans Spreadsheet Price Audit: Calculate the Real Order Cost Before Payment",
+        "description": "A practical method for checking variant prices, Chinese domestic shipping, minimum quantities, currency conversion and freight exposure before paying for a USFans order.",
+        "datePublished": "2026-08-21",
+        "dateModified": "2026-08-21",
+        "mainEntityOfPage": "https://usfansvip.store/guides/usfans-spreadsheet-price-audit-before-payment/",
+        "publisher": { "@type": "Organization", "name": "USFansVIP.store" }
+      }
+    </script>
+    <style>
+      :root {
+        --ink: #211f36;
+        --purple: #6942e9;
+        --orange: #ff6533;
+        --yellow: #ffd960;
+        --cream: #fff8ec;
+        --muted: #615e70;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+      body {
+        margin: 0;
+        background: var(--cream);
+        color: var(--ink);
+        font-family: Inter, Arial, sans-serif;
+      }
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+      .top {
+        min-height: 76px;
+        background: #17152a;
+        color: white;
+        padding: 12px 5vw;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 20px;
+      }
+      .brand {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        background: #fff;
+        border-radius: 15px;
+        padding: 8px 12px;
+      }
+      .brand img {
+        width: 145px;
+        height: auto;
+      }
+      .vip {
+        background: var(--yellow);
+        color: var(--ink);
+        border-radius: 999px;
+        padding: 5px 7px;
+        font-size: 9px;
+        font-weight: 950;
+      }
+      .back {
+        display: inline-flex;
+        align-items: center;
+        gap: 7px;
+        font-size: 11px;
+        font-weight: 900;
+      }
+      .hero {
+        padding: 76px max(5vw, 22px);
+        background: var(--purple);
+        color: #fff;
+      }
+      .hero small {
+        color: var(--yellow);
+        font-weight: 950;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+      .hero h1 {
+        max-width: 1080px;
+        margin: 25px 0;
+        font-size: clamp(43px, 6.6vw, 92px);
+        line-height: 0.92;
+        letter-spacing: -0.055em;
+      }
+      .hero p {
+        max-width: 780px;
+        margin: 0;
+        color: #e7e2fb;
+        font-size: 15px;
+        line-height: 1.75;
+      }
+      .article-wrap {
+        max-width: 1180px;
+        margin: auto;
+        padding: 60px 22px 90px;
+        display: grid;
+        grid-template-columns: 255px minmax(0, 760px);
+        gap: 68px;
+        justify-content: center;
+      }
+      .toc {
+        position: sticky;
+        top: 20px;
+        align-self: start;
+        padding: 20px;
+        border: 2px solid var(--ink);
+        border-radius: 18px;
+        background: #fff;
+        box-shadow: 0 5px 0 var(--ink);
+      }
+      .toc > small {
+        color: var(--orange);
+        font-weight: 950;
+      }
+      .toc a {
+        display: grid;
+        grid-template-columns: 28px 1fr;
+        gap: 8px;
+        padding: 10px 0;
+        border-top: 1px solid #e5ddd2;
+        font-size: 10px;
+        line-height: 1.35;
+        font-weight: 800;
+      }
+      .toc a:first-of-type {
+        margin-top: 12px;
+      }
+      .toc b {
+        color: var(--purple);
+      }
+      .copy section {
+        padding-bottom: 42px;
+        margin-bottom: 42px;
+        border-bottom: 1px solid #d8d0c5;
+      }
+      .copy .num {
+        font-size: 11px;
+        font-weight: 950;
+        color: var(--orange);
+      }
+      .copy h2 {
+        font-size: clamp(29px, 3.3vw, 45px);
+        line-height: 1.04;
+        letter-spacing: -0.035em;
+        margin: 9px 0 24px;
+      }
+      .copy h3 {
+        font-size: 20px;
+        line-height: 1.25;
+        margin: 28px 0 9px;
+      }
+      .copy p {
+        font-size: 16px;
+        line-height: 1.88;
+        color: #454355;
+        margin: 0 0 20px;
+      }
+      .copy ul {
+        list-style: none;
+        padding: 0;
+        margin: 22px 0 0;
+        display: grid;
+        gap: 10px;
+      }
+      .copy li {
+        position: relative;
+        padding: 13px 15px 13px 41px;
+        border: 1px solid #e0d8cc;
+        border-radius: 13px;
+        background: white;
+        color: #4a485b;
+        line-height: 1.58;
+      }
+      .copy li:before {
+        content: "✓";
+        position: absolute;
+        left: 15px;
+        top: 12px;
+        color: var(--purple);
+        font-weight: 950;
+      }
+      .formula {
+        padding: 24px;
+        border: 2px solid var(--ink);
+        border-radius: 20px;
+        background: var(--yellow);
+        box-shadow: 0 6px 0 var(--ink);
+        font-size: 14px;
+        line-height: 1.7;
+      }
+      .footer {
+        padding: 30px 5vw;
+        background: #17152a;
+        color: #aaa7ba;
+        display: flex;
+        justify-content: space-between;
+        gap: 24px;
+        font-size: 10px;
+      }
+      .footer a {
+        color: white;
+        font-weight: 900;
+      }
+      @media (max-width: 800px) {
+        .top {
+          min-height: 66px;
+          padding: 9px 14px;
+        }
+        .brand img {
+          width: 110px;
+        }
+        .back {
+          font-size: 9px;
+        }
+        .hero {
+          padding: 55px 16px;
+        }
+        .hero h1 {
+          font-size: clamp(39px, 12vw, 61px);
+        }
+        .hero p {
+          font-size: 13px;
+        }
+        .article-wrap {
+          display: block;
+          padding: 38px 16px 65px;
+        }
+        .toc {
+          display: none;
+        }
+        .copy section {
+          padding-bottom: 32px;
+          margin-bottom: 34px;
+        }
+        .copy h2 {
+          font-size: 32px;
+        }
+        .copy p {
+          font-size: 15px;
+          line-height: 1.8;
+        }
+        .footer {
+          flex-direction: column;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="top">
+      <a class="brand" href="/"
+        ><img src="/usfans-logo.png" alt="USFans" /><span class="vip"
+          >VIP</span
+        ></a
+      ><a class="back" href="/guides/">← All buyer guides</a>
+    </header>
+    <main>
+      <section class="hero">
+        <small>Price planning · August 21, 2026 · 14 min read</small>
+        <h1>USFans Spreadsheet Price Audit: Calculate the Real Order Cost</h1>
+        <p>
+          A field method for separating the attractive number on a product card
+          from the amount a buyer may actually commit across selection, domestic
+          delivery, payment and international shipping.
+        </p>
+      </section>
+      <div class="article-wrap">
+        <aside class="toc">
+          <small>IN THIS GUIDE</small
+          ><a href="#section-1"
+            ><b>01</b
+            ><span>Do not mistake discovery price for payable price</span></a
+          ><a href="#section-2"
+            ><b>02</b><span>Audit the exact product variant</span></a
+          ><a href="#section-3"
+            ><b>03</b><span>Build the China-side subtotal</span></a
+          ><a href="#section-4"
+            ><b>04</b><span>Handle currency and payment honestly</span></a
+          ><a href="#section-5"
+            ><b>05</b><span>Keep international freight separate</span></a
+          ><a href="#section-6"
+            ><b>06</b><span>Price uncertainty and reversibility</span></a
+          ><a href="#section-7"
+            ><b>07</b><span>Use a repeatable price-audit sheet</span></a
+          ><a href="#section-8"
+            ><b>08</b><span>Frequently asked questions</span></a
+          >
+        </aside>
+        <article class="copy">
+          <section id="section-1">
+            <span class="num">01</span>
+            <h2>Do not mistake discovery price for payable price</h2>
+            <p>
+              A USFans spreadsheet is useful because it turns a huge Chinese
+              marketplace into a manageable shortlist. The number displayed
+              beside a product is still a discovery price, not a guaranteed
+              total. It may reflect one option inside a multi-variant listing,
+              an earlier seller price, a quantity condition or a currency
+              conversion taken at a particular moment. The buyer's first job is
+              therefore not to celebrate the low number. It is to reconstruct
+              what that number actually represents.
+            </p>
+            <p>
+              Current USFans product pages commonly show a price in Chinese yuan
+              with an approximate amount in another currency. They can also
+              display the seller source, option menu, inventory, minimum
+              purchase quantity, estimated domestic arrival time, item weight,
+              dimensions and Chinese local delivery charge. These fields answer
+              different cost questions. None should be silently folded into a
+              single headline figure.
+            </p>
+            <p>
+              Treat every spreadsheet card as a lead that must survive a
+              live-page audit. Open the product, select the exact color, size
+              and version, set the required quantity, and then record the
+              displayed values. If the option cannot be selected or the live
+              title no longer describes the card, the original comparison is no
+              longer reliable.
+            </p>
+          </section>
+          <section id="section-2">
+            <span class="num">02</span>
+            <h2>Audit the exact product variant</h2>
+            <p>
+              Variant architecture is where many price errors begin. One listing
+              can contain a basic accessory, a complete product, customized
+              sizes and premium versions under the same main image. The smallest
+              price may belong to the least substantial option. A shopper who
+              copies that number into a budget without selecting the intended
+              version creates a false saving before the order even exists.
+            </p>
+            <p>
+              Write the selection as a specification, not a nickname: color,
+              model, size, version code, quantity and any included accessory.
+              Current USFans listings show real examples of size menus ranging
+              from letter sizes to EU and UK shoe conversions, while some
+              customized shoe sizes visibly carry no-refund or no-exchange
+              terms. Those conditions have financial value because they change
+              whether an incorrect assumption can be reversed.
+            </p>
+            <p>
+              Check the minimum purchase quantity and visible inventory after
+              selecting the variant. A factory listing may offer a low unit
+              price but require more than one unit. Inventory figures can also
+              be stale or option-specific, so the shopping agent may still need
+              to confirm availability with the seller. The correct budget uses
+              the required quantity, not the single-unit price that first
+              attracted attention.
+            </p>
+            <ul>
+              <li>Capture the selected option and its final displayed price</li>
+              <li>Record the minimum quantity for that exact version</li>
+              <li>Read customization and return limitations before payment</li>
+              <li>
+                Keep a screenshot of the option menu and seller description
+              </li>
+            </ul>
+          </section>
+          <section id="section-3">
+            <span class="num">03</span>
+            <h2>Build the China-side subtotal</h2>
+            <p>
+              The China-side subtotal is the money needed to move the selected
+              goods from the seller to the USFans warehouse. Start with item
+              price multiplied by quantity. Add the Chinese domestic delivery
+              charge shown for the listing. Some product pages display free
+              domestic shipping, while others display a separate charge. Do not
+              assume that several orders from the same marketplace share one
+              domestic fee; different sellers normally dispatch separate
+              parcels.
+            </p>
+            <p>
+              Use one line per seller order. This matters because two visually
+              similar products may produce very different warehouse-entry costs.
+              A slightly cheaper item can lose its advantage after domestic
+              freight, minimum quantity or an unwanted package is included.
+              Conversely, a product with a higher unit price may be cheaper to
+              acquire if it has free local delivery and no quantity condition.
+            </p>
+            <p>
+              USFans' beginner workflow says buyers pay for the goods and
+              Chinese local delivery before the shopping agent contacts the
+              seller. Current product pages state that purchasing takes place
+              during the platform's displayed working hours. That does not
+              freeze the seller's stock or price. Build a small contingency for
+              an agent message requesting an availability decision or price
+              adjustment; do not treat the first checkout screen as proof that
+              the seller has accepted the order.
+            </p>
+            <div class="formula">
+              <strong>China-side subtotal:</strong> selected unit price ×
+              required quantity + Chinese domestic delivery + any clearly
+              disclosed order-level charge. Keep this subtotal separate from
+              international freight, destination tax and optional parcel
+              services.
+            </div>
+          </section>
+          <section id="section-4">
+            <span class="num">04</span>
+            <h2>Handle currency and payment honestly</h2>
+            <p>
+              A converted dollar or euro figure is convenient, but it is still
+              an estimate. Exchange rates move, payment processors can use their
+              own conversion, and the final charged currency may depend on the
+              method and account settings. The USFans beginner guide currently
+              lists multiple currencies and payment methods including PayPal,
+              credit cards and Google Pay. Availability can vary, so the live
+              checkout is the controlling source.
+            </p>
+            <p>
+              Budget in two columns. Keep the original yuan amount as the
+              transaction reference and the buyer's home-currency estimate as a
+              planning figure. At payment, record the actual amount charged, the
+              charged currency and any visible conversion difference. This
+              prevents later confusion when the marketplace price appears
+              unchanged but the card statement differs from an earlier
+              screenshot.
+            </p>
+            <p>
+              Do not compare one seller in yuan and another seller in an
+              approximate foreign-currency display without normalizing them at
+              the same moment. For a multi-item haul, choose one planning rate
+              and add a modest exchange buffer. The objective is not to predict
+              the exact cent; it is to stop a favorable temporary conversion
+              from being mistaken for a permanent product discount.
+            </p>
+          </section>
+          <section id="section-5">
+            <span class="num">05</span>
+            <h2>
+              Keep international freight separate until the parcel is defined
+            </h2>
+            <p>
+              The amount paid for goods is not the landed cost. After warehouse
+              arrival, international freight depends on destination, route,
+              packed weight, dimensions, restrictions and packaging choices.
+              Current USFans product pages may show estimated item weight and
+              volume plus an international shipping estimate control. Those
+              values are useful for a range, but they are not the final packed
+              parcel.
+            </p>
+            <p>
+              USFans' estimation information explains that carriers may compare
+              actual weight with volumetric weight and charge the higher result.
+              Its current general example uses length multiplied by width
+              multiplied by height in centimetres, divided by 6000. The live
+              route remains decisive because billing rules and accepted products
+              can differ. A light pair of shoes in a rigid box can therefore
+              have a freight profile that is larger than its scale weight
+              suggests.
+            </p>
+            <p>
+              For price auditing, create a low and high freight range rather
+              than assigning one precise number to each item. The low case
+              assumes compatible consolidation and efficient packaging. The high
+              case allows for retained boxes, dimensional billing, route
+              restrictions or a split parcel. Only after the warehouse records
+              and parcel configuration exist should the estimate be replaced by
+              the route shown in the account.
+            </p>
+          </section>
+          <section id="section-6">
+            <span class="num">06</span>
+            <h2>Price uncertainty and reversibility</h2>
+            <p>
+              Cost control is not only about paying less; it is about keeping
+              mistakes cheap to reverse. USFans product pages currently
+              advertise three to seven free high-definition inspection photos
+              after warehouse arrival. The same public after-sales notice says
+              buyers may apply for a return within five days when eligible, with
+              the agent negotiating with the seller. A return is not
+              automatically free, and seller-specific exclusions can remove it.
+            </p>
+            <p>
+              Review warehouse evidence immediately. If the selected option,
+              quantity or visible specification is wrong, act before the normal
+              return opportunity disappears. Waiting until parcel submission can
+              convert a domestic problem into an international one. The cheapest
+              point to correct a bad price decision is before payment; the
+              second-cheapest is while the item is still in China and eligible
+              for a seller remedy.
+            </p>
+          </section>
+          <section id="section-7">
+            <span class="num">07</span>
+            <h2>Use a repeatable price-audit sheet</h2>
+            <p>
+              Create one row for every product and keep the fields deliberately
+              separate: live URL record, seller source, selected variant, unit
+              price in yuan, quantity, domestic shipping, China-side subtotal,
+              payment conversion, estimated warehouse time, estimated item
+              weight, estimated dimensions, return limitation and international
+              freight range. Add a final field called “maximum acceptable
+              total.”
+            </p>
+            <p>
+              The maximum is the number that protects the decision. If the live
+              option, payment amount or freight range pushes the order beyond
+              it, stop rather than searching for a new justification. This
+              prevents a common pattern in reverse purchasing: a buyer becomes
+              attached to the product and gradually accepts a total that would
+              have been rejected at the beginning.
+            </p>
+            <p>
+              After shipment, replace every estimate with the actual result.
+              Over several parcels, the sheet becomes a private forecasting
+              model. You will learn which product types regularly exceed
+              estimated dimensions, which sellers charge meaningful local
+              freight, and which packaging decisions change the final bill. That
+              evidence is more useful than another person's haul total because
+              it reflects your destination, preferred routes and buying habits.
+            </p>
+            <ul>
+              <li>
+                Never overwrite estimates; keep estimated and actual columns
+              </li>
+              <li>
+                Compare products by complete acquisition cost, not unit price
+              </li>
+              <li>Set the walk-away total before emotional commitment</li>
+              <li>Use completed parcels to improve the next forecast</li>
+            </ul>
+          </section>
+          <section id="section-8">
+            <span class="num">08</span>
+            <h2>Frequently asked questions</h2>
+            <h3>Is the price on a USFans spreadsheet the final price?</h3>
+            <p>
+              No. It is a discovery reference. The live selected variant,
+              quantity, seller availability and domestic delivery determine the
+              China-side amount at checkout.
+            </p>
+            <h3>Why does the price change when I select a color or size?</h3>
+            <p>
+              Marketplace sellers often group several versions under one
+              listing. Different materials, sets, accessories or custom sizes
+              can carry different prices.
+            </p>
+            <h3>
+              Does the displayed foreign-currency amount guarantee my card
+              charge?
+            </h3>
+            <p>
+              No. It is normally an approximate conversion. The live checkout,
+              charged currency, payment method and processor conversion
+              determine the final amount.
+            </p>
+            <h3>
+              Should Chinese domestic shipping be included in product cost?
+            </h3>
+            <p>
+              Yes, when comparing acquisition costs. Record it separately so you
+              can see whether a cheap item remains competitive after delivery to
+              the warehouse.
+            </p>
+            <h3>
+              Can multiple sellers share one Chinese domestic shipping fee?
+            </h3>
+            <p>
+              Do not assume so. Separate sellers generally send separate
+              domestic parcels, and each listing or order may have its own
+              delivery charge.
+            </p>
+            <h3>What does minimum purchase quantity change?</h3>
+            <p>
+              It changes the payable quantity. A low unit price is irrelevant if
+              the seller requires more units than the buyer needs.
+            </p>
+            <h3>Is estimated warehouse arrival a promise?</h3>
+            <p>
+              No. It is a planning indicator. Seller dispatch, stock
+              confirmation and Chinese domestic logistics can change the actual
+              arrival date.
+            </p>
+            <h3>
+              Can product-page weight predict international freight exactly?
+            </h3>
+            <p>
+              No. Final freight depends on the packed parcel, route rules,
+              actual or volumetric weight, destination and any restriction
+              applied after warehouse inspection.
+            </p>
+            <h3>
+              Are free QC photos proof that every specification is correct?
+            </h3>
+            <p>
+              No. Photos document visible evidence. Compare them with the saved
+              option, labels and measurements, and request clarification when a
+              purchase-critical fact is missing.
+            </p>
+            <h3>Can I return an item if the total cost becomes too high?</h3>
+            <p>
+              Not automatically. Eligibility depends on timing, condition,
+              seller terms and the return reason. High international freight is
+              not necessarily a seller defect.
+            </p>
+            <h3>
+              What should I do if the seller changes the price after payment?
+            </h3>
+            <p>
+              Review the agent's message, compare the new China-side subtotal
+              with your maximum acceptable total, and approve or cancel based on
+              the original rule rather than sunk cost.
+            </p>
+            <h3>What is the best number for comparing two products?</h3>
+            <p>
+              Use a range: the China-side subtotal plus a realistic
+              international freight range and risk allowance. That exposes costs
+              a headline unit price hides.
+            </p>
+          </section>
+        </article>
+      </div>
+    </main>
+    <footer class="footer">
+      <span
+        >Independent buyer education. Verify live prices, options, restrictions
+        and service terms before payment.</span
+      ><a href="/guides/">All buyer guides</a>
+    </footer>
+  </body>
+</html>
