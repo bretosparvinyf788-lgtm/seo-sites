@@ -25,7 +25,7 @@
   "SECTIONS": [
     [
       "Start with the parcel record, not a generic tracking search",
-      "Once a Sugargoo parcel has shipped, begin inside the account rather than pasting an old number into a random tracking site. Sugargoo's current official tracking guides direct buyers to the shipped area of Packing Center or My Parcel, where the parcel number, logistics route and tracking number are tied to the same shipment.\n\nSave four facts before interpreting anything: the Sugargoo parcel number, carrier tracking number, route and destination address. Record the scan with its timestamp and location.\n\nTreat the Sugargoo page as the shipment index, not necessarily the only source of scans. International parcels may move through an origin carrier, an airline or line-haul partner, customs, and a destination courier. If the account shows a downstream carrier or a new local tracking number, check that carrier's official site too. Matching the number, date and location across sources is more reliable than reacting to a single translated phrase."
+      "Once a Sugargoo parcel has shipped, begin inside the account rather than pasting an old number into a random tracking site. Sugargoo's current official tracking guides direct buyers to the shipped area of Packing Center or My Parcel, where the parcel number, logistics route and tracking number are tied to the same shipment.\n\nSave four facts before interpreting anything: the Sugargoo parcel number, carrier tracking number, route and destination address. Record the scan with its timestamp and location.\n\nTreat the Sugargoo page as the shipment index, not necessarily the only source of scans. International parcels may move through an origin carrier, an airline or line-haul partner, customs, and a destination courier. If the account shows a downstream carrier or a new local tracking number, check that carrier's official site too."
     ],
     [
       "Read tracking as a chain of custody",
@@ -49,11 +49,11 @@
     ],
     [
       "Send support a compact exception packet",
-      "Sugargoo's official guidance tells buyers to contact customer service when tracking is delayed, unavailable or unclear, and says support can communicate with logistics providers and initiate an investigation where appropriate. You will get a more useful response if the first message contains a complete, compact record.\n\nInclude the Sugargoo parcel number, tracking number, shipping route, destination country, shipping date, latest scan text and timestamp, and the specific reason you believe the status is abnormal. Attach one screenshot from the Sugargoo parcel page and one from the current carrier page. Add any carrier case number, customs notice or delivery-attempt record. Ask one concrete question, such as whether a last-mile number exists or whether the logistics provider has opened an investigation.\n\nDo not send a stream of disconnected screenshots without labels. Put events in chronological order and distinguish facts from conclusions. “No new scan since airline departure on August 12; route estimate in my account has passed; destination carrier finds no matching parcel” is actionable. “Where is it?” is not. Preserve support replies so any later follow-up uses the same evidence and case history."
+      "Sugargoo's official guidance tells buyers to contact customer service when tracking is delayed, unavailable or unclear, and says support can communicate with logistics providers and initiate an investigation where appropriate. You will get a more useful response if the first message contains a complete, compact record.\n\nInclude the Sugargoo parcel number, tracking number, shipping route, destination country, shipping date, latest scan text and timestamp, and the specific reason you believe the status is abnormal. Attach one screenshot from the Sugargoo parcel page and one from the current carrier page. Add any carrier case number, customs notice or delivery-attempt record. Ask one concrete question, such as whether a last-mile number exists or whether the logistics provider has opened an investigation.\n\nDo not send a stream of disconnected screenshots without labels. Put events in chronological order and distinguish facts from conclusions. “No new scan since airline departure on August 12; route estimate in my account has passed; destination carrier finds no matching parcel” is actionable. “Where is it?” is not."
     ],
     [
       "Document delivery before closing the parcel record",
-      "Tracking ends with a status; your shipment record should end with evidence. When the parcel arrives, photograph the exterior before opening if it is crushed, wet, torn, retaped or otherwise abnormal. Keep the label visible in at least one image, then record the opening and compare the contents with the warehouse items you submitted. Retain the packaging until you know the delivery is complete and undamaged.\n\nSugargoo's official exception guidance recommends retaining relevant documents such as damage photos and delivery receipts. Report a material problem promptly through the appropriate support channel, using the parcel number and a clear description of what was received. Do not discard the box and then try to recreate its condition from memory.\n\nIf everything is correct, save the delivered date, final carrier and any route-specific handoff lesson. That small record improves future route choices: you learn where scans usually pause, which carrier performs the last mile, and how long each stage actually took for your destination. Good tracking practice is not constant checking. It is a disciplined chain from parcel record to carrier handoff, customs, local delivery and documented receipt."
+      "Tracking ends with a status; your shipment record should end with evidence. When the parcel arrives, photograph the exterior before opening if it is crushed, wet, torn, retaped or otherwise abnormal. Keep the label visible in at least one image, then record the opening and compare the contents with the warehouse items you submitted. Retain the packaging until you know the delivery is complete and undamaged.\n\nSugargoo's official exception guidance recommends retaining relevant documents such as damage photos and delivery receipts. Report a material problem promptly through the appropriate support channel, using the parcel number and a clear description of what was received. Do not discard the box and then try to recreate its condition from memory.\n\nIf everything is correct, save the delivered date, final carrier and any route-specific handoff lesson. That small record improves future route choices: you learn where scans usually pause, which carrier performs the last mile, and how long each stage actually took for your destination. It is a disciplined chain from parcel record to carrier handoff, customs, local delivery and documented receipt."
     ]
   ],
   "FAQ": [
@@ -88,6 +88,14 @@
     [
       "What evidence should I keep after delivery?",
       "Keep the tracking history, delivery record and photos of any damaged exterior, label and contents. Retain the packaging until you have confirmed that the parcel is complete and undamaged."
+    ],
+    [
+      "How often should I check Sugargoo tracking?",
+      "Once or twice daily is enough; refreshing cannot create a carrier scan."
+    ],
+    [
+      "Can I change my delivery address after shipment?",
+      "Ask the operating carrier first; if sender approval is required, contact Sugargoo."
     ]
   ]
 }
