@@ -1915,7 +1915,7 @@
       openArticle(articleButton.dataset.article);
       return;
     }
-    if(event.target.closest('#viewAllGuides') || event.target.closest('.reader-all-guides')){
+    if(event.target.closest('.reader-all-guides')){
       event.preventDefault();
       openAllGuides();
       return;
