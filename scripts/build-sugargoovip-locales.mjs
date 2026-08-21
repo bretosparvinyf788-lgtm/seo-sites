@@ -1,5 +1,6 @@
 import fs from "node:fs";
 import path from "node:path";
+import { guideCardLocales } from "./sugargoovip-guide-card-locales.mjs";
 
 const root = path.resolve("sugargoovip.net");
 const source = fs.readFileSync(path.join(root, "index.html"), "utf8");
@@ -23,6 +24,17 @@ const locales = {
 
 const escapeHtml = (value) => value.replaceAll("&", "&amp;").replaceAll('"', "&quot;").replaceAll("<", "&lt;").replaceAll(">", "&gt;");
 
+const replaceGuideCard = (page, key, card) => {
+  const cardPattern = new RegExp(`(<a(?=[^>]*data-guide-card="${key}")[\\s\\S]*?</a)`, "m");
+  return page.replace(cardPattern, (block) => {
+    for (const [field, value] of Object.entries(card)) {
+      const fieldPattern = new RegExp(`(<(?:small|h3|p|time)\\s+data-guide-field="${field}">)[\\s\\S]*?(</(?:small|h3|p|time)>)`, "m");
+      block = block.replace(fieldPattern, `$1${escapeHtml(value)}$2`);
+    }
+    return block;
+  });
+};
+
 for (const [route, locale] of Object.entries(locales)) {
   const url = `https://sugargoovip.net/${route}/`;
   let page = source;
@@ -39,6 +51,9 @@ for (const [route, locale] of Object.entries(locales)) {
   page = page.replace(/<h1 data-copy="title">[\s\S]*?<\/h1>/, `<h1 data-copy="title">${escapeHtml(locale.h1)}</h1>`);
   page = page.replace(/<p data-copy="desc">[\s\S]*?<\/p>/, `<p data-copy="desc">${escapeHtml(locale.description)}</p>`);
   page = page.replace('"inLanguage": "en"', `"inLanguage": "${locale.lang}"`);
+  for (const [key, card] of Object.entries(guideCardLocales[route])) {
+    page = replaceGuideCard(page, key, card);
+  }
   fs.mkdirSync(path.join(root, route), { recursive: true });
   fs.writeFileSync(path.join(root, route, "index.html"), page);
 }
