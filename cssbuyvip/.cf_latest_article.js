@@ -40,6 +40,16 @@ function articleFromStaticPage(config) {
 
 const automationArticles = [
   articleFromStaticPage({
+    key: 'cssbuy-beginner-order-workflow-guide-2026',
+    file: 'guides/cssbuy-beginner-order-workflow-guide-2026/index.html',
+    title: 'CSSBuy Beginner Order Workflow Guide 2026: From Product Link to International Shipping',
+    excerpt: 'Follow one controlled CSSBuy workflow from a Chinese marketplace link through ordering, QC, consolidation, packaging, international shipping and tracking.',
+    seo_title: 'CSSBuy Beginner Order Guide 2026: Link to Delivery',
+    seo_description: 'A practical CSSBuy beginner workflow for product links, variants, first payment, Add Note, warehouse QC, parcel planning, shipping deposits and tracking.',
+    tags: 'CSSBuy beginner guide, CSSBuy order workflow, Buy For Me, CSSBuy Add Note, warehouse QC, parcel consolidation, volumetric weight, CSSBuy tracking',
+    publish_date: '2026-08-21'
+  }),
+  articleFromStaticPage({
     key: 'cssbuy-order-parcel-support-routing-guide-2026',
     file: 'guides/cssbuy-order-parcel-support-routing-guide-2026/index.html',
     title: 'CSSBuy Order & Parcel Support Guide 2026: Contact Seller, Add Note and Faster Problem Resolution',
