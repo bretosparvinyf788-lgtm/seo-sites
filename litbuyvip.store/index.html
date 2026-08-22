@@ -893,6 +893,27 @@
         position: relative;
         padding: 16px;
       }
+      .story-img.claim {
+        background:
+          linear-gradient(28deg, transparent 0 43%, #ffd900 43% 49%, transparent 49% 100%),
+          repeating-linear-gradient(90deg, #ffffff20 0 1px, transparent 1px 54px),
+          linear-gradient(145deg, #06162a 0 54%, #ff5a00 54% 100%);
+      }
+      .story-img.claim:after {
+        content: "SEAL → OPEN → PROVE";
+        position: absolute;
+        left: 12%;
+        right: 12%;
+        top: 45%;
+        padding: 18px 10px;
+        border: 2px solid #fff;
+        background: #06162ae8;
+        color: var(--acid);
+        text-align: center;
+        font-size: 12px;
+        font-weight: 900;
+        letter-spacing: 0.12em;
+      }
       .story-img.forwarding {
         background:
           linear-gradient(90deg, transparent 0 12%, #ffffff30 12% 13%, transparent 13% 87%, #ffffff30 87% 88%, transparent 88%),
@@ -991,6 +1012,12 @@
       .mini.qc {
         background-image: linear-gradient(90deg, #06162a22, #06162aa8),
           url("../public/images/qc-guide.png");
+      }
+      .mini.forwarding {
+        background:
+          linear-gradient(32deg, transparent 0 43%, var(--acid) 43% 49%, transparent 49%),
+          repeating-linear-gradient(0deg, #ffffff1c 0 1px, transparent 1px 24px),
+          linear-gradient(135deg, #ff5a00, #06162a 72%);
       }
       .mini.order {
         background:
@@ -3817,38 +3844,38 @@
           <a href="guides/index.html">VIEW ALL BUYER GUIDES ↗</a>
         </div>
         <div class="stories">
-          <a class="lead" href="guides/forwarding-handoff-manifest.html"
-            ><div class="story-img forwarding"><span>FORWARDING HANDOFF</span><b>05</b></div>
+          <a class="lead" href="guides/doorstep-parcel-claim-evidence.html"
+            ><div class="story-img claim"><span>AFTER-SALES EVIDENCE</span><b>06</b></div>
             <div class="story-copy">
-              <small>AUG 21, 2026 · 13 MIN READ</small>
+              <small>AUG 22, 2026 · 13 MIN READ</small>
               <h3>
-                Send Self-Purchased Items Without Losing the Paper Trail
+                Build a Clear Missing or Damaged Parcel Claim
               </h3>
               <p>
-                Connect seller orders, domestic tracking and warehouse arrivals
-                with one forwarding manifest.
+                Preserve the sealed parcel, continuous opening sequence and
+                factual timeline before evidence disappears.
               </p>
               <strong>READ THE FIELD NOTE ↗</strong>
             </div></a
           >
           <div class="stack">
-            <a href="guides/warehouse-timing-control.html"
+            <a href="guides/forwarding-handoff-manifest.html"
+              ><div class="mini forwarding"></div>
+              <div>
+                <small>FORWARDING CONTROL · 13 MIN</small>
+                <h3>The Forwarding Handoff</h3>
+                <p>
+                  Connect seller orders, tracking and warehouse arrivals.
+                </p>
+                <strong>READ GUIDE ↗</strong>
+              </div></a
+            ><a href="guides/warehouse-timing-control.html"
               ><div class="mini warehouse"></div>
               <div>
                 <small>WAREHOUSE CONTROL · 13 MIN</small>
                 <h3>The Warehouse Clock</h3>
                 <p>
                   Control staggered arrivals, QC decisions and parcel cutoffs.
-                </p>
-                <strong>READ GUIDE ↗</strong>
-              </div></a
-            ><a href="guides/two-stage-cart.html"
-              ><div class="mini order"></div>
-              <div>
-                <small>ORDER CONTROL · 12 MIN</small>
-                <h3>The Two-Stage Cart</h3>
-                <p>
-                  Turn a marketplace link into a verified warehouse decision.
                 </p>
                 <strong>READ GUIDE ↗</strong>
               </div></a
