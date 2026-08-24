@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" role="img" aria-labelledby="title desc">
+<title id="title">HipoBuy Order Status Guide 2026</title>
+<desc id="desc">Blue and white HipoBuyVIP buyer guide cover showing order and parcel status timelines from payment through warehouse storage and international delivery.</desc>
+<defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fbfdff"/><stop offset=".58" stop-color="#eef6ff"/><stop offset="1" stop-color="#d8eaff"/></linearGradient>
+  <linearGradient id="blue" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#176cff"/><stop offset="1" stop-color="#0b4fc7"/></linearGradient>
+  <filter id="shadow" x="-30%" y="-30%" width="160%" height="180%"><feDropShadow dx="0" dy="12" stdDeviation="14" flood-color="#174a8c" flood-opacity=".16"/></filter>
+</defs>
+<rect width="1200" height="675" fill="url(#bg)"/>
+<circle cx="1030" cy="90" r="215" fill="#b9d8ff" opacity=".42"/>
+<circle cx="1030" cy="90" r="155" fill="none" stroke="#fff" stroke-width="3" stroke-dasharray="10 12" opacity=".88"/>
+
+<g transform="translate(48 34)">
+  <rect width="472" height="82" rx="20" fill="url(#blue)"/>
+  <rect x="22" y="16" width="50" height="50" rx="13" fill="#fff"/>
+  <path d="M33 45h27M39 34h15M39 56h15" stroke="#176cff" stroke-width="4" stroke-linecap="round"/>
+  <circle cx="33" cy="34" r="4" fill="#176cff"/><circle cx="60" cy="56" r="4" fill="#176cff"/>
+  <text x="92" y="53" font-family="Inter,Arial,sans-serif" font-size="34" font-weight="900" fill="#fff">HipoBuy</text>
+  <rect x="300" y="16" width="150" height="50" rx="14" fill="#0a3f9d"/>
+  <text x="375" y="49" text-anchor="middle" font-family="Inter,Arial,sans-serif" font-size="22" font-weight="800" fill="#fff">BUYER GUIDE</text>
+</g>
+
+<g transform="translate(50 166)">
+  <text x="0" y="0" font-family="Inter,Arial,sans-serif" font-size="53" font-weight="900" fill="#08275a">HipoBuy Order Status</text>
+  <text x="0" y="64" font-family="Inter,Arial,sans-serif" font-size="53" font-weight="900" fill="#08275a">Guide 2026</text>
+  <rect x="0" y="92" width="404" height="6" rx="3" fill="#176cff"/>
+  <text x="0" y="142" font-family="Inter,Arial,sans-serif" font-size="27" font-weight="800" fill="#155ccf">Payment → Warehouse → Delivery</text>
+  <text x="0" y="188" font-family="Inter,Arial,sans-serif" font-size="20" fill="#536d91">A buyer-control timeline for reading statuses,</text>
+  <text x="0" y="220" font-family="Inter,Arial,sans-serif" font-size="20" fill="#536d91">spotting action points, and avoiding delays.</text>
+</g>
+
+<g transform="translate(44 480)" filter="url(#shadow)">
+  <rect width="520" height="142" rx="22" fill="#fff" stroke="#bcd7fb" stroke-width="2"/>
+  <g transform="translate(28 22)" font-family="Inter,Arial,sans-serif">
+    <g><rect width="96" height="62" rx="16" fill="#edf5ff"/><circle cx="48" cy="31" r="18" fill="none" stroke="#176cff" stroke-width="3"/><path d="M48 20v12l9 6" stroke="#176cff" stroke-width="3" fill="none" stroke-linecap="round"/><text x="48" y="94" text-anchor="middle" font-size="15" font-weight="800" fill="#143d76">Pay</text></g>
+    <g transform="translate(118 0)"><rect width="96" height="62" rx="16" fill="#edf5ff"/><path d="M26 42h44V24H26zM32 24l16-10 16 10" fill="none" stroke="#176cff" stroke-width="3" stroke-linejoin="round"/><text x="48" y="94" text-anchor="middle" font-size="15" font-weight="800" fill="#143d76">Warehouse</text></g>
+    <g transform="translate(236 0)"><rect width="96" height="62" rx="16" fill="#edf5ff"/><rect x="29" y="18" width="38" height="32" rx="5" fill="none" stroke="#176cff" stroke-width="3"/><path d="M29 29h38M48 18v32" stroke="#176cff" stroke-width="3"/><text x="48" y="94" text-anchor="middle" font-size="15" font-weight="800" fill="#143d76">Pack</text></g>
+    <g transform="translate(354 0)"><rect width="96" height="62" rx="16" fill="#edf5ff"/><path d="M24 39h44l-6-19H38zM26 39v8h40v-8" fill="none" stroke="#176cff" stroke-width="3"/><circle cx="35" cy="50" r="4" fill="#176cff"/><circle cx="58" cy="50" r="4" fill="#176cff"/><text x="48" y="94" text-anchor="middle" font-size="15" font-weight="800" fill="#143d76">Track</text></g>
+  </g>
+</g>
+
+<g transform="translate(612 150)" filter="url(#shadow)">
+  <rect width="536" height="448" rx="28" fill="#fff" stroke="#cbdff8" stroke-width="2"/>
+  <text x="30" y="44" font-family="Inter,Arial,sans-serif" font-size="19" font-weight="900" fill="#0d2d67">ORDER TIMELINE</text>
+  <text x="420" y="44" font-family="Inter,Arial,sans-serif" font-size="14" font-weight="800" fill="#176cff">LIVE ACTION MAP</text>
+  <line x1="58" y1="86" x2="58" y2="338" stroke="#c8ddfa" stroke-width="6" stroke-linecap="round"/>
+  <g font-family="Inter,Arial,sans-serif">
+    <g transform="translate(38 78)"><circle cx="20" cy="20" r="20" fill="#176cff"/><text x="20" y="26" text-anchor="middle" font-size="16" font-weight="900" fill="#fff">1</text><text x="58" y="18" font-size="18" font-weight="900" fill="#0b2d67">Pending Payment</text><text x="58" y="40" font-size="13" fill="#6780a2">Buyer action • confirm payment</text></g>
+    <g transform="translate(38 137)"><circle cx="20" cy="20" r="20" fill="#3f86f5"/><text x="20" y="26" text-anchor="middle" font-size="16" font-weight="900" fill="#fff">2</text><text x="58" y="18" font-size="18" font-weight="900" fill="#0b2d67">Ordered / Shipped Local</text><text x="58" y="40" font-size="13" fill="#6780a2">Seller action • domestic transit</text></g>
+    <g transform="translate(38 196)"><circle cx="20" cy="20" r="20" fill="#66a3f9"/><text x="20" y="26" text-anchor="middle" font-size="16" font-weight="900" fill="#fff">3</text><text x="58" y="18" font-size="18" font-weight="900" fill="#0b2d67">Arrived / Stored</text><text x="58" y="40" font-size="13" fill="#6780a2">Warehouse action • inspect and consolidate</text></g>
+    <g transform="translate(38 255)"><circle cx="20" cy="20" r="20" fill="#0d5cdb"/><text x="20" y="26" text-anchor="middle" font-size="16" font-weight="900" fill="#fff">4</text><text x="58" y="18" font-size="18" font-weight="900" fill="#0b2d67">Waiting for Confirmation</text><text x="58" y="40" font-size="13" fill="#6780a2">Buyer action • review freight change</text></g>
+    <g transform="translate(38 314)"><circle cx="20" cy="20" r="20" fill="#0a3f9d"/><text x="20" y="26" text-anchor="middle" font-size="16" font-weight="900" fill="#fff">5</text><text x="58" y="18" font-size="18" font-weight="900" fill="#0b2d67">Shipped International</text><text x="58" y="40" font-size="13" fill="#6780a2">Carrier action • track delivery</text></g>
+  </g>
+  <rect x="30" y="383" width="476" height="42" rx="13" fill="#0d2d67"/>
+  <text x="268" y="410" text-anchor="middle" font-family="Inter,Arial,sans-serif" font-size="16" font-weight="800" fill="#fff">KNOW WHO OWNS THE NEXT STEP</text>
+</g>
+</svg>
