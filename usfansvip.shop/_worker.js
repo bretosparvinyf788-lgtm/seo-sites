@@ -67,9 +67,17 @@ const mobileFixCss = `
 }
 `;
 
+const latestGuidesHtml = `<a class="guide" href="/guides/usfans-order-processing-payment-remarks-enquiry-guide-2026.html"><small>Order Processing · 24 August 2026</small><h3>USFans Order Processing Guide 2026: Payments, Remarks &amp; Order Enquiry Before Warehouse Arrival</h3><p>Use payment, Chinese domestic delivery, concise remarks, order enquiry, purchasing hours, warehouse QC and return timing as clear control points.</p><span>Read English guide →</span></a><a class="guide" href="/guides/usfans-product-search-link-keyword-image-guide-2026.html"><small>Product Search · 21 August 2026</small><h3>USFans Product Search Guide 2026: Link, Keyword &amp; Image Search for Taobao, Tmall &amp; 1688</h3><p>Use direct marketplace links, keyword and image search, then verify variations, domestic freight, warehouse timing, QC and returns.</p><span>Read English guide →</span></a><a class="guide" href="/guides/usfans-parcel-submission-storage-deposit-packing-guide-2026.html"><small>Parcel Submission · 19 August 2026</small><h3>USFans Parcel Submission Guide 2026: 90-Day Storage, Shipping Deposit &amp; Packing Services</h3><p>Use free storage, consolidation, package removal, reinforcement, insurance and shipping-deposit settlement to plan a more predictable parcel.</p><span>Read English guide →</span></a>`;
+
 class HeadHandler {
   element(element) {
     element.append(`<style id="usfansvip-mobile-grid-fix">${mobileFixCss}</style>`, { html: true });
+  }
+}
+
+class GuidesHandler {
+  element(element) {
+    element.setInnerContent(latestGuidesHtml, { html: true });
   }
 }
 
@@ -85,6 +93,7 @@ export default {
 
     return new HTMLRewriter()
       .on('head', new HeadHandler())
+      .on('#guides .guide-grid', new GuidesHandler())
       .transform(response);
   }
 };
