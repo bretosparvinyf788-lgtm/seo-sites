@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" role="img" aria-labelledby="title desc">
+<title id="title">HipoBuy Taobao and 1688 Sourcing Guide 2026</title>
+<desc id="desc">Blue and white HipoBuyVIP buyer guide cover showing Taobao and 1688 source listings moving through variation checks, buyer instructions, warehouse QC, and parcel readiness.</desc>
+<defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fbfdff"/><stop offset=".58" stop-color="#eef6ff"/><stop offset="1" stop-color="#d8eaff"/></linearGradient>
+  <linearGradient id="blue" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#176cff"/><stop offset="1" stop-color="#0b4fc7"/></linearGradient>
+  <filter id="shadow" x="-30%" y="-30%" width="160%" height="180%"><feDropShadow dx="0" dy="12" stdDeviation="14" flood-color="#174a8c" flood-opacity=".16"/></filter>
+</defs>
+<rect width="1200" height="675" fill="url(#bg)"/>
+<circle cx="1035" cy="80" r="220" fill="#b9d8ff" opacity=".42"/>
+<circle cx="1035" cy="80" r="158" fill="none" stroke="#fff" stroke-width="3" stroke-dasharray="10 12" opacity=".88"/>
+
+<g transform="translate(48 34)">
+  <rect width="472" height="82" rx="20" fill="url(#blue)"/>
+  <rect x="22" y="16" width="50" height="50" rx="13" fill="#fff"/>
+  <path d="M32 52h31l-3-22H38z" fill="none" stroke="#176cff" stroke-width="4" stroke-linejoin="round"/>
+  <path d="M41 30c0-8 4-13 12-13s12 5 12 13" fill="none" stroke="#176cff" stroke-width="4" stroke-linecap="round"/>
+  <text x="92" y="53" font-family="Inter,Arial,sans-serif" font-size="34" font-weight="900" fill="#fff">HipoBuy</text>
+  <rect x="300" y="16" width="150" height="50" rx="14" fill="#0a3f9d"/>
+  <text x="375" y="49" text-anchor="middle" font-family="Inter,Arial,sans-serif" font-size="22" font-weight="800" fill="#fff">BUYER GUIDE</text>
+</g>
+
+<g transform="translate(50 160)">
+  <text x="0" y="0" font-family="Inter,Arial,sans-serif" font-size="50" font-weight="900" fill="#08275a">Taobao &amp; 1688 Sourcing</text>
+  <text x="0" y="60" font-family="Inter,Arial,sans-serif" font-size="50" font-weight="900" fill="#08275a">with HipoBuy in 2026</text>
+  <rect x="0" y="87" width="420" height="6" rx="3" fill="#176cff"/>
+  <text x="0" y="138" font-family="Inter,Arial,sans-serif" font-size="25" font-weight="800" fill="#155ccf">Marketplace → Buyer → Warehouse</text>
+  <text x="0" y="182" font-family="Inter,Arial,sans-serif" font-size="20" fill="#536d91">Verify the listing, lock the variation,</text>
+  <text x="0" y="214" font-family="Inter,Arial,sans-serif" font-size="20" fill="#536d91">inspect the arrival, then build the parcel.</text>
+</g>
+
+<g transform="translate(44 472)" filter="url(#shadow)">
+  <rect width="522" height="150" rx="22" fill="#fff" stroke="#bcd7fb" stroke-width="2"/>
+  <g transform="translate(23 20)" font-family="Inter,Arial,sans-serif">
+    <g><rect width="88" height="66" rx="16" fill="#edf5ff"/><rect x="20" y="16" width="48" height="34" rx="5" fill="none" stroke="#176cff" stroke-width="3"/><path d="M27 26h34M27 34h22M27 42h18" stroke="#176cff" stroke-width="3" stroke-linecap="round"/><text x="44" y="99" text-anchor="middle" font-size="14" font-weight="800" fill="#143d76">Listing</text></g>
+    <g transform="translate(100 0)"><rect width="88" height="66" rx="16" fill="#edf5ff"/><path d="M20 18h48v36H20z" fill="none" stroke="#176cff" stroke-width="3"/><path d="M20 30h48M44 18v36" stroke="#176cff" stroke-width="3"/><text x="44" y="99" text-anchor="middle" font-size="14" font-weight="800" fill="#143d76">Variant</text></g>
+    <g transform="translate(200 0)"><rect width="88" height="66" rx="16" fill="#edf5ff"/><path d="M24 18h40v42H24z" fill="none" stroke="#176cff" stroke-width="3"/><path d="M31 28h26M31 37h26M31 46h18" stroke="#176cff" stroke-width="3" stroke-linecap="round"/><text x="44" y="99" text-anchor="middle" font-size="14" font-weight="800" fill="#143d76">Buyer Note</text></g>
+    <g transform="translate(300 0)"><rect width="88" height="66" rx="16" fill="#edf5ff"/><circle cx="40" cy="31" r="14" fill="none" stroke="#176cff" stroke-width="3"/><path d="M51 42l12 12" stroke="#176cff" stroke-width="4" stroke-linecap="round"/><text x="44" y="99" text-anchor="middle" font-size="14" font-weight="800" fill="#143d76">QC</text></g>
+    <g transform="translate(400 0)"><rect width="88" height="66" rx="16" fill="#edf5ff"/><path d="M24 28h40v28H24zM24 28l20-12 20 12M44 16v40" fill="none" stroke="#176cff" stroke-width="3" stroke-linejoin="round"/><text x="44" y="99" text-anchor="middle" font-size="14" font-weight="800" fill="#143d76">Parcel</text></g>
+  </g>
+</g>
+
+<g transform="translate(612 140)" filter="url(#shadow)">
+  <rect width="536" height="462" rx="28" fill="#fff" stroke="#cbdff8" stroke-width="2"/>
+  <text x="30" y="46" font-family="Inter,Arial,sans-serif" font-size="19" font-weight="900" fill="#0d2d67">SOURCE-TO-WAREHOUSE CONTROL MAP</text>
+
+  <g font-family="Inter,Arial,sans-serif">
+    <rect x="30" y="72" width="224" height="112" rx="20" fill="#fff6f1" stroke="#ffd1ba" stroke-width="2"/>
+    <text x="48" y="105" font-size="18" font-weight="900" fill="#c45418">TAOBAO</text>
+    <text x="48" y="134" font-size="14" fill="#7b5c4d">Retail-style listing</text>
+    <text x="48" y="158" font-size="14" fill="#7b5c4d">Check exact option + price</text>
+
+    <rect x="282" y="72" width="224" height="112" rx="20" fill="#fff8ec" stroke="#ffd993" stroke-width="2"/>
+    <text x="300" y="105" font-size="18" font-weight="900" fill="#b16d00">1688</text>
+    <text x="300" y="134" font-size="14" fill="#7a6847">Wholesale-oriented listing</text>
+    <text x="300" y="158" font-size="14" fill="#7a6847">Check MOQ + unit terms</text>
+
+    <path d="M268 198v38" stroke="#176cff" stroke-width="5" stroke-linecap="round"/>
+    <path d="M256 226l12 12 12-12" fill="none" stroke="#176cff" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+
+    <rect x="30" y="245" width="476" height="150" rx="22" fill="#edf5ff" stroke="#bfd9fb" stroke-width="2"/>
+    <text x="50" y="280" font-size="18" font-weight="900" fill="#0b2d67">HipoBuy purchasing brief</text>
+    <g transform="translate(52 302)">
+      <circle cx="9" cy="9" r="9" fill="#176cff"/><path d="M5 9l3 3 6-7" stroke="#fff" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+      <text x="28" y="14" font-size="14" fill="#526f95">Exact variation and quantity</text>
+      <circle cx="216" cy="9" r="9" fill="#176cff"/><path d="M212 9l3 3 6-7" stroke="#fff" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+      <text x="235" y="14" font-size="14" fill="#526f95">Price tolerance</text>
+      <circle cx="9" cy="50" r="9" fill="#176cff"/><path d="M5 50l3 3 6-7" stroke="#fff" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+      <text x="28" y="55" font-size="14" fill="#526f95">No-substitution rule</text>
+      <circle cx="216" cy="50" r="9" fill="#176cff"/><path d="M212 50l3 3 6-7" stroke="#fff" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+      <text x="235" y="55" font-size="14" fill="#526f95">QC checkpoints</text>
+    </g>
+
+    <rect x="30" y="416" width="476" height="28" rx="14" fill="#0d2d67"/>
+    <text x="268" y="436" text-anchor="middle" font-size="14" font-weight="800" fill="#fff">VERIFY BEFORE PAYMENT • VERIFY AGAIN AT WAREHOUSE</text>
+  </g>
+</g>
+</svg>
