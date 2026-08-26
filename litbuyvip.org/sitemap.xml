@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://litbuyvip.org/</loc><lastmod>2026-08-24</lastmod><priority>1.0</priority></url>
+  <url><loc>https://litbuyvip.org/</loc><lastmod>2026-08-26</lastmod><priority>1.0</priority></url>
   <url><loc>https://litbuyvip.org/de/</loc><lastmod>2026-08-18</lastmod><priority>0.8</priority></url>
   <url><loc>https://litbuyvip.org/fr/</loc><lastmod>2026-08-18</lastmod><priority>0.8</priority></url>
   <url><loc>https://litbuyvip.org/es/</loc><lastmod>2026-08-18</lastmod><priority>0.8</priority></url>
@@ -13,7 +13,8 @@
   <url><loc>https://litbuyvip.org/spreadsheet/</loc><lastmod>2026-08-18</lastmod><priority>0.9</priority></url>
   <url><loc>https://litbuyvip.org/qc-finder/</loc><lastmod>2026-08-18</lastmod><priority>0.9</priority></url>
   <url><loc>https://litbuyvip.org/shipping-guide/</loc><lastmod>2026-08-18</lastmod><priority>0.9</priority></url>
-  <url><loc>https://litbuyvip.org/guides/</loc><lastmod>2026-08-24</lastmod><priority>0.9</priority></url>
+  <url><loc>https://litbuyvip.org/guides/</loc><lastmod>2026-08-26</lastmod><priority>0.9</priority></url>
+  <url><loc>https://litbuyvip.org/guides/litbuy-restricted-items-shipping-eligibility-screening/</loc><lastmod>2026-08-26</lastmod><priority>0.8</priority></url>
   <url><loc>https://litbuyvip.org/guides/litbuy-international-parcel-tracking-evidence-timeline/</loc><lastmod>2026-08-24</lastmod><priority>0.8</priority></url>
   <url><loc>https://litbuyvip.org/guides/litbuy-warehouse-storage-consolidation-calendar/</loc><lastmod>2026-08-21</lastmod><priority>0.8</priority></url>
   <url><loc>https://litbuyvip.org/guides/litbuy-warehouse-return-exchange-evidence/</loc><lastmod>2026-08-18</lastmod><priority>0.8</priority></url>
