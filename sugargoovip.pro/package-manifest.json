@@ -11,6 +11,7 @@
     "404.html",
     "README-DEPLOY.txt",
     "_headers",
+    "_redirects",
     "assets/css/guide.css",
     "assets/css/site.css",
     "assets/favicon.png",
