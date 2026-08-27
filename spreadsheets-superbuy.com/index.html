@@ -21,9 +21,9 @@ function applyManualFallback(){if(currentLang==='en')return;const dict=I18N[curr
 function translateWholePage(){clearTimeout(translationTimer);translationTimer=setTimeout(()=>{const combo=document.querySelector('.goog-te-combo'),code=GOOGLE_CODES[currentLang]||'';if(!combo)return;if(combo.value!==code)combo.value=code;combo.dispatchEvent(new Event('change',{bubbles:true}));},180);}
 function applyLanguage(){document.documentElement.lang=currentLang==='zh'?'zh-CN':currentLang==='zh-hant'?'zh-TW':currentLang;document.querySelectorAll('.language-picker select').forEach(x=>x.value=currentLang);applyManualFallback();document.querySelectorAll('.spreadsheet-link').forEach(x=>x.textContent=SPREADSHEET_LABELS[currentLang]||SPREADSHEET_LABELS.en);document.querySelectorAll('.whatsapp-contact').forEach(x=>x.textContent=WHATSAPP_LABELS[currentLang]||WHATSAPP_LABELS.en);if(googleReady)translateWholePage();}
 function setLanguage(lang){currentLang=lang;localStorage.setItem('ss-language',lang);renderCurrent();}
-function mount(html){document.getElementById('app').innerHTML=html;applyLanguage();window.scrollTo({top:0,behavior:'instant'});}
+function mount(html){document.getElementById('app').innerHTML=html;document.querySelectorAll('a[href="/guides/"]').forEach(link=>link.setAttribute('href','/guides/index.html'));applyLanguage();window.scrollTo({top:0,behavior:'instant'});}
 function showHome(){mount(HOME);history.replaceState(null,'','#home');}
-function showList(){location.href='/guides/';}
+function showList(){location.href='/guides/index.html';}
 function showArticle(slug){if(!VIEWS[slug])return showList();location.href='/guides/'+slug+'.html';}
 function scrollToSection(id,smooth=true){const target=document.getElementById(id);if(!target)return;const top=Math.max(0,target.getBoundingClientRect().top+window.scrollY-86);window.scrollTo({top,behavior:smooth?'smooth':'instant'});}
 function goSection(id){if(!SECTION_IDS.has(id))return;if(!document.getElementById(id))mount(HOME);history.replaceState(null,'','#'+id);requestAnimationFrame(()=>scrollToSection(id,true));}
