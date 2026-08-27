@@ -18,7 +18,7 @@ CLOUDFLARE PAGES
 PACKAGE CONTENTS
 - index.html: complete responsive multilingual homepage
 - guides/index.html: crawlable guide library
-- guides/*/index.html: three independent long-form SEO articles
+- guides/*/index.html: four independent long-form SEO articles
 - assets/logo.png and assets/favicon.png: embedded brand assets
 - assets/css/site.css and assets/js/site.js: homepage presentation and interactions
 - assets/css/guide.css: article/list/404 presentation

@@ -1,10 +1,11 @@
 {
-  "generatedAt": "2026-08-13T08:22:33.587Z",
+  "generatedAt": "2026-08-27T06:30:00.000Z",
   "domain": "sugargoovip.pro",
   "articleWordCounts": {
     "qc": 1586,
     "shipping": 1544,
-    "links": 1718
+    "links": 1718,
+    "consolidation": 1621
   },
   "files": [
     "404.html",
@@ -16,6 +17,7 @@
     "assets/js/site.js",
     "assets/logo.png",
     "guides/how-to-read-sugargoo-qc-photos/index.html",
+    "guides/sugargoo-consolidation-plan/index.html",
     "guides/index.html",
     "guides/product-link-to-sugargoo-diy-order/index.html",
     "guides/sugargoo-shipping-weight-strategy/index.html",
