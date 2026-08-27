@@ -1,1 +1,1 @@
-Production deployment retriggered on 2026-08-27 after clearing stalled article-list builds.
+Production deployment retriggered on 2026-08-27 for the three-column guide layout breakpoint fix.
