@@ -1,9 +1,71 @@
 [
   {
-    "tag":"SUPERBUY 仓库质检体系",
-    "title":"把仓库当成决策关口：区分可见证据与未解决风险的 Superbuy 质检方法",
-    "intro":"一套可实际执行的仓库检查流程，让照片成为购买证据，而不是在国际包裹提交前提供虚假的安心感。",
-    "body":[
+    "tag": "1688 SOURCING RISK PLAYBOOK",
+    "title": "Buying from 1688 Through Superbuy Without Guessing: An MOQ, Sampling, and After-Sales Risk Playbook",
+    "intro": "A practical method for checking 1688 price tiers, minimum quantities, seller service marks, sampling limits and return exposure before a low unit price becomes an expensive mistake.",
+    "body": [
+      "## Treat 1688 as wholesale evidence, not a cheap catalogue",
+      "A 1688 listing can look familiar to anyone who has used a retail marketplace, but the buying logic is different. The lowest visible price may belong to a large quantity tier, a component, a sample, or one variation among several. Superbuy supports shopping-agent orders from 1688, yet the agent cannot turn an ambiguous wholesale offer into a clear retail promise after payment. The buyer must define the commercial unit first: what one price buys, how many units form the minimum order, whether colors may be mixed, and which specification is attached to each tier.",
+      "## Build a specification fingerprint before paying",
+      "Create a compact fingerprint for every intended variation. Record the original Chinese option text, your translation, model, material claim, dimensions, color, quantity, packaging unit and one identifying image. Keep the original wording because two machine translations can make different factory terms look identical. If the listing combines finished products, accessories and replacement parts, state which one you require in the order remark. Superbuy's official shopping guidance says buyers select color, size and quantity or manually provide product information. Use that step to remove ambiguity. A warehouse photograph can later confirm a visible match, but it cannot reconstruct an option that was never clearly defined.",
+      "## Audit the price ladder instead of copying the headline price",
+      "Wholesale pages frequently show several prices linked to quantity bands. Record each relevant tier and calculate the actual merchandise total at the quantity you intend to buy. Then add Chinese domestic delivery and any optional inspection or photography service. Superbuy's current fee explanation lists standard purchasing from mainstream platforms including 1688 without a purchasing service fee, but that does not make the displayed unit price the landed cost. Domestic freight, return freight, unusable extras, international shipping and corrective work remain real. Compare orders by usable delivered unit, not by the smallest advertised figure. A ten-piece minimum is not a bargain when only six pieces meet the required specification.",
+      "## Confirm the MOQ as a rule, not a suggestion",
+      "Minimum order quantity can apply to one SKU, one color, one size, a mixed batch or the entire listing. These are not interchangeable. Write a simple equation in your notes: required quantity equals units per SKU multiplied by the number of SKUs, unless the seller explicitly allows mixing. If the answer is not visible, ask through the order enquiry before purchase. Superbuy's 1688 guidance warns that orders failing a supplier's minimum quantity may be judged invalid and need to be placed again. That creates delay and can also change price or stock. Never assume that meeting the total piece count satisfies a per-variation minimum.",
+      "## Read seller service marks before choosing the product",
+      "Superbuy's public 1688 guidance separates sellers and products according to the service marks shown on the 1688 description or store page. The published guide describes stronger support for listings carrying specified guarantee or return-related marks and much narrower support for unmarked products. Save the marks visible at the time of purchase and the stated exchange period. Do not convert a mark into a universal guarantee: seller rules still govern the negotiation, and the marks can differ by product. The useful decision is comparative. When two factories offer similar goods, clearer after-sales terms and verifiable specifications can be worth more than a small unit-price saving.",
+      "## Understand what sampling can and cannot prove",
+      "Sampling is a batch-control tool, not a promise that every unit is correct. Superbuy's current 1688 page describes sampling for qualifying products at five percent of a single SKU, with a minimum of five and a maximum of twenty sampled pieces. That can reveal repeated visible defects, wrong colors or a systematic mismatch, but it may miss a rare defect outside the sample. It also does not establish durability, chemical composition, electrical safety or authenticity. Before ordering, decide which defects sampling can actually expose, what defect rate you can tolerate and whether the value of the batch justifies a separate inspection request. Otherwise, the word inspection may create more confidence than evidence.",
+      "## Do not confuse parcel count with item count",
+      "Quantity checking becomes difficult when goods arrive sealed, bundled or packed in opaque factory cartons. Superbuy's 1688 guidance says the warehouse may not unpack original packaging to count internal pieces when the quantity is not stated on the outside, and it also warns about limits on detailed quantity confirmation. Therefore, ask the seller to label cartons by SKU and quantity before domestic dispatch when the order matters. Request photographs of external labels, package count and any visible quantity information. If you need every piece opened and checked, determine whether that service is available before buying. A photograph of three closed cartons proves three cartons arrived, not that every promised unit is inside.",
+      "## Design QC around the failure modes of a batch",
+      "A retail-style note such as check quality is especially weak for wholesale goods. Divide the inspection into identity, count, consistency and condition. Identity confirms the exact model and variation. Count confirms what can reasonably be counted. Consistency compares color, dimensions, print placement or construction across sampled units. Condition checks visible damage, contamination and packaging failure. For clothing, request one measured sample per relevant size and compare it with the seller chart. For hardware, confirm component count, finish and obvious deformation. For electronics, remember that visible inspection is not performance certification. Each requested image should answer a decision: accept, ask, replace, return or split the batch.",
+      "## Calculate the cost of a failed batch before ordering",
+      "Wholesale savings magnify both success and error. Build a failure budget with four lines: merchandise at risk, Chinese return freight, non-refundable service cost and the international cost if the problem is accepted and shipped anyway. Add the cost of unusable units instead of quietly averaging them away. If twenty items cost less per piece but a ten-piece order limits the plausible loss, the smaller tier may be economically stronger. This is especially important when seller terms are limited or the product has a high variation risk. The correct order size is the one whose downside you can absorb while still learning enough to make the next order better.",
+      "## Act while the seller's after-sales clock is open",
+      "Warehouse storage and seller after-sales are separate clocks. Superbuy currently publishes a ninety-day free-storage period, but that does not mean a 1688 seller will accept a return ninety days later. Review warehouse evidence as soon as it appears, record the discrepancy and send one precise enquiry with the order number, affected SKU, quantity and requested remedy. Superbuy's 1688 guidance states that shopping agents can help communicate with qualifying sellers, while the actual negotiation result follows the seller's policy and the buyer may bear return or exchange shipping. Delay weakens a case even when the goods can remain in the warehouse for weeks.",
+      "## Plan international shipping at the SKU stage",
+      "Wholesale quantity changes parcel architecture. Ten soft shirts may consolidate efficiently, while ten rigid boxes or battery-powered items can create route limits, dimensional weight and concentrated value. Superbuy's shipping process asks the buyer to choose among recommended routes after warehouse arrival and warns that some items are restricted on certain lines. Classify every SKU before payment as ordinary, fragile, rigid, liquid, powder, battery-related or otherwise sensitive. Estimate whether cartons can be removed without losing identification or protection. A low factory price is not useful when one characteristic forces the entire batch onto a route whose cost or restrictions erase the margin.",
+      "## Use a five-gate release decision",
+      "Release a 1688 order to international shipping only after five gates are closed. Gate one: the received variation matches the saved fingerprint. Gate two: the quantity evidence is adequate for the packaging format. Gate three: sampled condition meets the written acceptance rule. Gate four: seller disputes or replacements are resolved or consciously waived. Gate five: the batch fits a realistic shipping route and loss limit. Mark each gate pass, hold or fail. This prevents a common mistake: submitting the parcel because the products are already in storage. Warehouse arrival is not the finish line. It is the last practical decision point before domestic uncertainty becomes international cost."
+    ]
+  },
+  {
+    "tag": "CONSOLIDATION & PACKING PLAYBOOK",
+    "title": "Before You Submit the Parcel: A Superbuy Consolidation and Packaging Playbook for Lower-Risk International Shipping",
+    "intro": "A route-first method for deciding what to combine, what to separate, which packaging to remove, and which paid services actually solve a measurable shipping problem.",
+    "body": [
+      "## Treat parcel submission as a design decision",
+      "Most expensive Superbuy shipping mistakes are not caused by choosing the wrong product. They happen when warehouse items are combined without a parcel plan. A buyer selects everything, asks for the lightest possible package, chooses the cheapest visible line and only later discovers that one battery, rigid box or oversized item changed the available routes. Parcel submission should be treated like designing a system. The inputs are item type, actual weight, dimensions, fragility, urgency, value and destination. The output is not simply one box. It is a parcel configuration that remains eligible for a sensible route, protects what matters and avoids paying for empty space. That shift in thinking makes consolidation deliberate instead of automatic.",
+      "## Start with the route, not the carton",
+      "Superbuy's current guidance says buyers select stored items, enter delivery details and choose from recommended delivery methods. It also warns that some items are restricted on certain lines. This means packing cannot be separated from route eligibility. Before combining anything, group items by their shipping characteristics: ordinary textiles, rigid footwear, fragile goods, electronics with batteries, liquids or powders, and unusually long pieces. Then check which groups can use the same realistic route to your destination. If one item removes several useful choices, price it as a separate parcel before letting it dictate the entire shipment. The cheapest-looking consolidation can become expensive when it forces every compatible item onto a narrower line.",
+      "## Use the free-storage window as planning room",
+      "Superbuy currently states that warehouse items receive 90 days of free storage. After that, its fee guide lists storage at CN¥0.1 per item per day, with a normal maximum of 180 days unless an extension is purchased in advance. The free period is useful, but it should be treated as a planning ceiling rather than a reason to wait indefinitely. Create a warehouse date, decision date and planned parcel date for every item. Review new arrivals quickly because seller return windows may close long before warehouse storage ends. Consolidate only when the next purchase has a realistic arrival date and when waiting is likely to save more than it costs in lost return flexibility, delayed delivery or additional storage.",
+      "## Measure the space you are buying",
+      "International freight may depend on actual weight, parcel dimensions or route-specific billing increments. Superbuy's shipping deposit is calculated from estimated weight, the chosen method and destination, while the final charge is reconciled after the carrier verifies the packed parcel. Before submission, estimate both kilograms and occupied volume. Do not use one universal dimensional divisor as a promise; route rules can differ. Instead, compare scenarios. Record the expected packed dimensions with shoe boxes retained, boxes folded, boxes removed and soft goods compressed. The purpose is not to predict the final invoice to the cent. It is to identify which object is creating unused space and whether changing that packaging is likely to alter the chargeable bracket.",
+      "## Remove packaging selectively",
+      "Superbuy's current fee page lists package removal as a free optional service. Free does not mean correct for every item. Remove a retail box when it mainly contains air and the product has another safe layer of protection. Keep packaging when it provides structural support, protects a fragile surface, preserves small components or carries meaningful collector value. For shoes, compare three choices: retain, fold or remove. Superbuy lists shoe-box folding at CN¥5 per item, which can reduce volume while preserving the box, although creasing is expected. Write the decision per item instead of one blanket remark. A parcel with mixed goods often needs different packaging rules for different rows.",
+      "## Compress soft goods only when volume is the problem",
+      "Vacuum packaging can reduce the space occupied by jackets, hoodies, bedding and other compressible products. Superbuy's current value-added service list prices vacuum packaging at CN¥17 per item and describes a maximum bag size of 100 by 80 centimeters. That service is useful when dimensional weight is likely to exceed scale weight and when compression will not damage the item. It is less useful for garments with rigid decoration, structured insulation, delicate finishes or shapes that should not stay crushed. Ask a practical question: will the predicted reduction cross a billing threshold or unlock a better route? If the answer is unclear, compression may add cost without changing the final charge.",
+      "## Match protection to a named failure mode",
+      "Reinforcement should solve a specific problem, not serve as a general comfort purchase. List the likely failure mode for each item: crushing, bending, moisture, impact, abrasion, loose parts or pressure from heavier goods. Then request the service that addresses that risk. Superbuy currently lists plastic-sealing packaging at CN¥10 per item for moisture protection and offers other optional packing and reinforcement choices during parcel submission. A soft T-shirt may need no added structure. A framed object may need edge and impact protection. Electronics may need separation from liquids and careful treatment of batteries. When the risk cannot be described, the service is probably being chosen emotionally rather than operationally.",
+      "## Split parcels when compatibility is more valuable than scale",
+      "Consolidation is free according to Superbuy's current fee explanation, and combining items can lower costs by avoiding repeated base charges. Yet one parcel is not automatically cheapest or safest. Split when item restrictions differ, when a fragile object would share a box with dense goods, when an urgent item should not wait, when parcel dimensions cross a route limit, or when the total value exceeds what you are comfortable concentrating in one shipment. Compare two complete scenarios: route, deposit, expected final adjustment, packing services, transit range and risk. A small second parcel can be rational if it preserves a significantly better line for the larger group.",
+      "## Read the shipping deposit as a working number",
+      "When a parcel is submitted, Superbuy collects an international shipping deposit based on estimated data. Its guidance says the final fee depends on the package size and weight verified by the shipping company, with differences adjusted afterward. Therefore the deposit should be saved as one point in the record, not treated as the closing cost. Capture the selected line, submitted item list, requested services, estimated weight, deposit and parcel date. After dispatch, add the verified weight, final adjustment and tracking status. This creates evidence for future planning and helps distinguish a genuinely expensive route from an estimate that was later reduced after packing.",
+      "## Write a parcel instruction that can be executed",
+      "A long remark filled with preferences is easy to misunderstand. Use item-level and parcel-level instructions. Item-level notes might say remove the outer retail box but retain the inner protective sleeve, fold one shoe box, keep another collectible box, or photograph a fragile corner before packing. Parcel-level notes might request separation of liquids, reinforcement around a rigid object, or lightweight outer packaging where appropriate. Number the warehouse items in the same order as the instruction. Avoid conflicting phrases such as remove all packaging and reinforce every product. The warehouse needs a clear hierarchy: what must be preserved, what may be removed, what risk requires protection and which result matters most.",
+      "## A practical submission checklist",
+      "Before paying the shipping deposit, confirm that every item has passed product approval, every item is eligible for the intended route, estimated dimensions have been considered, packaging decisions are written per item, paid services solve named risks, and the parcel value is acceptable. Compare at least one split-parcel alternative when the shipment contains restricted, fragile or oversized goods. Save the route and deposit shown at submission. Finally, remember the boundary of the process: Superbuy can consolidate, pack and hand the parcel to a third-party logistics provider, but customs decisions, taxes, delays and carrier handling cannot be guaranteed. Good planning does not remove uncertainty; it prevents avoidable uncertainty from being added at the warehouse.",
+      "## Practical Q&A",
+      "Use the questions below as a final parcel-submission check."
+    ]
+  },
+  {
+    "tag": "SUPERBUY 仓库质检体系",
+    "title": "把仓库当成决策关口：区分可见证据与未解决风险的 Superbuy 质检方法",
+    "intro": "一套可实际执行的仓库检查流程，让照片成为购买证据，而不是在国际包裹提交前提供虚假的安心感。",
+    "body": [
       "## 在包裹出现之前开始准备",
       "多数质检失误并不是从仓库拍照开始，而是从付款前没有保存证据开始。下单前应保存准确商品页、所选款式、尺码表、材质说明、数量、价格和决定购买的关键图片，并把不能接受的细节写成简短下单备注。商品入库后，仓库照片才能与一个固定版本比较，而不是与可能已经更换款式、图片或价格的卖家页面比较。",
       "## 理解 Superbuy 实际提供的服务",
@@ -35,10 +97,10 @@
     ]
   },
   {
-    "tag":"到手成本计算方法",
-    "title":"为什么最低商品价可能产生最昂贵包裹：Superbuy 订单完整到手成本框架",
-    "intro":"把商品价格、中国境内运费、包装尺寸、线路资格和最终核定国际运费连接起来的成本控制方法。",
-    "body":[
+    "tag": "到手成本计算方法",
+    "title": "为什么最低商品价可能产生最昂贵包裹：Superbuy 订单完整到手成本框架",
+    "intro": "把商品价格、中国境内运费、包装尺寸、线路资格和最终核定国际运费连接起来的成本控制方法。",
+    "body": [
       "## 商品页价格只是第一个数字",
       "低价可能完全真实，但仍然是一笔不划算的购买。Superbuy 的流程把商品与中国境内运费和之后的国际运费预付款分成不同阶段，因此不应把第一次付款当成总成本。应在购买前建立到手成本表，入库后更新重量和包装，最终核定费用出现后再关闭记录。比较商品时，应比较预计到手区间和纠错风险，而不是只比较卖家页面上的数字。",
       "## 使用三种成本状态",
@@ -70,10 +132,10 @@
     ]
   },
   {
-    "tag":"电子表格运行系统",
-    "title":"建立能够应对商品页变化、仓库延迟和线路限制的 Superbuy 电子表格",
-    "intro":"一套能够保存卖家证据、控制仓库决策，并从最终收货结果持续学习的长期研究系统。",
-    "body":[
+    "tag": "电子表格运行系统",
+    "title": "建立能够应对商品页变化、仓库延迟和线路限制的 Superbuy 电子表格",
+    "intro": "一套能够保存卖家证据、控制仓库决策，并从最终收货结果持续学习的长期研究系统。",
+    "body": [
       "## 不要把电子表格做成链接仓库",
       "很长的商品链接列表看起来丰富，却无法控制一次购买。商品页会变化、款式会消失、价格会调整，卖家也可能重复使用旧页面。耐用的 Superbuy 表格应保存一次购买决策当时的状态：选择了什么、承诺了什么、支付了什么、仓库收到了什么以及最终交付结果。十条完整记录可能比一万条未经检查的链接更有价值。",
       "## 围绕决策设计每一行",

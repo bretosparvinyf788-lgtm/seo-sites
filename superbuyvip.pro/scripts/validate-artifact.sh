@@ -4,27 +4,32 @@ set -euo pipefail
 script_dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
 if [[ "${SITES_ENV_READY:-}" != "1" ]]; then
-  exec "${script_dir}/sites-env.sh" -- "$0" "$@"
+  exec bash "${script_dir}/sites-env.sh" -- bash "$0" "$@"
 fi
 
 worker="${SITES_PROJECT_ROOT}/dist/server/index.js"
+hosting_source="${SITES_PROJECT_ROOT}/.openai/hosting.json"
 hosting="${SITES_PROJECT_ROOT}/dist/.openai/hosting.json"
 
 [[ -f "${worker}" ]] || {
   echo "Missing Sites Worker entry: dist/server/index.js" >&2
   exit 66
 }
-[[ -f "${hosting}" ]] || {
-  echo "Missing packaged Sites manifest: dist/.openai/hosting.json" >&2
-  exit 66
-}
+node_args=("${worker}")
+if [[ -f "${hosting_source}" ]]; then
+  [[ -f "${hosting}" ]] || {
+    echo "Missing packaged Sites manifest: dist/.openai/hosting.json" >&2
+    exit 66
+  }
+  node_args+=("${hosting}")
+fi
 
-node --input-type=module - "${worker}" "${hosting}" <<'NODE'
+node --input-type=module - "${node_args[@]}" <<'NODE'
 import { readFile } from "node:fs/promises";
 import { pathToFileURL } from "node:url";
 
 const [workerPath, hostingPath] = process.argv.slice(2);
-JSON.parse(await readFile(hostingPath, "utf8"));
+if (hostingPath) JSON.parse(await readFile(hostingPath, "utf8"));
 
 const workerUrl = pathToFileURL(workerPath);
 workerUrl.searchParams.set("sites-validation", `${process.pid}-${Date.now()}`);
@@ -34,4 +39,4 @@ if (!worker.default || typeof worker.default.fetch !== "function") {
 }
 NODE
 
-echo "Validated Sites artifact: ESM Worker default.fetch and hosting manifest are present."
+echo "Validated deployment artifact: ESM Worker default.fetch is present."

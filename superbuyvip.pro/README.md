@@ -1,6 +1,6 @@
 # SuperBuyVIP.pro — complete deployable source
 
-This package contains the production source for **superbuyvip.pro**. It includes the responsive site, seven-language content, ten local product images, three long-form buyer guides, ten FAQs per guide, SEO metadata, sitemap, robots rules, favicon, tests and Cloudflare Worker deployment configuration.
+This package contains the production source for **superbuyvip.pro**. It includes the responsive site, seven-language interface content, ten local product images, five long-form buyer guides, topic-specific FAQs, SEO metadata, sitemap, robots rules, favicon, tests and Cloudflare Worker deployment configuration.
 
 ## Requirements
 
@@ -63,7 +63,7 @@ Do not commit passwords, API tokens, account IDs or `.env` files.
 - Product records and links: `app/page.tsx`
 - Local product images: `public/products/`
 
-Every future English guide should remain between 1,500 and 1,800 words and include 10–15 topic-specific FAQs. The homepage shows the three available guides and the full library button opens the complete list.
+Every future English guide should remain between 1,500 and 1,800 words and include 10–15 topic-specific FAQs. The homepage shows the three newest guides and the full library page preserves the complete list.
 
 ## Useful commands
 

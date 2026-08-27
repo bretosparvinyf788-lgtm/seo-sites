@@ -27,9 +27,17 @@ Object.entries(translations).forEach(([code, locale]) => {
   locale.articleFaqs = articleFaqs[code];
 });
 const safeTranslations = JSON.stringify(translations).replaceAll("</", "<\\/");
+const guideUrls = [
+  "/guides/superbuy-1688-buying-risk-playbook/",
+  "/guides/superbuy-consolidation-packaging-playbook/",
+  "/guides/superbuy-warehouse-qc-system/",
+  "/guides/superbuy-landed-cost-framework/",
+  "/guides/superbuy-spreadsheet-operating-system/"
+];
+const articleDates = ["2026-08-27","2026-08-21","2026-08-17","2026-08-17","2026-08-17"];
 const articleSchema = JSON.stringify({
   "@context":"https://schema.org",
-  "@graph":longGuides.map((guide,index)=>({"@type":"Article",headline:guide.title,description:guide.intro,datePublished:"2026-08-17",dateModified:"2026-08-17",inLanguage:"en",author:{"@type":"Organization",name:"SuperBuyVIP"},publisher:{"@type":"Organization",name:"SuperBuyVIP"},mainEntityOfPage:`https://superbuyvip.pro/#guide-${index+1}`,hasPart:articleFaqs.en[index].items.map(item=>({"@type":"Question",name:item[0],acceptedAnswer:{"@type":"Answer",text:item[1]}}))}))
+  "@graph":longGuides.map((guide,index)=>({"@type":"Article",headline:guide.title,description:guide.intro,datePublished:articleDates[index],dateModified:articleDates[index],inLanguage:"en",author:{"@type":"Organization",name:"SuperBuyVIP"},publisher:{"@type":"Organization",name:"SuperBuyVIP"},mainEntityOfPage:`https://superbuyvip.pro${guideUrls[index]}`,hasPart:articleFaqs.en[index].items.map(item=>({"@type":"Question",name:item[0],acceptedAnswer:{"@type":"Answer",text:item[1]}}))}))
 }).replaceAll("</", "<\\/");
 
 html = html
@@ -55,16 +63,18 @@ const behavior = String.raw`
   const allGuideLabels = {en:'VIEW ALL BUYER GUIDES',de:'ALLE RATGEBER ANZEIGEN',fr:'VOIR TOUS LES GUIDES',es:'VER TODAS LAS GUÍAS',it:'VEDI TUTTE LE GUIDE',pt:'VER TODOS OS GUIAS',zh:'查看全部购买指南'};
   const guideLibraryTitles = {en:'All buyer guides',de:'Alle Kaufratgeber',fr:'Tous les guides d’achat',es:'Todas las guías de compra',it:'Tutte le guide all’acquisto',pt:'Todos os guias de compra',zh:'全部购买指南'};
   const guideLibraryDescriptions = {
-    en:'Three long-form, evidence-led operating guides for buyers who want cleaner QC decisions, more predictable parcel costs and a spreadsheet that survives repeat use.',
-    de:'Drei vollständige, faktenbasierte Leitfäden für bessere QC-Entscheidungen, planbarere Paketkosten und eine Tabelle, die auch bei wiederholter Nutzung zuverlässig bleibt.',
-    fr:'Trois guides complets fondés sur des faits pour mieux décider lors du contrôle qualité, prévoir le coût des colis et conserver un tableau fiable à chaque commande.',
-    es:'Tres guías completas basadas en hechos para tomar mejores decisiones de control de calidad, prever el coste del paquete y mantener una hoja fiable en cada compra.',
-    it:'Tre guide complete basate sui fatti per migliorare le decisioni di controllo qualità, prevedere i costi del pacco e mantenere un foglio affidabile nel tempo.',
-    pt:'Três guias completos baseados em fatos para melhorar decisões de controle de qualidade, prever custos do pacote e manter uma planilha confiável em compras recorrentes.',
-    zh:'三篇完整、以事实为依据的实操指南，帮助买家做好质检判断、预估包裹成本，并建立可长期复用的采购表格。'
+    en:'Five long-form, evidence-led operating guides for buyers who want cleaner sourcing and QC decisions, more predictable parcel costs and a spreadsheet that survives repeat use.',
+    de:'Fünf vollständige, faktenbasierte Leitfäden für bessere Beschaffungs- und QC-Entscheidungen, planbarere Paketkosten und eine zuverlässige Tabelle.',
+    fr:'Cinq guides complets fondés sur des faits pour mieux décider lors de l’achat et du contrôle qualité, prévoir le coût des colis et conserver un tableau fiable.',
+    es:'Cinco guías completas basadas en hechos para mejorar las decisiones de compra y control de calidad, prever el coste del paquete y mantener una hoja fiable.',
+    it:'Cinque guide complete basate sui fatti per migliorare acquisti e controllo qualità, prevedere i costi del pacco e mantenere un foglio affidabile.',
+    pt:'Cinco guias completos baseados em fatos para melhorar compras e controle de qualidade, prever custos do pacote e manter uma planilha confiável.',
+    zh:'五篇完整、以事实为依据的实操指南，帮助买家做好采购与质检判断、预估包裹成本，并建立可长期复用的采购表格。'
   };
   const editionLabels = {en:'WORDS',de:'VOLLSTÄNDIGE ÜBERSETZUNG',fr:'VERSION INTÉGRALE',es:'TRADUCCIÓN COMPLETA',it:'TRADUZIONE COMPLETA',pt:'TRADUÇÃO COMPLETA',zh:'完整译文'};
-  const articleWordCounts = translations.en.guides.map((guide,index) => [guide.title,guide.intro,...guide.body.slice(0,-2),translations.en.articleFaqs[index].title,...translations.en.articleFaqs[index].items.flat()].join(' ').match(/[A-Za-z0-9’'-]+/g)?.length || 0);
+  const guideUrls = ${JSON.stringify(guideUrls)};
+  const articleDates = ${JSON.stringify(articleDates)};
+  const articleWordCounts = translations.en.guides.map((guide,index) => [guide.title,guide.intro,...guide.body,translations.en.articleFaqs[index].title,...translations.en.articleFaqs[index].items.flat()].join(' ').match(/[A-Za-z0-9’'-]+/g)?.length || 0);
   const cards = [...document.querySelectorAll('.product-grid article')];
   const searches = [...document.querySelectorAll('.hero-search input')];
   const sortSelect = document.querySelector('.sort-box select');
@@ -142,7 +152,7 @@ const behavior = String.raw`
       if (title) title.textContent = guide.title;
       if (lead) lead.textContent = guide.intro;
       if (body) {
-        body.replaceChildren(...guide.body.slice(0,-2).map(paragraph => {
+        body.replaceChildren(...guide.body.map(paragraph => {
           const heading = paragraph.startsWith('## ');
           const element = document.createElement(heading ? 'h3' : 'p');
           element.textContent = heading ? paragraph.slice(3) : paragraph;
@@ -236,12 +246,9 @@ const behavior = String.raw`
     closeGuides();
     articleBackdrops[index]?.classList.remove('is-hidden');
   };
-  document.querySelectorAll('.guide-list article').forEach((card, index) => card.querySelector('button')?.addEventListener('click', () => openGuide(index)));
-  document.querySelector('[data-open-all-guides]')?.addEventListener('click', () => {
-    closeGuides();
-    libraryBackdrop?.classList.remove('is-hidden');
-  });
-  document.querySelectorAll('.guide-library > article').forEach((card, index) => card.querySelector('button')?.addEventListener('click', () => openGuide(index)));
+  document.querySelectorAll('.guide-list article').forEach((card, index) => card.querySelector('button')?.addEventListener('click', () => { location.href = guideUrls[index]; }));
+  document.querySelector('[data-open-all-guides]')?.addEventListener('click', () => { location.href = '/guides/'; });
+  document.querySelectorAll('.guide-library > article').forEach((card, index) => card.querySelector('button')?.addEventListener('click', () => { location.href = guideUrls[index]; }));
   document.querySelectorAll('[aria-label="Close article"],[aria-label="Close guide library"]').forEach(button => button.addEventListener('click', closeGuides));
   [...articleBackdrops,libraryBackdrop].forEach(backdrop => backdrop?.addEventListener('click', event => { if (event.target === backdrop) closeGuides(); }));
   document.addEventListener('keydown', event => { if (event.key === 'Escape') closeGuides(); });

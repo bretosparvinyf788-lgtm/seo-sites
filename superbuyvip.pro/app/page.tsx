@@ -49,32 +49,40 @@ const guideLibraryTitles: Record<Lang,string> = {
   it:"Tutte le guide all’acquisto", pt:"Todos os guias de compra", zh:"全部购买指南"
 };
 const guideLibraryDescriptions: Record<Lang,string> = {
-  en:"Three original, evidence-led Superbuy guides researched from the current official shopping, warehouse and shipping workflow.",
-  de:"Drei eigenständige, belegbasierte Superbuy-Ratgeber auf Grundlage des aktuellen offiziellen Einkaufs-, Lager- und Versandablaufs.",
-  fr:"Trois guides Superbuy originaux et fondés sur des preuves, issus du parcours officiel actuel d’achat, d’entrepôt et d’expédition.",
-  es:"Tres guías originales de Superbuy, basadas en pruebas y en el flujo oficial actual de compra, almacén y envío.",
-  it:"Tre guide originali Superbuy, basate su prove e sull’attuale flusso ufficiale di acquisto, magazzino e spedizione.",
-  pt:"Três guias originais da Superbuy, baseados em evidências e no fluxo oficial atual de compra, armazém e envio.",
-  zh:"三篇基于 Superbuy 当前官方购买、仓储和国际运输流程研究的原创实用指南。"
+  en:"Five original, evidence-led Superbuy guides researched from the current official shopping, warehouse and shipping workflow.",
+  de:"Fünf eigenständige, belegbasierte Superbuy-Ratgeber auf Grundlage des aktuellen offiziellen Einkaufs-, Lager- und Versandablaufs.",
+  fr:"Cinq guides Superbuy originaux et fondés sur des preuves, issus du parcours officiel actuel d’achat, d’entrepôt et d’expédition.",
+  es:"Cinco guías originales de Superbuy, basadas en pruebas y en el flujo oficial actual de compra, almacén y envío.",
+  it:"Cinque guide originali Superbuy, basate su prove e sull’attuale flusso ufficiale di acquisto, magazzino e spedizione.",
+  pt:"Cinco guias originais da Superbuy, baseados em evidências e no fluxo oficial atual de compra, armazém e envio.",
+  zh:"五篇基于 Superbuy 当前官方购买、仓储和国际运输流程研究的原创实用指南。"
 };
 const editionLabels: Record<Lang,string> = {
   en:"WORDS",de:"VOLLSTÄNDIGE ÜBERSETZUNG",fr:"VERSION INTÉGRALE",es:"TRADUCCIÓN COMPLETA",it:"TRADUZIONE COMPLETA",pt:"TRADUÇÃO COMPLETA",zh:"完整译文"
 };
 const guidesByLanguage: Record<Lang,typeof longGuides> = {en:longGuides,de:deGuides,fr:frGuides,es:esGuides,it:itGuides,pt:ptGuides,zh:zhGuides};
 const articleFaqsByLanguage: Record<Lang,typeof articleFaqs.en> = articleFaqs;
-const articleWordCounts = longGuides.map((guide,index) => [guide.title,guide.intro,...guide.body.slice(0,-2),articleFaqs.en[index].title,...articleFaqs.en[index].items.flat()].join(" ").replaceAll("## ","").match(/[A-Za-z0-9’'-]+/g)?.length || 0);
+const guideUrls = [
+  "/guides/superbuy-1688-buying-risk-playbook/",
+  "/guides/superbuy-consolidation-packaging-playbook/",
+  "/guides/superbuy-warehouse-qc-system/",
+  "/guides/superbuy-landed-cost-framework/",
+  "/guides/superbuy-spreadsheet-operating-system/"
+];
+const articleDates = ["2026-08-27","2026-08-21","2026-08-17","2026-08-17","2026-08-17"];
+const articleWordCounts = longGuides.map((guide,index) => [guide.title,guide.intro,...guide.body,articleFaqs.en[index].title,...articleFaqs.en[index].items.flat()].join(" ").replaceAll("## ","").match(/[A-Za-z0-9’'-]+/g)?.length || 0);
 const articleSchema = {
   "@context":"https://schema.org",
   "@graph":longGuides.map((guide,index)=>({
     "@type":"Article",
     headline:guide.title,
     description:guide.intro,
-    datePublished:"2026-08-17",
-    dateModified:"2026-08-17",
+    datePublished:articleDates[index],
+    dateModified:articleDates[index],
     inLanguage:"en",
     author:{"@type":"Organization",name:"SuperBuyVIP"},
     publisher:{"@type":"Organization",name:"SuperBuyVIP"},
-    mainEntityOfPage:`https://superbuyvip.pro/#guide-${index+1}`,
+    mainEntityOfPage:`https://superbuyvip.pro${guideUrls[index]}`,
     hasPart:articleFaqs.en[index].items.map(item=>({"@type":"Question",name:item[0],acceptedAnswer:{"@type":"Answer",text:item[1]}}))
   }))
 };
@@ -209,8 +217,8 @@ export default function Home(){
 
       <section className="guides" id="guides">
         <div className="section-row"><div><span data-i18n="guidesLabel">{copy.guidesLabel}</span><h2 data-i18n="guidesTitle">{copy.guidesTitle}</h2></div><p data-i18n="guidesText">{copy.guidesText}</p></div>
-        <div className="guide-list">{guides.map((guide,index)=><article key={index} data-index={index}><span>DOC-0{index+1}</span><div><b>{guide.tag}</b><h3>{guide.title}</h3><p>{guide.intro}</p></div><button onClick={()=>setArticle(index)}><span data-i18n="open">{copy.open}</span> <Arrow/></button></article>)}</div>
-        <div className="all-guides-bar"><button data-open-all-guides onClick={()=>setGuideLibrary(true)}><span data-all-guides-label>{allGuideLabels[lang]}</span> <Arrow/></button></div>
+        <div className="guide-list">{guides.slice(0,3).map((guide,index)=><article key={index} data-index={index}><span>DOC-0{index+1}</span><div><b>{guide.tag}</b><h3>{guide.title}</h3><p>{guide.intro}</p></div><button onClick={()=>{window.location.href=guideUrls[index];}}><span data-i18n="open">{copy.open}</span> <Arrow/></button></article>)}</div>
+        <div className="all-guides-bar"><button data-open-all-guides onClick={()=>{window.location.href="/guides/";}}><span data-all-guides-label>{allGuideLabels[lang]}</span> <Arrow/></button></div>
       </section>
 
       <section className="faq" id="faq">
@@ -221,7 +229,7 @@ export default function Home(){
 
     <footer><a className="logo" href="#top"><span>S</span><b>SUPERBUY <i>VIP</i></b></a><p data-i18n="footer">{copy.footer}</p><div>{[1,2,3,4].map(index=><a key={index} data-i18n={`nav.${index}`} href={["#top","#index","#calculator","#guides","#faq"][index]}>{copy.nav[index]}</a>)}</div><small>© 2026 SUPERBUYVIP.PRO</small></footer>
 
-    <div className={`modal ${guideLibrary?"":"is-hidden"}`} onMouseDown={()=>setGuideLibrary(false)}><article className="library-modal" onMouseDown={e=>e.stopPropagation()}><button onClick={()=>setGuideLibrary(false)} aria-label="Close guide library">×</button><span>DOCUMENT LIBRARY / 03</span><h2 data-guide-library-title>{guideLibraryTitles[lang]}</h2><p className="lead" data-guide-library-description>{guideLibraryDescriptions[lang]}</p><div className="guide-library">{guides.map((guide,index)=><article key={index}><span>DOC-0{index+1}</span><div><b>{guide.tag}</b><h3>{guide.title}</h3><p>{guide.intro}</p><small>{articleMeta(index)} · 2026-08-17</small></div><button onClick={()=>{setGuideLibrary(false);setArticle(index);}}><span data-i18n="open">{copy.open}</span> <Arrow/></button></article>)}</div></article></div>
-    {guides.map((guide,guideIndex)=><div key={guideIndex} id={`guide-${guideIndex+1}`} className={`modal ${article===guideIndex?"":"is-hidden"}`} onMouseDown={()=>setArticle(null)}><article className="article-modal" onMouseDown={e=>e.stopPropagation()}><button onClick={()=>setArticle(null)} aria-label="Close article">×</button><span>{guide.tag} · {articleMeta(guideIndex)}</span><h2>{guide.title}</h2><p className="lead">{guide.intro}</p><section className="article-body">{guide.body.slice(0,-2).map((paragraph,index)=>paragraph.startsWith("## ")?<h3 key={index}>{paragraph.slice(3)}</h3>:<p key={index}>{paragraph}</p>)}</section><section className="article-faqs" data-article-faqs><h3>{articleFaqsByLanguage[lang][guideIndex].title}</h3>{articleFaqsByLanguage[lang][guideIndex].items.map((item,index)=><details key={index}><summary><span>{String(index+1).padStart(2,"0")}</span><b>{item[0]}</b><i>+</i></summary><p>{item[1]}</p></details>)}</section><div>{researchNotes[lang]}</div></article></div>)}
+    <div className={`modal ${guideLibrary?"":"is-hidden"}`} onMouseDown={()=>setGuideLibrary(false)}><article className="library-modal" onMouseDown={e=>e.stopPropagation()}><button onClick={()=>setGuideLibrary(false)} aria-label="Close guide library">×</button><span>DOCUMENT LIBRARY / 05</span><h2 data-guide-library-title>{guideLibraryTitles[lang]}</h2><p className="lead" data-guide-library-description>{guideLibraryDescriptions[lang]}</p><div className="guide-library">{guides.map((guide,index)=><article key={index}><span>DOC-0{index+1}</span><div><b>{guide.tag}</b><h3>{guide.title}</h3><p>{guide.intro}</p><small>{articleMeta(index)} · {articleDates[index]}</small></div><button onClick={()=>{window.location.href=guideUrls[index];}}><span data-i18n="open">{copy.open}</span> <Arrow/></button></article>)}</div></article></div>
+    {guides.map((guide,guideIndex)=><div key={guideIndex} id={`guide-${guideIndex+1}`} className={`modal ${article===guideIndex?"":"is-hidden"}`} onMouseDown={()=>setArticle(null)}><article className="article-modal" onMouseDown={e=>e.stopPropagation()}><button onClick={()=>setArticle(null)} aria-label="Close article">×</button><span>{guide.tag} · {articleMeta(guideIndex)}</span><h2>{guide.title}</h2><p className="lead">{guide.intro}</p><section className="article-body">{guide.body.map((paragraph,index)=>paragraph.startsWith("## ")?<h3 key={index}>{paragraph.slice(3)}</h3>:<p key={index}>{paragraph}</p>)}</section><section className="article-faqs" data-article-faqs><h3>{articleFaqsByLanguage[lang][guideIndex].title}</h3>{articleFaqsByLanguage[lang][guideIndex].items.map((item,index)=><details key={index}><summary><span>{String(index+1).padStart(2,"0")}</span><b>{item[0]}</b><i>+</i></summary><p>{item[1]}</p></details>)}</section><div>{researchNotes[lang]}</div></article></div>)}
   </main>;
 }
