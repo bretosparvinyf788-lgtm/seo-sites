@@ -3,7 +3,7 @@
 }
 
 .guide-grid {
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
   gap: 24px;
 }
 
@@ -48,13 +48,13 @@
 
 @media (max-width: 760px) {
   .guide-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
   }
 }
 
 @media (max-width: 520px) {
   .guide-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr !important;
   }
 
   .guide-card > a:first-child {
