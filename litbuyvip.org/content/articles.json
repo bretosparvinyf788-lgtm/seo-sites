@@ -1,5 +1,88 @@
 [
   {
+    "slug": "litbuy-order-status-seller-dispatch-warehouse-arrival",
+    "label": "TRACK THE ORDER",
+    "title": "LitBuy Order Status Guide: Track Seller Dispatch to Warehouse Arrival Without Guessing",
+    "excerpt": "Track a LitBuy order from purchase through seller dispatch and warehouse receipt with a practical status ledger that separates estimates, scans and confirmed storage.",
+    "read": "17 min read",
+    "date": "August 28, 2026",
+    "theme": "violet",
+    "cover": "/assets/litbuy-order-status-warehouse-arrival.webp",
+    "intro": "The quietest part of a cross-border order often creates the most confusion. Payment has been made, but the item is still somewhere between a marketplace seller and the LitBuy warehouse. A short status label can describe one completed action without answering when the next one will happen. LitBuy currently tells users to follow orders in the Orders area and move to Warehouse after an item shows Stored. Its public interfaces also distinguish order time, purchase completion time and warehouse receipt time, while product pages may show separate estimated seller-dispatch and warehouse-arrival dates. Those are useful checkpoints, but they are not interchangeable. This guide builds a domestic-order ledger around the evidence each checkpoint actually provides. The aim is to identify who needs to act, preserve the right proof and investigate a real exception without turning an estimate into a promise.",
+    "sections": [
+      {
+        "heading": "Freeze the exact order before the status changes",
+        "paragraphs": [
+          "Start the ledger immediately after submitting the order. Record the LitBuy order identifier, source marketplace, seller name as displayed, product title, selected variant, quantity and amount shown in the order record. Add the order time and preserve the source listing snapshot you relied on. If the listing offers several colours, sizes or bundles, write the selected combination as one plain-language line. A marketplace title alone is rarely precise enough to identify what should arrive.",
+          "Keep one row per item rather than one row per checkout. A seller can split a purchase, cancel one variant or dispatch units at different times. Item-level rows let you mark only the affected unit as unresolved. Add a private note for any instruction that influenced the purchase, but distinguish your request from something the seller accepted. This first snapshot becomes the baseline for comparing later status, domestic tracking and warehouse evidence."
+        ]
+      },
+      {
+        "heading": "Separate order submission from purchase completion",
+        "paragraphs": [
+          "An order entering the system does not prove that the third-party seller has been paid or that stock has been secured. LitBuy's public tracking interface separates Order Time from Purchase Completion Time, which is a useful clue for your own record design. Put those timestamps in different columns. When purchase completion appears, record the displayed time and status wording exactly. Do not rewrite it as shipped, reserved or guaranteed unless the interface explicitly confirms that action.",
+          "If purchase completion remains absent, review the order details for a visible request, exception or change rather than guessing why it is waiting. The useful question is factual: what action is pending, and which party must take it? Avoid assuming that a slow update means the seller has refused the order. It may reflect a step that the current public screen does not explain. Your ledger should show unknown until a status or support response resolves the gap."
+        ]
+      },
+      {
+        "heading": "Treat estimated dates as planning signals, not evidence",
+        "paragraphs": [
+          "LitBuy product pages currently may display an estimated seller shipment date and a separate expected warehouse-arrival date. Save both with the date you viewed them. Their value is planning: they suggest when to check again and whether an item could affect a larger consolidation. They do not confirm that the seller dispatched the exact variant, that a carrier accepted it or that the warehouse scanned it.",
+          "Never replace the original estimate when it changes. Add a new entry beside it. A history of visible estimates is more useful than a single moving date because it shows what information guided each decision. Compare actual events only with the estimate shown for that order at that time. Do not transfer a date from another listing, another seller or an older purchase. Similar products can have completely different domestic fulfilment paths."
+        ]
+      },
+      {
+        "heading": "Build a domestic evidence timeline with four checkpoints",
+        "paragraphs": [
+          "Use four checkpoint columns: purchase completed, seller dispatched, domestic carrier event and warehouse received. For each, store the displayed status, timestamp and evidence location. The seller-dispatched checkpoint needs more than an estimate; look for an actual status or domestic tracking reference. The carrier checkpoint should preserve the latest meaningful scan. The warehouse checkpoint should use the receipt or Stored event visible in the account, not a carrier prediction that delivery is approaching.",
+          "Add a separate interpretation column. A scan saying a shipment was accepted supports carrier possession, while an electronic-information event may support only label creation. Keeping the original event apart from your interpretation prevents an optimistic note from becoming false evidence later. Capture changes rather than every refresh. Repeated identical lines add noise; a new carrier, location, action or exception deserves a dated row."
+        ]
+      },
+      {
+        "heading": "Read every status by actor, action and object",
+        "paragraphs": [
+          "Translate each update through three questions: who acted, what action was completed, and which item or package the event covers. A purchase-complete status concerns the buying step. A seller-dispatch event concerns movement away from the seller. A warehouse-receipt event concerns arrival at LitBuy. None of those alone proves that the correct variant passed inspection. This simple grammar stops one positive label from being stretched across the whole workflow.",
+          "When one element is missing, label it unknown. If a carrier event names a package but your order contains two items, do not assume both are inside. If a seller status changes but no domestic reference is visible, record the status without inventing a route. If a warehouse time appears, preserve it before deciding whether every unit was recorded. Precise uncertainty is more useful than a smooth story that the evidence cannot support."
+        ]
+      },
+      {
+        "heading": "Control split shipments and combined seller orders",
+        "paragraphs": [
+          "Multiple items from one seller can create misleading progress. Create a package-mapping table with the item row, domestic tracking reference, quantity expected and current checkpoint. If two items share one reference, mark that relationship without merging their identities. If a second reference appears, add it as a new package. The purpose is to know which physical arrival could satisfy which order line when the warehouse begins recording goods.",
+          "Do the same when several sellers are part of one planned international parcel. Their domestic journeys remain separate until each item reaches storage. One early arrival should not make the full haul look complete, and one late seller should not obscure items already ready for review. Use ready, moving, unresolved and stored as private planning labels, while preserving LitBuy's displayed wording in a separate field. Your labels organize decisions; they must not replace the platform record."
+        ]
+      },
+      {
+        "heading": "Investigate a stalled order with one precise question",
+        "paragraphs": [
+          "A status that has not changed is a signal to review current evidence, not automatic proof of loss or seller failure. First identify the last confirmed checkpoint and compare it with any current estimate shown for the same order. Check whether the account requests information or displays an exception. Then ask one answerable question: whether purchase is complete, whether a domestic tracking reference exists, which item a reference covers, or whether the warehouse has recorded a delivered package.",
+          "Send the order identifier, item description, last displayed status and relevant timestamp together. Include the domestic reference only when it belongs to that row. Avoid combining purchase delay, delivery delay and warehouse identification into one message; they involve different actors and evidence. LitBuy's public pages do not provide a universal investigation deadline for every seller and order, so this guide does not invent one. Base escalation on the current record and current official guidance."
+        ]
+      },
+      {
+        "heading": "Reconcile carrier delivery with warehouse receipt",
+        "paragraphs": [
+          "A domestic carrier's delivered event and a warehouse Stored status answer different questions. The first may indicate delivery to the destination used for the domestic leg. The second is the account checkpoint LitBuy tells users to wait for before selecting goods in Warehouse. Record both times when available. A gap between them is not, by itself, proof of a missing item; it is an unresolved handoff that should remain visible in the ledger.",
+          "When the carrier shows delivery but the item is not stored, prepare a compact reconciliation packet. Include the LitBuy order identifier, seller, exact item row, domestic tracking reference, displayed delivery time and the warehouse status currently visible. If several packages arrived, keep their references separate. Ask whether that specific delivery has been matched to the order. This is more actionable than saying the warehouse has not updated, because it defines the object that needs reconciliation."
+        ]
+      },
+      {
+        "heading": "Treat Stored as the start of warehouse verification",
+        "paragraphs": [
+          "LitBuy's DIY-order and forwarding instructions direct users to Warehouse once an order shows Stored. That status is the handoff from domestic-order tracking to warehouse decision-making. Close the domestic timeline with the stored time, but do not close the item record. Open a new warehouse-review stage for identity, quantity, selected variant and visible condition. The item becoming selectable does not erase the purchase specification you preserved at the beginning.",
+          "Compare warehouse images and recorded details against the baseline row before including the item in a parcel. If the unit, colour, size or quantity appears inconsistent, mark a warehouse exception and keep it outside the ready group until resolved. If everything matches, change your private label to warehouse verified. Separating stored from verified protects against a common shortcut: treating successful arrival as proof that the seller sent exactly what was ordered."
+        ]
+      },
+      {
+        "heading": "Close the loop and improve the next purchase",
+        "paragraphs": [
+          "Close the order ledger only when every item row has a clear outcome: stored and verified, cancelled in the visible record, or moved into an unresolved exception process. Preserve the final checkpoint times and any package mapping. Do not delete earlier estimates or status changes after a successful arrival. They reveal which signals were useful and where uncertainty entered the workflow, making the next order easier to supervise.",
+          "Review the completed ledger before planning international consolidation. Note which items are ready, which seller created a split shipment, whether any domestic handoff lacked a reference and how long your own checks remained unresolved without inventing a general promise from one experience. The result is a repeatable system: exact order baseline, separate purchase and dispatch evidence, dated domestic events, confirmed warehouse receipt and item verification. That sequence turns LitBuy order status from a collection of labels into a defensible chain of custody."
+        ]
+      }
+    ]
+  },
+  {
     "slug": "litbuy-restricted-items-shipping-eligibility-screening",
     "label": "SCREEN THE ITEM",
     "title": "LitBuy Restricted Items Screening: Build a Shipping-Eligibility File Before You Buy",
