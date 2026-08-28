@@ -1,6 +1,59 @@
 {
   "en": [
     {
+      "title": "Superbuy Parcel Forwarding: 12 Practical Questions",
+      "items": [
+        [
+          "Is parcel forwarding the same as Superbuy’s shopping-agent service?",
+          "No. In forwarding, you purchase and pay the seller yourself, then use Superbuy for intake, storage and international delivery. Seller selection and the original transaction remain your responsibility."
+        ],
+        [
+          "Which Superbuy warehouse address should I use?",
+          "Use the current address displayed inside your own forwarding workflow. Select the appropriate Shenzhen or Hong Kong option for the parcel’s origin and destination, and copy the user-specific identifier exactly."
+        ],
+        [
+          "When should I create the forwarding record?",
+          "Create and submit it before the seller dispatches. Wait for the item-information review, then provide the domestic carrier and tracking number within the current submission window."
+        ],
+        [
+          "What evidence should I save before domestic shipment?",
+          "Save the paid order, exact variation, quantity, product images, seller promises, warehouse address version and expected carton count. These records help reconcile an incorrect or unmatched arrival."
+        ],
+        [
+          "Do warehouse photos prove that an item works?",
+          "No. Photos can support visible identity and condition checks, but they cannot establish electronic performance, authenticity, internal construction, material composition or long-term durability."
+        ],
+        [
+          "What if one seller order has several tracking numbers?",
+          "Map every tracking number to its expected items and carton count. Update the forwarding record or contact support with the exact mapping so each arrival can be matched correctly."
+        ],
+        [
+          "What if several orders arrive in one carton?",
+          "Record the combined relationship before arrival when possible. After storage, compare the warehouse item identifiers, photographs, count and weight with your carton map before consolidation."
+        ],
+        [
+          "Why compare the seller weight with the warehouse weight?",
+          "A material difference may indicate missing pieces, combined goods, unusual packaging or incorrect expectations. Resolve unexplained differences before the item enters an international parcel."
+        ],
+        [
+          "Does ninety-day free storage extend the seller’s return period?",
+          "No. Warehouse storage and seller after-sales are separate clocks. Review the item immediately because the seller’s dispute or return window may close much earlier."
+        ],
+        [
+          "Should I remove every retail box to lower shipping cost?",
+          "No. Remove packaging only after balancing dimensional savings against protection, identification, resale or collectible value. Keep instructions specific and measurable."
+        ],
+        [
+          "Can every item received by the warehouse be shipped internationally?",
+          "No. Route eligibility depends on product attributes, destination and current carrier rules. Check likely restrictions before purchase and verify the routes offered after storage."
+        ],
+        [
+          "What should I record after the parcel is delivered?",
+          "Record final weight, dimensions, route, shipping adjustment, declaration, transit time, packaging condition and item outcome. Use the result to improve future forwarding decisions."
+        ]
+      ]
+    },
+    {
       "title": "Twelve practical questions about buying from 1688 through Superbuy",
       "items": [
         [
