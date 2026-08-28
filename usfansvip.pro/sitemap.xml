@@ -7,25 +7,49 @@
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://usfansvip.pro/guides/usfans-shipping-cost-estimator-parcel-budget.html</loc>
-    <lastmod>2026-08-18</lastmod>
+    <loc>https://usfansvip.pro/guides/</loc>
+    <lastmod>2026-08-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://usfansvip.pro/guides/usfans-restricted-items-route-eligibility-checklist</loc>
+    <lastmod>2026-08-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://usfansvip.pro/guides/usfans-warehouse-return-refund-evidence-playbook.html</loc>
-    <lastmod>2026-08-21</lastmod>
+    <loc>https://usfansvip.pro/guides/usfans-warehouse-return-refund-evidence-playbook</loc>
+    <lastmod>2026-08-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://usfansvip.pro/guides/usfans-restricted-items-route-eligibility-checklist.html</loc>
-    <lastmod>2026-08-27</lastmod>
+    <loc>https://usfansvip.pro/guides/usfans-shipping-cost-estimator-parcel-budget</loc>
+    <lastmod>2026-08-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://usfansvip.pro/guides/usfans-multi-seller-haul-arrival-timeline.html</loc>
+    <loc>https://usfansvip.pro/guides/usfans-shipping-weight-volume-landed-cost-guide</loc>
+    <lastmod>2026-08-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://usfansvip.pro/guides/usfans-qc-photos-warehouse-inspection-method</loc>
+    <lastmod>2026-08-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://usfansvip.pro/guides/usfans-spreadsheet-buying-method</loc>
+    <lastmod>2026-08-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://usfansvip.pro/guides/usfans-multi-seller-haul-arrival-timeline</loc>
     <lastmod>2026-08-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
