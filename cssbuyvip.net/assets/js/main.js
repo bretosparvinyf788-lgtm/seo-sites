@@ -98,8 +98,8 @@ async function translateText(text, lang) {
     if (cached) return cached;
   } catch (e) {}
 
-  const leading = text.match(/^\\s*/)[0];
-  const trailing = text.match(/\\s*$/)[0];
+  const leading = text.match(/^\s*/)[0];
+  const trailing = text.match(/\s*$/)[0];
   const source = text.trim();
   const endpoint = 'https://translate.googleapis.com/translate_a/single?client=gtx&sl=en&tl=' +
     encodeURIComponent(target) + '&dt=t&q=' + encodeURIComponent(source);
