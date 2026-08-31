@@ -46,122 +46,88 @@ if (languageTrigger) languageTrigger.addEventListener('click', (event) => {
 document.querySelectorAll('.language-option').forEach(option => {
   option.addEventListener('click', () => {
     languageMenu.classList.remove('open');
-    void applyLanguage(option.dataset.lang || 'en');
+    applyLanguage(option.dataset.lang || 'en');
   });
 });
 document.querySelectorAll('.mobile-nav a').forEach(a => a.addEventListener('click', closeMobile));
 window.addEventListener('resize', () => { if (window.innerWidth > 1120) closeMobile(); });
 
-const fullPageTextNodes = [];
-let originalPageTitle = document.title;
-let translationRun = 0;
+let pendingLanguage = null;
 
-function collectFullPageText() {
-  fullPageTextNodes.length = 0;
-  const root = document.body;
-  if (!root) return;
-  const walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT);
-  let node;
-  while ((node = walker.nextNode())) {
-    const parent = node.parentElement;
-    const text = node.nodeValue || '';
-    if (!parent || !text.trim()) continue;
-    if (parent.closest('script,style,noscript,svg,.language-menu,[data-i18n],[data-i18n-html]')) continue;
-    if (!/[A-Za-z]/.test(text)) continue;
-    fullPageTextNodes.push({node, original: text});
-  }
+function clearGoogleTranslation() {
+  const expires = 'Thu, 01 Jan 1970 00:00:00 GMT';
+  document.cookie = 'googtrans=; expires=' + expires + '; path=/';
+  document.cookie = 'googtrans=; expires=' + expires + '; path=/; domain=.cssbuyvip.net';
 }
 
-function restoreFullPageText() {
-  fullPageTextNodes.forEach(item => {
-    if (item.node && item.node.isConnected) item.node.nodeValue = item.original;
-  });
-  document.title = originalPageTitle;
-}
-
-function translationCacheKey(lang, text) {
-  let hash = 2166136261;
-  for (let i = 0; i < text.length; i += 1) {
-    hash ^= text.charCodeAt(i);
-    hash = Math.imul(hash, 16777619);
-  }
-  return 'cssbuyvip-translation-v1:' + lang + ':' + text.length + ':' + (hash >>> 0);
-}
-
-async function translateText(text, lang) {
+function setGoogleTranslation(lang) {
   const targetCodes = {zh: 'zh-CN', es: 'es', fr: 'fr', de: 'de', pt: 'pt'};
   const target = targetCodes[lang];
-  if (!target || !text.trim()) return text;
-  const key = translationCacheKey(lang, text);
-  try {
-    const cached = localStorage.getItem(key);
-    if (cached) return cached;
-  } catch (e) {}
-
-  const leading = text.match(/^\s*/)[0];
-  const trailing = text.match(/\s*$/)[0];
-  const source = text.trim();
-  const endpoint = '/api/translate?lang=' + encodeURIComponent(lang) +
-    '&q=' + encodeURIComponent(source);
-
-  for (let attempt = 0; attempt < 2; attempt += 1) {
-    try {
-      const response = await fetch(endpoint, {credentials: 'same-origin'});
-      if (!response.ok) throw new Error('Translation request failed');
-      const payload = await response.json();
-      const translated = payload && typeof payload.translated === 'string'
-        ? payload.translated
-        : '';
-      if (!translated) throw new Error('Empty translation');
-      const result = leading + translated + trailing;
-      try { localStorage.setItem(key, result); } catch (e) {}
-      return result;
-    } catch (e) {
-      if (attempt === 1) return text;
-    }
+  const combo = document.querySelector('.goog-te-combo');
+  if (!combo || !target) {
+    pendingLanguage = lang;
+    return false;
   }
-  return text;
+  if (combo.value !== target) {
+    combo.value = target;
+    combo.dispatchEvent(new Event('change', {bubbles: true}));
+  }
+  pendingLanguage = null;
+  return true;
 }
 
-async function translateFullPage(lang, runId) {
-  restoreFullPageText();
-  const jobs = fullPageTextNodes.slice();
-  let cursor = 0;
-  const worker = async () => {
-    while (cursor < jobs.length && runId === translationRun) {
-      const item = jobs[cursor++];
-      const translated = await translateText(item.original, lang);
-      if (runId === translationRun && item.node && item.node.isConnected) {
-        item.node.nodeValue = translated;
-      }
-    }
-  };
-  await Promise.all(Array.from({length: Math.min(5, jobs.length)}, worker));
-  if (runId === translationRun) document.title = await translateText(originalPageTitle, lang);
-}
-
-async function applyLanguage(lang) {
+function applyLanguage(lang) {
   const selected = translations[lang] ? lang : 'en';
-  const dict = translations[selected];
   try { localStorage.setItem('cssbuyvip-language', selected); } catch (e) {}
   document.documentElement.lang = selected === 'zh' ? 'zh-CN' : selected;
-  document.querySelectorAll('[data-i18n]').forEach(el => {
-    const value = dict[el.dataset.i18n];
-    if (value !== undefined) el.textContent = value;
-  });
-  document.querySelectorAll('[data-i18n-html]').forEach(el => {
-    const value = dict[el.dataset.i18nHtml];
-    if (value !== undefined) el.innerHTML = value;
-  });
   document.querySelectorAll('.language-option').forEach(o => o.classList.toggle('active', o.dataset.lang === selected));
   const names = {en:'English',zh:'简体中文',es:'Español',fr:'Français',de:'Deutsch',pt:'Português'};
-  const runId = ++translationRun;
-  if (languageTrigger) languageTrigger.setAttribute('aria-busy', selected === 'en' ? 'false' : 'true');
   if (languageCurrent) languageCurrent.textContent = names[selected] || 'English';
-  if (selected === 'en') restoreFullPageText();
-  else await translateFullPage(selected, runId);
-  if (runId === translationRun && languageTrigger) languageTrigger.setAttribute('aria-busy', 'false');
+
+  if (selected === 'en') {
+    const combo = document.querySelector('.goog-te-combo');
+    if (combo && combo.value) {
+      clearGoogleTranslation();
+      window.location.reload();
+    }
+    return;
+  }
+  setGoogleTranslation(selected);
 }
+
+window.googleTranslateElementInit = function() {
+  if (!window.google || !google.translate || !google.translate.TranslateElement) return;
+  new google.translate.TranslateElement({
+    pageLanguage: 'en',
+    includedLanguages: 'zh-CN,es,fr,de,pt',
+    autoDisplay: false
+  }, 'google_translate_element');
+  window.setTimeout(() => {
+    if (pendingLanguage) setGoogleTranslation(pendingLanguage);
+  }, 300);
+};
+
+function initializeFullPageTranslation() {
+  if (languageMenu) languageMenu.classList.add('notranslate');
+  let host = document.getElementById('google_translate_element');
+  if (!host) {
+    host = document.createElement('div');
+    host.id = 'google_translate_element';
+    host.hidden = true;
+    document.body.appendChild(host);
+  }
+  const style = document.createElement('style');
+  style.textContent = '.goog-te-banner-frame,.goog-te-balloon-frame,#goog-gt-tt{display:none!important}body{top:0!important}.skiptranslate iframe{visibility:hidden!important}';
+  document.head.appendChild(style);
+  if (!document.querySelector('script[data-cssbuy-translate]')) {
+    const script = document.createElement('script');
+    script.src = 'https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit';
+    script.async = true;
+    script.dataset.cssbuyTranslate = 'true';
+    document.head.appendChild(script);
+  }
+}
+
 function featureLatestCSSBuyGuide() {
   const guideGrid = document.querySelector('#guides .guides');
   if (!guideGrid) return;
@@ -180,7 +146,8 @@ function featureLatestCSSBuyGuide() {
   });
 }
 featureLatestCSSBuyGuide();
-collectFullPageText();
+initializeFullPageTranslation();
 let initialLanguage = 'en';
 try { initialLanguage = localStorage.getItem('cssbuyvip-language') || 'en'; } catch (e) {}
-void applyLanguage(initialLanguage);
+pendingLanguage = initialLanguage === 'en' ? null : initialLanguage;
+applyLanguage(initialLanguage);
