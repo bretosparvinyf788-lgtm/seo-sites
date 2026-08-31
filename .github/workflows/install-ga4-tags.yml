@@ -1,0 +1,40 @@
+name: Install per-site GA4 tags
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - scripts/inject_ga4_tags.py
+      - .github/workflows/install-ga4-tags.yml
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  install:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Install and verify GA4 tags
+        run: |
+          python3 scripts/inject_ga4_tags.py
+          python3 scripts/inject_ga4_tags.py
+          git diff --check
+
+      - name: Commit generated HTML updates
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          if git diff --cached --quiet; then
+            echo "All GA4 tags are already installed."
+            exit 0
+          fi
+          git commit -m "Install per-site GA4 tags across all SEO sites"
+          git push origin HEAD:main
