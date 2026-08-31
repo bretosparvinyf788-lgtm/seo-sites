@@ -1,0 +1,124 @@
+name: Deploy GA4-tagged sites
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - "**/*.html"
+      - "sugargoovip.shop/site.tar.gz"
+      - "superbuyvip.pro/app/layout.tsx"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  deploy-pages:
+    name: Deploy ${{ matrix.domain }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    strategy:
+      fail-fast: false
+      max-parallel: 4
+      matrix:
+        include:
+          - { domain: cssbuyvip.shop, dir: cssbuyvip }
+          - { domain: hipobuyvip.shop, dir: hipobuyvip.shop }
+          - { domain: litbuyvip.shop, dir: litbuyvip.shop }
+          - { domain: sugargoovip.shop, dir: sugargoovip.shop }
+          - { domain: superbuyvip.shop, dir: superbuyvip.shop }
+          - { domain: usfansvip.shop, dir: usfansvip.shop }
+          - { domain: cssbuyvip.com, dir: cssbuyvip.com }
+          - { domain: cssbuyvip.net, dir: cssbuyvip.net }
+          - { domain: cssbuyvip.org, dir: cssbuyvip.org }
+          - { domain: cssbuyvip.pro, dir: cssbuyvip.pro }
+          - { domain: cssbuyvip.store, dir: cssbuyvip.store }
+          - { domain: hipobuyvip.net, dir: hipobuyvip.net }
+          - { domain: litbuyvip.net, dir: litbuyvip.net }
+          - { domain: litbuyvip.org, dir: litbuyvip.org }
+          - { domain: litbuyvip.pro, dir: litbuyvip.pro }
+          - { domain: litbuyvip.store, dir: litbuyvip.store }
+          - { domain: oopbuyvip.store, dir: oopbuyvip.store }
+          - { domain: sugargoovip.com, dir: sugargoovip.com }
+          - { domain: sugargoovip.net, dir: sugargoovip.net }
+          - { domain: sugargoovip.org, dir: sugargoovip.org }
+          - { domain: sugargoovip.pro, dir: sugargoovip.pro }
+          - { domain: sugargoovip.store, dir: sugargoovip.store }
+          - { domain: superbuyvip.com, dir: superbuyvip.com }
+          - { domain: superbuyvip.net, dir: superbuyvip.net }
+          - { domain: superbuyvip.org, dir: superbuyvip.org }
+          - { domain: superbuyvip.store, dir: superbuyvip.store }
+          - { domain: usfansvip.com, dir: usfansvip.com }
+          - { domain: usfansvip.pro, dir: usfansvip.pro }
+          - { domain: usfansvip.store, dir: usfansvip.store }
+          - { domain: spreadsheets-superbuy.com, dir: spreadsheets-superbuy.com }
+          - { domain: spreadsheets-hipobuy.net, dir: spreadsheets-hipobuy.net }
+    env:
+      CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+      CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+      DOMAIN: ${{ matrix.domain }}
+      SITE_DIR: ${{ matrix.dir }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Resolve Cloudflare Pages project
+        id: project
+        shell: bash
+        run: |
+          test -n "$CLOUDFLARE_API_TOKEN"
+          test -n "$CLOUDFLARE_ACCOUNT_ID"
+          response="$(curl -fsS             -H "Authorization: Bearer $CLOUDFLARE_API_TOKEN"             -H "Content-Type: application/json"             "https://api.cloudflare.com/client/v4/accounts/$CLOUDFLARE_ACCOUNT_ID/pages/projects?per_page=100")"
+          project="$(jq -r --arg domain "$DOMAIN"             '[.result[] | select(any(.domains[]?; . == $domain)) | .name] | unique | if length == 1 then .[0] else empty end'             <<<"$response")"
+          if [ -z "$project" ]; then
+            echo "Could not resolve exactly one Pages project for $DOMAIN" >&2
+            exit 1
+          fi
+          echo "name=$project" >> "$GITHUB_OUTPUT"
+
+      - name: Prepare deployment directory
+        id: prepare
+        shell: bash
+        run: |
+          if [ "$DOMAIN" = "sugargoovip.shop" ]; then
+            deploy_dir="$RUNNER_TEMP/sugargoovip-shop"
+            mkdir -p "$deploy_dir"
+            tar -xzf sugargoovip.shop/site.tar.gz -C "$deploy_dir"
+          else
+            deploy_dir="$SITE_DIR"
+          fi
+          test -f "$deploy_dir/index.html"
+          echo "dir=$deploy_dir" >> "$GITHUB_OUTPUT"
+
+      - name: Deploy to Cloudflare Pages
+        run: >-
+          npx --yes wrangler@4 pages deploy
+          "${{ steps.prepare.outputs.dir }}"
+          --project-name="${{ steps.project.outputs.name }}"
+          --branch=main
+          --commit-hash="$GITHUB_SHA"
+
+  deploy-superbuyvip-pro:
+    name: Deploy superbuyvip.pro Worker
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    env:
+      CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+      CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: npm
+          cache-dependency-path: superbuyvip.pro/package-lock.json
+
+      - name: Build and deploy Worker
+        working-directory: superbuyvip.pro
+        run: |
+          test -n "$CLOUDFLARE_API_TOKEN"
+          test -n "$CLOUDFLARE_ACCOUNT_ID"
+          npm ci
+          npm run build
+          npx wrangler deploy --config wrangler.jsonc
