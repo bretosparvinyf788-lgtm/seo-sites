@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#07111f"/>
+      <stop offset="0.58" stop-color="#102844"/>
+      <stop offset="1" stop-color="#173656"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#48d3ff"/>
+      <stop offset="1" stop-color="#bcff6b"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <circle cx="1060" cy="52" r="250" fill="#48d3ff" opacity=".10"/>
+  <circle cx="120" cy="610" r="260" fill="#bcff6b" opacity=".08"/>
+  <rect x="76" y="66" width="250" height="72" rx="16" fill="#65bd25"/>
+  <text x="98" y="116" fill="#fff" font-family="Arial, sans-serif" font-size="42" font-weight="800">CSSBuyVip</text>
+  <text x="76" y="245" fill="#eef7ff" font-family="Arial, sans-serif" font-size="68" font-weight="800">CSSBuy Spreadsheet 2026</text>
+  <text x="76" y="322" fill="#eef7ff" font-family="Arial, sans-serif" font-size="46" font-weight="700">W2C Links · QC Photos · Latest Finds</text>
+  <text x="76" y="392" fill="#b9cee3" font-family="Arial, sans-serif" font-size="28">10 product categories · Current prices · Buyer guides</text>
+  <rect x="76" y="474" width="1048" height="8" rx="4" fill="url(#accent)"/>
+  <text x="76" y="548" fill="#bcff6b" font-family="Arial, sans-serif" font-size="25" font-weight="700">Independent product discovery and buyer-guide hub</text>
+</svg>

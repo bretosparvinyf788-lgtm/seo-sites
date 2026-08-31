@@ -1,6 +1,6 @@
 const fs = require('fs');
 
-const path = 'index.html';
+const path = 'assets/site.js';
 const marker = '"articles":{"en":[';
 
 function decodeText(value) {
