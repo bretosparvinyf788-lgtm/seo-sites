@@ -58,7 +58,8 @@ export default{
   async fetch(request,env){
     const url=new URL(request.url);
 
-    if(url.hostname==='www.superbuyvip.shop'){
+    if(url.protocol==='http:'||url.hostname==='www.superbuyvip.shop'){
+      url.protocol='https:';
       url.hostname='superbuyvip.shop';
       return Response.redirect(url.toString(),301);
     }
