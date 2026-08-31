@@ -68,10 +68,19 @@ function setGoogleTranslation(lang) {
     pendingLanguage = lang;
     return false;
   }
-  if (combo.value !== target) {
-    combo.value = target;
-    combo.dispatchEvent(new Event('change', {bubbles: true}));
-  }
+  const faqDetails = Array.from(document.querySelectorAll('.reverse-faq-card'));
+  const faqStates = faqDetails.map(item => item.open);
+  const faqSection = document.querySelector('.reverse-faq-section');
+  if (faqSection) faqSection.style.visibility = 'hidden';
+  faqDetails.forEach(item => { item.open = true; });
+
+  combo.value = target;
+  combo.dispatchEvent(new Event('change', {bubbles: true}));
+
+  window.setTimeout(() => {
+    faqDetails.forEach((item, index) => { item.open = faqStates[index]; });
+    if (faqSection) faqSection.style.visibility = '';
+  }, 6000);
   pendingLanguage = null;
   return true;
 }
