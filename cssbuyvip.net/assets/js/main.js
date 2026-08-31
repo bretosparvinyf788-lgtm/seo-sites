@@ -45,9 +45,8 @@ if (languageTrigger) languageTrigger.addEventListener('click', (event) => {
 });
 document.querySelectorAll('.language-option').forEach(option => {
   option.addEventListener('click', () => {
-    const lang = option.dataset.lang || 'en';
+    applyLanguage(option.dataset.lang);
     languageMenu.classList.remove('open');
-    selectFullPageLanguage(lang);
   });
 });
 document.querySelectorAll('.mobile-nav a').forEach(a => a.addEventListener('click', closeMobile));
@@ -69,46 +68,9 @@ function applyLanguage(lang) {
   const names = {en:'English',zh:'简体中文',es:'Español',fr:'Français',de:'Deutsch',pt:'Português'};
   if (languageCurrent) languageCurrent.textContent = names[lang] || 'English';
 }
-function isGoogleTranslatedPage() {
-  return /(^|\\.)translate\\.goog$/.test(window.location.hostname) ||
-    window.location.hostname.includes('translate.goog') ||
-    new URLSearchParams(window.location.search).has('_x_tr_tl');
-}
-
-function originalPageUrl() {
-  const canonical = document.querySelector('link[rel="canonical"]');
-  if (canonical && canonical.href) return canonical.href;
-  return 'https://cssbuyvip.net' + window.location.pathname;
-}
-
-function selectFullPageLanguage(lang) {
-  const supported = ['en', 'zh', 'es', 'fr', 'de', 'pt'];
-  const selected = supported.includes(lang) ? lang : 'en';
-  try { localStorage.setItem('cssbuyvip-language', selected); } catch (e) {}
-
-  if (selected === 'en') {
-    if (isGoogleTranslatedPage()) window.location.assign(originalPageUrl());
-    else applyLanguage('en');
-    return;
-  }
-
-  const targetCodes = {zh: 'zh-CN', es: 'es', fr: 'fr', de: 'de', pt: 'pt'};
-  const sourceUrl = isGoogleTranslatedPage() ? originalPageUrl() : window.location.href;
-  const translateUrl = 'https://translate.google.com/translate?sl=en&tl=' +
-    encodeURIComponent(targetCodes[selected]) + '&u=' + encodeURIComponent(sourceUrl);
-  window.location.assign(translateUrl);
-}
-
 let initialLanguage = 'en';
 try { initialLanguage = localStorage.getItem('cssbuyvip-language') || 'en'; } catch (e) {}
-if (isGoogleTranslatedPage()) {
-  const translatedLang = new URLSearchParams(window.location.search).get('_x_tr_tl') || initialLanguage;
-  document.documentElement.lang = translatedLang;
-} else if (initialLanguage !== 'en') {
-  selectFullPageLanguage(initialLanguage);
-} else {
-  applyLanguage('en');
-}
+applyLanguage(initialLanguage);
 
 function featureLatestCSSBuyGuide() {
   const guideGrid = document.querySelector('#guides .guides');
