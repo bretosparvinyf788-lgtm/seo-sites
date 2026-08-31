@@ -8,6 +8,12 @@ on:
       - "**/*.html"
       - "sugargoovip.shop/site.tar.gz"
       - "superbuyvip.pro/app/layout.tsx"
+      - ".github/workflows/deploy-ga4-sites.yml"
+  workflow_run:
+    workflows:
+      - Install per-site GA4 tags
+    types:
+      - completed
   workflow_dispatch:
 
 permissions:
@@ -15,6 +21,7 @@ permissions:
 
 jobs:
   deploy-pages:
+    if: github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success'
     name: Deploy ${{ matrix.domain }}
     runs-on: ubuntu-latest
     timeout-minutes: 45
@@ -61,6 +68,8 @@ jobs:
       SITE_DIR: ${{ matrix.dir }}
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: main
 
       - name: Resolve Cloudflare Pages project
         id: project
@@ -99,6 +108,7 @@ jobs:
           --commit-hash="$GITHUB_SHA"
 
   deploy-superbuyvip-pro:
+    if: github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success'
     name: Deploy superbuyvip.pro Worker
     runs-on: ubuntu-latest
     timeout-minutes: 45
@@ -107,6 +117,8 @@ jobs:
       CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: main
 
       - uses: actions/setup-node@v4
         with:
