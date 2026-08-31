@@ -101,16 +101,16 @@ async function translateText(text, lang) {
   const leading = text.match(/^\s*/)[0];
   const trailing = text.match(/\s*$/)[0];
   const source = text.trim();
-  const endpoint = 'https://translate.googleapis.com/translate_a/single?client=gtx&sl=en&tl=' +
-    encodeURIComponent(target) + '&dt=t&q=' + encodeURIComponent(source);
+  const endpoint = '/api/translate?lang=' + encodeURIComponent(lang) +
+    '&q=' + encodeURIComponent(source);
 
   for (let attempt = 0; attempt < 2; attempt += 1) {
     try {
-      const response = await fetch(endpoint, {mode: 'cors', credentials: 'omit'});
+      const response = await fetch(endpoint, {credentials: 'same-origin'});
       if (!response.ok) throw new Error('Translation request failed');
       const payload = await response.json();
-      const translated = Array.isArray(payload[0])
-        ? payload[0].map(part => part && part[0] ? part[0] : '').join('')
+      const translated = payload && typeof payload.translated === 'string'
+        ? payload.translated
         : '';
       if (!translated) throw new Error('Empty translation');
       const result = leading + translated + trailing;
