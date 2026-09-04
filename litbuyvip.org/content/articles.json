@@ -1,5 +1,88 @@
 [
   {
+    "slug": "litbuy-seller-listing-due-diligence-before-purchase",
+    "label": "VERIFY THE SOURCE",
+    "title": "LitBuy Seller Due Diligence: Verify a Marketplace Listing Before Agent Purchase",
+    "excerpt": "Verify a third-party seller, listing, variant and evidence trail before asking LitBuy to purchase, so warehouse QC begins with a testable order brief.",
+    "read": "17 min read",
+    "date": "September 4, 2026",
+    "theme": "lime",
+    "cover": "/assets/litbuy-seller-listing-due-diligence.webp",
+    "intro": "Using a purchasing agent does not turn a weak marketplace listing into a reliable product specification. LitBuy's current Refund Terms describe the platform as providing purchasing assistance and forwarding for goods bought from third-party sellers or platforms. The same terms describe warehouse basic QC as checking quantity, visible appearance and obvious external defects. That division matters: the seller remains the source of the product claim, while the warehouse can evaluate only what the order record and visible item make testable. LitBuy product pages also warn that some goods may face cross-border logistics restrictions, regional brand controls or supplier qualification review. A careful buyer therefore needs a source file before purchase, not a rescue plan after arrival. This guide shows how to freeze seller evidence, turn a listing into precise acceptance criteria and reject an order when the record is too weak to support a sensible warehouse decision.",
+    "sections": [
+      {
+        "heading": "Map the seller, platform and agent as separate actors",
+        "paragraphs": [
+          "Begin with a responsibility map containing three rows: the marketplace or seller, LitBuy, and you. Under the seller, place the product description, variant, stock statement and any promises made in the listing or conversation. Under LitBuy, place the purchase request, visible order status and warehouse evidence the platform actually provides. Under you, place the selection decision, saved evidence and acceptance rules. This prevents the convenient but false assumption that one party verified every claim made by another.",
+          "LitBuy's published terms say it assists with purchases from third-party sellers and platforms. Treat that wording as an operational boundary. A completed agent order shows that a transaction moved forward; it does not independently establish material, authenticity, fit or long-term performance. When a fact matters, identify who stated it and what could later confirm it. If you cannot assign a claim to a source, remove it from the decision or mark it unresolved."
+        ]
+      },
+      {
+        "heading": "Freeze the exact seller and listing before it changes",
+        "paragraphs": [
+          "Create a dated source snapshot before submitting anything. Record the marketplace, displayed seller name, shop identifier if visible, product title, selected page address in your private file and the date you reviewed it. Save the main images, variant menu, size or specification chart, included-accessory description and seller statements that influenced you. Marketplace pages can be edited, redirected or removed; a later page is not proof of what you selected earlier.",
+          "Keep seller identity separate from the product link. The same-looking item may appear through several shops, and a recycled image does not prove common stock or quality. If a link begins resolving to a different seller, title or variant set, stop and rebuild the snapshot. Do not patch the old record with a new screenshot. Version it. Your aim is to preserve one coherent source state that can be compared with the actual LitBuy order and eventual warehouse item."
+        ]
+      },
+      {
+        "heading": "Translate the variant menu into one plain specification",
+        "paragraphs": [
+          "Write the chosen variant as a complete sentence a buyer and purchasing agent can understand without reopening the menu. Include product type, colour, size, model, quantity and the exact bundle or accessory option. If a listing uses seller codes, preserve the code and add a plain-language interpretation beside it. Do not rely on a thumbnail position such as second option or last black one; sellers can reorder choices while the code remains the only stable clue.",
+          "Check for dependencies hidden across the page. A colour may change the material, a size may belong to a different chart, or a bundle may alter the included pieces. Build a variant matrix when two or more fields interact, then highlight one allowed combination. If the page does not reveal whether the selected fields belong together, ask before purchase. An unresolved combination should never be converted into a confident instruction merely to complete the order form."
+        ]
+      },
+      {
+        "heading": "Convert seller claims into questions that evidence can answer",
+        "paragraphs": [
+          "Sort important claims into visible, measurable and unavailable. Colour, printed model code and included pieces may be visibly testable. Length or width may be measurable if the necessary warehouse evidence is available. Internal composition, durability and performance may be unavailable from ordinary exterior photographs. This classification stops a persuasive listing phrase from becoming a warehouse requirement that no image could prove.",
+          "Rewrite each testable claim as a pass-or-stop question. Is the label the selected size? Are two accessories present? Is the visible colour the ordered option? Does the stated exterior dimension match the evidence within a tolerance you chose before buying? Avoid vague instructions such as check quality or make sure it is good. A useful acceptance question names the feature, the expected result and the decision you will make if the evidence disagrees."
+        ]
+      },
+      {
+        "heading": "Audit the listing for internal contradictions",
+        "paragraphs": [
+          "Read the page as a set of claims that should agree. Compare the title with the variant menu, main description, chart, detail images and seller messages. Flag mismatched materials, different model names, inconsistent quantities or charts that appear to describe another product. Promotional images can show several versions at once; only the selected option and its supporting description should enter your order brief.",
+          "Do not average conflicting information. If one chart gives a different measurement from another, record both and ask which controls the selected variant. If the seller replies, preserve the exact response with the date and the question it answers. If the contradiction remains, treat that uncertainty as part of the purchase risk. The proper output of due diligence is sometimes no order, not a polished file that hides the page's weaknesses."
+        ]
+      },
+      {
+        "heading": "Screen purchase support before judging seller quality",
+        "paragraphs": [
+          "A credible-looking seller does not make every product suitable for agent purchase or international shipping. LitBuy product pages currently warn that cross-border logistics restrictions, regional brand controls or supplier qualification reviews can affect purchase support. Record any visible risk notice separately from your seller assessment. It is possible for a seller record to look consistent while the product still cannot proceed through the intended workflow.",
+          "Use three independent outcomes: seller evidence acceptable, LitBuy purchase support confirmed, and later shipping eligibility still to be checked. Do not let one positive result stand in for the others. If a current product notice blocks or conditions the purchase, stop there rather than trying a different description or weaker link. If the shipping attributes are unclear, keep them unresolved for the separate route-eligibility review before committing to a parcel plan."
+        ]
+      },
+      {
+        "heading": "Design the order brief around basic QC limits",
+        "paragraphs": [
+          "LitBuy's current Refund Terms describe basic warehouse QC as checking quantity, visible appearance and obvious external defects. Build your brief around that published scope. Put the ordered quantity, visible variant markers and obvious rejection conditions at the top. Then identify any question that would require a particular angle, scale or close-up and decide whether the available warehouse process can reasonably provide the evidence. Do not expect a sealed product or ordinary photograph to prove an invisible characteristic.",
+          "Use a two-column acceptance sheet: evidence expected and decision if absent. For example, the evidence may be a readable size label, both sides of a pair or a clear view of the included pieces. The decision might be accept, request clarification, hold, or pursue the available after-sales path. Defining that response early prevents you from inventing standards after seeing an imperfect item. It also keeps ordinary image limitations separate from a genuine mismatch."
+        ]
+      },
+      {
+        "heading": "Preserve the transaction trail for after-sales decisions",
+        "paragraphs": [
+          "Save the LitBuy order identifier beside the seller snapshot, selected variant and payment record shown in your account. When the status changes, add the event rather than replacing the previous one. If the seller proposes a substitution, price change or different option, preserve the original request and the response you approved. A clean trail shows whether the eventual warehouse item differs from the submitted brief or from a later change you knowingly accepted.",
+          "Keep return and refund stages distinct. LitBuy's published Refund Terms state that refunds involving returned goods can be processed only after the returned goods are received and inspected. That fact does not supply a universal deadline or guarantee an outcome. It means your file should retain the reason for the return, the accepted instruction, the movement of the returned item and the later refund record as separate checkpoints. Never close the issue merely because one request was submitted."
+        ]
+      },
+      {
+        "heading": "Score evidence quality and set a stop rule",
+        "paragraphs": [
+          "Give each critical field one of four evidence grades: direct, seller-stated, inferred or missing. Direct means the current page or confirmed order explicitly shows it. Seller-stated means a dated message answers the exact question. Inferred means you derived it from an image, translation or similar listing. Missing means there is no support. Do not disguise inference as confirmation. The grade tells you which assumptions would survive if the listing disappeared tomorrow.",
+          "Set the stop rule before checkout. A missing cosmetic preference may be acceptable; a missing size, model, quantity, material relevant to shipping, or bundle definition may not be. Choose the fields that must be direct or seller-stated, and refuse to submit when any remain inferred or missing. This rule protects you from the sunk-cost effect created by time spent searching. Research effort does not improve a seller's evidence; it only reveals whether the evidence is strong enough."
+        ]
+      },
+      {
+        "heading": "Hand LitBuy a testable purchase record, then retain it",
+        "paragraphs": [
+          "Before submission, run one reconciliation across the source snapshot, plain-language variant, quantity, seller answers, risk notices and acceptance sheet. The same product should be described consistently in every place. Remove background research that cannot affect the purchase, but keep every fact that controls selection or rejection. Your final brief should let another person identify the intended item and understand the stop conditions without interpreting promotional copy.",
+          "After the order is placed, lock the submitted version and start a change log. When the item reaches the warehouse, compare it with that version rather than the seller's current page. Close the source file only after quantity, visible variant and obvious condition have been reconciled, or after an exception enters a documented after-sales path. Good LitBuy seller due diligence cannot guarantee product quality. It creates a factual baseline strong enough to expose a mismatch, limit guesswork and support the next decision."
+        ]
+      }
+    ]
+  },
+  {
     "slug": "litbuy-forwarding-order-tracking-warehouse-intake",
     "label": "REGISTER THE INBOUND PARCEL",
     "title": "LitBuy Forwarding Order Intake: Register Third-Party Tracking Before Warehouse Delivery",
