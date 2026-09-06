@@ -1,4 +1,4 @@
-const BUILD='20260817-0945';
+const BUILD='20260906-article';
 const SECURITY_HEADERS={
   'x-content-type-options':'nosniff',
   'referrer-policy':'strict-origin-when-cross-origin',
