@@ -2760,33 +2760,5 @@ document.addEventListener('DOMContentLoaded', function(){
 </script>
 
 
-<script id="SEO_LATEST_PATCH_20260807">
-(function(){
-  const latest = [
-    {href:'/guides/cssbuy-packaging-decision-matrix-2026/', tag:'Parcel Packaging', title:'CSSBuy Packaging Decision Matrix 2026: When to Consolidate, Vacuum Pack, Reinforce or Remove Extras', desc:'Choose consolidation, clothing compression, fragile-item reinforcement and box removal according to dimensional weight and product risk.'},
-    {href:'/guides/cssbuy-clothing-size-verification-workflow-2026/', tag:'Sizing Guide', title:'CSSBuy Clothing Size Verification Workflow 2026: From Seller Chart to Warehouse Measurements', desc:'Compare a reference garment, seller chart, warehouse tag and key measurements before approving, exchanging or returning clothing.'},
-    {href:'/guides/cssbuy-delivery-day-evidence-protocol-2026/', tag:'Parcel Evidence', title:'CSSBuy Delivery-Day Evidence Protocol 2026', desc:'Record the unopened carton, opening sequence and item count before reporting missing or damaged parcel contents.'}
-  ];
-  function applyLatest(){
-    document.querySelectorAll('#articles .article').forEach(function(card,i){
-      const item=latest[i]; if(!item) return;
-      card.setAttribute('href',item.href);
-      const small=card.querySelector('small'), title=card.querySelector('b'), desc=card.querySelector('span');
-      if(small) small.textContent=item.tag;
-      if(title) title.textContent=item.title;
-      if(desc) desc.textContent=item.desc;
-    });
-    const viewAll=document.querySelector('#articles .view-all-btn');
-    if(viewAll) viewAll.setAttribute('href','/all-seo-articles/');
-  }
-  document.addEventListener('DOMContentLoaded',function(){
-    [0,80,250,800].forEach(function(ms){setTimeout(applyLatest,ms)});
-    document.querySelectorAll('.langs a,.lang-switch a').forEach(function(a){
-      a.addEventListener('click',function(){setTimeout(applyLatest,120)});
-    });
-  });
-})();
-</script>
-
 </body>
 </html>
