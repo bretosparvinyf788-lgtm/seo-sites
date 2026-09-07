@@ -1,5 +1,88 @@
 [
   {
+    "slug": "litbuy-shipping-address-audit-before-parcel-payment",
+    "label": "VERIFY THE DESTINATION",
+    "title": "LitBuy Shipping Address Audit: Build a Carrier-Readable Delivery Record Before Parcel Payment",
+    "excerpt": "Audit recipient, street, unit, postal code, region and contact details before paying for a LitBuy parcel, then preserve the exact destination record used for shipping.",
+    "read": "17 min read",
+    "date": "September 7, 2026",
+    "theme": "orange",
+    "cover": "/assets/litbuy-shipping-address-audit.webp",
+    "intro": "A carefully inspected parcel can still fail at the final mile if its destination data is incomplete, inconsistent or difficult for a carrier to interpret. LitBuy's current Shipping Policy places responsibility on customers to provide accurate and complete shipping information at checkout. That makes the address a shipping control, not a casual contact note. It must connect the recipient, delivery location, postal system, phone contact and selected route without relying on a courier to repair missing information later. The same policy says estimated delivery time begins after a parcel has shipped rather than on the original order date, while tracking information may take up to 48 hours to appear. Neither point creates a window for fixing a weak label after payment. A stronger approach is to build, test and freeze one carrier-readable destination record before parcel submission. This guide provides a field-by-field audit for international buyers, a method for resolving conflicting address versions and an evidence trail for handling delivery exceptions without guessing what was printed on the shipment.",
+    "sections": [
+      {
+        "heading": "Treat the address as operational parcel data",
+        "paragraphs": [
+          "Start one destination sheet for the parcel rather than copying an address from memory at checkout. Give each field its own row: recipient name, company when genuinely required, country or territory, administrative region, city, postal code, street, building number, unit, telephone and any delivery detail accepted by the current form. Separating the fields exposes omissions that a visually tidy multiline block can hide. It also lets you compare one value at a time when two saved versions disagree.",
+          "Mark the source beside every row. A postal authority lookup, recent successful label, utility record, recipient confirmation and browser autofill do not have equal authority. Autofill is convenient, but it can preserve an old unit or abbreviate a locality unexpectedly. The goal is not to collect more versions. It is to choose one verified value for each required field and show why that value controls the parcel you are about to pay for."
+        ]
+      },
+      {
+        "heading": "Freeze the destination before comparing shipping routes",
+        "paragraphs": [
+          "Confirm the destination country or territory first, then the postal code and region used by that destination's addressing system. Route availability and shipping estimates are destination-dependent, so an estimate created for one country, territory or postal area should not be carried into another address record. If the recipient has recently moved, treat the new location as a new parcel scenario. Recheck the current route choices instead of editing only the street line at the end.",
+          "Record a destination version number and review date. Version one may be the address initially supplied; version two may contain a corrected unit or postal code. Keep both, but mark only one approved for shipment. This prevents a screenshot, spreadsheet and saved account address from silently pointing to different places. Do not choose between conflicting versions by selecting the one that produces the more attractive estimate. Resolve the destination first, then compare the options shown for that verified record."
+        ]
+      },
+      {
+        "heading": "Match the recipient name to the real delivery context",
+        "paragraphs": [
+          "Use the name of the person or organization that can actually receive the parcel and respond if the carrier or local authority requests clarification. Avoid nicknames, decorative characters or invented company names simply to fill a field. Where a building desk, workplace, forwarding location or identification check is involved, ask the recipient which name format that location recognizes. Do not infer a universal rule: acceptable name formats and identification requirements differ by destination and delivery arrangement.",
+          "Keep account ownership, payment identity, customs information and delivery recipient as distinct concepts. They may be the same person, but one matching value does not prove the others are correct. Your audit should state who will receive the parcel, whose phone will be answered and which name was entered in the final shipping record. If a route or official form requests additional identity information, supply only accurate information through the appropriate field and verify the current requirement before payment."
+        ]
+      },
+      {
+        "heading": "Build the street line from smallest deliverable unit outward",
+        "paragraphs": [
+          "Write the location in components before arranging it in the form: unit or apartment, building number, street name, building or complex, locality and city. Ask what the final courier must locate after reaching the postal code. A missing apartment can make an otherwise correct street useless; an apartment entered only in a disposable note can disappear from the label. Keep essential delivery elements in the structured address fields whenever the current checkout provides them.",
+          "Preserve meaningful numbers, directionals and building identifiers exactly. Do not translate a proper street name merely because another language looks more international, and do not invent an abbreviation to save space. If the form limits characters, create a shortened version only after identifying which elements are essential and which are descriptive. Save both the full reference and the submitted form. That way, shortening is a documented decision rather than an unexplained loss of address data."
+        ]
+      },
+      {
+        "heading": "Validate postal code, city and region as one set",
+        "paragraphs": [
+          "A postal code should not be checked in isolation. Compare it with the city, locality and administrative region that belong together. Watch for copied codes from a previous home, neighboring city names, omitted leading zeros and spreadsheet cells that convert a code into a number. Store postal codes as text so formatting is preserved. If an authoritative source and the recipient use different locality wording, resolve which version the local postal system expects rather than merging both into an improvised label.",
+          "Use a three-way test: the fields must agree with the recipient's confirmation, the destination's addressing convention and the current LitBuy checkout structure. A green result requires all three. If one fails, mark the address on hold. The hold is inexpensive before payment and difficult after a shipping label enters the carrier network. Never replace a missing region or city with a guess generated from the postal code alone when the recipient can verify the actual deliverable location."
+        ]
+      },
+      {
+        "heading": "Choose a character format without changing the address",
+        "paragraphs": [
+          "International forms may accept different scripts and punctuation. Begin with the address version the recipient and local delivery system use, then check what the current LitBuy form permits. If a Latin-character version is necessary, obtain or verify a recognized transliteration. Do not translate the meaning of a proper name, substitute a similar English word or remove a diacritic without checking whether the result still identifies the same place. Formatting changes must preserve identity.",
+          "Keep one local-format reference beside the exact submitted version. Compare every number and name after transliteration, paying special attention to characters that can be confused visually. The two versions should describe one destination, not compete for space on the same line. Avoid pasting duplicate city, region and country names into several fields. Duplication can obscure the part that matters, while a clean structured record lets the shipping system assemble the label from defined components."
+        ]
+      },
+      {
+        "heading": "Verify the phone as a reachable delivery channel",
+        "paragraphs": [
+          "Use a telephone number that the recipient can answer during the parcel's delivery period. Separate the country calling code from the national number in your audit, then enter it in the format accepted by the current form. Remove accidental spaces or duplicated prefixes only after comparing the final value with the recipient's confirmation. A syntactically tidy number is not useful when it belongs to an old account, an unavailable traveler or someone who cannot identify the shipment.",
+          "Define who monitors calls and messages once the parcel ships. Record a backup contact privately if the destination arrangement needs one, but do not force two numbers into a field designed for one. The final shipping record should contain the primary reachable contact, while your parcel file can explain escalation. Treat the number as personal data: keep it inside the account and evidence file, and redact it from public tracking screenshots or haul posts."
+        ]
+      },
+      {
+        "heading": "Run a blind readback before parcel payment",
+        "paragraphs": [
+          "Ask a second person, ideally the recipient, to read the proposed shipping record without seeing your source notes. They should be able to identify the person, building, unit, street, city, region, postal code and country with no explanation. Have them read the phone number digit by digit. This blind readback catches missing units, transposed numbers and familiarity errors that the original author stops noticing after repeated edits.",
+          "Then compare the checkout preview against the approved destination sheet. Check for truncated lines, reordered components, removed leading zeros and autofill replacements. Capture the final visible record before payment, but protect personal data in storage and sharing. The audit passes only when the approved sheet, form fields and preview agree. A successful previous delivery is supporting evidence, not permission to skip the check, because recipients move and saved profiles age."
+        ]
+      },
+      {
+        "heading": "Lock the submitted version and control later changes",
+        "paragraphs": [
+          "After parcel payment, freeze the exact submitted address with the parcel identifier and submission time. Do not overwrite it when someone notices a possible error. Create an exception row containing the original value, proposed correction, discovery time and action taken through the current official support process. This preserves what may already exist on a label and stops a corrected spreadsheet from creating false confidence about the shipment actually handed to a carrier.",
+          "Do not promise yourself that an address can be changed after submission or dispatch. Whether a correction remains possible depends on the parcel stage, route and parties involved. Act promptly through the official channel, describe one precise difference and keep the response. If no change is confirmed, continue tracking the parcel under the original submitted record. A requested correction and an applied correction are separate events and should never share one status."
+        ]
+      },
+      {
+        "heading": "Investigate address exceptions with a clean evidence packet",
+        "paragraphs": [
+          "LitBuy's Shipping Policy currently advises allowing up to 48 hours for tracking information to become available. Use that statement only for the first tracking update, not as a universal deadline for address corrections or delivery. Once events appear, preserve their wording and timestamps. If an address exception is reported, compare the approved sheet, checkout capture, carrier display and recipient confirmation. State exactly where the mismatch appears instead of assuming the warehouse, carrier or recipient caused it.",
+          "Prepare one private packet containing the parcel identifier, submitted address capture, verified destination sheet, relevant tracking events and the correction history. Redact personal data from any public discussion. The official policy also says delivery estimates begin after shipment, not from the original product order date, so keep purchase timing separate from parcel timing. A disciplined address record cannot guarantee delivery. It gives every party a consistent destination, exposes where data changed and supports a precise response when the final mile goes wrong."
+        ]
+      }
+    ]
+  },
+  {
     "slug": "litbuy-seller-listing-due-diligence-before-purchase",
     "label": "VERIFY THE SOURCE",
     "title": "LitBuy Seller Due Diligence: Verify a Marketplace Listing Before Agent Purchase",
