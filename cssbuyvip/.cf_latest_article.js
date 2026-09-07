@@ -40,6 +40,26 @@ function articleFromStaticPage(config) {
 
 const automationArticles = [
   articleFromStaticPage({
+    key: 'cssbuy-weidian-buying-guide-2026',
+    file: 'guides/cssbuy-weidian-buying-guide-2026/index.html',
+    title: 'CSSBuy Weidian Buying Guide 2026: Seller Checks, Variants and Payment Risk',
+    excerpt: 'Verify a Weidian seller, lock the exact variant, confirm domestic costs and decide whether an unprotected payment risk is acceptable.',
+    seo_title: 'CSSBuy Weidian Guide 2026: Seller, Variant & Payment Risk',
+    seo_description: 'Use this practical CSSBuy Weidian buying workflow to verify sellers, lock exact variants, confirm domestic costs and judge payment risk before ordering.',
+    tags: 'CSSBuy Weidian guide, Weidian seller checks, Expert Buy, Contact Seller, Weidian variants, domestic shipping, payment risk, buyer protection',
+    publish_date: '2026-09-07'
+  }),
+  articleFromStaticPage({
+    key: 'cssbuy-return-exchange-decision-workflow-2026',
+    file: 'guides/cssbuy-return-exchange-decision-workflow-2026/index.html',
+    title: 'CSSBuy Return & Exchange Decision Workflow 2026',
+    excerpt: 'Turn warehouse QC into a clear keep, exchange or return decision with stronger evidence, cleaner seller requests and better haul timing.',
+    seo_title: 'CSSBuy Returns & Exchanges Guide 2026: A QC Decision Workflow',
+    seo_description: 'Use this evidence-first CSSBuy return and exchange workflow to review QC photos, check seller conditions, request the right remedy and protect parcel plans.',
+    tags: 'CSSBuy returns, CSSBuy exchange, warehouse QC, seller return policy, CSSBuy refund, QC evidence, haul planning, after-sales request',
+    publish_date: '2026-09-06'
+  }),
+  articleFromStaticPage({
     key: 'cssbuy-beginner-order-workflow-guide-2026',
     file: 'guides/cssbuy-beginner-order-workflow-guide-2026/index.html',
     title: 'CSSBuy Beginner Order Workflow Guide 2026: From Product Link to International Shipping',
