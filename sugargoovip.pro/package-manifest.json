@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-06T07:00:00.000Z",
+  "generatedAt": "2026-09-07T06:15:00.000Z",
   "domain": "sugargoovip.pro",
   "articleWordCounts": {
     "qc": 1586,
@@ -7,7 +7,8 @@
     "links": 1718,
     "consolidation": 1621,
     "returns": 1618,
-    "tracking": 1722
+    "tracking": 1722,
+    "insurance": 1692
   },
   "files": [
     "404.html",
@@ -24,6 +25,7 @@
     "guides/product-link-to-sugargoo-diy-order/index.html",
     "guides/sugargoo-consolidation-plan/index.html",
     "guides/sugargoo-returns-before-international-shipping/index.html",
+    "guides/sugargoo-shipping-insurance-claim-ready-parcel/index.html",
     "guides/sugargoo-shipping-weight-strategy/index.html",
     "guides/sugargoo-tracking-not-updating/index.html",
     "index.html",
