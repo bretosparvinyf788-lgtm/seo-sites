@@ -49,7 +49,7 @@ const guideLibraryTitles: Record<Lang,string> = {
   it:"Tutte le guide all’acquisto", pt:"Todos os guias de compra", zh:"全部购买指南"
 };
 const guideLibraryDescriptions: Record<Lang,string> = {
-  en:"Seven original, evidence-led Superbuy guides researched from the current official shopping, warehouse and shipping workflow.",
+  en:"Eight original, evidence-led Superbuy guides researched from the current official shopping, warehouse and shipping workflow.",
   de:"Sechs eigenständige, belegbasierte Superbuy-Ratgeber auf Grundlage des aktuellen offiziellen Einkaufs-, Lager- und Versandablaufs.",
   fr:"Six guides Superbuy originaux et fondés sur des preuves, issus du parcours officiel actuel d’achat, d’entrepôt et d’expédition.",
   es:"Seis guías originales de Superbuy, basadas en pruebas y en el flujo oficial actual de compra, almacén y envío.",
@@ -60,9 +60,10 @@ const guideLibraryDescriptions: Record<Lang,string> = {
 const editionLabels: Record<Lang,string> = {
   en:"WORDS",de:"VOLLSTÄNDIGE ÜBERSETZUNG",fr:"VERSION INTÉGRALE",es:"TRADUCCIÓN COMPLETA",it:"TRADUZIONE COMPLETA",pt:"TRADUÇÃO COMPLETA",zh:"完整译文"
 };
-const guidesByLanguage: Record<Lang,typeof longGuides> = {en:longGuides,de:[...longGuides.slice(0,2),...deGuides],fr:[...longGuides.slice(0,2),...frGuides],es:[...longGuides.slice(0,2),...esGuides],it:[...longGuides.slice(0,2),...itGuides],pt:[...longGuides.slice(0,2),...ptGuides],zh:[...longGuides.slice(0,2),...zhGuides]};
+const guidesByLanguage: Record<Lang,typeof longGuides> = {en:longGuides,de:[...longGuides.slice(0,3),...deGuides],fr:[...longGuides.slice(0,3),...frGuides],es:[...longGuides.slice(0,3),...esGuides],it:[...longGuides.slice(0,3),...itGuides],pt:[...longGuides.slice(0,3),...ptGuides],zh:[...longGuides.slice(0,3),...zhGuides]};
 const articleFaqsByLanguage: Record<Lang,typeof articleFaqs.en> = {en:articleFaqs.en,de:[articleFaqs.en[0],...articleFaqs.de],fr:[articleFaqs.en[0],...articleFaqs.fr],es:[articleFaqs.en[0],...articleFaqs.es],it:[articleFaqs.en[0],...articleFaqs.it],pt:[articleFaqs.en[0],...articleFaqs.pt],zh:[articleFaqs.en[0],...articleFaqs.zh]};
 const guideUrls = [
+  "/guides/superbuy-unboxing-damage-after-sales-playbook/",
   "/guides/superbuy-presale-limited-edition-order-playbook/",
   "/guides/superbuy-parcel-forwarding-intake-playbook/",
   "/guides/superbuy-1688-buying-risk-playbook/",
@@ -71,7 +72,7 @@ const guideUrls = [
   "/guides/superbuy-landed-cost-framework/",
   "/guides/superbuy-spreadsheet-operating-system/"
 ];
-const articleDates = ["2026-09-06","2026-08-28","2026-08-27","2026-08-21","2026-08-17","2026-08-17","2026-08-17"];
+const articleDates = ["2026-09-08","2026-09-06","2026-08-28","2026-08-27","2026-08-21","2026-08-17","2026-08-17","2026-08-17"];
 const articleWordCounts = longGuides.map((guide,index) => [guide.title,guide.intro,...guide.body,articleFaqs.en[index].title,...articleFaqs.en[index].items.flat()].join(" ").replaceAll("## ","").match(/[A-Za-z0-9’'-]+/g)?.length || 0);
 const articleSchema = {
   "@context":"https://schema.org",
@@ -231,8 +232,9 @@ export default function Home(){
 
     <footer><a className="logo" href="#top"><span>S</span><b>SUPERBUY <i>VIP</i></b></a><p data-i18n="footer">{copy.footer}</p><div>{[1,2,3,4].map(index=><a key={index} data-i18n={`nav.${index}`} href={["#top","#index","#calculator","#guides","#faq"][index]}>{copy.nav[index]}</a>)}</div><small>© 2026 SUPERBUYVIP.PRO</small></footer>
 
-    <div className={`modal ${guideLibrary?"":"is-hidden"}`} onMouseDown={()=>setGuideLibrary(false)}><article className="library-modal" onMouseDown={e=>e.stopPropagation()}><button onClick={()=>setGuideLibrary(false)} aria-label="Close guide library">×</button><span>DOCUMENT LIBRARY / 07</span><h2 data-guide-library-title>{guideLibraryTitles[lang]}</h2><p className="lead" data-guide-library-description>{guideLibraryDescriptions[lang]}</p><div className="guide-library">{guides.map((guide,index)=><article key={index}><span>DOC-0{index+1}</span><div><b>{guide.tag}</b><h3>{guide.title}</h3><p>{guide.intro}</p><small>{articleMeta(index)} · {articleDates[index]}</small></div><button onClick={()=>{window.location.href=guideUrls[index];}}><span data-i18n="open">{copy.open}</span> <Arrow/></button></article>)}</div></article></div>
+    <div className={`modal ${guideLibrary?"":"is-hidden"}`} onMouseDown={()=>setGuideLibrary(false)}><article className="library-modal" onMouseDown={e=>e.stopPropagation()}><button onClick={()=>setGuideLibrary(false)} aria-label="Close guide library">×</button><span>DOCUMENT LIBRARY / 08</span><h2 data-guide-library-title>{guideLibraryTitles[lang]}</h2><p className="lead" data-guide-library-description>{guideLibraryDescriptions[lang]}</p><div className="guide-library">{guides.map((guide,index)=><article key={index}><span>DOC-0{index+1}</span><div><b>{guide.tag}</b><h3>{guide.title}</h3><p>{guide.intro}</p><small>{articleMeta(index)} · {articleDates[index]}</small></div><button onClick={()=>{window.location.href=guideUrls[index];}}><span data-i18n="open">{copy.open}</span> <Arrow/></button></article>)}</div></article></div>
     {guides.map((guide,guideIndex)=><div key={guideIndex} id={`guide-${guideIndex+1}`} className={`modal ${article===guideIndex?"":"is-hidden"}`} onMouseDown={()=>setArticle(null)}><article className="article-modal" onMouseDown={e=>e.stopPropagation()}><button onClick={()=>setArticle(null)} aria-label="Close article">×</button><span>{guide.tag} · {articleMeta(guideIndex)}</span><h2>{guide.title}</h2><p className="lead">{guide.intro}</p><section className="article-body">{guide.body.map((paragraph,index)=>paragraph.startsWith("## ")?<h3 key={index}>{paragraph.slice(3)}</h3>:<p key={index}>{paragraph}</p>)}</section><section className="article-faqs" data-article-faqs><h3>{articleFaqsByLanguage[lang][guideIndex].title}</h3>{articleFaqsByLanguage[lang][guideIndex].items.map((item,index)=><details key={index}><summary><span>{String(index+1).padStart(2,"0")}</span><b>{item[0]}</b><i>+</i></summary><p>{item[1]}</p></details>)}</section><div>{researchNotes[lang]}</div></article></div>)}
   </main>;
 }
+
 
