@@ -40,6 +40,16 @@ function articleFromStaticPage(config) {
 
 const automationArticles = [
   articleFromStaticPage({
+    key: 'cssbuy-product-link-not-working-guide-2026',
+    file: 'guides/cssbuy-product-link-not-working-guide-2026/index.html',
+    title: 'CSSBuy Product Link Not Working Guide 2026: Search, Recover or Use Expert Buy',
+    excerpt: 'Diagnose a broken marketplace listing, rebuild the missing product brief and choose the right CSSBuy recovery route before paying.',
+    seo_title: 'CSSBuy Link Not Working Guide 2026: Recovery Workflow',
+    seo_description: 'Use this practical CSSBuy link recovery workflow to diagnose broken listings, create a searchable product brief and choose Search for Me, Contact Seller or Expert Buy.',
+    tags: 'CSSBuy link not working, CSSBuy Search for Me, CSSBuy Expert Buy, broken product link, image search, Contact Seller, marketplace link recovery',
+    publish_date: '2026-09-08'
+  }),
+  articleFromStaticPage({
     key: 'cssbuy-weidian-buying-guide-2026',
     file: 'guides/cssbuy-weidian-buying-guide-2026/index.html',
     title: 'CSSBuy Weidian Buying Guide 2026: Seller Checks, Variants and Payment Risk',
