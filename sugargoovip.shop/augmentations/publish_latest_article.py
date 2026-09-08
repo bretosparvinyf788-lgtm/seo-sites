@@ -8,11 +8,21 @@ import re
 import sys
 from pathlib import Path
 
-if len(sys.argv) != 3:
-    raise SystemExit("usage: publish_latest_article.py ARTICLE_JSON EXTRACTED_SITE")
+if len(sys.argv) == 3:
+    data_path = Path(sys.argv[1])
+    ROOT = Path(sys.argv[2])
+elif len(sys.argv) == 2:
+    # Cloudflare invokes every augmentation as: python SCRIPT.py dist
+    data_path = (
+        Path(__file__).resolve().parent.parent
+        / "article-data"
+        / "2026-09-08-sensitive-prohibited-items.json"
+    )
+    ROOT = Path(sys.argv[1])
+else:
+    raise SystemExit("usage: publish_latest_article.py [ARTICLE_JSON] EXTRACTED_SITE")
 
-DATA = json.loads(Path(sys.argv[1]).read_text(encoding="utf-8"))
-ROOT = Path(sys.argv[2])
+DATA = json.loads(data_path.read_text(encoding="utf-8"))
 SLUG, TITLE, SHORT, DATE, DISPLAY, META, DECK = (
     DATA[k] for k in ("SLUG", "TITLE", "SHORT", "DATE", "DISPLAY", "META", "DECK")
 )
@@ -158,10 +168,11 @@ def patch_home() -> None:
             for entity in node.get("mainEntity", []):
                 if entity.get("@type") == "ItemList" and entity.get("name") == "Latest Sugargoo buyer guides":
                     url = "https://sugargoovip.shop/" + SLUG
-                    items = [x for x in entity.get("itemListElement", []) if x.get("item", {}).get("url") != url]
-                    items.insert(0, {"@type": "ListItem", "position": 1, "item": {"@type": "Article", "headline": TITLE, "url": url, "datePublished": DATE}})
-                    items = items[:3]
-                    for i, item in enumerate(items, 1): item["position"] = i
+                    items = [
+                        {"@type": "ListItem", "position": 1, "item": {"@type": "Article", "headline": TITLE, "url": url, "datePublished": DATE}},
+                        {"@type": "ListItem", "position": 2, "item": {"@type": "Article", "headline": "Sugargoo Customs Declaration Guide 2026: Values, Descriptions and Proof", "url": "https://sugargoovip.shop/guide-sugargoo-customs-declaration.html", "datePublished": "2026-09-06"}},
+                        {"@type": "ListItem", "position": 3, "item": {"@type": "Article", "headline": "Sugargoo Tracking Guide 2026: Decode Parcel Updates and Handle Delivery Delays", "url": "https://sugargoovip.shop/guide-sugargoo-tracking-not-updating.html", "datePublished": "2026-08-21"}},
+                    ]
                     entity["numberOfItems"] = 3
                     entity["itemListElement"] = items
                     return data
@@ -171,13 +182,15 @@ def patch_home() -> None:
     start = page.index('<section aria-labelledby="latest-guides-title"')
     end = page.index('<section class="finder', start)
     section = page[start:end]
-    cards = [c for c in re.findall(r'<article class="latest-guide-card[^>]*>.*?</article>', section, re.S) if SLUG not in c][:2]
-    if len(cards) != 2: raise RuntimeError("Previous homepage guide cards not found")
-    cards = [c.replace(" latest-guide-featured", "").replace('<span class="latest-guide-badge">Latest guide</span>', "") for c in cards]
+    available_cards = re.findall(r'<article class="latest-guide-card[^>]*>.*?</article>', section, re.S)
+    tracking = next((c for c in available_cards if "guide-sugargoo-tracking-not-updating.html" in c), None)
+    if not tracking: raise RuntimeError("Tracking homepage guide card not found")
+    tracking = tracking.replace(" latest-guide-featured", "").replace('<span class="latest-guide-badge">Latest guide</span>', "")
+    customs = '''<article class="latest-guide-card"><a aria-label="Read Sugargoo Customs Declaration Guide 2026" class="latest-guide-cover latest-guide-shipping" href="guide-sugargoo-customs-declaration.html"><svg aria-hidden="true" viewBox="0 0 220 160"><rect x="54" y="28" width="112" height="104" rx="12"></rect><path d="M76 55h68M76 75h52M76 95h36"></path><path d="m126 104 10 10 20-24"></path></svg><strong>Customs Declaration &amp; Proof</strong><small>Values · Descriptions · Records</small></a><div class="latest-guide-body"><div class="latest-guide-meta"><time datetime="2026-09-06">September 6, 2026</time><span>12 min read</span></div><h3><a href="guide-sugargoo-customs-declaration.html">Sugargoo Customs Declaration Guide 2026</a></h3><p>Build a realistic declaration ledger, understand route tax handling and prepare useful payment proof before international dispatch.</p><a class="latest-guide-link" href="guide-sugargoo-customs-declaration.html">Read customs guide <span>→</span></a></div></article>'''
     new = f'''<article class="latest-guide-card latest-guide-featured"><a aria-label="Read {esc(SHORT)}" class="latest-guide-cover latest-guide-shipping" href="{SLUG}"><span class="latest-guide-badge">Latest guide</span><svg aria-hidden="true" viewBox="0 0 220 160"><rect x="54" y="28" width="112" height="104" rx="12"></rect><path d="M76 55h68M76 75h52M76 95h36"></path><path d="m126 104 10 10 20-24"></path></svg><strong>Restricted Items &amp; Route Checks</strong><small>Batteries · Liquids · Special cargo</small></a><div class="latest-guide-body"><div class="latest-guide-meta"><time datetime="{DATE}">{DISPLAY}</time><span>12 min read</span></div><h3><a href="{SLUG}">{esc(SHORT)}</a></h3><p>Classify batteries, liquids, food, magnets and oversized goods before they become expensive warehouse problems.</p><a class="latest-guide-link" href="{SLUG}">Read restricted items guide <span>→</span></a></div></article>'''
     grid_start = section.index('<div class="latest-guides-grid">') + len('<div class="latest-guides-grid">')
     grid_end = section.rindex("</div></div></section>")
-    section = section[:grid_start] + new + "".join(cards) + section[grid_end:]
+    section = section[:grid_start] + new + customs + tracking + section[grid_end:]
     section = re.sub(r'<div class="latest-guides-intro"><p>.*?</p>', '<div class="latest-guides-intro"><p>Three practical Sugargoo guides covering restricted-item screening, customs declarations and parcel tracking. Newest articles appear first.</p>', section, count=1, flags=re.S)
     path.write_text(page[:start] + section + page[end:], encoding="utf-8")
 
