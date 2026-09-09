@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-08T06:00:00.000Z",
+  "generatedAt": "2026-09-09T06:00:00.000Z",
   "domain": "sugargoovip.pro",
   "articleWordCounts": {
     "qc": 1586,
@@ -9,7 +9,8 @@
     "returns": 1618,
     "tracking": 1722,
     "insurance": 1692,
-    "restrictions": 1636
+    "restrictions": 1636,
+    "customs": 1679
   },
   "files": [
     "404.html",
@@ -23,6 +24,7 @@
     "assets/logo.png",
     "guides/how-to-read-sugargoo-qc-photos/index.html",
     "guides/index.html",
+    "guides/sugargoo-customs-declaration-value-file/index.html",
     "guides/product-link-to-sugargoo-diy-order/index.html",
     "guides/sugargoo-consolidation-plan/index.html",
     "guides/sugargoo-restricted-items-route-eligibility/index.html",
