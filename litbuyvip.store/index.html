@@ -923,6 +923,28 @@
         font-weight: 900;
         letter-spacing: 0.08em;
       }
+      .story-img.address {
+        background:
+          linear-gradient(90deg, transparent 0 13%, #ffffff35 13.5% 14.5%, transparent 15% 84%, #ffffff35 84.5% 85.5%, transparent 86%),
+          repeating-linear-gradient(0deg, transparent 0 47px, #ffffff24 48px 49px),
+          radial-gradient(circle at 78% 22%, var(--acid) 0 8px, transparent 9px),
+          linear-gradient(145deg, #06162a 0 44%, #3158ff 44% 72%, #ff8758 72% 100%);
+      }
+      .story-img.address:after {
+        content: "NAME → STREET → UNIT → POSTCODE";
+        position: absolute;
+        left: 8%;
+        right: 8%;
+        top: 44%;
+        padding: 18px 7px;
+        border: 2px solid var(--acid);
+        background: #06162aea;
+        color: #fff;
+        text-align: center;
+        font-size: 10px;
+        font-weight: 900;
+        letter-spacing: 0.08em;
+      }
       .story-img.quote {
         background:
           linear-gradient(90deg, transparent 0 18%, #ffffff35 18.5% 19.5%, transparent 20% 49%, #ffffff35 49.5% 50.5%, transparent 51% 80%, #ffffff35 80.5% 81.5%, transparent 82%),
@@ -1201,6 +1223,12 @@
       .mini.qc {
         background-image: linear-gradient(90deg, #06162a22, #06162aa8),
           url("../public/images/qc-guide.png");
+      }
+      .mini.quote {
+        background:
+          linear-gradient(90deg, transparent 0 18%, #ffffff35 18.5% 19.5%, transparent 20% 49%, #ffffff35 49.5% 50.5%, transparent 51% 80%, #ffffff35 80.5% 81.5%, transparent 82%),
+          repeating-linear-gradient(0deg, transparent 0 23px, #ffffff24 24px 25px),
+          linear-gradient(145deg, #3158ff 0 43%, #ff8758 43% 68%, #06162a 68% 100%);
       }
       .mini.trace {
         background:
@@ -4090,30 +4118,30 @@
           <a href="guides/index.html">VIEW ALL BUYER GUIDES ↗</a>
         </div>
         <div class="stories">
-          <a class="lead" href="guides/litbuy-shipping-quote-audit.html"
-            ><div class="story-img quote"><span>FREIGHT ESTIMATOR</span><b>14</b></div>
+          <a class="lead" href="guides/litbuy-shipping-address-audit.html"
+            ><div class="story-img address"><span>ADDRESS FREEZE</span><b>15</b></div>
             <div class="story-copy">
-              <small>SEP 7, 2026 · 13 MIN READ</small>
-              <h3>Audit a LitBuy Shipping Quote Before You Pay</h3>
-              <p>Compare billing units, parcel inputs, customs responsibility and delivery timing instead of choosing the lowest visible number.</p>
+              <small>SEP 9, 2026 · 13 MIN READ</small>
+              <h3>Audit a LitBuy Shipping Address Before You Pay</h3>
+              <p>Freeze the recipient, street, unit, postal code, region and phone as one verified parcel record before checkout.</p>
               <strong>READ THE FIELD NOTE ↗</strong>
             </div></a
           >
           <div class="stack">
-            <a href="guides/litbuy-sourcetrack-timestamp-audit.html"
+            <a href="guides/litbuy-shipping-quote-audit.html"
+              ><div class="mini quote"></div>
+              <div>
+                <small>FREIGHT ESTIMATOR · 13 MIN</small>
+                <h3>The Shipping Quote Audit</h3>
+                <p>Compare routes, billing units, customs and timing.</p>
+                <strong>READ GUIDE ↗</strong>
+              </div></a
+            ><a href="guides/litbuy-sourcetrack-timestamp-audit.html"
               ><div class="mini trace"></div>
               <div>
                 <small>SOURCETRACK AUDIT · 13 MIN</small>
                 <h3>The Five-Timestamp Trace</h3>
                 <p>Read purchasing, receipt, shelving and QC milestones.</p>
-                <strong>READ GUIDE ↗</strong>
-              </div></a
-            ><a href="guides/litbuy-fill-buy-order-brief.html"
-              ><div class="mini manual"></div>
-              <div>
-                <small>MANUAL ORDER CONTROL · 13 MIN</small>
-                <h3>The Manual Order Blueprint</h3>
-                <p>Build a precise LitBuy Fill &amp; Buy request.</p>
                 <strong>READ GUIDE ↗</strong>
               </div></a
             >
