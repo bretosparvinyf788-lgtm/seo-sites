@@ -40,6 +40,16 @@ function articleFromStaticPage(config) {
 
 const automationArticles = [
   articleFromStaticPage({
+    key: 'cssbuy-parcel-insurance-claim-evidence-guide-2026',
+    file: 'guides/cssbuy-parcel-insurance-claim-evidence-guide-2026/index.html',
+    title: 'CSSBuy Parcel Insurance Guide 2026: Route Checks, Evidence and Claims',
+    excerpt: 'Check route-specific insurance, document parcel value and build usable evidence before a loss, damage or missing-content claim.',
+    seo_title: 'CSSBuy Parcel Insurance Guide 2026: Evidence & Claims',
+    seo_description: 'Use this practical CSSBuy parcel insurance workflow to check route limits, record insured value, preserve shipment evidence and prepare a clearer claim file.',
+    tags: 'CSSBuy insurance, CSSBuy parcel claim, maximum insured value, shipping evidence, parcel damage, missing contents, CSSBuy tracking, Add Note',
+    publish_date: '2026-09-09'
+  }),
+  articleFromStaticPage({
     key: 'cssbuy-product-link-not-working-guide-2026',
     file: 'guides/cssbuy-product-link-not-working-guide-2026/index.html',
     title: 'CSSBuy Product Link Not Working Guide 2026: Search, Recover or Use Expert Buy',
