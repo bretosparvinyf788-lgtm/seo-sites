@@ -2,13 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 <loc>https://superbuyvip.org</loc>
-<lastmod>2026-09-08T00:00:00.000Z</lastmod>
+<lastmod>2026-09-09T00:00:00.000Z</lastmod>
 <changefreq>weekly</changefreq>
 <priority>1</priority>
 </url>
 <url>
 <loc>https://superbuyvip.org/guides</loc>
-<lastmod>2026-09-08T00:00:00.000Z</lastmod>
+<lastmod>2026-09-09T00:00:00.000Z</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.8</priority>
 </url>
@@ -57,6 +57,12 @@
 <url>
 <loc>https://superbuyvip.org/guides/superbuy-order-status-control</loc>
 <lastmod>2026-09-08T00:00:00.000Z</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://superbuyvip.org/guides/superbuy-shipping-cost-chargeable-weight</loc>
+<lastmod>2026-09-09T00:00:00.000Z</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.8</priority>
 </url>
