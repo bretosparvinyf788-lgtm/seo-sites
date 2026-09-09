@@ -1,6 +1,59 @@
 {
   "en": [
     {
+      "items": [
+        [
+          "Who is responsible for destination import taxes?",
+          "Superbuy's current fee guidance states that import charges such as tariffs or VAT levied by destination customs are borne by the recipient."
+        ],
+        [
+          "Does the shipping estimate guarantee the final customs charge?",
+          "No. An estimate reflects the information and route available at submission. Customs treatment depends on destination rules, item category, declared value and the authority's decision."
+        ],
+        [
+          "What should a customs ledger contain?",
+          "Record each item’s plain description, quantity, variation, known material, paid amount, currency, order number, warehouse reference and restricted characteristics."
+        ],
+        [
+          "Should I use the seller’s full marketplace title?",
+          "Usually convert promotional wording into a precise ordinary description while preserving the original title as source evidence. Never invent materials or functions."
+        ],
+        [
+          "Can I copy a tariff code from another buyer?",
+          "Do not assume another parcel uses the correct code. Classification can depend on construction and destination rules; use official resources or qualified advice when required."
+        ],
+        [
+          "How should discounts be recorded?",
+          "Preserve the paid transaction and document how any order-level discount was allocated across items. Apply one reasonable method consistently and keep the evidence."
+        ],
+        [
+          "Does removing retail packaging reduce the item’s paid value?",
+          "No. Packaging removal can affect parcel weight or volume, but it does not rewrite the merchandise transaction shown in your records."
+        ],
+        [
+          "How should free gifts be handled?",
+          "Include the physical gift in the quantity and description record. Do not assume its customs treatment solely from a zero checkout line; follow the destination and route requirements."
+        ],
+        [
+          "Why keep freight separate from merchandise value?",
+          "The categories describe different costs. Keeping them separate preserves the facts needed to follow whichever taxable-value rules apply at the destination."
+        ],
+        [
+          "What happens if Superbuy’s final shipping fee differs from the deposit?",
+          "Superbuy says the final charge is reconciled after the carrier verifies packed size and weight, with the difference refunded or collected as applicable."
+        ],
+        [
+          "Can a restricted item be made ordinary by changing its description?",
+          "No. Route screening should reflect the product's real characteristics, such as a battery, liquid, powder or magnet. Renaming it does not change the item."
+        ],
+        [
+          "What evidence should I keep after dispatch?",
+          "Keep the dated ledger, orders, listing snapshots, warehouse record, parcel submission, route, deposit, final adjustment, tracking and any carrier or customs messages."
+        ]
+      ],
+      "title": "Superbuy Customs Planning: 12 Practical Questions"
+    },
+    {
       "title": "Superbuy Delivery and After-Sales: 12 Practical Questions",
       "items": [
         [
