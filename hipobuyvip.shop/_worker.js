@@ -208,6 +208,10 @@ export default {
     headers.set('Referrer-Policy', 'strict-origin-when-cross-origin');
     headers.set('X-Content-Type-Options', 'nosniff');
     headers.delete('content-length');
+    // ASSETS can return a pre-compressed representation for larger HTML files.
+    // response.text() gives us decoded text, so carrying the original encoding
+    // header into the rewritten Response can make browsers decode it twice.
+    headers.delete('content-encoding');
 
     return new Response(html, {
       status: response.status,
