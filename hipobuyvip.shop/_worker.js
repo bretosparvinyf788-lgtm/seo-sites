@@ -192,12 +192,7 @@ export default {
     if (responseRedirect) return responseRedirect;
 
     const url = new URL(request.url);
-    // Request an identity representation before reading and rewriting HTML.
-    // Large Pages assets can otherwise arrive Brotli-compressed from ASSETS,
-    // and response.text() would turn those compressed bytes into broken text.
-    const assetHeaders = new Headers(request.headers);
-    assetHeaders.set('accept-encoding', 'identity');
-    const response = await env.ASSETS.fetch(new Request(request, { headers: assetHeaders }));
+    const response = await env.ASSETS.fetch(request);
     const contentType = response.headers.get('content-type') || '';
     if (!contentType.includes('text/html')) return response;
 
