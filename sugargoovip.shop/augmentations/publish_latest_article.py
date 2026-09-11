@@ -27,6 +27,9 @@ SLUG, TITLE, SHORT, DATE, DISPLAY, META, DECK = (
     DATA[k] for k in ("SLUG", "TITLE", "SHORT", "DATE", "DISPLAY", "META", "DECK")
 )
 PUBLIC_SLUG = SLUG.removesuffix(".html")
+if (ROOT / SLUG).exists():
+    print(f"{SLUG} already present; skipping")
+    raise SystemExit(0)
 TAGS, SOURCES, SECTIONS, FAQ = (DATA[k] for k in ("TAGS", "SOURCES", "SECTIONS", "FAQ"))
 PROSE = "\n".join(t for _, t in SECTIONS) + "\n" + "\n".join(q + " " + a for q, a in FAQ)
 WORD_COUNT = len(re.findall(r"\b[\w’'-]+\b", PROSE))
