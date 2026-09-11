@@ -21,6 +21,9 @@ SLUG, TITLE, SHORT, DATE, DISPLAY, META, DECK = (
     DATA[key]
     for key in ("SLUG", "TITLE", "SHORT", "DATE", "DISPLAY", "META", "DECK")
 )
+if (ROOT / SLUG).exists():
+    print(f"Skipped existing article: {SLUG}")
+    raise SystemExit(0)
 TAGS, SOURCES, SECTIONS, FAQ = (
     DATA["TAGS"],
     DATA["SOURCES"],

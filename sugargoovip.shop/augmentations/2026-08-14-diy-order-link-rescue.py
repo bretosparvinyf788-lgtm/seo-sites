@@ -7,6 +7,9 @@ ROOT=Path(sys.argv[1] if len(sys.argv)>1 else 'dist')
 DATA_PATH=Path(__file__).resolve().parent.parent/'article-data'/'2026-08-14-diy-order-link-rescue.json'
 D=json.loads(DATA_PATH.read_text(encoding='utf-8'))
 SLUG,TITLE,SHORT,DATE,DISPLAY,META,DECK=(D[k] for k in ('SLUG','TITLE','SHORT','DATE','DISPLAY','META','DECK'))
+if (ROOT/SLUG).exists():
+    print(f'Skipped existing article: {SLUG}')
+    raise SystemExit(0)
 TAGS,SOURCES,SECTIONS,FAQ=D['TAGS'],D['SOURCES'],D['SECTIONS'],D['FAQ']
 
 def esc(s): return html.escape(str(s),quote=True)

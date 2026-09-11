@@ -5,6 +5,9 @@ from pathlib import Path
 
 ROOT=Path(sys.argv[1] if len(sys.argv)>1 else 'dist')
 SLUG='guide-sugargoo-prepurchase-cost-check.html'
+if (ROOT/SLUG).exists():
+    print(f'Skipped existing article: {SLUG}')
+    raise SystemExit(0)
 TITLE='Sugargoo Pre-Purchase Cost Check 2026: Decide What Is Worth Buying Before You Pay'
 SHORT='Sugargoo Pre-Purchase Cost Check 2026'
 DATE='2026-08-12'
