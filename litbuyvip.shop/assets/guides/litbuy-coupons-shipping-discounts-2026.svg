@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">LitBuy coupon and shipping discount planning</title>
+  <desc id="desc">A flat illustration of coupon tickets, a parcel and a cost checklist on a dark desk.</desc>
+  <rect width="1600" height="900" fill="#090b10"/>
+  <rect x="86" y="78" width="1428" height="744" rx="48" fill="#141a24" stroke="#303846" stroke-width="4"/>
+  <circle cx="126" cy="118" r="12" fill="#ff7a45"/>
+  <circle cx="164" cy="118" r="12" fill="#ffd166"/>
+  <circle cx="202" cy="118" r="12" fill="#73d2de"/>
+  <path d="M180 306h560a48 48 0 0 1 48 48v70a42 42 0 0 0 0 84v70a48 48 0 0 1-48 48H180a48 48 0 0 1-48-48v-70a42 42 0 0 0 0-84v-70a48 48 0 0 1 48-48Z" fill="#ff7a45"/>
+  <path d="M566 306v320" stroke="#090b10" stroke-width="5" stroke-dasharray="18 17" opacity=".5"/>
+  <circle cx="347" cy="466" r="86" fill="#090b10" opacity=".92"/>
+  <path d="M306 515 388 417M318 417h2M376 515h2" stroke="#f5f7fa" stroke-width="22" stroke-linecap="round"/>
+  <rect x="880" y="214" width="506" height="474" rx="30" fill="#f5f7fa"/>
+  <rect x="942" y="286" width="204" height="32" rx="16" fill="#1c2430"/>
+  <rect x="942" y="355" width="358" height="18" rx="9" fill="#a8b1bf"/>
+  <rect x="942" y="399" width="305" height="18" rx="9" fill="#a8b1bf"/>
+  <rect x="942" y="443" width="336" height="18" rx="9" fill="#a8b1bf"/>
+  <path d="m954 534 24 24 48-58M954 604l24 24 48-58" fill="none" stroke="#ff7a45" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="1054" y="519" width="230" height="18" rx="9" fill="#29313e"/>
+  <rect x="1054" y="589" width="190" height="18" rx="9" fill="#29313e"/>
+  <path d="m679 687 102 52 102-52v-126l-102-52-102 52Z" fill="#ffd166" stroke="#090b10" stroke-width="8"/>
+  <path d="m679 561 102 54 102-54M781 615v124" fill="none" stroke="#090b10" stroke-width="8"/>
+</svg>
