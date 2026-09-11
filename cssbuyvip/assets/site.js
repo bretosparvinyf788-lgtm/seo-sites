@@ -41,6 +41,39 @@ for (const [language, entries] of Object.entries(ADDITIONAL_FAQS)) {
   SITE_DATA.faq[language] = [...SITE_DATA.faq[language], ...entries];
 }
 
+const NEWEST_ARTICLE_CARDS = {
+  en: [
+    {key:'cssbuy-tracking-parcel-status-delays-2026',title:'CSSBuy Tracking Guide 2026: Parcel Status, Tracking Numbers and Delays',excerpt:'Identify the right tracking number, read carrier handoffs and diagnose delayed, unchanged or confusing CSSBuy parcel statuses.',image:'/assets/cssbuy-tracking-guide-2026.webp',localized:false},
+    {key:'cssbuy-shipping-usa-routes-customs-2026',title:'CSSBuy Shipping to USA 2026: Routes, Weight, Customs and Delivery',excerpt:'Compare chargeable weight, route restrictions, packaging, customs data, tracking and delivery handoffs for a U.S.-bound parcel.',image:'/assets/cssbuy-shipping-usa-guide-2026.webp',localized:false},
+    {key:'cssbuy-parcel-insurance-claim-evidence-guide-2026',title:'CSSBuy Parcel Insurance Guide 2026: Route Checks, Evidence and Claims',excerpt:'Check route-specific insurance, document parcel value and build usable evidence before a loss, damage or missing-content claim.',image:'/assets/og-cssbuy-spreadsheet.png',localized:false},
+  ],
+  zh: [
+    {key:'cssbuy-tracking-parcel-status-delays-2026',title:'CSSBuy 包裹追踪指南 2026：状态、追踪号码与延误',excerpt:'分清订单号、包裹号与承运商追踪号，读懂线路交接，并判断长时间不更新或异常状态。',image:'/assets/cssbuy-tracking-guide-2026.webp',localized:false},
+    {key:'cssbuy-shipping-usa-routes-customs-2026',title:'CSSBuy 美国运输指南 2026：线路、计费重量、清关与派送',excerpt:'为美国包裹比较计费重量、线路限制、包装、申报、追踪和末端派送交接。',image:'/assets/cssbuy-shipping-usa-guide-2026.webp',localized:false},
+    {key:'cssbuy-parcel-insurance-claim-evidence-guide-2026',title:'CSSBuy 包裹保险指南 2026：线路核对、证据与索赔',excerpt:'发货前核对线路保险条件、记录包裹价值，并为丢失、破损或少件准备清晰证据。',image:'/assets/og-cssbuy-spreadsheet.png',localized:false},
+  ],
+  es: [
+    {key:'cssbuy-tracking-parcel-status-delays-2026',title:'Guía de seguimiento CSSBuy 2026: estados, números y retrasos',excerpt:'Distingue los identificadores, interpreta los traspasos del transportista y diagnostica estados detenidos o confusos.',image:'/assets/cssbuy-tracking-guide-2026.webp',localized:false},
+    {key:'cssbuy-shipping-usa-routes-customs-2026',title:'Envíos CSSBuy a EE. UU. 2026: rutas, peso, aduanas y entrega',excerpt:'Compara peso facturable, restricciones, embalaje, datos aduaneros, seguimiento y entrega final en Estados Unidos.',image:'/assets/cssbuy-shipping-usa-guide-2026.webp',localized:false},
+    {key:'cssbuy-parcel-insurance-claim-evidence-guide-2026',title:'Seguro de paquetes CSSBuy 2026: rutas, pruebas y reclamaciones',excerpt:'Comprueba el seguro de la ruta, documenta el valor y prepara pruebas para pérdidas, daños o artículos faltantes.',image:'/assets/og-cssbuy-spreadsheet.png',localized:false},
+  ],
+  de: [
+    {key:'cssbuy-tracking-parcel-status-delays-2026',title:'CSSBuy Sendungsverfolgung 2026: Status, Nummern und Verzögerungen',excerpt:'Unterscheide Bestell-, Paket- und Trackingnummern, prüfe Übergaben und kläre ausbleibende oder unklare Scans.',image:'/assets/cssbuy-tracking-guide-2026.webp',localized:false},
+    {key:'cssbuy-shipping-usa-routes-customs-2026',title:'CSSBuy Versand in die USA 2026: Routen, Gewicht, Zoll und Zustellung',excerpt:'Vergleiche Abrechnungsgewicht, Beschränkungen, Verpackung, Zolldaten, Tracking und die Zustellung in den USA.',image:'/assets/cssbuy-shipping-usa-guide-2026.webp',localized:false},
+    {key:'cssbuy-parcel-insurance-claim-evidence-guide-2026',title:'CSSBuy Paketversicherung 2026: Route, Nachweise und Ansprüche',excerpt:'Prüfe die Versicherung der Versandroute und sichere Wert- und Zustandsnachweise für Verlust oder Beschädigung.',image:'/assets/og-cssbuy-spreadsheet.png',localized:false},
+  ],
+  pt: [
+    {key:'cssbuy-tracking-parcel-status-delays-2026',title:'Rastreamento CSSBuy 2026: status, números e atrasos',excerpt:'Diferencie os identificadores, acompanhe transferências de transportadora e investigue atualizações paradas ou confusas.',image:'/assets/cssbuy-tracking-guide-2026.webp',localized:false},
+    {key:'cssbuy-shipping-usa-routes-customs-2026',title:'Envio CSSBuy para os EUA 2026: rotas, peso, alfândega e entrega',excerpt:'Compare peso cobrável, restrições, embalagem, dados aduaneiros, rastreamento e entrega final nos Estados Unidos.',image:'/assets/cssbuy-shipping-usa-guide-2026.webp',localized:false},
+    {key:'cssbuy-parcel-insurance-claim-evidence-guide-2026',title:'Seguro de pacote CSSBuy 2026: rota, provas e reivindicações',excerpt:'Confira o seguro da rota, documente o valor e prepare provas para perda, dano ou itens ausentes.',image:'/assets/og-cssbuy-spreadsheet.png',localized:false},
+  ],
+};
+
+for (const [language, newest] of Object.entries(NEWEST_ARTICLE_CARDS)) {
+  const newestKeys = new Set(newest.map((article) => article.key));
+  SITE_DATA.articles[language] = [...newest, ...SITE_DATA.articles[language].filter((article) => !newestKeys.has(article.key))];
+}
+
 let currentLang = localStorage.getItem('cssbuyvip_lang') || 'en';
 let currentView = 'home';
 let currentArticle = 'spreadsheet';
@@ -128,12 +161,19 @@ function overviewCards() {
   return `<div class="overview-card-grid">${cards.map(c => `<article class="overview-card"><div class="overview-icon">${c.icon}</div><h3>${esc(c.title)}</h3><p>${esc(c.desc)}</p></article>`).join('')}</div>`;
 }
 
+function guideCard(article) {
+  const clickAction = article.localized === false ? '' : ` onclick="if(currentLang!=='en'){event.preventDefault();setView('article','${article.key}')}"`;
+  const url = articleUrl(article.key);
+  const image = article.image || '/assets/og-cssbuy-spreadsheet.png';
+  return `<article class="guide-card"><a class="guide-cover-link" href="${url}"${clickAction}><img class="guide-cover" src="${esc(image)}" width="1200" height="630" loading="lazy" alt="${esc(article.title)}"></a><h3><a href="${url}"${clickAction}>${esc(article.title)}</a></h3><p>${esc(article.excerpt)}</p><a class="guide-link" href="${url}"${clickAction}>${esc(article.title)} →</a></article>`;
+}
+
 function home() {
   const u = SITE_DATA.ui[currentLang];
   const cats = SITE_DATA.categories[currentLang].map(c => `<a class="category-card card" href="${c.url}" rel="noopener"><span class="category-icon">${c.icon}</span><h3>${esc(c.title)}</h3><p>${esc(c.desc)}</p><span class="category-link">${u.openCat}</span></a>`).join('');
   const prods = SITE_DATA.products[currentLang].map((p,i) => `<article class="product-card card"><a href="${p.link}" rel="noopener" aria-label="${esc(p.title)}"><div class="product-media"><img src="${p.img}" width="520" height="520" loading="lazy" decoding="async" alt="${esc(p.title)} CSSBuy spreadsheet find"></div></a><div class="product-body"><div class="product-meta"><span>${u.hotPick}</span><span>${u.pick} ${String(i+1).padStart(2,'0')}</span></div><h3>${esc(p.title)}</h3><div class="product-price">${esc(p.price)}</div><div class="product-cta-row single-cta"><a class="outline-link primary-open" href="${p.link}" rel="noopener">${u.openProduct}</a></div></div></article>`).join('');
   const faqs = SITE_DATA.faq[currentLang].map((f,i)=>`<details ${i===0?'open':''}><summary>${esc(f[0])}</summary><p>${esc(f[1])}</p></details>`).join('');
-  const cards = SITE_DATA.articles[currentLang].slice(0,3).map(a=>`<article class="guide-card"><h3><a href="${articleUrl(a.key)}" onclick="if(currentLang!=='en'){event.preventDefault();setView('article','${a.key}')}">${esc(a.title)}</a></h3><p>${esc(a.excerpt)}</p><a class="guide-link" href="${articleUrl(a.key)}" onclick="if(currentLang!=='en'){event.preventDefault();setView('article','${a.key}')}">${esc(a.title)} →</a></article>`).join('');
+  const cards = SITE_DATA.articles[currentLang].slice(0,3).map(guideCard).join('');
   return `${header()}<main>
   <section class="hero" id="home"><div class="wrap grid"><div><span class="eyebrow">${u.eyebrow}</span><h1>${u.h1}</h1><p class="lead">${u.lead}</p><div class="btns"><a class="btn" href="/cssbuy-spreadsheet/">${u.sheet}</a><a class="btn secondary" href="/guides/">${u.guidesTitle}</a></div></div></div></section>
   <section class="section" id="quick-overview"><div class="wrap"><div class="section-head"><div><div class="products-bigpill h2like">${u.overviewNav || 'Overview'}</div><p class="products-subtitle">${u.overview}</p></div></div><div class="overview-panel">${overviewCards()}</div></div></section>
@@ -145,7 +185,7 @@ function home() {
 }
 function guides() {
   const u = SITE_DATA.ui[currentLang];
-  const cards = SITE_DATA.articles[currentLang].map(a=>`<article class="guide-card"><h3><a href="${articleUrl(a.key)}" onclick="if(currentLang!=='en'){event.preventDefault();setView('article','${a.key}')}">${esc(a.title)}</a></h3><p>${esc(a.excerpt)}</p><a class="guide-link" href="${articleUrl(a.key)}" onclick="if(currentLang!=='en'){event.preventDefault();setView('article','${a.key}')}">${esc(a.title)} →</a></article>`).join('');
+  const cards = SITE_DATA.articles[currentLang].map(guideCard).join('');
   return `${header()}<main><section class="hero"><div class="wrap"><span class="eyebrow">CSSBuy Guides</span><h1>${u.guidesTitle}</h1><p class="lead">${u.guidesLead}</p></div></section><section class="section"><div class="wrap"><div class="guide-grid">${cards}</div></div></section></main>${footer()}`;
 }
 function article() {

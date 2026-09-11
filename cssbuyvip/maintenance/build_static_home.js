@@ -72,7 +72,7 @@ function renderHome(data) {
   const faqs = data.faq.en.map((faq, index) => `
         <details${index === 0 ? ' open' : ''}><summary>${esc(faq[0])}</summary><p>${esc(faq[1])}</p></details>`).join('');
   const guides = data.articles.en.slice(0, 3).map((article) => `
-        <article class="guide-card"><h3><a href="${articleUrl(article.key)}">${esc(article.title)}</a></h3><p>${esc(article.excerpt)}</p><a class="guide-link" href="${articleUrl(article.key)}">${esc(article.title)} →</a></article>`).join('');
+        <article class="guide-card"><a class="guide-cover-link" href="${articleUrl(article.key)}"><img class="guide-cover" src="${esc(article.image || '/assets/og-cssbuy-spreadsheet.png')}" width="1200" height="630" loading="lazy" alt="${esc(article.title)}"></a><h3><a href="${articleUrl(article.key)}">${esc(article.title)}</a></h3><p>${esc(article.excerpt)}</p><a class="guide-link" href="${articleUrl(article.key)}">${esc(article.title)} →</a></article>`).join('');
   const itemList = data.products.en.map((product, index) => ({
     '@type': 'ListItem', position: index + 1, url: product.link, name: product.title
   }));
