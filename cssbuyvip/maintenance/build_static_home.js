@@ -1,5 +1,6 @@
 const fs = require('fs');
 const path = require('path');
+const vm = require('vm');
 
 const root = path.resolve(__dirname, '..');
 const indexPath = path.join(root, 'index.html');
@@ -28,9 +29,11 @@ function extractAssets() {
 
 function readSiteData() {
   const script = fs.readFileSync(jsPath, 'utf8');
-  const match = script.match(/const SITE_DATA = (\{[\s\S]*\});\nlet currentLang/);
-  if (!match) throw new Error('SITE_DATA not found in assets/site.js');
-  return JSON.parse(match[1]);
+  const dataSetup = script.split('\nlet currentLang')[0];
+  if (!dataSetup.includes('const SITE_DATA = ')) throw new Error('SITE_DATA not found in assets/site.js');
+  const sandbox = {};
+  vm.runInNewContext(`${dataSetup}\nthis.__siteData = SITE_DATA;`, sandbox);
+  return sandbox.__siteData;
 }
 
 function articleUrl(key) {
