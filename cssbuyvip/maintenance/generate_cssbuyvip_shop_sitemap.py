@@ -37,6 +37,14 @@ CANONICAL_RE_REVERSED = re.compile(
 
 
 def git_lastmod(path: Path) -> str:
+    dirty = subprocess.run(
+        ["git", "status", "--porcelain", "--", path.as_posix()],
+        check=False,
+        capture_output=True,
+        text=True,
+    )
+    if dirty.stdout.strip():
+        return date.today().isoformat()
     result = subprocess.run(
         ["git", "log", "-1", "--format=%cs", "--", path.as_posix()],
         check=False,
@@ -74,6 +82,8 @@ def canonical_url(html: str) -> str | None:
 
 
 def is_indexable(path: Path, html: str) -> bool:
+    if path == SITE_DIR / "blog" / "index.html":
+        return False
     if path.name in EXCLUDED_FILENAMES:
         return False
     if any(part.startswith((".", "_")) for part in path.relative_to(SITE_DIR).parts):
