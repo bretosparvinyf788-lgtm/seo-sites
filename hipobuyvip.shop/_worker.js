@@ -192,7 +192,12 @@ export default {
     if (responseRedirect) return responseRedirect;
 
     const url = new URL(request.url);
-    const response = await env.ASSETS.fetch(request);
+    // Request an identity representation before reading and rewriting HTML.
+    // Large Pages assets can otherwise arrive Brotli-compressed from ASSETS,
+    // and response.text() would turn those compressed bytes into broken text.
+    const assetHeaders = new Headers(request.headers);
+    assetHeaders.set('accept-encoding', 'identity');
+    const response = await env.ASSETS.fetch(new Request(request, { headers: assetHeaders }));
     const contentType = response.headers.get('content-type') || '';
     if (!contentType.includes('text/html')) return response;
 
@@ -208,9 +213,7 @@ export default {
     headers.set('Referrer-Policy', 'strict-origin-when-cross-origin');
     headers.set('X-Content-Type-Options', 'nosniff');
     headers.delete('content-length');
-    // ASSETS can return a pre-compressed representation for larger HTML files.
-    // response.text() gives us decoded text, so carrying the original encoding
-    // header into the rewritten Response can make browsers decode it twice.
+    // Let Cloudflare negotiate a fresh encoding for the rewritten body.
     headers.delete('content-encoding');
 
     return new Response(html, {
