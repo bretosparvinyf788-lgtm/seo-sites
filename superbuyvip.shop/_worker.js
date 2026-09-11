@@ -1,4 +1,4 @@
-const BUILD='20260908-shipping-expert';
+const BUILD='20260911-seo-ctr';
 const SECURITY_HEADERS={
   'x-content-type-options':'nosniff',
   'referrer-policy':'strict-origin-when-cross-origin',
@@ -25,16 +25,22 @@ const HASH_REPLACEMENTS=[
   ['/#/article/w2c','/guides/superbuy-w2c/'],['#/article/w2c','/guides/superbuy-w2c/']
 ];
 
-function headersFor(response){
+function headersFor(response,url){
   const headers=new Headers(response.headers);
   for(const[name,value]of Object.entries(SECURITY_HEADERS))headers.set(name,value);
-  headers.set('cache-control','no-cache, no-store, must-revalidate');
-  headers.set('pragma','no-cache');
-  headers.set('expires','0');
+  if(url.pathname.startsWith('/assets/')||/\.(?:png|jpg|jpeg|webp|svg|ico|css|js)$/i.test(url.pathname)){
+    headers.set('cache-control','public, max-age=31536000, immutable');
+  }else if(url.pathname==='/sitemap.xml'||url.pathname==='/robots.txt'){
+    headers.set('cache-control','public, max-age=3600');
+  }else{
+    headers.set('cache-control','public, max-age=0, must-revalidate');
+  }
+  headers.delete('pragma');
+  headers.delete('expires');
   return headers;
 }
 
-async function transformHtml(response,method){
+async function transformHtml(response,method,url){
   let html=await response.text();
   for(const[from,to]of HASH_REPLACEMENTS){
     html=html.split(`href="${from}"`).join(`href="${to}"`).split(`href='${from}'`).join(`href='${to}'`);
@@ -50,7 +56,7 @@ async function transformHtml(response,method){
   return new Response(method==='HEAD'?null:html,{
     status:response.status,
     statusText:response.statusText,
-    headers:headersFor(response)
+    headers:headersFor(response,new URL(response.url||'https://superbuyvip.shop/'))
   });
 }
 
@@ -80,12 +86,12 @@ export default{
     }
 
     const type=response.headers.get('content-type')||'';
-    if(type.includes('text/html'))return transformHtml(response,request.method);
+    if(type.includes('text/html'))return transformHtml(response,request.method,url);
 
     return new Response(request.method==='HEAD'?null:response.body,{
       status:response.status,
       statusText:response.statusText,
-      headers:headersFor(response)
+      headers:headersFor(response,url)
     });
   }
 };
