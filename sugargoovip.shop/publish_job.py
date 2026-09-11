@@ -178,11 +178,13 @@ def main() -> None:
     def patch_sitemap(root: Path) -> None:
         path = root / "sitemap.xml"
         xml = path.read_text(encoding="utf-8")
+        public_slug = article["slug"].removesuffix(".html")
         xml = re.sub(r'(<loc>https://sugargoovip\.shop/</loc><lastmod>)[^<]+', rf'\g<1>{article["date"]}', xml)
-        xml = re.sub(r'(<loc>https://sugargoovip\.shop/guides\.html</loc><lastmod>)[^<]+', rf'\g<1>{article["date"]}', xml)
-        if article["slug"] not in xml:
-            entry = f'  <url><loc>https://sugargoovip.shop/{article["slug"]}</loc><lastmod>{article["date"]}</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>\n'
-            marker = f'  <url><loc>https://sugargoovip.shop/{previous[0]["slug"]}' if previous else '  <url><loc>https://sugargoovip.shop/guide-sugargoo-packing-center-parcel.html'
+        xml = re.sub(r'(<loc>https://sugargoovip\.shop/guides</loc><lastmod>)[^<]+', rf'\g<1>{article["date"]}', xml)
+        if public_slug not in xml:
+            entry = f'  <url><loc>https://sugargoovip.shop/{public_slug}</loc><lastmod>{article["date"]}</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>\n'
+            previous_slug = previous[0]["slug"].removesuffix(".html") if previous else "guide-sugargoo-packing-center-parcel"
+            marker = f'  <url><loc>https://sugargoovip.shop/{previous_slug}'
             if marker not in xml:
                 raise RuntimeError("Sitemap insertion marker not found")
             xml = xml.replace(marker, entry + marker, 1)

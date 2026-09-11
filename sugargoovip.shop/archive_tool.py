@@ -325,17 +325,47 @@ def patch_home(root: Path) -> None:
 def patch_sitemap(root: Path) -> None:
     path = root / "sitemap.xml"
     xml = path.read_text(encoding="utf-8")
+    public_slug = ARTICLE["slug"].removesuffix(".html")
     xml = re.sub(r'(<loc>https://sugargoovip\.shop/</loc><lastmod>)[^<]+', rf'\g<1>{ARTICLE["date"]}', xml)
-    xml = re.sub(r'(<loc>https://sugargoovip\.shop/guides\.html</loc><lastmod>)[^<]+', rf'\g<1>{ARTICLE["date"]}', xml)
-    entry = f'  <url><loc>https://sugargoovip.shop/{ARTICLE["slug"]}</loc><lastmod>{ARTICLE["date"]}</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>\n'
-    if ARTICLE["slug"] not in xml:
-        marker = '  <url><loc>https://sugargoovip.shop/guide-sugargoo-returns-exchanges.html'
+    xml = re.sub(r'(<loc>https://sugargoovip\.shop/guides</loc><lastmod>)[^<]+', rf'\g<1>{ARTICLE["date"]}', xml)
+    entry = f'  <url><loc>https://sugargoovip.shop/{public_slug}</loc><lastmod>{ARTICLE["date"]}</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>\n'
+    if public_slug not in xml:
+        marker = '  <url><loc>https://sugargoovip.shop/guide-sugargoo-returns-exchanges'
         if marker not in xml:
-            marker = '  <url><loc>https://sugargoovip.shop/guide-shipping-cost.html'
+            marker = '  <url><loc>https://sugargoovip.shop/guide-shipping-cost'
         if marker not in xml:
             raise RuntimeError("Sitemap guide insertion marker was not found")
         xml = xml.replace(marker, entry + marker, 1)
     path.write_text(xml, encoding="utf-8")
+
+
+def normalize_public_urls(root: Path) -> None:
+    """Keep filenames deployable while exposing one extensionless public URL per page."""
+    for path in root.glob("*.html"):
+        page = path.read_text(encoding="utf-8")
+        page = re.sub(
+            r"https://sugargoovip\.shop/([a-z0-9-]+)\.html",
+            r"https://sugargoovip.shop/\1",
+            page,
+        )
+        page = re.sub(r'href="index\.html#', 'href="/#', page)
+        page = page.replace('href="index.html"', 'href="/"')
+        page = re.sub(r'href="([a-z0-9-]+)\.html([^\"]*)"', r'href="/\1\2"', page)
+        if "assets/js/analytics-v1.js" not in page:
+            page = page.replace(
+                "</body>",
+                '<script src="/assets/js/analytics-v1.js" defer></script></body>',
+            )
+        path.write_text(page, encoding="utf-8")
+
+    sitemap = root / "sitemap.xml"
+    xml = sitemap.read_text(encoding="utf-8")
+    xml = re.sub(
+        r"https://sugargoovip\.shop/([a-z0-9-]+)\.html",
+        r"https://sugargoovip.shop/\1",
+        xml,
+    )
+    sitemap.write_text(xml, encoding="utf-8")
 
 
 def validate(root: Path) -> dict:
@@ -365,7 +395,7 @@ def validate(root: Path) -> dict:
         "guides_all_articles": all(slug in guides for slug in slugs),
         "guides_exact_card_count": guides.count("<article>") == len(slugs),
         "guide_files_present": all((root / slug).is_file() for slug in slugs),
-        "sitemap_has_article": ARTICLE["slug"] in sitemap,
+        "sitemap_has_article": ARTICLE["slug"].removesuffix(".html") in sitemap,
     }
     if not all(value for key, value in checks.items() if key != "article_word_count"):
         raise RuntimeError(f"Validation failed: {checks}")
@@ -420,6 +450,7 @@ def publish() -> None:
         patch_home(root)
         patch_sitemap(root)
         checks = validate(root)
+        normalize_public_urls(root)
         report = {
             "status": "archive_validated",
             "published_at": ARTICLE["date"],
