@@ -201,17 +201,27 @@ export default {
     const contentType = response.headers.get('content-type') || '';
     if (!contentType.includes('text/html')) return response;
 
-    let html = await response.text();
-    // The homepage is committed as fully crawlable HTML. Keep the edge worker
-    // focused on canonical redirects and response security headers.
-    if (['/hipobuy-spreadsheet/', '/hipobuy-qc-photos/', '/hipobuy-shipping-calculator/', '/hipobuy-fees/', '/hipobuy-coupons/'].includes(url.pathname) && !html.includes('class="article-section article-related"')) {
-      html = html.replace('<div class="article-end-actions">', `${relatedGuideLinks}<div class="article-end-actions">`);
-    }
-
     const headers = new Headers(response.headers);
     headers.set('X-Robots-Tag', 'index, follow');
     headers.set('Referrer-Policy', 'strict-origin-when-cross-origin');
     headers.set('X-Content-Type-Options', 'nosniff');
+
+    const relatedGuideTargets = ['/hipobuy-spreadsheet/', '/hipobuy-qc-photos/', '/hipobuy-shipping-calculator/', '/hipobuy-fees/', '/hipobuy-coupons/'];
+    if (!relatedGuideTargets.includes(url.pathname)) {
+      // Stream committed HTML unchanged. This preserves the exact compressed
+      // representation supplied by Pages and avoids decoding large documents.
+      return new Response(response.body, {
+        status: response.status,
+        statusText: response.statusText,
+        headers
+      });
+    }
+
+    let html = await response.text();
+    if (!html.includes('class="article-section article-related"')) {
+      html = html.replace('<div class="article-end-actions">', `${relatedGuideLinks}<div class="article-end-actions">`);
+    }
+
     headers.delete('content-length');
     // Let Cloudflare negotiate a fresh encoding for the rewritten body.
     headers.delete('content-encoding');
