@@ -1,12 +1,18 @@
 // Serve static article routes directly and refresh the three newest homepage guides.
-// Final deployment marker: 2026-09-06 tracking guide publication.
+// Deployment marker: 2026-09-16 coupon and fee guide publication.
 const HOME_PATHS = new Set(["/", "/index.html"]);
 
 const LATEST = [
   {
+    href: "/guides/cssbuy-coupon-fee-verification-2026/",
+    label: "New · September 16, 2026",
+    title: "CSSBuy Coupon and Fee Guide 2026",
+    desc: "Verify coupon eligibility, shipping discounts and every visible fee before committing to a top-up, order or parcel payment.",
+  },
+  {
     href: "/guides/cssbuy-tracking-not-updating-2026/",
-    label: "New · September 6, 2026",
-    title: "CSSBuy Tracking Not Updating 2026: Diagnose a Stalled Parcel",
+    label: "Parcel Tracking · September 6, 2026",
+    title: "CSSBuy Order Tracker Not Updating?",
     desc: "Identify the last confirmed scan, current parcel owner and next missing handoff before opening a focused enquiry.",
   },
   {
@@ -14,12 +20,6 @@ const LATEST = [
     label: "August 17, 2026",
     title: "CSSBuy Top-Up Not Received 2026",
     desc: "Recover a charged-bank, missing-balance payment incident with a clean evidence packet, the right support route and duplicate-payment controls.",
-  },
-  {
-    href: "/guides/cssbuy-order-processing-timeline-2026/",
-    label: "August 14, 2026",
-    title: "CSSBuy Order Processing Timeline 2026",
-    desc: "Separate CSSBuy handling, seller dispatch, domestic tracking, warehouse intake and QC so you know which missing event actually needs action.",
   },
 ];
 
@@ -48,6 +48,11 @@ function transformHomepage(html) {
 export default {
   async fetch(request, env) {
     const url = new URL(request.url);
+    if (url.hostname === "www.cssbuyvip.com") {
+      url.hostname = "cssbuyvip.com";
+      url.protocol = "https:";
+      return Response.redirect(url.toString(), 301);
+    }
     const response = await env.ASSETS.fetch(request);
     const type = response.headers.get("content-type") || "";
 
@@ -63,7 +68,7 @@ export default {
     const transformed = transformHomepage(await response.text());
     const headers = new Headers(response.headers);
     headers.delete("content-length");
-    headers.set("x-cssbuyvip-daily-seo", "2026-09-06-tracking-guide");
+    headers.set("x-cssbuyvip-daily-seo", "2026-09-16-coupon-fee-guide");
 
     return new Response(transformed, {
       status: response.status,
