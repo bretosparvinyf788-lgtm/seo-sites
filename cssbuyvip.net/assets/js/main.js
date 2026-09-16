@@ -5,6 +5,23 @@ const languageMenu = document.getElementById('languageMenu');
 const languageTrigger = document.getElementById('languageTrigger');
 const languageCurrent = document.getElementById('languageCurrent');
 
+function trackEvent(name, parameters) {
+  if (typeof window.gtag !== 'function') return;
+  window.gtag('event', name, Object.assign({transport_type: 'beacon'}, parameters || {}));
+}
+
+function decorateOutboundLinks() {
+  document.querySelectorAll('a[href*="kakobuymake.com"]').forEach(link => {
+    try {
+      const url = new URL(link.href);
+      url.searchParams.set('utm_source', 'cssbuyvip.net');
+      url.searchParams.set('utm_medium', 'referral');
+      url.searchParams.set('utm_campaign', link.closest('.product-card') ? 'featured_products' : link.closest('.category-card') ? 'category_browse' : 'site_cta');
+      link.href = url.toString();
+    } catch (error) {}
+  });
+}
+
 function setupCategoryLinks() {
   document.querySelectorAll('a.category-card[href]').forEach(card => {
     card.removeAttribute('target');
@@ -17,14 +34,38 @@ function setupCategoryLinks() {
   });
 }
 setupCategoryLinks();
+decorateOutboundLinks();
 
 document.addEventListener('click', (event) => {
   if (!(event.target instanceof Element)) return;
   const card = event.target.closest('a.category-card[href]');
   if (!card) return;
   event.preventDefault();
+  trackEvent('category_click', {
+    category_name: (card.querySelector('h3') || {}).textContent || 'unknown',
+    link_url: card.href
+  });
   window.location.assign(card.href);
 }, true);
+
+document.addEventListener('click', (event) => {
+  if (!(event.target instanceof Element)) return;
+  const product = event.target.closest('.product-card a[href]');
+  if (product) {
+    trackEvent('outbound_product_click', {
+      product_name: (product.querySelector('h3') || {}).textContent || 'unknown',
+      link_url: product.href
+    });
+    return;
+  }
+  const guide = event.target.closest('.guide a[href], .related-guide-grid a[href]');
+  if (guide) {
+    trackEvent('guide_open', {
+      guide_title: (guide.querySelector('h3') || guide).textContent.trim().slice(0, 120),
+      link_url: guide.href
+    });
+  }
+});
 
 function closeMobile() {
   if (!mobileNav || !menuBtn) return;
@@ -87,11 +128,15 @@ function setGoogleTranslation(lang) {
 
 function applyLanguage(lang) {
   const selected = translations[lang] ? lang : 'en';
+  const previous = document.documentElement.lang || 'en';
   try { localStorage.setItem('cssbuyvip-language', selected); } catch (e) {}
   document.documentElement.lang = selected === 'zh' ? 'zh-CN' : selected;
   document.querySelectorAll('.language-option').forEach(o => o.classList.toggle('active', o.dataset.lang === selected));
   const names = {en:'English',zh:'简体中文',es:'Español',fr:'Français',de:'Deutsch',pt:'Português'};
   if (languageCurrent) languageCurrent.textContent = names[selected] || 'English';
+  if (previous !== (selected === 'zh' ? 'zh-CN' : selected)) {
+    trackEvent('language_change', {language: selected});
+  }
 
   if (selected === 'en') {
     const combo = document.querySelector('.goog-te-combo');
@@ -140,7 +185,7 @@ function initializeFullPageTranslation() {
 function featureLatestCSSBuyGuide() {
   const guideGrid = document.querySelector('#guides .guides');
   if (!guideGrid) return;
-  const latestGuides = [{"href":"guides/cssbuy-first-order-guide-2026/","image":"assets/images/guides/first-order-guide-2026.webp","alt":"CSSBuy First Order Guide 2026","meta":"Beginner Guide • Updated September 2026 • 1,763 words • 11 min read","title":"CSSBuy First Order Guide 2026: 15 Mistakes New Buyers Should Avoid","excerpt":"Start with a small, controlled test order and avoid the beginner errors that turn product selection, QC, returns and shipping into expensive corrections."},{"href":"guides/cssbuy-order-status-guide-2026/","image":"assets/images/guides/order-status-control.svg","alt":"CSSBuy Order Status Guide 2026","meta":"Order Workflow • Updated September 2026 • 1,797 words • 11 min read","title":"CSSBuy Order Status Guide 2026: From Purchased to In Warehouse","excerpt":"Identify whether CSSBuy, the seller, domestic carrier or warehouse controls the next step—and turn an apparently stuck order into a precise action."},{"href":"guides/cssbuy-customs-declaration-guide-2026/","image":"assets/images/guides/customs-declaration-record.svg","alt":"CSSBuy Customs Declaration Guide 2026","meta":"Customs Planning • Updated September 2026 • 1,784 words • 11 min read","title":"CSSBuy Customs Declaration Guide 2026: Build a Defensible Parcel Record","excerpt":"Turn purchase records, warehouse selections and product attributes into accurate descriptions, quantities and values before submitting an international parcel."}];
+  const latestGuides = [{"href":"guides/cssbuy-tracking-not-updating-2026/","image":"assets/images/guides/tracking-diagnostic.svg","alt":"CSSBuy tracking not updating guide","meta":"Parcel Tracking • Updated September 2026 • 1,658 words • 11 min read","title":"CSSBuy Tracking Not Updating? 2026 Status Fix Guide","excerpt":"Read the last confirmed scan, identify who owns the next handoff and send one evidence-based parcel enquiry."},{"href":"guides/cssbuy-warehouse-transfer-service-2026/","image":"assets/images/guides/warehouse-transfer.svg","alt":"CSSBuy warehouse transfer service guide","meta":"Warehouse Transfer • Updated September 2026 • 1,704 words • 11 min read","title":"CSSBuy Warehouse Transfer Service 2026: Ship For Me Workflow","excerpt":"Label self-purchased parcels, reconcile warehouse intake, request useful QC and consolidate compatible items."},{"href":"guides/cssbuy-true-cost-guide-2026/","image":"assets/images/guides/fees-cost-map.svg","alt":"CSSBuy fees and cost breakdown guide","meta":"Fees & Budgeting • Updated September 2026 • 1,613 words • 10 min read","title":"CSSBuy Fees 2026: Full Cost Breakdown Before You Buy","excerpt":"Map domestic delivery, warehouse choices, chargeable weight, international freight and destination costs before checkout."}];
   guideGrid.innerHTML = '';
   latestGuides.forEach(guide => {
     const card = document.createElement('article');
@@ -160,3 +205,53 @@ let initialLanguage = 'en';
 try { initialLanguage = localStorage.getItem('cssbuyvip-language') || 'en'; } catch (e) {}
 pendingLanguage = initialLanguage === 'en' ? null : initialLanguage;
 applyLanguage(initialLanguage);
+
+let scroll90Sent = false;
+window.addEventListener('scroll', () => {
+  if (scroll90Sent) return;
+  const available = document.documentElement.scrollHeight - window.innerHeight;
+  if (available > 0 && window.scrollY / available >= 0.9) {
+    scroll90Sent = true;
+    trackEvent('scroll_90', {page_path: window.location.pathname});
+  }
+}, {passive: true});
+
+if (document.querySelector('.article .content-card')) {
+  window.setTimeout(() => {
+    if (document.visibilityState === 'visible') {
+      trackEvent('guide_read_60s', {
+        page_path: window.location.pathname,
+        guide_title: (document.querySelector('h1') || {}).textContent || document.title
+      });
+    }
+  }, 60000);
+}
+
+const shippingCalculator = document.getElementById('shippingCalculator');
+if (shippingCalculator) {
+  shippingCalculator.addEventListener('submit', (event) => {
+    event.preventDefault();
+    const actual = Number(document.getElementById('actualWeight').value);
+    const length = Number(document.getElementById('parcelLength').value);
+    const width = Number(document.getElementById('parcelWidth').value);
+    const height = Number(document.getElementById('parcelHeight').value);
+    const divisor = Number(document.getElementById('volumeDivisor').value);
+    const result = document.getElementById('calculatorResult');
+    if (![actual, length, width, height, divisor].every(value => Number.isFinite(value) && value > 0)) {
+      result.innerHTML = '<strong>Enter positive numbers in every field.</strong>';
+      return;
+    }
+    const volumetricKg = length * width * height / divisor;
+    const actualKg = actual / 1000;
+    const chargeableKg = Math.max(actualKg, volumetricKg);
+    const basis = volumetricKg > actualKg ? 'volumetric weight' : 'actual weight';
+    result.innerHTML = '<strong>Estimated chargeable weight: ' + chargeableKg.toFixed(2) + ' kg</strong>' +
+      '<span>Actual: ' + actualKg.toFixed(2) + ' kg • Volumetric: ' + volumetricKg.toFixed(2) + ' kg • Likely basis: ' + basis + '. Verify the live route formula before submitting.</span>';
+    trackEvent('shipping_calculator_use', {
+      actual_weight_kg: Number(actualKg.toFixed(2)),
+      volumetric_weight_kg: Number(volumetricKg.toFixed(2)),
+      chargeable_weight_kg: Number(chargeableKg.toFixed(2)),
+      volume_divisor: divisor
+    });
+  });
+}

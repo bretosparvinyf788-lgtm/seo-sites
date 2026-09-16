@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" role="img" aria-labelledby="title desc">
+  <title id="title">CSSBuy warehouse transfer service guide</title>
+  <desc id="desc">A seller parcel moving into a consolidation warehouse.</desc>
+  <defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#f3e6d2"/><stop offset="1" stop-color="#fffdfa"/></linearGradient></defs>
+  <rect width="1200" height="675" fill="url(#bg)"/>
+  <text x="92" y="116" fill="#a76308" font-family="Arial,sans-serif" font-size="23" font-weight="700">SHIP FOR ME • 2026 WORKFLOW</text>
+  <text x="92" y="188" fill="#181512" font-family="Georgia,serif" font-size="54" font-weight="700">Warehouse Transfer Service</text>
+  <text x="92" y="236" fill="#6b645b" font-family="Arial,sans-serif" font-size="24">Label, receive, inspect, consolidate and release with a clean record.</text>
+  <g transform="translate(100 305)">
+    <rect width="255" height="220" rx="22" fill="#fffefa" stroke="#ddc4a0" stroke-width="4"/><path d="m47 95 80-47 80 47v82H47Z" fill="#f2dfc4" stroke="#a76308" stroke-width="5"/><path d="M100 177v-58h54v58" fill="#fffefa" stroke="#a76308" stroke-width="5"/><text x="62" y="205" font-family="Arial,sans-serif" font-size="17" font-weight="700" fill="#5a5045">SELLER DISPATCH</text>
+  </g>
+  <path d="M385 414h165" stroke="#a76308" stroke-width="10" stroke-linecap="round"/><path d="m522 382 35 32-35 32" fill="none" stroke="#a76308" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+  <g transform="translate(585 282)">
+    <path d="m40 116 226-91 226 91v265H40Z" fill="#fffefa" stroke="#a76308" stroke-width="6"/><path d="M88 166h356v215H88Z" fill="#f1dfc5" stroke="#a76308" stroke-width="5"/><path d="M139 221h90v70h-90Zm152 0h90v70h-90Zm-76 95h90v65h-90Z" fill="#fffefa" stroke="#a76308" stroke-width="5"/><text x="133" y="421" font-family="Arial,sans-serif" font-size="20" font-weight="700" fill="#5a5045">CSSBUY WAREHOUSE</text>
+  </g>
+</svg>

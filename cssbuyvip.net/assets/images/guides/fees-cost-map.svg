@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" role="img" aria-labelledby="title desc">
+  <title id="title">CSSBuy fees and true cost guide</title>
+  <desc id="desc">A five-part cost map from seller price to destination costs.</desc>
+  <defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#f5ead8"/><stop offset="1" stop-color="#fffefa"/></linearGradient></defs>
+  <rect width="1200" height="675" fill="url(#bg)"/>
+  <text x="92" y="112" fill="#a76308" font-family="Arial,sans-serif" font-size="24" font-weight="700">CSSBUY FEES 2026</text>
+  <text x="92" y="185" fill="#181512" font-family="Georgia,serif" font-size="58" font-weight="700">Map the Total Cost</text>
+  <text x="92" y="235" fill="#6b645b" font-family="Arial,sans-serif" font-size="24">Five numbers reveal the real purchase before you commit.</text>
+  <g font-family="Arial,sans-serif" font-weight="700">
+    <g transform="translate(90 330)"><circle cx="78" cy="78" r="74" fill="#fff" stroke="#ddc39c" stroke-width="4"/><text x="78" y="69" text-anchor="middle" font-size="30" fill="#a76308">01</text><text x="78" y="102" text-anchor="middle" font-size="17" fill="#4f463d">ITEM</text></g>
+    <g transform="translate(290 330)"><circle cx="78" cy="78" r="74" fill="#fff" stroke="#ddc39c" stroke-width="4"/><text x="78" y="69" text-anchor="middle" font-size="30" fill="#a76308">02</text><text x="78" y="102" text-anchor="middle" font-size="17" fill="#4f463d">DOMESTIC</text></g>
+    <g transform="translate(490 330)"><circle cx="78" cy="78" r="74" fill="#fff" stroke="#ddc39c" stroke-width="4"/><text x="78" y="69" text-anchor="middle" font-size="30" fill="#a76308">03</text><text x="78" y="102" text-anchor="middle" font-size="17" fill="#4f463d">WAREHOUSE</text></g>
+    <g transform="translate(690 330)"><circle cx="78" cy="78" r="74" fill="#fff" stroke="#ddc39c" stroke-width="4"/><text x="78" y="69" text-anchor="middle" font-size="30" fill="#a76308">04</text><text x="78" y="102" text-anchor="middle" font-size="17" fill="#4f463d">FREIGHT</text></g>
+    <g transform="translate(890 330)"><circle cx="78" cy="78" r="74" fill="#fff" stroke="#ddc39c" stroke-width="4"/><text x="78" y="69" text-anchor="middle" font-size="30" fill="#a76308">05</text><text x="78" y="102" text-anchor="middle" font-size="17" fill="#4f463d">IMPORT</text></g>
+  </g>
+  <path d="M180 560h820" stroke="#a76308" stroke-width="8" stroke-linecap="round"/><path d="m970 530 34 30-34 30" fill="none" stroke="#a76308" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

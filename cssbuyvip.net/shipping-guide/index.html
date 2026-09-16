@@ -12,8 +12,8 @@
 
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>CSSBuy Shipping Guide 2026 | Cost, Weight &amp; Route Planning</title>
-<meta name="description" content="Plan CSSBuy international shipping by comparing chargeable weight, parcel dimensions, route restrictions, packing services and risk.">
+<title>CSSBuy Shipping Calculator 2026 | Volume Weight Guide</title>
+<meta name="description" content="Use the CSSBuy shipping calculator to compare actual and volumetric weight, then plan parcel dimensions, packing and route eligibility before submission.">
 <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
 <link rel="canonical" href="https://cssbuyvip.net/shipping-guide/">
 <link rel="icon" href="../assets/images/favicon.png" type="image/png">
@@ -21,8 +21,8 @@
 <link rel="manifest" href="../manifest.webmanifest">
 <link rel="stylesheet" href="../assets/css/style.css">
 <meta property="og:type" content="website">
-<meta property="og:title" content="CSSBuy Shipping Guide 2026 | Cost, Weight &amp; Route Planning">
-<meta property="og:description" content="Plan CSSBuy international shipping by comparing chargeable weight, parcel dimensions, route restrictions, packing services and risk.">
+<meta property="og:title" content="CSSBuy Shipping Calculator 2026 | Volume Weight Guide">
+<meta property="og:description" content="Compare actual and volumetric weight, then plan parcel dimensions, packing and route eligibility before submission.">
 <meta property="og:url" content="https://cssbuyvip.net/shipping-guide/">
 <meta property="og:image" content="https://cssbuyvip.net/assets/images/hero.webp">
 <meta name="twitter:card" content="summary_large_image">
@@ -32,7 +32,7 @@
 <header class="site-header">
   <div class="container nav">
     <a class="header-brand" href="../index.html" aria-label="CSSBuyVIP home"><img src="../assets/images/logo.png" alt="CSSBuy"></a>
-    <nav class="desktop-nav"><a class="nav-link" href="../w2c/" data-i18n="nav.w2c"></a><a class="nav-link" href="../qc-guide/" data-i18n="nav.qc"></a><a class="nav-link" href="../shipping-guide/" aria-current="page" data-i18n="nav.shipping"></a><a class="nav-link" href="../buyer-guides/" data-i18n="nav.guides"></a><a class="nav-link" href="../index.html#faq" data-i18n="nav.faq"></a></nav>
+    <nav class="desktop-nav"><a class="nav-link" href="../w2c/" data-i18n="nav.w2c">W2C Finds</a><a class="nav-link" href="../qc-guide/" data-i18n="nav.qc">QC Guide</a><a class="nav-link" href="../shipping-guide/" aria-current="page" data-i18n="nav.shipping">Shipping</a><a class="nav-link" href="../buyer-guides/" data-i18n="nav.guides">Buyer Guides</a><a class="nav-link" href="../index.html#faq" data-i18n="nav.faq">FAQ</a></nav>
     <div class="language-menu" id="languageMenu">
       <button type="button" class="language-trigger" id="languageTrigger" aria-label="Choose language">
         <span>◎</span><span id="languageCurrent">English</span><span class="language-chevron">⌄</span>
@@ -46,29 +46,40 @@
         <button type="button" class="language-option" data-lang="pt"><span>PT</span>Português</button>
       </div>
     </div>
-    <a class="visit" href="https://kakobuymake.com" target="_blank" rel="noopener" data-i18n="nav.products"></a>
+    <a class="visit" href="https://kakobuymake.com" target="_blank" rel="noopener" data-i18n="nav.products">Browse Products</a>
     <button type="button" class="menu" id="menuBtn" aria-label="Open menu" aria-expanded="false">
       <span class="menu-line"></span><span class="menu-line"></span><span class="menu-line"></span>
     </button>
   </div>
-  <div class="mobile-nav" id="mobileNav"><div class="mobile-nav-inner"><a href="../w2c/" data-i18n="nav.w2c"></a><a href="../qc-guide/" data-i18n="nav.qc"></a><a href="../shipping-guide/" data-i18n="nav.shipping"></a><a href="../buyer-guides/" data-i18n="nav.guides"></a><a href="../index.html#faq" data-i18n="nav.faq"></a><a href="https://kakobuymake.com" target="_blank" rel="noopener" data-i18n="nav.products"></a></div></div>
-</header><main><section class="page-hero"><div class="container"><a class="btn back" href="../index.html">← Back Home</a><h1>CSSBuy Shipping Research</h1><p>Understand the variables behind parcel cost, route eligibility and delivery expectations.</p></div></section><section><div class="container content-grid"><article class="card content-card">
+  <div class="mobile-nav" id="mobileNav"><div class="mobile-nav-inner"><a href="../w2c/" data-i18n="nav.w2c">W2C Finds</a><a href="../qc-guide/" data-i18n="nav.qc">QC Guide</a><a href="../shipping-guide/" data-i18n="nav.shipping">Shipping</a><a href="../buyer-guides/" data-i18n="nav.guides">Buyer Guides</a><a href="../index.html#faq" data-i18n="nav.faq">FAQ</a><a href="https://kakobuymake.com" target="_blank" rel="noopener" data-i18n="nav.products">Browse Products</a></div></div>
+</header><main><section class="page-hero"><div class="container"><a class="btn back" href="../index.html">← Back Home</a><h1>CSSBuy Shipping Calculator 2026</h1><p>Compare actual and volumetric weight before you choose packing and a shipping route.</p></div></section><section><div class="container content-grid"><article class="card content-card">
+<h2>Estimate chargeable weight</h2>
+<p>Enter the packed weight and dimensions. This planning tool compares actual weight with dimensional weight; the larger result is the likely chargeable weight when a route applies volume rules. Always verify the live CSSBuy quote and line-specific divisor before payment.</p>
+<form class="shipping-calculator" id="shippingCalculator">
+  <label>Actual weight (g)<input id="actualWeight" name="actualWeight" type="number" min="1" step="1" inputmode="decimal" placeholder="e.g. 3500" required></label>
+  <label>Length (cm)<input id="parcelLength" name="parcelLength" type="number" min="1" step="0.1" inputmode="decimal" placeholder="45" required></label>
+  <label>Width (cm)<input id="parcelWidth" name="parcelWidth" type="number" min="1" step="0.1" inputmode="decimal" placeholder="35" required></label>
+  <label>Height (cm)<input id="parcelHeight" name="parcelHeight" type="number" min="1" step="0.1" inputmode="decimal" placeholder="25" required></label>
+  <label>Volume divisor<select id="volumeDivisor" name="volumeDivisor"><option value="5000">5000</option><option value="6000">6000</option><option value="7000">7000</option><option value="8000">8000</option></select></label>
+  <button class="btn primary" type="submit">Calculate Weight</button>
+</form>
+<div class="calculator-result" id="calculatorResult" aria-live="polite"><strong>Enter your parcel details to compare weights.</strong></div>
 <h2>Design the parcel before submission</h2>
 <p>International freight depends on destination, actual or volumetric weight, dimensions, route rules, packing choices and optional services. A low item price can become inefficient when the product is bulky or route-sensitive.</p>
 <h3>Build two scenarios</h3>
 <ul><li>Scenario A preserves retail boxes and prioritizes protection.</li><li>Scenario B removes unnecessary packaging and compresses soft goods.</li><li>Compare preferred and backup routes before clicking submit.</li><li>Record the estimated deposit and the final verified charge.</li></ul>
-<div class="card" style="padding:20px"><strong>Related deep guide:</strong><p>Read the complete 1,797-word shipping-planning article.</p><a class="btn primary" href="../guides/cssbuy-shipping-cost-guide-2026/">Open Shipping Article →</a></div></article><aside class="sidebar"><div class="card"><h3>Buyer Guides</h3><p>Browse all three long-form articles.</p><a class="btn" href="../buyer-guides/">View Buyer Guides →</a></div><div class="card"><h3>Reverse Purchasing FAQ</h3><p>Read the complete homepage FAQ.</p><a class="btn" href="../index.html#faq">Open FAQ →</a></div></aside></div></section></main>
+<div class="card" style="padding:20px"><strong>Related deep guide:</strong><p>Read the complete 1,797-word shipping-planning article.</p><a class="btn primary" href="../guides/cssbuy-shipping-cost-guide-2026/">Open Shipping Article →</a></div></article><aside class="sidebar"><div class="card"><h3>Buyer Guides</h3><p>Browse all 17 long-form guides.</p><a class="btn" href="../buyer-guides/">View Buyer Guides →</a></div><div class="card"><h3>Fees Guide</h3><p>Map product, warehouse, freight and destination costs.</p><a class="btn" href="../guides/cssbuy-true-cost-guide-2026/">Open Fees Guide →</a></div></aside></div></section></main>
 <footer>
   <div class="container footer-grid">
     <div>
       <img src="../assets/images/logo.png" alt="CSSBuy" style="width:150px;height:auto">
       <p>An independent CSSBuy research hub for W2C terminology, QC guidance, shipping decisions and selected product references.</p>
     </div>
-    <div><h4 data-i18n="footer.resources"></h4><a href="../w2c/" data-i18n="nav.w2c"></a><a href="../qc-guide/" data-i18n="nav.qc"></a><a href="../shipping-guide/" data-i18n="nav.shipping"></a></div>
-    <div><h4 data-i18n="footer.company"></h4><a href="../about/" data-i18n="footer.about"></a><a href="../disclaimer/" data-i18n="footer.disclaimer"></a><a href="../privacy/" data-i18n="footer.privacy"></a></div>
-    <div><h4 data-i18n="footer.catalog"></h4><a href="https://kakobuymake.com" target="_blank" rel="noopener" data-i18n="footer.browse"></a></div>
+    <div><h4 data-i18n="footer.resources">Resources</h4><a href="../w2c/" data-i18n="nav.w2c">W2C Finds</a><a href="../qc-guide/" data-i18n="nav.qc">QC Guide</a><a href="../shipping-guide/" data-i18n="nav.shipping">Shipping</a></div>
+    <div><h4 data-i18n="footer.company">Company</h4><a href="../about/" data-i18n="footer.about">About</a><a href="../disclaimer/" data-i18n="footer.disclaimer">Disclaimer</a><a href="../privacy/" data-i18n="footer.privacy">Privacy Policy</a></div>
+    <div><h4 data-i18n="footer.catalog">Product Catalog</h4><a href="https://kakobuymake.com" target="_blank" rel="noopener" data-i18n="footer.browse">Browse Products</a></div>
   </div>
   <div class="container copyright"><span>© 2026 CSSBuyVIP.net</span><span>Independent resource; not affiliated with CSSBuy.</span></div>
-</footer><script src="../assets/js/main.js" defer></script>
+</footer><script src="../assets/js/main.js?v=20260916-search-growth" defer></script>
 </body>
 </html>
