@@ -77,10 +77,16 @@ jobs:
         run: |
           test -n "$CLOUDFLARE_API_TOKEN"
           test -n "$CLOUDFLARE_ACCOUNT_ID"
-          response="$(curl -fsS             -H "Authorization: Bearer $CLOUDFLARE_API_TOKEN"             -H "Content-Type: application/json"             "https://api.cloudflare.com/client/v4/accounts/$CLOUDFLARE_ACCOUNT_ID/pages/projects?per_page=100")"
-          project="$(jq -r --arg domain "$DOMAIN"             '[.result[] | select(any(.domains[]?; . == $domain)) | .name] | unique | if length == 1 then .[0] else empty end'             <<<"$response")"
-          if [ -z "$project" ]; then
-            echo "Could not resolve exactly one Pages project for $DOMAIN" >&2
+          project="${DOMAIN//./-}"
+          response="$(curl -fsS \
+            -H "Authorization: Bearer $CLOUDFLARE_API_TOKEN" \
+            -H "Content-Type: application/json" \
+            "https://api.cloudflare.com/client/v4/accounts/$CLOUDFLARE_ACCOUNT_ID/pages/projects/$project")"
+          matched="$(jq -r --arg domain "$DOMAIN" \
+            '.success == true and any(.result.domains[]?; . == $domain)' \
+            <<<"$response")"
+          if [ "$matched" != "true" ]; then
+            echo "Pages project $project does not serve $DOMAIN" >&2
             exit 1
           fi
           echo "name=$project" >> "$GITHUB_OUTPUT"
