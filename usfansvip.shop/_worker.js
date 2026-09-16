@@ -67,7 +67,7 @@ const mobileFixCss = `
 }
 `;
 
-const latestGuidesHtml = `<a class="guide" href="/guides/usfans-spreadsheet-w2c-link-verification-guide-2026.html"><small>Spreadsheet Research · 8 September 2026</small><h3>USFans Spreadsheet Guide 2026: How to Find Products and Verify W2C Links</h3><p>Verify live product pages, marketplace sources, variants, seller terms, domestic freight, QC needs and shipping suitability before ordering.</p><span>Read English guide →</span></a><a class="guide" href="/guides/usfans-weidian-buying-guide-seller-variants-qc-2026.html"><small>Weidian Buying · 6 September 2026</small><h3>USFans Weidian Buying Guide 2026: Check Sellers, Variants &amp; QC Before You Order</h3><p>Verify sellers, translated variations, inventory, domestic freight, after-sales restrictions and warehouse QC evidence before payment.</p><span>Read English guide →</span></a><a class="guide" href="/guides/usfans-size-variant-guide-custom-sizes-qc-2026.html"><small>Sizing · 31 August 2026</small><h3>USFans Size &amp; Variant Guide 2026: Custom Sizes, QC &amp; No-Return Rules</h3><p>Compare seller size systems, identify custom and non-returnable options, use concise order notes and verify the exact variation at warehouse QC.</p><span>Read English guide →</span></a>`;
+const latestGuidesHtml = `<a class="guide" href="/guides/usfans-shipping-time-delivery-estimates-2026"><small>Shipping Time · 16 September 2026</small><h3>USFans Shipping Time 2026: Delivery Stages and Country-by-Country Estimates</h3><p>Plan seller dispatch, warehouse QC, parcel preparation, carrier acceptance, customs and final-mile delivery as separate clocks.</p><span>Read English guide →</span></a><a class="guide" href="/guides/is-usfans-legit-review-safety-2026"><small>Independent Review · 16 September 2026</small><h3>Is USFans Legit? 2026 Safety, Payment, QC, Returns and Shipping Review</h3><p>Evaluate official-service signals, seller risk, payment records, warehouse evidence, return conditions and shipping decisions.</p><span>Read English guide →</span></a><a class="guide" href="/guides/usfans-tracking-order-warehouse-parcel-status-2026"><small>Tracking · 16 September 2026</small><h3>USFans Tracking Guide 2026: Order, Warehouse and Parcel Status Explained</h3><p>Follow product orders, domestic packages, warehouse milestones, international parcels, customs and final-mile handoffs.</p><span>Read English guide →</span></a>`;
 
 class HeadHandler {
   element(element) {
@@ -83,8 +83,21 @@ class GuidesHandler {
 
 export default {
   async fetch(request, env) {
-    const response = await env.ASSETS.fetch(request);
     const url = new URL(request.url);
+    if (url.hostname === 'www.usfansvip.shop') {
+      url.hostname = 'usfansvip.shop';
+      url.protocol = 'https:';
+      return Response.redirect(url.toString(), 301);
+    }
+    if (url.pathname.endsWith('/index.html')) {
+      url.pathname = url.pathname.slice(0, -10) || '/';
+      return Response.redirect(url.toString(), 301);
+    }
+    if (url.pathname.endsWith('.html')) {
+      url.pathname = url.pathname.slice(0, -5);
+      return Response.redirect(url.toString(), 301);
+    }
+    const response = await env.ASSETS.fetch(request);
     const type = response.headers.get('content-type') || '';
 
     if (!type.includes('text/html') || (url.pathname !== '/' && url.pathname !== '/index.html')) {
