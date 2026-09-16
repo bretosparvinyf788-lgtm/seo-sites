@@ -1,0 +1,342 @@
+[
+  {
+    "slug": "litbuy-refund-guide-seller-balance-evidence",
+    "label": "RECONCILE THE REFUND",
+    "title": "LitBuy Refund Guide 2026: Seller Returns, Balance Refunds & Evidence",
+    "seo_title": "LitBuy Refund Guide 2026: Returns, Balance & Evidence",
+    "meta_description": "Follow a LitBuy refund from seller return through account balance, preserve warehouse evidence and verify each amount without assuming a universal timeline.",
+    "excerpt": "Separate seller approval, returned goods, LitBuy balance credit and payment withdrawal so every stage of a refund can be verified independently.",
+    "read": "16 min read",
+    "date": "September 13, 2026",
+    "theme": "violet",
+    "cover": "/assets/litbuy-refund-guide.webp",
+    "intro": "A LitBuy refund is not one event. The word may describe a seller accepting a return, value appearing in the LitBuy account balance, an unused payment being reversed, or a later withdrawal to a payment source. Confusing those stages creates most of the apparent contradictions in refund discussions. A seller can agree while the item is still at the warehouse; the warehouse can send it back while the marketplace refund remains pending; the account can receive balance before a bank sees anything. This guide builds one ledger across those handoffs. It avoids universal promises about fees or timing because the current seller, order, payment method and platform interface determine what is available. The goal is to show exactly where the money and the item are, then ask the party controlling the next step a question it can answer.",
+    "sections": [
+      {
+        "heading": "Name the refund you actually need",
+        "paragraphs": [
+          "Start with the failed expectation. A seller may have sent the wrong option, a visible defect may appear at the warehouse, an item may be unavailable, a price may change, or money may remain unused in the LitBuy balance. Each situation begins a different process. Write one outcome: return this warehouse item to the seller, cancel an unpurchased order, credit the verified seller refund to balance, or withdraw eligible unused balance. Do not ask for all of them in one sentence.",
+          "Separate product value from every other amount. The order may include seller price, domestic delivery, optional service, payment processing or currency conversion. International freight belongs to a later parcel and should not be mixed into a warehouse return unless the current policy explicitly connects it. Record which component you expect to change and why. A full refund claim built from a single product mismatch can become weaker when it includes unrelated charges."
+        ]
+      },
+      {
+        "heading": "Freeze the order and warehouse evidence",
+        "paragraphs": [
+          "Before selecting a remedy, save the order identifier, source listing, chosen variant, quantity, paid amount, warehouse item identifier, arrival date and current status. Pair the selected option with the warehouse photo that shows the mismatch. Keep the original images and use a crop only to direct attention. If the problem is a measurement, show both tape endpoints and the relevant order specification. If it is quantity, show the ordered count and received count. A refund request should let a reviewer see the purchase promise and the observed exception without reconstructing your browsing history.",
+          "Keep the item out of every parcel while the case is open. Shipping internationally can remove the practical seller-return path and make the condition harder to establish. Mark the unit as evidence incomplete, return requested or resolution pending. Do not label it refunded because you pressed a button. LitBuy advertises warehouse inspection and after-sales support, but the current order interface and seller conditions control the available action. Preserve what that interface showed on the day you acted, including any notice, amount or requirement."
+        ]
+      },
+      {
+        "heading": "Choose clarification, exchange, return or cancellation",
+        "paragraphs": [
+          "Clarification is appropriate when the existing images do not establish whether the item matches. Exchange is useful when you still want the product and can define the replacement exactly. Return is appropriate when a verified mismatch or acceptable seller condition supports sending the unit back. Cancellation applies before purchase or dispatch when the current order state permits it. These choices are not interchangeable. An additional photo may resolve a color uncertainty, but it cannot fix an out-of-stock size. An exchange creates a second warehouse inspection; a return begins an item-and-money reconciliation.",
+          "Read the live options instead of importing a deadline from another seller or platform. Storage time is not a return window, and LitBuy's advertised warehouse storage period does not extend marketplace after-sales eligibility. Act promptly while recording only deadlines actually shown for the order. If the preferred remedy is unavailable, state an acceptable fallback. For example, request the correct black option, otherwise return for the eligible product amount. This reduces repeated messages and prevents an unwanted substitute from being approved merely to keep the case moving."
+        ]
+      },
+      {
+        "heading": "Submit one request that can be forwarded intact",
+        "paragraphs": [
+          "Use five fields: order identity, promised attribute, observed attribute, evidence reference and requested remedy. A useful message says that the order selected one blue size-large jacket, the warehouse label shows medium, the order record and label photo are attached, and you request an exchange for large or an eligible return if large is unavailable. Avoid accusations, long histories and unrelated complaints. Support should be able to send the core statement to the seller without guessing which product, problem or outcome you mean.",
+          "Save the submission time and case reference. Add later evidence to the same record instead of creating duplicate cases with different wording. If support asks a question, answer it directly and update your evidence list. A reply saying the request was sent to the seller is a handoff, not a completed refund. Record who now controls the next action and the next date you will check. This case timeline becomes important when the item moves, the seller responds or the account balance changes."
+        ]
+      },
+      {
+        "heading": "Track the physical return separately from the money",
+        "paragraphs": [
+          "When a warehouse item is sent back, record the outgoing status and any domestic return reference visible in the account. The product leaving LitBuy storage does not itself prove that the seller received it, accepted the condition or issued money. Keep the warehouse identifier and seller order connected throughout the movement. If the seller disputes the item, your preserved arrival photographs and return instruction may become the only reliable baseline. Do not delete the case because the unit disappears from the normal storage view.",
+          "Use milestone labels such as return approved, warehouse dispatch recorded, seller receipt confirmed and marketplace refund confirmed. Only mark a milestone when the relevant record supports it. If a status is unclear, quote it rather than translating it into a stronger conclusion. Ask where the physical return currently sits and what event is required next. This approach prevents a common mistake: treating the logistics portion as complete and then assuming LitBuy is holding money that the seller has not yet released."
+        ]
+      },
+      {
+        "heading": "Reconcile the LitBuy balance credit",
+        "paragraphs": [
+          "When value appears in the account, capture the balance transaction with date, currency, amount, reference and description. Compare it with the product amount and any seller-approved adjustment. Do not rely on the total account balance because other purchases, top-ups and refunds may have changed it. One ledger row should explain the movement. If the credited amount differs from expectation, list the expected components rather than simply saying it is short. The difference may involve a charge that was not part of the seller refund, but the live record must establish that.",
+          "A LitBuy balance credit means value is available in the account under its current terms; it does not necessarily mean cash has returned to the original card or wallet. Decide whether you want to reuse the balance or inspect a withdrawal option. Keep that decision separate from the seller case. The seller portion can be complete while the buyer starts a new account-payment transaction. Combining them into one unresolved complaint makes it harder to see whether the real issue is the marketplace refund or the later movement of balance."
+        ]
+      },
+      {
+        "heading": "Treat withdrawal as a second payment workflow",
+        "paragraphs": [
+          "If the account offers a refund or withdrawal route for the eligible balance, read the live method, amount, currency, destination and any displayed condition before confirming. Do not assume every balance component can return through every method. Record the request reference and preserve the original payment reference where relevant. If currency conversion occurred, the final home-currency credit may not equal the original debit even when the platform amount matches. Compare like with like before alleging a shortfall.",
+          "Verify the outcome in three places: LitBuy balance history, the withdrawal or refund status, and the receiving provider. A pending bank entry is not final, and a reduced LitBuy balance is not proof the provider settled. Label the process pending until the records agree. Avoid submitting a second withdrawal because the first has not appeared immediately. Use the official support path with the request reference, date, amount and destination type if the handoff remains inconsistent. Redact full card and wallet details from every screenshot."
+        ]
+      },
+      {
+        "heading": "Handle partial refunds and price changes line by line",
+        "paragraphs": [
+          "A partial refund should identify the order line, reason and amount. Examples include one missing unit from a batch, a seller-approved adjustment or cancellation of one option while the rest proceed. Split the original order into units so the arithmetic can be checked. Do not use an approximate percentage when exact quantities and paid values exist. If a seller proposes a discount to keep a flawed item, decide whether the defect is acceptable before focusing on the amount. A lower price does not repair an item you would not ship.",
+          "For a price increase before purchase, approval creates a new order basis. Save the original and revised amount, then record your accept-or-cancel choice. If an order is cancelled as out of stock, confirm whether the value returns to balance and how the transaction is described. These cases may not involve a physical return, but they still need the same money ledger. Keeping them separate from warehouse defects prevents the guide word refund from hiding which stage actually failed."
+        ]
+      },
+      {
+        "heading": "Escalate with a gap, not a louder version of the story",
+        "paragraphs": [
+          "Before escalating, identify the first milestone where expected and observed records diverge. Perhaps the seller refund is confirmed but no LitBuy balance entry exists. Perhaps the balance decreased after withdrawal but the provider has no corresponding transaction. State that exact gap, attach the two adjacent records and ask which reference connects them. Repeating the full emotional history can obscure the actionable mismatch. One missing handoff is easier to investigate than a broad claim that nothing happened.",
+          "Preserve every response and do not edit old screenshots to reflect later states. If a pending authorization disappears, a seller changes the decision or a balance credit arrives, append the new event and update the open question. Honest changes make the evidence more credible. Use the current policy wording and account options rather than unsupported promises from forums. No independent guide can guarantee approval or timing; it can only help you submit a complete, consistent case."
+        ]
+      },
+      {
+        "heading": "Close the case only when item and money both reconcile",
+        "paragraphs": [
+          "A return case closes when the item's final status is known and the approved value is visible in the intended destination. An exchange closes only after the replacement reaches the warehouse and passes a new check. A cancellation closes when the order status and account movement agree. Mark each result with a final date and keep the evidence long enough to reconcile the next statement. Then remove the old item from parcel plans and update the haul's true cost.",
+          "The reliable sequence is: define the remedy, freeze evidence, act within the live flow, track the physical unit, verify the seller decision, reconcile LitBuy balance and verify any separate withdrawal. At every stage, ask who controls the next event and what record proves completion. That structure turns a vague LitBuy refund question into a finite set of checks. It also protects you from expecting a card credit when the actual completed event was only a warehouse return or account-balance entry."
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "litbuy-size-guide-clothing-shoes-qc",
+    "label": "VERIFY THE FIT",
+    "title": "LitBuy Size Guide 2026: Clothing Measurements, Shoes & Warehouse QC",
+    "seo_title": "LitBuy Size Guide 2026: Clothing, Shoes & QC",
+    "meta_description": "Use seller measurements, body and garment references, shoe dimensions and LitBuy warehouse QC to make a size decision without guessing from labels.",
+    "excerpt": "Convert a seller's size chart into measurable acceptance checks, then use targeted warehouse photos to confirm labels and key dimensions before shipping.",
+    "read": "16 min read",
+    "date": "September 12, 2026",
+    "theme": "orange",
+    "cover": "/assets/litbuy-size-guide.webp",
+    "intro": "There is no universal LitBuy size chart because LitBuy is an agent, not the manufacturer of every garment or shoe it handles. Sizing comes from third-party sellers, and the same letter can represent different finished measurements across listings, batches and product categories. The safest method is to translate your preferred fit into dimensions, record the seller's chart and chosen option, then use warehouse evidence to check the physical unit where practical. A photograph of a label confirms what is attached; it does not prove how an item fits your body. A tape measurement can reduce uncertainty, but only when its endpoints and method are visible. This guide builds an evidence-based size workflow for tops, bottoms, outerwear and shoes without inventing conversions that the listing does not support.",
+    "sections": [
+      {
+        "heading": "Start with a reference item, not a letter size",
+        "paragraphs": [
+          "Choose a garment or pair of shoes you already own and like. Record its label, but treat the physical measurements as the useful reference. For a top, measure chest width, shoulder, body length and sleeve using a consistent flat method. For bottoms, record waist, rise, inseam and hem opening. For shoes, use the internal length or removable insole only when you can measure it reliably. Your body dimensions may help, but a well-fitting item provides the clearest bridge to a seller's finished-product chart.",
+          "Write the fit intent beside the numbers: close, regular, relaxed, room for a layer, or another practical description. Two garments with identical chest width may feel different because of shoulder construction, fabric stretch or length. The reference is therefore a decision aid, not a mathematical guarantee. Use centimeters throughout to reduce conversion errors and record whether each dimension is a flat width or full circumference. A value without its method cannot be compared safely."
+        ]
+      },
+      {
+        "heading": "Read the seller chart for the selected product",
+        "paragraphs": [
+          "Use the size chart attached to the exact seller listing and option you intend to buy. Do not substitute a general brand chart, a chart from another batch or a social-media conversion. Identify whether the chart reports body recommendations or finished garment dimensions. Check the units and any stated measurement tolerance. Save the chart with the listing date because product pages can change. If the chart is an image, copy the decisive row into your order record so the selected values remain legible later.",
+          "Look for internal inconsistencies. A larger size should not usually have a smaller chest or shorter length without an explanation. If one number appears impossible, ask for clarification before ordering rather than averaging it away. For shoes, determine whether the seller uses foot length, insole length, outsole length or a regional marked size. Those are different measurements. A familiar size label should never override a clear dimension that conflicts with your reference."
+        ]
+      },
+      {
+        "heading": "Build a size decision table before purchase",
+        "paragraphs": [
+          "Create columns for reference item, seller size candidates, expected difference and decision. For a jacket, you might compare your reference chest width with sizes medium and large, then note the effect of a planned sweater layer. For trousers, waist alone is not enough; rise and thigh can change the wearable fit. Choose the size whose full pattern is closest to the intended use. Mark any decisive dimension, such as minimum sleeve length or maximum insole length, that would cause you to reject the item.",
+          "Do not hide uncertainty behind false precision. Fabric behavior, construction and manual measurement can create small differences, and the seller may disclose a tolerance. Record a practical acceptance band instead of demanding an exact decimal. The band should reflect what would still work for you, not what makes the order easier to approve. If no listed size fits the decisive dimensions, the correct decision may be not to order. An agent cannot create a suitable size from an unsuitable chart."
+        ]
+      },
+      {
+        "heading": "Write the variant so it survives the buying handoff",
+        "paragraphs": [
+          "The order brief should include product, color, seller-marked size, quantity and the chart date. Add the decisive measurement as a check, not as an instruction to change the seller's product. For example: navy jacket, seller size L, chart chest width 60 centimeters, one unit. If a seller uses numeric or regional sizing, copy the label exactly. Do not translate it into your home size and discard the original. The warehouse will be able to verify the attached mark only if your record preserves what was selected.",
+          "If the listing offers custom measurements or several shape options, record every field and the seller's confirmation. Keep hard requirements separate from preferences. A specific waist and inseam may be essential, while a slightly different package fold is not. When the selected size goes out of stock, require a pause rather than allowing an automatic substitute. One size up is not universally looser in the dimensions that matter, and an unverified substitution breaks your comparison table."
+        ]
+      },
+      {
+        "heading": "Check warehouse identity before requesting measurements",
+        "paragraphs": [
+          "When the item reaches LitBuy's warehouse, begin with identity. Confirm product type, color, quantity and the visible size or model label. Compare any packaging label and sewn label without assuming they agree. If the order selected large and the garment label shows medium, the mismatch is already actionable; a chest measurement should not be used to excuse the wrong marked variant unless you consciously prefer to evaluate and keep it. Record label identity separately from actual dimensions.",
+          "Review overall shape and obvious construction before focusing on fit. A twisted seam, mismatched shoe pair or visibly deformed structure can make the size question irrelevant. Warehouse QC photos show observable exterior evidence, not how the item drapes on a person. LitBuy publicly promotes free inspection photos, while additional or specialized views may depend on the current service flow. Use existing evidence fully before requesting a new measurement."
+        ]
+      },
+      {
+        "heading": "Request one measurement with a visible method",
+        "paragraphs": [
+          "Ask for the dimension most likely to change the keep-or-return decision. Specify the start point, end point, orientation and whether the garment should be laid flat. A request for chest width should identify the horizontal line and show both tape endpoints. A trouser waist check should state whether it is relaxed and measured straight across. A body length should define the shoulder or collar reference. Without a visible method, a number cannot be compared fairly with your reference item or seller chart.",
+          "Avoid ordering an exhaustive measurement set by default. Each additional step consumes time and may introduce different handling or measurement conventions. Start with the decisive dimension and expand only if the result leaves a genuine branch unresolved. Preserve the full warehouse image, not only a cropped number. If the tape bends, starts beyond zero or sits at an angle, label the result uncertain and request correction only if it matters. Precision comes from method, not from the number of decimal places."
+        ]
+      },
+      {
+        "heading": "Handle shoes with length, shape and construction in mind",
+        "paragraphs": [
+          "For footwear, separate the marked size from usable internal space. Seller charts may map a marked size to foot length or insole length, and those should not be swapped. Compare your reference using the same basis. If a removable insole can be measured through the current warehouse service, request its length with both endpoints visible. Do not assume outsole length equals internal length. Toe shape, padding and width can change fit even when length appears suitable.",
+          "Check that the left and right shoes match in model, marked size, color and general shape. Review symmetry and visible deformation before deciding that a length number settles the pair. A warehouse photo cannot test walking comfort or long-term support. If width is critical and the seller provides no reliable width information, record that as residual risk. A responsible size decision sometimes remains uncertain; shipping the pair means consciously accepting the part that the evidence could not establish."
+        ]
+      },
+      {
+        "heading": "Interpret measurement differences without overreacting",
+        "paragraphs": [
+          "Compare the warehouse result with the seller chart and your acceptance band. A small difference may fall within the seller's stated tolerance or arise from method, fabric and placement. A large difference in a decisive dimension may support a mismatch case. Do not compare a flat chest width with a full chest circumference or a stretched waist with a relaxed one. Align units and methods first. Then label the result match, acceptable variance, unresolved method or material mismatch.",
+          "If the method is wrong, correct the evidence before judging the item. If the method is clear and the item falls outside your usable range, keep it out of the parcel and review the current return or exchange option promptly. Attach the order size, saved chart, measurement request and warehouse frame in one sequence. Seller approval is not guaranteed, but a disciplined comparison is stronger than saying the item looks too small from a wide-angle photograph."
+        ]
+      },
+      {
+        "heading": "Keep size evidence tied to returns and exchanges",
+        "paragraphs": [
+          "A label mismatch and a measurement mismatch should be described separately. State what was ordered, what label arrived and what visible measurement was obtained. Request the remedy shown as available for that order. If you want an exchange, specify the replacement seller size only after checking its chart; do not simply ask for the next size. The new unit must receive its own label and decisive-measurement review because a replacement can come from another batch.",
+          "Act before parcel submission and do not confuse warehouse storage time with seller eligibility. Save every status and verify any refund in the account record. If you choose to keep a borderline item, document the reason and remove it from the exception list. This closes the decision rather than letting the same uncertainty resurface during packing. The size file should end with one verdict: ship, return, exchange or hold for a defined missing fact."
+        ]
+      },
+      {
+        "heading": "Turn each result into a better future size record",
+        "paragraphs": [
+          "After delivery, compare the actual fit with the seller chart and warehouse evidence. Record which dimension predicted the outcome and whether the product changed after washing or wear only if you observe it. Keep seller and batch context; do not turn one result into a universal brand conversion. Your personal reference library becomes useful when it contains measurement methods and fit notes, not just letters such as M or L. It can also show when a favorite reference item is no longer the right benchmark.",
+          "The repeatable method is simple: measure a known item, save the exact seller chart, define an acceptance band, order the original marked option, verify the warehouse label and request only the decisive measurement. LitBuy can provide the purchasing and warehouse checkpoints, but the buyer must define what fit means. When every number has a unit, method and purpose, size selection becomes a documented comparison rather than a guess based on a familiar label."
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "litbuy-app-sourcetrack-browser-tools-guide",
+    "label": "CONTROL THE WORKFLOW",
+    "title": "LitBuy App, SourceTrack & Browser Tools Guide 2026",
+    "seo_title": "LitBuy App & SourceTrack Guide 2026: Safer Buying",
+    "meta_description": "Use the LitBuy app, SourceTrack and any current browser tools safely while keeping source links, account records, warehouse evidence and payments aligned.",
+    "excerpt": "Use LitBuy's mobile and source-tracking tools without losing the original listing, variant, payment record or warehouse evidence behind an order.",
+    "read": "16 min read",
+    "date": "September 11, 2026",
+    "theme": "lime",
+    "cover": "/assets/litbuy-app-sourcetrack.webp",
+    "intro": "Convenience tools are valuable only when they preserve the evidence behind a purchase. LitBuy publicly promotes a mobile app and SourceTrack features for finding or handling marketplace sources. A browser tool may also appear in the current service flow, but availability and permissions can change, so the live official interface must be checked before installation or use. The core risk is not simply whether a link opens. It is whether the source, seller, selected option, order and warehouse unit remain connected when you move between a marketplace page, a mobile device and the LitBuy account. This guide treats every app or helper as part of one evidence chain. It also explains how to review permissions, avoid unofficial downloads and verify that a convenient import did not silently change the product you intended to buy.",
+    "sections": [
+      {
+        "heading": "Begin from an official LitBuy surface",
+        "paragraphs": [
+          "Open the LitBuy website or the official distribution path it currently identifies for its app or tools. Do not install a file from a comment, private message, shortened link or third-party mirror merely because the icon and name look familiar. Check the publisher, destination domain, update history and permissions shown by the device or store. A tool that handles shopping links may see browsing data, and an app that manages orders may expose payment and address information. The source of the installation is therefore part of the transaction's security evidence.",
+          "Record the version or date checked when you depend on a specific feature. Public interfaces change, and a guide cannot guarantee that a named button remains in the same place. If a browser extension is not offered in the current official flow, do not substitute an unrelated add-on that claims compatibility. You can still copy a marketplace link into the signed-in LitBuy order process. Convenience is optional; a traceable source and account record are not."
+        ]
+      },
+      {
+        "heading": "Review permissions according to the task",
+        "paragraphs": [
+          "A link-capture tool may need to read the active marketplace page, but that does not automatically justify access to every site, all downloads or unrelated browsing history. Compare requested permissions with the advertised function and use the narrowest option your browser or device provides. For mobile apps, review notifications, photo access and location separately. Order screenshots may need photo access when you choose to upload them; continuous access is a different decision. Disable permissions that have no clear role in your workflow.",
+          "Never grant remote-control access, reveal a one-time payment code or install an unknown support utility to fix an order. Official support can work with order identifiers, transaction references and screenshots that you choose to provide. If a tool update suddenly requests broader access, pause and verify the change through the official LitBuy surface. Security decisions should follow the function, not the urgency of a message. Keep your browser, device and password manager updated independently of the shopping platform."
+        ]
+      },
+      {
+        "heading": "Use SourceTrack as discovery evidence, not a purchase guarantee",
+        "paragraphs": [
+          "A source-tracking feature can help identify or organize a marketplace listing, but the result still needs a live-page check. Confirm the marketplace, seller, title, selected options, price and stock at the final destination. Similar images can appear across several sellers or batches. An automatically found source is a candidate, not proof that it is the original, best or currently available listing. Save the exact source used for the order and the date verified.",
+          "When a tool returns several matches, compare observable details rather than choosing the first or cheapest. Check option structure, seller history visible on the marketplace, product images, measurements and included components. If the listing title and options do not describe the item shown, treat that as unresolved. Do not infer authenticity from image similarity or the name SourceTrack. The useful output is a traceable page that you can turn into a clear order brief and later compare with the warehouse unit."
+        ]
+      },
+      {
+        "heading": "Preserve the original listing before importing",
+        "paragraphs": [
+          "Before sending a product into the LitBuy workflow, save the source URL, seller, selected variant, quantity, displayed price and key chart or component details. Then use the app, browser helper or manual form. Compare the imported result with that record. Automated parsing can miss image-based options, deposits, minimum quantities or bundle choices. A thumbnail and a price are not enough to prove that the intended configuration survived the import.",
+          "Write a one-line order brief after import: product, color, seller-marked size or model, quantity and any essential included component. If the imported page does not expose the correct option, stop and use the current manual or support path rather than choosing a placeholder. Keep hard requirements explicit and forbid unapproved substitution. The convenience tool should reduce copying, not take over the buying decision."
+        ]
+      },
+      {
+        "heading": "Keep one identity across web and mobile",
+        "paragraphs": [
+          "Use the same intended LitBuy account when moving between desktop and app. Confirm the account identifier before paying or approving an item, especially on a shared device. Give each product a local name tied to the LitBuy order identifier so it remains recognizable across interfaces. If one device shows a stale status, refresh the transaction history rather than creating a second order. Multiple devices can display the same record; they should not create parallel versions of it.",
+          "Avoid keeping several checkouts open with different currencies or variants. A mobile wallet sheet can hide the underlying product context, so review the LitBuy amount and order before authorization. After payment, verify the provider reference and the LitBuy state in the same ledger. Notifications are helpful signals, but they are not the authoritative order history. Open the account record to confirm what actually changed."
+        ]
+      },
+      {
+        "heading": "Treat notifications as prompts, not proof",
+        "paragraphs": [
+          "An app may notify you about seller dispatch, warehouse arrival, QC availability, parcel movement or support responses. Use the notification to open the relevant record and capture its current status. A truncated message can omit the item, timestamp or required action. It can also remain on a device after the underlying status changes. Record the event from the order, warehouse or parcel page that owns it.",
+          "Configure notifications around decisions that matter: payment confirmation, out-of-stock or price-change requests, warehouse arrival, QC exceptions, return responses and parcel updates. Too many low-value alerts can hide a time-sensitive after-sales event. If email and app messages disagree, compare identifiers and timestamps rather than choosing the newest-looking screen. The account history should reconcile both."
+        ]
+      },
+      {
+        "heading": "Use mobile QC without shrinking the evidence",
+        "paragraphs": [
+          "A phone is convenient for a quick review, but zooming a compressed preview can create false confidence. Open the highest-quality warehouse image available and inspect identity before fine detail. Check color, marked size or model, quantity and included pieces, then overall shape and visible condition. Compare with the saved order brief. Do not approve an item while commuting or under a deadline if the decisive area cannot be seen clearly.",
+          "When you need another view, write the request outside the limitations of a tiny preview. Identify the exact area, orientation and reference. Save the resulting full image in the order evidence. If the app does not expose a function available on the web account, use the official web flow rather than improvising through a comment or external messenger. The device should not determine the quality of the decision."
+        ]
+      },
+      {
+        "heading": "Protect payment and address data on the device",
+        "paragraphs": [
+          "Use a device lock, a unique LitBuy password and any account security options currently available. Avoid saving sensitive screenshots to a shared photo library or posting them without redaction. Order pages can contain names, addresses, tracking numbers and transaction references. A wallet can reduce raw card entry, but you still must verify the amount, currency and merchant context before approving. Never send a one-time code to someone claiming to accelerate a top-up or refund.",
+          "Review signed-in devices and sessions when the account offers that capability. Sign out from borrowed devices and remove stored payment details that you do not intend to reuse. If a phone is lost, secure the email, LitBuy account and payment provider separately. A shopping app is one part of the access chain; recovering only the device account may not close every active session."
+        ]
+      },
+      {
+        "heading": "Export the facts you would need without the app",
+        "paragraphs": [
+          "Keep a private ledger with source, LitBuy order identifier, payment reference, warehouse unit, QC verdict, parcel identifier and support case. This does not need to duplicate every screen. It should preserve the keys that let you find the official record again. Save decisive images and receipts in a structured folder with dates. If an interface changes, a clear identifier is more useful than an unlabeled screenshot of the old layout.",
+          "Do not depend on push notifications as the only timeline. Record seller dispatch, warehouse arrival, return request, parcel shipment and delivery from the underlying pages. If a dispute occurs, you can then show a continuous sequence even when a mobile screen has refreshed. Data portability is not distrust; it is ordinary operational hygiene for a transaction that crosses marketplaces, warehouse systems and carriers."
+        ]
+      },
+      {
+        "heading": "Use tools only when they improve the evidence chain",
+        "paragraphs": [
+          "A useful app or browser tool reduces copying while preserving the source, option and account identity. A useful SourceTrack result leads to a current listing you can verify. A useful notification points to an accountable record. If a feature makes it harder to see the seller, variant, amount or status, return to the full LitBuy account and complete the task there. Speed is beneficial only after the decision fields are correct.",
+          "The repeatable workflow is: start official, inspect permissions, freeze the listing, compare the import, use one account, verify notifications in the underlying record and export the identifiers needed for support. LitBuy's app and source tools can make discovery and order handling more convenient, but they do not replace buyer judgment. Every order should remain explainable from original marketplace page to warehouse unit and parcel even if the convenient interface disappears tomorrow."
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "litbuy-out-of-stock-price-change-guide",
+    "label": "CONTROL THE EXCEPTION",
+    "title": "LitBuy Out-of-Stock & Price Change Guide 2026",
+    "seo_title": "LitBuy Out of Stock & Price Change Guide 2026",
+    "meta_description": "Handle LitBuy out-of-stock notices, seller price changes and substitutions with a clear accept, replace or cancel decision and a complete refund record.",
+    "excerpt": "Respond to an unavailable item or revised seller price without losing the original variant, authorizing an unwanted substitute or confusing balance with refund.",
+    "read": "16 min read",
+    "date": "September 10, 2026",
+    "theme": "orange",
+    "cover": "/assets/litbuy-out-of-stock-price-change.webp",
+    "intro": "An out-of-stock message or seller price change is not a minor administrative alert. It changes the purchase basis. The item you evaluated may no longer exist at the recorded price, and a fast substitute can introduce a different seller, batch, size, color or product. The safest response is a deliberate branch: accept the revised order with new evidence, choose a separately verified alternative, or cancel through the current LitBuy flow. This guide explains how to preserve the original instruction, evaluate the new information and reconcile any returned value. It does not assume that every seller notice uses the same status or deadline. Use the live order screen and current support path, while keeping your own decision record strong enough to show what changed and what you authorized.",
+    "sections": [
+      {
+        "heading": "Freeze the original purchase basis",
+        "paragraphs": [
+          "Save the source listing, seller, selected option, quantity, displayed price, order note and LitBuy order identifier as they existed when you paid or submitted the purchase. This is the baseline for every later decision. If the listing now shows a different product or amount, keep both versions rather than replacing the first screenshot. Record the exact status or message LitBuy displays and the time you saw it. A change can be evaluated only when the original promise remains visible.",
+          "Classify the notice as stock unavailable, option unavailable, seller price increase, domestic charge change, minimum-quantity issue or another clearly described exception. Do not group them all under seller problem. The available remedies and useful questions differ. A missing color may have an acceptable alternative; a new minimum quantity may change the entire cost; a price increase may still apply to the original unit. Precise classification prevents an unrelated substitute from being offered as if it solved the original issue."
+        ]
+      },
+      {
+        "heading": "Pause instead of approving from notification fatigue",
+        "paragraphs": [
+          "Do not accept a change merely because the order has already taken time. The money and waiting already committed do not make a worse option suitable. Open the full order record, identify what changed and compare it with the reason you selected the item. If the selected size, model or seller was essential, mark that as a hard requirement. If only a nonessential package color changed, you may have more flexibility. The decision should come from your original criteria, not the urgency of clearing an alert.",
+          "Keep the order outside any broader haul assumptions until the branch is settled. Do not promise yourself that it will arrive by a particular consolidation date or count it in a parcel weight estimate. Set a next-action time based on any current interface deadline, but do not invent one when none is shown. Acting promptly is wise; acting without reviewing the revised basis is not."
+        ]
+      },
+      {
+        "heading": "Verify what out of stock actually means",
+        "paragraphs": [
+          "Ask whether the entire listing is unavailable or only the selected option. A seller page can remain active while one color or size has no stock. Conversely, a seller may offer a similar-looking link that is a different batch. Compare seller identity, product title, option structure, measurements, included components and price. An image match alone is insufficient. If the order handler provides a seller message, preserve its wording and connect it to the specific option.",
+          "Do not treat a promised restock date as confirmed inventory. If you choose to wait, record the date, the source of the estimate and the point when you will reconsider. Waiting can affect warehouse consolidation plans even if the item has not yet entered storage. Decide whether the product is important enough to delay other accepted goods. That is a haul decision, not something the seller should make by leaving the order open."
+        ]
+      },
+      {
+        "heading": "Audit every price change component",
+        "paragraphs": [
+          "A revised total may come from seller price, selected option, quantity, domestic shipping or another displayed charge. Ask which line changed and compare old and new amounts in the same currency. Do not approve a rounded difference without seeing the updated order basis. If currency conversion changes your home-currency estimate while the seller price stays constant, record that separately. The seller should not be blamed for a payment-provider exchange rate, and an exchange-rate movement should not hide a changed marketplace price.",
+          "Recalculate the product's place in the haul using the complete revised cost you can verify, but do not mix unknown international freight into the approval. The item may still be worth buying at the new amount, or the change may erase the reason you selected it. Write an accept ceiling before responding. That protects you from repeatedly approving small increases that collectively turn the order into something you would not have chosen at the start."
+        ]
+      },
+      {
+        "heading": "Approve a revision as a new purchase basis",
+        "paragraphs": [
+          "If you accept the new price or option, state the exact authorization: revised amount, seller, variant, quantity and date. Preserve the old record and add the new one as version two. Confirm the LitBuy order updates accordingly and that any extra payment or balance use is tied to the same identifier. Approval should never be implied from a general message such as okay. A precise authorization prevents a seller from substituting another attribute at the same time.",
+          "Update the QC acceptance checks when the option changes. A new color needs a new color reference; a new size needs its seller-chart row; a different batch or seller needs a fresh listing review. Do not reuse the evidence standard from the unavailable item merely because the thumbnail is similar. The revised order is now the promise against which the warehouse unit will be judged."
+        ]
+      },
+      {
+        "heading": "Evaluate alternatives as independent listings",
+        "paragraphs": [
+          "An alternative should pass the same due diligence as the original: current seller, listing, option, price, measurements, quantity and included components. Compare why the first item was chosen and identify any tradeoff. A cheaper substitute may use a different material or size chart; a more expensive one may not improve the decisive detail. Ask for the actual source rather than approving from a cropped product image or informal description.",
+          "If the proposed alternative is unsuitable, say no and choose cancellation. You are not required to keep money committed to the category by accepting the nearest available object. When you do approve an alternative, connect it to a new or clearly revised order record and close the original option. This prevents both products from being purchased if the seller later finds stock."
+        ]
+      },
+      {
+        "heading": "Cancel without losing the money trail",
+        "paragraphs": [
+          "Use the cancellation or support option shown for the current order state. State that the original option is unavailable or the revised basis was not accepted, and request the eligible cancellation outcome. Save the request and status. Cancellation before purchase, cancellation after a seller rejects the order and a warehouse return are different processes. Do not call them all returns, because no physical item may exist in the first two cases.",
+          "Track the value from the order to the LitBuy account transaction. Record the cancelled amount and any displayed adjustment separately. A balance credit is not automatically a card refund. If you later request an eligible withdrawal, treat it as another transaction with its own method, reference and status. The order closes only when the status and money record agree."
+        ]
+      },
+      {
+        "heading": "Prevent duplicate orders during the decision",
+        "paragraphs": [
+          "Do not open a second order for an alternative while the first can still be purchased unless you intentionally want both and can document that choice. A seller or agent response may arrive after you have moved on, creating duplicate units. Mark the original order hold, cancel requested or replacement authorized, and preserve the timestamp. If the platform has no explicit hold state, state the instruction clearly through the current support path and keep the case reference.",
+          "Reconcile every payment before adding money again. A price-change prompt may ask for a difference, but the existing order balance or initial authorization could still be pending. Confirm how much was already applied to the order and what the additional payment is expected to change. Paying an approximate top-up into general balance does not prove the order itself was updated."
+        ]
+      },
+      {
+        "heading": "Update the warehouse and parcel plan after resolution",
+        "paragraphs": [
+          "If the order proceeds, follow seller dispatch and warehouse arrival as new milestones. Compare the received item with the final authorized version, not the original unavailable one. If the order is cancelled, remove it from consolidation dates, weight estimates and parcel manifests. Do not leave a placeholder line that could later be confused with another item. One resolved exception should simplify the haul rather than create two competing records.",
+          "Recalculate only after the item has a settled status. A replacement may have different dimensions, restrictions or packaging needs. A cancelled item may change whether it is efficient to wait for more goods or ship the current warehouse group. Make that decision from live storage and route information. The seller's stock problem should not silently control the shipping strategy for every accepted item."
+        ]
+      },
+      {
+        "heading": "Turn seller exceptions into a better buying rule",
+        "paragraphs": [
+          "After closure, record the cause, response and outcome. If a seller repeatedly advertises unavailable options, lower its priority in future discovery. If a listing hid a minimum quantity, add MOQ to the pre-purchase checklist for that marketplace. If a price change was caused by choosing a premium variant, make option-level price confirmation mandatory. The objective is not to predict every exception; it is to reduce repeated ambiguity.",
+          "The repeatable branch is: freeze the original, classify the change, verify the new information, accept a fully specified revision, validate an alternative independently or cancel and reconcile the balance. Out of stock and price changed are not dead ends. They are decision points where a clean record protects the buyer from unwanted substitution, duplicate purchase and missing refund. The fastest response is useful only when it is also the response you can prove you authorized."
+        ]
+      }
+    ]
+  }
+]
