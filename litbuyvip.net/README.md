@@ -5,7 +5,8 @@ Production-ready static site for **https://litbuyvip.net/**.
 ## Included
 
 - Responsive homepage with 120 product records, category filters, pagination, QC finder, shipping tools and multilingual UI
-- Independent crawlable Buyer Guides archive and three long-form English articles
+- Four crawlable intent hubs for the spreadsheet, QC Finder, shipping calculator and W2C categories
+- Independent Buyer Guides archive with 15 long-form English articles
 - `robots.txt`, `sitemap.xml`, canonical URLs, Open Graph metadata, structured data and a custom 404 page
 - Cloudflare Pages `_headers` and `_redirects`
 - PWA manifest, icons, `.nojekyll`, Git attributes and deployment checklist
@@ -44,7 +45,7 @@ The `_headers` file prevents `*.pages.dev` preview URLs from being indexed while
    - `https://litbuyvip.net/robots.txt`
    - `https://litbuyvip.net/sitemap.xml`
 3. Submit `https://litbuyvip.net/sitemap.xml` in Search Console.
-4. Inspect the homepage and the three article URLs and request indexing after the live deployment is confirmed.
+4. Inspect the homepage, the four intent hubs and the newest guide URLs, then request indexing after the live deployment is confirmed.
 
 ## Important
 
