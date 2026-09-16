@@ -1,19 +1,9 @@
 name: Deploy GA4-tagged sites
 
+# Cloudflare Pages' Git integration handles production deploys on push.
+# Keep this workflow as a manual fallback for repositories with the two
+# Cloudflare secrets configured.
 on:
-  push:
-    branches:
-      - main
-    paths:
-      - "**/*.html"
-      - "sugargoovip.shop/site.tar.gz"
-      - "superbuyvip.pro/app/layout.tsx"
-      - ".github/workflows/deploy-ga4-sites.yml"
-  workflow_run:
-    workflows:
-      - Install per-site GA4 tags
-    types:
-      - completed
   workflow_dispatch:
 
 permissions:
