@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800" role="img" aria-labelledby="title desc">
+  <title id="title">Sugargoo shipping calculator</title>
+  <desc id="desc">Parcel dimensions and weight feeding a billable weight calculation.</desc>
+  <rect width="1200" height="800" fill="#dbe8ff"/>
+  <path d="M0 625L1200 290V800H0Z" fill="#ff5a1f"/>
+  <text x="70" y="110" fill="#11110f" font-family="Arial,sans-serif" font-size="24" font-weight="900" letter-spacing="4">SHIPPING SCENARIO / 2026</text>
+  <text x="70" y="200" fill="#11110f" font-family="Arial,sans-serif" font-size="64" font-weight="900">ACTUAL OR VOLUME?</text>
+  <g transform="translate(95 285)" stroke="#11110f" stroke-width="8" stroke-linejoin="round">
+    <path d="M0 105L190 0l205 95-190 115Z" fill="#f7f4ed"/>
+    <path d="M0 105v205l205 115V210Z" fill="#ffd7c6"/>
+    <path d="M205 210l190-115v205L205 425Z" fill="#b7f02a"/>
+  </g>
+  <g font-family="Arial,sans-serif" font-weight="900">
+    <rect x="565" y="270" width="550" height="360" rx="28" fill="#11110f"/>
+    <text x="615" y="340" fill="#ff7d4d" font-size="22">L × W × H ÷ DIVISOR</text>
+    <text x="615" y="425" fill="#ffffff" font-size="58">4.00 KG</text>
+    <line x1="615" y1="465" x2="1065" y2="465" stroke="#5a5a54" stroke-width="3"/>
+    <text x="615" y="515" fill="#c9c6bd" font-size="22">ACTUAL 3.00 KG</text>
+    <text x="615" y="560" fill="#b7f02a" font-size="22">BILLABLE 4.00 KG</text>
+  </g>
+  <text x="70" y="735" fill="#ffffff" font-family="Arial,sans-serif" font-size="22" font-weight="800">MODEL THE PARCEL. THEN CHECK THE CURRENT ROUTE.</text>
+</svg>
