@@ -7,6 +7,24 @@
 /*.html
   Cache-Control: public, max-age=0, must-revalidate
 
+/
+  Cache-Control: public, max-age=0, must-revalidate
+
+/guides/*
+  Cache-Control: public, max-age=0, must-revalidate
+
+/litbuy-spreadsheet/*
+  Cache-Control: public, max-age=0, must-revalidate
+
+/qc/*
+  Cache-Control: public, max-age=0, must-revalidate
+
+/shipping/*
+  Cache-Control: public, max-age=0, must-revalidate
+
+/warehouse/*
+  Cache-Control: public, max-age=0, must-revalidate
+
 /assets/embedded/*
   Cache-Control: public, max-age=31536000, immutable
 
