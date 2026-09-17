@@ -1,1 +1,21 @@
-# Cloudflare Pages Clean URLs serves the HTML pages without custom redirects.
+# Canonical extensionless URLs. Keep legacy .html links usable without duplicates.
+/index.html / 301
+/guides.html /guides 301
+/is-oopbuy-legit-review.html /is-oopbuy-legit-review 301
+/oopbuy-shipping-time-guide.html /oopbuy-shipping-time-guide 301
+/oopbuy-presale-deposit-order-guide.html /oopbuy-presale-deposit-order-guide 301
+/oopbuy-size-variant-guide.html /oopbuy-size-variant-guide 301
+/oopbuy-seller-selection-guide.html /oopbuy-seller-selection-guide 301
+/oopbuy-packaging-services-guide.html /oopbuy-packaging-services-guide 301
+/oopbuy-parcel-delivery-inspection-guide.html /oopbuy-parcel-delivery-inspection-guide 301
+/oopbuy-customs-declaration-guide.html /oopbuy-customs-declaration-guide 301
+/oopbuy-restricted-items-shipping-route-guide.html /oopbuy-restricted-items-shipping-route-guide 301
+/oopbuy-payment-methods-checkout-guide.html /oopbuy-payment-methods-checkout-guide 301
+/oopbuy-order-tracking-status-guide.html /oopbuy-order-tracking-status-guide 301
+/oopbuy-forwarding-self-purchased-parcels-guide.html /oopbuy-forwarding-self-purchased-parcels-guide 301
+/oopbuy-taobao-weidian-1688-guide.html /oopbuy-taobao-weidian-1688-guide 301
+/oopbuy-returns-exchanges-guide.html /oopbuy-returns-exchanges-guide 301
+/oopbuy-warehouse-parcel-guide.html /oopbuy-warehouse-parcel-guide 301
+/oopbuy-shipping-cost-guide.html /oopbuy-shipping-cost-guide 301
+/oopbuy-qc-photos-guide.html /oopbuy-qc-photos-guide 301
+/oopbuy-spreadsheet-w2c-guide.html /oopbuy-spreadsheet-w2c-guide 301
