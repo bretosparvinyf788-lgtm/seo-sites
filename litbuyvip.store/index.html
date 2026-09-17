@@ -3748,6 +3748,8 @@
         ><img
           src="/assets/embedded/f6635c6cebd4d84f4731.png"
           alt="LitBuy"
+          width="432"
+          height="108"
         /><span class="brand-vip">VIP</span></a
       >
       <nav>
@@ -4194,6 +4196,8 @@
           <img
             src="/assets/embedded/f6635c6cebd4d84f4731.png"
             alt="LitBuy"
+            width="432"
+            height="108"
           /><span>VIP</span>
         </div>
         <p>
@@ -4376,7 +4380,7 @@
         products.innerHTML = data
           .map(
             (p, i) =>
-              `<article class="card"><div class="art"><a class="product-photo" href="${p[5]}" target="_blank" aria-label="Open ${p[1]}"><img src="${p[6]}" alt="${p[1]} main product image" loading="lazy" decoding="async"></a><small>${String(i + 1).padStart(2, "0")}</small><i>${p[4]}</i><button class="heart ${saved.includes(p[1]) ? "on" : ""}" onclick="toggleSave('${p[1].replaceAll("'", "\\'")}')" aria-label="Save ${p[1]}">${saved.includes(p[1]) ? "♥" : "♡"}</button></div><div class="info"><small>${p[2]}</small><h3>${p[1]}</h3><div><strong>${p[3].toFixed(2)}</strong><a href="${p[5]}" target="_blank">INSPECT FIND ↗</a></div></div></article>`,
+              `<article class="card"><div class="art"><a class="product-photo" href="${p[5]}" target="_blank" aria-label="Open ${p[1]}"><img src="${p[6]}" alt="${p[1]} main product image" width="500" height="500" loading="lazy" decoding="async"></a><small>${String(i + 1).padStart(2, "0")}</small><i>${p[4]}</i><button class="heart ${saved.includes(p[1]) ? "on" : ""}" onclick="toggleSave('${p[1].replaceAll("'", "\\'")}')" aria-label="Save ${p[1]}">${saved.includes(p[1]) ? "♥" : "♡"}</button></div><div class="info"><small>${p[2]}</small><h3>${p[1]}</h3><div><strong>${p[3].toFixed(2)}</strong><a href="${p[5]}" target="_blank">INSPECT FIND ↗</a></div></div></article>`,
           )
           .join("");
       }
@@ -4719,7 +4723,7 @@
         products.innerHTML = data
           .map(
             (p, i) =>
-              `<article class="card"><div class="art"><a class="product-photo" href="${p[5]}" target="_blank" aria-label="Open ${p[1]}"><img src="${p[6]}" alt="${p[1]} main product image" loading="lazy" decoding="async"></a><small>${String(i + 1).padStart(2, "0")}</small><i>${p[4]}</i><button class="heart ${saved.includes(p[1]) ? "on" : ""}" onclick="toggleSave('${p[1].replaceAll("'", "\\'")}')" aria-label="Save ${p[1]}">${saved.includes(p[1]) ? "♥" : "♡"}</button></div><div class="info"><small>${p[2]}</small><h3>${p[1]}</h3><div><strong>${p[3].toFixed(2)}</strong><a href="${p[5]}" target="_blank">INSPECT FIND ↗</a></div></div></article>`,
+              `<article class="card"><div class="art"><a class="product-photo" href="${p[5]}" target="_blank" aria-label="Open ${p[1]}"><img src="${p[6]}" alt="${p[1]} main product image" width="500" height="500" loading="lazy" decoding="async"></a><small>${String(i + 1).padStart(2, "0")}</small><i>${p[4]}</i><button class="heart ${saved.includes(p[1]) ? "on" : ""}" onclick="toggleSave('${p[1].replaceAll("'", "\\'")}')" aria-label="Save ${p[1]}">${saved.includes(p[1]) ? "♥" : "♡"}</button></div><div class="info"><small>${p[2]}</small><h3>${p[1]}</h3><div><strong>${p[3].toFixed(2)}</strong><a href="${p[5]}" target="_blank">INSPECT FIND ↗</a></div></div></article>`,
           )
           .join("");
       };
