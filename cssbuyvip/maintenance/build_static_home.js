@@ -85,8 +85,8 @@ function renderHome(data) {
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-14RD8H62DL');</script>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>CSSBuy Spreadsheet 2026: Updated W2C Finds &amp; QC Photos</title>
-<meta name="description" content="Browse 10 updated CSSBuy finds with W2C links, prices, real product images, QC checks and shipping notes. Reviewed September 2026.">
+<title>CSSBuy Spreadsheet 2026: 10 Checked Finds &amp; QC Photos</title>
+<meta name="description" content="Browse 10 checked CSSBuy W2C finds with prices, real images, QC notes and shipping tips. Independently reviewed and updated September 2026.">
 <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
 <link rel="canonical" href="https://cssbuyvip.shop/">
 <link rel="icon" type="image/svg+xml" href="/favicon.svg?v=cssbuy-20260831">
@@ -94,8 +94,8 @@ function renderHome(data) {
 <link rel="preconnect" href="https://kakobuymake.com" crossorigin>
 <link rel="stylesheet" href="/assets/site.css?v=20260831">
 <meta property="og:type" content="website">
-<meta property="og:title" content="CSSBuy Spreadsheet 2026: Updated W2C Finds &amp; QC Photos">
-<meta property="og:description" content="Browse 10 updated CSSBuy finds with W2C links, prices, real product images, QC checks and shipping notes.">
+<meta property="og:title" content="CSSBuy Spreadsheet 2026: 10 Checked Finds &amp; QC Photos">
+<meta property="og:description" content="Browse 10 checked CSSBuy W2C finds with prices, real images, QC notes and shipping tips.">
 <meta property="og:url" content="https://cssbuyvip.shop/">
 <meta property="og:image" content="https://cssbuyvip.shop/assets/og-cssbuy-spreadsheet.png">
 <meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
@@ -103,7 +103,7 @@ function renderHome(data) {
 <meta name="twitter:image" content="https://cssbuyvip.shop/assets/og-cssbuy-spreadsheet.png">
 <script type="application/ld+json">${JSON.stringify({
     '@context': 'https://schema.org', '@type': 'WebSite', name: 'CSSBuyVip Spreadsheet',
-    url: 'https://cssbuyvip.shop/', description: 'An independently reviewed CSSBuy spreadsheet with 10 updated W2C finds, prices, real product images, QC checks and shipping notes.',
+    url: 'https://cssbuyvip.shop/', description: 'An independently reviewed CSSBuy spreadsheet with 10 checked W2C finds, prices, real product images, QC notes and shipping tips.',
     publisher: {'@type': 'Organization', name: 'CSSBuyVip', url: 'https://cssbuyvip.shop/'}
   })}</script>
 <script type="application/ld+json">${JSON.stringify({
@@ -118,7 +118,7 @@ function renderHome(data) {
     <div class="lang-switch"><label class="lang-select-wrap"><span class="sr-only">Select language</span><select class="lang-select" aria-label="Select language"><option>English</option><option>Español</option><option>Deutsch</option><option>Português</option><option>中文</option></select><span class="lang-select-arrow">▾</span></label></div>
   </div></header>
   <main>
-    <section class="hero" id="home"><div class="wrap grid"><div><span class="eyebrow">Independent CSSBuy spreadsheet · Reviewed September 2026</span><h1>CSSBuy Spreadsheet 2026: Updated W2C Finds and QC Photos</h1><p class="lead">Browse 10 reviewed CSSBuy finds with live product destinations, real images, visible prices, QC checks and shipping notes before you build a haul.</p><div class="btns"><a class="btn" href="/cssbuy-spreadsheet/">Open Spreadsheet</a><a class="btn secondary" href="/guides/">Buyer Guides</a></div></div></div></section>
+    <section class="hero" id="home"><div class="wrap grid"><div><span class="eyebrow">Independent CSSBuy spreadsheet · Reviewed September 2026</span><h1>CSSBuy Spreadsheet 2026: 10 Checked Finds and QC Photos</h1><p class="lead">Browse 10 checked CSSBuy finds with live product destinations, real images, visible prices, QC notes and shipping tips before you build a haul.</p><div class="btns"><a class="btn" href="/cssbuy-spreadsheet/">Open Spreadsheet</a><a class="btn secondary" href="/guides/">Buyer Guides</a></div></div></div></section>
     <section class="section" id="quick-overview"><div class="wrap"><div class="section-head"><div><div class="products-bigpill h2like">CSSBuy Spreadsheet Overview</div><p class="products-subtitle">Use live product destinations, current prices, QC checks and shipping notes to shortlist each find.</p></div></div><div class="overview-panel"><div class="overview-card-grid">${overview}</div></div></div></section>
     <section class="section" id="categories"><div class="wrap"><div class="section-head"><div><div class="category-bigpill h2like">Browse CSSBuy Finds by Category</div><p class="category-subtitle">Ten product categories connected to the main catalog.</p></div></div><div class="category-grid">${categories}</div></div></section>
     <section class="section" id="featured-products"><div class="wrap"><div class="section-head"><div><div class="products-bigpill h2like">10 Featured CSSBuy Spreadsheet Finds</div><p class="products-subtitle">Real product images, prices and direct product destinations. Recheck every live listing before ordering.</p></div></div><div class="product-grid">${products}</div></div></section>

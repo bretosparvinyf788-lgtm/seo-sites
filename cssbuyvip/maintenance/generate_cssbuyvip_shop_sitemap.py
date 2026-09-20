@@ -113,7 +113,9 @@ def main() -> None:
         seen.add(url)
         entries.append((url, git_lastmod(path)))
 
-    entries.sort(key=lambda item: (item[0] != BASE_URL + "/", item[1], item[0]))
+    # Keep the sitemap order stable when only lastmod changes. Stable ordering
+    # makes deployment diffs smaller and avoids implying URL priority by date.
+    entries.sort(key=lambda item: (item[0] != BASE_URL + "/", item[0]))
     if not entries or entries[0][0] != BASE_URL + "/":
         raise SystemExit("Safety stop: homepage was not included in the sitemap")
 

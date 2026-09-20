@@ -74,6 +74,11 @@ for (const [language, newest] of Object.entries(NEWEST_ARTICLE_CARDS)) {
   SITE_DATA.articles[language] = [...newest, ...SITE_DATA.articles[language].filter((article) => !newestKeys.has(article.key))];
 }
 
+// Keep the interactive English view aligned with the crawlable homepage
+// metadata and the verified ten-item inventory.
+SITE_DATA.ui.en.h1 = 'CSSBuy Spreadsheet 2026: 10 Checked Finds and QC Photos';
+SITE_DATA.ui.en.lead = 'Browse 10 checked CSSBuy finds with live product destinations, real images, visible prices, QC notes and shipping tips before you build a haul.';
+
 let currentLang = localStorage.getItem('cssbuyvip_lang') || 'en';
 let currentView = 'home';
 let currentArticle = 'spreadsheet';
