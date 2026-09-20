@@ -5,6 +5,7 @@ Upload every file and folder in this directory to the root of the GitHub reposit
 Required publish directory: the directory containing index.html
 Build command: none (static site)
 Custom domain: superbuyvip.com
+Deployment revision: 2026-09-20 SEO and analytics repair
 
 Included:
 - Complete responsive homepage
