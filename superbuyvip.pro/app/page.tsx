@@ -10,6 +10,7 @@ import itGuides from "./articles-it.json";
 import ptGuides from "./articles-pt.json";
 import zhGuides from "./articles-zh.json";
 import articleFaqs from "./article-faqs.json";
+import guideMeta from "./guide-meta.json";
 
 type Lang = keyof typeof locales;
 
@@ -49,47 +50,37 @@ const guideLibraryTitles: Record<Lang,string> = {
   it:"Tutte le guide all’acquisto", pt:"Todos os guias de compra", zh:"全部购买指南"
 };
 const guideLibraryDescriptions: Record<Lang,string> = {
-  en:"Nine original, evidence-led Superbuy guides researched from the current official shopping, warehouse and shipping workflow.",
-  de:"Sechs eigenständige, belegbasierte Superbuy-Ratgeber auf Grundlage des aktuellen offiziellen Einkaufs-, Lager- und Versandablaufs.",
-  fr:"Six guides Superbuy originaux et fondés sur des preuves, issus du parcours officiel actuel d’achat, d’entrepôt et d’expédition.",
-  es:"Seis guías originales de Superbuy, basadas en pruebas y en el flujo oficial actual de compra, almacén y envío.",
-  it:"Sei guide originali Superbuy, basate su prove e sull’attuale flusso ufficiale di acquisto, magazzino e spedizione.",
-  pt:"Seis guias originais da Superbuy, baseados em evidências e no fluxo oficial atual de compra, armazém e envio.",
-  zh:"六篇基于 Superbuy 当前官方购买、仓储和国际运输流程研究的原创实用指南。"
+  en:"Twelve original, evidence-led Superbuy guides researched from the current official shopping, warehouse and shipping workflow.",
+  de:"Zwölf eigenständige, belegbasierte Superbuy-Ratgeber auf Grundlage des aktuellen offiziellen Einkaufs-, Lager- und Versandablaufs.",
+  fr:"Douze guides Superbuy originaux et fondés sur des preuves, issus du parcours officiel actuel d’achat, d’entrepôt et d’expédition.",
+  es:"Doce guías originales de Superbuy, basadas en pruebas y en el flujo oficial actual de compra, almacén y envío.",
+  it:"Dodici guide originali Superbuy, basate su prove e sull’attuale flusso ufficiale di acquisto, magazzino e spedizione.",
+  pt:"Doze guias originais da Superbuy, baseados em evidências e no fluxo oficial atual de compra, armazém e envio.",
+  zh:"十二篇基于 Superbuy 当前官方购买、仓储和国际运输流程研究的原创实用指南。"
 };
 const editionLabels: Record<Lang,string> = {
   en:"WORDS",de:"VOLLSTÄNDIGE ÜBERSETZUNG",fr:"VERSION INTÉGRALE",es:"TRADUCCIÓN COMPLETA",it:"TRADUZIONE COMPLETA",pt:"TRADUÇÃO COMPLETA",zh:"完整译文"
 };
-const guidesByLanguage: Record<Lang,typeof longGuides> = {en:longGuides,de:[...longGuides.slice(0,4),...deGuides],fr:[...longGuides.slice(0,4),...frGuides],es:[...longGuides.slice(0,4),...esGuides],it:[...longGuides.slice(0,4),...itGuides],pt:[...longGuides.slice(0,4),...ptGuides],zh:[...longGuides.slice(0,4),...zhGuides]};
-const articleFaqsByLanguage: Record<Lang,typeof articleFaqs.en> = {en:articleFaqs.en,de:[articleFaqs.en[0],...articleFaqs.de],fr:[articleFaqs.en[0],...articleFaqs.fr],es:[articleFaqs.en[0],...articleFaqs.es],it:[articleFaqs.en[0],...articleFaqs.it],pt:[articleFaqs.en[0],...articleFaqs.pt],zh:[articleFaqs.en[0],...articleFaqs.zh]};
-const guideUrls = [
-  "/guides/superbuy-customs-description-value-tax-ledger/",
-  "/guides/superbuy-unboxing-damage-after-sales-playbook/",
-  "/guides/superbuy-presale-limited-edition-order-playbook/",
-  "/guides/superbuy-parcel-forwarding-intake-playbook/",
-  "/guides/superbuy-1688-buying-risk-playbook/",
-  "/guides/superbuy-consolidation-packaging-playbook/",
-  "/guides/superbuy-warehouse-qc-system/",
-  "/guides/superbuy-landed-cost-framework/",
-  "/guides/superbuy-spreadsheet-operating-system/"
-];
-const articleDates = ["2026-09-09","2026-09-08","2026-09-06","2026-08-28","2026-08-27","2026-08-21","2026-08-17","2026-08-17","2026-08-17"];
+const untranslatedGuideCount = 7;
+const guidesByLanguage: Record<Lang,typeof longGuides> = {en:longGuides,de:[...longGuides.slice(0,untranslatedGuideCount),...deGuides],fr:[...longGuides.slice(0,untranslatedGuideCount),...frGuides],es:[...longGuides.slice(0,untranslatedGuideCount),...esGuides],it:[...longGuides.slice(0,untranslatedGuideCount),...itGuides],pt:[...longGuides.slice(0,untranslatedGuideCount),...ptGuides],zh:[...longGuides.slice(0,untranslatedGuideCount),...zhGuides]};
+const articleFaqsByLanguage: Record<Lang,typeof articleFaqs.en> = {en:articleFaqs.en,de:[...articleFaqs.en.slice(0,untranslatedGuideCount),...articleFaqs.de],fr:[...articleFaqs.en.slice(0,untranslatedGuideCount),...articleFaqs.fr],es:[...articleFaqs.en.slice(0,untranslatedGuideCount),...articleFaqs.es],it:[...articleFaqs.en.slice(0,untranslatedGuideCount),...articleFaqs.it],pt:[...articleFaqs.en.slice(0,untranslatedGuideCount),...articleFaqs.pt],zh:[...articleFaqs.en.slice(0,untranslatedGuideCount),...articleFaqs.zh]};
+const guideUrls = guideMeta.map(item=>`/guides/${item.slug}/`);
+const guideImages = guideMeta.map(item=>`/guides/media/${item.slug}.svg`);
+const articleDates = guideMeta.map(item=>item.date);
 const articleWordCounts = longGuides.map((guide,index) => [guide.title,guide.intro,...guide.body,articleFaqs.en[index].title,...articleFaqs.en[index].items.flat()].join(" ").replaceAll("## ","").match(/[A-Za-z0-9’'-]+/g)?.length || 0);
-const articleSchema = {
+const homeSchema = {
   "@context":"https://schema.org",
-  "@graph":longGuides.map((guide,index)=>({
-    "@type":"Article",
-    headline:guide.title,
-    description:guide.intro,
-    datePublished:articleDates[index],
-    dateModified:articleDates[index],
-    inLanguage:"en",
-    author:{"@type":"Organization",name:"SuperBuyVIP"},
-    publisher:{"@type":"Organization",name:"SuperBuyVIP"},
-    mainEntityOfPage:`https://superbuyvip.pro${guideUrls[index]}`,
-    hasPart:articleFaqs.en[index].items.map(item=>({"@type":"Question",name:item[0],acceptedAnswer:{"@type":"Answer",text:item[1]}}))
-  }))
+  "@graph":[
+    {"@type":"WebSite","@id":"https://superbuyvip.pro/#website",name:"SuperBuyVIP",url:"https://superbuyvip.pro/",inLanguage:"en",description:"Updated Superbuy spreadsheet finds, QC notes and independent buyer guides."},
+    {"@type":"ItemList",name:"Latest Superbuy buyer guides",numberOfItems:3,itemListElement:longGuides.slice(0,3).map((guide,index)=>({"@type":"ListItem",position:index+1,url:`https://superbuyvip.pro${guideUrls[index]}`,name:guide.title}))},
+    {"@type":"FAQPage",mainEntity:locales.en.faqs.map(item=>({"@type":"Question",name:item[0],acceptedAnswer:{"@type":"Answer",text:item[1]}}))}
+  ]
 };
+
+declare global {
+  interface Window { gtag?: (...args: unknown[])=>void; }
+}
+const track=(event:string,params:Record<string,string|number>={})=>window.gtag?.("event",event,params);
 const researchNotes: Record<Lang,string> = {
   en:"Research basis: current Superbuy official shopping-agent, warehousing and fee guidance. Confirm live policy details inside your account.",
   de:"Recherchebasis: aktuelle offizielle Superbuy-Hinweise zu Einkaufsservice, Lagerung und Gebühren. Prüfe die aktuellen Bedingungen in deinem Konto.",
@@ -144,17 +135,17 @@ export default function Home(){
   const actual=(Number(parcel.weight)||0)/1000;
   const volume=((Number(parcel.length)||0)*(Number(parcel.width)||0)*(Number(parcel.height)||0))/6000;
   const planned=Math.max(actual,volume);
-  const setLanguage=(value:string)=>{ setLang(value as Lang); setArticle(null); setGuideLibrary(false); };
+  const setLanguage=(value:string)=>{ setLang(value as Lang); setArticle(null); setGuideLibrary(false); track("language_change",{language:value}); };
 
   return <main id="top">
-    <script type="application/ld+json" dangerouslySetInnerHTML={{__html:JSON.stringify(articleSchema)}} />
+    <script type="application/ld+json" dangerouslySetInnerHTML={{__html:JSON.stringify(homeSchema)}} />
     <header>
       <a className="logo" href="#top"><span>S</span><b>SUPERBUY <i>VIP</i></b></a>
       <nav className={menu?"open":""}>{copy.nav.map((item,index)=><a key={item} data-i18n={`nav.${index}`} href={["#categories","#index","#calculator","#guides","#faq"][index]} onClick={()=>setMenu(false)}>{item}</a>)}</nav>
       <div className="header-actions">
         <span className="live-dot"><i></i><span data-i18n="online">{copy.online}</span></span>
         <label className="language-select" aria-label="Language"><span>{lang.toUpperCase()}</span><select value={lang} onChange={e=>setLanguage(e.target.value)}>{languageCodes.map(code=><option key={code} value={code}>{locales[code].label}</option>)}</select></label>
-        <a className="spreadsheet-link" href="https://kakobuymake.com/" target="_blank" rel="noreferrer"><span data-i18n="spreadsheet">{copy.spreadsheet}</span> <Arrow/></a>
+        <a className="spreadsheet-link" href="https://kakobuymake.com/" target="_blank" rel="noreferrer" onClick={()=>track("spreadsheet_open",{placement:"header"})}><span data-i18n="spreadsheet">{copy.spreadsheet}</span> <Arrow/></a>
       </div>
       <button className="menu" onClick={()=>setMenu(!menu)} aria-expanded={menu} aria-label="Toggle menu"><i></i><i></i></button>
     </header>
@@ -171,9 +162,9 @@ export default function Home(){
       </div>
       <div className="hero-records">
         <div className="record-label"><span data-i18n="recent">{copy.recent}</span><b data-i18n="recordCount">{copy.recordCount}</b></div>
-        {productView.slice(0,4).map(p=><a key={p.n} href={p.link} target="_blank" rel="noreferrer" data-index={p.index}><span>{p.n}</span><img src={p.image} alt={p.title}/><div><b data-i18n={`products.${p.index}.0`}>{p.title}</b><small><span data-category={p.category}>{p.displayCategory}</span> · {p.price}</small></div></a>)}
+        {productView.slice(0,4).map((p,index)=><a key={p.n} href={p.link} target="_blank" rel="noreferrer" data-index={p.index} onClick={()=>track("product_open",{product_number:p.n,placement:"hero"})}><span>{p.n}</span><img src={p.image} alt={p.title} loading={index===0?"eager":"lazy"} decoding="async" fetchPriority={index===0?"high":"auto"}/><div><b data-i18n={`products.${p.index}.0`}>{p.title}</b><small><span data-category={p.category}>{p.displayCategory}</span> · {p.price}</small></div></a>)}
       </div>
-      <dl className="hero-stats">{copy.stats.map((label,index)=><div key={index}><dt data-i18n={`stats.${index}`}>{label}</dt><dd>{["10","10","10","AUG 17"][index]}</dd></div>)}</dl>
+      <dl className="hero-stats">{copy.stats.map((label,index)=><div key={index}><dt data-i18n={`stats.${index}`}>{label}</dt><dd>{["10","10","12","SEP 20"][index]}</dd></div>)}</dl>
     </section>
 
     <section className="category-directory" id="categories">
@@ -183,7 +174,7 @@ export default function Home(){
 
     <div className="sheet-shell">
       <section className="index-panel" id="index">
-        <div className="panel-bar"><div><i></i><b>PRODUCT_INDEX.csv</b><span data-i18n="filePreview">{copy.filePreview}</span></div><a href="https://kakobuymake.com/" target="_blank" rel="noreferrer"><span data-i18n="master">{copy.master}</span> ↗</a></div>
+        <div className="panel-bar"><div><i></i><b>PRODUCT_INDEX.csv</b><span data-i18n="filePreview">{copy.filePreview}</span></div><a href="https://kakobuymake.com/" target="_blank" rel="noreferrer" onClick={()=>track("spreadsheet_open",{placement:"product_index"})}><span data-i18n="master">{copy.master}</span> ↗</a></div>
         <div className="find-tools sort-only">
           <div className="sort-box"><span data-i18n="sort">{copy.sort}</span><select value={sort} onChange={e=>setSort(e.target.value)}>{copy.sortOptions.map((item,index)=><option key={index} data-i18n={`sortOptions.${index}`} value={["number","name","category"][index]}>{item}</option>)}</select></div>
         </div>
@@ -191,12 +182,12 @@ export default function Home(){
           <div className="table-head">{copy.tableHeaders.map((item,index)=><span key={index} data-i18n={`tableHeaders.${index}`}>{item}</span>)}<span></span></div>
           <div className="product-grid">{filtered.map(p=><article key={p.n} data-index={p.index} data-category={p.category}>
             <span className="row-number">{p.n}</span>
-            <a className="product-photo" href={p.link} target="_blank" rel="noreferrer"><img src={p.image} alt={p.title}/><h3 data-i18n={`products.${p.index}.0`}>{p.title}</h3></a>
+            <a className="product-photo" href={p.link} target="_blank" rel="noreferrer" onClick={()=>track("product_open",{product_number:p.n,placement:"index"})}><img src={p.image} alt={p.title} loading="lazy" decoding="async"/><h3 data-i18n={`products.${p.index}.0`}>{p.title}</h3></a>
             <div className="product-line"><span data-category={p.category}>{p.displayCategory}</span></div>
             <b className="product-price">{p.price}</b>
             <p data-i18n={`products.${p.index}.1`}>{p.check}</p>
             <time dateTime="2026-08-17">2026-08-17</time>
-            <a className="product-link" href={p.link} target="_blank" rel="noreferrer" aria-label={`View ${p.title}`}><Arrow/></a>
+            <a className="product-link" href={p.link} target="_blank" rel="noreferrer" aria-label={`View ${p.title}`} onClick={()=>track("product_open",{product_number:p.n,placement:"index_arrow"})}><Arrow/></a>
           </article>)}</div>
           <p className="no-results" data-i18n="noResults" style={{display:filtered.length?"none":"block"}}>{copy.noResults}</p>
         </div>
@@ -207,7 +198,7 @@ export default function Home(){
         <div className="calculator" id="calculator">
           <div className="utility-title"><span data-i18n="calculator.label">{copy.calculator.label}</span><h2 data-i18n="calculator.title">{copy.calculator.title}</h2><p data-i18n="calculator.text">{copy.calculator.text}</p></div>
           <div className="calc-form">
-            <div className="calc-inputs">{[["weight","g"],["length","cm"],["width","cm"],["height","cm"]].map((item,index)=><label key={item[0]}><span data-i18n={`calculator.inputs.${index}`}>{copy.calculator.inputs[index]}</span><div><input type="number" value={parcel[item[0] as keyof typeof parcel]} onChange={e=>setParcel({...parcel,[item[0]]:e.target.value})}/><b>{item[1]}</b></div></label>)}</div>
+            <div className="calc-inputs">{[["weight","g"],["length","cm"],["width","cm"],["height","cm"]].map((item,index)=><label key={item[0]}><span data-i18n={`calculator.inputs.${index}`}>{copy.calculator.inputs[index]}</span><div><input type="number" value={parcel[item[0] as keyof typeof parcel]} onChange={e=>setParcel({...parcel,[item[0]]:e.target.value})} onBlur={()=>track("calculator_use",{field:item[0]})}/><b>{item[1]}</b></div></label>)}</div>
             <div className="calc-results">{[actual,volume,planned].map((value,index)=><div key={index}><span data-i18n={`calculator.results.${index}`}>{copy.calculator.results[index]}</span><b>{value.toFixed(2)} kg</b></div>)}</div>
             <p data-planner-advice>{volume>actual?copy.calculator.box:copy.calculator.scale}</p>
           </div>
@@ -221,8 +212,8 @@ export default function Home(){
 
       <section className="guides" id="guides">
         <div className="section-row"><div><span data-i18n="guidesLabel">{copy.guidesLabel}</span><h2 data-i18n="guidesTitle">{copy.guidesTitle}</h2></div><p data-i18n="guidesText">{copy.guidesText}</p></div>
-        <div className="guide-list">{guides.slice(0,3).map((guide,index)=><article key={index} data-index={index}><span>DOC-0{index+1}</span><div><b>{guide.tag}</b><h3>{guide.title}</h3><p>{guide.intro}</p></div><button onClick={()=>{window.location.href=guideUrls[index];}}><span data-i18n="open">{copy.open}</span> <Arrow/></button></article>)}</div>
-        <div className="all-guides-bar"><button data-open-all-guides onClick={()=>{window.location.href="/guides/";}}><span data-all-guides-label>{allGuideLabels[lang]}</span> <Arrow/></button></div>
+        <div className="guide-list">{guides.slice(0,3).map((guide,index)=><article key={index} data-index={index}><img src={guideImages[index]} alt="" loading="lazy"/><div><b>{guide.tag}</b><h3><a href={guideUrls[index]} onClick={()=>track("guide_open",{guide:guideMeta[index].slug,placement:"homepage"})}>{guide.title}</a></h3><p>{guide.intro}</p></div><a className="guide-open" href={guideUrls[index]} onClick={()=>track("guide_open",{guide:guideMeta[index].slug,placement:"homepage_button"})}><span data-i18n="open">{copy.open}</span> <Arrow/></a></article>)}</div>
+        <div className="all-guides-bar"><a data-open-all-guides href="/guides/" onClick={()=>track("guide_library_open",{placement:"homepage"})}><span data-all-guides-label>{allGuideLabels[lang]}</span> <Arrow/></a></div>
       </section>
 
       <section className="faq" id="faq">
@@ -233,9 +224,8 @@ export default function Home(){
 
     <footer><a className="logo" href="#top"><span>S</span><b>SUPERBUY <i>VIP</i></b></a><p data-i18n="footer">{copy.footer}</p><div>{[1,2,3,4].map(index=><a key={index} data-i18n={`nav.${index}`} href={["#top","#index","#calculator","#guides","#faq"][index]}>{copy.nav[index]}</a>)}</div><small>© 2026 SUPERBUYVIP.PRO</small></footer>
 
-    <div className={`modal ${guideLibrary?"":"is-hidden"}`} onMouseDown={()=>setGuideLibrary(false)}><article className="library-modal" onMouseDown={e=>e.stopPropagation()}><button onClick={()=>setGuideLibrary(false)} aria-label="Close guide library">×</button><span>DOCUMENT LIBRARY / 09</span><h2 data-guide-library-title>{guideLibraryTitles[lang]}</h2><p className="lead" data-guide-library-description>{guideLibraryDescriptions[lang]}</p><div className="guide-library">{guides.map((guide,index)=><article key={index}><span>DOC-0{index+1}</span><div><b>{guide.tag}</b><h3>{guide.title}</h3><p>{guide.intro}</p><small>{articleMeta(index)} · {articleDates[index]}</small></div><button onClick={()=>{window.location.href=guideUrls[index];}}><span data-i18n="open">{copy.open}</span> <Arrow/></button></article>)}</div></article></div>
+    <div className={`modal ${guideLibrary?"":"is-hidden"}`} onMouseDown={()=>setGuideLibrary(false)}><article className="library-modal" onMouseDown={e=>e.stopPropagation()}><button onClick={()=>setGuideLibrary(false)} aria-label="Close guide library">×</button><span>DOCUMENT LIBRARY / 12</span><h2 data-guide-library-title>{guideLibraryTitles[lang]}</h2><p className="lead" data-guide-library-description>{guideLibraryDescriptions[lang]}</p><div className="guide-library">{guides.map((guide,index)=><article key={index}><span>DOC-{String(index+1).padStart(2,"0")}</span><div><b>{guide.tag}</b><h3>{guide.title}</h3><p>{guide.intro}</p><small>{articleMeta(index)} · {articleDates[index]}</small></div><a className="guide-open" href={guideUrls[index]}><span data-i18n="open">{copy.open}</span> <Arrow/></a></article>)}</div></article></div>
     {guides.map((guide,guideIndex)=><div key={guideIndex} id={`guide-${guideIndex+1}`} className={`modal ${article===guideIndex?"":"is-hidden"}`} onMouseDown={()=>setArticle(null)}><article className="article-modal" onMouseDown={e=>e.stopPropagation()}><button onClick={()=>setArticle(null)} aria-label="Close article">×</button><span>{guide.tag} · {articleMeta(guideIndex)}</span><h2>{guide.title}</h2><p className="lead">{guide.intro}</p><section className="article-body">{guide.body.map((paragraph,index)=>paragraph.startsWith("## ")?<h3 key={index}>{paragraph.slice(3)}</h3>:<p key={index}>{paragraph}</p>)}</section><section className="article-faqs" data-article-faqs><h3>{articleFaqsByLanguage[lang][guideIndex].title}</h3>{articleFaqsByLanguage[lang][guideIndex].items.map((item,index)=><details key={index}><summary><span>{String(index+1).padStart(2,"0")}</span><b>{item[0]}</b><i>+</i></summary><p>{item[1]}</p></details>)}</section><div>{researchNotes[lang]}</div></article></div>)}
   </main>;
 }
-
 

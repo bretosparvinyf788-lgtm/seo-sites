@@ -33,16 +33,18 @@ test("renders production SEO metadata", async () => {
   const html = await response.text();
   assert.doesNotMatch(html, developmentPreviewMeta);
   assert.match(html, canonicalLink);
+  assert.match(html, /Superbuy Spreadsheet 2026/);
+  assert.match(html, /property="og:image"/);
 });
 
-test("publishes the August 27 guide across every discovery surface", async () => {
-  const article = await readFile(new URL("../public/guides/superbuy-1688-buying-risk-playbook/index.html", import.meta.url), "utf8");
+test("publishes the latest shipping guide across every discovery surface", async () => {
+  const article = await readFile(new URL("../public/guides/superbuy-shipping-calculator-cost-guide/index.html", import.meta.url), "utf8");
   const archive = await readFile(new URL("../public/guides/index.html", import.meta.url), "utf8");
   const homepage = await readFile(new URL("../superbuyvip-pro-single-file.html", import.meta.url), "utf8");
   const sitemap = await readFile(new URL("../public/sitemap.xml", import.meta.url), "utf8");
 
-  assert.match(article, /PUBLISHED 2026-08-27/);
-  assert.match(article, /Buying from 1688 Through Superbuy Without Guessing/);
+  assert.match(article, /PUBLISHED <time datetime="2026-09-20">2026-09-20/);
+  assert.match(article, /Superbuy Shipping Calculator 2026/);
   const articleBody = article.match(/<article class="article">([\s\S]*?)<\/article>/)?.[1] ?? "";
   assert.doesNotMatch(articleBody, /<a\b/i);
   const wordCount = articleBody
@@ -53,7 +55,9 @@ test("publishes the August 27 guide across every discovery surface", async () =>
 
   const latestGuides = homepage.match(/<div class="guide-list">([\s\S]*?)<\/div><div class="all-guides-bar">/)?.[1] ?? "";
   assert.equal((latestGuides.match(/<article\b/g) ?? []).length, 3);
-  assert.match(latestGuides, /superbuy-1688-buying-risk-playbook/);
-  assert.equal((archive.match(/<main class="archive">([\s\S]*?)<\/main>/)?.[1].match(/<article\b/g) ?? []).length, 5);
-  assert.equal((sitemap.match(/<url>/g) ?? []).length, 7);
+  assert.match(latestGuides, /superbuy-shipping-calculator-cost-guide/);
+  assert.match(latestGuides, /how-to-use-superbuy-2026-guide/);
+  assert.match(latestGuides, /superbuy-fees-explained/);
+  assert.equal((archive.match(/<main class="archive">([\s\S]*?)<\/main>/)?.[1].match(/<article\b/g) ?? []).length, 12);
+  assert.equal((sitemap.match(/<url>/g) ?? []).length, 14);
 });

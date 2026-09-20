@@ -1,6 +1,57 @@
 {
   "en": [
     {
+      "title": "Superbuy Shipping Calculator: 12 Practical Questions",
+      "items": [
+        ["Is the Superbuy shipping calculator a final quote?", "No. It is an estimate based on the destination, entered weight, dimensions, category and currently available routes. Final freight follows packing and carrier verification."],
+        ["What details should I enter for a useful estimate?", "Use the correct destination, warehouse, weight in grams, outer-parcel dimensions in centimeters and the real item category or sensitive characteristic."],
+        ["How do I convert grams to kilograms?", "Divide grams by 1,000. For example, 3,200 grams equals 3.2 kilograms. Keep the original gram figure to avoid rounding errors."],
+        ["What is Superbuy volumetric weight?", "Superbuy publishes a common air-cargo reference of length × width × height in centimeters divided by 6,000. Live route rules may differ."],
+        ["Which weight should I plan with?", "For a route using volumetric billing, compare scale weight with calculated volumetric weight and plan with the greater figure, subject to the live line rules."],
+        ["Why do shoe boxes raise Superbuy shipping cost?", "Rigid boxes add parcel volume faster than weight. A route using volumetric billing can therefore charge on a figure far above the scale reading."],
+        ["Does removing packaging always save money?", "No. It may reduce volume but can reduce protection or collector value. Compare the likely freight saving with the consequence of damage or lost packaging."],
+        ["What are first weight and additional weight?", "The first weight is the route's minimum billable unit. Weight above that threshold is charged in additional increments defined by the live route."],
+        ["Why can the final freight differ from the deposit?", "The deposit uses estimates. Packing choices and the carrier's verified size and weight determine the final charge, which Superbuy then reconciles."],
+        ["Should restricted items be calculated as general goods?", "No. Batteries, liquids, powders, food and other sensitive goods can change route eligibility. Use the truthful category to avoid an unusable result."],
+        ["Is the cheapest route always the best route?", "No. Compare speed, tracking, restrictions, maximum size, compensation terms and destination notices as well as the displayed price."],
+        ["How can I improve future estimates?", "Save estimated and final weight, dimensions, route, deposit and adjustment for every parcel. The difference shows which assumptions need correction next time."]
+      ]
+    },
+    {
+      "title": "How to Use Superbuy: 12 Practical Questions",
+      "items": [
+        ["What does Superbuy do?", "Superbuy purchases supported Chinese marketplace goods for users, receives them at its warehouse, provides visible inspection evidence and offers international parcel delivery options."],
+        ["Can I paste a Taobao product link into Superbuy?", "Yes. Superbuy's official tutorial says buyers can paste a Taobao, Tmall or JD link, and many listings are captured automatically."],
+        ["What if Superbuy cannot read a product page?", "Complete the manual shopping-agent order with the seller, item link, variation, quantity, price, domestic freight and clear remarks."],
+        ["Can I use Superbuy for 1688?", "Yes, but check minimum quantities, tier pricing, variation rules and the specific inspection or after-sales terms shown for the order."],
+        ["Can I use Superbuy for Weidian?", "Supported links can be submitted; if details are not captured, verify the seller and enter the order manually with a precise product fingerprint."],
+        ["Does the first payment include international shipping?", "Usually no. The purchase stage covers merchandise and Chinese domestic delivery; international freight is selected and paid after warehouse arrival."],
+        ["What are Superbuy warehouse photos for?", "They help verify visible identity, variation, quantity and damage. They cannot prove authenticity, durability, hidden contents or internal performance."],
+        ["How long is free Superbuy storage?", "Superbuy's current official guidance states 90 days of free storage for purchased items. Confirm the live terms in your account before relying on the full period."],
+        ["Should I combine all warehouse items into one parcel?", "Not automatically. Group items by route compatibility, restrictions, urgency, value, fragility and packaging needs before deciding."],
+        ["Why is international shipping paid as a deposit?", "The parcel is not finally measured until packing and carrier verification. Superbuy reconciles the estimate with final freight after shipment."],
+        ["Where do I track a Superbuy parcel?", "Superbuy's tutorial directs buyers to My Superbuy and the Parcels area for tracking after dispatch."],
+        ["What should I save after delivery?", "Keep the parcel record, label, unboxing evidence, final freight, delivery time, item condition and any after-sales case for future buying decisions."]
+      ]
+    },
+    {
+      "title": "Superbuy Fees: 12 Practical Questions",
+      "items": [
+        ["Does Superbuy charge one universal fee?", "No. The total can include merchandise, Chinese delivery, payment costs, optional services, international freight and destination charges paid at different stages."],
+        ["What is included in the first Superbuy payment?", "The official tutorial describes payment for the item and Chinese local delivery. International shipping is handled after warehouse arrival."],
+        ["Is Superbuy standard service free?", "The current Help Center labels standard service as free, while product and parcel value-added services can carry separate prices shown in the live workflow."],
+        ["Are Superbuy QC photos free?", "Superbuy's current public homepage describes free QC photos. Additional measurements, photos or special services may have separate live terms."],
+        ["Does Superbuy offer free storage?", "Current official guidance states 90 days of free storage for purchased items. Check the account terms and act before any applicable deadline."],
+        ["Are payment fees always the same?", "No. Available methods, displayed charges, provider fees and exchange rates can vary by country, currency, account and date."],
+        ["Why can international freight change after payment?", "The first amount is a deposit based on estimates. The packed parcel is verified later, and Superbuy reconciles the final shipping charge."],
+        ["Is volumetric weight a Superbuy service fee?", "No. It is a logistics billing method for bulky, light parcels. The live route determines how size and weight affect chargeable freight."],
+        ["Are customs taxes included in Superbuy fees?", "Do not assume so. Destination VAT, duty or carrier collection charges follow local rules and should be tracked separately from Superbuy services."],
+        ["Can packaging removal reduce fees?", "It can reduce volumetric freight for bulky packaging, but it may reduce protection or collector value and may not change a scale-weight charge."],
+        ["How should I compare two Superbuy products?", "Compare product price plus domestic delivery, payment cost, optional services, likely international freight and destination charges—not only the listing price."],
+        ["What is landed cost?", "Landed cost is the final item cost after allocating merchandise, domestic delivery, payment, services, international freight, destination charges and refunds."]
+      ]
+    },
+    {
       "items": [
         [
           "Who is responsible for destination import taxes?",

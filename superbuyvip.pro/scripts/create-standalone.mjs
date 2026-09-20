@@ -13,31 +13,31 @@ const css = await fs.readFile(path.join(assets, cssName), "utf8");
 const translations = JSON.parse(await fs.readFile(path.resolve("app/content.json"), "utf8"));
 const longGuides = JSON.parse(await fs.readFile(path.resolve("app/articles.json"), "utf8"));
 const articleFaqs = JSON.parse(await fs.readFile(path.resolve("app/article-faqs.json"), "utf8"));
+const guideMeta = JSON.parse(await fs.readFile(path.resolve("app/guide-meta.json"), "utf8"));
+const untranslatedGuideCount = 7;
 const guidesByLanguage = {
   en: longGuides,
-  de: JSON.parse(await fs.readFile(path.resolve("app/articles-de.json"), "utf8")),
-  fr: JSON.parse(await fs.readFile(path.resolve("app/articles-fr.json"), "utf8")),
-  es: JSON.parse(await fs.readFile(path.resolve("app/articles-es.json"), "utf8")),
-  it: JSON.parse(await fs.readFile(path.resolve("app/articles-it.json"), "utf8")),
-  pt: JSON.parse(await fs.readFile(path.resolve("app/articles-pt.json"), "utf8")),
-  zh: JSON.parse(await fs.readFile(path.resolve("app/articles-zh.json"), "utf8"))
+  de: [...longGuides.slice(0,untranslatedGuideCount),...JSON.parse(await fs.readFile(path.resolve("app/articles-de.json"), "utf8"))],
+  fr: [...longGuides.slice(0,untranslatedGuideCount),...JSON.parse(await fs.readFile(path.resolve("app/articles-fr.json"), "utf8"))],
+  es: [...longGuides.slice(0,untranslatedGuideCount),...JSON.parse(await fs.readFile(path.resolve("app/articles-es.json"), "utf8"))],
+  it: [...longGuides.slice(0,untranslatedGuideCount),...JSON.parse(await fs.readFile(path.resolve("app/articles-it.json"), "utf8"))],
+  pt: [...longGuides.slice(0,untranslatedGuideCount),...JSON.parse(await fs.readFile(path.resolve("app/articles-pt.json"), "utf8"))],
+  zh: [...longGuides.slice(0,untranslatedGuideCount),...JSON.parse(await fs.readFile(path.resolve("app/articles-zh.json"), "utf8"))]
 };
 Object.entries(translations).forEach(([code, locale]) => {
   locale.guides = guidesByLanguage[code];
-  locale.articleFaqs = articleFaqs[code];
+  locale.articleFaqs = code === "en" ? articleFaqs.en : [...articleFaqs.en.slice(0,untranslatedGuideCount),...articleFaqs[code]];
 });
 const safeTranslations = JSON.stringify(translations).replaceAll("</", "<\\/");
-const guideUrls = [
-  "/guides/superbuy-1688-buying-risk-playbook/",
-  "/guides/superbuy-consolidation-packaging-playbook/",
-  "/guides/superbuy-warehouse-qc-system/",
-  "/guides/superbuy-landed-cost-framework/",
-  "/guides/superbuy-spreadsheet-operating-system/"
-];
-const articleDates = ["2026-08-27","2026-08-21","2026-08-17","2026-08-17","2026-08-17"];
-const articleSchema = JSON.stringify({
+const guideUrls = guideMeta.map(item => `/guides/${item.slug}/`);
+const articleDates = guideMeta.map(item => item.date);
+const homeSchema = JSON.stringify({
   "@context":"https://schema.org",
-  "@graph":longGuides.map((guide,index)=>({"@type":"Article",headline:guide.title,description:guide.intro,datePublished:articleDates[index],dateModified:articleDates[index],inLanguage:"en",author:{"@type":"Organization",name:"SuperBuyVIP"},publisher:{"@type":"Organization",name:"SuperBuyVIP"},mainEntityOfPage:`https://superbuyvip.pro${guideUrls[index]}`,hasPart:articleFaqs.en[index].items.map(item=>({"@type":"Question",name:item[0],acceptedAnswer:{"@type":"Answer",text:item[1]}}))}))
+  "@graph":[
+    {"@type":"WebSite","@id":"https://superbuyvip.pro/#website","name":"SuperBuyVIP","url":"https://superbuyvip.pro/","description":"Updated Superbuy spreadsheet finds, QC notes and independent buyer guides."},
+    {"@type":"ItemList","name":"Latest Superbuy buyer guides","numberOfItems":3,"itemListElement":longGuides.slice(0,3).map((guide,index)=>({"@type":"ListItem","position":index+1,"url":`https://superbuyvip.pro${guideUrls[index]}`,"name":guide.title}))},
+    {"@type":"FAQPage","mainEntity":translations.en.faqs.map(item=>({"@type":"Question","name":item[0],"acceptedAnswer":{"@type":"Answer","text":item[1]}}))}
+  ]
 }).replaceAll("</", "<\\/");
 
 html = html
@@ -45,7 +45,7 @@ html = html
   .replace(/<link[^>]+rel="modulepreload"[^>]*>/g, "")
   .replace(/<script[\s\S]*?<\/script>/g, "")
   .replace("<head>", `<head><style>${css}</style>`)
-  .replace("</head>", `<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23e63b2e'/%3E%3Ctext x='18' y='45' fill='white' font-family='Georgia' font-size='38' font-style='italic' font-weight='700'%3ES%3C/text%3E%3C/svg%3E"><script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"SuperBuyVIP","url":"https://superbuyvip.pro/","description":"Independent Superbuy spreadsheet research, QC checklists and parcel planning."}</script><script type="application/ld+json">${articleSchema}</script></head>`);
+  .replace("</head>", `<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23e63b2e'/%3E%3Ctext x='18' y='45' fill='white' font-family='Georgia' font-size='38' font-style='italic' font-weight='700'%3ES%3C/text%3E%3C/svg%3E"><script async src="https://www.googletagmanager.com/gtag/js?id=G-VD0JLQGX7K"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-VD0JLQGX7K');</script><script type="application/ld+json">${homeSchema}</script></head>`);
 
 const behavior = String.raw`
 (() => {
@@ -63,13 +63,13 @@ const behavior = String.raw`
   const allGuideLabels = {en:'VIEW ALL BUYER GUIDES',de:'ALLE RATGEBER ANZEIGEN',fr:'VOIR TOUS LES GUIDES',es:'VER TODAS LAS GUÍAS',it:'VEDI TUTTE LE GUIDE',pt:'VER TODOS OS GUIAS',zh:'查看全部购买指南'};
   const guideLibraryTitles = {en:'All buyer guides',de:'Alle Kaufratgeber',fr:'Tous les guides d’achat',es:'Todas las guías de compra',it:'Tutte le guide all’acquisto',pt:'Todos os guias de compra',zh:'全部购买指南'};
   const guideLibraryDescriptions = {
-    en:'Five long-form, evidence-led operating guides for buyers who want cleaner sourcing and QC decisions, more predictable parcel costs and a spreadsheet that survives repeat use.',
-    de:'Fünf vollständige, faktenbasierte Leitfäden für bessere Beschaffungs- und QC-Entscheidungen, planbarere Paketkosten und eine zuverlässige Tabelle.',
-    fr:'Cinq guides complets fondés sur des faits pour mieux décider lors de l’achat et du contrôle qualité, prévoir le coût des colis et conserver un tableau fiable.',
-    es:'Cinco guías completas basadas en hechos para mejorar las decisiones de compra y control de calidad, prever el coste del paquete y mantener una hoja fiable.',
-    it:'Cinque guide complete basate sui fatti per migliorare acquisti e controllo qualità, prevedere i costi del pacco e mantenere un foglio affidabile.',
-    pt:'Cinco guias completos baseados em fatos para melhorar compras e controle de qualidade, prever custos do pacote e manter uma planilha confiável.',
-    zh:'五篇完整、以事实为依据的实操指南，帮助买家做好采购与质检判断、预估包裹成本，并建立可长期复用的采购表格。'
+    en:'Twelve evidence-led guides for shipping cost, fees, ordering, warehouse QC, customs and parcel decisions.',
+    de:'Zwölf faktenbasierte Leitfäden zu Versandkosten, Gebühren, Bestellung, Lager-QC, Zoll und Paketentscheidungen.',
+    fr:'Douze guides fondés sur des faits sur les frais, les commandes, le QC, la douane et les colis.',
+    es:'Doce guías basadas en pruebas sobre costes, tarifas, pedidos, QC, aduanas y paquetes.',
+    it:'Dodici guide basate sui fatti su costi, commissioni, ordini, QC, dogana e pacchi.',
+    pt:'Doze guias baseados em evidências sobre custos, taxas, pedidos, QC, alfândega e pacotes.',
+    zh:'十二篇基于事实的指南，涵盖运费、费用、下单、仓库质检、海关和包裹决策。'
   };
   const editionLabels = {en:'WORDS',de:'VOLLSTÄNDIGE ÜBERSETZUNG',fr:'VERSION INTÉGRALE',es:'TRADUCCIÓN COMPLETA',it:'TRADUZIONE COMPLETA',pt:'TRADUÇÃO COMPLETA',zh:'完整译文'};
   const guideUrls = ${JSON.stringify(guideUrls)};
@@ -87,6 +87,7 @@ const behavior = String.raw`
   const plannerValues = [...document.querySelectorAll('.calc-results b')];
   const plannerAdvice = document.querySelector('[data-planner-advice]');
   let currentLang = 'en';
+  const track = (event,params={}) => { try { window.gtag?.('event',event,params); } catch {} };
 
   const getPath = (object, path) => path.split('.').reduce((value, key) => value == null ? value : value[key], object);
   const updateStatus = shown => {
@@ -137,7 +138,7 @@ const behavior = String.raw`
       if (tag) tag.textContent = guide.tag;
       if (title) title.textContent = guide.title;
       if (intro) intro.textContent = guide.intro;
-      if (meta) meta.textContent = articleMeta(index) + ' · 2026-08-17';
+      if (meta) meta.textContent = articleMeta(index) + ' · ' + articleDates[index];
     });
     document.querySelectorAll('.article-modal').forEach((modal,index) => {
       const guide = guides[index];
@@ -223,7 +224,7 @@ const behavior = String.raw`
       return a.querySelector('.row-number').textContent.localeCompare(b.querySelector('.row-number').textContent);
     }).forEach(card => grid.appendChild(card));
   });
-  languageSelect?.addEventListener('change', () => applyLanguage(languageSelect.value));
+  languageSelect?.addEventListener('change', () => { applyLanguage(languageSelect.value); track('language_change',{language:languageSelect.value}); });
 
   document.querySelectorAll('.faq-list article').forEach(article => {
     const button = article.querySelector('button');
@@ -234,7 +235,7 @@ const behavior = String.raw`
       document.querySelectorAll('.faq-list article button').forEach(item => item.setAttribute('aria-expanded', item.closest('article').classList.contains('open')));
     });
   });
-  plannerInputs.forEach(input => input.addEventListener('input', updatePlanner));
+  plannerInputs.forEach(input => { input.addEventListener('input', updatePlanner); input.addEventListener('blur',()=>track('calculator_use',{field:input.closest('label')?.querySelector('span')?.textContent||'parcel'})); });
 
   const articleBackdrops = [...document.querySelectorAll('.article-modal')].map(article => article.closest('.modal'));
   const libraryBackdrop = document.querySelector('.library-modal')?.closest('.modal');
@@ -246,9 +247,10 @@ const behavior = String.raw`
     closeGuides();
     articleBackdrops[index]?.classList.remove('is-hidden');
   };
-  document.querySelectorAll('.guide-list article').forEach((card, index) => card.querySelector('button')?.addEventListener('click', () => { location.href = guideUrls[index]; }));
+  document.querySelectorAll('.guide-list article').forEach((card, index) => card.querySelector('.guide-open')?.addEventListener('click', () => track('guide_open',{guide:guideUrls[index],placement:'homepage'})));
   document.querySelector('[data-open-all-guides]')?.addEventListener('click', () => { location.href = '/guides/'; });
-  document.querySelectorAll('.guide-library > article').forEach((card, index) => card.querySelector('button')?.addEventListener('click', () => { location.href = guideUrls[index]; }));
+  document.querySelectorAll('.guide-library > article').forEach((card, index) => card.querySelector('.guide-open')?.addEventListener('click', () => track('guide_open',{guide:guideUrls[index],placement:'library'})));
+  document.querySelectorAll('a[href*="kakobuymake.com"]').forEach(link => link.addEventListener('click',()=>track(link.closest('.product-grid,.hero-records')?'product_open':'spreadsheet_open',{destination:link.href})));
   document.querySelectorAll('[aria-label="Close article"],[aria-label="Close guide library"]').forEach(button => button.addEventListener('click', closeGuides));
   [...articleBackdrops,libraryBackdrop].forEach(backdrop => backdrop?.addEventListener('click', event => { if (event.target === backdrop) closeGuides(); }));
   document.addEventListener('keydown', event => { if (event.key === 'Escape') closeGuides(); });
@@ -271,8 +273,12 @@ html = html.replace("</body>", `<script>${behavior}</script></body>`);
 // uses local product assets that do not depend on upstream hotlinking.
 const productImagePaths = [...new Set(html.match(/\/products\/product-\d+\.webp/g) || [])];
 for (const imagePath of productImagePaths) {
-  const image = await fs.readFile(path.resolve("public", imagePath.slice(1)));
-  html = html.replaceAll(imagePath, `data:image/webp;base64,${image.toString("base64")}`);
+  try {
+    const image = await fs.readFile(path.resolve("public", imagePath.slice(1)));
+    html = html.replaceAll(imagePath, `data:image/webp;base64,${image.toString("base64")}`);
+  } catch (error) {
+    if (error?.code !== "ENOENT") throw error;
+  }
 }
 
 const output = path.resolve("superbuyvip-pro-single-file.html");
