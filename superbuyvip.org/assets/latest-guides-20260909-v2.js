@@ -85,7 +85,7 @@
     const lang = currentLanguage();
     cards.forEach((card, index) => {
       const guide = guides[index];
-      const expectedHref = `/guides/${guide.slug}?lang=${lang}`;
+      const expectedHref = lang === "en" ? `/guides/${guide.slug}/` : `/guides/${guide.slug}/?lang=${lang}`;
       if (card.getAttribute("href") !== expectedHref) card.setAttribute("href", expectedHref);
       const number = card.querySelector(".guide-art span");
       const expectedNumber = `${labels[lang] || labels.en} ${guide.number}`;
@@ -110,11 +110,15 @@
   function start() {
     applyLatestGuides();
     const grid = document.querySelector(".guide-grid");
-    if (grid) new MutationObserver(applyLatestGuides).observe(grid, { childList: true, subtree: true, characterData: true, attributes: true });
+    if (grid) {
+      const observer = new MutationObserver(applyLatestGuides);
+      observer.observe(grid, { childList: true, subtree: true, characterData: true, attributes: true });
+      setTimeout(() => observer.disconnect(), 4000);
+    }
     document.querySelector("select[aria-label=\"Language\"]")?.addEventListener("change", () => setTimeout(applyLatestGuides, 0));
     setTimeout(applyLatestGuides, 250);
     setTimeout(applyLatestGuides, 1200);
-    setInterval(applyLatestGuides, 500);
+    setTimeout(applyLatestGuides, 2500);
   }
 
   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", start, { once: true });
