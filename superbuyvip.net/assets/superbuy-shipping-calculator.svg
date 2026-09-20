@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">Superbuy shipping calculator guide cover</title>
+  <desc id="desc">Editorial cover comparing scale weight with volumetric parcel dimensions.</desc>
+  <rect width="1200" height="630" fill="#07111d"/>
+  <rect x="54" y="54" width="1092" height="522" rx="26" fill="#fffdf8" stroke="#ff6a32" stroke-width="10"/>
+  <text x="94" y="126" font-family="Arial, sans-serif" font-size="27" font-weight="800" fill="#ff6a32">SHIPPING PLANNING GUIDE · 2026</text>
+  <text x="94" y="222" font-family="Arial, sans-serif" font-size="64" font-weight="900" fill="#07111d">SUPERBUY SHIPPING</text>
+  <text x="94" y="294" font-family="Arial, sans-serif" font-size="64" font-weight="900" fill="#07111d">CALCULATOR</text>
+  <rect x="94" y="362" width="278" height="128" rx="18" fill="#ffd66b" stroke="#07111d" stroke-width="7"/>
+  <path d="M143 445h180M167 445l22-58h88l22 58" fill="none" stroke="#07111d" stroke-width="8" stroke-linejoin="round"/>
+  <text x="233" y="475" font-family="Arial, sans-serif" font-size="19" font-weight="800" text-anchor="middle" fill="#07111d">ACTUAL WEIGHT</text>
+  <text x="432" y="436" font-family="Arial, sans-serif" font-size="54" font-weight="900" fill="#ff6a32">VS</text>
+  <rect x="542" y="346" width="330" height="160" rx="18" fill="#ff6a32" stroke="#07111d" stroke-width="7"/>
+  <path d="M605 395h200v72H605zM605 395l34-30h200l-34 30M805 395l34-30v72l-34 30" fill="none" stroke="#fffdf8" stroke-width="7" stroke-linejoin="round"/>
+  <text x="707" y="541" font-family="Arial, sans-serif" font-size="20" font-weight="800" text-anchor="middle" fill="#07111d">VOLUMETRIC WEIGHT</text>
+  <rect x="925" y="354" width="150" height="150" rx="20" fill="#07111d"/>
+  <text x="1000" y="421" font-family="Arial, sans-serif" font-size="31" font-weight="900" text-anchor="middle" fill="#ffd66b">COST</text>
+  <text x="1000" y="463" font-family="Arial, sans-serif" font-size="31" font-weight="900" text-anchor="middle" fill="#fffdf8">RANGE</text>
+</svg>
