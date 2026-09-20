@@ -1,0 +1,31 @@
+name: Submit spreadsheets-superbuy.com to IndexNow
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "spreadsheets-superbuy.com/**"
+      - ".github/workflows/spreadsheets-superbuy-indexnow.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  submit-indexnow:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Verify live key and submit sitemap URLs
+        shell: bash
+        run: |
+          set -euo pipefail
+          key="7f4d2c9186b34e5aac1f0d79e832b641"
+          key_location="https://spreadsheets-superbuy.com/$key.txt"
+          for attempt in {1..12}; do
+            if curl -fsS "$key_location" | grep -qx "$key"; then break; fi
+            if [ "$attempt" -eq 12 ]; then echo "IndexNow key was not live after waiting" >&2; exit 1; fi
+            sleep 10
+          done
+          jq -n --arg host "spreadsheets-superbuy.com" --arg key "$key" --arg keyLocation "$key_location" --rawfile sitemap spreadsheets-superbuy.com/sitemap.xml '{host:$host,key:$key,keyLocation:$keyLocation,urlList:[$sitemap|scan("<loc>([^<]+)</loc>")[]]}' > /tmp/indexnow.json
+          curl -fsS -X POST "https://api.indexnow.org/indexnow" -H "Content-Type: application/json; charset=utf-8" --data-binary @/tmp/indexnow.json
