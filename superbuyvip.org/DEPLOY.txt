@@ -14,3 +14,5 @@ CLOUDFLARE PAGES CONNECTED TO GITHUB
 5. Deploy and attach superbuyvip.org as the custom domain.
 
 Do not delete the guides, assets, robots.txt, sitemap.xml, CNAME, or .nojekyll files.
+
+Last production content refresh: 2026-09-20 (CTR, indexability, analytics and favicon fixes).
