@@ -275,7 +275,13 @@ const productImagePaths = [...new Set(html.match(/\/products\/product-\d+\.webp/
 for (const imagePath of productImagePaths) {
   try {
     const image = await fs.readFile(path.resolve("public", imagePath.slice(1)));
-    html = html.replaceAll(imagePath, `data:image/webp;base64,${image.toString("base64")}`);
+    // Inline only image element sources. Replacing every occurrence also
+    // corrupts absolute metadata URLs such as og:image and JSON-LD images by
+    // producing values like https://superbuyvip.prodata:image/....
+    html = html.replaceAll(
+      `src="${imagePath}"`,
+      `src="data:image/webp;base64,${image.toString("base64")}"`,
+    );
   } catch (error) {
     if (error?.code !== "ENOENT") throw error;
   }
