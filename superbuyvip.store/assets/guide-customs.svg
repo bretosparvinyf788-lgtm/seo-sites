@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" role="img" aria-labelledby="title desc">
+  <title id="title">Superbuy customs declaration checklist</title>
+  <desc id="desc">A customs form beside a sealed parcel and inspection stamp.</desc>
+  <rect width="1200" height="675" fill="#b9f5d0"/>
+  <rect x="128" y="92" width="470" height="492" rx="24" fill="#fffdf7" stroke="#13192f" stroke-width="14"/>
+  <text x="363" y="165" text-anchor="middle" font-family="Arial, sans-serif" font-size="38" font-weight="900" fill="#13192f">DECLARE CLEARLY</text>
+  <g stroke="#13192f" stroke-width="12" stroke-linecap="round"><path d="M205 239h310M205 310h240M205 381h310M205 452h200"/></g>
+  <path d="M703 287l174-91 174 91-174 91z" fill="#f3f247" stroke="#13192f" stroke-width="13"/>
+  <path d="M703 287v176l174 91V378z" fill="#70d7ff" stroke="#13192f" stroke-width="13"/>
+  <path d="M1051 287v176l-174 91V378z" fill="#ff654f" stroke="#13192f" stroke-width="13"/>
+  <circle cx="975" cy="161" r="78" fill="#fffdf7" stroke="#13192f" stroke-width="12"/>
+  <path d="M936 161l27 29 54-61" fill="none" stroke="#13192f" stroke-width="17" stroke-linecap="round"/>
+</svg>

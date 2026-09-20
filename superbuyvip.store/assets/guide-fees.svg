@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" role="img" aria-labelledby="title desc">
+  <title id="title">Superbuy fee and payment ledger</title>
+  <desc id="desc">A receipt separating product, domestic delivery, services and international shipping.</desc>
+  <rect width="1200" height="675" fill="#c9b7ff"/>
+  <path d="M350 62h500v551l-42-27-42 27-42-27-42 27-42-27-42 27-42-27-42 27-42-27-42 27-42-27V62z" fill="#fffdf7" stroke="#13192f" stroke-width="14" stroke-linejoin="round"/>
+  <text x="600" y="145" text-anchor="middle" font-family="Arial, sans-serif" font-size="42" font-weight="900" fill="#13192f">TRUE COST</text>
+  <g stroke="#13192f" stroke-width="14" stroke-linecap="round"><path d="M430 222h210M430 294h330M430 366h255M430 438h310"/></g>
+  <g fill="#ff654f" stroke="#13192f" stroke-width="9"><circle cx="790" cy="222" r="22"/><circle cx="790" cy="294" r="22"/><circle cx="790" cy="366" r="22"/><circle cx="790" cy="438" r="22"/></g>
+  <rect x="430" y="492" width="360" height="68" rx="34" fill="#f3f247" stroke="#13192f" stroke-width="10"/>
+</svg>

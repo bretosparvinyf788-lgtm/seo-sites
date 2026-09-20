@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" role="img" aria-labelledby="title desc">
+  <title id="title">Superbuy parcel insurance and claim evidence</title>
+  <desc id="desc">A shield protecting a parcel with camera, tracking and document evidence.</desc>
+  <rect width="1200" height="675" fill="#ff654f"/>
+  <path d="M600 62l335 103v183c0 151-108 232-335 281-227-49-335-130-335-281V165z" fill="#fffdf7" stroke="#13192f" stroke-width="15"/>
+  <path d="M466 285l134-69 134 69-134 68z" fill="#f3f247" stroke="#13192f" stroke-width="12"/>
+  <path d="M466 285v134l134 70V353z" fill="#70d7ff" stroke="#13192f" stroke-width="12"/>
+  <path d="M734 285v134l-134 70V353z" fill="#b9f5d0" stroke="#13192f" stroke-width="12"/>
+  <g fill="#c9b7ff" stroke="#13192f" stroke-width="10"><circle cx="399" cy="197" r="48"/><circle cx="801" cy="197" r="48"/><circle cx="600" cy="540" r="48"/></g>
+  <text x="600" y="137" text-anchor="middle" font-family="Arial, sans-serif" font-size="38" font-weight="900" fill="#13192f">PROOF BEFORE CLAIM</text>
+</svg>

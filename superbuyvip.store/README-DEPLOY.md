@@ -5,9 +5,9 @@ or server-side runtime is required.
 
 ## Included files
 
-- `index.html` — the complete production homepage, including all seven languages,
-  ten featured products, tools, FAQs, and links to three independent buyer-guide pages.
-- `guides/` — an indexable guide library plus three standalone long-form article pages.
+- `index.html` — the complete production homepage, including all seven interface languages,
+  ten featured products, tools, FAQs, and links to the three newest buyer guides.
+- `guides/` — an indexable library of fourteen standalone long-form English articles.
 - `assets/guide.css` — shared styles for the article library.
 - `404.html` — lightweight noindex error page; it is not a duplicate of the homepage.
 - `favicon.svg` — standalone browser icon fallback.
@@ -38,4 +38,3 @@ or server-side runtime is required.
 Upload the contents of this folder as the site root. The host must serve
 `index.html` for `/`. The page is self-contained and does not require the
 source project or `node_modules`.
-
