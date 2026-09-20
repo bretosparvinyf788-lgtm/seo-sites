@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">How to use Superbuy cover</title>
+  <desc id="desc">Four-step visual for ordering, warehouse quality control, consolidation and international shipping.</desc>
+  <rect width="1200" height="630" fill="#f7f3ea"/>
+  <rect x="48" y="48" width="1104" height="534" rx="30" fill="#ffd66b" stroke="#07111d" stroke-width="10"/>
+  <text x="88" y="128" font-family="Arial, sans-serif" font-size="28" font-weight="800" fill="#07111d">BEGINNER WORKFLOW · 2026</text>
+  <text x="88" y="225" font-family="Arial, sans-serif" font-size="70" font-weight="900" fill="#07111d">HOW TO USE</text>
+  <text x="88" y="302" font-family="Arial, sans-serif" font-size="70" font-weight="900" fill="#ff6a32">SUPERBUY</text>
+  <path d="M110 420h880" stroke="#07111d" stroke-width="10" stroke-linecap="round"/>
+  <g font-family="Arial, sans-serif" font-weight="900" text-anchor="middle">
+    <circle cx="150" cy="420" r="46" fill="#07111d"/><text x="150" y="432" font-size="34" fill="#fffdf8">1</text><text x="150" y="506" font-size="20" fill="#07111d">ORDER</text>
+    <circle cx="430" cy="420" r="46" fill="#07111d"/><text x="430" y="432" font-size="34" fill="#fffdf8">2</text><text x="430" y="506" font-size="20" fill="#07111d">QC</text>
+    <circle cx="710" cy="420" r="46" fill="#07111d"/><text x="710" y="432" font-size="34" fill="#fffdf8">3</text><text x="710" y="506" font-size="20" fill="#07111d">CONSOLIDATE</text>
+    <circle cx="990" cy="420" r="46" fill="#ff6a32"/><text x="990" y="432" font-size="34" fill="#fffdf8">4</text><text x="990" y="506" font-size="20" fill="#07111d">SHIP</text>
+  </g>
+</svg>

@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">Superbuy Review 2026 cover</title>
+  <desc id="desc">Editorial cover showing a checklist, warehouse box and shipping route for an independent Superbuy review.</desc>
+  <rect width="1200" height="630" fill="#07111d"/>
+  <circle cx="1010" cy="82" r="230" fill="#ff6a32"/>
+  <rect x="72" y="70" width="1056" height="490" rx="28" fill="#fffdf8" stroke="#07111d" stroke-width="10"/>
+  <rect x="72" y="70" width="1056" height="76" rx="24" fill="#ffd66b"/>
+  <text x="110" y="120" font-family="Arial, sans-serif" font-size="26" font-weight="800" fill="#07111d">INDEPENDENT BUYER REVIEW · 2026</text>
+  <text x="110" y="246" font-family="Arial, sans-serif" font-size="72" font-weight="900" fill="#07111d">SUPERBUY</text>
+  <text x="110" y="325" font-family="Arial, sans-serif" font-size="72" font-weight="900" fill="#ff6a32">REVIEW</text>
+  <text x="112" y="382" font-family="Arial, sans-serif" font-size="27" font-weight="700" fill="#526575">Fees · QC · Storage · Shipping</text>
+  <rect x="728" y="218" width="250" height="205" rx="18" fill="#ffd66b" stroke="#07111d" stroke-width="8"/>
+  <path d="M728 270l125 72 125-72M853 342v80" fill="none" stroke="#07111d" stroke-width="8"/>
+  <rect x="934" y="370" width="122" height="116" rx="14" fill="#ff6a32" stroke="#07111d" stroke-width="8"/>
+  <path d="M958 405l18 18 44-50M958 453h65" fill="none" stroke="#fffdf8" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="110" y="451" width="456" height="52" rx="26" fill="#07111d"/>
+  <text x="136" y="486" font-family="Arial, sans-serif" font-size="22" font-weight="800" fill="#fffdf8">WHAT IT DOES — AND WHAT IT DOESN'T</text>
+</svg>
