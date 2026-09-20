@@ -28,7 +28,13 @@ export default {
     headers.set('X-Content-Type-Options', 'nosniff');
     headers.set('Referrer-Policy', 'strict-origin-when-cross-origin');
 
-    if (response.ok && /\.(?:css|js|svg|png|jpg|jpeg|webp)$/i.test(url.pathname)) {
+    if (response.status === 404) {
+      // Override the site-wide index header on the custom not-found response.
+      // Conflicting index/noindex directives make soft-404 cleanup harder for
+      // search engines, so both the HTTP header and page meta must say noindex.
+      headers.set('X-Robots-Tag', 'noindex, follow');
+      headers.set('Cache-Control', 'public, max-age=0, s-maxage=300');
+    } else if (response.ok && /\.(?:css|js|svg|png|jpg|jpeg|webp)$/i.test(url.pathname)) {
       headers.set('Cache-Control', 'public, max-age=31536000, immutable');
     } else if (response.ok && (url.pathname.endsWith('/') || url.pathname.endsWith('.html'))) {
       headers.set('Cache-Control', 'public, max-age=0, s-maxage=3600, stale-while-revalidate=86400');
