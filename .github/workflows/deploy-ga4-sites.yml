@@ -1,17 +1,31 @@
 name: Deploy GA4-tagged sites
 
-# Cloudflare Pages' Git integration handles production deploys on push.
-# Keep this workflow as a manual fallback for repositories with the two
-# Cloudflare secrets configured.
+# Deploy superbuyvip.pro automatically when its source changes.
+# Manual runs default to that site only; choose "all" to deploy every Pages site too.
 on:
   workflow_dispatch:
+    inputs:
+      target:
+        description: Deployment target
+        required: true
+        default: superbuyvip-pro
+        type: choice
+        options:
+          - superbuyvip-pro
+          - all
+  push:
+    branches:
+      - main
+    paths:
+      - "superbuyvip.pro/**"
+      - ".github/workflows/deploy-ga4-sites.yml"
 
 permissions:
   contents: read
 
 jobs:
   deploy-pages:
-    if: github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success'
+    if: github.event_name == 'workflow_dispatch' && inputs.target == 'all'
     name: Deploy ${{ matrix.domain }}
     runs-on: ubuntu-latest
     timeout-minutes: 45
@@ -104,7 +118,7 @@ jobs:
           --commit-hash="$GITHUB_SHA"
 
   deploy-superbuyvip-pro:
-    if: github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success'
+    if: github.event_name == 'push' || (github.event_name == 'workflow_dispatch' && (inputs.target == 'superbuyvip-pro' || inputs.target == 'all'))
     name: Deploy superbuyvip.pro Worker
     runs-on: ubuntu-latest
     timeout-minutes: 45
