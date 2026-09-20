@@ -29,6 +29,12 @@ const worker = {
   async fetch(request: Request, env: Env, ctx: ExecutionContext): Promise<Response> {
     const url = new URL(request.url);
 
+    if (url.hostname === "www.superbuyvip.pro" || (url.hostname === "superbuyvip.pro" && url.protocol !== "https:")) {
+      url.protocol = "https:";
+      url.hostname = "superbuyvip.pro";
+      return Response.redirect(url.toString(), 301);
+    }
+
     if (url.pathname === "/_vinext/image") {
       const allowedWidths = [...DEFAULT_DEVICE_SIZES, ...DEFAULT_IMAGE_SIZES];
       return handleImageOptimization(request, {
