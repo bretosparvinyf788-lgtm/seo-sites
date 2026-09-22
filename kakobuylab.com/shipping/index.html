@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Kakobuy Shipping Calculator &amp; Cost Guide | KakobuyLab</title>
+  <meta name="description" content="Estimate Kakobuy shipping, understand actual versus volumetric weight, route pricing, customs, insurance and rehearsal packing.">
+  <link rel="canonical" href="https://kakobuylab.com/shipping/"><link rel="icon" href="/favicon-kakobuy.png" type="image/png" sizes="512x512"><link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <div data-site-header></div>
+  <main id="main">
+    <header class="page-hero"><div class="container"><div class="breadcrumbs"><a href="/">Home</a> / Shipping</div><div class="eyebrow">Planning tool</div><h1>Kakobuy Shipping Calculator &amp; Cost Guide</h1><p>A useful estimate starts with chargeable weight—not a viral “price per kilo.” Enter actual weight and parcel dimensions, then treat the result as a range until Kakobuy shows eligible live routes.</p></div></header>
+    <section class="section">
+      <div class="container lab-grid">
+        <div class="lab-card">
+          <h2 style="font-size:34px" data-i18n="calcTitle">Estimate Kakobuy Shipping Cost</h2>
+          <form id="shippingForm" class="input-grid">
+            <div class="field"><label for="country">Destination</label><select id="country"><option value="us">United States</option><option value="uk">United Kingdom</option><option value="de">Germany</option><option value="fr">France</option><option value="ca">Canada</option><option value="au">Australia</option></select></div>
+            <div class="field"><label for="weight">Actual weight (kg)</label><input id="weight" type="number" value="3" min=".1" step=".1"></div>
+            <div class="field"><label for="length">Length (cm)</label><input id="length" type="number" value="40" min="1"></div>
+            <div class="field"><label for="width">Width (cm)</label><input id="width" type="number" value="30" min="1"></div>
+            <div class="field full"><label for="height">Height (cm)</label><input id="height" type="number" value="22" min="1"></div>
+            <button class="button field full" type="submit" data-i18n="estimate">Estimate</button>
+          </form>
+          <div class="estimate"><div><span>Estimated chargeable weight</span><strong id="chargeable">4.40 kg</strong></div><div><span>Illustrative freight range</span><strong id="estimateValue">$46–70</strong></div></div>
+          <p class="note">This range is an editorial planning model, not an official quote. It excludes item cost and may exclude optional services, payment spread, tax or duty.</p>
+        </div>
+        <div class="lab-card">
+          <h2 style="font-size:34px">What Affects Kakobuy Shipping Rates?</h2>
+          <div class="fee-list">
+            <div class="fee-row"><span>Actual weight</span><strong>Scale measurement</strong></div>
+            <div class="fee-row"><span>Volumetric weight</span><strong>L × W × H ÷ divisor</strong></div>
+            <div class="fee-row"><span>Route eligibility</span><strong>Country + item type</strong></div>
+            <div class="fee-row"><span>First-weight step</span><strong>Initial charge block</strong></div>
+            <div class="fee-row"><span>Additional steps</span><strong>Each added 0.5/1 kg</strong></div>
+            <div class="fee-row"><span>Surcharges</span><strong>Fuel, remote area, handling</strong></div>
+            <div class="fee-row"><span>Coupon</span><strong>Only if route + threshold match</strong></div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section alt"><div class="container">
+      <div class="section-head"><div><div class="kicker">Decision sequence</div><h2>How to Reduce Kakobuy Shipping Cost</h2></div><p class="section-intro">A lower quote should not create a higher loss risk. Inspect first, consolidate carefully, then optimize packaging and route.</p></div>
+      <div class="guide-grid">
+        <div class="lab-card"><span class="guide-tag">01 · Inspect</span><h3>Resolve QC problems</h3><p class="section-intro">Do not pay international freight for an item you already plan to return. Finish measurements and defect checks while the item is still in the warehouse.</p></div>
+        <div class="lab-card"><span class="guide-tag">02 · Pack</span><h3>Control parcel volume</h3><p class="section-intro">Use rehearsal packing when available. Remove unnecessary retail boxes only if you accept the reduced protection and resale impact.</p></div>
+        <div class="lab-card"><span class="guide-tag">03 · Compare</span><h3>Read route details</h3><p class="section-intro">Compare transit range, weight rules, restrictions, insurance, tax handling and tracking—not just the lowest number in the list.</p></div>
+      </div>
+    </div></section>
+    <section class="section"><div class="container split"><div><div class="kicker">Example</div><h2>Kakobuy Volumetric Weight: Why 2 kg Can Bill at 3.5 kg</h2><p class="section-intro">A parcel measuring 42 × 30 × 17 cm has 21,420 cm³ of volume. With a 6,000 divisor, dimensional weight is 3.57 kg. If the line bills the greater of dimensional and actual weight, 3.57 kg—not 2 kg—drives the charge. The exact divisor and rounding step vary by line.</p></div><div class="lab-card"><div class="fee-list"><div class="fee-row"><span>Actual</span><strong>2.00 kg</strong></div><div class="fee-row"><span>Volume</span><strong>21,420 cm³</strong></div><div class="fee-row"><span>Dimensional</span><strong>3.57 kg</strong></div><div class="fee-row"><span>Chargeable</span><strong style="color:var(--acid)">3.57 kg</strong></div></div></div></div></section>
+  </main>
+  <div data-site-footer></div><script src="/translations.js" defer></script><script src="/app.js" defer></script>
+</body>
+</html>
