@@ -1,3 +1,17 @@
+const GA_MEASUREMENT_ID = "G-PDS2PMY5LZ";
+
+window.dataLayer = window.dataLayer || [];
+function gtag() {
+  window.dataLayer.push(arguments);
+}
+gtag("js", new Date());
+gtag("config", GA_MEASUREMENT_ID);
+
+const googleTag = document.createElement("script");
+googleTag.async = true;
+googleTag.src = `https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`;
+document.head.appendChild(googleTag);
+
 const KAKO_MAIN = "https://kakobuymake.com/";
 
 const ui = {
