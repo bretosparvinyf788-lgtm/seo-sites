@@ -8,3 +8,18 @@
 @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}}
 @media(max-width:760px){.nav{gap:8px}.language{display:block;margin-left:auto;max-width:76px;padding:9px 24px 9px 10px}.menu-btn{margin-left:0}}
 .product-media{display:block}.product-body h3 a{text-decoration:none}.product-body h3 a:hover{color:var(--orange)}
+
+/* SEO topic clusters — 2026-09-24 */
+.seo-copy{margin-top:64px}
+.compact-guide-grid{grid-template-columns:repeat(3,minmax(0,1fr));margin:28px 0 44px}
+.compact-guide-grid .tool-card{height:100%;padding:26px}
+.compact-guide-grid .tool-card h3{margin-top:0;font-size:1.35rem}
+.related-reading{max-width:1180px;margin:64px auto 0;padding:34px;border:1px solid var(--line);border-radius:28px;background:#fff}
+.related-reading h2{font-size:clamp(1.8rem,4vw,3rem);margin:10px 0 24px;letter-spacing:-.04em}
+.related-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+.related-grid a{display:flex;flex-direction:column;gap:8px;min-height:132px;padding:22px;border:1px solid var(--line);border-radius:20px;color:var(--ink);background:var(--paper);transition:transform .2s ease,border-color .2s ease}
+.related-grid a:hover{transform:translateY(-3px);border-color:var(--orange)}
+.related-grid strong{font-size:1.08rem}
+.related-grid span{color:var(--muted);line-height:1.55}
+.guide-hub-copy{margin:64px auto 0}
+@media(max-width:800px){.compact-guide-grid,.related-grid{grid-template-columns:1fr}.related-reading{margin-top:42px;padding:24px}.seo-copy{margin-top:44px}}
