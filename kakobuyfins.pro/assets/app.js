@@ -43,7 +43,7 @@ function setLanguage(lang){const d=I18N[lang]||I18N.en;localStorage.setItem('kak
 function shippingEstimate(){const form=qs('#shippingForm'),result=qs('#shippingResult');if(!form||!result)return;const fd=new FormData(form),country=fd.get('country'),weight=Math.max(.1,Number(fd.get('weight'))||0),l=Number(fd.get('length'))||0,w=Number(fd.get('width'))||0,h=Number(fd.get('height'))||0;const volumetric=l&&w&&h?(l*w*h/6000):0;const bill=Math.max(weight,volumetric);let estimate;if(country==='US')estimate=20.73+18.5*bill;else if(country==='DE')estimate=8.76+14.5*bill;else estimate=null;if(!estimate){result.innerHTML='<p>A reliable sample rate is not yet published for this preview destination.</p><strong>Check live quote</strong><p>Use Kakobuy’s official calculator before submitting a parcel.</p>';return}const low=Math.max(1,estimate*.92),high=estimate*1.12;result.innerHTML=`<p>Indicative range</p><strong>$${low.toFixed(0)}–$${high.toFixed(0)}</strong><p>Billable weight: ${bill.toFixed(2)} kg${volumetric>weight?' (volume weight applies)':''}. Editorial estimate only; line eligibility and checkout price can differ.</p>`}
 function convertLink(){const val=qs('#w2cInput')?.value.trim(),msg=qs('#w2cResult');if(!val||!/^https?:\/\//i.test(val)){if(msg)msg.innerHTML='<p>Paste a full Taobao, Weidian, 1688 or Tmall URL beginning with http.</p>';return}navigator.clipboard?.writeText(val);if(msg)msg.innerHTML='<p><strong>Link copied.</strong> Kakobuy will open in a new tab; paste the copied marketplace URL into its search field.</p><a class="btn btn-orange" href="https://www.kakobuy.com/" target="_blank" rel="noopener">Open Kakobuy</a>'}
 document.addEventListener('click',e=>{const qc=e.target.closest('[data-qc]');if(qc)openQC(qc.dataset.qc);const faq=e.target.closest('.faq-button');if(faq){const item=faq.closest('.faq-item');const was=item.classList.contains('open');qsa('.faq-item.open').forEach(x=>{x.classList.remove('open');qs('.faq-button',x)?.setAttribute('aria-expanded','false')});if(!was){item.classList.add('open');faq.setAttribute('aria-expanded','true')}}if(e.target.closest('#menuBtn'))qs('#navLinks')?.classList.toggle('open');if(e.target.closest('[data-close-modal]')){qs('#qcModal')?.close();document.body.classList.remove('modal-open')}if(e.target.closest('#convertBtn'))convertLink()});
-document.addEventListener('DOMContentLoaded',()=>{linkMainCategories();syncCategoryFilter();syncLiveProductCopy();renderProducts();qs('#productSearch')?.addEventListener('input',filterProducts);qs('#categoryFilter')?.addEventListener('change',filterProducts);const params=new URLSearchParams(location.search),query=params.get('q'),category=params.get('category');if(query&&qs('#productSearch'))qs('#productSearch').value=query;if(category&&qs('#categoryFilter'))qs('#categoryFilter').value=category;if(query||category)filterProducts();qs('#shippingForm')?.addEventListener('submit',e=>{e.preventDefault();shippingEstimate()});const lang=localStorage.getItem('kako-lang')||'en';const sel=qs('#languageSelect');if(sel){sel.value=lang;sel.addEventListener('change',e=>setLanguage(e.target.value))}setLanguage(lang);qs('#qcModal')?.addEventListener('close',()=>document.body.classList.remove('modal-open'))});
+document.addEventListener('DOMContentLoaded',()=>{linkMainCategories();syncCategoryFilter();syncLiveProductCopy();renderProducts();qs('#productSearch')?.addEventListener('input',filterProducts);qs('#categoryFilter')?.addEventListener('change',filterProducts);const params=new URLSearchParams(location.search),query=params.get('q'),category=params.get('category');if(query&&qs('#productSearch'))qs('#productSearch').value=query;if(category&&qs('#categoryFilter'))qs('#categoryFilter').value=category;if(query||category)filterProducts();qs('#shippingForm')?.addEventListener('submit',e=>{e.preventDefault();shippingEstimate()});const lang=getProxyLanguage()||getRequestedLanguage()||localStorage.getItem('kako-lang')||'en';const sel=qs('#languageSelect');if(sel){sel.value=lang;sel.addEventListener('change',e=>setLanguage(e.target.value))}setLanguage(lang,{initial:true});qs('#qcModal')?.addEventListener('close',()=>document.body.classList.remove('modal-open'))});
 
 const SITE_I18N={
  en:{
@@ -251,10 +251,44 @@ function renderPageSubheadsFull(d){
  if(key==="fees"){const headings=qsa(".container .prose h2");setNodeText(headings[1],h.feesPaypal)}
  if(key==="coupons"){const headings=qsa(".container.prose h2");setNodeText(headings[headings.length-1],h.couponsValidity)}
 }
-function setLanguage(lang){
- activeLangFull=SITE_I18N[lang]?lang:"en";const d=fullLocale();localStorage.setItem("kako-lang",activeLangFull);document.documentElement.lang=activeLangFull==="zh"?"zh-CN":activeLangFull;
- const menu=ensureFullLanguageSelector(),nativeSelect=qs("#languageSelect");if(nativeSelect)nativeSelect.value=activeLangFull;updateLanguageMenu(menu,activeLangFull);renderFullNav(d);renderHomeFull(d);renderPageFrameFull(d);renderPageSubheadsFull(d);window.renderKakoArticle?.(activeLangFull);linkMainCategories();syncCategoryFilter();syncLiveProductCopy();
- const input=qs("#productSearch");if(input){input.placeholder=d.search;input.setAttribute("aria-label",d.search)}setNodeText(qs(".search-shell button"),d.searchBtn);setNodeText(qs("#emptyState"),d.noResults);filterProducts();document.dispatchEvent(new CustomEvent("kako:languagechange",{detail:{lang:activeLangFull}}))
+const ORIGINAL_SITE_ORIGIN="https://kakobuyfins.pro";
+const GOOGLE_TRANSLATE_ORIGIN="https://kakobuyfins-pro.translate.goog";
+function normalizeLanguageCode(value){
+ const code=String(value||"").trim().toLowerCase();if(code.startsWith("zh"))return"zh";return SITE_I18N[code]?code:""
+}
+function getProxyLanguage(){
+ if(!location.hostname.endsWith(".translate.goog"))return"";return normalizeLanguageCode(new URLSearchParams(location.search).get("_x_tr_tl"))
+}
+function getRequestedLanguage(){
+ return normalizeLanguageCode(new URLSearchParams(location.search).get("kako_lang"))
+}
+function cleanLanguageParams(){
+ const params=new URLSearchParams(location.search);["_x_tr_sl","_x_tr_tl","_x_tr_hl","kako_lang"].forEach(key=>params.delete(key));return params
+}
+function languageDestination(lang){
+ const target=lang==="zh"?"zh-CN":lang,params=cleanLanguageParams();
+ if(lang==="en"){params.set("kako_lang","en");return ORIGINAL_SITE_ORIGIN+location.pathname+"?"+params.toString()+location.hash}
+ params.set("_x_tr_sl","en");params.set("_x_tr_tl",target);params.set("_x_tr_hl",target);
+ return GOOGLE_TRANSLATE_ORIGIN+location.pathname+"?"+params.toString()+location.hash
+}
+function showAutomaticTranslationNotice(menu){
+ const panel=qs(".language-menu-panel",menu);if(!panel||qs(".translation-note",panel))return;
+ const note=document.createElement("div");note.className="translation-note";note.textContent="Automatic translation by Google";note.setAttribute("role","note");note.style.cssText="padding:12px 16px;border-top:1px solid #e1ddd3;color:#686868;font-size:.78rem;line-height:1.35";panel.appendChild(note)
+}
+function clearRequestedLanguageParam(){
+ const params=cleanLanguageParams(),query=params.toString();history.replaceState(null,"",location.pathname+(query?"?"+query:"")+location.hash)
+}
+function setLanguage(lang,options={}){
+ lang=SITE_I18N[lang]?lang:"en";const proxyLang=getProxyLanguage();
+ if(proxyLang){
+  if(!options.initial&&lang!==proxyLang){location.assign(languageDestination(lang));return}
+  activeLangFull=proxyLang;localStorage.setItem("kako-lang",activeLangFull);document.documentElement.lang=activeLangFull==="zh"?"zh-CN":activeLangFull;
+  const menu=ensureFullLanguageSelector(),nativeSelect=qs("#languageSelect");if(nativeSelect)nativeSelect.value=activeLangFull;updateLanguageMenu(menu,activeLangFull);showAutomaticTranslationNotice(menu);return
+ }
+ if(lang!=="en"){localStorage.setItem("kako-lang",lang);location.assign(languageDestination(lang));return}
+ activeLangFull="en";const d=fullLocale();localStorage.setItem("kako-lang","en");document.documentElement.lang="en";if(getRequestedLanguage())clearRequestedLanguageParam();
+ const menu=ensureFullLanguageSelector(),nativeSelect=qs("#languageSelect");if(nativeSelect)nativeSelect.value="en";updateLanguageMenu(menu,"en");renderFullNav(d);renderHomeFull(d);renderPageFrameFull(d);renderPageSubheadsFull(d);window.renderKakoArticle?.("en");linkMainCategories();syncCategoryFilter();syncLiveProductCopy();
+ const input=qs("#productSearch");if(input){input.placeholder=d.search;input.setAttribute("aria-label",d.search)}setNodeText(qs(".search-shell button"),d.searchBtn);setNodeText(qs("#emptyState"),d.noResults);filterProducts();document.dispatchEvent(new CustomEvent("kako:languagechange",{detail:{lang:"en"}}))
 }
 function shippingEstimate(){
  const d=fullLocale(),form=qs("#shippingForm"),result=qs("#shippingResult");if(!form||!result)return;const fd=new FormData(form),country=fd.get("country"),weight=Math.max(.1,Number(fd.get("weight"))||0),l=Number(fd.get("length"))||0,w=Number(fd.get("width"))||0,h=Number(fd.get("height"))||0;const volumetric=l&&w&&h?(l*w*h/6000):0,bill=Math.max(weight,volumetric);let estimate;if(country==="US")estimate=20.73+18.5*bill;else if(country==="DE")estimate=8.76+14.5*bill;else estimate=null;if(!estimate){result.innerHTML="<p>"+d.tool.noRate+"</p><strong>"+d.tool.live+"</strong><p>"+d.tool.official+"</p>";return}const low=Math.max(1,estimate*.92),high=estimate*1.12;result.innerHTML="<p>"+d.tool.range+"</p><strong>$"+low.toFixed(0)+"–$"+high.toFixed(0)+"</strong><p>"+d.tool.billable+": "+bill.toFixed(2)+" kg"+(volumetric>weight?" ("+d.tool.volume+")":"")+". "+d.tool.estimate+"</p>"
