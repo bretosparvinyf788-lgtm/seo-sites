@@ -38,11 +38,12 @@
     return `<div class="source-error" role="alert"><strong>${escape(t("error"))}</strong><a href="${SOURCE_HOME}" target="_blank" rel="noopener">${escape(t("source"))} ↗</a></div>`;
   }
 
-  function productCard(product, categoryId = null) {
-    const category = product.categoryId || categoryId;
+  function productCard(product, categoryId = null, preserveHomepageStyle = false) {
+    const category = preserveHomepageStyle ? null : (product.categoryId || categoryId);
+    const sourceMarker = preserveHomepageStyle ? "" : '<span class="source-live-dot"></span>';
     return `<a class="product-card source-product-card" data-source-aid="${escape(product.aid)}" href="${escape(product.detailUrl)}">
       <div class="product-image"><img src="${escape(product.image)}" alt="${escape(product.title)} — KakobuyMake" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></div>
-      <div class="product-meta"><span class="product-cat"><span class="source-live-dot"></span>${escape(category ? catName(category) : t("synced"))}</span><h3>${escape(product.title)}</h3><div class="product-foot"><span class="product-price">${escape(product.price || "—")}</span><span class="product-link">${escape(t("view"))}</span></div></div>
+      <div class="product-meta"><span class="product-cat">${sourceMarker}${escape(category ? catName(category) : t("synced"))}</span><h3>${escape(product.title)}</h3><div class="product-foot"><span class="product-price">${escape(product.price || "—")}</span><span class="product-link">${escape(t("view"))}</span></div></div>
     </a>`;
   }
 
@@ -61,7 +62,7 @@
       const payload = await getJson("/api/source/catalog?category=1&page=1");
       const products = payload.products.slice(0, Number(root.dataset.limit || 10));
       root.dataset.sourceUrl = payload.sourceUrl;
-      root.innerHTML = products.map(product => productCard(product, 1)).join("");
+      root.innerHTML = products.map(product => productCard(product, null, true)).join("");
       const count = document.querySelector("[data-source-live-count]");
       if (count) count.textContent = String(products.length);
     } catch {
@@ -72,15 +73,32 @@
   async function loadCategories() {
     const root = document.querySelector("[data-source-categories]");
     if (!root) return;
-    root.innerHTML = loadingMarkup();
+    const preserveIcons = root.dataset.preserveLayout === "icons";
+    if (preserveIcons) root.setAttribute("aria-busy", "true");
+    else root.innerHTML = loadingMarkup();
     try {
       const payload = await getJson("/api/source/categories");
+      if (preserveIcons) {
+        const byId = new Map(payload.categories.map(category => [Number(category.id), category]));
+        root.querySelectorAll("[data-source-category]").forEach(card => {
+          const id = Number(card.dataset.sourceCategory);
+          const category = byId.get(id);
+          if (!category) return;
+          card.href = category.browseUrl;
+          card.dataset.sourceUrl = category.sourceUrl;
+          const label = card.querySelector("strong");
+          if (label) label.textContent = catName(id);
+        });
+        root.removeAttribute("aria-busy");
+        return;
+      }
       root.innerHTML = payload.categories.map(category => `<a class="category-card source-category-card" href="${escape(category.browseUrl)}" data-source-category="${category.id}">
         <span class="source-category-image"><img src="${escape(category.image)}" alt="${escape(category.name)} — KakobuyMake" loading="lazy"></span>
         <strong>${escape(catName(category.id))}</strong><span>${escape(t("categoryHint"))}</span>
       </a>`).join("");
     } catch {
-      root.innerHTML = errorMarkup();
+      if (preserveIcons) root.removeAttribute("aria-busy");
+      else root.innerHTML = errorMarkup();
     }
   }
 
@@ -203,6 +221,7 @@
     initSourceProductGallery();
     document.getElementById("langSelect")?.addEventListener("change", () => setTimeout(() => {
       localizeSourceControls();
+      loadHomepageProducts();
       loadCategories();
     }, 0));
   });

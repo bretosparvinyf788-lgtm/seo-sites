@@ -179,7 +179,7 @@ function headerTemplate() {
     <a class="skip-link" href="#main">Skip to content</a>
     <header class="site-header">
       <div class="container nav">
-        <a class="brand" href="/" aria-label="KakobuyLab home"><span class="brand-mark brand-mark-logo" aria-hidden="true">K</span><span>KakobuyLab</span></a>
+        <a class="brand" href="/" aria-label="KakobuyLab home"><span class="brand-mark brand-mark-logo" aria-hidden="true"><img src="/favicon-kakobuy.png" alt=""></span><span>KakobuyLab</span></a>
         <nav class="nav-links" id="navLinks" aria-label="Primary">
           <a href="/products/"${current("/products")} data-i18n="navProducts">Finds</a>
           <a href="/shipping/"${current("/shipping")} data-i18n="navShipping">Shipping</a>
@@ -205,7 +205,7 @@ function footerTemplate() {
       <div class="container">
         <div class="footer-grid">
           <div class="footer-brand">
-            <a class="brand" href="/"><span class="brand-mark brand-mark-logo" aria-hidden="true">K</span><span>KakobuyLab</span></a>
+            <a class="brand" href="/"><span class="brand-mark brand-mark-logo" aria-hidden="true"><img src="/favicon-kakobuy.png" alt=""></span><span>KakobuyLab</span></a>
             <p class="footer-copy" data-i18n="footerCopy">Independent research and discovery site for Kakobuy shoppers. Not the official Kakobuy website and not a seller.</p>
           </div>
           <div class="footer-col"><strong>Research</strong><a href="${articleHref("kakobuy-qc-photos")}">QC photos</a><a href="${articleHref("kakobuy-w2c-guide")}">W2C guide</a><a href="${articleHref("kakobuy-shipping-fees")}">Shipping costs</a></div>

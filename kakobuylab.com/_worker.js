@@ -289,7 +289,7 @@ function productPage(product) {
   <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
   <title>${title} | KakobuyMake Source Details | KakobuyLab</title>
   <meta name="description" content="Live product details, source images and purchase link synchronized from KakobuyMake.">
-  <link rel="canonical" href="${canonical}"><link rel="icon" href="${SOURCE_ORIGIN}/favicon.ico"><link rel="stylesheet" href="/style.css?v=20260924-3">
+  <link rel="canonical" href="${canonical}"><link rel="icon" href="${SOURCE_ORIGIN}/favicon.ico"><link rel="stylesheet" href="/style.css?v=20260924-4">
   <meta property="og:title" content="${title} | KakobuyLab"><meta property="og:description" content="Live product details synchronized from KakobuyMake."><meta property="og:type" content="website"><meta property="og:url" content="${canonical}"><meta property="og:image" content="${mainImage}">
   <script type="application/ld+json">${schema}</script>
 </head>
@@ -322,7 +322,7 @@ function productPage(product) {
       <aside class="product-info-card"><div class="kicker">Single source of truth</div><h2>No separate product database</h2><p>KakobuyLab renders this page from KakobuyMake and does not maintain a copied product catalog.</p><a class="button secondary" href="/products/">Back to live products</a></aside>
     </div></section>
   </main>
-  <div data-site-footer></div><script src="/translations.js?v=20260924-4" defer></script><script src="/app.js?v=20260924-3" defer></script><script src="/source-catalog.js?v=20260924-3" defer></script>
+  <div data-site-footer></div><script src="/translations.js?v=20260924-4" defer></script><script src="/app.js?v=20260924-4" defer></script><script src="/source-catalog.js?v=20260924-3" defer></script>
 </body></html>`;
 }
 
