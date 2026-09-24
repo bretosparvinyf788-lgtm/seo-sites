@@ -322,7 +322,7 @@ function productPage(product) {
       <aside class="product-info-card"><div class="kicker">Single source of truth</div><h2>No separate product database</h2><p>KakobuyLab renders this page from KakobuyMake and does not maintain a copied product catalog.</p><a class="button secondary" href="/products/">Back to live products</a></aside>
     </div></section>
   </main>
-  <div data-site-footer></div><script src="/translations.js?v=20260924-3" defer></script><script src="/app.js?v=20260924-3" defer></script><script src="/source-catalog.js?v=20260924-3" defer></script>
+  <div data-site-footer></div><script src="/translations.js?v=20260924-4" defer></script><script src="/app.js?v=20260924-3" defer></script><script src="/source-catalog.js?v=20260924-3" defer></script>
 </body></html>`;
 }
 
