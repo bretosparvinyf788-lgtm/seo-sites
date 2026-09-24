@@ -140,6 +140,43 @@ Object.entries(TITLE_I18N).forEach(([code,copy])=>{
  locale.subheads=copy.subheads
 });
 
+
+const LANGUAGE_CATALOG=[
+ {code:"en",name:"English",short:"EN"},{code:"de",name:"Deutsch",short:"DE"},{code:"es",name:"Español",short:"ES"},{code:"fr",name:"Français",short:"FR"},
+ {code:"it",name:"Italiano",short:"IT"},{code:"pl",name:"Polski",short:"PL"},{code:"pt",name:"Português",short:"PT"},{code:"ro",name:"Română",short:"RO"},
+ {code:"sv",name:"Svenska",short:"SV"},{code:"nl",name:"Nederlands",short:"NL"},{code:"da",name:"Dansk",short:"DA"},{code:"fi",name:"Suomi",short:"FI"},
+ {code:"el",name:"Ελληνικά",short:"EL"},{code:"cs",name:"Čeština",short:"CS"},{code:"hu",name:"Magyar",short:"HU"},{code:"bg",name:"Български",short:"BG"},
+ {code:"sk",name:"Slovenčina",short:"SK"},{code:"hr",name:"Hrvatski",short:"HR"},{code:"sl",name:"Slovenščina",short:"SL"},{code:"lt",name:"Lietuvių",short:"LT"},
+ {code:"lv",name:"Latviešu",short:"LV"},{code:"et",name:"Eesti",short:"ET"},{code:"ga",name:"Gaeilge",short:"GA"},{code:"mt",name:"Malti",short:"MT"},
+ {code:"zh",name:"中文",short:"ZH"}
+];
+const EXTRA_LANGUAGE_COPY={
+ ro:{nav:["Descoperiri","Centru QC","Linkuri W2C","Livrare","Ghiduri","Catalog principal ↗"],home:"Acasă",language:"Limbă",search:"Caută produse, categorii sau platforme",searchBtn:"Caută",all:"Toate",noResults:"Nu există rezultate potrivite.",hero:"Descoperiri W2C cu imagini QC",sections:["Explorează 10 categorii Kakobuy","Cele mai recente produse Kakobuy verificate","Linkuri W2C și imagini QC Kakobuy","Ghiduri Kakobuy","Întrebări frecvente Kakobuy"]},
+ sv:{nav:["Fynd","QC-center","W2C-länkar","Frakt","Guider","Huvudkatalog ↗"],home:"Hem",language:"Språk",search:"Sök produkter, kategorier eller marknadsplats",searchBtn:"Sök",all:"Alla",noResults:"Inga matchande fynd.",hero:"W2C-fynd med QC-bilder",sections:["Utforska 10 Kakobuy-kategorier","Senast verifierade Kakobuy-fynd","Kakobuy W2C-länkar och QC-bilder","Kakobuy-guider","Vanliga frågor om Kakobuy"]},
+ nl:{nav:["Vondsten","QC-centrum","W2C-links","Verzending","Gidsen","Hoofdcatalogus ↗"],home:"Home",language:"Taal",search:"Zoek producten, categorieën of marktplaats",searchBtn:"Zoeken",all:"Alle",noResults:"Geen overeenkomende resultaten.",hero:"W2C-vondsten met QC-foto's",sections:["Bekijk 10 Kakobuy-categorieën","Nieuwste geverifieerde Kakobuy-vondsten","Kakobuy W2C-links en QC-foto's","Kakobuy-gidsen","Veelgestelde vragen over Kakobuy"]},
+ da:{nav:["Fund","QC-center","W2C-links","Fragt","Guider","Hovedkatalog ↗"],home:"Hjem",language:"Sprog",search:"Søg efter produkter, kategorier eller markedsplads",searchBtn:"Søg",all:"Alle",noResults:"Ingen matchende fund.",hero:"W2C-fund med QC-billeder",sections:["Udforsk 10 Kakobuy-kategorier","Seneste verificerede Kakobuy-fund","Kakobuy W2C-links og QC-billeder","Kakobuy-guider","Ofte stillede spørgsmål om Kakobuy"]},
+ fi:{nav:["Löydöt","QC-keskus","W2C-linkit","Toimitus","Oppaat","Pääluettelo ↗"],home:"Etusivu",language:"Kieli",search:"Hae tuotteita, luokkia tai markkinapaikkaa",searchBtn:"Hae",all:"Kaikki",noResults:"Ei vastaavia tuloksia.",hero:"W2C-löydöt QC-kuvilla",sections:["Tutustu 10 Kakobuy-luokkaan","Uusimmat tarkistetut Kakobuy-löydöt","Kakobuy W2C-linkit ja QC-kuvat","Kakobuy-oppaat","Kakobuy usein kysytyt kysymykset"]},
+ el:{nav:["Ευρήματα","Κέντρο QC","Σύνδεσμοι W2C","Αποστολή","Οδηγοί","Κύριος κατάλογος ↗"],home:"Αρχική",language:"Γλώσσα",search:"Αναζήτηση προϊόντων, κατηγοριών ή αγοράς",searchBtn:"Αναζήτηση",all:"Όλα",noResults:"Δεν βρέθηκαν αποτελέσματα.",hero:"Ευρήματα W2C με εικόνες QC",sections:["Εξερευνήστε 10 κατηγορίες Kakobuy","Πρόσφατα επαληθευμένα προϊόντα Kakobuy","Σύνδεσμοι W2C και εικόνες QC Kakobuy","Οδηγοί Kakobuy","Συχνές ερωτήσεις Kakobuy"]},
+ cs:{nav:["Nálezy","QC centrum","Odkazy W2C","Doprava","Průvodci","Hlavní katalog ↗"],home:"Domů",language:"Jazyk",search:"Hledat produkty, kategorie nebo tržiště",searchBtn:"Hledat",all:"Vše",noResults:"Nebyly nalezeny žádné výsledky.",hero:"W2C nálezy s QC fotografiemi",sections:["Prozkoumat 10 kategorií Kakobuy","Nejnovější ověřené nálezy Kakobuy","Odkazy W2C a QC fotografie Kakobuy","Průvodci Kakobuy","Časté dotazy Kakobuy"]},
+ hu:{nav:["Találatok","QC központ","W2C linkek","Szállítás","Útmutatók","Fő katalógus ↗"],home:"Kezdőlap",language:"Nyelv",search:"Termékek, kategóriák vagy piactér keresése",searchBtn:"Keresés",all:"Összes",noResults:"Nincs megfelelő találat.",hero:"W2C találatok QC képekkel",sections:["10 Kakobuy kategória felfedezése","Legújabb ellenőrzött Kakobuy találatok","Kakobuy W2C linkek és QC képek","Kakobuy útmutatók","Kakobuy gyakori kérdések"]},
+ bg:{nav:["Находки","QC център","W2C връзки","Доставка","Ръководства","Основен каталог ↗"],home:"Начало",language:"Език",search:"Търсене на продукти, категории или платформа",searchBtn:"Търсене",all:"Всички",noResults:"Няма съвпадащи резултати.",hero:"W2C находки с QC снимки",sections:["Разгледайте 10 категории Kakobuy","Последни проверени находки Kakobuy","Kakobuy W2C връзки и QC снимки","Ръководства за Kakobuy","Често задавани въпроси за Kakobuy"]},
+ sk:{nav:["Nálezy","QC centrum","Odkazy W2C","Doprava","Sprievodcovia","Hlavný katalóg ↗"],home:"Domov",language:"Jazyk",search:"Hľadať produkty, kategórie alebo trhovisko",searchBtn:"Hľadať",all:"Všetko",noResults:"Nenašli sa žiadne výsledky.",hero:"W2C nálezy s QC fotografiami",sections:["Preskúmajte 10 kategórií Kakobuy","Najnovšie overené nálezy Kakobuy","Odkazy W2C a QC fotografie Kakobuy","Sprievodcovia Kakobuy","Časté otázky Kakobuy"]},
+ hr:{nav:["Pronađeno","QC centar","W2C poveznice","Dostava","Vodiči","Glavni katalog ↗"],home:"Početna",language:"Jezik",search:"Pretražite proizvode, kategorije ili platformu",searchBtn:"Pretraži",all:"Sve",noResults:"Nema odgovarajućih rezultata.",hero:"W2C proizvodi s QC slikama",sections:["Istražite 10 Kakobuy kategorija","Najnoviji provjereni Kakobuy proizvodi","Kakobuy W2C poveznice i QC slike","Kakobuy vodiči","Česta pitanja o Kakobuy"]},
+ sl:{nav:["Najdbe","QC center","Povezave W2C","Dostava","Vodniki","Glavni katalog ↗"],home:"Domov",language:"Jezik",search:"Išči izdelke, kategorije ali tržnico",searchBtn:"Išči",all:"Vse",noResults:"Ni ujemajočih rezultatov.",hero:"W2C najdbe s QC slikami",sections:["Raziščite 10 kategorij Kakobuy","Najnovejše preverjene Kakobuy najdbe","Povezave W2C in QC slike Kakobuy","Vodniki Kakobuy","Pogosta vprašanja Kakobuy"]},
+ lt:{nav:["Radiniai","QC centras","W2C nuorodos","Pristatymas","Gidai","Pagrindinis katalogas ↗"],home:"Pradžia",language:"Kalba",search:"Ieškoti produktų, kategorijų ar prekyvietės",searchBtn:"Ieškoti",all:"Visi",noResults:"Atitinkančių rezultatų nėra.",hero:"W2C radiniai su QC nuotraukomis",sections:["Naršykite 10 Kakobuy kategorijų","Naujausi patikrinti Kakobuy radiniai","Kakobuy W2C nuorodos ir QC nuotraukos","Kakobuy gidai","Kakobuy DUK"]},
+ lv:{nav:["Atrastais","QC centrs","W2C saites","Piegāde","Ceļveži","Galvenais katalogs ↗"],home:"Sākums",language:"Valoda",search:"Meklēt produktus, kategorijas vai tirgu",searchBtn:"Meklēt",all:"Visi",noResults:"Nav atbilstošu rezultātu.",hero:"W2C atradumi ar QC attēliem",sections:["Izpētiet 10 Kakobuy kategorijas","Jaunākie pārbaudītie Kakobuy atradumi","Kakobuy W2C saites un QC attēli","Kakobuy ceļveži","Kakobuy biežākie jautājumi"]},
+ et:{nav:["Leiud","QC-keskus","W2C lingid","Tarne","Juhendid","Põhikataloog ↗"],home:"Avaleht",language:"Keel",search:"Otsi tooteid, kategooriaid või turuplatsi",searchBtn:"Otsi",all:"Kõik",noResults:"Sobivaid tulemusi ei leitud.",hero:"W2C leiud QC-piltidega",sections:["Sirvi 10 Kakobuy kategooriat","Uusimad kontrollitud Kakobuy leiud","Kakobuy W2C lingid ja QC-pildid","Kakobuy juhendid","Kakobuy korduma kippuvad küsimused"]},
+ ga:{nav:["Táirgí","Ionad QC","Naisc W2C","Loingseoireacht","Treoracha","Príomhchatalóg ↗"],home:"Baile",language:"Teanga",search:"Cuardaigh táirgí, catagóirí nó margadh",searchBtn:"Cuardaigh",all:"Uile",noResults:"Níor aimsíodh torthaí meaitseála.",hero:"Táirgí W2C le híomhánna QC",sections:["Brabhsáil 10 gcatagóir Kakobuy","Táirgí Kakobuy fíoraithe is déanaí","Naisc W2C agus íomhánna QC Kakobuy","Treoracha Kakobuy","Ceisteanna coitianta Kakobuy"]},
+ mt:{nav:["Sejbiet","Ċentru QC","Links W2C","Tbaħħir","Gwidi","Katalgu prinċipali ↗"],home:"Paġna ewlenija",language:"Lingwa",search:"Fittex prodotti, kategoriji jew suq",searchBtn:"Fittex",all:"Kollha",noResults:"Ma nstabux riżultati.",hero:"Sejbiet W2C b'ritratti QC",sections:["Esplora 10 kategoriji Kakobuy","L-aħħar sejbiet Kakobuy ivverifikati","Links W2C u ritratti QC Kakobuy","Gwidi Kakobuy","Mistoqsijiet komuni Kakobuy"]}
+};
+Object.entries(EXTRA_LANGUAGE_COPY).forEach(([code,copy])=>{
+ const locale=JSON.parse(JSON.stringify(SITE_I18N.en));
+ Object.assign(locale,{nav:copy.nav,home:copy.home,language:copy.language,search:copy.search,searchBtn:copy.searchBtn,all:copy.all,noResults:copy.noResults});
+ locale.hero.t1="Kakobuy Spreadsheet 2026";locale.hero.t2=copy.hero;
+ [locale.sec.catTitle,locale.sec.prodTitle,locale.sec.flowTitle,locale.sec.guideTitle,locale.sec.faqTitle]=copy.sections;
+ SITE_I18N[code]=locale
+});
+
 const ORIGINAL_DOCUMENT_TITLE=document.title;
 let activeLangFull="en";
 function fullLocale(){return SITE_I18N[activeLangFull]||SITE_I18N.en}
@@ -147,10 +184,20 @@ function setNodeText(el,value){if(el&&value!==undefined)el.textContent=value}
 function pageText(template,page){return String(template||"").replace("{page}",page)}
 function ensureFullLanguageSelector(){
  let sel=qs("#languageSelect");
- if(!sel){sel=document.createElement("select");sel.className="language";sel.id="languageSelect";const menu=qs("#menuBtn"),nav=qs(".nav");if(nav)nav.insertBefore(sel,menu||null)}
- sel.innerHTML='<option value="en">EN</option><option value="zh">中文</option><option value="de">DE</option><option value="fr">FR</option><option value="es">ES</option><option value="it">IT</option><option value="pl">PL</option><option value="pt">PT</option>';
+ if(!sel){sel=document.createElement("select");sel.className="language";sel.id="languageSelect";const menuButton=qs("#menuBtn"),nav=qs(".nav");if(nav)nav.insertBefore(sel,menuButton||null)}
+ sel.classList.add("language-native");sel.innerHTML=LANGUAGE_CATALOG.map(x=>'<option value="'+x.code+'">'+x.name+'</option>').join("");
  if(!sel.dataset.fullBound){sel.addEventListener("change",e=>setLanguage(e.target.value));sel.dataset.fullBound="true"}
- return sel
+ let menu=qs("#languageMenu");
+ if(!menu){menu=document.createElement("div");menu.className="language-menu";menu.id="languageMenu";sel.insertAdjacentElement("afterend",menu)}
+ menu.innerHTML='<button class="language-current" type="button" aria-haspopup="true" aria-expanded="false"><span class="language-current-name">English</span><b class="language-current-code">EN</b><span class="language-chevron" aria-hidden="true">⌄</span></button><div class="language-menu-panel" role="menu" aria-label="Language">'+LANGUAGE_CATALOG.map(x=>'<button class="language-option" type="button" role="menuitem" data-language-option="'+x.code+'"><span>'+x.name+'</span><b>'+x.short+'</b></button>').join("")+'</div>';
+ if(!menu.dataset.bound){menu.addEventListener("click",e=>{const toggle=e.target.closest(".language-current");if(toggle){const open=!menu.classList.contains("open");menu.classList.toggle("open",open);toggle.setAttribute("aria-expanded",String(open));return}const option=e.target.closest("[data-language-option]");if(option){setLanguage(option.dataset.languageOption);menu.classList.remove("open");qs(".language-current",menu)?.setAttribute("aria-expanded","false")}});document.addEventListener("click",e=>{if(!menu.contains(e.target)){menu.classList.remove("open");qs(".language-current",menu)?.setAttribute("aria-expanded","false")}});document.addEventListener("keydown",e=>{if(e.key==="Escape"){menu.classList.remove("open");qs(".language-current",menu)?.setAttribute("aria-expanded","false")}});menu.dataset.bound="true"}
+ return menu
+}
+function updateLanguageMenu(menu,lang){
+ const meta=LANGUAGE_CATALOG.find(x=>x.code===lang)||LANGUAGE_CATALOG[0],current=qs(".language-current",menu);
+ setNodeText(qs(".language-current-name",menu),meta.name);setNodeText(qs(".language-current-code",menu),meta.short);
+ if(current)current.setAttribute("aria-label",(fullLocale().language||"Language")+": "+meta.name);
+ qsa("[data-language-option]",menu).forEach(btn=>{const active=btn.dataset.languageOption===lang;btn.classList.toggle("active",active);btn.setAttribute("aria-current",active?"true":"false")})
 }
 function renderFullNav(d){
  [["/spreadsheet/",d.nav[0]],["/qc/",d.nav[1]],["/w2c/",d.nav[2]],["/shipping/",d.nav[3]],["/guides/",d.nav[4]]].forEach(pair=>qsa('.nav-links a[href="'+pair[0]+'"]').forEach(a=>setNodeText(a,pair[1])));
@@ -206,8 +253,8 @@ function renderPageSubheadsFull(d){
 }
 function setLanguage(lang){
  activeLangFull=SITE_I18N[lang]?lang:"en";const d=fullLocale();localStorage.setItem("kako-lang",activeLangFull);document.documentElement.lang=activeLangFull==="zh"?"zh-CN":activeLangFull;
- const sel=ensureFullLanguageSelector();sel.value=activeLangFull;sel.setAttribute("aria-label",d.language);renderFullNav(d);renderHomeFull(d);renderPageFrameFull(d);renderPageSubheadsFull(d);window.renderKakoArticle?.(activeLangFull);linkMainCategories();syncCategoryFilter();syncLiveProductCopy();
- const input=qs("#productSearch");if(input){input.placeholder=d.search;input.setAttribute("aria-label",d.search)}setNodeText(qs(".search-shell button"),d.searchBtn);setNodeText(qs("#emptyState"),d.noResults);filterProducts()
+ const menu=ensureFullLanguageSelector(),nativeSelect=qs("#languageSelect");if(nativeSelect)nativeSelect.value=activeLangFull;updateLanguageMenu(menu,activeLangFull);renderFullNav(d);renderHomeFull(d);renderPageFrameFull(d);renderPageSubheadsFull(d);window.renderKakoArticle?.(activeLangFull);linkMainCategories();syncCategoryFilter();syncLiveProductCopy();
+ const input=qs("#productSearch");if(input){input.placeholder=d.search;input.setAttribute("aria-label",d.search)}setNodeText(qs(".search-shell button"),d.searchBtn);setNodeText(qs("#emptyState"),d.noResults);filterProducts();document.dispatchEvent(new CustomEvent("kako:languagechange",{detail:{lang:activeLangFull}}))
 }
 function shippingEstimate(){
  const d=fullLocale(),form=qs("#shippingForm"),result=qs("#shippingResult");if(!form||!result)return;const fd=new FormData(form),country=fd.get("country"),weight=Math.max(.1,Number(fd.get("weight"))||0),l=Number(fd.get("length"))||0,w=Number(fd.get("width"))||0,h=Number(fd.get("height"))||0;const volumetric=l&&w&&h?(l*w*h/6000):0,bill=Math.max(weight,volumetric);let estimate;if(country==="US")estimate=20.73+18.5*bill;else if(country==="DE")estimate=8.76+14.5*bill;else estimate=null;if(!estimate){result.innerHTML="<p>"+d.tool.noRate+"</p><strong>"+d.tool.live+"</strong><p>"+d.tool.official+"</p>";return}const low=Math.max(1,estimate*.92),high=estimate*1.12;result.innerHTML="<p>"+d.tool.range+"</p><strong>$"+low.toFixed(0)+"–$"+high.toFixed(0)+"</strong><p>"+d.tool.billable+": "+bill.toFixed(2)+" kg"+(volumetric>weight?" ("+d.tool.volume+")":"")+". "+d.tool.estimate+"</p>"
