@@ -59,7 +59,7 @@
     if (!root) return;
     root.innerHTML = loadingMarkup();
     try {
-      const payload = await getJson("/api/source/catalog?category=1&page=1");
+      const payload = await getJson("/api/source/catalog?category=1&page=2");
       const products = payload.products.slice(0, Number(root.dataset.limit || 10));
       root.dataset.sourceUrl = payload.sourceUrl;
       root.innerHTML = products.map(product => productCard(product, null, true)).join("");
