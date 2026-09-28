@@ -1,0 +1,7 @@
+node_modules/
+dist/
+.astro/
+.wrangler/
+.sites-runtime/
+.translation-cache/
+.DS_Store

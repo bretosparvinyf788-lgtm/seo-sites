@@ -1,0 +1,17 @@
+{
+  "name": "kakobuyworks-com",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build && node scripts/normalize-cloudflare-output.mjs",
+    "preview": "astro preview"
+  },
+  "dependencies": {
+    "@astrojs/cloudflare": "^14.3.3",
+    "@astrojs/node": "^11.1.6",
+    "astro": "^7.3.4",
+    "cheerio": "^1.1.2"
+  }
+}

@@ -1,0 +1,69 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import SearchBar from '../../components/SearchBar.astro';
+import ProductGrid from '../../components/ProductGrid.astro';
+import { getCategories, getProductPage } from '../../lib/source';
+import { getCopy, isLang } from '../../lib/i18n';
+
+const langParam = Astro.params.lang;
+if (!isLang(langParam)) return Astro.redirect('/en/', 302);
+const lang = langParam;
+const copy = getCopy(lang);
+const page = Math.max(1, Number.parseInt(Astro.url.searchParams.get('page') || '1'));
+const sort = Astro.url.searchParams.get('sort') || 'newest';
+let products = [];
+let categories = [];
+let totalPages = 0;
+let totalProducts = 0;
+let sourceUnavailable = false;
+let invalidPage = false;
+try {
+  const [sourceCategories, productPage] = await Promise.all([getCategories(), getProductPage({ categoryId: '1', page, sort })]);
+  categories = sourceCategories;
+  products = productPage.products;
+  totalPages = productPage.totalPages;
+  totalProducts = productPage.totalProducts;
+} catch (error) {
+  if (error instanceof Error && /Source returned 404/.test(error.message)) invalidPage = true;
+  else sourceUnavailable = true;
+}
+invalidPage ||= !sourceUnavailable && page > Math.max(1, totalPages);
+if (invalidPage) Astro.response.status = 404;
+const title = `${copy.listing.title} | Kakobuy Works`;
+const hasNextPage = page < totalPages;
+const pageNumbers = Array.from({ length: totalPages }, (_, index) => index + 1);
+const canonicalPath = page > 1 ? `/${lang}/spreadsheet/?page=${page}` : `/${lang}/spreadsheet/`;
+---
+<BaseLayout lang={lang} title={title} description={copy.listing.body} canonicalPath={canonicalPath}>
+  <header class="page-hero"><div class="shell"><span class="section-kicker">{copy.sections.sourceLive}</span><h1>{copy.listing.title}</h1><p>{copy.listing.body}</p></div></header>
+  <section class="section">
+    <div class="shell">
+      <nav class="filter-chips" aria-label={copy.sections.categories}>
+        <a class="active" href={`/${lang}/spreadsheet/`}>{copy.sections.viewAll}</a>
+        {categories.filter((category) => category.id !== '1').map((category) => <a href={`/${lang}/category/${category.id}/`}>{category.name}</a>)}
+      </nav>
+      <div class="listing-tools">
+        <SearchBar lang={lang} placeholder={copy.hero.placeholder} button={copy.hero.search} compact />
+        <form method="get">
+          <label class="sr-only" for="sort">{copy.listing.sort}</label>
+          <select class="sort-select" id="sort" name="sort" onchange="this.form.submit()">
+            <option value="newest" selected={sort === 'newest'}>{copy.listing.newest}</option>
+            <option value="price-asc" selected={sort === 'price-asc'}>{copy.listing.priceLow}</option>
+            <option value="price-desc" selected={sort === 'price-desc'}>{copy.listing.priceHigh}</option>
+            <option value="name" selected={sort === 'name'}>{copy.listing.name}</option>
+          </select>
+        </form>
+      </div>
+      <ProductGrid products={invalidPage ? [] : products} lang={lang} detailsLabel={copy.sections.details} emptyText={sourceUnavailable ? copy.listing.sourceError : copy.listing.noResults} />
+      {products.length > 0 && <nav class="pagination" aria-label="Pagination">
+        <span class="pagination-summary">Page {page} of {totalPages} · {totalProducts.toLocaleString('en-US')} products</span>
+        <div class="pagination-links">
+          {page > 1 && <a rel="prev" href={`?page=${page - 1}&sort=${sort}`}>← {copy.listing.previous}</a>}
+          {pageNumbers.map((pageNumber) => <a class:list={{ active: pageNumber === page }} aria-current={pageNumber === page ? 'page' : undefined} href={`?page=${pageNumber}&sort=${sort}`}>{pageNumber}</a>)}
+          {hasNextPage && <a rel="next" href={`?page=${page + 1}&sort=${sort}`}>{copy.listing.next} →</a>}
+        </div>
+      </nav>}
+    </div>
+  </section>
+  <section class="section section-soft"><div class="shell narrow-copy"><span class="section-kicker">{copy.hero.browse}</span><h2>{copy.seo.title}</h2><p>{copy.seo.body}</p></div></section>
+</BaseLayout>

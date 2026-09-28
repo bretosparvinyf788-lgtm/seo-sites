@@ -1,0 +1,58 @@
+---
+import { getCopy, languageOrder, languages, type Lang } from '../lib/i18n';
+import { getGuideUi } from '../lib/guides';
+import SearchBar from './SearchBar.astro';
+
+interface Props { lang: Lang }
+const { lang } = Astro.props;
+const copy = getCopy(lang);
+const guideCopy = getGuideUi(lang);
+const relativePath = Astro.url.pathname.replace(/^\/[a-z]{2}(?=\/|$)/, '') || '/';
+const routeSuffix = `${relativePath}${Astro.url.search}`;
+const isHome = relativePath === '/';
+const isSpreadsheet = relativePath.startsWith('/spreadsheet') || relativePath.startsWith('/search');
+const isCategories = relativePath.startsWith('/categories') || relativePath.startsWith('/category');
+const isFaq = relativePath.startsWith('/faq');
+const isGuides = relativePath.startsWith('/guides');
+---
+<header class="site-header">
+  <div class="shell nav-shell">
+    <a class="brand" href={`/${lang}/`} aria-label="Kakobuy Spreadsheet home">
+      <img src="https://nstatic.kakobuy.com/www/pic/kkb/logo.png" alt="Kakobuy" width="158" height="40" />
+      <span>SPREADSHEET</span>
+    </a>
+    <nav class="desktop-nav" aria-label="Primary navigation">
+      <a class:list={{ active: isHome }} aria-current={isHome ? 'page' : undefined} href={`/${lang}/`}>{copy.nav.home}</a>
+      <a class:list={{ active: isSpreadsheet }} aria-current={isSpreadsheet ? 'page' : undefined} href={`/${lang}/spreadsheet/`}>{copy.nav.spreadsheet}</a>
+      <a class:list={{ active: isCategories }} aria-current={isCategories ? 'page' : undefined} href={`/${lang}/categories/`}>{copy.nav.categories}</a>
+      <a class:list={{ active: isGuides }} aria-current={isGuides ? 'page' : undefined} href={`/${lang}/guides/`}>{guideCopy.nav}</a>
+      <a class:list={{ active: isFaq }} aria-current={isFaq ? 'page' : undefined} href={`/${lang}/#faq`}>{copy.nav.faq}</a>
+    </nav>
+    <div class="header-search"><SearchBar lang={lang} placeholder={copy.hero.placeholder} button="→" buttonAriaLabel={copy.hero.search} compact /></div>
+    <div class="nav-actions">
+      <details class="language-menu">
+        <summary>{languages[lang].label} <small>{languages[lang].short}</small> <span aria-hidden="true">⌄</span></summary>
+        <div class="language-list">
+          {languageOrder.map((code) => {
+            const item = languages[code];
+            return (
+            <a href={`/${code}${routeSuffix}`} lang={code} aria-current={code === lang ? 'page' : undefined}>
+              <span>{item.label}</span><small>{item.short}</small>
+            </a>
+            );
+          })}
+        </div>
+      </details>
+      <details class="mobile-menu">
+        <summary aria-label="Open navigation"><span></span><span></span><span></span></summary>
+        <nav aria-label="Mobile navigation">
+          <a href={`/${lang}/`}>{copy.nav.home}</a>
+          <a href={`/${lang}/spreadsheet/`}>{copy.nav.spreadsheet}</a>
+          <a href={`/${lang}/categories/`}>{copy.nav.categories}</a>
+          <a href={`/${lang}/guides/`}>{guideCopy.nav}</a>
+          <a href={`/${lang}/#faq`}>{copy.nav.faq}</a>
+        </nav>
+      </details>
+    </div>
+  </div>
+</header>

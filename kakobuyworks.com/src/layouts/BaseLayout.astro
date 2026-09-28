@@ -1,0 +1,64 @@
+---
+import Header from '../components/Header.astro';
+import { getCopy, languages, type Lang } from '../lib/i18n';
+import { getGuideUi } from '../lib/guides';
+import '../styles/global.css';
+
+interface Props {
+  lang: Lang;
+  title: string;
+  description: string;
+  canonicalPath?: string;
+  structuredData?: Record<string, unknown> | Array<Record<string, unknown>>;
+}
+
+const { lang, title, description, canonicalPath = Astro.url.pathname, structuredData } = Astro.props;
+const copy = getCopy(lang);
+const guideCopy = getGuideUi(lang);
+const canonical = new URL(canonicalPath, Astro.site || 'https://kakobuyworks.com').href;
+const relativePath = Astro.url.pathname.replace(/^\/[a-z]{2}(?=\/|$)/, '') || '/';
+---
+<!doctype html>
+<html lang={lang}>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content={description} />
+    <meta name="robots" content="index,follow,max-image-preview:large" />
+    <link rel="canonical" href={canonical} />
+    <link rel="icon" href="https://www.kakobuy.com/favicon.ico" sizes="any" />
+    {Object.keys(languages).map((code) => (
+      <link rel="alternate" hreflang={code === 'zh' ? 'zh-CN' : code} href={new URL(`/${code}${relativePath}`, Astro.site || 'https://kakobuyworks.com').href} />
+    ))}
+    <link rel="alternate" hreflang="x-default" href={new URL(`/en${relativePath}`, Astro.site || 'https://kakobuyworks.com').href} />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta name="twitter:card" content="summary" />
+    <title>{title}</title>
+    {structuredData && <script type="application/ld+json" set:html={JSON.stringify(structuredData)} />}
+  </head>
+  <body>
+    <Header lang={lang} />
+    <main>
+      <slot />
+    </main>
+    <footer class="site-footer">
+      <div class="shell footer-grid">
+        <div>
+          <img class="footer-logo" src="https://nstatic.kakobuy.com/www/pic/kkb/logo.png" alt="Kakobuy" width="158" height="40" loading="lazy" />
+          <p>{copy.listing.body} {copy.product.currentNotice}</p>
+        </div>
+        <div class="footer-links">
+          <a href={`/${lang}/spreadsheet/`}>{copy.nav.spreadsheet}</a>
+          <a href={`/${lang}/categories/`}>{copy.nav.categories}</a>
+          <a href={`/${lang}/guides/`}>{guideCopy.nav}</a>
+          <a href={`/${lang}/#faq`}>{copy.nav.faq}</a>
+          <a href="https://www.kakobuy.com/register/?affcode=9qtwd" rel="nofollow sponsored" target="_blank">Create Kakobuy account</a>
+        </div>
+      </div>
+      <div class="shell footer-bottom">© {new Date().getUTCFullYear()} Kakobuy Works · Not an official Kakobuy website.</div>
+    </footer>
+  </body>
+</html>

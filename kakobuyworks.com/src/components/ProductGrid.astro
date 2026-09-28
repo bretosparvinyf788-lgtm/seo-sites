@@ -1,0 +1,14 @@
+---
+import ProductCard from './ProductCard.astro';
+import type { SourceProduct } from '../lib/source';
+import type { Lang } from '../lib/i18n';
+interface Props { products: SourceProduct[]; lang: Lang; detailsLabel: string; emptyText: string }
+const { products, lang, detailsLabel, emptyText } = Astro.props;
+---
+{products.length ? (
+  <div class="product-grid">
+    {products.map((product) => <ProductCard product={product} lang={lang} detailsLabel={detailsLabel} />)}
+  </div>
+) : (
+  <div class="empty-state"><span>0</span><p>{emptyText}</p></div>
+)}

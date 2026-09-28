@@ -1,0 +1,32 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import GuideCard from '../../../components/GuideCard.astro';
+import { getLocalizedGuides, getGuideUi } from '../../../lib/guides';
+import { isLang } from '../../../lib/i18n';
+
+const langParam = Astro.params.lang;
+if (!isLang(langParam)) return Astro.redirect('/en/guides/', 302);
+const lang = langParam;
+const ui = getGuideUi(lang);
+const guides = getLocalizedGuides(lang);
+const structuredData = {
+  '@context': 'https://schema.org',
+  '@type': 'CollectionPage',
+  name: ui.title,
+  description: ui.body,
+  url: `https://kakobuyworks.com/${lang}/guides/`,
+  mainEntity: {
+    '@type': 'ItemList',
+    itemListElement: guides.map((guide, index) => ({
+      '@type': 'ListItem',
+      position: index + 1,
+      name: guide.title,
+      url: `https://kakobuyworks.com/${lang}/guides/${guide.slug}/`
+    }))
+  }
+};
+---
+<BaseLayout lang={lang} title={`${ui.title} | Kakobuy Works`} description={ui.body} canonicalPath={`/${lang}/guides/`} structuredData={structuredData}>
+  <header class="page-hero guide-index-hero"><div class="shell"><span class="section-kicker">{ui.kicker}</span><h1>{ui.title}</h1><p>{ui.body}</p></div></header>
+  <section class="section"><div class="shell"><div class="guide-grid">{guides.map((guide) => <GuideCard guide={guide} lang={lang} readLabel={ui.read} />)}</div></div></section>
+</BaseLayout>

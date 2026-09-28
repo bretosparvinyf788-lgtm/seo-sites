@@ -1,0 +1,93 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import SearchBar from '../../../components/SearchBar.astro';
+import ProductGrid from '../../../components/ProductGrid.astro';
+import { getCategories, getProductPage } from '../../../lib/source';
+import { getCopy, isLang } from '../../../lib/i18n';
+
+const langParam = Astro.params.lang;
+if (!isLang(langParam)) return Astro.redirect('/en/', 302);
+const lang = langParam;
+const copy = getCopy(lang);
+const id = Astro.params.id || '1';
+if (!/^\d+$/.test(id)) return new Response(null, { status: 404 });
+const page = Math.max(1, Number.parseInt(Astro.url.searchParams.get('page') || '1'));
+const sort = Astro.url.searchParams.get('sort') || 'newest';
+let categories = [];
+let products = [];
+let totalPages = 0;
+let totalProducts = 0;
+let sourceUnavailable = false;
+let invalidPage = false;
+try {
+  const [sourceCategories, productPage] = await Promise.all([getCategories(), getProductPage({ categoryId: id, page, sort })]);
+  categories = sourceCategories;
+  products = productPage.products;
+  totalPages = productPage.totalPages;
+  totalProducts = productPage.totalProducts;
+} catch (error) {
+  if (error instanceof Error && /Source returned 404/.test(error.message)) invalidPage = true;
+  else sourceUnavailable = true;
+}
+const category = categories.find((entry) => entry.id === id);
+invalidPage ||= !sourceUnavailable && (!category || page > Math.max(1, totalPages));
+if (invalidPage) Astro.response.status = 404;
+const heading = category?.name || copy.sections.categories;
+const hasNextPage = page < totalPages;
+const pageNumbers = Array.from({ length: totalPages }, (_, index) => index + 1);
+const canonicalPath = page > 1 ? `/${lang}/category/${id}/?page=${page}` : `/${lang}/category/${id}/`;
+const structuredData = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: copy.nav.home, item: `https://kakobuyworks.com/${lang}/` },
+      { '@type': 'ListItem', position: 2, name: copy.sections.categories, item: `https://kakobuyworks.com/${lang}/categories/` },
+      { '@type': 'ListItem', position: 3, name: heading, item: `https://kakobuyworks.com/${lang}/category/${id}/` }
+    ]
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'CollectionPage',
+    name: `${heading} Kakobuy Spreadsheet`,
+    description: `${copy.listing.body} ${heading}.`,
+    mainEntity: {
+      '@type': 'ItemList',
+      itemListElement: products.map((product, index) => ({
+        '@type': 'ListItem',
+        position: index + 1,
+        url: `https://kakobuyworks.com/${lang}/product/${product.id}/`,
+        name: product.title
+      }))
+    }
+  }
+];
+---
+<BaseLayout lang={lang} title={`${heading} Kakobuy Spreadsheet | Kakobuy Works`} description={`${copy.listing.body} ${heading}.`} canonicalPath={canonicalPath} structuredData={structuredData}>
+  <header class="page-hero"><div class="shell"><nav class="breadcrumbs" aria-label="Breadcrumb"><a href={`/${lang}/`}>{copy.nav.home}</a><span>›</span><a href={`/${lang}/categories/`}>{copy.sections.categories}</a><span>›</span><strong>{heading}</strong></nav><span class="section-kicker">{copy.sections.sourceLive}</span><h1>{heading} Kakobuy Spreadsheet</h1><p>{copy.listing.body} {heading}.</p></div></header>
+  <section class="section"><div class="shell">
+    <nav class="filter-chips" aria-label={copy.sections.categories}>
+      <a href={`/${lang}/spreadsheet/`}>{copy.sections.viewAll}</a>
+      {categories.filter((entry) => entry.id !== '1').map((entry) => <a class:list={{ active: entry.id === id }} href={`/${lang}/category/${entry.id}/`}>{entry.name}</a>)}
+    </nav>
+    <div class="listing-tools">
+      <SearchBar lang={lang} placeholder={copy.hero.placeholder} button={copy.hero.search} compact />
+      <form method="get"><select class="sort-select" name="sort" aria-label={copy.listing.sort} onchange="this.form.submit()">
+        <option value="newest" selected={sort === 'newest'}>{copy.listing.newest}</option>
+        <option value="price-asc" selected={sort === 'price-asc'}>{copy.listing.priceLow}</option>
+        <option value="price-desc" selected={sort === 'price-desc'}>{copy.listing.priceHigh}</option>
+        <option value="name" selected={sort === 'name'}>{copy.listing.name}</option>
+      </select></form>
+    </div>
+    <ProductGrid products={invalidPage ? [] : products} lang={lang} detailsLabel={copy.sections.details} emptyText={sourceUnavailable ? copy.listing.sourceError : copy.listing.noResults} />
+    {products.length > 0 && <nav class="pagination" aria-label="Pagination">
+      <span class="pagination-summary">Page {page} of {totalPages} · {totalProducts.toLocaleString('en-US')} products</span>
+      <div class="pagination-links">
+        {page > 1 && <a rel="prev" href={`?page=${page - 1}&sort=${sort}`}>← {copy.listing.previous}</a>}
+        {pageNumbers.map((pageNumber) => <a class:list={{ active: pageNumber === page }} aria-current={pageNumber === page ? 'page' : undefined} href={`?page=${pageNumber}&sort=${sort}`}>{pageNumber}</a>)}
+        {hasNextPage && <a rel="next" href={`?page=${page + 1}&sort=${sort}`}>{copy.listing.next} →</a>}
+      </div>
+    </nav>}
+  </div></section>
+  <section class="section section-soft"><div class="shell narrow-copy"><span class="section-kicker">{copy.sections.categories}</span><h2>{copy.seo.title}: {heading}</h2><p>{copy.seo.body}</p><a class="text-link" href={`/${lang}/spreadsheet/`}>{copy.sections.viewAll} →</a></div></section>
+</BaseLayout>

@@ -1,0 +1,18 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getCopy, isLang } from '../../lib/i18n';
+
+const langParam = Astro.params.lang;
+if (!isLang(langParam)) return Astro.redirect('/en/', 302);
+const lang = langParam;
+const copy = getCopy(lang);
+const structuredData = {
+  '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: copy.faqs.map(([question, answer]) => ({ '@type': 'Question', name: question, acceptedAnswer: { '@type': 'Answer', text: answer } }))
+};
+---
+<BaseLayout lang={lang} title={`${copy.faqTitle} | Kakobuy Works`} description={copy.seo.body} canonicalPath={`/${lang}/faq/`} structuredData={structuredData}>
+  <header class="page-hero"><div class="shell"><h1>{copy.faqTitle}</h1><p>{copy.seo.body}</p></div></header>
+  <section class="section"><div class="shell faq-list">
+    {copy.faqs.map(([question, answer]) => <details><summary>{question}</summary><p>{answer}</p></details>)}
+  </div></section>
+</BaseLayout>

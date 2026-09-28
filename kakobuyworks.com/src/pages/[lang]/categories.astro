@@ -1,0 +1,21 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getCategories } from '../../lib/source';
+import { getCopy, isLang } from '../../lib/i18n';
+
+const langParam = Astro.params.lang;
+if (!isLang(langParam)) return Astro.redirect('/en/', 302);
+const lang = langParam;
+const copy = getCopy(lang);
+let categories = [];
+try { categories = await getCategories(); } catch {}
+---
+<BaseLayout lang={lang} title={`${copy.sections.categories} | Kakobuy Works`} description={copy.sections.categoriesBody} canonicalPath={`/${lang}/categories/`}>
+  <header class="page-hero"><div class="shell"><span class="section-kicker">{copy.sections.sourceLive}</span><h1>{copy.sections.categories}</h1><p>{copy.sections.categoriesBody}</p></div></header>
+  <section class="section"><div class="shell">
+    {categories.length ? <div class="category-grid">{categories.filter((category) => category.id !== '1').map((category) => (
+      <a class="category-card" href={`/${lang}/category/${category.id}/`}><span>{String(Number(category.id)).padStart(2, '0')}</span><strong>{category.name}</strong><small>{copy.sections.details} →</small></a>
+    ))}</div> : <div class="empty-state"><p>{copy.listing.sourceError}</p></div>}
+  </div></section>
+  <section class="section section-soft"><div class="shell narrow-copy"><span class="section-kicker">{copy.hero.browse}</span><h2>{copy.seo.title}</h2><p>{copy.seo.body}</p><a class="text-link" href={`/${lang}/spreadsheet/`}>{copy.sections.viewAll} →</a></div></section>
+</BaseLayout>

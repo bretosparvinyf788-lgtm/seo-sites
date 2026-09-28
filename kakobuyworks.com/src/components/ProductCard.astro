@@ -1,0 +1,19 @@
+---
+import type { SourceProduct } from '../lib/source';
+import type { Lang } from '../lib/i18n';
+interface Props { product: SourceProduct; lang: Lang; detailsLabel: string }
+const { product, lang, detailsLabel } = Astro.props;
+const productUrl = `/${lang}/product/${product.id}/`;
+---
+<a class="product-card" href={productUrl} aria-label={`${detailsLabel}: ${product.title}`}>
+  <span class="product-image">
+    <img src={product.image} alt={product.title} loading="lazy" decoding="async" referrerpolicy="no-referrer" />
+  </span>
+  <span class="product-copy">
+    <span class="source-badge">kakobuymake.com</span>
+    <strong class="product-title">{product.title}</strong>
+    <span class="product-meta">
+      <strong>{product.priceLabel}</strong>
+    </span>
+  </span>
+</a>
