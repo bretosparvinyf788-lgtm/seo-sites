@@ -17,7 +17,7 @@ export const onRequest = defineMiddleware(async ({ request, url }, next) => {
     && !url.pathname.includes('/search/')
     && !url.pathname.includes('.');
   const cacheKeyUrl = new URL(url);
-  cacheKeyUrl.searchParams.set('__kw_cache', '20260928-1');
+  cacheKeyUrl.searchParams.set('__kw_cache', '20260928-2');
   const cacheKey = new Request(cacheKeyUrl, { method: 'GET' });
 
   if (edgeCache && canCachePage) {
