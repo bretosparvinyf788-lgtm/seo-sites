@@ -120,7 +120,7 @@
     const filters = [...document.querySelectorAll("[data-source-category-filter]")];
     const pagination = document.querySelector("[data-source-pagination]");
     const summary = document.querySelector("[data-source-summary]");
-    let state = {category:1,page:1,q:"",products:[],totalPages:1,sourceUrl:SOURCE_HOME};
+    let state = {category:1,page:1,q:"",products:[],totalPages:1,totalProducts:0,sourceUrl:SOURCE_HOME};
 
     const params = new URLSearchParams(location.search);
     const initialCategory = Number(params.get("category") || 1);
@@ -157,7 +157,8 @@
     function renderProducts() {
       const products = sortedProducts();
       root.innerHTML = products.length ? products.map(product => productCard(product, state.q ? null : state.category)).join("") : errorMarkup();
-      if (summary) summary.innerHTML = `<strong>${products.length}</strong> ${escape(t("results"))} · <a href="${escape(state.sourceUrl)}" target="_blank" rel="noopener">${escape(t("source"))} ↗</a>`;
+      const resultCount = state.totalProducts || products.length;
+      if (summary) summary.innerHTML = `<strong>${resultCount}</strong> ${escape(t("results"))} · <a href="${escape(state.sourceUrl)}" target="_blank" rel="noopener">${escape(t("source"))} ↗</a>`;
       if (pagination) {
         pagination.innerHTML = `<button type="button" data-page="${state.page - 1}" ${state.page <= 1 ? "disabled" : ""}>← ${escape(t("previous"))}</button><span>${escape(t("page"))} ${state.page} / ${state.totalPages}</span><button type="button" data-page="${state.page + 1}" ${state.page >= state.totalPages ? "disabled" : ""}>${escape(t("next"))} →</button>`;
         pagination.querySelectorAll("button:not([disabled])").forEach(button => button.addEventListener("click", () => {
@@ -178,6 +179,7 @@
         const payload = await getJson(`/api/source/catalog?${query}&page=${state.page}`);
         state.products = payload.products;
         state.totalPages = payload.totalPages || 1;
+        state.totalProducts = payload.totalProducts || payload.products.length;
         state.sourceUrl = payload.sourceUrl;
         renderProducts();
       } catch {

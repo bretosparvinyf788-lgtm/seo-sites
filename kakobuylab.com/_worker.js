@@ -77,12 +77,29 @@ function classBlock(html, tag, className) {
   return firstMatch(html, expression);
 }
 
-function parsePages(html) {
+export function parsePages(html) {
   let maxPage = 1;
   for (const match of html.matchAll(/[?&amp;]page=(\d+)/gi)) {
     maxPage = Math.max(maxPage, Number(match[1]) || 1);
   }
+  for (const match of html.matchAll(/共\s*(?:<[^>]+>\s*)*(\d+)\s*(?:<\/[^>]+>\s*)*页/gi)) {
+    maxPage = Math.max(maxPage, Number(match[1]) || 1);
+  }
+  for (const match of stripTags(html).matchAll(/共\s*(\d+)\s*页/gi)) {
+    maxPage = Math.max(maxPage, Number(match[1]) || 1);
+  }
   return maxPage;
+}
+
+export function parseTotalProducts(html) {
+  let total = 0;
+  for (const match of html.matchAll(/<strong>\s*(\d+)\s*<\/strong>\s*条/gi)) {
+    total = Math.max(total, Number(match[1]) || 0);
+  }
+  for (const match of stripTags(html).matchAll(/共\s*\d+\s*页\s*(\d+)\s*条/gi)) {
+    total = Math.max(total, Number(match[1]) || 0);
+  }
+  return total;
 }
 
 export function parseProducts(html, categoryId = null) {
@@ -217,6 +234,7 @@ async function catalogResponse(url) {
       category,
       page,
       totalPages: parsePages(html),
+      totalProducts: parseTotalProducts(html),
       products: parseProducts(html, query ? null : category)
     });
   } catch (error) {
@@ -233,7 +251,8 @@ async function categoriesResponse() {
       return {
         ...category,
         image: first?.image || "",
-        productCount: parseProducts(html, category.id).length,
+        productCount: parseTotalProducts(html) || parseProducts(html, category.id).length,
+        totalPages: parsePages(html),
         sourceUrl: upstream,
         browseUrl: `/products/?category=${category.id}`
       };
@@ -322,7 +341,7 @@ function productPage(product) {
       <aside class="product-info-card"><div class="kicker">Single source of truth</div><h2>No separate product database</h2><p>KakobuyLab renders this page from KakobuyMake and does not maintain a copied product catalog.</p><a class="button secondary" href="/products/">Back to live products</a></aside>
     </div></section>
   </main>
-  <div data-site-footer></div><script src="/translations.js?v=20260924-4" defer></script><script src="/app.js?v=20260924-6" defer></script><script src="/source-catalog.js?v=20260924-3" defer></script>
+  <div data-site-footer></div><script src="/translations.js?v=20260924-4" defer></script><script src="/app.js?v=20260924-6" defer></script><script src="/source-catalog.js?v=20260928-1" defer></script>
 </body></html>`;
 }
 
