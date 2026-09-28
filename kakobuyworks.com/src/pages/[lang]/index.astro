@@ -1,6 +1,5 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import SearchBar from '../../components/SearchBar.astro';
 import ProductGrid from '../../components/ProductGrid.astro';
 import GuideCard from '../../components/GuideCard.astro';
 import { getCategories, getProducts } from '../../lib/source';
@@ -23,6 +22,8 @@ try {
 } catch (error) {
   console.error('SOURCE_HOME_ERROR', error);
   sourceUnavailable = true;
+  Astro.response.status = 503;
+  Astro.response.headers.set('retry-after', '300');
 }
 
 const title = `${copy.hero.title} | ${copy.sections.recent}`;
@@ -50,13 +51,12 @@ const structuredData = [
   }
 ];
 ---
-<BaseLayout lang={lang} title={title} description={description} canonicalPath={`/${lang}/`} structuredData={structuredData}>
+<BaseLayout lang={lang} title={title} description={description} canonicalPath={`/${lang}/`} robots={sourceUnavailable ? 'noindex,follow' : undefined} structuredData={structuredData}>
   <section class="hero">
     <div class="shell hero-inner">
       <span class="eyebrow">{copy.hero.eyebrow}</span>
       <h1>{copy.hero.title}</h1>
       <p>{copy.hero.body}</p>
-      <SearchBar lang={lang} placeholder={copy.hero.placeholder} button={copy.hero.search} />
       <div class="hero-actions"><a class="text-link" href={`/${lang}/spreadsheet/`}>{copy.hero.browse} →</a></div>
       <nav class="hero-category-links" aria-label={copy.sections.categories}>
         <span>{copy.sections.categories}</span>

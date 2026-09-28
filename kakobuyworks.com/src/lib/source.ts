@@ -7,8 +7,23 @@ const SOURCE_SITE = (runtimeEnv?.SOURCE_SITE || (typeof process !== 'undefined' 
 // Keep it discoverable under Other Stuff without copying its product data.
 const CATEGORY_FALLBACK_IDS: Record<string, string[]> = { '11': ['609'] };
 const SOURCE_CACHE_TTL = 5 * 60 * 1000;
+const SOURCE_STALE_TTL = 24 * 60 * 60 * 1000;
 const sourceCache = new Map<string, { expires: number; html: string }>();
 const sourceRequests = new Map<string, Promise<string>>();
+
+export class SourceNotFoundError extends Error {
+  constructor(message = 'Source returned 404') {
+    super(message);
+    this.name = 'SourceNotFoundError';
+  }
+}
+
+export class SourceUnavailableError extends Error {
+  constructor(message = 'Source is temporarily unavailable', options?: ErrorOptions) {
+    super(message, options);
+    this.name = 'SourceUnavailableError';
+  }
+}
 
 export type SourceProduct = {
   id: string;
@@ -54,22 +69,63 @@ async function fetchSource(path: string) {
   if (pending) return pending;
 
   const request = (async () => {
-    const controller = new AbortController();
-    const timeout = setTimeout(() => controller.abort(), 18000);
+    const sourceUrl = `${SOURCE_SITE}${path}`;
+    const edgeCache = (globalThis as typeof globalThis & {
+      caches?: CacheStorage & { default?: Cache };
+    }).caches?.default;
+    const cacheRequest = new Request(sourceUrl, { method: 'GET' });
+    let staleHtml = '';
+
     try {
-      const response = await fetch(`${SOURCE_SITE}${path}`, {
-        headers: {
-          Accept: 'text/html,application/xhtml+xml',
-          'User-Agent': 'kakobuyworks.com/1.0 (+https://kakobuyworks.com)'
-        },
-        signal: controller.signal
-      });
-      if (!response.ok) throw new Error(`Source returned ${response.status}`);
-      const html = await response.text();
-      sourceCache.set(path, { expires: Date.now() + SOURCE_CACHE_TTL, html });
-      return html;
+      if (edgeCache) {
+        const cachedResponse = await edgeCache.match(cacheRequest);
+        if (cachedResponse) {
+          staleHtml = await cachedResponse.text();
+          const fetchedAt = Number(cachedResponse.headers.get('x-source-fetched-at') || 0);
+          if (staleHtml && fetchedAt && Date.now() - fetchedAt < SOURCE_CACHE_TTL) {
+            sourceCache.set(path, { expires: Date.now() + SOURCE_CACHE_TTL, html: staleHtml });
+            return staleHtml;
+          }
+        }
+      }
+
+      const controller = new AbortController();
+      const timeout = setTimeout(() => controller.abort(), 15000);
+      try {
+        const response = await fetch(sourceUrl, {
+          headers: {
+            Accept: 'text/html,application/xhtml+xml',
+            'User-Agent': 'kakobuyworks.com/1.0 (+https://kakobuyworks.com)'
+          },
+          signal: controller.signal
+        });
+        if (response.status === 404) throw new SourceNotFoundError();
+        if (!response.ok) throw new SourceUnavailableError(`Source returned ${response.status}`);
+        const html = await response.text();
+        sourceCache.set(path, { expires: Date.now() + SOURCE_CACHE_TTL, html });
+        if (edgeCache) {
+          const cacheResponse = new Response(html, {
+            headers: {
+              'content-type': 'text/html; charset=utf-8',
+              'cache-control': `public, max-age=${SOURCE_STALE_TTL / 1000}`,
+              'x-source-fetched-at': String(Date.now())
+            }
+          });
+          await edgeCache.put(cacheRequest, cacheResponse);
+        }
+        return html;
+      } catch (error) {
+        if (error instanceof SourceNotFoundError) throw error;
+        if (staleHtml) {
+          sourceCache.set(path, { expires: Date.now() + SOURCE_CACHE_TTL, html: staleHtml });
+          return staleHtml;
+        }
+        if (error instanceof SourceUnavailableError) throw error;
+        throw new SourceUnavailableError('Source request failed', { cause: error });
+      } finally {
+        clearTimeout(timeout);
+      }
     } finally {
-      clearTimeout(timeout);
       sourceRequests.delete(path);
     }
   })();

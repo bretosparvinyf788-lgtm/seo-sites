@@ -1,9 +1,7 @@
 import type { APIRoute } from 'astro';
 import { languageOrder } from '../../../../lib/i18n';
 import { getCategories, getProductPage } from '../../../../lib/source';
-
-const SITE = 'https://kakobuyworks.com';
-const xml = (value: string) => value.replaceAll('&', '&amp;').replaceAll('<', '&lt;').replaceAll('>', '&gt;');
+import { sitemapUrlEntry } from '../../../../lib/sitemap';
 
 export const GET: APIRoute = async ({ params }) => {
   const id = params.id || '';
@@ -17,9 +15,9 @@ export const GET: APIRoute = async ({ params }) => {
     if (page > result.totalPages || result.products.length === 0) return new Response(null, { status: 404 });
 
     const urls = result.products.flatMap((product) =>
-      languageOrder.map((lang) => `${SITE}/${lang}/product/${product.id}/`)
+      languageOrder.map((lang) => sitemapUrlEntry(lang, `product/${product.id}/`))
     );
-    const body = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">${urls.map((url) => `<url><loc>${xml(url)}</loc></url>`).join('')}</urlset>`;
+    const body = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">${urls.join('')}</urlset>`;
     return new Response(body, {
       headers: {
         'content-type': 'application/xml; charset=utf-8',

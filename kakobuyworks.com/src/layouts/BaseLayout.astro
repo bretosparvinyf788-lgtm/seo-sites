@@ -9,14 +9,30 @@ interface Props {
   title: string;
   description: string;
   canonicalPath?: string;
+  image?: string;
+  robots?: string;
   structuredData?: Record<string, unknown> | Array<Record<string, unknown>>;
 }
 
-const { lang, title, description, canonicalPath = Astro.url.pathname, structuredData } = Astro.props;
+const {
+  lang,
+  title,
+  description,
+  canonicalPath = Astro.url.pathname,
+  image = '/images/guides/kakobuy-spreadsheet-guide-v2.webp',
+  robots = 'index,follow,max-image-preview:large',
+  structuredData
+} = Astro.props;
 const copy = getCopy(lang);
 const guideCopy = getGuideUi(lang);
-const canonical = new URL(canonicalPath, Astro.site || 'https://kakobuyworks.com').href;
+const site = Astro.site || new URL('https://kakobuyworks.com');
+const canonical = new URL(canonicalPath, site).href;
+const socialImage = new URL(image, site).href;
 const relativePath = Astro.url.pathname.replace(/^\/[a-z]{2}(?=\/|$)/, '') || '/';
+const gaCandidate = import.meta.env.PUBLIC_GA_MEASUREMENT_ID || '';
+const gaId = /^G-[A-Z0-9]+$/.test(gaCandidate) ? gaCandidate : '';
+const googleVerification = import.meta.env.PUBLIC_GOOGLE_SITE_VERIFICATION || '';
+const bingVerification = import.meta.env.PUBLIC_BING_SITE_VERIFICATION || '';
 ---
 <!doctype html>
 <html lang={lang}>
@@ -24,9 +40,11 @@ const relativePath = Astro.url.pathname.replace(/^\/[a-z]{2}(?=\/|$)/, '') || '/
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content={description} />
-    <meta name="robots" content="index,follow,max-image-preview:large" />
+    <meta name="robots" content={robots} />
+    {googleVerification && <meta name="google-site-verification" content={googleVerification} />}
+    {bingVerification && <meta name="msvalidate.01" content={bingVerification} />}
     <link rel="canonical" href={canonical} />
-    <link rel="icon" href="https://www.kakobuy.com/favicon.ico" sizes="any" />
+    <link rel="icon" href="/brand/kakobuy-favicon.svg" type="image/svg+xml" />
     {Object.keys(languages).map((code) => (
       <link rel="alternate" hreflang={code === 'zh' ? 'zh-CN' : code} href={new URL(`/${code}${relativePath}`, Astro.site || 'https://kakobuyworks.com').href} />
     ))}
@@ -35,9 +53,21 @@ const relativePath = Astro.url.pathname.replace(/^\/[a-z]{2}(?=\/|$)/, '') || '/
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:url" content={canonical} />
-    <meta name="twitter:card" content="summary" />
+    <meta property="og:image" content={socialImage} />
+    <meta property="og:image:alt" content={title} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={socialImage} />
     <title>{title}</title>
     {structuredData && <script type="application/ld+json" set:html={JSON.stringify(structuredData)} />}
+    {gaId && <script async src={`https://www.googletagmanager.com/gtag/js?id=${gaId}`}></script>}
+    {gaId && <script is:inline define:vars={{ gaId }}>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', gaId, { anonymize_ip: true });
+    </script>}
   </head>
   <body>
     <Header lang={lang} />
@@ -47,7 +77,7 @@ const relativePath = Astro.url.pathname.replace(/^\/[a-z]{2}(?=\/|$)/, '') || '/
     <footer class="site-footer">
       <div class="shell footer-grid">
         <div>
-          <img class="footer-logo" src="https://nstatic.kakobuy.com/www/pic/kkb/logo.png" alt="Kakobuy" width="158" height="40" loading="lazy" />
+          <img class="footer-logo" src="/brand/kakobuy-logo.svg" alt="Kakobuy" width="158" height="40" loading="lazy" />
           <p>{copy.listing.body} {copy.product.currentNotice}</p>
         </div>
         <div class="footer-links">
@@ -55,10 +85,10 @@ const relativePath = Astro.url.pathname.replace(/^\/[a-z]{2}(?=\/|$)/, '') || '/
           <a href={`/${lang}/categories/`}>{copy.nav.categories}</a>
           <a href={`/${lang}/guides/`}>{guideCopy.nav}</a>
           <a href={`/${lang}/#faq`}>{copy.nav.faq}</a>
-          <a href="https://www.kakobuy.com/register/?affcode=9qtwd" rel="nofollow sponsored" target="_blank">Create Kakobuy account</a>
+          <a href="https://www.kakobuy.com/register/?affcode=9qtwd" rel="nofollow sponsored" target="_blank">{copy.product.openKakobuy}</a>
         </div>
       </div>
-      <div class="shell footer-bottom">© {new Date().getUTCFullYear()} Kakobuy Works · Not an official Kakobuy website.</div>
+      <div class="shell footer-bottom">© {new Date().getUTCFullYear()} Kakobuy Works</div>
     </footer>
   </body>
 </html>

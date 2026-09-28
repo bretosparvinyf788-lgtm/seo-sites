@@ -8,9 +8,14 @@ if (!isLang(langParam)) return Astro.redirect('/en/', 302);
 const lang = langParam;
 const copy = getCopy(lang);
 let categories = [];
-try { categories = await getCategories(); } catch {}
+let sourceUnavailable = false;
+try { categories = await getCategories(); } catch {
+  sourceUnavailable = true;
+  Astro.response.status = 503;
+  Astro.response.headers.set('retry-after', '300');
+}
 ---
-<BaseLayout lang={lang} title={`${copy.sections.categories} | Kakobuy Works`} description={copy.sections.categoriesBody} canonicalPath={`/${lang}/categories/`}>
+<BaseLayout lang={lang} title={`${copy.sections.categories} | Kakobuy Works`} description={copy.sections.categoriesBody} canonicalPath={`/${lang}/categories/`} robots={sourceUnavailable ? 'noindex,follow' : undefined}>
   <header class="page-hero"><div class="shell"><span class="section-kicker">{copy.sections.sourceLive}</span><h1>{copy.sections.categories}</h1><p>{copy.sections.categoriesBody}</p></div></header>
   <section class="section"><div class="shell">
     {categories.length ? <div class="category-grid">{categories.filter((category) => category.id !== '1').map((category) => (

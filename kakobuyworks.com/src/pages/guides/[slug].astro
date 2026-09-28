@@ -1,0 +1,11 @@
+---
+const slug = Astro.params.slug || '';
+const legacyGuideMap: Record<string, string> = {
+  'The-Ultimate-Cheap-Dorm-Setup-Chinese-Products-Every-Student-Wishes-They-Bought-Earlier': 'how-to-use-kakobuy-spreadsheet',
+  'From-Runway-Screenshots-to-Real-Life-Fits-The-2026-Method-for-Finding-Premium-Streetwear-on-1688': 'how-to-use-kakobuy-spreadsheet'
+};
+const destination = legacyGuideMap[slug]
+  ? `/en/guides/${legacyGuideMap[slug]}/`
+  : '/en/guides/';
+return Astro.redirect(destination, 301);
+---

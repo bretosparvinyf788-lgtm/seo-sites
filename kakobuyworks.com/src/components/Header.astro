@@ -1,7 +1,6 @@
 ---
 import { getCopy, languageOrder, languages, type Lang } from '../lib/i18n';
 import { getGuideUi } from '../lib/guides';
-import SearchBar from './SearchBar.astro';
 
 interface Props { lang: Lang }
 const { lang } = Astro.props;
@@ -18,7 +17,7 @@ const isGuides = relativePath.startsWith('/guides');
 <header class="site-header">
   <div class="shell nav-shell">
     <a class="brand" href={`/${lang}/`} aria-label="Kakobuy Spreadsheet home">
-      <img src="https://nstatic.kakobuy.com/www/pic/kkb/logo.png" alt="Kakobuy" width="158" height="40" />
+      <img src="/brand/kakobuy-logo.svg" alt="Kakobuy" width="158" height="40" />
       <span>SPREADSHEET</span>
     </a>
     <nav class="desktop-nav" aria-label="Primary navigation">
@@ -28,7 +27,6 @@ const isGuides = relativePath.startsWith('/guides');
       <a class:list={{ active: isGuides }} aria-current={isGuides ? 'page' : undefined} href={`/${lang}/guides/`}>{guideCopy.nav}</a>
       <a class:list={{ active: isFaq }} aria-current={isFaq ? 'page' : undefined} href={`/${lang}/#faq`}>{copy.nav.faq}</a>
     </nav>
-    <div class="header-search"><SearchBar lang={lang} placeholder={copy.hero.placeholder} button="→" buttonAriaLabel={copy.hero.search} compact /></div>
     <div class="nav-actions">
       <details class="language-menu">
         <summary>{languages[lang].label} <small>{languages[lang].short}</small> <span aria-hidden="true">⌄</span></summary>

@@ -1,8 +1,6 @@
 import type { APIRoute } from 'astro';
 import { getCategories, getProductPage } from '../lib/source';
-
-const SITE = 'https://kakobuyworks.com';
-const xml = (value: string) => value.replaceAll('&', '&amp;').replaceAll('<', '&lt;').replaceAll('>', '&gt;');
+import { SITE, SITE_LASTMOD, xml } from '../lib/sitemap';
 
 export const GET: APIRoute = async () => {
   let sitemapUrls = [`${SITE}/sitemaps/static.xml`];
@@ -22,7 +20,7 @@ export const GET: APIRoute = async () => {
     // Keep the static sitemap available if the live source is temporarily unavailable.
   }
 
-  const body = `<?xml version="1.0" encoding="UTF-8"?>\n<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">${sitemapUrls.map((url) => `<sitemap><loc>${xml(url)}</loc></sitemap>`).join('')}</sitemapindex>`;
+  const body = `<?xml version="1.0" encoding="UTF-8"?>\n<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">${sitemapUrls.map((url) => `<sitemap><loc>${xml(url)}</loc><lastmod>${SITE_LASTMOD}</lastmod></sitemap>`).join('')}</sitemapindex>`;
   return new Response(body, {
     headers: {
       'content-type': 'application/xml; charset=utf-8',

@@ -2,6 +2,12 @@ import { cp, copyFile, readdir } from 'node:fs/promises';
 import { fileURLToPath } from 'node:url';
 import { build } from 'esbuild';
 
+const isCloudflareBuild = process.env.CF_PAGES === '1' || process.env.ASTRO_ADAPTER === 'cloudflare';
+if (!isCloudflareBuild) {
+  console.log('Skipped Cloudflare Pages output normalization for the local Node build.');
+  process.exit(0);
+}
+
 const dist = new URL('../dist/', import.meta.url);
 const client = new URL('../dist/client/', import.meta.url);
 const serverEntry = new URL('../dist/server/entry.mjs', import.meta.url);

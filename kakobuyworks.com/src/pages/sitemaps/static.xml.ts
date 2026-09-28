@@ -2,9 +2,7 @@ import type { APIRoute } from 'astro';
 import { languageOrder } from '../../lib/i18n';
 import { getCategories, getProductPage } from '../../lib/source';
 import { guides } from '../../lib/guides';
-
-const SITE = 'https://kakobuyworks.com';
-const xml = (value: string) => value.replaceAll('&', '&amp;').replaceAll('<', '&lt;').replaceAll('>', '&gt;');
+import { SITE_LASTMOD, sitemapUrlEntry } from '../../lib/sitemap';
 
 export const GET: APIRoute = async () => {
   const staticRoutes = ['', 'spreadsheet/', 'categories/', 'guides/', 'faq/'];
@@ -25,10 +23,10 @@ export const GET: APIRoute = async () => {
   }
 
   const urls = languageOrder.flatMap((lang) =>
-    [...staticRoutes, ...categoryRoutes].map((route) => `${SITE}/${lang}/${route}`)
+    [...staticRoutes, ...categoryRoutes].map((route) => sitemapUrlEntry(lang, route, SITE_LASTMOD))
   );
-  urls.push(...languageOrder.flatMap((lang) => guides.map((guide) => `${SITE}/${lang}/guides/${guide.slug}/`)));
-  const body = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">${urls.map((url) => `<url><loc>${xml(url)}</loc></url>`).join('')}</urlset>`;
+  urls.push(...languageOrder.flatMap((lang) => guides.map((guide) => sitemapUrlEntry(lang, `guides/${guide.slug}/`, guide.date))));
+  const body = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">${urls.join('')}</urlset>`;
   return new Response(body, {
     headers: {
       'content-type': 'application/xml; charset=utf-8',

@@ -324,6 +324,159 @@ const detailPurchaseDirections: Record<Lang, string> = {
   zh: '打开本站商品详情页，查看来源图片和价格，然后点击唯一的 Kakobuy 按钮继续。'
 };
 
+const faqExtras: Record<Lang, Array<[string, string]>> = {
+  en: [
+    ['Is Kakobuy Works an official Kakobuy website?', 'No. Kakobuy Works is an independent product research directory and is not operated by Kakobuy.'],
+    ['What should I verify before ordering?', 'Confirm the marketplace item, selected variant, live price, seller status and any shipping restrictions on the Kakobuy page.'],
+    ['Does the displayed price include shipping and service fees?', 'No. The displayed amount is a source product price. International shipping, optional services and other charges are calculated separately.'],
+    ['Can reference photos guarantee the item I receive?', 'No. Reference photos help with research, but your item may come from another batch. Review the QC photos for your own warehouse order.']
+  ],
+  de: [
+    ['Ist Kakobuy Works eine offizielle Kakobuy-Website?', 'Nein. Kakobuy Works ist ein unabhängiger Produktkatalog und wird nicht von Kakobuy betrieben.'],
+    ['Was sollte ich vor der Bestellung prüfen?', 'Prüfe den Marktplatzartikel, die gewählte Variante, den aktuellen Preis, den Verkäuferstatus und mögliche Versandbeschränkungen in Kakobuy.'],
+    ['Enthält der angezeigte Preis Versand- und Servicegebühren?', 'Nein. Angezeigt wird der Quellpreis des Produkts. Internationaler Versand, optionale Leistungen und weitere Gebühren werden separat berechnet.'],
+    ['Garantieren Referenzfotos den Artikel, den ich erhalte?', 'Nein. Referenzfotos helfen bei der Auswahl, aber dein Artikel kann aus einer anderen Charge stammen. Prüfe die QC-Fotos deiner eigenen Lagerbestellung.']
+  ],
+  es: [
+    ['¿Kakobuy Works es un sitio web oficial de Kakobuy?', 'No. Kakobuy Works es un directorio independiente de investigación de productos y no está operado por Kakobuy.'],
+    ['¿Qué debo comprobar antes de comprar?', 'Confirma el artículo, la variante elegida, el precio actual, el estado del vendedor y las restricciones de envío en Kakobuy.'],
+    ['¿El precio mostrado incluye envío y tarifas de servicio?', 'No. Es el precio del producto en la fuente. El envío internacional, los servicios opcionales y otros cargos se calculan por separado.'],
+    ['¿Las fotos de referencia garantizan el artículo que recibiré?', 'No. Sirven para investigar, pero tu artículo puede ser de otro lote. Revisa las fotos QC de tu propio pedido en el almacén.']
+  ],
+  fr: [
+    ['Kakobuy Works est-il un site officiel de Kakobuy ?', 'Non. Kakobuy Works est un répertoire indépendant de recherche de produits et n’est pas exploité par Kakobuy.'],
+    ['Que dois-je vérifier avant de commander ?', 'Confirmez l’article, la variante choisie, le prix actuel, le statut du vendeur et les restrictions d’expédition dans Kakobuy.'],
+    ['Le prix affiché comprend-il l’expédition et les frais de service ?', 'Non. Il s’agit du prix source du produit. L’expédition internationale, les services optionnels et les autres frais sont calculés séparément.'],
+    ['Les photos de référence garantissent-elles l’article reçu ?', 'Non. Elles aident à la recherche, mais votre article peut provenir d’un autre lot. Examinez les photos QC de votre propre commande en entrepôt.']
+  ],
+  it: [
+    ['Kakobuy Works è un sito ufficiale di Kakobuy?', 'No. Kakobuy Works è una directory indipendente per la ricerca di prodotti e non è gestita da Kakobuy.'],
+    ['Cosa devo verificare prima di ordinare?', 'Controlla l’articolo, la variante scelta, il prezzo attuale, lo stato del venditore e le restrizioni di spedizione su Kakobuy.'],
+    ['Il prezzo mostrato include spedizione e costi di servizio?', 'No. È il prezzo del prodotto alla fonte. Spedizione internazionale, servizi opzionali e altri costi vengono calcolati separatamente.'],
+    ['Le foto di riferimento garantiscono l’articolo che riceverò?', 'No. Aiutano nella ricerca, ma l’articolo può provenire da un lotto diverso. Controlla le foto QC del tuo ordine in magazzino.']
+  ],
+  pl: [
+    ['Czy Kakobuy Works jest oficjalną stroną Kakobuy?', 'Nie. Kakobuy Works to niezależny katalog do wyszukiwania produktów, nieprowadzony przez Kakobuy.'],
+    ['Co sprawdzić przed zamówieniem?', 'Potwierdź produkt, wybrany wariant, aktualną cenę, status sprzedawcy i ograniczenia wysyłki na stronie Kakobuy.'],
+    ['Czy wyświetlana cena obejmuje wysyłkę i opłaty za usługi?', 'Nie. To cena produktu ze źródła. Wysyłka międzynarodowa, usługi opcjonalne i inne opłaty są obliczane oddzielnie.'],
+    ['Czy zdjęcia referencyjne gwarantują otrzymany produkt?', 'Nie. Pomagają w wyborze, ale produkt może pochodzić z innej partii. Sprawdź zdjęcia QC własnego zamówienia w magazynie.']
+  ],
+  pt: [
+    ['O Kakobuy Works é um site oficial da Kakobuy?', 'Não. O Kakobuy Works é um diretório independente de pesquisa de produtos e não é operado pela Kakobuy.'],
+    ['O que devo verificar antes de comprar?', 'Confirme o item, a variante escolhida, o preço atual, a situação do vendedor e as restrições de envio no Kakobuy.'],
+    ['O preço exibido inclui frete e taxas de serviço?', 'Não. Ele representa o preço do produto na origem. Frete internacional, serviços opcionais e outras cobranças são calculados separadamente.'],
+    ['As fotos de referência garantem o item que vou receber?', 'Não. Elas ajudam na pesquisa, mas seu item pode ser de outro lote. Confira as fotos QC do seu próprio pedido no armazém.']
+  ],
+  ro: [
+    ['Kakobuy Works este un site oficial Kakobuy?', 'Nu. Kakobuy Works este un catalog independent pentru cercetarea produselor și nu este administrat de Kakobuy.'],
+    ['Ce trebuie să verific înainte de comandă?', 'Confirmă produsul, varianta aleasă, prețul actual, starea vânzătorului și restricțiile de livrare în Kakobuy.'],
+    ['Prețul afișat include transportul și taxele de serviciu?', 'Nu. Este prețul produsului din sursă. Transportul internațional, serviciile opționale și alte taxe se calculează separat.'],
+    ['Fotografiile de referință garantează produsul primit?', 'Nu. Ele ajută la cercetare, dar produsul poate proveni din alt lot. Verifică fotografiile QC ale propriei comenzi din depozit.']
+  ],
+  sv: [
+    ['Är Kakobuy Works en officiell Kakobuy-webbplats?', 'Nej. Kakobuy Works är en oberoende katalog för produktundersökning och drivs inte av Kakobuy.'],
+    ['Vad bör jag kontrollera före beställning?', 'Bekräfta marknadsplatsens artikel, vald variant, aktuellt pris, säljarstatus och leveransbegränsningar i Kakobuy.'],
+    ['Ingår frakt och serviceavgifter i det visade priset?', 'Nej. Det är produktens källpris. Internationell frakt, tillvalstjänster och andra avgifter beräknas separat.'],
+    ['Garanterar referensbilderna varan jag får?', 'Nej. De hjälper vid undersökningen, men din vara kan komma från en annan batch. Granska QC-bilderna för din egen lagerorder.']
+  ],
+  nl: [
+    ['Is Kakobuy Works een officiële Kakobuy-website?', 'Nee. Kakobuy Works is een onafhankelijke productcatalogus en wordt niet door Kakobuy beheerd.'],
+    ['Wat moet ik vóór het bestellen controleren?', 'Controleer het artikel, de gekozen variant, de actuele prijs, de verkoper en eventuele verzendbeperkingen in Kakobuy.'],
+    ['Zijn verzending en servicekosten inbegrepen in de getoonde prijs?', 'Nee. Dit is de bronprijs van het product. Internationale verzending, optionele diensten en andere kosten worden apart berekend.'],
+    ['Garanderen referentiefoto’s het artikel dat ik ontvang?', 'Nee. Ze helpen bij onderzoek, maar je artikel kan uit een andere partij komen. Bekijk de QC-foto’s van je eigen magazijnbestelling.']
+  ],
+  da: [
+    ['Er Kakobuy Works en officiel Kakobuy-hjemmeside?', 'Nej. Kakobuy Works er et uafhængigt produktkatalog og drives ikke af Kakobuy.'],
+    ['Hvad skal jeg kontrollere før bestilling?', 'Bekræft varen, den valgte variant, den aktuelle pris, sælgerstatus og eventuelle forsendelsesbegrænsninger i Kakobuy.'],
+    ['Indeholder den viste pris fragt og servicegebyrer?', 'Nej. Det er produktets kildepris. International fragt, valgfrie tjenester og andre gebyrer beregnes separat.'],
+    ['Garanterer referencefotos den vare, jeg modtager?', 'Nej. De hjælper med research, men din vare kan komme fra et andet parti. Gennemgå QC-fotos for din egen lagerordre.']
+  ],
+  fi: [
+    ['Onko Kakobuy Works Kakobuyn virallinen sivusto?', 'Ei. Kakobuy Works on itsenäinen tuotehakemisto, eikä Kakobuy ylläpidä sitä.'],
+    ['Mitä minun tulee tarkistaa ennen tilaamista?', 'Vahvista tuote, valittu vaihtoehto, ajantasainen hinta, myyjän tila ja toimitusrajoitukset Kakobuyssa.'],
+    ['Sisältääkö näytetty hinta toimituksen ja palvelumaksut?', 'Ei. Se on tuotteen lähdehinta. Kansainvälinen toimitus, valinnaiset palvelut ja muut maksut lasketaan erikseen.'],
+    ['Takaavatko viitekuvat saamani tuotteen?', 'Eivät. Ne auttavat tutkimuksessa, mutta tuote voi olla eri erästä. Tarkista oman varastotilauksesi QC-kuvat.']
+  ],
+  el: [
+    ['Είναι το Kakobuy Works επίσημος ιστότοπος της Kakobuy;', 'Όχι. Το Kakobuy Works είναι ανεξάρτητος κατάλογος έρευνας προϊόντων και δεν λειτουργεί από την Kakobuy.'],
+    ['Τι πρέπει να ελέγξω πριν από την παραγγελία;', 'Επιβεβαιώστε το προϊόν, την επιλεγμένη παραλλαγή, την τρέχουσα τιμή, την κατάσταση του πωλητή και τους περιορισμούς αποστολής στο Kakobuy.'],
+    ['Η τιμή περιλαμβάνει μεταφορικά και τέλη υπηρεσίας;', 'Όχι. Είναι η τιμή πηγής του προϊόντος. Η διεθνής αποστολή, οι προαιρετικές υπηρεσίες και άλλες χρεώσεις υπολογίζονται χωριστά.'],
+    ['Οι φωτογραφίες αναφοράς εγγυώνται το προϊόν που θα λάβω;', 'Όχι. Βοηθούν στην έρευνα, αλλά το προϊόν μπορεί να προέρχεται από άλλη παρτίδα. Ελέγξτε τις φωτογραφίες QC της δικής σας παραγγελίας.']
+  ],
+  cs: [
+    ['Je Kakobuy Works oficiální web Kakobuy?', 'Ne. Kakobuy Works je nezávislý katalog pro vyhledávání produktů a neprovozuje jej Kakobuy.'],
+    ['Co mám zkontrolovat před objednávkou?', 'V Kakobuy ověřte položku, vybranou variantu, aktuální cenu, stav prodejce a případná omezení dopravy.'],
+    ['Zahrnuje zobrazená cena dopravu a servisní poplatky?', 'Ne. Jde o zdrojovou cenu produktu. Mezinárodní doprava, volitelné služby a další poplatky se počítají zvlášť.'],
+    ['Zaručují referenční fotografie produkt, který obdržím?', 'Ne. Pomáhají při výběru, ale produkt může pocházet z jiné série. Zkontrolujte QC fotografie vlastní skladové objednávky.']
+  ],
+  hu: [
+    ['A Kakobuy Works hivatalos Kakobuy weboldal?', 'Nem. A Kakobuy Works független termékkutató katalógus, és nem a Kakobuy üzemelteti.'],
+    ['Mit ellenőrizzek rendelés előtt?', 'Ellenőrizze a piactéri terméket, a kiválasztott változatot, az aktuális árat, az eladó állapotát és a szállítási korlátozásokat a Kakobuyban.'],
+    ['A megjelenített ár tartalmazza a szállítást és a szolgáltatási díjakat?', 'Nem. Ez a termék forrására. A nemzetközi szállítás, a választható szolgáltatások és más díjak külön kerülnek kiszámításra.'],
+    ['A referenciafotók garantálják a kapott terméket?', 'Nem. Segítik a kutatást, de a termék más gyártási tételből származhat. Ellenőrizze saját raktári rendelésének QC-fotóit.']
+  ],
+  bg: [
+    ['Kakobuy Works официален сайт на Kakobuy ли е?', 'Не. Kakobuy Works е независим каталог за проучване на продукти и не се управлява от Kakobuy.'],
+    ['Какво да проверя преди поръчка?', 'Потвърдете продукта, избрания вариант, текущата цена, статуса на продавача и ограниченията за доставка в Kakobuy.'],
+    ['Показаната цена включва ли доставка и такси за услуги?', 'Не. Това е изходната цена на продукта. Международната доставка, допълнителните услуги и другите такси се изчисляват отделно.'],
+    ['Референтните снимки гарантират ли получения продукт?', 'Не. Те помагат при проучването, но продуктът може да е от друга партида. Проверете QC снимките на собствената си складова поръчка.']
+  ],
+  sk: [
+    ['Je Kakobuy Works oficiálna stránka Kakobuy?', 'Nie. Kakobuy Works je nezávislý katalóg na vyhľadávanie produktov a neprevádzkuje ho Kakobuy.'],
+    ['Čo mám skontrolovať pred objednávkou?', 'V Kakobuy overte položku, zvolený variant, aktuálnu cenu, stav predajcu a prípadné obmedzenia dopravy.'],
+    ['Zahŕňa zobrazená cena dopravu a servisné poplatky?', 'Nie. Ide o zdrojovú cenu produktu. Medzinárodná doprava, voliteľné služby a ďalšie poplatky sa počítajú samostatne.'],
+    ['Zaručujú referenčné fotografie produkt, ktorý dostanem?', 'Nie. Pomáhajú pri výbere, ale produkt môže byť z inej série. Skontrolujte QC fotografie vlastnej skladovej objednávky.']
+  ],
+  hr: [
+    ['Je li Kakobuy Works službena Kakobuy stranica?', 'Ne. Kakobuy Works je neovisan katalog za istraživanje proizvoda i njime ne upravlja Kakobuy.'],
+    ['Što trebam provjeriti prije narudžbe?', 'U Kakobuyu potvrdite proizvod, odabranu varijantu, trenutnu cijenu, status prodavača i ograničenja dostave.'],
+    ['Uključuje li prikazana cijena dostavu i naknade za usluge?', 'Ne. To je izvorna cijena proizvoda. Međunarodna dostava, dodatne usluge i druge naknade izračunavaju se zasebno.'],
+    ['Jamče li referentne fotografije proizvod koji ću dobiti?', 'Ne. Pomažu pri istraživanju, ali proizvod može biti iz druge serije. Pregledajte QC fotografije vlastite skladišne narudžbe.']
+  ],
+  sl: [
+    ['Je Kakobuy Works uradna stran Kakobuy?', 'Ne. Kakobuy Works je neodvisen katalog za raziskovanje izdelkov in ga ne upravlja Kakobuy.'],
+    ['Kaj moram preveriti pred naročilom?', 'V Kakobuyu potrdite izdelek, izbrano različico, trenutno ceno, stanje prodajalca in omejitve dostave.'],
+    ['Ali prikazana cena vključuje dostavo in storitvene stroške?', 'Ne. Gre za izvorno ceno izdelka. Mednarodna dostava, izbirne storitve in drugi stroški se izračunajo posebej.'],
+    ['Ali referenčne fotografije zagotavljajo izdelek, ki ga prejmem?', 'Ne. Pomagajo pri raziskovanju, vendar je izdelek lahko iz druge serije. Preglejte QC fotografije svojega skladiščnega naročila.']
+  ],
+  lt: [
+    ['Ar Kakobuy Works yra oficiali Kakobuy svetainė?', 'Ne. Kakobuy Works yra nepriklausomas produktų paieškos katalogas, kurio nevaldo Kakobuy.'],
+    ['Ką patikrinti prieš užsakant?', 'Kakobuy puslapyje patvirtinkite prekę, pasirinktą variantą, dabartinę kainą, pardavėjo būseną ir siuntimo apribojimus.'],
+    ['Ar rodoma kaina apima siuntimą ir paslaugų mokesčius?', 'Ne. Tai šaltinio produkto kaina. Tarptautinis siuntimas, papildomos paslaugos ir kiti mokesčiai skaičiuojami atskirai.'],
+    ['Ar nuotraukos garantuoja prekę, kurią gausiu?', 'Ne. Jos padeda renkantis, tačiau prekė gali būti iš kitos partijos. Peržiūrėkite savo sandėlio užsakymo QC nuotraukas.']
+  ],
+  lv: [
+    ['Vai Kakobuy Works ir oficiāla Kakobuy vietne?', 'Nē. Kakobuy Works ir neatkarīgs produktu izpētes katalogs, ko nepārvalda Kakobuy.'],
+    ['Kas jāpārbauda pirms pasūtīšanas?', 'Kakobuy lapā pārbaudiet preci, izvēlēto variantu, aktuālo cenu, pārdevēja statusu un piegādes ierobežojumus.'],
+    ['Vai norādītajā cenā ir iekļauta piegāde un pakalpojumu maksa?', 'Nē. Tā ir produkta avota cena. Starptautiskā piegāde, izvēles pakalpojumi un citas maksas tiek aprēķinātas atsevišķi.'],
+    ['Vai atsauces fotoattēli garantē saņemto preci?', 'Nē. Tie palīdz izpētē, bet prece var būt no citas partijas. Pārbaudiet sava noliktavas pasūtījuma QC fotoattēlus.']
+  ],
+  et: [
+    ['Kas Kakobuy Works on Kakobuy ametlik veebisait?', 'Ei. Kakobuy Works on sõltumatu tooteotsingu kataloog ja seda ei halda Kakobuy.'],
+    ['Mida peaksin enne tellimist kontrollima?', 'Kinnitage Kakobuys toode, valitud variant, praegune hind, müüja olek ja tarnepiirangud.'],
+    ['Kas kuvatud hind sisaldab saatmist ja teenustasusid?', 'Ei. See on toote lähtehind. Rahvusvaheline saatmine, valikulised teenused ja muud tasud arvutatakse eraldi.'],
+    ['Kas võrdlusfotod garanteerivad saadava toote?', 'Ei. Need aitavad uurimisel, kuid toode võib pärineda teisest partiist. Vaadake üle oma laotellimuse QC-fotod.']
+  ],
+  ga: [
+    ['An suíomh oifigiúil Kakobuy é Kakobuy Works?', 'Ní hea. Is eolaire neamhspleách taighde táirgí é Kakobuy Works agus ní Kakobuy a oibríonn é.'],
+    ['Cad ba cheart dom a sheiceáil roimh ordú?', 'Deimhnigh an táirge, an leagan roghnaithe, an praghas reatha, stádas an díoltóra agus srianta seolta in Kakobuy.'],
+    ['An bhfuil seoladh agus táillí seirbhíse sa phraghas ar taispeáint?', 'Níl. Is é praghas foinse an táirge é. Ríomhtar seoladh idirnáisiúnta, seirbhísí roghnacha agus táillí eile ar leithligh.'],
+    ['An ráthaíonn grianghraif thagartha an táirge a gheobhaidh mé?', 'Ní ráthaíonn. Cabhraíonn siad le taighde, ach d’fhéadfadh do tháirge teacht ó bhaisc eile. Seiceáil grianghraif QC d’ordaithe féin sa stóras.']
+  ],
+  mt: [
+    ['Kakobuy Works huwa sit uffiċjali ta’ Kakobuy?', 'Le. Kakobuy Works huwa direttorju indipendenti għar-riċerka tal-prodotti u mhuwiex immexxi minn Kakobuy.'],
+    ['X’għandi nivverifika qabel nordna?', 'Ikkonferma l-prodott, il-varjant magħżul, il-prezz attwali, l-istatus tal-bejjiegħ u r-restrizzjonijiet tat-tbaħħir f’Kakobuy.'],
+    ['Il-prezz muri jinkludi t-tbaħħir u t-tariffi tas-servizz?', 'Le. Dan huwa l-prezz tal-prodott mis-sors. It-tbaħħir internazzjonali, servizzi fakultattivi u tariffi oħra jiġu kkalkulati separatament.'],
+    ['Ir-ritratti ta’ referenza jiggarantixxu l-prodott li nirċievi?', 'Le. Jgħinu fir-riċerka, iżda l-prodott jista’ jkun minn lott ieħor. Ara r-ritratti QC tal-ordni tiegħek fil-maħżen.']
+  ],
+  zh: [
+    ['Kakobuy Works 是 Kakobuy 官方网站吗？', '不是。Kakobuy Works 是独立的商品研究目录，并非由 Kakobuy 官方运营。'],
+    ['下单前应该确认哪些信息？', '请在 Kakobuy 页面确认商品来源、所选规格、实时价格、卖家状态以及可能存在的运输限制。'],
+    ['页面价格包含国际运费和服务费吗？', '不包含。页面显示的是来源商品价格，国际运费、可选服务及其他费用需要另外计算。'],
+    ['参考图片能保证我收到的商品完全一样吗？', '不能。参考图片用于辅助选购，但实际商品可能来自不同批次，请以自己订单入库后的 QC 图片为准。']
+  ]
+};
+
 const qcLabels: Record<Lang, [string, string, string]> = {
   en: ['Available QC photo references', 'Review the source reference photos before opening Kakobuy. Your own warehouse QC photos may differ.', 'reference photos'],
   de: ['Verfügbare QC-Fotoreferenzen', 'Prüfe die Referenzbilder der Quelle, bevor du Kakobuy öffnest. Deine eigenen Lager-QC-Fotos können abweichen.', 'Referenzfotos'],
@@ -363,8 +516,9 @@ export function isLang(value?: string): value is Lang {
 
 export function getCopy(lang: Lang): Copy {
   const partial = overrides[lang] || {};
-  const faqs = (partial.faqs || en.faqs).map(([question, answer]) => [question, answer] as [string, string]);
-  if (faqs[4]) faqs[4][1] = detailPurchaseDirections[lang];
+  const baseFaqs = (partial.faqs || en.faqs).map(([question, answer]) => [question, answer] as [string, string]);
+  if (baseFaqs[4]) baseFaqs[4][1] = detailPurchaseDirections[lang];
+  const faqs = [...baseFaqs, ...faqExtras[lang].map(([question, answer]) => [question, answer] as [string, string])].slice(0, 10);
   return {
     ...en,
     ...partial,

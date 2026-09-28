@@ -1,8 +1,7 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import SearchBar from '../../components/SearchBar.astro';
 import ProductGrid from '../../components/ProductGrid.astro';
-import { getCategories, getProductPage } from '../../lib/source';
+import { getCategories, getProductPage, SourceNotFoundError } from '../../lib/source';
 import { getCopy, isLang } from '../../lib/i18n';
 
 const langParam = Astro.params.lang;
@@ -24,8 +23,12 @@ try {
   totalPages = productPage.totalPages;
   totalProducts = productPage.totalProducts;
 } catch (error) {
-  if (error instanceof Error && /Source returned 404/.test(error.message)) invalidPage = true;
-  else sourceUnavailable = true;
+  if (error instanceof SourceNotFoundError) invalidPage = true;
+  else {
+    sourceUnavailable = true;
+    Astro.response.status = 503;
+    Astro.response.headers.set('retry-after', '300');
+  }
 }
 invalidPage ||= !sourceUnavailable && page > Math.max(1, totalPages);
 if (invalidPage) Astro.response.status = 404;
@@ -34,7 +37,7 @@ const hasNextPage = page < totalPages;
 const pageNumbers = Array.from({ length: totalPages }, (_, index) => index + 1);
 const canonicalPath = page > 1 ? `/${lang}/spreadsheet/?page=${page}` : `/${lang}/spreadsheet/`;
 ---
-<BaseLayout lang={lang} title={title} description={copy.listing.body} canonicalPath={canonicalPath}>
+<BaseLayout lang={lang} title={title} description={copy.listing.body} canonicalPath={canonicalPath} robots={invalidPage || sourceUnavailable ? 'noindex,follow' : undefined}>
   <header class="page-hero"><div class="shell"><span class="section-kicker">{copy.sections.sourceLive}</span><h1>{copy.listing.title}</h1><p>{copy.listing.body}</p></div></header>
   <section class="section">
     <div class="shell">
@@ -42,8 +45,7 @@ const canonicalPath = page > 1 ? `/${lang}/spreadsheet/?page=${page}` : `/${lang
         <a class="active" href={`/${lang}/spreadsheet/`}>{copy.sections.viewAll}</a>
         {categories.filter((category) => category.id !== '1').map((category) => <a href={`/${lang}/category/${category.id}/`}>{category.name}</a>)}
       </nav>
-      <div class="listing-tools">
-        <SearchBar lang={lang} placeholder={copy.hero.placeholder} button={copy.hero.search} compact />
+      <div class="listing-tools listing-tools-sort-only">
         <form method="get">
           <label class="sr-only" for="sort">{copy.listing.sort}</label>
           <select class="sort-select" id="sort" name="sort" onchange="this.form.submit()">
@@ -56,7 +58,7 @@ const canonicalPath = page > 1 ? `/${lang}/spreadsheet/?page=${page}` : `/${lang
       </div>
       <ProductGrid products={invalidPage ? [] : products} lang={lang} detailsLabel={copy.sections.details} emptyText={sourceUnavailable ? copy.listing.sourceError : copy.listing.noResults} />
       {products.length > 0 && <nav class="pagination" aria-label="Pagination">
-        <span class="pagination-summary">Page {page} of {totalPages} · {totalProducts.toLocaleString('en-US')} products</span>
+        <span class="pagination-summary">{page} / {totalPages} · {totalProducts.toLocaleString(lang)}</span>
         <div class="pagination-links">
           {page > 1 && <a rel="prev" href={`?page=${page - 1}&sort=${sort}`}>← {copy.listing.previous}</a>}
           {pageNumbers.map((pageNumber) => <a class:list={{ active: pageNumber === page }} aria-current={pageNumber === page ? 'page' : undefined} href={`?page=${pageNumber}&sort=${sort}`}>{pageNumber}</a>)}

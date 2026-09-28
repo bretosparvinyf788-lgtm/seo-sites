@@ -15,11 +15,15 @@ const sort = Astro.url.searchParams.get('sort') || 'newest';
 let products = [];
 let sourceUnavailable = false;
 if (query) {
-  try { products = await getProducts({ query, page, sort }); } catch { sourceUnavailable = true; }
+  try { products = await getProducts({ query, page, sort }); } catch {
+    sourceUnavailable = true;
+    Astro.response.status = 503;
+    Astro.response.headers.set('retry-after', '300');
+  }
 }
 const heading = query ? `${copy.hero.search}: “${query}”` : copy.hero.search;
 ---
-<BaseLayout lang={lang} title={`${heading} | Kakobuy Works`} description={copy.seo.searchBody} canonicalPath={`/${lang}/search/`}>
+<BaseLayout lang={lang} title={`${heading} | Kakobuy Works`} description={copy.seo.searchBody} canonicalPath={`/${lang}/search/`} robots="noindex,follow">
   <header class="page-hero"><div class="shell"><h1>{heading}</h1><p>{copy.seo.searchBody}</p></div></header>
   <section class="section">
     <div class="shell">

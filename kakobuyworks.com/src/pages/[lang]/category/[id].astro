@@ -1,9 +1,9 @@
 ---
 import BaseLayout from '../../../layouts/BaseLayout.astro';
-import SearchBar from '../../../components/SearchBar.astro';
 import ProductGrid from '../../../components/ProductGrid.astro';
-import { getCategories, getProductPage } from '../../../lib/source';
+import { getCategories, getProductPage, SourceNotFoundError } from '../../../lib/source';
 import { getCopy, isLang } from '../../../lib/i18n';
+import { clampMeta } from '../../../lib/seo';
 
 const langParam = Astro.params.lang;
 if (!isLang(langParam)) return Astro.redirect('/en/', 302);
@@ -26,8 +26,12 @@ try {
   totalPages = productPage.totalPages;
   totalProducts = productPage.totalProducts;
 } catch (error) {
-  if (error instanceof Error && /Source returned 404/.test(error.message)) invalidPage = true;
-  else sourceUnavailable = true;
+  if (error instanceof SourceNotFoundError) invalidPage = true;
+  else {
+    sourceUnavailable = true;
+    Astro.response.status = 503;
+    Astro.response.headers.set('retry-after', '300');
+  }
 }
 const category = categories.find((entry) => entry.id === id);
 invalidPage ||= !sourceUnavailable && (!category || page > Math.max(1, totalPages));
@@ -36,6 +40,8 @@ const heading = category?.name || copy.sections.categories;
 const hasNextPage = page < totalPages;
 const pageNumbers = Array.from({ length: totalPages }, (_, index) => index + 1);
 const canonicalPath = page > 1 ? `/${lang}/category/${id}/?page=${page}` : `/${lang}/category/${id}/`;
+const metaTitle = clampMeta(`${heading} | ${copy.listing.title}`, 60);
+const metaDescription = clampMeta(`${copy.listing.body} ${heading}. ${copy.seo.photosBody} ${copy.product.currentNotice}`, 155);
 const structuredData = [
   {
     '@context': 'https://schema.org',
@@ -49,8 +55,8 @@ const structuredData = [
   {
     '@context': 'https://schema.org',
     '@type': 'CollectionPage',
-    name: `${heading} Kakobuy Spreadsheet`,
-    description: `${copy.listing.body} ${heading}.`,
+    name: `${heading} · ${copy.listing.title}`,
+    description: metaDescription,
     mainEntity: {
       '@type': 'ItemList',
       itemListElement: products.map((product, index) => ({
@@ -63,15 +69,14 @@ const structuredData = [
   }
 ];
 ---
-<BaseLayout lang={lang} title={`${heading} Kakobuy Spreadsheet | Kakobuy Works`} description={`${copy.listing.body} ${heading}.`} canonicalPath={canonicalPath} structuredData={structuredData}>
-  <header class="page-hero"><div class="shell"><nav class="breadcrumbs" aria-label="Breadcrumb"><a href={`/${lang}/`}>{copy.nav.home}</a><span>›</span><a href={`/${lang}/categories/`}>{copy.sections.categories}</a><span>›</span><strong>{heading}</strong></nav><span class="section-kicker">{copy.sections.sourceLive}</span><h1>{heading} Kakobuy Spreadsheet</h1><p>{copy.listing.body} {heading}.</p></div></header>
+<BaseLayout lang={lang} title={metaTitle} description={metaDescription} canonicalPath={canonicalPath} robots={invalidPage || sourceUnavailable ? 'noindex,follow' : undefined} structuredData={structuredData}>
+  <header class="page-hero"><div class="shell"><nav class="breadcrumbs" aria-label="Breadcrumb"><a href={`/${lang}/`}>{copy.nav.home}</a><span>›</span><a href={`/${lang}/categories/`}>{copy.sections.categories}</a><span>›</span><strong>{heading}</strong></nav><span class="section-kicker">{copy.sections.sourceLive}</span><h1>{heading} · {copy.listing.title}</h1><p>{copy.listing.body} {heading}.</p></div></header>
   <section class="section"><div class="shell">
     <nav class="filter-chips" aria-label={copy.sections.categories}>
       <a href={`/${lang}/spreadsheet/`}>{copy.sections.viewAll}</a>
       {categories.filter((entry) => entry.id !== '1').map((entry) => <a class:list={{ active: entry.id === id }} href={`/${lang}/category/${entry.id}/`}>{entry.name}</a>)}
     </nav>
-    <div class="listing-tools">
-      <SearchBar lang={lang} placeholder={copy.hero.placeholder} button={copy.hero.search} compact />
+    <div class="listing-tools listing-tools-sort-only">
       <form method="get"><select class="sort-select" name="sort" aria-label={copy.listing.sort} onchange="this.form.submit()">
         <option value="newest" selected={sort === 'newest'}>{copy.listing.newest}</option>
         <option value="price-asc" selected={sort === 'price-asc'}>{copy.listing.priceLow}</option>
@@ -81,7 +86,7 @@ const structuredData = [
     </div>
     <ProductGrid products={invalidPage ? [] : products} lang={lang} detailsLabel={copy.sections.details} emptyText={sourceUnavailable ? copy.listing.sourceError : copy.listing.noResults} />
     {products.length > 0 && <nav class="pagination" aria-label="Pagination">
-      <span class="pagination-summary">Page {page} of {totalPages} · {totalProducts.toLocaleString('en-US')} products</span>
+      <span class="pagination-summary">{page} / {totalPages} · {totalProducts.toLocaleString(lang)}</span>
       <div class="pagination-links">
         {page > 1 && <a rel="prev" href={`?page=${page - 1}&sort=${sort}`}>← {copy.listing.previous}</a>}
         {pageNumbers.map((pageNumber) => <a class:list={{ active: pageNumber === page }} aria-current={pageNumber === page ? 'page' : undefined} href={`?page=${pageNumber}&sort=${sort}`}>{pageNumber}</a>)}

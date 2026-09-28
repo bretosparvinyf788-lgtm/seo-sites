@@ -1,7 +1,8 @@
 ---
 import BaseLayout from '../../../layouts/BaseLayout.astro';
-import { getProduct } from '../../../lib/source';
+import { getProduct, SourceNotFoundError } from '../../../lib/source';
 import { getCopy, getQcCopy, isLang } from '../../../lib/i18n';
+import { clampMeta } from '../../../lib/seo';
 
 const langParam = Astro.params.lang;
 if (!isLang(langParam)) return Astro.redirect('/en/', 302);
@@ -10,20 +11,29 @@ const copy = getCopy(lang);
 const qc = getQcCopy(lang);
 const id = Astro.params.id || '';
 let product = null;
-try { product = await getProduct(id); } catch {}
+try {
+  product = await getProduct(id);
+} catch (error) {
+  if (!(error instanceof SourceNotFoundError)) {
+    return new Response(copy.listing.sourceError, {
+      status: 503,
+      headers: { 'content-type': 'text/plain; charset=utf-8', 'retry-after': '300' }
+    });
+  }
+}
 if (!product) return new Response(copy.product.unavailable, { status: 404, headers: { 'content-type': 'text/plain; charset=utf-8' } });
-const title = `${product.title} | Kakobuy Spreadsheet`;
-const description = `${product.title}, ${product.priceLabel}. Review source photos and open the matching marketplace item in Kakobuy.`;
+const title = clampMeta(`${product.title} | Kakobuy`, 60);
+const description = clampMeta(`${product.title}. ${product.priceLabel}. ${copy.product.currentNotice} ${qc.body}`, 155);
 const structuredData = {
   '@context': 'https://schema.org',
   '@type': 'Product',
   name: product.title,
   image: product.gallery,
   category: product.category,
-  offers: product.price ? { '@type': 'Offer', priceCurrency: 'USD', price: product.price, availability: 'https://schema.org/InStock', url: product.kakobuyUrl } : undefined
+  offers: product.price ? { '@type': 'Offer', priceCurrency: 'USD', price: product.price, url: product.kakobuyUrl } : undefined
 };
 ---
-<BaseLayout lang={lang} title={title} description={description} canonicalPath={`/${lang}/product/${product.id}/`} structuredData={structuredData}>
+<BaseLayout lang={lang} title={title} description={description} canonicalPath={`/${lang}/product/${product.id}/`} image={product.image} structuredData={structuredData}>
   <section class="section">
     <div class="shell"><a class="detail-back" href={`/${lang}/spreadsheet/`}>← {copy.nav.spreadsheet}</a></div>
     <div class="shell product-detail-grid">
@@ -34,7 +44,7 @@ const structuredData = {
         </div>}
       </div>
       <div class="product-details">
-        <span class="section-kicker">{qc.listing}</span>
+        <span class="section-kicker">{copy.listing.title}</span>
         <h1>{product.title}</h1>
         <div class="product-price">{product.priceLabel}</div>
         <div class="product-facts"><span>{product.category}</span>{product.marketplaceId && <span>Weidian · {product.marketplaceId}</span>}</div>
@@ -42,12 +52,12 @@ const structuredData = {
         <div class="detail-actions">
           {product.kakobuyUrl && <a class="button" href={product.kakobuyUrl} target="_blank" rel="nofollow sponsored">{copy.product.openKakobuy} →</a>}
         </div>
-        <p class="detail-source">Source record ID: {product.id}{product.marketplaceId ? ` · Marketplace item: ${product.marketplaceId}` : ''}</p>
+        <p class="detail-source">{copy.product.sourceRecord}: {product.id}{product.marketplaceId ? ` · ${product.marketplaceId}` : ''}</p>
       </div>
     </div>
     <section class="shell qc-reference">
       <div class="qc-reference-head">
-        <div><span class="section-kicker">QC PHOTO REFERENCE</span><h2>{qc.title}</h2><p>{qc.body}</p></div>
+        <div><span class="section-kicker">{copy.product.gallery}</span><h2>{qc.title}</h2><p>{qc.body}</p></div>
         <strong>{product.gallery.length} {qc.photos}</strong>
       </div>
       <div class="qc-photo-grid">
