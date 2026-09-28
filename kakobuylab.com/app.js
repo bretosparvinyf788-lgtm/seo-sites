@@ -14,6 +14,16 @@ document.head.appendChild(googleTag);
 
 const KAKO_MAIN = "https://kakobuymake.com/";
 
+const languageOptions = [
+  ["en", "English"], ["de", "Deutsch"], ["es", "Español"], ["fr", "Français"], ["it", "Italiano"],
+  ["pl", "Polski"], ["pt", "Português"], ["ro", "Română"], ["sv", "Svenska"], ["nl", "Nederlands"],
+  ["da", "Dansk"], ["fi", "Suomi"], ["el", "Ελληνικά"], ["cs", "Čeština"], ["hu", "Magyar"],
+  ["bg", "Български"], ["sk", "Slovenčina"], ["hr", "Hrvatski"], ["sl", "Slovenščina"],
+  ["lt", "Lietuvių"], ["lv", "Latviešu"], ["et", "Eesti"], ["ga", "Gaeilge"], ["mt", "Malti"], ["zh", "中文"]
+];
+const languageNames = Object.fromEntries(languageOptions);
+const languageCodes = new Set(languageOptions.map(([code]) => code));
+
 const ui = {
   en: {
     navProducts: "Finds", navShipping: "Shipping", navCoupons: "Coupons", navGuides: "Buyer Guides", navFaq: "FAQ", navCta: "Spreadsheet",
@@ -154,7 +164,7 @@ function capturePhraseNodes() {
   while ((node = walker.nextNode())) {
     const parent = node.parentElement;
     const original = node.nodeValue.trim();
-    if (!original || !parent || parent.closest("script, style, [data-i18n], [data-article-i18n-root]")) continue;
+  if (!original || !parent || parent.closest("script, style, [data-i18n], [data-article-i18n-root], [data-no-translate]")) continue;
     phraseNodes.push({
       node,
       original,
@@ -177,6 +187,7 @@ function applyPhraseLanguage(lang) {
 function headerTemplate() {
   const path = location.pathname;
   const current = p => (path.startsWith(p) || (p === "/guides" && getArticleRoute())) ? ' aria-current="page"' : "";
+  const languageButtons = languageOptions.map(([code, name]) => `<button class="language-option" type="button" role="menuitem" data-lang-choice="${code}" aria-current="false"><span>${name}</span><b>${code.toUpperCase()}</b></button>`).join("");
   return `
     <a class="skip-link" href="#main">Skip to content</a>
     <header class="site-header">
@@ -188,34 +199,15 @@ function headerTemplate() {
           <a href="/coupons/"${current("/coupons")} data-i18n="navCoupons">Coupons</a>
           <a href="/guides/"${current("/guides")} data-i18n="navGuides">Buyer Guides</a>
           <a href="/#faq" data-i18n="navFaq">FAQ</a>
+          <a class="button small desktop-cta" href="${KAKO_MAIN}" target="_blank" rel="noopener" data-i18n="navCta">Spreadsheet</a>
         </nav>
         <div class="nav-actions">
-          <details class="lang-picker" id="langPicker">
-            <summary aria-label="Choose language"><span id="langCurrent">EN</span><span aria-hidden="true">⌄</span></summary>
-            <div class="lang-menu" role="listbox" aria-label="Language">
-              <button type="button" data-lang-choice="en"><span>English</span><small>EN</small></button>
-              <button type="button" data-lang-choice="de"><span>Deutsch</span><small>DE</small></button>
-              <button type="button" data-lang-choice="es"><span>Español</span><small>ES</small></button>
-              <button type="button" data-lang-choice="fr"><span>Français</span><small>FR</small></button>
-              <button type="button" data-lang-choice="it"><span>Italiano</span><small>IT</small></button>
-              <button type="button" data-lang-choice="pl"><span>Polski</span><small>PL</small></button>
-              <button type="button" data-lang-choice="pt"><span>Português</span><small>PT</small></button>
-              <button type="button" data-lang-choice="ro"><span>Română</span><small>RO</small></button>
-              <button type="button" data-lang-choice="sv"><span>Svenska</span><small>SV</small></button>
-              <button type="button" data-lang-choice="nl"><span>Nederlands</span><small>NL</small></button>
-              <button type="button" data-lang-choice="el"><span>Ελληνικά</span><small>EL</small></button>
-              <button type="button" data-lang-choice="hu"><span>Magyar</span><small>HU</small></button>
-              <button type="button" data-lang-choice="ga"><span>Gaeilge</span><small>GA</small></button>
-              <button type="button" data-lang-choice="zh"><span>中文</span><small>ZH</small></button>
-            </div>
-          </details>
-          <select class="lang-select lang-select-hidden" id="langSelect" aria-label="Language" tabindex="-1">
-            <option value="en">EN</option><option value="de">DE</option><option value="es">ES</option><option value="fr">FR</option>
-            <option value="it">IT</option><option value="pl">PL</option><option value="pt">PT</option><option value="ro">RO</option>
-            <option value="sv">SV</option><option value="nl">NL</option><option value="el">EL</option><option value="hu">HU</option>
-            <option value="ga">GA</option><option value="zh">ZH</option>
-          </select>
-          <a class="button small desktop-cta" href="${KAKO_MAIN}" target="_blank" rel="noopener" data-i18n="navCta">Spreadsheet</a>
+          <div class="language-menu" id="languageMenu" data-no-translate>
+            <button class="language-current" id="languageCurrent" type="button" aria-haspopup="true" aria-expanded="false" aria-label="Language: English">
+              <span class="language-current-name" id="languageCurrentName">English</span><b class="language-current-code" id="languageCurrentCode">EN</b><span class="language-chevron" aria-hidden="true">⌄</span>
+            </button>
+            <div class="language-menu-panel" id="languagePanel" role="menu" aria-label="Language">${languageButtons}</div>
+          </div>
           <button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false">☰</button>
         </div>
       </div>
@@ -247,7 +239,8 @@ function applyLanguage(lang) {
     location.assign(articleHref(route.slug, lang));
     return;
   }
-  activeLang = lang;
+  activeLang = languageCodes.has(lang) ? lang : "en";
+  lang = activeLang;
   const dict = ui[lang] || ui.en;
   document.documentElement.lang = lang === "zh" ? "zh-CN" : lang;
   document.querySelectorAll("[data-i18n]").forEach(el => {
@@ -261,10 +254,19 @@ function applyLanguage(lang) {
   applyPhraseLanguage(lang);
   applyArticleLanguage(lang);
   syncArticleLinks(lang);
-  const current = document.getElementById("langCurrent");
-  if (current) current.textContent = lang === "zh" ? "ZH" : lang.toUpperCase();
-  document.querySelectorAll("[data-lang-choice]").forEach(button => button.setAttribute("aria-selected", String(button.dataset.langChoice === lang)));
+  const currentName = document.getElementById("languageCurrentName");
+  const currentCode = document.getElementById("languageCurrentCode");
+  const currentButton = document.getElementById("languageCurrent");
+  if (currentName) currentName.textContent = languageNames[lang] || languageNames.en;
+  if (currentCode) currentCode.textContent = lang.toUpperCase();
+  if (currentButton) currentButton.setAttribute("aria-label", `Language: ${languageNames[lang] || languageNames.en}`);
+  document.querySelectorAll("[data-lang-choice]").forEach(button => {
+    const selected = button.dataset.langChoice === lang;
+    button.classList.toggle("active", selected);
+    button.setAttribute("aria-current", String(selected));
+  });
   localStorage.setItem("kakobuylab-lang", lang);
+  document.dispatchEvent(new CustomEvent("kakobuylab:languagechange", { detail: { lang } }));
 }
 
 function initShell() {
@@ -275,18 +277,32 @@ function initShell() {
   if (footer) footer.innerHTML = footerTemplate();
   captureArticleNodes();
   capturePhraseNodes();
-  const lang = getArticleRoute()?.lang || localStorage.getItem("kakobuylab-lang") || "en";
-  const select = document.getElementById("langSelect");
-  if (select) {
-    select.value = lang;
-    select.addEventListener("change", e => applyLanguage(e.target.value));
-  }
+  const storedLang = localStorage.getItem("kakobuylab-lang") || "en";
+  const lang = getArticleRoute()?.lang || (languageCodes.has(storedLang) ? storedLang : "en");
+  const languageMenu = document.getElementById("languageMenu");
+  const languageCurrent = document.getElementById("languageCurrent");
+  languageCurrent?.addEventListener("click", () => {
+    const open = languageMenu?.classList.toggle("open") || false;
+    languageCurrent.setAttribute("aria-expanded", String(open));
+  });
   document.querySelectorAll("[data-lang-choice]").forEach(button => button.addEventListener("click", () => {
-    if (!select) return;
-    select.value = button.dataset.langChoice;
-    document.getElementById("langPicker")?.removeAttribute("open");
-    select.dispatchEvent(new Event("change", { bubbles: true }));
+    languageMenu?.classList.remove("open");
+    languageCurrent?.setAttribute("aria-expanded", "false");
+    applyLanguage(button.dataset.langChoice);
   }));
+  document.addEventListener("click", event => {
+    if (!languageMenu?.contains(event.target)) {
+      languageMenu?.classList.remove("open");
+      languageCurrent?.setAttribute("aria-expanded", "false");
+    }
+  });
+  document.addEventListener("keydown", event => {
+    if (event.key === "Escape") {
+      languageMenu?.classList.remove("open");
+      languageCurrent?.setAttribute("aria-expanded", "false");
+      languageCurrent?.focus();
+    }
+  });
   applyLanguage(lang);
   const menu = document.getElementById("menuToggle");
   const links = document.getElementById("navLinks");

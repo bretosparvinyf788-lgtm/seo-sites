@@ -224,7 +224,7 @@
     loadCategories();
     initCatalogPage();
     initSourceProductGallery();
-    document.getElementById("langSelect")?.addEventListener("change", () => setTimeout(() => {
+    document.addEventListener("kakobuylab:languagechange", () => setTimeout(() => {
       localizeSourceControls();
       loadHomepageProducts();
       loadCategories();
