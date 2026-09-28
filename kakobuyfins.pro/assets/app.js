@@ -43,7 +43,12 @@ function setLanguage(lang){const d=I18N[lang]||I18N.en;localStorage.setItem('kak
 function shippingEstimate(){const form=qs('#shippingForm'),result=qs('#shippingResult');if(!form||!result)return;const fd=new FormData(form),country=fd.get('country'),weight=Math.max(.1,Number(fd.get('weight'))||0),l=Number(fd.get('length'))||0,w=Number(fd.get('width'))||0,h=Number(fd.get('height'))||0;const volumetric=l&&w&&h?(l*w*h/6000):0;const bill=Math.max(weight,volumetric);let estimate;if(country==='US')estimate=20.73+18.5*bill;else if(country==='DE')estimate=8.76+14.5*bill;else estimate=null;if(!estimate){result.innerHTML='<p>A reliable sample rate is not yet published for this preview destination.</p><strong>Check live quote</strong><p>Use Kakobuy’s official calculator before submitting a parcel.</p>';return}const low=Math.max(1,estimate*.92),high=estimate*1.12;result.innerHTML=`<p>Indicative range</p><strong>$${low.toFixed(0)}–$${high.toFixed(0)}</strong><p>Billable weight: ${bill.toFixed(2)} kg${volumetric>weight?' (volume weight applies)':''}. Editorial estimate only; line eligibility and checkout price can differ.</p>`}
 function convertLink(){const val=qs('#w2cInput')?.value.trim(),msg=qs('#w2cResult');if(!val||!/^https?:\/\//i.test(val)){if(msg)msg.innerHTML='<p>Paste a full Taobao, Weidian, 1688 or Tmall URL beginning with http.</p>';return}navigator.clipboard?.writeText(val);if(msg)msg.innerHTML='<p><strong>Link copied.</strong> Kakobuy will open in a new tab; paste the copied marketplace URL into its search field.</p><a class="btn btn-orange" href="https://www.kakobuy.com/" target="_blank" rel="noopener">Open Kakobuy</a>'}
 document.addEventListener('click',e=>{const qc=e.target.closest('[data-qc]');if(qc)openQC(qc.dataset.qc);const faq=e.target.closest('.faq-button');if(faq){const item=faq.closest('.faq-item');const was=item.classList.contains('open');qsa('.faq-item.open').forEach(x=>{x.classList.remove('open');qs('.faq-button',x)?.setAttribute('aria-expanded','false')});if(!was){item.classList.add('open');faq.setAttribute('aria-expanded','true')}}if(e.target.closest('#menuBtn'))qs('#navLinks')?.classList.toggle('open');if(e.target.closest('[data-close-modal]')){qs('#qcModal')?.close();document.body.classList.remove('modal-open')}if(e.target.closest('#convertBtn'))convertLink()});
-document.addEventListener('DOMContentLoaded',()=>{linkMainCategories();syncCategoryFilter();syncLiveProductCopy();renderProducts();qs('#productSearch')?.addEventListener('input',filterProducts);qs('#categoryFilter')?.addEventListener('change',filterProducts);const params=new URLSearchParams(location.search),query=params.get('q'),category=params.get('category');if(query&&qs('#productSearch'))qs('#productSearch').value=query;if(category&&qs('#categoryFilter'))qs('#categoryFilter').value=category;if(query||category)filterProducts();qs('#shippingForm')?.addEventListener('submit',e=>{e.preventDefault();shippingEstimate()});const lang=getProxyLanguage()||getRequestedLanguage()||localStorage.getItem('kako-lang')||'en';const sel=qs('#languageSelect');if(sel){sel.value=lang;sel.addEventListener('change',e=>setLanguage(e.target.value))}setLanguage(lang,{initial:true});qs('#qcModal')?.addEventListener('close',()=>document.body.classList.remove('modal-open'))});
+document.addEventListener('DOMContentLoaded',()=>{
+ if(redirectLegacyTranslateProxy())return;
+ linkMainCategories();syncCategoryFilter();syncLiveProductCopy();renderProducts();qs('#productSearch')?.addEventListener('input',filterProducts);qs('#categoryFilter')?.addEventListener('change',filterProducts);
+ const params=new URLSearchParams(location.search),query=params.get('q'),category=params.get('category');if(query&&qs('#productSearch'))qs('#productSearch').value=query;if(category&&qs('#categoryFilter'))qs('#categoryFilter').value=category;if(query||category)filterProducts();
+ qs('#shippingForm')?.addEventListener('submit',e=>{e.preventDefault();shippingEstimate()});const lang=getRequestedLanguage()||localStorage.getItem('kako-lang')||'en';const sel=qs('#languageSelect');if(sel){sel.value=lang;sel.addEventListener('change',e=>setLanguage(e.target.value))}setLanguage(lang,{initial:true});qs('#qcModal')?.addEventListener('close',()=>document.body.classList.remove('modal-open'))
+});
 
 const SITE_I18N={
  en:{
@@ -180,7 +185,7 @@ Object.entries(EXTRA_LANGUAGE_COPY).forEach(([code,copy])=>{
 const ORIGINAL_DOCUMENT_TITLE=document.title;
 let activeLangFull="en";
 function fullLocale(){return SITE_I18N[activeLangFull]||SITE_I18N.en}
-function setNodeText(el,value){if(el&&value!==undefined)el.textContent=value}
+function setNodeText(el,value){if(el&&value!==undefined&&el.textContent!==String(value))el.textContent=value}
 function pageText(template,page){return String(template||"").replace("{page}",page)}
 function ensureFullLanguageSelector(){
  let sel=qs("#languageSelect");
@@ -252,43 +257,70 @@ function renderPageSubheadsFull(d){
  if(key==="coupons"){const headings=qsa(".container.prose h2");setNodeText(headings[headings.length-1],h.couponsValidity)}
 }
 const ORIGINAL_SITE_ORIGIN="https://kakobuyfins.pro";
-const GOOGLE_TRANSLATE_ORIGIN="https://kakobuyfins-pro.translate.goog";
+const NATIVE_TRANSLATION_VERSION="20260928";
+const NATIVE_TEXT_NODES=new Set(),NATIVE_ATTRIBUTE_NODES=new Set();
+let nativeTranslationRun=0;
 function normalizeLanguageCode(value){
  const code=String(value||"").trim().toLowerCase();if(code.startsWith("zh"))return"zh";return SITE_I18N[code]?code:""
-}
-function getProxyLanguage(){
- if(!location.hostname.endsWith(".translate.goog"))return"";return normalizeLanguageCode(new URLSearchParams(location.search).get("_x_tr_tl"))
 }
 function getRequestedLanguage(){
  return normalizeLanguageCode(new URLSearchParams(location.search).get("kako_lang"))
 }
-function cleanLanguageParams(){
- const params=new URLSearchParams(location.search);["_x_tr_sl","_x_tr_tl","_x_tr_hl","kako_lang"].forEach(key=>params.delete(key));return params
-}
-function languageDestination(lang){
- const target=lang==="zh"?"zh-CN":lang,params=cleanLanguageParams();
- if(lang==="en"){params.set("kako_lang","en");return ORIGINAL_SITE_ORIGIN+location.pathname+"?"+params.toString()+location.hash}
- params.set("_x_tr_sl","en");params.set("_x_tr_tl",target);params.set("_x_tr_hl",target);
- return GOOGLE_TRANSLATE_ORIGIN+location.pathname+"?"+params.toString()+location.hash
-}
-function showAutomaticTranslationNotice(menu){
- const panel=qs(".language-menu-panel",menu);if(!panel||qs(".translation-note",panel))return;
- const note=document.createElement("div");note.className="translation-note";note.textContent="Automatic translation by Google";note.setAttribute("role","note");note.style.cssText="padding:12px 16px;border-top:1px solid #e1ddd3;color:#686868;font-size:.78rem;line-height:1.35";panel.appendChild(note)
+function redirectLegacyTranslateProxy(){
+ if(!location.hostname.endsWith(".translate.goog"))return false;
+ const params=new URLSearchParams(location.search),lang=normalizeLanguageCode(params.get("_x_tr_tl"))||"en";
+ ["_x_tr_sl","_x_tr_tl","_x_tr_hl"].forEach(key=>params.delete(key));params.set("kako_lang",lang);
+ location.replace(ORIGINAL_SITE_ORIGIN+location.pathname+"?"+params.toString()+location.hash);return true
 }
 function clearRequestedLanguageParam(){
- const params=cleanLanguageParams(),query=params.toString();history.replaceState(null,"",location.pathname+(query?"?"+query:"")+location.hash)
+ const params=new URLSearchParams(location.search);params.delete("kako_lang");const query=params.toString();history.replaceState(null,"",location.pathname+(query?"?"+query:"")+location.hash)
 }
-function setLanguage(lang,options={}){
- lang=SITE_I18N[lang]?lang:"en";const proxyLang=getProxyLanguage();
- if(proxyLang){
-  if(!options.initial&&lang!==proxyLang){location.assign(languageDestination(lang));return}
-  activeLangFull=proxyLang;localStorage.setItem("kako-lang",activeLangFull);document.documentElement.lang=activeLangFull==="zh"?"zh-CN":activeLangFull;
-  const menu=ensureFullLanguageSelector(),nativeSelect=qs("#languageSelect");if(nativeSelect)nativeSelect.value=activeLangFull;updateLanguageMenu(menu,activeLangFull);showAutomaticTranslationNotice(menu);return
- }
- if(lang!=="en"){localStorage.setItem("kako-lang",lang);location.assign(languageDestination(lang));return}
- activeLangFull="en";const d=fullLocale();localStorage.setItem("kako-lang","en");document.documentElement.lang="en";if(getRequestedLanguage())clearRequestedLanguageParam();
- const menu=ensureFullLanguageSelector(),nativeSelect=qs("#languageSelect");if(nativeSelect)nativeSelect.value="en";updateLanguageMenu(menu,"en");renderFullNav(d);renderHomeFull(d);renderPageFrameFull(d);renderPageSubheadsFull(d);window.renderKakoArticle?.("en");linkMainCategories();syncCategoryFilter();syncLiveProductCopy();
- const input=qs("#productSearch");if(input){input.placeholder=d.search;input.setAttribute("aria-label",d.search)}setNodeText(qs(".search-shell button"),d.searchBtn);setNodeText(qs("#emptyState"),d.noResults);filterProducts();document.dispatchEvent(new CustomEvent("kako:languagechange",{detail:{lang:"en"}}))
+function skipNativeTranslation(el){
+ return !el||!!el.closest("#languageMenu,#languageSelect,.brand,script,style,noscript,template,code,pre,svg,[data-no-translate],.product-card h3,#productName,.detail-related-card strong,.source-gallery,#shippingResult,#w2cResult")
+}
+function captureNativeBaselines(root=document.body){
+ if(!root)return;const walker=document.createTreeWalker(root,NodeFilter.SHOW_TEXT);let node;
+ while((node=walker.nextNode())){const el=node.parentElement,raw=node.nodeValue||"";if(skipNativeTranslation(el)||!raw.trim()||raw.length>1800||node.__kakoOriginalText!==undefined)continue;node.__kakoOriginalText=raw;NATIVE_TEXT_NODES.add(node)}
+ qsa("[placeholder],[aria-label],[title],[alt]",root).forEach(el=>{if(skipNativeTranslation(el)||el.__kakoOriginalAttributes)return;const values={};["placeholder","aria-label","title","alt"].forEach(name=>{if(el.hasAttribute(name))values[name]=el.getAttribute(name)});el.__kakoOriginalAttributes=values;NATIVE_ATTRIBUTE_NODES.add(el)})
+}
+function restoreNativeBaselines(){
+ NATIVE_TEXT_NODES.forEach(node=>{if(node.isConnected)node.nodeValue=node.__kakoOriginalText});
+ NATIVE_ATTRIBUTE_NODES.forEach(el=>{if(!el.isConnected)return;Object.entries(el.__kakoOriginalAttributes||{}).forEach(([name,value])=>el.setAttribute(name,value))});
+ document.title=ORIGINAL_DOCUMENT_TITLE
+}
+function translatableEnglish(value){
+ const text=String(value||"").trim();return text.length>1&&text.length<=1600&&/[A-Za-z]{2}/.test(text)&&!/^https?:\/\//i.test(text)&&!/^([A-Z0-9._-]{1,12}\s*)+$/.test(text)
+}
+function translationCacheKey(lang,text){
+ let hash=2166136261;for(let i=0;i<text.length;i++){hash^=text.charCodeAt(i);hash=Math.imul(hash,16777619)}return"kako-tr-"+NATIVE_TRANSLATION_VERSION+":"+lang+":"+(hash>>>0).toString(36)+":"+text.length
+}
+function cachedTranslation(lang,source){
+ try{const value=localStorage.getItem(translationCacheKey(lang,source));return value?JSON.parse(value).translated||"":""}catch{return""}
+}
+function cacheTranslation(lang,source,translated){
+ if(!translated)return;try{localStorage.setItem(translationCacheKey(lang,source),JSON.stringify({translated}))}catch{}
+}
+async function requestNativeTranslations(lang,texts){
+ const results=new Map(),missing=[];texts.forEach(text=>{const cached=cachedTranslation(lang,text);if(cached)results.set(text,cached);else missing.push(text)});
+ for(let offset=0;offset<missing.length;offset+=40){const batch=missing.slice(offset,offset+40);try{const response=await fetch("/api/translate",{method:"POST",headers:{"content-type":"application/json","accept":"application/json"},body:JSON.stringify({target:lang,texts:batch})});if(!response.ok)continue;const data=await response.json();(data.translations||[]).forEach((translated,index)=>{if(!translated||!batch[index])return;results.set(batch[index],translated);cacheTranslation(lang,batch[index],translated)})}catch{}}
+ return results
+}
+function collectNativeTranslationTargets(root){
+ const targets=[],unique=new Set();
+ NATIVE_TEXT_NODES.forEach(node=>{if(!node.isConnected||(root&&!root.contains(node))||node.nodeValue!==node.__kakoOriginalText)return;const raw=node.__kakoOriginalText,source=raw.trim();if(!translatableEnglish(source))return;unique.add(source);targets.push({source,apply:translated=>{if(node.isConnected&&node.nodeValue===raw){const leading=raw.match(/^\s*/)?.[0]||"",trailing=raw.match(/\s*$/)?.[0]||"";node.nodeValue=leading+translated+trailing}}})});
+ NATIVE_ATTRIBUTE_NODES.forEach(el=>{if(!el.isConnected||(root&&!root.contains(el)))return;Object.entries(el.__kakoOriginalAttributes||{}).forEach(([name,source])=>{if(el.getAttribute(name)!==source||!translatableEnglish(source))return;unique.add(source);targets.push({source,apply:translated=>{if(el.isConnected&&el.getAttribute(name)===source)el.setAttribute(name,translated)}})})});
+ if(!root&&document.title===ORIGINAL_DOCUMENT_TITLE&&translatableEnglish(ORIGINAL_DOCUMENT_TITLE)){unique.add(ORIGINAL_DOCUMENT_TITLE);targets.push({source:ORIGINAL_DOCUMENT_TITLE,apply:translated=>{if(document.title===ORIGINAL_DOCUMENT_TITLE)document.title=translated}})}
+ return{targets,texts:[...unique]}
+}
+async function translateRemainingPage(lang,run,root){
+ if(lang==="en")return;const {targets,texts}=collectNativeTranslationTargets(root);if(!texts.length)return;document.documentElement.setAttribute("data-translating","true");const translated=await requestNativeTranslations(lang,texts);if(run!==nativeTranslationRun)return;targets.forEach(target=>{const value=translated.get(target.source);if(value)target.apply(value)});document.documentElement.removeAttribute("data-translating")
+}
+function setLanguage(lang){
+ lang=SITE_I18N[lang]?lang:"en";captureNativeBaselines();restoreNativeBaselines();const run=++nativeTranslationRun;
+ activeLangFull=lang;const d=fullLocale();localStorage.setItem("kako-lang",lang);document.documentElement.lang=lang==="zh"?"zh-CN":lang;if(getRequestedLanguage())clearRequestedLanguageParam();
+ const menu=ensureFullLanguageSelector(),nativeSelect=qs("#languageSelect");if(nativeSelect)nativeSelect.value=lang;updateLanguageMenu(menu,lang);renderFullNav(d);renderHomeFull(d);renderPageFrameFull(d);renderPageSubheadsFull(d);window.renderKakoArticle?.(lang);linkMainCategories();syncCategoryFilter();syncLiveProductCopy();
+ const input=qs("#productSearch");if(input){input.placeholder=d.search;input.setAttribute("aria-label",d.search)}setNodeText(qs(".search-shell button"),d.searchBtn);setNodeText(qs("#emptyState"),d.noResults);filterProducts();if(EXTRA_LANGUAGE_COPY[lang])captureNativeBaselines(qs("#productGrid"));document.dispatchEvent(new CustomEvent("kako:languagechange",{detail:{lang}}));
+ if(lang!=="en")translateRemainingPage(lang,run);else document.documentElement.removeAttribute("data-translating")
 }
 function shippingEstimate(){
  const d=fullLocale(),form=qs("#shippingForm"),result=qs("#shippingResult");if(!form||!result)return;const fd=new FormData(form),country=fd.get("country"),weight=Math.max(.1,Number(fd.get("weight"))||0),l=Number(fd.get("length"))||0,w=Number(fd.get("width"))||0,h=Number(fd.get("height"))||0;const volumetric=l&&w&&h?(l*w*h/6000):0,bill=Math.max(weight,volumetric);let estimate;if(country==="US")estimate=20.73+18.5*bill;else if(country==="DE")estimate=8.76+14.5*bill;else estimate=null;if(!estimate){result.innerHTML="<p>"+d.tool.noRate+"</p><strong>"+d.tool.live+"</strong><p>"+d.tool.official+"</p>";return}const low=Math.max(1,estimate*.92),high=estimate*1.12;result.innerHTML="<p>"+d.tool.range+"</p><strong>$"+low.toFixed(0)+"–$"+high.toFixed(0)+"</strong><p>"+d.tool.billable+": "+bill.toFixed(2)+" kg"+(volumetric>weight?" ("+d.tool.volume+")":"")+". "+d.tool.estimate+"</p>"
@@ -296,4 +328,4 @@ function shippingEstimate(){
 function convertLink(){const d=fullLocale(),val=qs("#w2cInput")?.value.trim(),msg=qs("#w2cResult");if(!val||!/^https?:\/\//i.test(val)){if(msg)msg.innerHTML="<p>"+d.tool.paste+"</p>";return}navigator.clipboard?.writeText(val);if(msg)msg.innerHTML="<p><strong>"+d.tool.copied+"</strong> "+d.tool.pasteNext+'</p><a class="btn btn-orange" href="https://www.kakobuy.com/" target="_blank" rel="noopener">'+d.tool.open+"</a>"}
 
 /* KAKOBUYMAKE_LIVE_SOURCE */
-(()=>{const config={"1472":{"id":"stussy-nike-jacket","page":31,"itemId":"7731085462"},"1474":{"id":"cartier-bracelet","page":31,"itemId":"7731099312"},"1491":{"id":"burberry-tshirt","page":31,"itemId":"7728117281"},"1510":{"id":"new-balance-1906r","page":31,"itemId":"7731883948"},"1511":{"id":"moncler-down-jacket","page":31,"itemId":"7728819053"},"1542":{"id":"cartier-sunglasses","page":30,"itemId":"7728968053"},"1554":{"id":"corteiz-tracksuit-tshirt","page":30,"itemId":"7729645863"},"1556":{"id":"bad-bunny-adidas-response","page":30,"itemId":"7732630010"},"1558":{"id":"north-face-travel-bag","page":30,"itemId":"7729312037"},"1559":{"id":"hermes-necklace","page":30,"itemId":"7729647867"}};async function syncFromMain(){try{const response=await fetch("/api/kakobuymake-products",{headers:{accept:"application/json"}});if(!response.ok)return;const payload=await response.json();if(!Array.isArray(payload.products)||!payload.products.length)return;const fresh=payload.products.map(p=>{const base=config[String(p.aid)];if(!base)return null;return{id:base.id,aid:p.aid,itemId:p.itemId||base.itemId,name:p.name,cat:p.category,price:Number(p.price),page:base.page,date:new Date(p.checkedAt||Date.now()).toLocaleDateString("en-US",{month:"short",day:"numeric",year:"numeric"}),img:p.mainImage,link:"/products/weidian/"+(p.itemId||base.itemId)+"/",source:p.sourcePage}}).filter(Boolean);if(fresh.length===Object.keys(config).length&&fresh.every(p=>p.name&&p.cat&&Number.isFinite(p.price)&&p.img)){PRODUCTS.splice(0,PRODUCTS.length,...fresh);filterProducts()}}catch{}}if(document.readyState==="loading")document.addEventListener("DOMContentLoaded",syncFromMain);else syncFromMain()})();
+(()=>{const config={"1472":{"id":"stussy-nike-jacket","page":31,"itemId":"7731085462"},"1474":{"id":"cartier-bracelet","page":31,"itemId":"7731099312"},"1491":{"id":"burberry-tshirt","page":31,"itemId":"7728117281"},"1510":{"id":"new-balance-1906r","page":31,"itemId":"7731883948"},"1511":{"id":"moncler-down-jacket","page":31,"itemId":"7728819053"},"1542":{"id":"cartier-sunglasses","page":30,"itemId":"7728968053"},"1554":{"id":"corteiz-tracksuit-tshirt","page":30,"itemId":"7729645863"},"1556":{"id":"bad-bunny-adidas-response","page":30,"itemId":"7732630010"},"1558":{"id":"north-face-travel-bag","page":30,"itemId":"7729312037"},"1559":{"id":"hermes-necklace","page":30,"itemId":"7729647867"}};async function syncFromMain(){try{const response=await fetch("/api/kakobuymake-products",{headers:{accept:"application/json"}});if(!response.ok)return;const payload=await response.json();if(!Array.isArray(payload.products)||!payload.products.length)return;const fresh=payload.products.map(p=>{const base=config[String(p.aid)];if(!base)return null;return{id:base.id,aid:p.aid,itemId:p.itemId||base.itemId,name:p.name,cat:p.category,price:Number(p.price),page:base.page,date:new Date(p.checkedAt||Date.now()).toLocaleDateString("en-US",{month:"short",day:"numeric",year:"numeric"}),img:p.mainImage,link:"/products/weidian/"+(p.itemId||base.itemId)+"/",source:p.sourcePage}}).filter(Boolean);if(fresh.length===Object.keys(config).length&&fresh.every(p=>p.name&&p.cat&&Number.isFinite(p.price)&&p.img)){PRODUCTS.splice(0,PRODUCTS.length,...fresh);filterProducts();if(EXTRA_LANGUAGE_COPY[activeLangFull]){const grid=qs("#productGrid");captureNativeBaselines(grid);translateRemainingPage(activeLangFull,nativeTranslationRun,grid)}}}catch{}}if(document.readyState==="loading")document.addEventListener("DOMContentLoaded",syncFromMain);else syncFromMain()})();
