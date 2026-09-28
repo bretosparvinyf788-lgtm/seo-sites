@@ -96,19 +96,16 @@ let articleLocale = "en";
 let articleOriginalTitle = document.title;
 let articleOriginalDescription = document.querySelector('meta[name="description"]')?.content || "";
 
-const articleLanguages = new Set(["en", "de", "es", "fr", "it", "pl", "pt", "ro", "sv", "nl", "el", "hu", "ga", "zh"]);
-const localizedArticleSlugs = new Set(["kakobuy-qc-photos", "kakobuy-shipping-fees", "kakobuy-w2c-guide"]);
-const localizedLanguagesByArticle = {
-  "kakobuy-spreadsheet-guide": new Set(["en", "zh"])
-};
+const articleLanguages = new Set(languageOptions.map(([code]) => code));
+const localizedArticleSlugs = new Set(["kakobuy-spreadsheet-guide", "kakobuy-qc-photos", "kakobuy-shipping-fees", "kakobuy-w2c-guide"]);
+const articleLocalePattern = languageOptions.map(([code]) => code).join("|");
 
 function articleHasLocale(slug, lang) {
-  if (lang === "en") return true;
-  return localizedLanguagesByArticle[slug]?.has(lang) || localizedArticleSlugs.has(slug) && articleLanguages.has(lang);
+  return localizedArticleSlugs.has(slug) && articleLanguages.has(lang);
 }
 
 function getArticleRoute() {
-  const match = location.pathname.match(/^\/(?:(de|es|fr|it|pl|pt|ro|sv|nl|el|hu|ga|zh)\/)?guides\/([^/]+)\/?$/);
+  const match = location.pathname.match(new RegExp(`^/(?:(?:(${articleLocalePattern})/))?guides/([^/]+)/?$`));
   if (!match) return null;
   return { lang: match[1] || "en", slug: match[2] };
 }
@@ -119,7 +116,7 @@ function articleHref(slug, lang = articleLocale) {
 
 function syncArticleLinks(lang) {
   document.querySelectorAll('a[href*="/guides/kakobuy-"]').forEach(link => {
-    const match = link.getAttribute("href")?.match(/\/(?:(?:de|es|fr|it|pl|pt|ro|sv|nl|el|hu|ga|zh)\/)?guides\/(kakobuy-(?:spreadsheet-guide|qc-photos|shipping-fees|w2c-guide))\/?$/);
+    const match = link.getAttribute("href")?.match(new RegExp(`/(?:(?:${articleLocalePattern})/)?guides/(kakobuy-(?:spreadsheet-guide|qc-photos|shipping-fees|w2c-guide))/?$`));
     if (match) link.setAttribute("href", articleHref(match[1], lang));
   });
 }
@@ -295,7 +292,7 @@ function initShell() {
   const route = getArticleRoute();
   const lang = route?.lang && route.lang !== "en"
     ? route.lang
-    : route?.slug === "kakobuy-spreadsheet-guide" && languageCodes.has(storedLang)
+    : route && languageCodes.has(storedLang)
       ? storedLang
       : route?.lang || (languageCodes.has(storedLang) ? storedLang : "en");
   const languageMenu = document.getElementById("languageMenu");
