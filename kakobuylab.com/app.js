@@ -97,6 +97,15 @@ let articleOriginalTitle = document.title;
 let articleOriginalDescription = document.querySelector('meta[name="description"]')?.content || "";
 
 const articleLanguages = new Set(["en", "de", "es", "fr", "it", "pl", "pt", "ro", "sv", "nl", "el", "hu", "ga", "zh"]);
+const localizedArticleSlugs = new Set(["kakobuy-qc-photos", "kakobuy-shipping-fees", "kakobuy-w2c-guide"]);
+const localizedLanguagesByArticle = {
+  "kakobuy-spreadsheet-guide": new Set(["en", "zh"])
+};
+
+function articleHasLocale(slug, lang) {
+  if (lang === "en") return true;
+  return localizedLanguagesByArticle[slug]?.has(lang) || localizedArticleSlugs.has(slug) && articleLanguages.has(lang);
+}
 
 function getArticleRoute() {
   const match = location.pathname.match(/^\/(?:(de|es|fr|it|pl|pt|ro|sv|nl|el|hu|ga|zh)\/)?guides\/([^/]+)\/?$/);
@@ -105,12 +114,12 @@ function getArticleRoute() {
 }
 
 function articleHref(slug, lang = articleLocale) {
-  return lang === "en" ? `/guides/${slug}/` : `/${lang}/guides/${slug}/`;
+  return !articleHasLocale(slug, lang) || lang === "en" ? `/guides/${slug}/` : `/${lang}/guides/${slug}/`;
 }
 
 function syncArticleLinks(lang) {
   document.querySelectorAll('a[href*="/guides/kakobuy-"]').forEach(link => {
-    const match = link.getAttribute("href")?.match(/\/(?:(?:de|es|fr|it|pl|pt|ro|sv|nl|el|hu|ga|zh)\/)?guides\/(kakobuy-(?:qc-photos|shipping-fees|w2c-guide))\/?$/);
+    const match = link.getAttribute("href")?.match(/\/(?:(?:de|es|fr|it|pl|pt|ro|sv|nl|el|hu|ga|zh)\/)?guides\/(kakobuy-(?:spreadsheet-guide|qc-photos|shipping-fees|w2c-guide))\/?$/);
     if (match) link.setAttribute("href", articleHref(match[1], lang));
   });
 }
@@ -223,7 +232,7 @@ function footerTemplate() {
             <a class="brand" href="/"><span class="brand-mark brand-mark-logo" aria-hidden="true"><img src="/favicon-kakobuy.png" alt=""></span><span>KakobuyLab</span></a>
             <p class="footer-copy" data-i18n="footerCopy">Independent research and discovery site for Kakobuy shoppers. Not the official Kakobuy website and not a seller.</p>
           </div>
-          <div class="footer-col"><strong>Research</strong><a href="${articleHref("kakobuy-qc-photos")}">QC photos</a><a href="${articleHref("kakobuy-w2c-guide")}">W2C guide</a><a href="${articleHref("kakobuy-shipping-fees")}">Shipping costs</a></div>
+          <div class="footer-col"><strong>Research</strong><a href="${articleHref("kakobuy-spreadsheet-guide")}">Spreadsheet guide</a><a href="${articleHref("kakobuy-qc-photos")}">QC photos</a><a href="${articleHref("kakobuy-w2c-guide")}">W2C guide</a><a href="${articleHref("kakobuy-shipping-fees")}">Shipping costs</a></div>
           <div class="footer-col"><strong>Tools</strong><a href="/products/">Product finds</a><a href="/shipping/">Shipping calculator</a><a href="/coupons/">Coupon tracker</a></div>
           <div class="footer-col"><strong>Source sites</strong><a href="${KAKO_MAIN}" target="_blank" rel="noopener">KakobuyMake</a></div>
         </div>
@@ -234,9 +243,14 @@ function footerTemplate() {
 
 function applyLanguage(lang) {
   const route = getArticleRoute();
-  if (route && articleLanguages.has(lang) && lang !== route.lang) {
+  if (route && articleHasLocale(route.slug, lang) && lang !== route.lang) {
     localStorage.setItem("kakobuylab-lang", lang);
     location.assign(articleHref(route.slug, lang));
+    return;
+  }
+  if (route && route.lang !== "en" && !articleHasLocale(route.slug, lang)) {
+    localStorage.setItem("kakobuylab-lang", lang);
+    location.assign(`/guides/${route.slug}/`);
     return;
   }
   activeLang = languageCodes.has(lang) ? lang : "en";
@@ -278,7 +292,12 @@ function initShell() {
   captureArticleNodes();
   capturePhraseNodes();
   const storedLang = localStorage.getItem("kakobuylab-lang") || "en";
-  const lang = getArticleRoute()?.lang || (languageCodes.has(storedLang) ? storedLang : "en");
+  const route = getArticleRoute();
+  const lang = route?.lang && route.lang !== "en"
+    ? route.lang
+    : route?.slug === "kakobuy-spreadsheet-guide" && languageCodes.has(storedLang)
+      ? storedLang
+      : route?.lang || (languageCodes.has(storedLang) ? storedLang : "en");
   const languageMenu = document.getElementById("languageMenu");
   const languageCurrent = document.getElementById("languageCurrent");
   languageCurrent?.addEventListener("click", () => {
