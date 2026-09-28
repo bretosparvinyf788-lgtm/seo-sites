@@ -20,6 +20,9 @@
     pt: {loading:"Carregando dados ao vivo da KakobuyMake…",error:"Os dados da KakobuyMake estão temporariamente indisponíveis.",retry:"Tentar novamente",view:"Ver detalhes →",source:"Fonte KakobuyMake",search:"Pesquisar produtos KakobuyMake",searchPlaceholder:"Pesquisar na KakobuyMake",all:"Recentes",sortLatest:"Ordem da fonte",sortLow:"Preço: menor para maior",sortHigh:"Preço: maior para menor",sortName:"Nome: A–Z",previous:"Anterior",next:"Próxima",page:"Página",results:"produtos ao vivo",synced:"Fonte ao vivo",categoryHint:"Ver produtos →"}
   };
 
+  Object.assign(categoryNames, window.KL_SOURCE_CATEGORY_NAMES || {});
+  Object.assign(copy, window.KL_SOURCE_COPY || {});
+
   const safeLang = () => {
     const selected = localStorage.getItem("kakobuylab-lang") || document.documentElement.lang || "en";
     const short = selected.toLowerCase().split("-")[0];
