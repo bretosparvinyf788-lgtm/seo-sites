@@ -10,6 +10,25 @@ const SECURITY_HEADERS: Record<string, string> = {
 };
 
 export const onRequest = defineMiddleware(async ({ request, url }, next) => {
+  const edgeCache = (globalThis as typeof globalThis & {
+    caches?: CacheStorage & { default?: Cache };
+  }).caches?.default;
+  const canCachePage = request.method === 'GET'
+    && !url.pathname.includes('/search/')
+    && !url.pathname.includes('.');
+  const cacheKeyUrl = new URL(url);
+  cacheKeyUrl.searchParams.set('__kw_cache', '20260928-1');
+  const cacheKey = new Request(cacheKeyUrl, { method: 'GET' });
+
+  if (edgeCache && canCachePage) {
+    const cached = await edgeCache.match(cacheKey);
+    if (cached) {
+      const headers = new Headers(cached.headers);
+      headers.set('x-kakobuyworks-cache', 'HIT');
+      return new Response(cached.body, { status: cached.status, statusText: cached.statusText, headers });
+    }
+  }
+
   const response = await next();
   const headers = new Headers(response.headers);
 
@@ -24,9 +43,16 @@ export const onRequest = defineMiddleware(async ({ request, url }, next) => {
     headers.set('cache-control', 'public, max-age=3600, s-maxage=86400');
   }
 
-  return new Response(response.body, {
+  if (canCachePage) headers.set('x-kakobuyworks-cache', 'MISS');
+  const finalResponse = new Response(response.body, {
     status: response.status,
     statusText: response.statusText,
     headers
   });
+
+  if (edgeCache && canCachePage && response.status === 200 && contentType.includes('text/html')) {
+    await edgeCache.put(cacheKey, finalResponse.clone());
+  }
+
+  return finalResponse;
 });
