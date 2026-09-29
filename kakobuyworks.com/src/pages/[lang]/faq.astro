@@ -11,8 +11,8 @@ const structuredData = {
 };
 ---
 <BaseLayout lang={lang} title={`${copy.faqTitle} | Kakobuy Works`} description={copy.seo.body} canonicalPath={`/${lang}/faq/`} structuredData={structuredData}>
-  <header class="page-hero"><div class="shell"><h1>{copy.faqTitle}</h1><p>{copy.seo.body}</p></div></header>
-  <section class="section"><div class="shell faq-list">
+  <header class="page-hero faq-page-hero"><div class="shell"><span class="section-kicker">FAQ</span><h1>{copy.faqTitle}</h1><p>{copy.faqIntro}</p></div></header>
+  <section class="section faq-section"><div class="shell faq-list faq-reference-grid">
     {copy.faqs.map(([question, answer]) => <details><summary>{question}</summary><p>{answer}</p></details>)}
   </div></section>
 </BaseLayout>

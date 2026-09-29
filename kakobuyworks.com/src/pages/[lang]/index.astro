@@ -116,10 +116,10 @@ const structuredData = [
     </div>
   </section>
 
-  <section class="section section-soft" id="faq">
+  <section class="section faq-section" id="faq">
     <div class="shell">
-      <div class="section-head"><div><span class="section-kicker">FAQ</span><h2>{copy.faqTitle}</h2><p>{copy.seo.body}</p></div></div>
-      <div class="faq-list">
+      <div class="faq-heading"><span class="section-kicker">FAQ</span><h2>{copy.faqTitle}</h2><p>{copy.faqIntro}</p></div>
+      <div class="faq-list faq-reference-grid">
         {copy.faqs.map(([question, answer]) => <details><summary>{question}</summary><p>{answer}</p></details>)}
       </div>
     </div>

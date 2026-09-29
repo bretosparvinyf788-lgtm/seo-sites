@@ -40,6 +40,7 @@ type Copy = {
   listing: { title: string; body: string; sort: string; newest: string; priceLow: string; priceHigh: string; name: string; noResults: string; sourceError: string; previous: string; next: string };
   seo: { title: string; body: string; searchTitle: string; searchBody: string; photosTitle: string; photosBody: string; checkoutTitle: string; checkoutBody: string };
   faqTitle: string;
+  faqIntro: string;
   faqs: Array<[string, string]>;
   product: { gallery: string; sourceRecord: string; openKakobuy: string; currentNotice: string; unavailable: string };
 };
@@ -50,14 +51,19 @@ const en: Copy = {
   sections: { categories: 'Browse by category', categoriesBody: 'Explore the current categories published by the source catalog.', recent: 'Recently added listings', recentBody: 'Products, prices and images are read directly from kakobuymake.com.', viewAll: 'View all products', details: 'View details', sourceLive: 'Live source' },
   listing: { title: 'Kakobuy Spreadsheet', body: 'Browse the current public catalog from kakobuymake.com.', sort: 'Sort', newest: 'Newest', priceLow: 'Price: low to high', priceHigh: 'Price: high to low', name: 'Name', noResults: 'No matching source listings were found.', sourceError: 'The source catalog is temporarily unavailable. Please try again shortly.', previous: 'Previous', next: 'Next' },
   seo: { title: 'Compare seller listings before opening Kakobuy', body: 'This independent directory organizes public seller listings into a faster, mobile-friendly catalog. Product records remain on the source website and final price, stock and options should always be confirmed in Kakobuy.', searchTitle: 'Search products and categories', searchBody: 'Use a clear product, brand or category term to search the source catalog.', photosTitle: 'Review source photos', photosBody: 'Product galleries show only images published with the matching source listing.', checkoutTitle: 'Continue in Kakobuy', checkoutBody: 'Open the Kakobuy item page to check the latest seller information before ordering.' },
-  faqTitle: 'Kakobuy Spreadsheet FAQ',
+  faqTitle: 'Kakobuy Spreadsheet Frequently Asked Questions',
+  faqIntro: 'Answers to common questions about product search, estimated prices, marketplace links and product information.',
   faqs: [
-    ['What is this Kakobuy Spreadsheet?', 'It is an independent browsing layer for public listings supplied by kakobuymake.com. It does not sell products or process orders.'],
-    ['Where do the products come from?', 'Titles, prices, categories and product images are requested from kakobuymake.com when a page is opened.'],
-    ['Are prices guaranteed?', 'No. Displayed prices are source estimates. Confirm the current price, stock and selected option in Kakobuy.'],
-    ['Are all product photos QC photos?', 'No. The gallery reproduces the images published for that source record. A photo is not labelled as QC unless the source identifies it that way.'],
-    ['How do I buy an item?', 'Click a product card to open the matching item page directly in Kakobuy.'],
-    ['Why can a listing disappear?', 'The source catalog or seller listing may be changed or removed. This site does not keep a separate product database.']
+    ['What is the Kakobuy Spreadsheet?', 'The Kakobuy Spreadsheet is an independent, searchable directory of public seller listings supplied by kakobuymake.com. It organizes product titles, categories, estimated prices and source images so shoppers can compare items before continuing to Kakobuy.'],
+    ['What is Kakobuy?', 'Kakobuy is a shopping-agent service that helps international buyers purchase products from Chinese marketplaces. After choosing an item, buyers can use Kakobuy for purchasing, warehouse processing and international parcel delivery.'],
+    ['Which marketplaces are included?', 'Source records may include products from Weidian, Taobao, Tmall, 1688 and other Chinese marketplaces. The available marketplace and seller link depend on the information published with each source listing.'],
+    ['How do I search for products?', 'Open the Spreadsheet page and search with a product name, brand or category. You can also browse the category pages to compare similar listings.'],
+    ['Why are prices shown in US dollars?', 'Many source sellers price products in Chinese yuan. The spreadsheet displays an estimated US-dollar value to make comparison easier; exchange rates and seller prices can change, so confirm the final amount in Kakobuy.'],
+    ['Why do some products have fewer images or options?', 'Images, styles, colours and size information come from the original marketplace listing. Some sellers publish a complete gallery while others provide only a main image or a short description.'],
+    ['How do I open a product in Kakobuy?', 'Open the product detail page, review the source images and estimated price, then use the Kakobuy button to continue to the matching item page.'],
+    ['What are quality-control (QC) photos?', 'QC photos are warehouse inspection images of an ordered item. They can help you review visible details such as shape, colour, material and sizing marks before international shipping.'],
+    ['Does the displayed price include shipping and service fees?', 'No. The displayed amount is the source product price. Domestic delivery, international shipping, optional services and other charges are calculated separately.'],
+    ['What should I verify before ordering?', 'Confirm the marketplace item, selected variant, current price, seller status and any shipping restrictions on the Kakobuy page before placing an order.']
   ],
   product: { gallery: 'Source gallery', sourceRecord: 'View source record', openKakobuy: 'Open in Kakobuy', currentNotice: 'Price, stock and options can change. Confirm the final details in Kakobuy.', unavailable: 'This source listing is unavailable.' }
 };
@@ -293,7 +299,7 @@ const overrides: Partial<Record<Lang, Partial<Copy>>> = {
     faqs: [['X’inhu dan l-iSpreadsheet ta’ Kakobuy?', 'Huwa katalgu indipendenti ta’ listi pubbliċi minn kakobuymake.com. Ma jbigħx prodotti u ma jipproċessax ordnijiet.'], ['Minn fejn jiġu l-prodotti?', 'It-titli, il-prezzijiet, il-kategoriji u l-istampi jitgħabbew minn kakobuymake.com meta tinfetaħ il-paġna.'], ['Il-prezzijiet huma garantiti?', 'Le. Ikkonferma l-prezz attwali, l-istokk u l-għażla f’Kakobuy.'], ['Ir-ritratti kollha huma QC?', 'Le. Jintwerew l-istampi tal-lista tas-sors u jissejħu QC biss meta s-sors jidentifikahom hekk.'], ['Kif nixtri prodott?', 'Ikklikkja l-karta tal-prodott biex tiftaħ direttament il-paġna korrispondenti f’Kakobuy.'], ['Għaliex prodott jista’ jisparixxi?', 'Il-katalgu tas-sors jew il-lista tal-bejjiegħ jistgħu jinbidlu jew jitneħħew. Is-sit ma jżommx database separata tal-prodotti.']],
     product: { gallery: 'Gallerija tas-sors', sourceRecord: 'Ara s-sors', openKakobuy: 'Iftaħ f’Kakobuy', currentNotice: 'Il-prezz, l-istokk u l-għażliet jistgħu jinbidlu. Ikkonferma d-dettalji f’Kakobuy.', unavailable: 'Din il-lista tas-sors mhix disponibbli.' }
   },
-  zh: { nav: { home: '首页', spreadsheet: '商品表', categories: '分类', faq: '常见问题' }, hero: { eyebrow: '实时读取 kakobuymake.com', title: 'Kakobuy 商品表', body: '搜索商品，比较来源图片和参考价格，然后前往 Kakobuy 查看并下单。', placeholder: '搜索鞋子、卫衣、包袋…', search: '搜索', browse: '浏览全部商品' }, sections: { categories: '按分类浏览', categoriesBody: '分类实时读取自来源商品库。', recent: '最新商品', recentBody: '商品、价格和图片均直接读取自 kakobuymake.com。', viewAll: '查看全部商品', details: '查看详情', sourceLive: '实时来源' }, listing: { title: 'Kakobuy 商品表', body: '浏览 kakobuymake.com 当前公开商品。', sort: '排序', newest: '最新', priceLow: '价格从低到高', priceHigh: '价格从高到低', name: '名称', noResults: '没有找到匹配商品。', sourceError: '来源商品库暂时无法访问，请稍后再试。', previous: '上一页', next: '下一页' }, seo: { title: '前往 Kakobuy 前先比较商品', body: '本站是独立商品浏览页面，不销售商品。所有商品记录来自来源网站，价格、库存和规格请以 Kakobuy 页面为准。', searchTitle: '搜索商品和分类', searchBody: '使用明确的商品名、品牌或分类词搜索来源商品库。', photosTitle: '查看来源图片', photosBody: '商品图库只展示来源商品记录中公开的图片。', checkoutTitle: '前往 Kakobuy', checkoutBody: '下单前请在 Kakobuy 页面确认最新卖家信息。' }, faqTitle: 'Kakobuy 常见问题', faqs: [ ['这个网站是什么？', '这是 kakobuymake.com 公开商品的独立浏览层，不销售商品，也不处理订单。'], ['商品数据来自哪里？', '商品名称、价格、分类和图片在打开页面时从 kakobuymake.com 获取。'], ['价格一定准确吗？', '不一定。请在 Kakobuy 中确认实时价格、库存和规格。'], ['所有图片都是 QC 图片吗？', '不是。页面只按来源记录展示图片，只有来源明确标注时才会称为 QC 图片。'], ['如何购买？', '打开商品详情后点击 Kakobuy 按钮继续。'], ['为什么商品会消失？', '来源商品或卖家链接可能变更；本站不建立独立商品数据库。'] ], product: { gallery: '来源图片', sourceRecord: '查看来源记录', openKakobuy: '前往 Kakobuy', currentNotice: '价格、库存和规格可能变化，请在 Kakobuy 确认。', unavailable: '该来源商品暂时不可用。' } }
+  zh: { nav: { home: '首页', spreadsheet: '商品表', categories: '分类', faq: '常见问题' }, hero: { eyebrow: '实时读取 kakobuymake.com', title: 'Kakobuy 商品表', body: '搜索商品，比较来源图片和参考价格，然后前往 Kakobuy 查看并下单。', placeholder: '搜索鞋子、卫衣、包袋…', search: '搜索', browse: '浏览全部商品' }, sections: { categories: '按分类浏览', categoriesBody: '分类实时读取自来源商品库。', recent: '最新商品', recentBody: '商品、价格和图片均直接读取自 kakobuymake.com。', viewAll: '查看全部商品', details: '查看详情', sourceLive: '实时来源' }, listing: { title: 'Kakobuy 商品表', body: '浏览 kakobuymake.com 当前公开商品。', sort: '排序', newest: '最新', priceLow: '价格从低到高', priceHigh: '价格从高到低', name: '名称', noResults: '没有找到匹配商品。', sourceError: '来源商品库暂时无法访问，请稍后再试。', previous: '上一页', next: '下一页' }, seo: { title: '前往 Kakobuy 前先比较商品', body: '本站是独立商品浏览页面，不销售商品。所有商品记录来自来源网站，价格、库存和规格请以 Kakobuy 页面为准。', searchTitle: '搜索商品和分类', searchBody: '使用明确的商品名、品牌或分类词搜索来源商品库。', photosTitle: '查看来源图片', photosBody: '商品图库只展示来源商品记录中公开的图片。', checkoutTitle: '前往 Kakobuy', checkoutBody: '下单前请在 Kakobuy 页面确认最新卖家信息。' }, faqTitle: 'Kakobuy 电子表格常见问题解答', faqIntro: '解答有关产品搜索、预估价格、市场链接和产品信息的常见问题。', faqs: [ ['Kakobuy 电子表格是什么？', 'Kakobuy 电子表格是一个可搜索的独立商品目录，数据来自 kakobuymake.com 的公开卖家商品。它整理商品标题、分类、预估价格和来源图片，方便用户在前往 Kakobuy 前进行比较。'], ['Kakobuy 是什么？', 'Kakobuy 是一家代购服务平台，帮助国际买家从中国电商平台购买商品，并提供采购、入库处理和国际包裹运输等服务。'], ['电子表格包含哪些市场？', '来源商品可能来自微店、淘宝、天猫、1688 及其他中国电商平台。每件商品显示的市场和卖家链接，以来源记录公开的信息为准。'], ['我该如何搜索产品？', '打开“商品表”页面，输入产品名称、品牌或商品分类进行搜索；也可以进入分类页面浏览并比较相似商品。'], ['为什么价格以美元显示？', '中国电商卖家通常以人民币标价。电子表格显示预估美元价格，方便比较不同商品；汇率和卖家价格可能变化，请在 Kakobuy 确认最终金额。'], ['为什么有些产品的图片或选项较少？', '图片、款式、颜色和尺码信息均来自原始市场商品页面。有些卖家提供完整图库和多种选项，另一些卖家可能只发布主图或简短说明。'], ['如何在 Kakobuy 中打开商品？', '打开本站商品详情页，查看来源图片和预估价格，然后点击 Kakobuy 按钮进入对应商品页面。'], ['什么是质检（QC）照片？', '质检照片是商品入库后拍摄的检查图片，可帮助查看商品的形状、颜色、材质和尺码标记等可见细节。实际订单的 QC 照片可能与来源参考图片不同。'], ['显示的价格包含国际运费和服务费吗？', '不包含。页面显示的是来源商品价格，国内运费、国际运费、可选服务和其他费用需要另外计算。'], ['下单前应该确认哪些信息？', '请在 Kakobuy 页面确认商品来源、所选规格、实时价格、卖家状态以及可能存在的运输限制。'] ], product: { gallery: '来源图片', sourceRecord: '查看来源记录', openKakobuy: '前往 Kakobuy', currentNotice: '价格、库存和规格可能变化，请在 Kakobuy 确认。', unavailable: '该来源商品暂时不可用。' } }
 };
 
 const detailPurchaseDirections: Record<Lang, string> = {
@@ -517,7 +523,8 @@ export function isLang(value?: string): value is Lang {
 export function getCopy(lang: Lang): Copy {
   const partial = overrides[lang] || {};
   const baseFaqs = (partial.faqs || en.faqs).map(([question, answer]) => [question, answer] as [string, string]);
-  if (baseFaqs[4]) baseFaqs[4][1] = detailPurchaseDirections[lang];
+  const purchaseIndex = lang === 'en' || lang === 'zh' ? 6 : 4;
+  if (baseFaqs[purchaseIndex]) baseFaqs[purchaseIndex][1] = detailPurchaseDirections[lang];
   const faqs = [...baseFaqs, ...faqExtras[lang].map(([question, answer]) => [question, answer] as [string, string])].slice(0, 10);
   return {
     ...en,
@@ -527,6 +534,7 @@ export function getCopy(lang: Lang): Copy {
     sections: { ...en.sections, ...(partial.sections || {}) },
     listing: { ...en.listing, ...(partial.listing || {}) },
     seo: { ...en.seo, ...(partial.seo || {}) },
+    faqIntro: partial.faqIntro || partial.seo?.body || en.faqIntro,
     product: { ...en.product, ...(partial.product || {}) },
     faqs
   };
