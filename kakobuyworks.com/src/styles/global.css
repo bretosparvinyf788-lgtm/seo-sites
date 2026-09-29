@@ -49,6 +49,7 @@ button, input, select { font: inherit; }
 .button-secondary { color: var(--ink); background: #fff; border: 1px solid var(--line); }
 .button-secondary:hover { color: var(--brand); background: #fff; }
 .button-small { padding: 10px 16px; border-radius: 10px; font-size: .9rem; }
+.signup-button { flex: 0 0 auto; white-space: nowrap; }
 .mobile-menu { display: none; }
 
 .hero { position: relative; overflow: hidden; min-height: 520px; display: grid; place-items: center; background: #fffaf7; border-bottom: 1px solid var(--line); }
@@ -192,7 +193,7 @@ h1 { margin: 17px 0 18px; font-size: clamp(2.7rem, 6.2vw, 4.8rem); line-height: 
   .brand img { width: 116px; }
   .brand span { display: none; }
   .language-menu summary { min-width: 0; max-width: 82px; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; padding: 9px; }
-  .nav-actions > .button { display: none; }
+  .signup-button { max-width: 90px; padding: 9px 11px; overflow: hidden; font-size: .76rem; text-overflow: ellipsis; }
   .hero { min-height: 470px; }
   .hero-inner { padding: 58px 0; }
   h1 { font-size: clamp(2.55rem, 15vw, 4.3rem); }

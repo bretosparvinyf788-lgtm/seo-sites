@@ -6,8 +6,9 @@ const SOURCE_SITE = (runtimeEnv?.SOURCE_SITE || (typeof process !== 'undefined' 
 // The source-wide catalog currently contains one live item without a category.
 // Keep it discoverable under Other Stuff without copying its product data.
 const CATEGORY_FALLBACK_IDS: Record<string, string[]> = { '11': ['609'] };
-const SOURCE_CACHE_TTL = 5 * 60 * 1000;
-const SOURCE_STALE_TTL = 24 * 60 * 60 * 1000;
+const SOURCE_CACHE_TTL = 30 * 60 * 1000;
+const SOURCE_STALE_TTL = 7 * 24 * 60 * 60 * 1000;
+const SOURCE_REQUEST_TIMEOUT = 8_000;
 const sourceCache = new Map<string, { expires: number; html: string }>();
 const sourceRequests = new Map<string, Promise<string>>();
 
@@ -90,7 +91,7 @@ async function fetchSource(path: string) {
       }
 
       const controller = new AbortController();
-      const timeout = setTimeout(() => controller.abort(), 15000);
+      const timeout = setTimeout(() => controller.abort(), SOURCE_REQUEST_TIMEOUT);
       try {
         const response = await fetch(sourceUrl, {
           headers: {
@@ -111,7 +112,12 @@ async function fetchSource(path: string) {
               'x-source-fetched-at': String(Date.now())
             }
           });
-          await edgeCache.put(cacheRequest, cacheResponse);
+          // Cache persistence must never delay the page response. A slow cache
+          // write at a cold edge location previously allowed requests to reach
+          // Cloudflare's origin timeout even after the source HTML had loaded.
+          void edgeCache.put(cacheRequest, cacheResponse).catch((error) => {
+            console.error('SOURCE_CACHE_WRITE_ERROR', error);
+          });
         }
         return html;
       } catch (error) {

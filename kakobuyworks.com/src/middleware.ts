@@ -9,7 +9,7 @@ const SECURITY_HEADERS: Record<string, string> = {
   'x-frame-options': 'DENY'
 };
 
-export const onRequest = defineMiddleware(async ({ request, url }, next) => {
+export const onRequest = defineMiddleware(async ({ request, url, locals }, next) => {
   const edgeCache = (globalThis as typeof globalThis & {
     caches?: CacheStorage & { default?: Cache };
   }).caches?.default;
@@ -17,7 +17,7 @@ export const onRequest = defineMiddleware(async ({ request, url }, next) => {
     && !url.pathname.includes('/search/')
     && !url.pathname.includes('.');
   const cacheKeyUrl = new URL(url);
-  cacheKeyUrl.searchParams.set('__kw_cache', '20260928-2');
+  cacheKeyUrl.searchParams.set('__kw_cache', '20260929-1');
   const cacheKey = new Request(cacheKeyUrl, { method: 'GET' });
 
   if (edgeCache && canCachePage) {
@@ -51,7 +51,15 @@ export const onRequest = defineMiddleware(async ({ request, url }, next) => {
   });
 
   if (edgeCache && canCachePage && response.status === 200 && contentType.includes('text/html')) {
-    await edgeCache.put(cacheKey, finalResponse.clone());
+    const cacheWrite = edgeCache.put(cacheKey, finalResponse.clone()).catch((error) => {
+      console.error('PAGE_CACHE_WRITE_ERROR', error);
+    });
+    const executionContext = (locals as typeof locals & {
+      runtime?: { ctx?: { waitUntil?: (promise: Promise<unknown>) => void } };
+    }).runtime?.ctx;
+
+    if (executionContext?.waitUntil) executionContext.waitUntil(cacheWrite);
+    else void cacheWrite;
   }
 
   return finalResponse;
