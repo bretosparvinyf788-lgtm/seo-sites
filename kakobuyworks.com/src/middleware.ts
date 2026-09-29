@@ -44,14 +44,34 @@ export const onRequest = defineMiddleware(async ({ request, url, locals }, next)
   }
 
   if (canCachePage) headers.set('x-kakobuyworks-cache', 'MISS');
-  const finalResponse = new Response(response.body, {
-    status: response.status,
-    statusText: response.statusText,
-    headers
-  });
+  const shouldCachePage = Boolean(
+    edgeCache
+    && canCachePage
+    && response.status === 200
+    && contentType.includes('text/html')
+  );
 
-  if (edgeCache && canCachePage && response.status === 200 && contentType.includes('text/html')) {
-    const cacheWrite = edgeCache.put(cacheKey, finalResponse.clone()).catch((error) => {
+  // Do not tee the live response stream into Cache API. Cloudflare can finish
+  // the cache write while the client branch fails, which turns a successful
+  // cold page render into an HTTP 500. Buffer the small HTML response once and
+  // give the client and cache independent bodies instead.
+  const responseBody = shouldCachePage ? await response.arrayBuffer() : response.body;
+  const finalResponse = new Response(
+    responseBody instanceof ArrayBuffer ? responseBody.slice(0) : responseBody,
+    {
+      status: response.status,
+      statusText: response.statusText,
+      headers
+    }
+  );
+
+  if (edgeCache && shouldCachePage && responseBody instanceof ArrayBuffer) {
+    const cacheResponse = new Response(responseBody, {
+      status: response.status,
+      statusText: response.statusText,
+      headers
+    });
+    const cacheWrite = edgeCache.put(cacheKey, cacheResponse).catch((error) => {
       console.error('PAGE_CACHE_WRITE_ERROR', error);
     });
     const executionContext = (locals as typeof locals & {
