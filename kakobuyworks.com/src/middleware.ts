@@ -9,26 +9,7 @@ const SECURITY_HEADERS: Record<string, string> = {
   'x-frame-options': 'DENY'
 };
 
-export const onRequest = defineMiddleware(async ({ request, url, locals }, next) => {
-  const edgeCache = (globalThis as typeof globalThis & {
-    caches?: CacheStorage & { default?: Cache };
-  }).caches?.default;
-  const canCachePage = request.method === 'GET'
-    && !url.pathname.includes('/search/')
-    && !url.pathname.includes('.');
-  const cacheKeyUrl = new URL(url);
-  cacheKeyUrl.searchParams.set('__kw_cache', '20260929-1');
-  const cacheKey = new Request(cacheKeyUrl, { method: 'GET' });
-
-  if (edgeCache && canCachePage) {
-    const cached = await edgeCache.match(cacheKey);
-    if (cached) {
-      const headers = new Headers(cached.headers);
-      headers.set('x-kakobuyworks-cache', 'HIT');
-      return new Response(cached.body, { status: cached.status, statusText: cached.statusText, headers });
-    }
-  }
-
+export const onRequest = defineMiddleware(async ({ request, url }, next) => {
   const response = await next();
   const headers = new Headers(response.headers);
 
@@ -43,44 +24,10 @@ export const onRequest = defineMiddleware(async ({ request, url, locals }, next)
     headers.set('cache-control', 'public, max-age=3600, s-maxage=86400');
   }
 
-  if (canCachePage) headers.set('x-kakobuyworks-cache', 'MISS');
-  const shouldCachePage = Boolean(
-    edgeCache
-    && canCachePage
-    && response.status === 200
-    && contentType.includes('text/html')
-  );
-
-  // Do not tee the live response stream into Cache API. Cloudflare can finish
-  // the cache write while the client branch fails, which turns a successful
-  // cold page render into an HTTP 500. Buffer the small HTML response once and
-  // give the client and cache independent bodies instead.
-  const responseBody = shouldCachePage ? await response.arrayBuffer() : response.body;
-  const finalResponse = new Response(
-    responseBody instanceof ArrayBuffer ? responseBody.slice(0) : responseBody,
-    {
-      status: response.status,
-      statusText: response.statusText,
-      headers
-    }
-  );
-
-  if (edgeCache && shouldCachePage && responseBody instanceof ArrayBuffer) {
-    const cacheResponse = new Response(responseBody, {
-      status: response.status,
-      statusText: response.statusText,
-      headers
-    });
-    const cacheWrite = edgeCache.put(cacheKey, cacheResponse).catch((error) => {
-      console.error('PAGE_CACHE_WRITE_ERROR', error);
-    });
-    const executionContext = (locals as typeof locals & {
-      runtime?: { ctx?: { waitUntil?: (promise: Promise<unknown>) => void } };
-    }).runtime?.ctx;
-
-    if (executionContext?.waitUntil) executionContext.waitUntil(cacheWrite);
-    else void cacheWrite;
-  }
-
-  return finalResponse;
+  headers.set('x-kakobuyworks-build', '20260929-3');
+  return new Response(response.body, {
+    status: response.status,
+    statusText: response.statusText,
+    headers
+  });
 });
