@@ -1,5 +1,8 @@
 node_modules/
-dist/
+dist/*
+!dist/_worker.js
+!dist/_routes.json
+!dist/_headers
 .astro/
 .wrangler/
 src/lib/site-worker.js

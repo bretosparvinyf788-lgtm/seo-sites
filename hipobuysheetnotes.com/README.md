@@ -6,7 +6,7 @@ Astro application packaged for Cloudflare Pages advanced mode. Current UI source
 
 ## Deployment
 
-Use Node.js 22.19 or newer. The .node-version file pins the Cloudflare build runtime to 22.19.0. npm ci runs the prepare lifecycle and builds dist automatically; this also supports the existing Pages build command exit 0. Prefer npm run build in the dashboard for an explicit build step. Run npm ci and npm run build. The deployment output directory is dist, including _worker.js and _routes.json. Authenticate with Cloudflare and run npm run deploy for manual CLI deployment.
+Use Node.js 22.19 or newer. The .node-version file pins the Cloudflare build runtime to 22.19.0. Verified Pages output (dist/_worker.js, dist/_routes.json and dist/_headers) is committed alongside the source. This supports the existing Pages build command exit 0 without requiring Astro compilation in the Cloudflare build container. After source changes, run npm run build and commit the regenerated output. npm run build remains supported as an explicit dashboard build step. Run npm ci and npm run build. The deployment output directory is dist, including _worker.js and _routes.json. Authenticate with Cloudflare and run npm run deploy for manual CLI deployment.
 
 Cloudflare Pages Git settings:
 - Repository: bretosparvinyf788-lgtm/seo-sites
