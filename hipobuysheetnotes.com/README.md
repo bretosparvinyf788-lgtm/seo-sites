@@ -6,7 +6,7 @@ Astro application packaged for Cloudflare Pages advanced mode. Current UI source
 
 ## Deployment
 
-Use Node.js 22.12 or newer. Run npm ci and npm run build. The deployment output directory is dist, including _worker.js and _routes.json. Authenticate with Cloudflare and run npm run deploy for manual CLI deployment.
+Use Node.js 22.19 or newer. The .node-version file pins the Cloudflare build runtime to 22.19.0. npm ci runs the prepare lifecycle and builds dist automatically; this also supports the existing Pages build command exit 0. Prefer npm run build in the dashboard for an explicit build step. Run npm ci and npm run build. The deployment output directory is dist, including _worker.js and _routes.json. Authenticate with Cloudflare and run npm run deploy for manual CLI deployment.
 
 Cloudflare Pages Git settings:
 - Repository: bretosparvinyf788-lgtm/seo-sites
@@ -14,7 +14,7 @@ Cloudflare Pages Git settings:
 - Root directory: hipobuysheetnotes.com
 - Build command: npm run build
 - Build output directory: dist
-- Node version: 22.12 or newer
+- Node version: 22.19 or newer
 
 Keep the existing Pages project hipobuysheetnotes-com. Add both hipobuysheetnotes.com and www.hipobuysheetnotes.com in its Custom domains screen, and wait until the domains are Active. Do not point the domain at a different Worker project. A successful build alone does not confirm DNS or TLS activation.
 
