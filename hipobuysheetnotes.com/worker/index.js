@@ -1,5 +1,6 @@
 const ORIGIN='https://kakobuymake.com';
 const PAGE=__PAGE__;
+const SITE='https://hipobuysheetnotes.com';
 function decode(s=''){return s.replace(/&(?:amp|quot|#39|lt|gt|nbsp);|&#(?:x[0-9a-f]+|\d+);/gi,m=>{const named={'&amp;':'&','&quot;':'"','&#39;':"'",'&lt;':'<','&gt;':'>','&nbsp;':' '};if(named[m.toLowerCase()])return named[m.toLowerCase()];const n=m.startsWith('&#x')?parseInt(m.slice(3,-1),16):parseInt(m.slice(2,-1),10);return Number.isFinite(n)?String.fromCodePoint(n):m})}
 function text(s=''){return decode(s.replace(/<[^>]*>/g,'').trim())}
 function capture(s,re){return s.match(re)?.[1]||''}
@@ -15,7 +16,23 @@ function qcImages(html){const found=[];for(const block of html.matchAll(/<(?:sec
 function detail(html,id){const title=text(capture(html,/<h1\b[^>]*class="product-title"[^>]*>([\s\S]*?)<\/h1>/i));const main=img(capture(html,/<img\b[^>]*id="mainImage"[^>]*src="([^"]+)"/i));const gallery=capture(html,/<div\b[^>]*class="thumbnail-carousel"[^>]*>([\s\S]*?)<\/div>/i);const sourcePhotos=[main,...[...gallery.matchAll(/<img\b[^>]*src="([^"]+)"/gi)].map(x=>img(x[1]))].filter((x,i,a)=>x&&a.indexOf(x)===i);if(!title||!main)throw new Error('Missing product');const explicitQc=qcImages(html);const qcPhotos=explicitQc.length?explicitQc:sourcePhotos.filter(src=>src!==main);return {id,title,image:main,images:[main],buy:purchase(html),qcPhotos,qcStatus:explicitQc.length?'verified':'source-gallery',sourceUrl:`${ORIGIN}/?m=home&c=View&a=index&aid=${id}`,price:text(capture(html,/<span\b[^>]*class="current-price price"[^>]*>([\s\S]*?)<\/span>/i))}}
 const json=(data,status=200)=>Response.json(data,{status,headers:{'cache-control':status===200?'public, max-age=120':'no-store','x-content-type-options':'nosniff'}});
 const CURRENCIES=new Set(['USD','BRL','CNY','DKK','EUR','MXN','NZD','NOK','PLN','SEK','CHF','KRW','AUD','GBP','CAD']);
-export default {async fetch(request){const u=new URL(request.url);if(['/', '/products', '/categories'].includes(u.pathname)||/^\/category\/[1-9]\d{0,2}$/.test(u.pathname)||/^\/product\/[1-9]\d{0,9}$/.test(u.pathname)){return new Response(PAGE,{headers:{'content-type':'text/html; charset=utf-8','cache-control':'no-store'}})}
+const xmlEscape=value=>String(value).replace(/[<>&"']/g,ch=>({'<':'&lt;','>':'&gt;','&':'&amp;','"':'&quot;',"'":'&apos;'}[ch]));
+const xmlResponse=body=>new Response('<?xml version="1.0" encoding="UTF-8"?>\n'+body,{headers:{'content-type':'application/xml; charset=utf-8','cache-control':'public, max-age=3600','x-content-type-options':'nosniff'}});
+const urlset=paths=>xmlResponse('<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'+[...new Set(paths)].map(path=>'<url><loc>'+xmlEscape(SITE+path)+'</loc></url>').join('')+'</urlset>');
+export default {async fetch(request){const u=new URL(request.url);
+if(u.pathname==='/robots.txt')return new Response('User-agent: *\nAllow: /\nDisallow: /api/\nSitemap: '+SITE+'/sitemap.xml\n',{headers:{'content-type':'text/plain; charset=utf-8','cache-control':'public, max-age=3600'}});
+if(u.pathname==='/sitemap.xml'||u.pathname==='/sitemaps/pages.xml'||/^\/sitemaps\/products-[1-9]\d{0,2}\.xml$/.test(u.pathname)){
+  const match=u.pathname.match(/products-(\d+)\.xml$/),page=match?Number(match[1]):1;
+  const target=new URL(ORIGIN);if(page>1)target.searchParams.set('page',String(page));
+  try{
+    const html=await source(target),info=pagination(html);
+    if(u.pathname==='/sitemap.xml')return xmlResponse('<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'+['/sitemaps/pages.xml',...Array.from({length:Math.max(1,Math.min(info.totalPages||1,999))},(_,i)=>'/sitemaps/products-'+(i+1)+'.xml')].map(path=>'<sitemap><loc>'+SITE+path+'</loc></sitemap>').join('')+'</sitemapindex>');
+    if(u.pathname==='/sitemaps/pages.xml')return urlset(['/', '/products','/categories',...categories(html).map(cat=>'/category/'+cat.id)]);
+    if(info.totalPages&&page>info.totalPages)return new Response('Not found',{status:404});
+    return urlset(products(html).map(item=>'/product/'+item.id));
+  }catch(e){console.error('sitemap upstream:',e?.message);return new Response('Sitemap source temporarily unavailable',{status:503,headers:{'retry-after':'300','cache-control':'no-store'}})}
+}
+if(['/', '/products', '/categories'].includes(u.pathname)||/^\/category\/[1-9]\d{0,2}$/.test(u.pathname)||/^\/product\/[1-9]\d{0,9}$/.test(u.pathname)){return new Response(PAGE.replace("__CANONICAL_URL__",SITE+u.pathname),{headers:{'content-type':'text/html; charset=utf-8','cache-control':'no-store'}})}
 if(u.pathname==='/api/rate'){
   const currency=u.searchParams.get('currency')||'USD';
   if(!CURRENCIES.has(currency))return json({error:'Unsupported currency'},400);
