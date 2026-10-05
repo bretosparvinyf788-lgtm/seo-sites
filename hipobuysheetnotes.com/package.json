@@ -4,9 +4,9 @@
   "type": "module",
   "scripts": {
     "dev": "astro dev --host 0.0.0.0",
-    "build": "node scripts/embed-page.mjs && astro build",
+    "build": "node scripts/embed-page.mjs && astro build && node scripts/package-pages.mjs",
     "preview": "astro preview --host 0.0.0.0",
-    "deploy": "npm run build && wrangler deploy"
+    "deploy": "npm run build && wrangler pages deploy dist --project-name hipobuysheetnotes-com"
   },
   "dependencies": {
     "@astrojs/cloudflare": "14.3.3",
