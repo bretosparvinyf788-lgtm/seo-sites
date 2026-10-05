@@ -2,7 +2,7 @@
 
 Astro application with Cloudflare Workers hosting. Current UI source is in worker/page.html and worker/client.js. worker/index.js provides the catalog, detail and exchange-rate APIs. Astro routes requests to this handler.
 
-19 language/region options, independent 15-currency selection, 16 expanded FAQ answers, product carousels, and sticky mobile navigation. The four mobile navigation entries stay together. Registration follows currency selection.
+19 language/region options, independent 15-currency selection, 16 expanded FAQ answers, product carousels, and sticky mobile navigation. The four mobile navigation entries are grouped in a hamburger menu. Registration follows currency selection.
 
 ## Deployment
 
