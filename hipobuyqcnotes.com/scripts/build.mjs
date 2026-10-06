@@ -1,0 +1,27 @@
+import {readFile,writeFile,mkdir} from 'node:fs/promises';
+const root=new URL('../',import.meta.url);
+const read=path=>readFile(new URL(path,root),'utf8');
+const [template,page,client,guides,guideClient]=await Promise.all(['worker/index.js','worker/page.html','worker/client.js','worker/guides-page.html','worker/guides-client.js'].map(read));
+const embed=(html,script)=>html.replace('__CLIENT_SCRIPT__',()=>script.replace(/<\/script/gi,'<\\/script')).replace(/<meta\b[^>]*name=["']robots["'][^>]*>/gi,'');
+let code=template.replace('__PAGE__',()=>JSON.stringify(embed(page,client))).replace('__GUIDE_PAGE__',()=>JSON.stringify(embed(guides,guideClient))).replace('export default {async fetch(request)', 'const application={async fetch(request)');
+code+=`\nconst PUBLIC_ORIGIN='https://hipobuyqcnotes.com';
+const paths=['/','/products','/categories','/guides','/guides/reading-qc-photos','/guides/measurement-checks','/guides/extra-photo-requests'];
+export default {async fetch(request,env,ctx){
+ const url=new URL(request.url);
+ if(url.hostname==='www.hipobuyqcnotes.com'||(url.hostname==='hipobuyqcnotes.com'&&url.protocol==='http:'))return Response.redirect(PUBLIC_ORIGIN+url.pathname+url.search,301);
+ if(url.pathname==='/robots.txt')return new Response('User-agent: *\\nAllow: /\\nDisallow: /api/\\nSitemap: '+PUBLIC_ORIGIN+'/sitemap.xml\\n',{headers:{'content-type':'text/plain; charset=utf-8'}});
+ if(url.pathname==='/sitemap.xml')return new Response('<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'+paths.map(path=>'<url><loc>'+PUBLIC_ORIGIN+path+'</loc></url>').join('')+'</urlset>',{headers:{'content-type':'application/xml; charset=utf-8'}});
+ const response=await application.fetch(request,env,ctx);
+ if(!(response.headers.get('content-type')||'').includes('text/html'))return response;
+ const headers=new Headers(response.headers);headers.delete('x-robots-tag');
+ if(url.hostname!=='hipobuyqcnotes.com')headers.set('x-robots-tag','noindex');
+ const canonical=PUBLIC_ORIGIN+url.pathname;
+ let html=await response.text();
+ html=html.replace(/<link\\b[^>]*rel=["']canonical["'][^>]*>/gi,'');
+ html=html.replace('</head>','<link rel="canonical" href="'+canonical+'"></head>');
+ return new Response(html,{status:response.status,headers});
+}};\n`;
+await mkdir(new URL('dist/',root),{recursive:true});
+await writeFile(new URL('dist/_worker.js',root),code);
+await writeFile(new URL('dist/_routes.json',root),JSON.stringify({version:1,include:['/*'],exclude:[]}));
+console.log('Built Cloudflare Pages advanced-mode Worker.');
