@@ -20,4 +20,5 @@ Run npm run build after editing worker source. The committed dist/_worker.js is 
 - Three existing short guides in English and Chinese; full-length multilingual SEO articles remain future work.
 - Source data comes from kakobuymake.com; no invented QC results or local product database.
 - robots.txt, sitemap.xml, canonical URLs and HTTPS/www normalization included.
-- Google Search Console, Bing and Analytics are not configured in this deployment.
+- Google Search Console and Bing ownership verified through DNS. Sitemap submitted to both.
+- GA4: VIP Sites Analytics (405490942), web stream 16052158854, measurement ID G-YXWSVE47YC. Tag is injected into all HTML pages at build time.

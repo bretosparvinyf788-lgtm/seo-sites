@@ -2,7 +2,10 @@ import {readFile,writeFile,mkdir} from 'node:fs/promises';
 const root=new URL('../',import.meta.url);
 const read=path=>readFile(new URL(path,root),'utf8');
 const [template,page,client,guides,guideClient]=await Promise.all(['worker/index.js','worker/page.html','worker/client.js','worker/guides-page.html','worker/guides-client.js'].map(read));
-const embed=(html,script)=>html.replace('__CLIENT_SCRIPT__',()=>script.replace(/<\/script/gi,'<\\/script')).replace(/<meta\b[^>]*name=["']robots["'][^>]*>/gi,'');
+const tag=`<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-YXWSVE47YC"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-YXWSVE47YC');</script>`;
+const embed=(html,script)=>html.replace('<head>','<head>'+tag).replace('__CLIENT_SCRIPT__',()=>script.replace(/<\/script/gi,'<\\/script')).replace(/<meta\b[^>]*name=["']robots["'][^>]*>/gi,'');
 let code=template.replace('__PAGE__',()=>JSON.stringify(embed(page,client))).replace('__GUIDE_PAGE__',()=>JSON.stringify(embed(guides,guideClient))).replace('export default {async fetch(request)', 'const application={async fetch(request)');
 code+=`\nconst PUBLIC_ORIGIN='https://hipobuyqcnotes.com';
 const paths=['/','/products','/categories','/guides','/guides/reading-qc-photos','/guides/measurement-checks','/guides/extra-photo-requests'];
