@@ -1,0 +1,302 @@
+{
+  "2844": {
+    "price": "$49.23",
+    "names": {
+      "en": "Nike Hyperdunk X Low EP Sneakers [25 styles]",
+      "zh": "Nike Hyperdunk X Low EP 运动鞋 [25 款]",
+      "es": "Nike Hyperdunk X Low EP Zapatillas [25 modelos]",
+      "fr": "Nike Hyperdunk X Low EP Baskets [25 modèles]",
+      "de": "Nike Hyperdunk X Low EP Sneaker [25 Varianten]",
+      "pt": "Nike Hyperdunk X Low EP Tênis [25 modelos]",
+      "ja": "Nike Hyperdunk X Low EP スニーカー [25 種類]",
+      "ko": "Nike Hyperdunk X Low EP 스니커즈 [25 종류]",
+      "ar": "Nike Hyperdunk X Low EP أحذية رياضية [25 تصميماً]"
+    },
+    "categories": {
+      "en": "Shoes",
+      "zh": "鞋类",
+      "es": "Calzado",
+      "fr": "Chaussures",
+      "de": "Schuhe",
+      "pt": "Calçados",
+      "ja": "靴",
+      "ko": "신발",
+      "ar": "أحذية"
+    }
+  },
+  "2857": {
+    "price": "$25.18",
+    "names": {
+      "en": "Adidas Geometric Holographic Backpacks [34 styles]",
+      "zh": "Adidas Geometric Holographic 双肩包 [34 款]",
+      "es": "Adidas Geometric Holographic Mochilas [34 modelos]",
+      "fr": "Adidas Geometric Holographic Sacs à dos [34 modèles]",
+      "de": "Adidas Geometric Holographic Rucksäcke [34 Varianten]",
+      "pt": "Adidas Geometric Holographic Mochilas [34 modelos]",
+      "ja": "Adidas Geometric Holographic バックパック [34 種類]",
+      "ko": "Adidas Geometric Holographic 백팩 [34 종류]",
+      "ar": "Adidas Geometric Holographic حقائب ظهر [34 تصميماً]"
+    },
+    "categories": {
+      "en": "Bags",
+      "zh": "箱包",
+      "es": "Bolsos",
+      "fr": "Sacs",
+      "de": "Taschen",
+      "pt": "Bolsas",
+      "ja": "バッグ",
+      "ko": "가방",
+      "ar": "حقائب"
+    }
+  },
+  "2796": {
+    "price": "$28.13",
+    "names": {
+      "en": "Louis Vuitton OnTheGo Tote Bag [40 styles]",
+      "zh": "Louis Vuitton OnTheGo 托特包 [40 款]",
+      "es": "Louis Vuitton OnTheGo Bolso tote [40 modelos]",
+      "fr": "Louis Vuitton OnTheGo Sac cabas [40 modèles]",
+      "de": "Louis Vuitton OnTheGo Tragetasche [40 Varianten]",
+      "pt": "Louis Vuitton OnTheGo Bolsa tote [40 modelos]",
+      "ja": "Louis Vuitton OnTheGo トートバッグ [40 種類]",
+      "ko": "Louis Vuitton OnTheGo 토트백 [40 종류]",
+      "ar": "Louis Vuitton OnTheGo حقيبة توت [40 تصميماً]"
+    },
+    "categories": {
+      "en": "Bags",
+      "zh": "箱包",
+      "es": "Bolsos",
+      "fr": "Sacs",
+      "de": "Taschen",
+      "pt": "Bolsas",
+      "ja": "バッグ",
+      "ko": "가방",
+      "ar": "حقائب"
+    }
+  },
+  "2781": {
+    "price": "$45.71",
+    "names": {
+      "en": "Saint Laurent YSL Monogram Tote Bag",
+      "zh": "Saint Laurent YSL Monogram 托特包",
+      "es": "Saint Laurent YSL Monogram Bolso tote",
+      "fr": "Saint Laurent YSL Monogram Sac cabas",
+      "de": "Saint Laurent YSL Monogram Tragetasche",
+      "pt": "Saint Laurent YSL Monogram Bolsa tote",
+      "ja": "Saint Laurent YSL Monogram トートバッグ",
+      "ko": "Saint Laurent YSL Monogram 토트백",
+      "ar": "Saint Laurent YSL Monogram حقيبة توت"
+    },
+    "categories": {
+      "en": "Bags",
+      "zh": "箱包",
+      "es": "Bolsos",
+      "fr": "Sacs",
+      "de": "Taschen",
+      "pt": "Bolsas",
+      "ja": "バッグ",
+      "ko": "가방",
+      "ar": "حقائب"
+    }
+  },
+  "2818": {
+    "price": "$50.35",
+    "names": {
+      "en": "Palm Angels Gothic Logo Denim Jacket [5 styles]",
+      "zh": "Palm Angels Gothic Logo 牛仔夹克 [5 款]",
+      "es": "Palm Angels Gothic Logo Chaqueta vaquera [5 modelos]",
+      "fr": "Palm Angels Gothic Logo Veste en jean [5 modèles]",
+      "de": "Palm Angels Gothic Logo Jeansjacke [5 Varianten]",
+      "pt": "Palm Angels Gothic Logo Jaqueta jeans [5 modelos]",
+      "ja": "Palm Angels Gothic Logo デニムジャケット [5 種類]",
+      "ko": "Palm Angels Gothic Logo 데님 재킷 [5 종류]",
+      "ar": "Palm Angels Gothic Logo سترة دنيم [5 تصميماً]"
+    },
+    "categories": {
+      "en": "Clothing",
+      "zh": "服装",
+      "es": "Ropa",
+      "fr": "Vêtements",
+      "de": "Kleidung",
+      "pt": "Roupas",
+      "ja": "衣類",
+      "ko": "의류",
+      "ar": "ملابس"
+    }
+  },
+  "2816": {
+    "price": "$30.94",
+    "names": {
+      "en": "Dior Oblique Jacket [2 styles]",
+      "zh": "Dior Oblique 夹克 [2 款]",
+      "es": "Dior Oblique Chaqueta [2 modelos]",
+      "fr": "Dior Oblique Veste [2 modèles]",
+      "de": "Dior Oblique Jacke [2 Varianten]",
+      "pt": "Dior Oblique Jaqueta [2 modelos]",
+      "ja": "Dior Oblique ジャケット [2 種類]",
+      "ko": "Dior Oblique 재킷 [2 종류]",
+      "ar": "Dior Oblique سترة [2 تصميماً]"
+    },
+    "categories": {
+      "en": "Clothing",
+      "zh": "服装",
+      "es": "Ropa",
+      "fr": "Vêtements",
+      "de": "Kleidung",
+      "pt": "Roupas",
+      "ja": "衣類",
+      "ko": "의류",
+      "ar": "ملابس"
+    }
+  },
+  "2813": {
+    "price": "$30.24",
+    "names": {
+      "en": "Ralph Lauren Polo Bear Hoodie [38 styles]",
+      "zh": "Ralph Lauren Polo Bear 连帽卫衣 [38 款]",
+      "es": "Ralph Lauren Polo Bear Sudadera con capucha [38 modelos]",
+      "fr": "Ralph Lauren Polo Bear Sweat à capuche [38 modèles]",
+      "de": "Ralph Lauren Polo Bear Kapuzenpullover [38 Varianten]",
+      "pt": "Ralph Lauren Polo Bear Moletom com capuz [38 modelos]",
+      "ja": "Ralph Lauren Polo Bear フーディー [38 種類]",
+      "ko": "Ralph Lauren Polo Bear 후드티 [38 종류]",
+      "ar": "Ralph Lauren Polo Bear هودي [38 تصميماً]"
+    },
+    "categories": {
+      "en": "Hoodies",
+      "zh": "卫衣",
+      "es": "Sudaderas",
+      "fr": "Sweats",
+      "de": "Hoodies",
+      "pt": "Moletons",
+      "ja": "フーディー",
+      "ko": "후드티",
+      "ar": "هودي"
+    }
+  },
+  "2852": {
+    "price": "$30.66",
+    "names": {
+      "en": "CB Logo Knit Sweater [8 styles]",
+      "zh": "CB Logo 针织衫 [8 款]",
+      "es": "CB Logo Jersey de punto [8 modelos]",
+      "fr": "CB Logo Pull en maille [8 modèles]",
+      "de": "CB Logo Strickpullover [8 Varianten]",
+      "pt": "CB Logo Suéter de malha [8 modelos]",
+      "ja": "CB Logo ニットセーター [8 種類]",
+      "ko": "CB Logo 니트 스웨터 [8 종류]",
+      "ar": "CB Logo كنزة محبوكة [8 تصميماً]"
+    },
+    "categories": {
+      "en": "Hoodies",
+      "zh": "卫衣",
+      "es": "Sudaderas",
+      "fr": "Sweats",
+      "de": "Hoodies",
+      "pt": "Moletons",
+      "ja": "フーディー",
+      "ko": "후드티",
+      "ar": "هودي"
+    }
+  },
+  "2817": {
+    "price": "$95.64",
+    "names": {
+      "en": "Bvlgari Serpenti Bracelet Watch [40 styles]",
+      "zh": "Bvlgari Serpenti 手镯腕表 [40 款]",
+      "es": "Bvlgari Serpenti Reloj de pulsera [40 modelos]",
+      "fr": "Bvlgari Serpenti Montre bracelet [40 modèles]",
+      "de": "Bvlgari Serpenti Armbanduhr [40 Varianten]",
+      "pt": "Bvlgari Serpenti Relógio de pulso [40 modelos]",
+      "ja": "Bvlgari Serpenti ブレスレットウォッチ [40 種類]",
+      "ko": "Bvlgari Serpenti 브레이슬릿 시계 [40 종류]",
+      "ar": "Bvlgari Serpenti ساعة سوار [40 تصميماً]"
+    },
+    "categories": {
+      "en": "Accessories",
+      "zh": "配饰",
+      "es": "Accesorios",
+      "fr": "Accessoires",
+      "de": "Accessoires",
+      "pt": "Acessórios",
+      "ja": "アクセサリー",
+      "ko": "액세서리",
+      "ar": "إكسسوارات"
+    }
+  },
+  "2815": {
+    "price": "$45.01",
+    "names": {
+      "en": "Cartier Santos and Pasha Watches [38 styles]",
+      "zh": "Cartier Santos / Pasha 腕表 [38 款]",
+      "es": "Cartier Santos / Pasha Relojes [38 modelos]",
+      "fr": "Cartier Santos / Pasha Montres [38 modèles]",
+      "de": "Cartier Santos / Pasha Uhren [38 Varianten]",
+      "pt": "Cartier Santos / Pasha Relógios [38 modelos]",
+      "ja": "Cartier Santos / Pasha 腕時計 [38 種類]",
+      "ko": "Cartier Santos / Pasha 손목시계 [38 종류]",
+      "ar": "Cartier Santos / Pasha ساعات [38 تصميماً]"
+    },
+    "categories": {
+      "en": "Accessories",
+      "zh": "配饰",
+      "es": "Accesorios",
+      "fr": "Accessoires",
+      "de": "Accessoires",
+      "pt": "Acessórios",
+      "ja": "アクセサリー",
+      "ko": "액세서리",
+      "ar": "إكسسوارات"
+    }
+  },
+  "2827": {
+    "price": "$22.50",
+    "names": {
+      "en": "Gucci GG Supreme Earrings [29 styles]",
+      "zh": "Gucci GG Supreme 耳饰 [29 款]",
+      "es": "Gucci GG Supreme Pendientes [29 modelos]",
+      "fr": "Gucci GG Supreme Boucles d’oreilles [29 modèles]",
+      "de": "Gucci GG Supreme Ohrringe [29 Varianten]",
+      "pt": "Gucci GG Supreme Brincos [29 modelos]",
+      "ja": "Gucci GG Supreme イヤリング [29 種類]",
+      "ko": "Gucci GG Supreme 귀걸이 [29 종류]",
+      "ar": "Gucci GG Supreme أقراط [29 تصميماً]"
+    },
+    "categories": {
+      "en": "Accessories",
+      "zh": "配饰",
+      "es": "Accesorios",
+      "fr": "Accessoires",
+      "de": "Accessoires",
+      "pt": "Acessórios",
+      "ja": "アクセサリー",
+      "ko": "액세서리",
+      "ar": "إكسسوارات"
+    }
+  },
+  "2850": {
+    "price": "$11.25",
+    "names": {
+      "en": "Christian Dior Oblique Scarf [9 styles]",
+      "zh": "Christian Dior Oblique 围巾 [9 款]",
+      "es": "Christian Dior Oblique Bufanda [9 modelos]",
+      "fr": "Christian Dior Oblique Écharpe [9 modèles]",
+      "de": "Christian Dior Oblique Schal [9 Varianten]",
+      "pt": "Christian Dior Oblique Cachecol [9 modelos]",
+      "ja": "Christian Dior Oblique スカーフ [9 種類]",
+      "ko": "Christian Dior Oblique 스카프 [9 종류]",
+      "ar": "Christian Dior Oblique وشاح [9 تصميماً]"
+    },
+    "categories": {
+      "en": "Accessories",
+      "zh": "配饰",
+      "es": "Accesorios",
+      "fr": "Accessoires",
+      "de": "Accessoires",
+      "pt": "Acessórios",
+      "ja": "アクセサリー",
+      "ko": "액세서리",
+      "ar": "إكسسوارات"
+    }
+  }
+}
