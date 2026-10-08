@@ -3,6 +3,7 @@
   'use strict';
   const language = document.documentElement.lang;
   const send = (name, params = {}) => {
+    if (!['litbuyvip.shop', 'www.litbuyvip.shop'].includes(location.hostname)) return;
     if (typeof window.gtag === 'function') window.gtag('event', name, {
       site_hostname: 'litbuyvip.shop', content_language: language,
       page_path: location.pathname, transport_type: 'beacon', ...params
