@@ -1,0 +1,443 @@
+{
+  "zh": {
+    "kicker": "反向代购知识库",
+    "title": "反向代购常见问题",
+    "accent": "FAQ",
+    "intro": "从中国电商平台寻找商品、查看 QC、合并包裹并安排国际运输时，买家最常遇到的十个问题。点击问题即可展开答案。",
+    "note": "具体价格、服务范围、线路限制与时效可能调整，提交订单或包裹前应以代理平台账户内的最新规则为准。",
+    "items": [
+      [
+        "什么是反向代购？",
+        "反向代购通常指海外买家通过中国购物代理，在淘宝、微店或 1688 等平台寻找商品，由代理完成采购、收货、仓储、QC 检查、合包和国际运输。"
+      ],
+      [
+        "LitBuy Spreadsheet 在反向代购中有什么作用？",
+        "Spreadsheet 用于集中整理商品名称、分类、价格、图片、商品 ID、QC 参考和可打开链接，帮助买家在下单前更快筛选商品并核对信息。"
+      ],
+      [
+        "可以承接哪些中国购物平台的商品？",
+        "常见来源包括淘宝、微店和 1688。商品是否能够购买与运输，还要看卖家状态、库存、商品属性以及代理平台的采购和运输限制。"
+      ],
+      [
+        "LitBuyVIP 会直接代下单或收取货款吗？",
+        "不会。LitBuyVIP 是独立的商品发现与购买研究网站，主要提供表格、分类、链接和指南；实际购买、付款、仓储和运输应在对应主站或代理平台完成。"
+      ],
+      [
+        "点击商品后为什么会跳转到主站？",
+        "每张商品卡会连接到主站对应商品详情页，方便查看更完整的商品资料并继续操作。跳转前仍应核对商品名称、规格、价格和链接状态。"
+      ],
+      [
+        "QC 图片一定免费吗？",
+        "基础入库照片是否免费、免费张数以及额外角度的价格，可能因平台和服务类型而不同。申请加拍、尺寸测量或视频前，应先查看账户页面显示的费用。"
+      ],
+      [
+        "反向代购通常包含哪些费用？",
+        "总成本可能包括商品价、中国境内运费、国际运费、支付或汇率成本，以及保险、加固、拆盒、额外照片和超期仓储等可选费用。"
+      ],
+      [
+        "国际运费为什么会与预计金额不同？",
+        "运输线路通常会根据实际重量或体积重量计费，并可能受到最低计费重量、进位规则、商品属性和附加费影响。最终打包后的尺寸和重量更接近实际费用。"
+      ],
+      [
+        "商品链接失效或缺货怎么办？",
+        "可使用商品名称、商品 ID、图片或分类寻找替代链接，并检查表格的更新时间。不要仅凭旧截图付款，正式购买前应确认当前链接、价格和库存。"
+      ],
+      [
+        "提交国际包裹前应该检查什么？",
+        "确认商品数量、颜色、尺码和 SKU，查看 QC 与测量图，处理明显瑕疵，核对运输限制、包装方案、申报要求、保险、优惠券条件和最终计费重量。"
+      ]
+    ]
+  },
+  "en": {
+    "kicker": "REVERSE PURCHASING KNOWLEDGE",
+    "title": "Reverse purchasing questions",
+    "accent": "FAQ",
+    "intro": "Ten common questions buyers ask when sourcing from Chinese marketplaces, reviewing QC, consolidating parcels and arranging international delivery.",
+    "note": "Prices, service scope, route restrictions and delivery estimates can change. Confirm the latest rules shown in the agent account before submitting an order or parcel.",
+    "items": [
+      [
+        "What is reverse purchasing?",
+        "Reverse purchasing usually means an overseas buyer uses a China shopping agent to source from marketplaces such as Taobao, Weidian or 1688, then uses the agent for purchasing, warehousing, QC, consolidation and international shipping."
+      ],
+      [
+        "How does a LitBuy Spreadsheet help?",
+        "A spreadsheet organizes product names, categories, prices, images, item IDs, QC references and working links so buyers can compare options and verify details before ordering."
+      ],
+      [
+        "Which Chinese marketplaces can be sourced?",
+        "Common sources include Taobao, Weidian and 1688. Whether an item can be purchased or shipped depends on seller status, inventory, product attributes and the agent’s restrictions."
+      ],
+      [
+        "Does LitBuyVIP place orders or collect payment?",
+        "No. LitBuyVIP is an independent discovery and purchasing-research site. Ordering, payment, warehousing and shipping are completed through the linked main site or agent platform."
+      ],
+      [
+        "Why do products open on the main site?",
+        "Each product card connects to its corresponding main-site detail page so buyers can review fuller information and continue the purchasing process. Always recheck the name, option, price and link status."
+      ],
+      [
+        "Are QC photos always free?",
+        "Free standard photos, the included photo count and the cost of extra angles vary by platform and service. Check the fee displayed in the account before requesting measurements, extra photos or video."
+      ],
+      [
+        "What costs are involved in reverse purchasing?",
+        "The total may include product price, domestic China shipping, international freight, payment or exchange-rate costs, plus optional insurance, reinforcement, box removal, extra photos and storage."
+      ],
+      [
+        "Why can final shipping cost differ from the estimate?",
+        "Routes may charge by actual or volumetric weight and apply minimum weights, rounding, product restrictions or surcharges. Final packed dimensions and weight provide a more reliable estimate."
+      ],
+      [
+        "What should I do when a product link is dead or sold out?",
+        "Search by product name, item ID, image or category and check the spreadsheet update date. Do not pay based only on an old screenshot; confirm the current link, price and inventory first."
+      ],
+      [
+        "What should be checked before submitting an international parcel?",
+        "Confirm quantity, color, size and SKU; review QC and measurements; resolve visible issues; and verify restrictions, packaging, declaration, insurance, coupon terms and chargeable weight."
+      ]
+    ]
+  },
+  "es": {
+    "kicker": "GUÍA DE COMPRA INVERSA",
+    "title": "Preguntas sobre compra inversa",
+    "accent": "FAQ",
+    "intro": "Diez dudas frecuentes al comprar en plataformas chinas, revisar QC, consolidar paquetes y organizar el envío internacional.",
+    "note": "Los precios, servicios, restricciones y plazos pueden cambiar. Confirma las reglas actuales dentro de la cuenta del agente.",
+    "items": [
+      [
+        "¿Qué es la compra inversa?",
+        "Es el proceso por el que un comprador internacional utiliza un agente en China para comprar en Taobao, Weidian o 1688 y gestionar recepción, almacén, QC, consolidación y envío."
+      ],
+      [
+        "¿Para qué sirve un LitBuy Spreadsheet?",
+        "Organiza nombres, categorías, precios, imágenes, IDs, referencias QC y enlaces activos para comparar y verificar productos antes de comprar."
+      ],
+      [
+        "¿Qué plataformas chinas se pueden usar?",
+        "Las fuentes habituales son Taobao, Weidian y 1688. La compra y el envío dependen del vendedor, el stock, el tipo de producto y las restricciones del agente."
+      ],
+      [
+        "¿LitBuyVIP compra o cobra los pedidos?",
+        "No. Es un sitio independiente de descubrimiento y análisis. El pedido, pago, almacén y envío se completan en el sitio principal o plataforma del agente."
+      ],
+      [
+        "¿Por qué los productos abren el sitio principal?",
+        "Cada tarjeta enlaza con la ficha correspondiente para consultar más datos y continuar el proceso. Revisa siempre nombre, variante, precio y estado del enlace."
+      ],
+      [
+        "¿Las fotos QC son siempre gratuitas?",
+        "Las fotos incluidas, su cantidad y el coste de ángulos adicionales varían. Consulta el precio mostrado antes de solicitar medidas, fotos extra o vídeo."
+      ],
+      [
+        "¿Qué costes incluye la compra inversa?",
+        "Puede incluir producto, envío nacional en China, transporte internacional, pago o cambio de divisa y extras como seguro, refuerzo, retirada de cajas, fotos y almacenamiento."
+      ],
+      [
+        "¿Por qué cambia el coste final del envío?",
+        "Las rutas pueden cobrar por peso real o volumétrico y aplicar mínimos, redondeos, restricciones o recargos. Las medidas finales del paquete son más fiables."
+      ],
+      [
+        "¿Qué hago si el enlace está caído o agotado?",
+        "Busca por nombre, ID, imagen o categoría y revisa la fecha de actualización. Confirma enlace, precio y stock actuales antes de pagar."
+      ],
+      [
+        "¿Qué debo revisar antes de enviar el paquete?",
+        "Cantidad, color, talla, SKU, QC, medidas, defectos visibles, restricciones, embalaje, declaración, seguro, cupón y peso facturable."
+      ]
+    ]
+  },
+  "fr": {
+    "kicker": "GUIDE D’ACHAT INVERSÉ",
+    "title": "Questions sur l’achat inversé",
+    "accent": "FAQ",
+    "intro": "Dix questions fréquentes sur l’achat en Chine, le contrôle QC, la consolidation et l’expédition internationale.",
+    "note": "Les prix, services, restrictions et délais peuvent évoluer. Vérifiez les règles affichées dans le compte de l’agent.",
+    "items": [
+      [
+        "Qu’est-ce que l’achat inversé ?",
+        "Un acheteur international utilise un agent en Chine pour acheter sur Taobao, Weidian ou 1688, puis gérer la réception, le stockage, le QC, la consolidation et l’envoi."
+      ],
+      [
+        "À quoi sert un LitBuy Spreadsheet ?",
+        "Il regroupe noms, catégories, prix, images, identifiants, références QC et liens actifs pour comparer et vérifier les produits avant commande."
+      ],
+      [
+        "Quelles plateformes chinoises sont prises en charge ?",
+        "Les sources courantes sont Taobao, Weidian et 1688. L’achat et l’expédition dépendent du vendeur, du stock, du produit et des restrictions de l’agent."
+      ],
+      [
+        "LitBuyVIP passe-t-il les commandes ou encaisse-t-il ?",
+        "Non. C’est un site indépendant de découverte et de recherche. La commande, le paiement, le stockage et l’envoi se font sur le site principal ou la plateforme de l’agent."
+      ],
+      [
+        "Pourquoi les produits s’ouvrent-ils sur le site principal ?",
+        "Chaque carte mène à la fiche correspondante pour consulter davantage d’informations et poursuivre l’achat. Vérifiez toujours le nom, l’option, le prix et le lien."
+      ],
+      [
+        "Les photos QC sont-elles toujours gratuites ?",
+        "Le nombre de photos incluses et le prix des angles supplémentaires varient. Consultez le tarif du compte avant de demander mesures, photos ou vidéo."
+      ],
+      [
+        "Quels frais composent un achat inversé ?",
+        "Le total peut inclure produit, livraison intérieure, fret international, paiement ou change, puis assurance, renfort, retrait de boîte, photos et stockage."
+      ],
+      [
+        "Pourquoi le prix final du transport peut-il changer ?",
+        "Les lignes facturent parfois le poids réel ou volumétrique et appliquent minimums, arrondis, restrictions ou suppléments. Les dimensions finales sont plus fiables."
+      ],
+      [
+        "Que faire si un lien est mort ou le produit épuisé ?",
+        "Recherchez par nom, ID, image ou catégorie et regardez la date de mise à jour. Confirmez le lien, le prix et le stock avant paiement."
+      ],
+      [
+        "Que vérifier avant d’envoyer le colis ?",
+        "Quantité, couleur, taille, SKU, QC, mesures, défauts, restrictions, emballage, déclaration, assurance, coupon et poids facturable."
+      ]
+    ]
+  },
+  "de": {
+    "kicker": "WISSEN ZUM REVERSE SHOPPING",
+    "title": "Fragen zum Reverse Shopping",
+    "accent": "FAQ",
+    "intro": "Zehn häufige Fragen zu Einkauf auf chinesischen Marktplätzen, QC, Paketkonsolidierung und internationalem Versand.",
+    "note": "Preise, Leistungen, Routenregeln und Laufzeiten können sich ändern. Prüfe vor Bestellung die aktuellen Angaben im Agentenkonto.",
+    "items": [
+      [
+        "Was ist Reverse Shopping?",
+        "Internationale Käufer nutzen einen China-Einkaufsagenten für Taobao, Weidian oder 1688 sowie für Einkauf, Lagerung, QC, Konsolidierung und internationalen Versand."
+      ],
+      [
+        "Wie hilft ein LitBuy Spreadsheet?",
+        "Es bündelt Produktnamen, Kategorien, Preise, Bilder, Artikel-IDs, QC-Hinweise und aktive Links, damit Produkte vor dem Kauf verglichen werden können."
+      ],
+      [
+        "Welche chinesischen Plattformen werden unterstützt?",
+        "Typische Quellen sind Taobao, Weidian und 1688. Kauf und Versand hängen von Verkäufer, Bestand, Produkteigenschaften und Agentenregeln ab."
+      ],
+      [
+        "Bestellt oder kassiert LitBuyVIP selbst?",
+        "Nein. LitBuyVIP ist eine unabhängige Recherche- und Produktentdeckungsseite. Bestellung, Zahlung, Lagerung und Versand erfolgen über die verlinkte Hauptseite oder den Agenten."
+      ],
+      [
+        "Warum öffnen Produkte die Hauptseite?",
+        "Jede Karte führt zur passenden Produktdetailseite, damit weitere Angaben geprüft und der Kauf fortgesetzt werden kann. Name, Variante, Preis und Linkstatus erneut kontrollieren."
+      ],
+      [
+        "Sind QC-Fotos immer kostenlos?",
+        "Anzahl kostenloser Fotos und Preise für zusätzliche Winkel unterscheiden sich. Vor Messungen, Zusatzfotos oder Video den angezeigten Preis prüfen."
+      ],
+      [
+        "Welche Kosten entstehen beim Reverse Shopping?",
+        "Möglich sind Produktpreis, Inlandsversand, internationaler Versand, Zahlungs- oder Wechselkurskosten sowie Versicherung, Verstärkung, Kartonentfernung, Fotos und Lagerung."
+      ],
+      [
+        "Warum weicht der endgültige Versandpreis ab?",
+        "Routen berechnen nach tatsächlichem oder Volumengewicht und können Mindestgewicht, Rundung, Einschränkungen oder Zuschläge anwenden. Endmaße sind verlässlicher."
+      ],
+      [
+        "Was tun bei totem Link oder Ausverkauf?",
+        "Nach Name, ID, Bild oder Kategorie suchen und Aktualisierungsdatum prüfen. Vor Zahlung aktuellen Link, Preis und Bestand bestätigen."
+      ],
+      [
+        "Was vor dem internationalen Versand prüfen?",
+        "Menge, Farbe, Größe, SKU, QC, Maße, Mängel, Einschränkungen, Verpackung, Deklaration, Versicherung, Gutschein und Abrechnungsgewicht."
+      ]
+    ]
+  },
+  "pt": {
+    "kicker": "GUIA DE COMPRA REVERSA",
+    "title": "Perguntas sobre compra reversa",
+    "accent": "FAQ",
+    "intro": "Dez dúvidas comuns sobre compras em marketplaces chineses, QC, consolidação e envio internacional.",
+    "note": "Preços, serviços, restrições e prazos podem mudar. Confirme as regras atuais na conta do agente antes de enviar o pedido.",
+    "items": [
+      [
+        "O que é compra reversa?",
+        "É quando um comprador internacional usa um agente na China para comprar em Taobao, Weidian ou 1688 e cuidar de recebimento, armazém, QC, consolidação e envio."
+      ],
+      [
+        "Como o LitBuy Spreadsheet ajuda?",
+        "Ele reúne nomes, categorias, preços, imagens, IDs, referências QC e links ativos para comparar e verificar produtos antes da compra."
+      ],
+      [
+        "Quais plataformas chinesas podem ser usadas?",
+        "As fontes comuns são Taobao, Weidian e 1688. Compra e envio dependem do vendedor, estoque, tipo de produto e regras do agente."
+      ],
+      [
+        "O LitBuyVIP faz pedidos ou recebe pagamentos?",
+        "Não. É um site independente de descoberta e pesquisa. Pedido, pagamento, armazenagem e envio são realizados no site principal ou plataforma do agente."
+      ],
+      [
+        "Por que os produtos abrem no site principal?",
+        "Cada cartão leva à página correspondente para consultar mais informações e continuar a compra. Verifique nome, opção, preço e status do link."
+      ],
+      [
+        "As fotos QC são sempre grátis?",
+        "A quantidade incluída e o preço de ângulos extras variam. Confira a taxa exibida antes de pedir medidas, fotos adicionais ou vídeo."
+      ],
+      [
+        "Quais custos fazem parte da compra reversa?",
+        "Podem incluir produto, frete doméstico, frete internacional, pagamento ou câmbio e extras como seguro, reforço, retirada de caixa, fotos e armazenagem."
+      ],
+      [
+        "Por que o frete final pode mudar?",
+        "As linhas podem cobrar peso real ou volumétrico e aplicar mínimos, arredondamentos, restrições ou sobretaxas. As dimensões finais são mais confiáveis."
+      ],
+      [
+        "O que fazer se o link estiver inválido ou esgotado?",
+        "Pesquise por nome, ID, imagem ou categoria e confira a atualização. Confirme link, preço e estoque atuais antes de pagar."
+      ],
+      [
+        "O que revisar antes do envio internacional?",
+        "Quantidade, cor, tamanho, SKU, QC, medidas, defeitos, restrições, embalagem, declaração, seguro, cupom e peso cobrado."
+      ]
+    ]
+  },
+  "ja": {
+    "kicker": "代理購入ナレッジ",
+    "title": "中国代理購入のよくある質問",
+    "accent": "FAQ",
+    "intro": "中国マーケットの商品検索、QC確認、同梱、国際配送についてよくある10の質問です。",
+    "note": "価格、サービス、配送制限、所要日数は変更される場合があります。注文前に代理業者のアカウントで最新条件を確認してください。",
+    "items": [
+      [
+        "中国代理購入とは何ですか？",
+        "海外の購入者が中国のショッピング代理を利用し、Taobao、Weidian、1688などの商品購入、受取、保管、QC、同梱、国際配送を依頼する方法です。"
+      ],
+      [
+        "LitBuy Spreadsheetは何に役立ちますか？",
+        "商品名、カテゴリ、価格、画像、商品ID、QC参考、利用可能なリンクを整理し、注文前の比較と確認を簡単にします。"
+      ],
+      [
+        "どの中国プラットフォームに対応しますか？",
+        "主な情報源はTaobao、Weidian、1688です。購入・配送可否は販売者、在庫、商品属性、代理業者の制限によります。"
+      ],
+      [
+        "LitBuyVIPが注文や決済を行いますか？",
+        "いいえ。LitBuyVIPは独立した商品検索・購入調査サイトです。注文、支払い、保管、配送はリンク先のメインサイトまたは代理業者で行います。"
+      ],
+      [
+        "商品がメインサイトに移動するのはなぜですか？",
+        "各カードは対応する商品詳細ページに接続し、追加情報を確認して購入を続けられます。商品名、仕様、価格、リンク状態を再確認してください。"
+      ],
+      [
+        "QC写真は必ず無料ですか？",
+        "無料写真の枚数や追加角度の料金はサービスによって異なります。計測、追加写真、動画を依頼する前に表示料金を確認してください。"
+      ],
+      [
+        "代理購入にはどの費用がありますか？",
+        "商品代、中国国内送料、国際送料、決済・為替費用のほか、保険、補強、箱の除去、追加写真、保管料などがあります。"
+      ],
+      [
+        "最終送料が見積りと違うのはなぜですか？",
+        "実重量または容積重量、最低重量、端数処理、商品制限、追加料金が影響します。最終梱包後の寸法と重量がより正確です。"
+      ],
+      [
+        "リンク切れや在庫切れの場合は？",
+        "商品名、ID、画像、カテゴリで代替を探し、更新日を確認します。古い画像だけで判断せず、現在のリンク、価格、在庫を確認してください。"
+      ],
+      [
+        "国際発送前に何を確認しますか？",
+        "数量、色、サイズ、SKU、QC、寸法、欠陥、配送制限、梱包、申告、保険、クーポン条件、請求重量を確認します。"
+      ]
+    ]
+  },
+  "ko": {
+    "kicker": "중국 구매대행 가이드",
+    "title": "역직구 구매대행 자주 묻는 질문",
+    "accent": "FAQ",
+    "intro": "중국 마켓 상품 검색, QC 확인, 합배송과 국제 배송 과정에서 자주 묻는 열 가지 질문입니다.",
+    "note": "가격, 서비스 범위, 노선 제한과 배송 기간은 변경될 수 있습니다. 주문 전에 에이전트 계정의 최신 규칙을 확인하세요.",
+    "items": [
+      [
+        "역직구 구매대행이란 무엇인가요?",
+        "해외 구매자가 중국 쇼핑 에이전트를 통해 Taobao, Weidian, 1688 상품을 구매하고 입고, 보관, QC, 합배송, 국제 운송을 이용하는 방식입니다."
+      ],
+      [
+        "LitBuy Spreadsheet는 어떻게 도움이 되나요?",
+        "상품명, 카테고리, 가격, 이미지, 상품 ID, QC 참고와 유효 링크를 한곳에 정리해 주문 전 비교와 확인을 돕습니다."
+      ],
+      [
+        "어떤 중국 플랫폼을 이용할 수 있나요?",
+        "일반적인 출처는 Taobao, Weidian, 1688입니다. 구매와 배송 가능 여부는 판매자, 재고, 상품 속성과 에이전트 제한에 따라 달라집니다."
+      ],
+      [
+        "LitBuyVIP가 주문이나 결제를 처리하나요?",
+        "아니요. LitBuyVIP는 독립 상품 발견 및 구매 조사 사이트입니다. 주문, 결제, 보관, 배송은 연결된 메인 사이트 또는 에이전트에서 진행합니다."
+      ],
+      [
+        "상품이 메인 사이트로 이동하는 이유는 무엇인가요?",
+        "각 카드가 해당 상품 상세 페이지로 연결되어 더 많은 정보를 보고 구매를 계속할 수 있습니다. 상품명, 옵션, 가격, 링크 상태를 다시 확인하세요."
+      ],
+      [
+        "QC 사진은 항상 무료인가요?",
+        "무료 기본 사진 수와 추가 각도 비용은 서비스마다 다릅니다. 측정, 추가 사진, 영상을 요청하기 전에 표시된 비용을 확인하세요."
+      ],
+      [
+        "구매대행에는 어떤 비용이 포함되나요?",
+        "상품가, 중국 국내 배송, 국제 배송, 결제 또는 환율 비용과 보험, 보강, 박스 제거, 추가 사진, 보관 같은 선택 비용이 있을 수 있습니다."
+      ],
+      [
+        "최종 배송비가 예상과 다른 이유는 무엇인가요?",
+        "실제 무게 또는 부피 무게, 최소 과금, 반올림, 상품 제한, 추가 요금이 적용될 수 있습니다. 최종 포장 크기와 무게가 더 정확합니다."
+      ],
+      [
+        "링크가 끊겼거나 품절이면 어떻게 하나요?",
+        "상품명, ID, 이미지 또는 카테고리로 대체 링크를 찾고 업데이트 날짜를 확인합니다. 결제 전에 현재 링크, 가격, 재고를 확인하세요."
+      ],
+      [
+        "국제 배송 제출 전에 무엇을 확인하나요?",
+        "수량, 색상, 사이즈, SKU, QC, 측정값, 결함, 배송 제한, 포장, 신고, 보험, 쿠폰 조건과 과금 무게를 확인합니다."
+      ]
+    ]
+  },
+  "ar": {
+    "kicker": "دليل الشراء العكسي",
+    "title": "الأسئلة الشائعة عن الشراء العكسي",
+    "accent": "FAQ",
+    "intro": "عشرة أسئلة شائعة عن البحث في الأسواق الصينية وفحص QC وتجميع الطرود والشحن الدولي.",
+    "note": "قد تتغير الأسعار والخدمات وقيود الخطوط والمدة. تحقق من أحدث القواعد داخل حساب الوكيل قبل إرسال الطلب أو الطرد.",
+    "items": [
+      [
+        "ما هو الشراء العكسي؟",
+        "هو استخدام المشتري الدولي لوكيل تسوق في الصين للشراء من Taobao أو Weidian أو 1688 ثم الاستلام والتخزين وفحص QC وتجميع الطرود والشحن الدولي."
+      ],
+      [
+        "كيف يساعد LitBuy Spreadsheet؟",
+        "يجمع أسماء المنتجات والفئات والأسعار والصور ومعرّفات المنتجات ومراجع QC والروابط الفعالة للمقارنة والتحقق قبل الطلب."
+      ],
+      [
+        "ما المنصات الصينية المدعومة؟",
+        "المصادر الشائعة هي Taobao وWeidian و1688. إمكانية الشراء والشحن تعتمد على البائع والمخزون وخصائص المنتج وقيود الوكيل."
+      ],
+      [
+        "هل ينفذ LitBuyVIP الطلب أو يستلم الدفع؟",
+        "لا. LitBuyVIP موقع مستقل لاكتشاف المنتجات والبحث الشرائي. الطلب والدفع والتخزين والشحن تتم عبر الموقع الرئيسي أو منصة الوكيل."
+      ],
+      [
+        "لماذا تفتح المنتجات في الموقع الرئيسي؟",
+        "كل بطاقة ترتبط بصفحة المنتج المقابلة لمراجعة معلومات إضافية ومتابعة الشراء. تحقق من الاسم والخيار والسعر وحالة الرابط."
+      ],
+      [
+        "هل صور QC مجانية دائماً؟",
+        "عدد الصور المجانية وسعر الزوايا الإضافية يختلفان حسب الخدمة. راجع السعر الظاهر قبل طلب القياسات أو الصور الإضافية أو الفيديو."
+      ],
+      [
+        "ما التكاليف في الشراء العكسي؟",
+        "قد تشمل سعر المنتج والشحن المحلي والدولي وتكاليف الدفع أو الصرف، إضافة إلى التأمين والتقوية وإزالة الصندوق والصور والتخزين."
+      ],
+      [
+        "لماذا تختلف تكلفة الشحن النهائية؟",
+        "قد تحسب الخطوط الوزن الفعلي أو الحجمي وتطبق حداً أدنى وتقريباً وقيوداً أو رسوماً إضافية. أبعاد الطرد النهائية أدق."
+      ],
+      [
+        "ماذا أفعل إذا كان الرابط معطلاً أو المنتج نافداً؟",
+        "ابحث بالاسم أو المعرّف أو الصورة أو الفئة وراجع تاريخ التحديث. أكد الرابط والسعر والمخزون الحالي قبل الدفع."
+      ],
+      [
+        "ما الذي يجب فحصه قبل إرسال الطرد؟",
+        "الكمية واللون والمقاس وSKU وصور QC والقياسات والعيوب والقيود والتغليف والتصريح والتأمين وشروط الكوبون والوزن المحتسب."
+      ]
+    ]
+  }
+}

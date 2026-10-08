@@ -1,0 +1,21 @@
+{
+  "balance": "litbuy-balance-refund-shipping-adjustment-2026",
+  "coupons": "litbuy-coupons-shipping-discounts-2026",
+  "forwarding": "litbuy-forwarding-self-purchased-items-warehouse-2026",
+  "links": "litbuy-links-taobao-weidian-1688-2026",
+  "consolidation": "litbuy-parcel-consolidation-split-or-combine-2026",
+  "weight": "litbuy-parcel-planning-chargeable-weight-2026",
+  "listing": "litbuy-product-listing-verification-before-buying-2026",
+  "qc": "litbuy-qc-photo-decision-making-before-shipping-2026",
+  "rehearsal": "litbuy-rehearsal-parcel-shipping-decision-2026",
+  "returns": "litbuy-return-exchange-after-warehouse-inspection-2026",
+  "workflow": "litbuy-reverse-purchasing-workflow-2026",
+  "routes": "litbuy-route-first-buying-shipping-restrictions-2026",
+  "protection": "litbuy-shipping-protection-parcel-insurance-2026",
+  "budget": "litbuy-total-cost-budget-before-buying-2026",
+  "warehouse": "litbuy-warehouse-queue-qc-storage-return-window-2026",
+  "spreadsheet": "litbuy-spreadsheet-how-to-use-and-buy-2026",
+  "sizing": "litbuy-size-guide-shoes-hoodies-pants-2026",
+  "us-shipping": "litbuy-shipping-to-usa-cost-weight-route-guide-2026",
+  "tracking": "litbuy-order-status-parcel-tracking-guide-2026"
+}

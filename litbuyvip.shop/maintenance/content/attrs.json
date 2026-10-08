@@ -1,0 +1,197 @@
+{
+  "placeholder": {
+    "en": [
+      "Search products, categories or item IDs",
+      "Paste a product link or item ID"
+    ],
+    "zh": [
+      "搜索商品、分类或商品 ID",
+      "粘贴商品链接或商品 ID"
+    ],
+    "es": [
+      "Buscar productos, categorías o ID",
+      "Pega un enlace o ID"
+    ],
+    "fr": [
+      "Rechercher un produit, une catégorie ou un ID",
+      "Collez un lien ou un ID"
+    ],
+    "de": [
+      "Produkte, Kategorien oder IDs suchen",
+      "Link oder Artikel-ID einfügen"
+    ],
+    "pt": [
+      "Pesquisar produtos, categorias ou IDs",
+      "Cole um link ou ID"
+    ],
+    "ja": [
+      "商品・カテゴリー・IDを検索",
+      "商品リンクまたはIDを貼り付け"
+    ],
+    "ko": [
+      "상품, 카테고리 또는 ID 검색",
+      "상품 링크 또는 ID 붙여넣기"
+    ],
+    "ar": [
+      "ابحث عن منتج أو فئة أو رقم",
+      "ألصق رابط المنتج أو الرقم"
+    ]
+  },
+  "aria-label": {
+    "en": [
+      "Language",
+      "Language",
+      "Shoes category icon",
+      "T-shirt category icon",
+      "Clothing category icon",
+      "Hoodies category icon",
+      "Pants category icon",
+      "Belt category icon",
+      "Bags category icon",
+      "Perfume category icon",
+      "Electronics category icon",
+      "Accessories category icon"
+    ],
+    "zh": [
+      "语言",
+      "语言",
+      "Shoes category icon",
+      "T-shirt category icon",
+      "Clothing category icon",
+      "Hoodies category icon",
+      "Pants category icon",
+      "Belt category icon",
+      "Bags category icon",
+      "Perfume category icon",
+      "Electronics category icon",
+      "Accessories category icon"
+    ],
+    "es": [
+      "Idioma",
+      "Idioma",
+      "Shoes category icon",
+      "T-shirt category icon",
+      "Clothing category icon",
+      "Hoodies category icon",
+      "Pants category icon",
+      "Belt category icon",
+      "Bags category icon",
+      "Perfume category icon",
+      "Electronics category icon",
+      "Accessories category icon"
+    ],
+    "fr": [
+      "Langue",
+      "Langue",
+      "Shoes category icon",
+      "T-shirt category icon",
+      "Clothing category icon",
+      "Hoodies category icon",
+      "Pants category icon",
+      "Belt category icon",
+      "Bags category icon",
+      "Perfume category icon",
+      "Electronics category icon",
+      "Accessories category icon"
+    ],
+    "de": [
+      "Sprache",
+      "Sprache",
+      "Shoes category icon",
+      "T-shirt category icon",
+      "Clothing category icon",
+      "Hoodies category icon",
+      "Pants category icon",
+      "Belt category icon",
+      "Bags category icon",
+      "Perfume category icon",
+      "Electronics category icon",
+      "Accessories category icon"
+    ],
+    "pt": [
+      "Idioma",
+      "Idioma",
+      "Shoes category icon",
+      "T-shirt category icon",
+      "Clothing category icon",
+      "Hoodies category icon",
+      "Pants category icon",
+      "Belt category icon",
+      "Bags category icon",
+      "Perfume category icon",
+      "Electronics category icon",
+      "Accessories category icon"
+    ],
+    "ja": [
+      "言語",
+      "言語",
+      "Shoes category icon",
+      "T-shirt category icon",
+      "Clothing category icon",
+      "Hoodies category icon",
+      "Pants category icon",
+      "Belt category icon",
+      "Bags category icon",
+      "Perfume category icon",
+      "Electronics category icon",
+      "Accessories category icon"
+    ],
+    "ko": [
+      "언어",
+      "언어",
+      "Shoes category icon",
+      "T-shirt category icon",
+      "Clothing category icon",
+      "Hoodies category icon",
+      "Pants category icon",
+      "Belt category icon",
+      "Bags category icon",
+      "Perfume category icon",
+      "Electronics category icon",
+      "Accessories category icon"
+    ],
+    "ar": [
+      "اللغة",
+      "اللغة",
+      "Shoes category icon",
+      "T-shirt category icon",
+      "Clothing category icon",
+      "Hoodies category icon",
+      "Pants category icon",
+      "Belt category icon",
+      "Bags category icon",
+      "Perfume category icon",
+      "Electronics category icon",
+      "Accessories category icon"
+    ]
+  },
+  "data-read-label": {
+    "en": [
+      "Read guide ↗"
+    ],
+    "zh": [
+      "阅读文章 ↗"
+    ],
+    "es": [
+      "Leer guía ↗"
+    ],
+    "fr": [
+      "Lire le guide ↗"
+    ],
+    "de": [
+      "Ratgeber lesen ↗"
+    ],
+    "pt": [
+      "Ler guia ↗"
+    ],
+    "ja": [
+      "ガイドを読む ↗"
+    ],
+    "ko": [
+      "가이드 읽기 ↗"
+    ],
+    "ar": [
+      "قراءة الدليل ↗"
+    ]
+  }
+}

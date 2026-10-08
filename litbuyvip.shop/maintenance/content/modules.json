@@ -1,0 +1,474 @@
+{
+  "search": {
+    "zh": {
+      "badge": "主站商品搜索",
+      "title": "搜索主站商品，直接查看结果。",
+      "sub": "输入商品名称、关键词或商品 ID，匹配商品表格中的主站商品，并直接进入对应详情页。",
+      "placeholder": "搜索主站商品名称 / 关键词 / 商品 ID",
+      "search": "搜索主站",
+      "sync": "已接入当前主站商品索引",
+      "examples": "快速分类",
+      "results": "匹配结果",
+      "none": "没有找到匹配商品，可尝试英文商品名、分类或商品 ID。",
+      "all": "打开主站完整商品库 →",
+      "support": "支持商品名称、分类和商品 ID",
+      "status": "可跳转",
+      "chips": [
+        "鞋类",
+        "包袋",
+        "服装",
+        "卫衣",
+        "配饰"
+      ]
+    },
+    "en": {
+      "badge": "Main-site catalog search",
+      "title": "Search the main catalog and open matching products.",
+      "sub": "Enter a product name, keyword or item ID to match the indexed main-site catalog and open the corresponding product page.",
+      "placeholder": "Search main-site products / keywords / item ID",
+      "search": "Search catalog",
+      "sync": "Connected to the current main-site product index",
+      "examples": "Quick categories",
+      "results": "Matching results",
+      "none": "No matching product. Try an English product name, category or item ID.",
+      "all": "Open the full main catalog →",
+      "support": "Supports product name, category and item ID",
+      "status": "Open product",
+      "chips": [
+        "Shoes",
+        "Bags",
+        "Clothing",
+        "Hoodies",
+        "Accessories"
+      ]
+    },
+    "es": {
+      "badge": "Búsqueda del catálogo principal",
+      "title": "Busca el catálogo principal y abre el producto correcto.",
+      "sub": "Introduce un nombre, palabra clave o ID para encontrar el producto indexado y abrir su ficha correspondiente.",
+      "placeholder": "Buscar producto / palabra clave / ID",
+      "search": "Buscar catálogo",
+      "sync": "Conectado al índice actual del sitio principal",
+      "examples": "Categorías rápidas",
+      "results": "Resultados",
+      "none": "No hay coincidencias. Prueba el nombre en inglés, una categoría o el ID.",
+      "all": "Abrir catálogo completo →",
+      "support": "Nombre, categoría e ID de producto",
+      "status": "Abrir",
+      "chips": [
+        "Calzado",
+        "Bolsos",
+        "Ropa",
+        "Sudaderas",
+        "Accesorios"
+      ]
+    },
+    "fr": {
+      "badge": "Recherche du catalogue principal",
+      "title": "Recherchez le catalogue principal et ouvrez le bon produit.",
+      "sub": "Saisissez un nom, un mot-clé ou un identifiant pour trouver le produit indexé et ouvrir sa fiche.",
+      "placeholder": "Produit / mot-clé / identifiant",
+      "search": "Rechercher",
+      "sync": "Connecté à l’index actuel du site principal",
+      "examples": "Catégories rapides",
+      "results": "Résultats",
+      "none": "Aucun résultat. Essayez le nom anglais, une catégorie ou l’identifiant.",
+      "all": "Ouvrir le catalogue complet →",
+      "support": "Nom, catégorie et identifiant",
+      "status": "Ouvrir",
+      "chips": [
+        "Chaussures",
+        "Sacs",
+        "Vêtements",
+        "Sweats",
+        "Accessoires"
+      ]
+    },
+    "de": {
+      "badge": "Hauptkatalog-Suche",
+      "title": "Produkte im Hauptkatalog suchen und direkt öffnen.",
+      "sub": "Produktname, Suchwort oder Artikel-ID eingeben, um den indexierten Hauptseiten-Eintrag zu finden.",
+      "placeholder": "Produkt / Suchwort / Artikel-ID",
+      "search": "Katalog suchen",
+      "sync": "Mit dem aktuellen Hauptseitenindex verbunden",
+      "examples": "Schnellkategorien",
+      "results": "Treffer",
+      "none": "Kein Treffer. Englischen Produktnamen, Kategorie oder Artikel-ID versuchen.",
+      "all": "Gesamten Hauptkatalog öffnen →",
+      "support": "Produktname, Kategorie und Artikel-ID",
+      "status": "Öffnen",
+      "chips": [
+        "Schuhe",
+        "Taschen",
+        "Kleidung",
+        "Hoodies",
+        "Accessoires"
+      ]
+    },
+    "pt": {
+      "badge": "Pesquisa do catálogo principal",
+      "title": "Pesquise o catálogo principal e abra o produto certo.",
+      "sub": "Digite nome, palavra-chave ou ID para localizar o produto indexado e abrir a página correspondente.",
+      "placeholder": "Produto / palavra-chave / ID",
+      "search": "Pesquisar",
+      "sync": "Conectado ao índice atual do site principal",
+      "examples": "Categorias rápidas",
+      "results": "Resultados",
+      "none": "Nenhum resultado. Tente o nome em inglês, a categoria ou o ID.",
+      "all": "Abrir catálogo completo →",
+      "support": "Nome, categoria e ID do produto",
+      "status": "Abrir",
+      "chips": [
+        "Calçados",
+        "Bolsas",
+        "Roupas",
+        "Moletons",
+        "Acessórios"
+      ]
+    },
+    "ja": {
+      "badge": "メインサイト商品検索",
+      "title": "メインの商品を検索して、対応ページを開く。",
+      "sub": "商品名、キーワード、商品 ID を入力すると、登録済みの商品から一致する詳細ページを表示します。",
+      "placeholder": "商品名 / キーワード / 商品 ID",
+      "search": "商品を検索",
+      "sync": "現在のメインサイト商品インデックスに接続",
+      "examples": "クイックカテゴリ",
+      "results": "検索結果",
+      "none": "一致する商品がありません。英語の商品名、カテゴリ、ID をお試しください。",
+      "all": "メインの商品一覧を開く →",
+      "support": "商品名・カテゴリ・商品 ID に対応",
+      "status": "開く",
+      "chips": [
+        "シューズ",
+        "バッグ",
+        "衣類",
+        "フーディー",
+        "アクセサリー"
+      ]
+    },
+    "ko": {
+      "badge": "메인 사이트 상품 검색",
+      "title": "메인 상품을 검색하고 해당 페이지를 바로 여세요.",
+      "sub": "상품명, 키워드 또는 상품 ID를 입력하면 인덱스에서 일치하는 상세 페이지를 찾습니다.",
+      "placeholder": "상품명 / 키워드 / 상품 ID",
+      "search": "상품 검색",
+      "sync": "현재 메인 사이트 상품 인덱스 연결",
+      "examples": "빠른 카테고리",
+      "results": "검색 결과",
+      "none": "일치하는 상품이 없습니다. 영문 상품명, 카테고리 또는 ID를 입력해 보세요.",
+      "all": "전체 메인 카탈로그 열기 →",
+      "support": "상품명, 카테고리, 상품 ID 지원",
+      "status": "열기",
+      "chips": [
+        "신발",
+        "가방",
+        "의류",
+        "후드",
+        "액세서리"
+      ]
+    },
+    "ar": {
+      "badge": "بحث كتالوج الموقع الرئيسي",
+      "title": "ابحث في كتالوج الموقع الرئيسي وافتح المنتج المطابق.",
+      "sub": "أدخل اسم المنتج أو كلمة مفتاحية أو رقم المنتج للعثور على صفحة التفاصيل المرتبطة.",
+      "placeholder": "اسم المنتج / كلمة مفتاحية / رقم المنتج",
+      "search": "بحث المنتجات",
+      "sync": "متصل بفهرس منتجات الموقع الرئيسي الحالي",
+      "examples": "فئات سريعة",
+      "results": "النتائج",
+      "none": "لا توجد نتيجة مطابقة. جرّب الاسم الإنجليزي أو الفئة أو رقم المنتج.",
+      "all": "فتح الكتالوج الكامل →",
+      "support": "يدعم الاسم والفئة ورقم المنتج",
+      "status": "فتح",
+      "chips": [
+        "أحذية",
+        "حقائب",
+        "ملابس",
+        "هودي",
+        "إكسسوارات"
+      ]
+    }
+  },
+  "about": {
+    "zh": {
+      "kicker": "为什么使用电子表格",
+      "title": "什么是 <span>LitBuy 电子表格</span>？",
+      "p1": "LitBuy 电子表格是一份经过整理的商品目录，收录来自中国市场、可通过购物代理购买的商品。",
+      "p2": "我们的 LitBuy 清单覆盖淘宝、1688 和微店，并持续整理经过检查的商品信息：",
+      "items": [
+        "真实仓库质检照片",
+        "每周检查可用商品链接",
+        "支持多种货币的参考价格",
+        "清晰、易读的商品说明"
+      ],
+      "button": "浏览电子表格",
+      "cards": [
+        [
+          "QC 照片",
+          "真实仓库照片"
+        ],
+        [
+          "已验证链接",
+          "每周检查"
+        ],
+        [
+          "每日更新",
+          "每天补充新品"
+        ],
+        [
+          "多币种",
+          "美元、欧元、英镑及其他货币"
+        ]
+      ]
+    },
+    "en": {
+      "kicker": "Why use the spreadsheet",
+      "title": "What is the <span>LitBuy Spreadsheet</span>?",
+      "p1": "The LitBuy Spreadsheet is a curated product directory featuring items from Chinese marketplaces that can be purchased through a shopping agent.",
+      "p2": "Our LitBuy list covers Taobao, 1688 and Weidian while organizing product information that buyers can review before ordering:",
+      "items": [
+        "Real warehouse QC photos",
+        "Product links checked every week",
+        "Reference prices in multiple currencies",
+        "Clear, easy-to-read product descriptions"
+      ],
+      "button": "Browse spreadsheet",
+      "cards": [
+        [
+          "QC photos",
+          "Real warehouse images"
+        ],
+        [
+          "Verified links",
+          "Checked every week"
+        ],
+        [
+          "Daily updates",
+          "New finds added daily"
+        ],
+        [
+          "Multi-currency",
+          "USD, EUR, GBP and more"
+        ]
+      ]
+    },
+    "es": {
+      "kicker": "Por qué usar la hoja",
+      "title": "¿Qué es la <span>LitBuy Spreadsheet</span>?",
+      "p1": "LitBuy Spreadsheet es un directorio seleccionado de productos de mercados chinos que pueden comprarse mediante un agente de compras.",
+      "p2": "La lista incluye Taobao, 1688 y Weidian, con información organizada para revisar antes de comprar:",
+      "items": [
+        "Fotos QC reales de almacén",
+        "Enlaces comprobados cada semana",
+        "Precios de referencia en varias monedas",
+        "Descripciones claras y fáciles de leer"
+      ],
+      "button": "Explorar Spreadsheet",
+      "cards": [
+        [
+          "Fotos QC",
+          "Imágenes reales de almacén"
+        ],
+        [
+          "Enlaces verificados",
+          "Revisión semanal"
+        ],
+        [
+          "Actualización diaria",
+          "Nuevos productos cada día"
+        ],
+        [
+          "Varias monedas",
+          "USD, EUR, GBP y más"
+        ]
+      ]
+    },
+    "fr": {
+      "kicker": "Pourquoi utiliser le tableau",
+      "title": "Qu’est-ce que le <span>LitBuy Spreadsheet</span> ?",
+      "p1": "Le LitBuy Spreadsheet est un répertoire sélectionné de produits issus de marchés chinois et achetables via un agent.",
+      "p2": "La liste couvre Taobao, 1688 et Weidian avec des informations organisées à consulter avant l’achat :",
+      "items": [
+        "Photos QC réelles en entrepôt",
+        "Liens produits vérifiés chaque semaine",
+        "Prix indicatifs en plusieurs devises",
+        "Descriptions claires et faciles à lire"
+      ],
+      "button": "Parcourir le Spreadsheet",
+      "cards": [
+        [
+          "Photos QC",
+          "Images réelles d’entrepôt"
+        ],
+        [
+          "Liens vérifiés",
+          "Contrôle hebdomadaire"
+        ],
+        [
+          "Mise à jour quotidienne",
+          "Nouveaux produits chaque jour"
+        ],
+        [
+          "Multi-devises",
+          "USD, EUR, GBP et plus"
+        ]
+      ]
+    },
+    "de": {
+      "kicker": "Warum die Tabelle nutzen",
+      "title": "Was ist die <span>LitBuy Spreadsheet</span>?",
+      "p1": "Die LitBuy Spreadsheet ist ein kuratiertes Produktverzeichnis mit Artikeln aus chinesischen Marktplätzen, die über einen Einkaufsagenten bestellt werden können.",
+      "p2": "Die Liste deckt Taobao, 1688 und Weidian ab und bündelt Informationen für die Prüfung vor dem Kauf:",
+      "items": [
+        "Echte QC-Fotos aus dem Lager",
+        "Wöchentlich geprüfte Produktlinks",
+        "Referenzpreise in mehreren Währungen",
+        "Klare, leicht lesbare Beschreibungen"
+      ],
+      "button": "Spreadsheet ansehen",
+      "cards": [
+        [
+          "QC-Fotos",
+          "Echte Lagerbilder"
+        ],
+        [
+          "Geprüfte Links",
+          "Wöchentliche Kontrolle"
+        ],
+        [
+          "Tägliche Updates",
+          "Täglich neue Produkte"
+        ],
+        [
+          "Mehrere Währungen",
+          "USD, EUR, GBP und mehr"
+        ]
+      ]
+    },
+    "pt": {
+      "kicker": "Por que usar a planilha",
+      "title": "O que é a <span>LitBuy Spreadsheet</span>?",
+      "p1": "A LitBuy Spreadsheet é um diretório selecionado de produtos de marketplaces chineses que podem ser comprados por meio de um agente.",
+      "p2": "A lista cobre Taobao, 1688 e Weidian e organiza informações úteis para verificar antes da compra:",
+      "items": [
+        "Fotos QC reais do armazém",
+        "Links de produtos verificados semanalmente",
+        "Preços de referência em várias moedas",
+        "Descrições claras e fáceis de ler"
+      ],
+      "button": "Explorar Spreadsheet",
+      "cards": [
+        [
+          "Fotos QC",
+          "Imagens reais do armazém"
+        ],
+        [
+          "Links verificados",
+          "Verificação semanal"
+        ],
+        [
+          "Atualização diária",
+          "Novos produtos todos os dias"
+        ],
+        [
+          "Várias moedas",
+          "USD, EUR, GBP e mais"
+        ]
+      ]
+    },
+    "ja": {
+      "kicker": "Spreadsheetを使う理由",
+      "title": "<span>LitBuy Spreadsheet</span>とは？",
+      "p1": "LitBuy Spreadsheetは、中国のマーケットの商品を買付代行で購入するために整理した商品ディレクトリです。",
+      "p2": "Taobao、1688、Weidianの商品を対象に、購入前に確認しやすい情報をまとめています：",
+      "items": [
+        "実際の倉庫QC写真",
+        "毎週確認する有効な商品リンク",
+        "複数通貨の参考価格",
+        "読みやすく明確な商品説明"
+      ],
+      "button": "Spreadsheetを見る",
+      "cards": [
+        [
+          "QC写真",
+          "実際の倉庫画像"
+        ],
+        [
+          "確認済みリンク",
+          "毎週チェック"
+        ],
+        [
+          "毎日更新",
+          "毎日新商品を追加"
+        ],
+        [
+          "多通貨",
+          "USD、EUR、GBPなど"
+        ]
+      ]
+    },
+    "ko": {
+      "kicker": "Spreadsheet를 사용하는 이유",
+      "title": "<span>LitBuy Spreadsheet</span>란?",
+      "p1": "LitBuy Spreadsheet는 중국 마켓 상품을 구매대행을 통해 주문할 수 있도록 정리한 상품 디렉터리입니다.",
+      "p2": "Taobao, 1688, Weidian 상품을 대상으로 구매 전 확인에 필요한 정보를 정리합니다:",
+      "items": [
+        "실제 창고 QC 사진",
+        "매주 확인하는 유효 상품 링크",
+        "여러 통화의 참고 가격",
+        "명확하고 읽기 쉬운 상품 설명"
+      ],
+      "button": "Spreadsheet 둘러보기",
+      "cards": [
+        [
+          "QC 사진",
+          "실제 창고 이미지"
+        ],
+        [
+          "검증된 링크",
+          "매주 확인"
+        ],
+        [
+          "매일 업데이트",
+          "매일 신규 상품 추가"
+        ],
+        [
+          "다중 통화",
+          "USD, EUR, GBP 등"
+        ]
+      ]
+    },
+    "ar": {
+      "kicker": "لماذا تستخدم الجدول",
+      "title": "ما هو <span>LitBuy Spreadsheet</span>؟",
+      "p1": "LitBuy Spreadsheet هو دليل منتجات منظم يضم منتجات من الأسواق الصينية ويمكن شراؤها عبر وكيل تسوق.",
+      "p2": "تغطي القائمة Taobao و1688 وWeidian، وتجمع معلومات تساعد المشتري على المراجعة قبل الطلب:",
+      "items": [
+        "صور QC حقيقية من المستودع",
+        "روابط منتجات يتم فحصها أسبوعياً",
+        "أسعار مرجعية بعدة عملات",
+        "أوصاف واضحة وسهلة القراءة"
+      ],
+      "button": "تصفح Spreadsheet",
+      "cards": [
+        [
+          "صور QC",
+          "صور حقيقية من المستودع"
+        ],
+        [
+          "روابط موثقة",
+          "فحص أسبوعي"
+        ],
+        [
+          "تحديث يومي",
+          "إضافة منتجات جديدة يومياً"
+        ],
+        [
+          "عملات متعددة",
+          "USD وEUR وGBP وغيرها"
+        ]
+      ]
+    }
+  }
+}
