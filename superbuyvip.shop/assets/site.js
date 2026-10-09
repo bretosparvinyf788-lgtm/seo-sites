@@ -1,5 +1,5 @@
 (()=>{
-  const BUILD='20260911-seo-ctr';
+  const BUILD='20261009-seo-content';
   const send=(name,params={})=>{
     if(typeof window.gtag==='function') window.gtag('event',name,{page_path:location.pathname,...params});
   };
