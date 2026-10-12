@@ -1,0 +1,12 @@
+{
+  "name": "usfansfindsbook-com",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "python3 build.py && node scripts/build-pages.mjs",
+    "test": "node --test tests/*.test.mjs"
+  },
+  "devDependencies": {
+    "linkedom": "^0.18.0"
+  }
+}

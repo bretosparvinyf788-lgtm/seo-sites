@@ -1,0 +1,228 @@
+{
+  "name": "Svenska",
+  "currency": "SEK",
+  "nav": [
+    "Hem",
+    "Katalog",
+    "Kategorier",
+    "Nybörjarguide",
+    "Vanliga frågor",
+    "Registrera dig på USFans",
+    "Språk",
+    "Valuta"
+  ],
+  "cats": [
+    "Skor och tofflor",
+    "T-shirts",
+    "Kläder",
+    "Huvtröjor",
+    "Byxor och shorts",
+    "Bälten",
+    "Väskor",
+    "Parfym",
+    "Elektronik",
+    "Accessoarer"
+  ],
+  "labels": [
+    "Alla produkter",
+    "Detaljer",
+    "Registrerat pris",
+    "Katalogpriser är ungefärliga; frakt och andra avgifter kan tillkomma.",
+    "Från val till leverans",
+    "Tillbaka till katalogen",
+    "Visa ursprungsannons",
+    "Öppna produkten på USFans",
+    "Kopiera säljarens länk",
+    "Länk kopierad",
+    "Produktbilder",
+    "Lagerbilder / QC",
+    "Inga matchande QC-bilder finns.",
+    "Före beställning",
+    "Oberoende produktkatalog med köpinstruktioner.",
+    "Oberoende webbplats utan koppling till USFans. Länkar kan ge provision; äkthet och kvalitet garanteras inte.",
+    "Katalogordning",
+    "Lägsta pris först",
+    "Högsta pris först",
+    "Inga produkter tillgängliga.",
+    "Visa hela källkategorin",
+    "Historiska QC-bilder, inte din beställning. Färg och modell kan skilja sig.",
+    "Ursprungligt produkt-ID",
+    "Förstora bild",
+    "Stäng bild",
+    "Hänvisningskod",
+    "Kontrollera denna kategori",
+    "Utforska kategorin",
+    "Storlek och specifikation",
+    "Granska bilderna"
+  ],
+  "explore": [
+    "Upptäck",
+    "Sparade",
+    "Senast visade",
+    "Spara produkt",
+    "Ta bort sparad produkt",
+    "Med QC-bilder",
+    "Produktbudget",
+    "Alla priser",
+    "Återställ filter",
+    "Visa fler",
+    "{shown} av {total} produkter",
+    "Försök igen",
+    "Rensa historik",
+    "Alla kategorier",
+    "Sortera efter",
+    "Laddar…",
+    "Växelkursdatum"
+  ],
+  "faq": [
+    [
+      "Hur köper jag?",
+      "Öppna produkten och samma annons på USFans. Kontrollera modell och kostnader före beställning."
+    ],
+    [
+      "Ingår alla kostnader?",
+      "Nej. Inrikesfrakt i Kina, internationell frakt och andra avgifter kan tillkomma."
+    ],
+    [
+      "Vad kontrollerar jag först?",
+      "Jämför mått, färg, antal, innehåll, aktuell tillgänglighet och pris."
+    ],
+    [
+      "Hur registrerar jag mig?",
+      "Använd registreringsknappen med T2JMMC. Konto, beställning och betalning hanteras av USFans."
+    ],
+    [
+      "Är QC-bilderna från min beställning?",
+      "Nej, de är historiska referenser. Kontrollera dina egna bilder i Warehouse efter ankomst."
+    ],
+    [
+      "Vad granskar jag i QC?",
+      "Etiketter, färg, antal, sömmar och synliga fel. Be vid behov om fler bilder eller mått."
+    ],
+    [
+      "Kan produkter samfraktas?",
+      "Välj tillgängliga lagerartiklar som är godkända för samma fraktrutt."
+    ],
+    [
+      "Hur begär jag retur?",
+      "Kontakta support via beställningen före internationell frakt. Villkor, tidsfrister och avgifter varierar."
+    ],
+    [
+      "Vad kostar frakten?",
+      "Destination, rutt, packad vikt och mått styr priset. Kontrollera USFans aktuella offert."
+    ],
+    [
+      "Varför saknas en fraktrutt?",
+      "Kontrollera destination och produktrestriktioner, särskilt batterier och vätskor. Fråga supporten."
+    ],
+    [
+      "Var spårar jag paketet?",
+      "Öppna paketet i Parcel. Vid uteblivna uppdateringar, ge supporten paketnumret."
+    ],
+    [
+      "Vem hjälper med betalning?",
+      "USFans support via beställningen eller paketet. Denna katalog kan inte ändra dem."
+    ]
+  ],
+  "steps": [
+    [
+      "Välj en produkt på USFans",
+      "Välj byxkategorin och öppna AMI-shortsen via bilden eller namnet. Granska bilder och referens-QC och använd köpknappen."
+    ],
+    [
+      "Välj modell och storlek",
+      "Välj Style och Size efter måtten. Justera Quantity med − / +, kontrollera Total och klicka Buy now."
+    ],
+    [
+      "Bekräfta och betala",
+      "I Confirm Order: kontrollera SKU och antal. Order Summary visar Product Price och Domestic Freight (China). Läs villkoren före godkännande och Submit. Internationell frakt ingår inte."
+    ],
+    [
+      "Följ inköpet",
+      "Öppna Order. Välj Payment Pending eller andra filter, ange namn eller nummer och klicka Search. Läs eventuella meddelanden."
+    ],
+    [
+      "Granska QC i lagret",
+      "Öppna Warehouse efter varans ankomst och kontrollera dina beställningsbilder. Historiska katalogbilder ersätter inte denna kontroll."
+    ],
+    [
+      "Skapa paketet",
+      "Välj lagerartiklar, kontrollera mottagare, land och postnummer samt rutt och emballage. Ett tomt lager visar inget fraktformulär."
+    ],
+    [
+      "Betala internationell frakt",
+      "Välj Payment Pending i Parcel och öppna paketet. Kontrollera pris, vikt och mått före betalning; slutlig packning kan påverka priset."
+    ],
+    [
+      "Vänta på packning",
+      "Öppna rätt paket under All Parcel och läs status. En väntande betalning betyder inte att paketet skickats."
+    ],
+    [
+      "Spåra transporten",
+      "Välj In transit och öppna paketets spårning. En tom lista innehåller inga försändelser."
+    ],
+    [
+      "Ta emot och kontrollera",
+      "Kontrollera innehållet före mottagningsbekräftelse. Received är ett filter, ingen bekräftelseknapp. Spara foton och emballage vid problem."
+    ]
+  ],
+  "tips": [
+    "Jämför storlekstabell, form, sömmar och sulor; kontrollera färg och förpackning.",
+    "Jämför bröst, axlar och längd samt tryck fram och bak.",
+    "Kontrollera mått och antal plagg; en outfitbild visar inte säkert vad som ingår.",
+    "Kontrollera ärmar, huva, muddar, dragkedja, tyg och foder.",
+    "Mät midja, höfter och längd; kontrollera stretch, antal och returvillkor.",
+    "Kontrollera användbar längd, bredd, spänne, hål och material.",
+    "Jämför mått, fack, remmar, stängning och tillbehör.",
+    "Kontrollera volym och version samt regler för vätskefrakt. Bilder bevisar inte doft eller äkthet.",
+    "Kontrollera modell, kontakter, ström och tillbehör samt batterirestriktioner.",
+    "Kontrollera storlek, fästen och material. Bilder bevisar inte funktion eller äkthet."
+  ],
+  "types": [
+    "Shorts",
+    "Sneakers",
+    "Skor",
+    "Väska",
+    "Fotbollströjor",
+    "Klädset",
+    "Klädset från flera märken",
+    "Tröja med tryck",
+    "T-shirt",
+    "Huvtröja",
+    "Huvtröja med dragkedja",
+    "Keps",
+    "Träningströja",
+    "Jeansjacka",
+    "Manchesterbomber",
+    "Kofta",
+    "Jacka",
+    "Tvättade shorts med tryck",
+    "Boxershorts",
+    "Byxor",
+    "Bälte",
+    "Rutigt bälte",
+    "Ryggsäck",
+    "Resväska",
+    "Quiltad hoboväska",
+    "Parfym",
+    "Smartklocka",
+    "Bärbar Bluetooth-högtalare",
+    "Hörlurar",
+    "Trådlöst laddarset",
+    "Sportstrumpor",
+    "Glasögon",
+    "Solglasögon"
+  ],
+  "notes": [
+    "Utforska produkter, jämför detaljer och spara favoriter.",
+    "Registrera dig på USFans för lagerstatus, frakt och slutkostnad.",
+    "Listan sparas för denna webbläsare med en cookie och synkas inte mellan enheter.",
+    "Listan är tillfälligt otillgänglig. Försök igen.",
+    "Inga träffar: ändra kategori eller budget.",
+    "Spara produkter med hjärtknappen.",
+    "Öppna en produkt för att se den här.",
+    "Endast ungefärlig omräkning; kontrollera slutbeloppet på USFans.",
+    "Växelkurs saknas för valutan; priser visas i USD.",
+    "Verklig kontosida utan beställningar, lagerartiklar eller paket; detaljer visas först när motsvarande post finns."
+  ]
+}

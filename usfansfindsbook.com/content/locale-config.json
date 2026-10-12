@@ -1,0 +1,200 @@
+{
+  "en": {
+    "currency": "USD"
+  },
+  "de": {
+    "currency": "EUR"
+  },
+  "es": {
+    "currency": "EUR"
+  },
+  "fr": {
+    "currency": "EUR"
+  },
+  "pt": {
+    "currency": "EUR"
+  },
+  "zh": {
+    "currency": "CNY"
+  },
+  "ar": {
+    "currency": "SAR",
+    "words": {
+      "date": "تاريخ سعر الصرف",
+      "saved": "تاريخ سعر الصرف",
+      "base": "USD",
+      "notice": "التحويل للعرض فقط؛ تحقق من المبلغ النهائي في USFans.",
+      "unavailable": "سعر صرف هذه العملة غير متاح؛ تُعرض الأسعار بالدولار USD."
+    }
+  },
+  "cs": {
+    "currency": "CZK",
+    "words": {
+      "date": "Datum kurzu",
+      "saved": "Datum kurzu",
+      "base": "USD",
+      "notice": "Pouze orientační přepočet; konečnou částku ověřte na USFans.",
+      "unavailable": "Kurz měny není dostupný; ceny jsou v USD."
+    }
+  },
+  "da": {
+    "currency": "DKK",
+    "words": {
+      "date": "Kursdato",
+      "saved": "Kursdato",
+      "base": "USD",
+      "notice": "Kun vejledende omregning; kontrollér slutbeløbet på USFans.",
+      "unavailable": "Ingen kurs for valutaen; priser vises i USD."
+    }
+  },
+  "el": {
+    "currency": "EUR",
+    "words": {
+      "date": "Ημερομηνία ισοτιμίας",
+      "saved": "Ημερομηνία ισοτιμίας",
+      "base": "USD",
+      "notice": "Ενδεικτική μετατροπή· ελέγξτε τελικό ποσό στο USFans.",
+      "unavailable": "Μη διαθέσιμη ισοτιμία· οι τιμές εμφανίζονται σε USD."
+    }
+  },
+  "fi": {
+    "currency": "EUR",
+    "words": {
+      "date": "Kurssipäivä",
+      "saved": "Kurssipäivä",
+      "base": "USD",
+      "notice": "Muunnos on suuntaa antava; tarkista loppusumma USFansissa.",
+      "unavailable": "Valuutan kurssia ei ole saatavilla; hinnat näytetään USD-määräisinä."
+    }
+  },
+  "hu": {
+    "currency": "HUF",
+    "words": {
+      "date": "Árfolyam dátuma",
+      "saved": "Árfolyam dátuma",
+      "base": "USD",
+      "notice": "Tájékoztató átváltás; a végösszeget a USFans oldalon ellenőrizd.",
+      "unavailable": "A pénznem árfolyama nem érhető el; az árak USD-ben láthatók."
+    }
+  },
+  "it": {
+    "currency": "EUR",
+    "words": {
+      "date": "Data del cambio",
+      "saved": "Data del cambio",
+      "base": "USD",
+      "notice": "Conversione solo indicativa; verifica l’importo finale su USFans.",
+      "unavailable": "Cambio non disponibile per questa valuta: prezzi in USD."
+    }
+  },
+  "ja": {
+    "currency": "JPY",
+    "words": {
+      "date": "為替レートの日付",
+      "saved": "為替レートの日付",
+      "base": "USD",
+      "notice": "表示用の参考換算です。最終金額はUSFansで確認してください。",
+      "unavailable": "この通貨の為替レートを取得できないため、USDで表示しています。"
+    }
+  },
+  "ko": {
+    "currency": "KRW",
+    "words": {
+      "date": "환율 기준일",
+      "saved": "환율 기준일",
+      "base": "USD",
+      "notice": "표시용 참고 환산입니다. 최종 금액은 USFans에서 확인하세요.",
+      "unavailable": "이 통화의 환율을 사용할 수 없어 USD로 표시합니다."
+    }
+  },
+  "nb": {
+    "currency": "NOK",
+    "words": {
+      "date": "Kursdato",
+      "saved": "Kursdato",
+      "base": "USD",
+      "notice": "Kun veiledende omregning; kontroller sluttbeløpet på USFans.",
+      "unavailable": "Valutakursen er utilgjengelig; priser vises i USD."
+    }
+  },
+  "nl": {
+    "currency": "EUR",
+    "words": {
+      "date": "Wisselkoersdatum",
+      "saved": "Wisselkoersdatum",
+      "base": "USD",
+      "notice": "Alleen indicatieve omrekening; controleer het eindbedrag op USFans.",
+      "unavailable": "Wisselkoers niet beschikbaar voor deze valuta; prijzen in USD."
+    }
+  },
+  "pl": {
+    "currency": "PLN",
+    "words": {
+      "date": "Data kursu",
+      "saved": "Data kursu",
+      "base": "USD",
+      "notice": "Przeliczenie orientacyjne; sprawdź końcową kwotę w USFans.",
+      "unavailable": "Brak kursu tej waluty; ceny są w USD."
+    }
+  },
+  "ro": {
+    "currency": "RON",
+    "words": {
+      "date": "Data cursului",
+      "saved": "Data cursului",
+      "base": "USD",
+      "notice": "Conversie orientativă; verifică suma finală pe USFans.",
+      "unavailable": "Cursul monedei nu este disponibil; prețurile sunt în USD."
+    }
+  },
+  "ru": {
+    "currency": "RUB",
+    "words": {
+      "date": "Дата курса",
+      "saved": "Дата курса",
+      "base": "USD",
+      "notice": "Ориентировочный пересчёт; итоговую сумму проверьте в USFans.",
+      "unavailable": "Курс валюты недоступен; цены показаны в USD."
+    }
+  },
+  "sk": {
+    "currency": "EUR",
+    "words": {
+      "date": "Dátum kurzu",
+      "saved": "Dátum kurzu",
+      "base": "USD",
+      "notice": "Len orientačný prepočet; konečnú sumu overte na USFans.",
+      "unavailable": "Kurz meny nie je dostupný; ceny sú v USD."
+    }
+  },
+  "sv": {
+    "currency": "SEK",
+    "words": {
+      "date": "Växelkursdatum",
+      "saved": "Växelkursdatum",
+      "base": "USD",
+      "notice": "Endast ungefärlig omräkning; kontrollera slutbeloppet på USFans.",
+      "unavailable": "Växelkurs saknas för valutan; priser visas i USD."
+    }
+  },
+  "tr": {
+    "currency": "TRY",
+    "words": {
+      "date": "Kur tarihi",
+      "saved": "Kur tarihi",
+      "base": "USD",
+      "notice": "Yaklaşık kur dönüşümü; son tutarı USFans’ta kontrol edin.",
+      "unavailable": "Para biriminin kuru alınamadı; fiyatlar USD olarak gösterilir."
+    }
+  },
+  "uk": {
+    "currency": "UAH",
+    "words": {
+      "date": "Дата курсу",
+      "saved": "Дата курсу",
+      "base": "USD",
+      "notice": "Орієнтовний перерахунок; остаточну суму перевірте в USFans.",
+      "unavailable": "Курс валюти недоступний; ціни показано в USD."
+    }
+  }
+}

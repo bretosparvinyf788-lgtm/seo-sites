@@ -1,0 +1,228 @@
+{
+  "name": "Italiano",
+  "currency": "EUR",
+  "nav": [
+    "Home",
+    "Catalogo",
+    "Categorie",
+    "Guida per principianti",
+    "Domande frequenti",
+    "Registrati su USFans",
+    "Lingua",
+    "Valuta"
+  ],
+  "cats": [
+    "Scarpe e ciabatte",
+    "Magliette",
+    "Abbigliamento",
+    "Felpe",
+    "Pantaloni e pantaloncini",
+    "Cinture",
+    "Borse",
+    "Profumi",
+    "Elettronica",
+    "Accessori"
+  ],
+  "labels": [
+    "Tutti i prodotti",
+    "Dettagli",
+    "Prezzo registrato",
+    "Prezzi indicativi del catalogo; spedizione e altri costi possono aggiungersi.",
+    "Dalla scelta alla consegna",
+    "Torna al catalogo",
+    "Apri inserzione originale",
+    "Apri prodotto su USFans",
+    "Copia link del venditore",
+    "Link copiato",
+    "Foto del prodotto",
+    "Foto del magazzino / QC",
+    "Non sono disponibili foto QC corrispondenti.",
+    "Prima di ordinare",
+    "Catalogo indipendente di prodotti e istruzioni di acquisto.",
+    "Sito indipendente, non affiliato a USFans. I link possono generare commissioni; nessuna garanzia di autenticità o qualità.",
+    "Ordine del catalogo",
+    "Prezzo crescente",
+    "Prezzo decrescente",
+    "Nessun prodotto disponibile.",
+    "Apri la categoria alla fonte",
+    "Foto QC storiche, non del tuo ordine. Colori e varianti possono differire.",
+    "ID del prodotto originale",
+    "Ingrandisci immagine",
+    "Chiudi immagine",
+    "Codice referral",
+    "Controlli per questa categoria",
+    "Esplora la categoria",
+    "Taglia e specifiche",
+    "Controlla le fotografie"
+  ],
+  "explore": [
+    "Esplora",
+    "Preferiti",
+    "Visti di recente",
+    "Salva prodotto",
+    "Rimuovi dai preferiti",
+    "Con foto QC",
+    "Budget del prodotto",
+    "Qualsiasi prezzo",
+    "Reimposta filtri",
+    "Mostra altri",
+    "{shown} di {total} prodotti",
+    "Riprova",
+    "Cancella cronologia",
+    "Tutte le categorie",
+    "Ordina per",
+    "Caricamento…",
+    "Data del cambio"
+  ],
+  "faq": [
+    [
+      "Come si acquista?",
+      "Apri il prodotto del catalogo e passa alla stessa inserzione su USFans. Controlla variante e costi prima di ordinare."
+    ],
+    [
+      "Il prezzo comprende tutto?",
+      "No. Al prezzo si possono aggiungere trasporto interno cinese, spedizione internazionale e altri oneri applicabili."
+    ],
+    [
+      "Cosa verificare prima dell’acquisto?",
+      "Confronta misure, colore, quantità e contenuto della confezione; verifica prezzo e disponibilità aggiornati."
+    ],
+    [
+      "Come registrarsi?",
+      "Usa il pulsante di registrazione con codice T2JMMC. Registrazione, ordini e pagamenti avvengono su USFans."
+    ],
+    [
+      "Le foto QC sono del mio ordine?",
+      "No. Le immagini del catalogo sono riferimenti storici. Dopo l’arrivo controlla le foto del tuo ordine nel magazzino USFans."
+    ],
+    [
+      "Cosa controllare nel QC?",
+      "Verifica etichette, colore, quantità, cuciture e difetti visibili. Se necessario richiedi misure o foto aggiuntive."
+    ],
+    [
+      "Posso unire più articoli?",
+      "Se disponibili e compatibili con la rotta, seleziona gli articoli in magazzino per preparare un unico pacco."
+    ],
+    [
+      "Come richiedere un reso?",
+      "Contatta l’assistenza tramite l’ordine prima della spedizione internazionale. Condizioni, scadenze e costi dipendono dall’articolo."
+    ],
+    [
+      "Quanto costa la spedizione?",
+      "Dipende da destinazione, rotta, peso e dimensioni del pacco. Fa fede il preventivo aggiornato di USFans."
+    ],
+    [
+      "Perché non trovo una rotta?",
+      "Controlla destinazione e restrizioni dell’articolo. Batterie e liquidi possono limitare le opzioni; chiedi all’assistenza."
+    ],
+    [
+      "Dove seguo il pacco?",
+      "In Parcel apri la registrazione del pacco e consulta il tracciamento. Se non si aggiorna, comunica il numero all’assistenza."
+    ],
+    [
+      "Chi risolve problemi di ordine o pagamento?",
+      "USFans gestisce gli ordini. Contatta l’assistenza dall’ordine o dal pacco interessato; questo catalogo non può modificarli."
+    ]
+  ],
+  "steps": [
+    [
+      "Scegli un prodotto su USFans",
+      "Nel catalogo scegli la categoria pantaloni e apri la foto o il nome dei pantaloncini AMI. Controlla immagini e QC; poi premi il pulsante di acquisto."
+    ],
+    [
+      "Scegli le opzioni",
+      "In Style seleziona la variante; in Size scegli la taglia confrontando le misure. Regola Quantity con − / +, controlla Total e premi Buy now."
+    ],
+    [
+      "Conferma l’ordine e il pagamento",
+      "In Confirm Order verifica SKU, taglia e quantità. Order Summary separa Product Price e Domestic Freight (China). Leggi le condizioni prima di accettarle e premere Submit; la spedizione internazionale è esclusa."
+    ],
+    [
+      "Segui l’acquisto",
+      "Apri Order dal menu dell’account. Usa Payment Pending o gli altri filtri, cerca nome o numero e premi Search. Controlla eventuali richieste di conferma."
+    ],
+    [
+      "Controlla il QC in magazzino",
+      "Apri Warehouse. Dopo l’arrivo cerca il tuo articolo e controlla le foto dell’ordine. Le immagini storiche del catalogo non sostituiscono questo controllo."
+    ],
+    [
+      "Prepara il pacco",
+      "In Warehouse seleziona gli articoli disponibili, verifica destinatario, paese e codice postale e confronta rotte e imballaggio. Il modulo non appare a magazzino vuoto."
+    ],
+    [
+      "Paga il trasporto internazionale",
+      "In Parcel scegli Payment Pending, apri il pacco e verifica preventivo, peso e dimensioni prima di pagare. Il costo finale può variare dopo l’imballaggio."
+    ],
+    [
+      "Attendi imballaggio e partenza",
+      "In Parcel usa All Parcel e apri la registrazione corretta. Controlla lo stato di lavorazione; un pagamento ancora richiesto non equivale a una spedizione avvenuta."
+    ],
+    [
+      "Segui il trasporto",
+      "Scegli In transit e apri il pacco per leggere gli aggiornamenti. Una lista vuota non contiene spedizioni da seguire."
+    ],
+    [
+      "Ricevi e controlla",
+      "Controlla imballaggio e contenuto prima della conferma. Received filtra i pacchi consegnati: non è il pulsante di conferma. Conserva foto e imballaggio per eventuale assistenza."
+    ]
+  ],
+  "tips": [
+    "Confronta tabella taglie, forma, cuciture e suole; verifica colore e confezione.",
+    "Confronta torace, spalle e lunghezza; controlla stampe anteriori e posteriori.",
+    "Verifica misure e numero di capi; foto di un completo non provano cosa sia incluso.",
+    "Controlla torace, maniche, cappuccio, polsini e zip; conferma tessuto e fodera.",
+    "Misura vita, fianchi e lunghezza; verifica elasticità, quantità e condizioni di reso.",
+    "Controlla lunghezza utilizzabile, larghezza, fibbia e fori; conferma materiale.",
+    "Confronta dimensioni, scomparti, tracolle, chiusure e contenuto incluso.",
+    "Verifica volume e versione; foto non provano autenticità o profumo. Conferma la spedibilità dei liquidi.",
+    "Verifica modello, porte, alimentazione e accessori; controlla restrizioni sulle batterie.",
+    "Controlla misure, chiusure e materiali. Le immagini non certificano prestazioni o autenticità."
+  ],
+  "types": [
+    "Pantaloncini",
+    "Sneakers",
+    "Calzature",
+    "Borsa",
+    "Maglie da calcio",
+    "Completo",
+    "Completi di vari marchi",
+    "Maglia stampata",
+    "Maglietta",
+    "Felpa con cappuccio",
+    "Felpa con zip",
+    "Cappellino",
+    "Maglietta da allenamento",
+    "Giacca di jeans",
+    "Bomber in velluto",
+    "Cardigan",
+    "Giacca",
+    "Pantaloncini lavati stampati",
+    "Boxer",
+    "Pantaloni",
+    "Cintura",
+    "Cintura a quadri",
+    "Zaino",
+    "Borsa da viaggio",
+    "Borsa hobo trapuntata",
+    "Profumo",
+    "Smartwatch",
+    "Altoparlante Bluetooth portatile",
+    "Cuffie",
+    "Set di caricabatterie wireless",
+    "Calzini sportivi",
+    "Occhiali",
+    "Occhiali da sole"
+  ],
+  "notes": [
+    "Esplora i prodotti, confronta i dettagli e salva i tuoi preferiti.",
+    "Registrati su USFans per verificare disponibilità, trasporto e costo finale.",
+    "Preferiti salvati per questo browser tramite cookie; non sincronizzati tra dispositivi.",
+    "Elenco temporaneamente non disponibile. Riprova.",
+    "Nessun risultato: cambia categoria o budget.",
+    "Premi il cuore per salvare un prodotto.",
+    "Apri un prodotto per ritrovarlo qui.",
+    "Conversione solo indicativa; verifica l’importo finale su USFans.",
+    "Cambio non disponibile per questa valuta: prezzi in USD.",
+    "Pagina reale senza ordini, articoli o pacchi: i dettagli compaiono solo con una registrazione esistente."
+  ]
+}

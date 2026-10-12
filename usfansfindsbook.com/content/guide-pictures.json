@@ -1,0 +1,1640 @@
+{
+  "en": {
+    "zoom": "Open full-size image",
+    "diagram": "Findsbook process diagram · not an account screenshot.",
+    "captions": [
+      "Findsbook example: open the product image or title.",
+      "Review this item’s main image and reference QC, then use its purchase button.",
+      "Create your account and place the order",
+      "Follow the purchase into the warehouse",
+      "Open your own order photos in Warehouse and complete these checks.",
+      "Build the parcel and choose a route",
+      "Review and pay the international quote",
+      "Track, receive and check your parcel"
+    ],
+    "site": [
+      "Findsbook example: open the product image or title.",
+      "Review this item’s main image and reference QC, then use its purchase button.",
+      "Reference QC from our catalogue; review your own order photos after arrival.",
+      "Example from this website",
+      "Open this product",
+      "Continue to this product on USFans"
+    ],
+    "officialExample": "Example interface from the USFans purchasing process. Layouts, amounts and options may change.",
+    "qcExample": "Illustrated with a catalogue QC example; not photos of your own order.",
+    "parcelFields": [
+      "Warehouse",
+      "Select stored items",
+      "Delivery address",
+      "Recipient, country and postcode",
+      "Shipping route",
+      "Check eligibility and packaging"
+    ],
+    "sameItem": "One example throughout: the same AMI shorts",
+    "itemExample": "Illustrated with our catalogue item, not a real order screenshot. Check live options and amounts.",
+    "options": [
+      [
+        "Colour / style",
+        "Match the shorts photo to your selected variant"
+      ],
+      [
+        "Size",
+        "Compare waist and length with the seller’s size chart"
+      ],
+      [
+        "Quantity",
+        "Check how many you are buying"
+      ],
+      [
+        "Buy now",
+        "Choose the variant, then review the order"
+      ]
+    ],
+    "itemPayment": [
+      [
+        "Item amount",
+        "Check the live price for these shorts and your variant"
+      ],
+      [
+        "Domestic shipping",
+        "Review delivery from the seller to the warehouse"
+      ],
+      [
+        "Amount due",
+        "Review the breakdown before paying for the item"
+      ]
+    ],
+    "realCapture": "Live-page capture · 2026-10-09. Screenshot amounts identify the interface only; check current prices and stock.",
+    "clickSteps": [
+      "Click a shorts thumbnail under Style. Black Love 005 is selected here; choose the variant you want.",
+      "Click S, M, L or XL under Size. S is the captured selection, not a sizing recommendation.",
+      "Use − / + under Quantity and check the number between them.",
+      "Review Total, then click the orange Buy now button. Use Add To Cart on its right if shopping for more items."
+    ],
+    "screenTitles": [
+      "Choose the variant under Style",
+      "Choose size and quantity, then click Buy now"
+    ],
+    "loginSteps": [
+      "If signed out, click Login in the top-right corner to open this screen.",
+      "Existing account: enter your email and password, then click Log In; Continue with Google is also available.",
+      "New account: use the registration button on this website, then return to these shorts.",
+      "After signing in, return to the product, check the options and click Buy now. Review the item and fees on the order confirmation page before following the payment prompts."
+    ],
+    "siteSteps": [
+      "On the homepage, choose Pants, find AMI shorts and click the product photo or name.",
+      "On the detail page, review the main image; scroll down to reference QC and click a photo to enlarge it.",
+      "Click “{buy}” on the detail page to open the same shorts on USFans."
+    ],
+    "clickHeading": "What to click on this page",
+    "loginTitle": "Sign in before continuing the order",
+    "enlarge": "Enlarge original screenshot",
+    "account": {
+      "confirm": [
+        "Check Product Details: these shorts, the Style and Size in SKU, and Qty. Use Back to cart and edit if anything is wrong.",
+        "In Order Summary, review Product Price, Domestic Freight (China) and Total. Excluding international shipping means international delivery is not included.",
+        "Use Custom Take Photo or Leave Message if needed. Read the terms; tick I have read and agree above only if you agree, then use Submit to continue. This capture is before submission or payment."
+      ],
+      "nav": "Click {label} in the left sidebar.",
+      "tab": "Click the {label} tab to filter that status.",
+      "search": "Enter the item name or number in {label}, then click Search.",
+      "empty": "Real account page with no orders, stored items or parcels. This capture shows navigation; details and action buttons appear only when a matching record exists.",
+      "warehouse": "If Warehouse is empty, check the purchase in Order first. Inspect your own QC once the item arrives. The shorts photos below are historical catalogue references.",
+      "submit": "Wait for the shorts to reach Warehouse. Select eligible items when they appear to prepare a parcel. An empty warehouse does not expose the address, route or submission form.",
+      "payment": "Payment Pending filters unpaid parcels. Open a matching record to review its fees. This capture contains no payment form and does not show a completed payment.",
+      "dispatch": "All Parcel lists parcels of every status. Open the matching record to check processing; Payment Pending means payment is still outstanding.",
+      "transit": "In transit filters parcels being shipped. Open a matching parcel to inspect tracking. An empty list has no tracking record to open.",
+      "received": "Received filters delivered parcels; it is not a receipt-confirmation button. Check your goods before handling receipt confirmation or after-sales within the parcel record.",
+      "confirmTitle": "Confirm Order: verify the shorts and first-stage costs",
+      "entry": "Actual page navigation",
+      "loginHelp": "Not signed in? See the login steps"
+    }
+  },
+  "zh": {
+    "zoom": "点击查看大图",
+    "diagram": "Findsbook 操作流程示意 · 非账号页面截图。",
+    "captions": [
+      "本站示例：点击商品图片或名称，打开独立详情页。",
+      "先查看这件商品的主图和参考 QC，再使用详情页的购买按钮。",
+      "注册或登录，提交商品订单",
+      "等待代购和商品到仓",
+      "进入仓库查看自己订单的 QC，按图中顺序核对。",
+      "选择合寄商品和运输线路",
+      "核对并支付国际运输费用",
+      "跟踪物流，收货后检查"
+    ],
+    "site": [
+      "本站示例：点击商品图片或名称，打开独立详情页。",
+      "先查看这件商品的主图和参考 QC，再使用详情页的购买按钮。",
+      "这里是本站商品的参考 QC；到仓后仍须检查自己订单的照片。",
+      "本站商品操作示例",
+      "打开这个商品详情",
+      "通过推广链接购买此商品"
+    ],
+    "officialExample": "USFans 购买流程界面示例，金额、选项和页面布局以实际操作时为准。",
+    "qcExample": "配图为本站商品 QC 示例，不是你自己订单的验货照片。",
+    "parcelFields": [
+      "Warehouse／仓库",
+      "勾选已入库商品",
+      "收件地址",
+      "核对姓名、国家和邮编",
+      "运输线路",
+      "确认商品适用线路及包装选项"
+    ],
+    "sameItem": "全程示例：同一条 AMI 短裤",
+    "itemExample": "本站商品操作示意，并非真实订单截图。尺码、颜色和金额以实时商品页为准。",
+    "options": [
+      [
+        "颜色／款式",
+        "核对短裤图片与所选款式"
+      ],
+      [
+        "尺码",
+        "按卖家尺寸表核对腰围、裤长"
+      ],
+      [
+        "数量",
+        "确认要购买的件数"
+      ],
+      [
+        "Buy now／立即购买",
+        "选好规格后进入订单确认"
+      ]
+    ],
+    "itemPayment": [
+      [
+        "商品金额",
+        "确认这条短裤及所选规格的实际售价"
+      ],
+      [
+        "中国境内运费",
+        "核对卖家寄往仓库的费用"
+      ],
+      [
+        "应付总额",
+        "检查订单明细，再完成商品付款"
+      ]
+    ],
+    "realCapture": "实际页面截图 · 2026-10-09。截图金额仅供识别页面，实时价格和库存以购买时为准。",
+    "clickSteps": [
+      "点击 Style 下的短裤缩略图。图中选中 Black Love 005；以你要买的款式为准。",
+      "点击 Size 下的 S、M、L 或 XL。图中的 S 是页面示例，不是尺码建议。",
+      "在 Quantity 处用 − / + 调整数量，并核对中间的数字。",
+      "核对 Total 后点击橙色 Buy now；若先加入购物车，使用右侧 Add To Cart。"
+    ],
+    "screenTitles": [
+      "选择款式：看右侧 Style",
+      "选择尺码、数量，再点击 Buy now"
+    ],
+    "loginSteps": [
+      "尚未登录时，点击右上角 Login，进入图中的登录页。",
+      "已有账号：填写邮箱和密码，点击 Log In；也可选择 Continue with Google。",
+      "没有账号：使用本站的注册按钮，注册后返回这条短裤的详情页继续购买。",
+      "登录后回到商品页，重新核对规格，点击 Buy now，查看订单确认页的商品与费用明细，再按页面提示付款。"
+    ],
+    "siteSteps": [
+      "在首页点击“裤子”分类，找到 AMI 短裤并点击商品图片或名称。",
+      "进入详情页后，查看商品主图；向下滚动查看参考 QC，点击照片可以放大。",
+      "点击详情页的“{buy}”按钮，进入同一条短裤在 USFans 的实时商品页。"
+    ],
+    "clickHeading": "本步在页面上这样操作",
+    "loginTitle": "登录 USFans 后继续订单",
+    "enlarge": "放大查看原图",
+    "account": {
+      "confirm": [
+        "核对 Product Details：确认仍是这条短裤，检查 SKU 中的 Style、Size 和 Qty。需要修改时点击 Back to cart and edit。",
+        "在 Order Summary 查看 Product Price、Domestic Freight (China) 和 Total。这里明确标着 Excluding international shipping，尚未包含国际运费。",
+        "按需使用 Custom Take Photo 或 Leave Message。阅读页面条款后，只有你同意时才勾选 I have read and agree above，再点击 Submit 继续；本图尚未提交或付款。"
+      ],
+      "nav": "点击左侧 {label}，进入对应管理页面。",
+      "tab": "点击顶部 {label} 筛选对应状态。",
+      "search": "在 {label} 输入商品名或编号，再点击右侧 Search。",
+      "empty": "真实账号页面，当前没有订单、入库商品或包裹。本图用于说明入口；有对应记录后才会显示详情与操作按钮。",
+      "warehouse": "仓库空白时，先到 Order 查看采购进度。商品到仓后再查看该订单的 QC；下方照片仅为本站短裤的历史参考 QC。",
+      "submit": "先在 Warehouse 等待短裤入库。出现可寄送商品后再选择商品、提交包裹；空仓库不会显示收件地址、线路和提交表单。",
+      "payment": "Payment Pending 是待付款包裹筛选。出现记录后再打开对应包裹核对费用；截图没有支付表单，不代表已经付款。",
+      "dispatch": "All Parcel 显示全部包裹。找到对应记录后查看实际处理状态；Payment Pending 表示还有付款步骤。",
+      "transit": "In transit 显示运输中的包裹。出现记录后打开对应包裹查看物流；空列表没有可查询的运输记录。",
+      "received": "Received 是已签收状态筛选，不是确认收货按钮。收到货后先检查商品，再在对应包裹记录中处理确认或售后。",
+      "confirmTitle": "Confirm Order：核对短裤与第一阶段费用",
+      "entry": "实际页面入口",
+      "loginHelp": "尚未登录？查看登录步骤"
+    }
+  },
+  "de": {
+    "zoom": "Bild in voller Größe öffnen",
+    "diagram": "Findsbook-Ablaufdiagramm · kein Screenshot eines Kontos.",
+    "captions": [
+      "Beispiel: Produktbild oder Titel öffnen.",
+      "Hauptbild und Referenz-QC prüfen, dann den Kaufbutton verwenden.",
+      "Registrieren und die Ware bestellen",
+      "Einkauf und Lagereingang verfolgen",
+      "Eigene Bestellfotos im Warehouse öffnen und diese Punkte prüfen.",
+      "Paket und Versandroute wählen",
+      "Internationales Versandangebot bezahlen",
+      "Verfolgen, empfangen und prüfen"
+    ],
+    "site": [
+      "Beispiel: Produktbild oder Titel öffnen.",
+      "Hauptbild und Referenz-QC prüfen, dann den Kaufbutton verwenden.",
+      "Referenz-QC aus unserem Katalog; nach Ankunft eigene Bestellfotos prüfen.",
+      "Beispiel dieser Website",
+      "Dieses Produkt öffnen",
+      "Dieses Produkt bei USFans kaufen"
+    ],
+    "officialExample": "Beispiel aus dem USFans-Kaufprozess. Beträge, Optionen und Layout können sich ändern.",
+    "qcExample": "QC-Beispiel aus unserem Katalog, keine Fotos deiner Bestellung.",
+    "parcelFields": [
+      "Warehouse",
+      "Eingelagerte Artikel wählen",
+      "Lieferadresse",
+      "Empfänger, Land und Postleitzahl",
+      "Versandroute",
+      "Zulässigkeit und Verpackung prüfen"
+    ],
+    "sameItem": "Durchgehend dieselben AMI-Shorts",
+    "itemExample": "Beispiel mit unserem Katalogartikel, kein echter Bestell-Screenshot. Aktuelle Optionen und Beträge prüfen.",
+    "options": [
+      [
+        "Farbe / Modell",
+        "Foto und gewählte Variante der Shorts abgleichen"
+      ],
+      [
+        "Größe",
+        "Bundweite und Länge mit der Größentabelle vergleichen"
+      ],
+      [
+        "Menge",
+        "Gewünschte Stückzahl prüfen"
+      ],
+      [
+        "Buy now",
+        "Variante wählen, dann Bestellung prüfen"
+      ]
+    ],
+    "itemPayment": [
+      [
+        "Artikelbetrag",
+        "Aktuellen Preis der Shorts und Variante prüfen"
+      ],
+      [
+        "Inlandsversand",
+        "Versand vom Verkäufer zum Lager prüfen"
+      ],
+      [
+        "Zahlbetrag",
+        "Aufschlüsselung vor der Zahlung prüfen"
+      ]
+    ],
+    "realCapture": "Aufnahme der echten Seite · 09.10.2026. Preise und Bestand beim Kauf erneut prüfen.",
+    "clickSteps": [
+      "Unter Style ein Vorschaubild wählen. Hier ist Black Love 005 gewählt; wähle dein gewünschtes Modell.",
+      "Unter Size S, M, L oder XL anklicken. S ist nur die gezeigte Auswahl, keine Größenempfehlung.",
+      "Bei Quantity mit − / + die Stückzahl ändern und die Zahl prüfen.",
+      "Total prüfen und auf das orange Buy now klicken. Für den Warenkorb rechts Add To Cart wählen."
+    ],
+    "screenTitles": [
+      "Modell unter Style auswählen",
+      "Größe und Menge wählen, dann Buy now"
+    ],
+    "loginSteps": [
+      "Ohne Anmeldung oben rechts Login anklicken; diese Seite erscheint.",
+      "Mit Konto: E-Mail und Passwort eingeben und Log In anklicken; alternativ Continue with Google.",
+      "Ohne Konto: den Registrierungsbutton dieser Website verwenden, danach zu den Shorts zurückkehren.",
+      "Nach Anmeldung Optionen erneut prüfen und Buy now anklicken. Artikel und Gebühren auf der Bestätigungsseite vor der Zahlung prüfen."
+    ],
+    "siteSteps": [
+      "Auf der Startseite Hosen wählen, AMI-Shorts suchen und Bild oder Namen anklicken.",
+      "Auf der Detailseite das Hauptbild prüfen; nach unten zu Referenz-QC scrollen und Fotos zum Vergrößern anklicken.",
+      "Auf der Detailseite „{buy}“ anklicken, um dieselben Shorts auf USFans zu öffnen."
+    ],
+    "clickHeading": "Diese Bedienelemente verwenden",
+    "loginTitle": "Vor der Bestellung anmelden",
+    "enlarge": "Originalaufnahme vergrößern",
+    "account": {
+      "confirm": [
+        "Product Details prüfen: Shorts, Style und Size im SKU sowie Qty. Bei Fehlern Back to cart and edit wählen.",
+        "Unter Order Summary Product Price, Domestic Freight (China) und Total prüfen. Excluding international shipping bedeutet ohne internationalen Versand.",
+        "Bei Bedarf Custom Take Photo oder Leave Message verwenden. Bedingungen lesen; nur bei Zustimmung I have read and agree above markieren und mit Submit fortfahren. Aufnahme vor Bestellung und Zahlung."
+      ],
+      "nav": "Links {label} anklicken.",
+      "tab": "Oben {label} zum Filtern dieses Status anklicken.",
+      "search": "Artikelname oder Nummer in {label} eingeben, dann Search anklicken.",
+      "empty": "Echte Kontoseite ohne Bestellungen, Lagerartikel oder Pakete. Die Aufnahme zeigt die Navigation; Details und Aktionen erscheinen erst mit einem passenden Eintrag.",
+      "warehouse": "Bei leerem Warehouse zuerst den Einkauf unter Order prüfen. Nach Ankunft eigene QC prüfen. Die Shorts-Fotos darunter sind historische Katalogreferenzen.",
+      "submit": "Auf den Lagereingang der Shorts warten. Erst vorhandene versandfähige Artikel zum Paket auswählen. Im leeren Lager fehlen Adress-, Routen- und Versandformular.",
+      "payment": "Payment Pending filtert unbezahlte Pakete. Einen vorhandenen Eintrag zur Gebührenprüfung öffnen. Die Aufnahme zeigt weder Zahlungsformular noch erfolgte Zahlung.",
+      "dispatch": "All Parcel zeigt alle Pakete. Den passenden Eintrag zum Bearbeitungsstatus öffnen. Payment Pending bedeutet ausstehende Zahlung.",
+      "transit": "In transit zeigt Pakete unterwegs. Einen vorhandenen Eintrag zur Sendungsverfolgung öffnen. Eine leere Liste enthält keine Sendung.",
+      "received": "Received filtert zugestellte Pakete; dies ist kein Bestätigungsbutton. Ware vor Empfangsbestätigung oder Reklamation im Paketeintrag prüfen.",
+      "confirmTitle": "Confirm Order: Shorts und erste Kosten prüfen",
+      "entry": "Navigation auf der echten Seite",
+      "loginHelp": "Noch nicht angemeldet? Anmeldeschritte anzeigen"
+    }
+  },
+  "es": {
+    "zoom": "Abrir imagen completa",
+    "diagram": "Diagrama de Findsbook · no es una captura de una cuenta.",
+    "captions": [
+      "Ejemplo: abre la imagen o el nombre del producto.",
+      "Revisa la imagen y el QC de referencia antes de usar el botón de compra.",
+      "Crea tu cuenta y compra el artículo",
+      "Sigue la compra hasta el almacén",
+      "Abre las fotos de tu pedido en Warehouse y sigue estas comprobaciones.",
+      "Prepara el paquete y elige una ruta",
+      "Revisa y paga el envío internacional",
+      "Sigue, recibe y revisa el paquete"
+    ],
+    "site": [
+      "Ejemplo: abre la imagen o el nombre del producto.",
+      "Revisa la imagen y el QC de referencia antes de usar el botón de compra.",
+      "QC de referencia del catálogo; revisa las fotos de tu pedido al llegar.",
+      "Ejemplo de este sitio",
+      "Abrir este producto",
+      "Comprar este producto en USFans"
+    ],
+    "officialExample": "Ejemplo del proceso de compra en USFans. Importes, opciones y diseño pueden cambiar.",
+    "qcExample": "Ejemplo QC de nuestro catálogo, no fotos de tu pedido.",
+    "parcelFields": [
+      "Warehouse",
+      "Seleccionar artículos almacenados",
+      "Dirección de entrega",
+      "Destinatario, país y código postal",
+      "Ruta de envío",
+      "Revisar restricciones y embalaje"
+    ],
+    "sameItem": "El mismo ejemplo: pantalones cortos AMI",
+    "itemExample": "Ejemplo con un artículo del catálogo, no una captura de un pedido real. Comprueba opciones e importes actuales.",
+    "options": [
+      [
+        "Color / modelo",
+        "Compara la foto con la variante seleccionada"
+      ],
+      [
+        "Talla",
+        "Compara cintura y largo con la tabla del vendedor"
+      ],
+      [
+        "Cantidad",
+        "Comprueba cuántas unidades quieres"
+      ],
+      [
+        "Buy now",
+        "Elige la variante y revisa el pedido"
+      ]
+    ],
+    "itemPayment": [
+      [
+        "Importe del artículo",
+        "Comprueba el precio actual de estos pantalones y variante"
+      ],
+      [
+        "Envío nacional",
+        "Revisa el envío del vendedor al almacén"
+      ],
+      [
+        "Total a pagar",
+        "Revisa el desglose antes de pagar el artículo"
+      ]
+    ],
+    "realCapture": "Captura de la página real · 09-10-2026. Comprueba precio y existencias actuales antes de comprar.",
+    "clickSteps": [
+      "Pulsa una miniatura bajo Style. Aquí está seleccionado Black Love 005; elige tu variante.",
+      "Pulsa S, M, L o XL bajo Size. La S de la captura no es una recomendación de talla.",
+      "Ajusta Quantity con − / + y comprueba el número central.",
+      "Revisa Total y pulsa Buy now. Para añadir al carrito, usa Add To Cart a su derecha."
+    ],
+    "screenTitles": [
+      "Elige la variante bajo Style",
+      "Elige talla y cantidad; pulsa Buy now"
+    ],
+    "loginSteps": [
+      "Si no has iniciado sesión, pulsa Login arriba a la derecha para abrir esta pantalla.",
+      "Con cuenta: escribe correo y contraseña y pulsa Log In; también puedes usar Continue with Google.",
+      "Sin cuenta: usa el botón de registro de este sitio y vuelve a estos pantalones.",
+      "Tras iniciar sesión, revisa las opciones y pulsa Buy now. Comprueba artículo y gastos en la confirmación antes de seguir las indicaciones de pago."
+    ],
+    "siteSteps": [
+      "En el inicio, elige Pantalones, busca los pantalones cortos AMI y pulsa su foto o nombre.",
+      "En el detalle, revisa la imagen; baja hasta el QC de referencia y pulsa una foto para ampliarla.",
+      "Pulsa «{buy}» en el detalle para abrir el mismo artículo en USFans."
+    ],
+    "clickHeading": "Dónde pulsar en esta página",
+    "loginTitle": "Inicia sesión para continuar",
+    "enlarge": "Ampliar captura original",
+    "account": {
+      "confirm": [
+        "Revisa Product Details: pantalones, Style y Size del SKU y Qty. Para corregir, pulsa Back to cart and edit.",
+        "En Order Summary revisa Product Price, Domestic Freight (China) y Total. Excluding international shipping indica que falta el envío internacional.",
+        "Usa Custom Take Photo o Leave Message si lo necesitas. Lee las condiciones; marca I have read and agree above solo si aceptas y pulsa Submit para continuar. Captura anterior al envío del pedido y al pago."
+      ],
+      "nav": "Pulsa {label} en el menú izquierdo.",
+      "tab": "Pulsa la pestaña {label} para filtrar ese estado.",
+      "search": "Introduce nombre o número en {label} y pulsa Search.",
+      "empty": "Página real de una cuenta sin pedidos, artículos almacenados ni paquetes. Muestra la navegación; los detalles y botones requieren un registro existente.",
+      "warehouse": "Si Warehouse está vacío, revisa la compra en Order. Al llegar, comprueba tu propio QC. Las fotos inferiores son referencias históricas del catálogo.",
+      "submit": "Espera a que los pantalones lleguen a Warehouse. Selecciona artículos disponibles para crear el paquete. Un almacén vacío no muestra formulario de dirección, ruta o envío.",
+      "payment": "Payment Pending filtra paquetes pendientes de pago. Abre un registro para revisar sus gastos. Esta captura no contiene formulario de pago ni acredita un pago.",
+      "dispatch": "All Parcel muestra todos los paquetes. Abre el registro para comprobar el estado; Payment Pending indica un pago pendiente.",
+      "transit": "In transit muestra paquetes en transporte. Abre uno para consultar seguimiento. Una lista vacía no contiene un registro de transporte.",
+      "received": "Received filtra paquetes entregados; no confirma la recepción. Revisa la mercancía antes de confirmar o solicitar posventa en el registro del paquete.",
+      "confirmTitle": "Confirm Order: revisa los pantalones y los primeros gastos",
+      "entry": "Navegación de la página real",
+      "loginHelp": "¿Sin sesión? Ver pasos de acceso"
+    }
+  },
+  "fr": {
+    "zoom": "Ouvrir l’image en grand",
+    "diagram": "Schéma Findsbook · pas une capture de compte.",
+    "captions": [
+      "Exemple : ouvrez l’image ou le nom du produit.",
+      "Vérifiez l’image et le QC de référence avant le bouton d’achat.",
+      "Créer un compte et commander",
+      "Suivre l’achat jusqu’à l’entrepôt",
+      "Ouvrez les photos de votre commande dans Warehouse et vérifiez ces points.",
+      "Préparer le colis et choisir une ligne",
+      "Vérifier et payer le transport international",
+      "Suivre, recevoir et contrôler"
+    ],
+    "site": [
+      "Exemple : ouvrez l’image ou le nom du produit.",
+      "Vérifiez l’image et le QC de référence avant le bouton d’achat.",
+      "QC de référence du catalogue ; vérifiez ensuite vos propres photos.",
+      "Exemple de ce site",
+      "Ouvrir cet article",
+      "Acheter cet article sur USFans"
+    ],
+    "officialExample": "Exemple du parcours d’achat USFans. Montants, options et présentation peuvent changer.",
+    "qcExample": "QC de référence de notre catalogue, pas des photos de votre commande.",
+    "parcelFields": [
+      "Warehouse",
+      "Choisir les articles stockés",
+      "Adresse de livraison",
+      "Destinataire, pays et code postal",
+      "Ligne de transport",
+      "Vérifier restrictions et emballage"
+    ],
+    "sameItem": "Le même exemple : le short AMI",
+    "itemExample": "Illustration avec notre article de catalogue, pas une capture de commande réelle. Vérifiez les options et montants actuels.",
+    "options": [
+      [
+        "Couleur / modèle",
+        "Comparez la photo du short à la variante choisie"
+      ],
+      [
+        "Taille",
+        "Comparez taille et longueur au tableau du vendeur"
+      ],
+      [
+        "Quantité",
+        "Vérifiez le nombre d’articles souhaité"
+      ],
+      [
+        "Buy now",
+        "Choisissez la variante puis vérifiez la commande"
+      ]
+    ],
+    "itemPayment": [
+      [
+        "Montant de l’article",
+        "Vérifiez le prix actuel du short et de la variante"
+      ],
+      [
+        "Livraison intérieure",
+        "Vérifiez le transport du vendeur à l’entrepôt"
+      ],
+      [
+        "Total à payer",
+        "Vérifiez le détail avant de payer l’article"
+      ]
+    ],
+    "realCapture": "Capture de la page réelle · 09/10/2026. Vérifiez prix et stock actuels avant l’achat.",
+    "clickSteps": [
+      "Cliquez sur une vignette sous Style. Black Love 005 est sélectionné ici ; choisissez votre variante.",
+      "Cliquez sur S, M, L ou XL sous Size. Le S affiché n’est pas un conseil de taille.",
+      "Réglez Quantity avec − / + et vérifiez le chiffre central.",
+      "Vérifiez Total puis cliquez sur Buy now. Pour le panier, utilisez Add To Cart à droite."
+    ],
+    "screenTitles": [
+      "Choisir la variante sous Style",
+      "Choisir taille et quantité, puis Buy now"
+    ],
+    "loginSteps": [
+      "Sans connexion, cliquez sur Login en haut à droite pour ouvrir cet écran.",
+      "Avec un compte : saisissez e-mail et mot de passe, puis Log In ; Continue with Google est aussi disponible.",
+      "Sans compte : utilisez le bouton d’inscription de ce site puis revenez à ce short.",
+      "Après connexion, vérifiez les options puis cliquez sur Buy now. Vérifiez article et frais sur la confirmation avant de suivre les instructions de paiement."
+    ],
+    "siteSteps": [
+      "Sur l’accueil, choisissez Pantalons, trouvez le short AMI et cliquez sur son image ou son nom.",
+      "Sur la fiche, vérifiez l’image ; descendez au QC de référence et cliquez sur une photo pour l’agrandir.",
+      "Cliquez sur « {buy} » dans la fiche pour ouvrir le même short sur USFans."
+    ],
+    "clickHeading": "Où cliquer sur cette page",
+    "loginTitle": "Se connecter pour continuer",
+    "enlarge": "Agrandir la capture originale",
+    "account": {
+      "confirm": [
+        "Vérifiez Product Details : short, Style et Size du SKU, puis Qty. Pour corriger, cliquez sur Back to cart and edit.",
+        "Dans Order Summary, vérifiez Product Price, Domestic Freight (China) et Total. Excluding international shipping signifie hors transport international.",
+        "Utilisez Custom Take Photo ou Leave Message au besoin. Lisez les conditions ; cochez I have read and agree above seulement si vous acceptez, puis Submit. Capture avant validation et paiement."
+      ],
+      "nav": "Cliquez sur {label} dans le menu gauche.",
+      "tab": "Cliquez sur l’onglet {label} pour filtrer ce statut.",
+      "search": "Saisissez le nom ou numéro dans {label}, puis cliquez sur Search.",
+      "empty": "Page réelle d’un compte sans commande, article stocké ni colis. Elle montre la navigation ; détails et actions nécessitent un enregistrement existant.",
+      "warehouse": "Si Warehouse est vide, vérifiez l’achat dans Order. À réception, contrôlez votre propre QC. Les photos ci-dessous sont des références historiques du catalogue.",
+      "submit": "Attendez l’arrivée du short dans Warehouse. Sélectionnez ensuite les articles disponibles pour préparer le colis. Un entrepôt vide n’affiche pas le formulaire d’adresse, de ligne ou d’envoi.",
+      "payment": "Payment Pending filtre les colis à payer. Ouvrez un enregistrement pour vérifier les frais. Cette capture ne montre ni formulaire de paiement ni paiement effectué.",
+      "dispatch": "All Parcel affiche tous les colis. Ouvrez le bon enregistrement pour suivre le traitement ; Payment Pending indique un paiement restant.",
+      "transit": "In transit affiche les colis en transport. Ouvrez un colis pour consulter son suivi. Une liste vide ne contient aucun suivi consultable.",
+      "received": "Received filtre les colis livrés ; ce n’est pas un bouton de confirmation. Vérifiez les articles avant confirmation ou demande après-vente dans le colis.",
+      "confirmTitle": "Confirm Order : vérifier le short et les premiers frais",
+      "entry": "Navigation sur la page réelle",
+      "loginHelp": "Pas connecté ? Voir les étapes de connexion"
+    }
+  },
+  "pt": {
+    "zoom": "Abrir imagem completa",
+    "diagram": "Diagrama do Findsbook · não é captura de uma conta.",
+    "captions": [
+      "Exemplo: abra a imagem ou o nome do produto.",
+      "Confira a imagem e o QC de referência antes de usar o botão de compra.",
+      "Crie sua conta e faça o pedido",
+      "Acompanhe a compra até o armazém",
+      "Abra as fotos do seu pedido em Warehouse e confira estes pontos.",
+      "Monte o pacote e escolha uma rota",
+      "Revise e pague o frete internacional",
+      "Acompanhe, receba e confira"
+    ],
+    "site": [
+      "Exemplo: abra a imagem ou o nome do produto.",
+      "Confira a imagem e o QC de referência antes de usar o botão de compra.",
+      "QC de referência do catálogo; confira as fotos do seu pedido ao chegar.",
+      "Exemplo deste site",
+      "Abrir este produto",
+      "Comprar este produto na USFans"
+    ],
+    "officialExample": "Exemplo do processo de compra na USFans. Valores, opções e layout podem mudar.",
+    "qcExample": "QC de referência do nosso catálogo, não fotos do seu pedido.",
+    "parcelFields": [
+      "Warehouse",
+      "Selecionar produtos armazenados",
+      "Endereço de entrega",
+      "Destinatário, país e código postal",
+      "Rota de envio",
+      "Conferir restrições e embalagem"
+    ],
+    "sameItem": "O mesmo exemplo: calções AMI",
+    "itemExample": "Ilustração com o nosso produto do catálogo, não uma captura de um pedido real. Confira opções e valores atuais.",
+    "options": [
+      [
+        "Cor / modelo",
+        "Compare a foto dos calções com a opção selecionada"
+      ],
+      [
+        "Tamanho",
+        "Compare cintura e comprimento com a tabela do vendedor"
+      ],
+      [
+        "Quantidade",
+        "Confira quantas unidades pretende comprar"
+      ],
+      [
+        "Buy now",
+        "Escolha a opção e confira o pedido"
+      ]
+    ],
+    "itemPayment": [
+      [
+        "Valor do produto",
+        "Confira o preço atual dos calções e da opção escolhida"
+      ],
+      [
+        "Frete doméstico",
+        "Confira o envio do vendedor ao armazém"
+      ],
+      [
+        "Total a pagar",
+        "Confira os valores antes de pagar o produto"
+      ]
+    ],
+    "realCapture": "Captura da página real · 09/10/2026. Confira preços e estoque atuais antes de comprar.",
+    "clickSteps": [
+      "Clique numa miniatura em Style. Black Love 005 está selecionado; escolha a opção desejada.",
+      "Clique em S, M, L ou XL em Size. O S mostrado não é uma recomendação de tamanho.",
+      "Ajuste Quantity com − / + e confira o número central.",
+      "Confira Total e clique no botão laranja Buy now. Para adicionar ao carrinho, use Add To Cart à direita."
+    ],
+    "screenTitles": [
+      "Escolha a opção em Style",
+      "Escolha tamanho e quantidade; clique em Buy now"
+    ],
+    "loginSteps": [
+      "Sem sessão iniciada, clique em Login no canto superior direito para abrir esta tela.",
+      "Com conta: preencha email e senha e clique em Log In; também pode usar Continue with Google.",
+      "Sem conta: use o botão de cadastro deste site e depois volte aos calções.",
+      "Após entrar, confira as opções e clique em Buy now. Confira produto e taxas na confirmação antes de seguir as instruções de pagamento."
+    ],
+    "siteSteps": [
+      "Na página inicial, escolha Calças, encontre os calções AMI e clique na foto ou no nome.",
+      "No detalhe, confira a imagem; desça até o QC de referência e clique na foto para ampliar.",
+      "Clique em “{buy}” no detalhe para abrir os mesmos calções na USFans."
+    ],
+    "clickHeading": "Onde clicar nesta página",
+    "loginTitle": "Entre na conta para continuar",
+    "enlarge": "Ampliar captura original",
+    "account": {
+      "confirm": [
+        "Confira Product Details: calções, Style e Size no SKU e Qty. Para corrigir, clique em Back to cart and edit.",
+        "Em Order Summary, confira Product Price, Domestic Freight (China) e Total. Excluding international shipping significa que falta o frete internacional.",
+        "Use Custom Take Photo ou Leave Message se precisar. Leia os termos; marque I have read and agree above apenas se concordar e clique em Submit. Captura anterior ao envio do pedido e ao pagamento."
+      ],
+      "nav": "Clique em {label} no menu esquerdo.",
+      "tab": "Clique na aba {label} para filtrar esse estado.",
+      "search": "Digite nome ou número em {label} e clique em Search.",
+      "empty": "Página real de uma conta sem pedidos, produtos armazenados ou pacotes. Mostra a navegação; detalhes e ações exigem um registro existente.",
+      "warehouse": "Se Warehouse estiver vazio, confira a compra em Order. Após a chegada, confira o seu próprio QC. As fotos abaixo são referências históricas do catálogo.",
+      "submit": "Aguarde a chegada dos calções ao Warehouse. Selecione os produtos disponíveis para preparar o pacote. Um armazém vazio não mostra formulário de endereço, rota ou envio.",
+      "payment": "Payment Pending filtra pacotes não pagos. Abra um registro para conferir as taxas. Esta captura não mostra formulário de pagamento nem comprova pagamento.",
+      "dispatch": "All Parcel mostra todos os pacotes. Abra o registro para conferir o processamento; Payment Pending indica pagamento pendente.",
+      "transit": "In transit mostra pacotes em transporte. Abra um registro para consultar o rastreamento. Uma lista vazia não tem rastreamento disponível.",
+      "received": "Received filtra pacotes entregues; não é um botão de confirmação. Confira os produtos antes de confirmar recebimento ou pedir pós-venda no registro do pacote.",
+      "confirmTitle": "Confirm Order: confira os calções e os primeiros custos",
+      "entry": "Navegação na página real",
+      "loginHelp": "Sem sessão iniciada? Ver como entrar"
+    }
+  },
+  "ar": {
+    "enlarge": "تكبير الصورة",
+    "site": [
+      "",
+      "",
+      "",
+      "الكتالوج",
+      "التفاصيل",
+      "فتح المنتج في USFans"
+    ],
+    "sameItem": "AMI — شورت",
+    "realCapture": "USFans · 2026-10-09 · أسعار الكتالوج استرشادية وقد تضاف تكاليف الشحن ورسوم أخرى.",
+    "qcExample": "صور فحص سابقة وليست صور طلبك. قد تختلف الألوان والخيارات.",
+    "screenTitles": [
+      "اختر النوع والمقاس · Style",
+      "Size · Quantity · Buy now"
+    ],
+    "clickSteps": [
+      "Style · قس الخصر والوركين والطول وتحقق من المرونة والكمية وشروط الإرجاع.",
+      "Size · القياسات واللون والكمية والمحتويات والسعر الحالي وتوفر المخزون.",
+      "Quantity · − / +",
+      "Total · Buy now · أسعار الكتالوج استرشادية وقد تضاف تكاليف الشحن ورسوم أخرى."
+    ],
+    "loginTitle": "Login · USFans",
+    "loginSteps": [
+      "استخدم زر التسجيل برمز T2JMMC. تتم إدارة الحساب والطلبات والمدفوعات لدى USFans.",
+      "سجل في USFans للتحقق من المخزون والشحن والتكلفة النهائية."
+    ],
+    "siteSteps": [
+      "من فئة السراويل افتح صورة شورت AMI أو اسمه. راجع الصور وفحص QC المرجعي ثم استخدم زر الشراء.",
+      "صور فحص سابقة وليست صور طلبك. قد تختلف الألوان والخيارات.",
+      "فتح المنتج في USFans"
+    ],
+    "account": {
+      "confirm": [
+        "في Confirm Order تحقق من SKU والكمية. يعرض Order Summary بندي Product Price وDomestic Freight (China). اقرأ الشروط قبل الموافقة وSubmit؛ الشحن الدولي غير مشمول.",
+        "لا. قد تضاف أجور الشحن داخل الصين والشحن الدولي ورسوم أخرى مستحقة.",
+        "القياسات واللون والكمية والمحتويات والسعر الحالي وتوفر المخزون."
+      ],
+      "confirmTitle": "راجع الطلب والدفع",
+      "loginHelp": "Login · USFans",
+      "nav": "USFans → {label}",
+      "tab": "{label} → الكتالوج",
+      "search": "{label} → Search",
+      "empty": "صفحة حساب حقيقية بلا طلبات أو منتجات أو طرود؛ لا تظهر التفاصيل والإجراءات إلا عند وجود سجل مناسب.",
+      "entry": "USFans",
+      "warehouse": "بعد وصول المنتج افتح Warehouse وصور طلبك الخاص. صور الكتالوج السابقة لا تغني عن هذا الفحص.",
+      "submit": "حدد منتجات المستودع وتحقق من المستلم والبلد والرمز البريدي والمسار والتغليف. لا يظهر نموذج الإرسال عندما يكون المستودع فارغًا.",
+      "payment": "في Parcel اختر Payment Pending وافتح الطرد. تحقق من الرسوم والوزن والأبعاد قبل الدفع؛ قد تتغير التكلفة بعد التغليف.",
+      "dispatch": "من All Parcel افتح الطرد الصحيح وراجع حالته. انتظار الدفع لا يعني أن الطرد أُرسل.",
+      "transit": "اختر In transit وافتح تتبع الطرد. القائمة الفارغة لا تحتوي على شحنات لتتبعها.",
+      "received": "افحص المحتويات قبل تأكيد الاستلام. Received فلتر للحالة وليس زر تأكيد. احتفظ بالصور والتغليف عند وجود مشكلة."
+    }
+  },
+  "cs": {
+    "enlarge": "Zvětšit obrázek",
+    "site": [
+      "",
+      "",
+      "",
+      "Katalog",
+      "Podrobnosti",
+      "Otevřít produkt na USFans"
+    ],
+    "sameItem": "AMI — Šortky",
+    "realCapture": "USFans · 2026-10-09 · Katalogové ceny jsou orientační; doprava a další poplatky mohou být navíc.",
+    "qcExample": "Historické QC fotografie, nikoli vaše objednávka. Barvy a varianty se mohou lišit.",
+    "screenTitles": [
+      "Vyberte variantu a velikost · Style",
+      "Size · Quantity · Buy now"
+    ],
+    "clickSteps": [
+      "Style · Změřte pas, boky a délku; ověřte pružnost, počet a možnosti vrácení.",
+      "Size · Rozměry, barvu, počet kusů, obsah balení a aktuální cenu a dostupnost.",
+      "Quantity · − / +",
+      "Total · Buy now · Katalogové ceny jsou orientační; doprava a další poplatky mohou být navíc."
+    ],
+    "loginTitle": "Login · USFans",
+    "loginSteps": [
+      "Použijte tlačítko registrace s kódem T2JMMC. Účet, objednávky a platby spravuje USFans.",
+      "Registrujte se u USFans pro ověření skladu, dopravy a konečné ceny."
+    ],
+    "siteSteps": [
+      "V kategorii kalhot otevřete AMI šortky kliknutím na obrázek nebo název. Zkontrolujte snímky a referenční QC a použijte nákupní tlačítko.",
+      "Historické QC fotografie, nikoli vaše objednávka. Barvy a varianty se mohou lišit.",
+      "Otevřít produkt na USFans"
+    ],
+    "account": {
+      "confirm": [
+        "V Confirm Order ověřte SKU a počet. Order Summary uvádí Product Price a Domestic Freight (China). Před souhlasem a Submit si přečtěte podmínky; mezinárodní doprava není zahrnuta.",
+        "Ne. Připočítává se případná doprava v Číně, mezinárodní přeprava a další poplatky.",
+        "Rozměry, barvu, počet kusů, obsah balení a aktuální cenu a dostupnost."
+      ],
+      "confirmTitle": "Potvrďte objednávku a platbu",
+      "loginHelp": "Login · USFans",
+      "nav": "USFans → {label}",
+      "tab": "{label} → Katalog",
+      "search": "{label} → Search",
+      "empty": "Skutečná stránka účtu bez objednávek, zboží nebo balíků; podrobnosti se zobrazí až pro existující záznam.",
+      "entry": "USFans",
+      "warehouse": "Po příjmu zboží otevřete Warehouse a fotografie vlastní objednávky. Historické snímky tuto kontrolu nenahrazují.",
+      "submit": "Vyberte skladové položky, ověřte příjemce, zemi, PSČ, trasu a balení. Prázdný sklad nezobrazí formulář odeslání.",
+      "payment": "V Parcel zvolte Payment Pending a otevřete balík. Před platbou ověřte cenu, váhu a rozměry; balení může cenu změnit.",
+      "dispatch": "V All Parcel otevřete správný balík a ověřte stav. Čekající platba neznamená odeslání.",
+      "transit": "Zvolte In transit a otevřete sledování balíku. Prázdný seznam neobsahuje zásilky.",
+      "received": "Před potvrzením ověřte obsah. Received je filtr, nikoli potvrzovací tlačítko. Pro reklamaci uchovejte fotografie a obal."
+    }
+  },
+  "da": {
+    "enlarge": "Forstør billede",
+    "site": [
+      "",
+      "",
+      "",
+      "Katalog",
+      "Detaljer",
+      "Åbn produkt på USFans"
+    ],
+    "sameItem": "AMI — Shorts",
+    "realCapture": "USFans · 2026-10-09 · Katalogpriser er vejledende; fragt og andre gebyrer kan tilkomme.",
+    "qcExample": "Historiske QC-billeder, ikke din ordre. Farver og modeller kan variere.",
+    "screenTitles": [
+      "Vælg variant og størrelse · Style",
+      "Size · Quantity · Buy now"
+    ],
+    "clickSteps": [
+      "Style · Mål talje, hofter og længde; kontrollér elasticitet, antal og returvilkår.",
+      "Size · Sammenlign mål, farve, antal, indhold, aktuel pris og lagerstatus.",
+      "Quantity · − / +",
+      "Total · Buy now · Katalogpriser er vejledende; fragt og andre gebyrer kan tilkomme."
+    ],
+    "loginTitle": "Login · USFans",
+    "loginSteps": [
+      "Brug registreringsknappen med T2JMMC. Konto, ordre og betaling håndteres af USFans.",
+      "Tilmeld dig USFans for lagerstatus, fragt og samlet pris."
+    ],
+    "siteSteps": [
+      "Vælg bukser og åbn AMI-shorts via foto eller navn. Se billeder og reference-QC, og brug købsknappen.",
+      "Historiske QC-billeder, ikke din ordre. Farver og modeller kan variere.",
+      "Åbn produkt på USFans"
+    ],
+    "account": {
+      "confirm": [
+        "Kontrollér SKU og antal i Confirm Order. Order Summary viser Product Price og Domestic Freight (China). Læs vilkår før accept og Submit; international fragt er ikke med.",
+        "Nej. Indenrigsfragt i Kina, international fragt og andre gebyrer kan komme oveni.",
+        "Sammenlign mål, farve, antal, indhold, aktuel pris og lagerstatus."
+      ],
+      "confirmTitle": "Bekræft ordre og betaling",
+      "loginHelp": "Login · USFans",
+      "nav": "USFans → {label}",
+      "tab": "{label} → Katalog",
+      "search": "{label} → Search",
+      "empty": "Ægte kontoside uden ordrer, lagervarer eller pakker; detaljer vises først ved en eksisterende registrering.",
+      "entry": "USFans",
+      "warehouse": "Åbn Warehouse efter ankomst og se billederne af din ordre. Historiske katalogbilleder erstatter ikke denne kontrol.",
+      "submit": "Vælg lagervarer og kontrollér modtager, land, postnummer, rute og emballage. Et tomt lager viser ingen fragtformular.",
+      "payment": "Vælg Payment Pending i Parcel, åbn pakken og kontrollér pris, vægt og mål før betaling. Pakning kan ændre prisen.",
+      "dispatch": "Åbn den rigtige pakke i All Parcel og læs status. Afventende betaling betyder ikke, at pakken er sendt.",
+      "transit": "Vælg In transit og åbn pakkens sporing. En tom liste indeholder ingen forsendelser.",
+      "received": "Kontrollér indhold før kvittering. Received er et filter, ikke en bekræftelsesknap. Gem billeder og emballage ved problemer."
+    }
+  },
+  "el": {
+    "enlarge": "Μεγέθυνση εικόνας",
+    "site": [
+      "",
+      "",
+      "",
+      "Κατάλογος",
+      "Λεπτομέρειες",
+      "Άνοιγμα προϊόντος στο USFans"
+    ],
+    "sameItem": "AMI — Σορτς",
+    "realCapture": "USFans · 2026-10-09 · Οι τιμές είναι ενδεικτικές· μεταφορικά και άλλες χρεώσεις μπορεί να προστεθούν.",
+    "qcExample": "Παλαιότερες φωτογραφίες QC, όχι της παραγγελίας σας. Χρώματα και εκδόσεις μπορεί να διαφέρουν.",
+    "screenTitles": [
+      "Επιλέξτε έκδοση και μέγεθος · Style",
+      "Size · Quantity · Buy now"
+    ],
+    "clickSteps": [
+      "Style · Μετρήστε μέση, γοφούς και μήκος· ελέγξτε ελαστικότητα, ποσότητα και επιστροφές.",
+      "Size · Διαστάσεις, χρώμα, ποσότητα, περιεχόμενο, τρέχουσα τιμή και διαθεσιμότητα.",
+      "Quantity · − / +",
+      "Total · Buy now · Οι τιμές είναι ενδεικτικές· μεταφορικά και άλλες χρεώσεις μπορεί να προστεθούν."
+    ],
+    "loginTitle": "Login · USFans",
+    "loginSteps": [
+      "Χρησιμοποιήστε την εγγραφή με T2JMMC. Το USFans διαχειρίζεται λογαριασμό, παραγγελίες και πληρωμές.",
+      "Εγγραφείτε στο USFans για διαθεσιμότητα, αποστολή και τελικό κόστος."
+    ],
+    "siteSteps": [
+      "Στην κατηγορία παντελονιών ανοίξτε το σορτς AMI από εικόνα ή όνομα. Ελέγξτε φωτογραφίες και QC αναφοράς, έπειτα το κουμπί αγοράς.",
+      "Παλαιότερες φωτογραφίες QC, όχι της παραγγελίας σας. Χρώματα και εκδόσεις μπορεί να διαφέρουν.",
+      "Άνοιγμα προϊόντος στο USFans"
+    ],
+    "account": {
+      "confirm": [
+        "Στο Confirm Order ελέγξτε SKU και ποσότητα. Το Order Summary δείχνει Product Price και Domestic Freight (China). Διαβάστε όρους πριν αποδοχή και Submit· εξαιρείται η διεθνής αποστολή.",
+        "Όχι. Εσωτερική μεταφορά στην Κίνα, διεθνής αποστολή και άλλες χρεώσεις μπορεί να προστεθούν.",
+        "Διαστάσεις, χρώμα, ποσότητα, περιεχόμενο, τρέχουσα τιμή και διαθεσιμότητα."
+      ],
+      "confirmTitle": "Επιβεβαιώστε παραγγελία και πληρωμή",
+      "loginHelp": "Login · USFans",
+      "nav": "USFans → {label}",
+      "tab": "{label} → Κατάλογος",
+      "search": "{label} → Search",
+      "empty": "Πραγματική σελίδα λογαριασμού χωρίς παραγγελίες, προϊόντα ή δέματα· οι λεπτομέρειες εμφανίζονται μόνο για υπάρχουσα εγγραφή.",
+      "entry": "USFans",
+      "warehouse": "Μετά την άφιξη ανοίξτε Warehouse και φωτογραφίες της δικής σας παραγγελίας. Οι παλαιότερες εικόνες δεν αντικαθιστούν τον έλεγχο.",
+      "submit": "Επιλέξτε προϊόντα αποθήκης και ελέγξτε παραλήπτη, χώρα, ταχυδρομικό κώδικα, διαδρομή και συσκευασία. Η άδεια αποθήκη δεν εμφανίζει φόρμα αποστολής.",
+      "payment": "Στο Parcel επιλέξτε Payment Pending και ανοίξτε το δέμα. Ελέγξτε κόστος, βάρος και διαστάσεις πριν πληρώσετε· η συσκευασία μπορεί να αλλάξει την τιμή.",
+      "dispatch": "Στο All Parcel ανοίξτε το σωστό δέμα και ελέγξτε κατάσταση. Εκκρεμής πληρωμή δεν σημαίνει αποστολή.",
+      "transit": "Επιλέξτε In transit και ανοίξτε την παρακολούθηση. Άδεια λίστα δεν περιέχει αποστολές.",
+      "received": "Ελέγξτε περιεχόμενο πριν επιβεβαιώσετε παραλαβή. Το Received είναι φίλτρο, όχι κουμπί επιβεβαίωσης. Κρατήστε φωτογραφίες και συσκευασία για προβλήματα."
+    }
+  },
+  "fi": {
+    "enlarge": "Suurenna kuva",
+    "site": [
+      "",
+      "",
+      "",
+      "Tuoteluettelo",
+      "Tiedot",
+      "Avaa tuote USFansissa"
+    ],
+    "sameItem": "AMI — Shortsit",
+    "realCapture": "USFans · 2026-10-09 · Luettelohinnat ovat suuntaa antavia; toimitus ja muut kulut voivat tulla lisäksi.",
+    "qcExample": "Historiallisia QC-kuvia, ei omasta tilauksestasi. Väri ja malli voivat poiketa.",
+    "screenTitles": [
+      "Valitse vaihtoehto ja koko · Style",
+      "Size · Quantity · Buy now"
+    ],
+    "clickSteps": [
+      "Style · Mittaa vyötärö, lantio ja pituus; tarkista jousto, määrä ja palautusehdot.",
+      "Size · Vertaa mittoja, väriä, määrää, sisältöä sekä ajantasaista hintaa ja saatavuutta.",
+      "Quantity · − / +",
+      "Total · Buy now · Luettelohinnat ovat suuntaa antavia; toimitus ja muut kulut voivat tulla lisäksi."
+    ],
+    "loginTitle": "Login · USFans",
+    "loginSteps": [
+      "Käytä rekisteröintipainiketta ja koodia T2JMMC. USFans hoitaa tilin, tilauksen ja maksun.",
+      "Rekisteröidy USFansiin tarkistaaksesi saatavuuden, toimituksen ja kokonaishinnan."
+    ],
+    "siteSteps": [
+      "Valitse housukategoria ja avaa AMI-shortsit kuvasta tai nimestä. Tarkista kuvat ja viite-QC ja käytä ostopainiketta.",
+      "Historiallisia QC-kuvia, ei omasta tilauksestasi. Väri ja malli voivat poiketa.",
+      "Avaa tuote USFansissa"
+    ],
+    "account": {
+      "confirm": [
+        "Tarkista SKU ja määrä Confirm Order -sivulla. Order Summary näyttää Product Price ja Domestic Freight (China). Lue ehdot ennen hyväksymistä ja Submit-painiketta; kansainvälinen toimitus ei sisälly.",
+        "Ei. Kiinan sisäinen toimitus, kansainvälinen kuljetus ja muut maksut voivat tulla lisäksi.",
+        "Vertaa mittoja, väriä, määrää, sisältöä sekä ajantasaista hintaa ja saatavuutta."
+      ],
+      "confirmTitle": "Vahvista tilaus ja maksu",
+      "loginHelp": "Login · USFans",
+      "nav": "USFans → {label}",
+      "tab": "{label} → Tuoteluettelo",
+      "search": "{label} → Search",
+      "empty": "Aito tilisivu ilman tilauksia, varastotuotteita tai paketteja; tiedot näkyvät vasta olemassa olevalle tietueelle.",
+      "entry": "USFans",
+      "warehouse": "Avaa Warehouse tuotteen saavuttua ja tarkista oman tilauksesi kuvat. Luettelon historialliset kuvat eivät korvaa tarkistusta.",
+      "submit": "Valitse varastotuotteet ja tarkista vastaanottaja, maa, postinumero, reitti ja pakkaus. Tyhjä varasto ei näytä lähetyslomaketta.",
+      "payment": "Valitse Parcel-sivulla Payment Pending ja avaa paketti. Tarkista hinta, paino ja mitat ennen maksua; pakkaaminen voi muuttaa hintaa.",
+      "dispatch": "Avaa oikea paketti All Parcel -näkymässä ja tarkista tila. Odottava maksu ei tarkoita lähetettyä pakettia.",
+      "transit": "Valitse In transit ja avaa paketin seuranta. Tyhjässä luettelossa ei ole seurattavia lähetyksiä.",
+      "received": "Tarkista sisältö ennen vastaanoton vahvistamista. Received on suodatin, ei vahvistuspainike. Säilytä kuvat ja pakkaus ongelmatilanteessa."
+    }
+  },
+  "hu": {
+    "enlarge": "Kép nagyítása",
+    "site": [
+      "",
+      "",
+      "",
+      "Katalógus",
+      "Részletek",
+      "Termék megnyitása a USFans oldalon"
+    ],
+    "sameItem": "AMI — Rövidnadrág",
+    "realCapture": "USFans · 2026-10-09 · A katalógusár tájékoztató; szállítás és más költségek hozzáadódhatnak.",
+    "qcExample": "Korábbi QC-képek, nem a saját rendelésed. A szín és változat eltérhet.",
+    "screenTitles": [
+      "Válassz változatot és méretet · Style",
+      "Size · Quantity · Buy now"
+    ],
+    "clickSteps": [
+      "Style · Mérj derekat, csípőt és hosszt; ellenőrizd a rugalmasságot, mennyiséget és visszaküldést.",
+      "Size · Méretek, szín, mennyiség, csomagtartalom, aktuális ár és készlet.",
+      "Quantity · − / +",
+      "Total · Buy now · A katalógusár tájékoztató; szállítás és más költségek hozzáadódhatnak."
+    ],
+    "loginTitle": "Login · USFans",
+    "loginSteps": [
+      "Használd a regisztrációs gombot a T2JMMC kóddal. A fiókot, rendelést és fizetést a USFans kezeli.",
+      "Regisztrálj a USFans oldalon a készlet, szállítás és teljes ár ellenőrzéséhez."
+    ],
+    "siteSteps": [
+      "A nadrágok között nyisd meg az AMI rövidnadrág képét vagy nevét. Nézd meg a képeket és a referencia-QC-t, majd használd a vásárlási gombot.",
+      "Korábbi QC-képek, nem a saját rendelésed. A szín és változat eltérhet.",
+      "Termék megnyitása a USFans oldalon"
+    ],
+    "account": {
+      "confirm": [
+        "A Confirm Order oldalon ellenőrizd az SKU-t és darabszámot. Az Order Summary tartalmazza a Product Price és Domestic Freight (China) tételeket. Olvasd el a feltételeket a jóváhagyás és Submit előtt; nemzetközi szállítás nincs benne.",
+        "Nem. Kínai belföldi és nemzetközi szállítás, valamint más díjak is felmerülhetnek.",
+        "Méretek, szín, mennyiség, csomagtartalom, aktuális ár és készlet."
+      ],
+      "confirmTitle": "Ellenőrizd a rendelést és fizetést",
+      "loginHelp": "Login · USFans",
+      "nav": "USFans → {label}",
+      "tab": "{label} → Katalógus",
+      "search": "{label} → Search",
+      "empty": "Valódi fiókoldal rendelések, raktári tételek vagy csomagok nélkül; részletek csak létező bejegyzésnél jelennek meg.",
+      "entry": "USFans",
+      "warehouse": "Beérkezés után nyisd meg a Warehouse oldalt és a saját rendelés képeit. Korábbi képek ezt nem helyettesítik.",
+      "submit": "Válaszd ki a raktári tételeket, ellenőrizd a címzettet, országot, irányítószámot, útvonalat és csomagolást. Üres raktárnál nincs feladási űrlap.",
+      "payment": "A Parcel oldalon válaszd a Payment Pending szűrőt és nyisd meg a csomagot. Fizetés előtt ellenőrizd az árat, tömeget és méreteket; csomagolás után változhatnak.",
+      "dispatch": "Az All Parcel alatt nyisd meg a megfelelő csomagot és nézd az állapotot. A fizetésre várás nem jelent feladást.",
+      "transit": "Válaszd az In transit szűrőt, majd a csomagkövetést. Üres listában nincs követhető csomag.",
+      "received": "Átvételi igazolás előtt ellenőrizd a tartalmat. A Received szűrő, nem igazoló gomb. Problémánál őrizd meg a képeket és csomagolást."
+    }
+  },
+  "it": {
+    "enlarge": "Ingrandisci immagine",
+    "site": [
+      "",
+      "",
+      "",
+      "Catalogo",
+      "Dettagli",
+      "Apri prodotto su USFans"
+    ],
+    "sameItem": "AMI — Pantaloncini",
+    "realCapture": "USFans · 2026-10-09 · Prezzi indicativi del catalogo; spedizione e altri costi possono aggiungersi.",
+    "qcExample": "Foto QC storiche, non del tuo ordine. Colori e varianti possono differire.",
+    "screenTitles": [
+      "Scegli le opzioni · Style",
+      "Size · Quantity · Buy now"
+    ],
+    "clickSteps": [
+      "Style · Misura vita, fianchi e lunghezza; verifica elasticità, quantità e condizioni di reso.",
+      "Size · Confronta misure, colore, quantità e contenuto della confezione; verifica prezzo e disponibilità aggiornati.",
+      "Quantity · − / +",
+      "Total · Buy now · Prezzi indicativi del catalogo; spedizione e altri costi possono aggiungersi."
+    ],
+    "loginTitle": "Login · USFans",
+    "loginSteps": [
+      "Usa il pulsante di registrazione con codice T2JMMC. Registrazione, ordini e pagamenti avvengono su USFans.",
+      "Registrati su USFans per verificare disponibilità, trasporto e costo finale."
+    ],
+    "siteSteps": [
+      "Nel catalogo scegli la categoria pantaloni e apri la foto o il nome dei pantaloncini AMI. Controlla immagini e QC; poi premi il pulsante di acquisto.",
+      "Foto QC storiche, non del tuo ordine. Colori e varianti possono differire.",
+      "Apri prodotto su USFans"
+    ],
+    "account": {
+      "confirm": [
+        "In Confirm Order verifica SKU, taglia e quantità. Order Summary separa Product Price e Domestic Freight (China). Leggi le condizioni prima di accettarle e premere Submit; la spedizione internazionale è esclusa.",
+        "No. Al prezzo si possono aggiungere trasporto interno cinese, spedizione internazionale e altri oneri applicabili.",
+        "Confronta misure, colore, quantità e contenuto della confezione; verifica prezzo e disponibilità aggiornati."
+      ],
+      "confirmTitle": "Conferma l’ordine e il pagamento",
+      "loginHelp": "Login · USFans",
+      "nav": "USFans → {label}",
+      "tab": "{label} → Catalogo",
+      "search": "{label} → Search",
+      "empty": "Pagina reale senza ordini, articoli o pacchi: i dettagli compaiono solo con una registrazione esistente.",
+      "entry": "USFans",
+      "warehouse": "Apri Warehouse. Dopo l’arrivo cerca il tuo articolo e controlla le foto dell’ordine. Le immagini storiche del catalogo non sostituiscono questo controllo.",
+      "submit": "In Warehouse seleziona gli articoli disponibili, verifica destinatario, paese e codice postale e confronta rotte e imballaggio. Il modulo non appare a magazzino vuoto.",
+      "payment": "In Parcel scegli Payment Pending, apri il pacco e verifica preventivo, peso e dimensioni prima di pagare. Il costo finale può variare dopo l’imballaggio.",
+      "dispatch": "In Parcel usa All Parcel e apri la registrazione corretta. Controlla lo stato di lavorazione; un pagamento ancora richiesto non equivale a una spedizione avvenuta.",
+      "transit": "Scegli In transit e apri il pacco per leggere gli aggiornamenti. Una lista vuota non contiene spedizioni da seguire.",
+      "received": "Controlla imballaggio e contenuto prima della conferma. Received filtra i pacchi consegnati: non è il pulsante di conferma. Conserva foto e imballaggio per eventuale assistenza."
+    }
+  },
+  "ja": {
+    "enlarge": "画像を拡大",
+    "site": [
+      "",
+      "",
+      "",
+      "商品一覧",
+      "詳細を見る",
+      "USFansで商品を開く"
+    ],
+    "sameItem": "AMI — ショートパンツ",
+    "realCapture": "USFans · 2026-10-09 · 掲載価格は参考価格です。送料やその他の費用が別途かかる場合があります。",
+    "qcExample": "過去の検品参考写真であり、ご自身の注文の写真ではありません。色や仕様が異なる場合があります。",
+    "screenTitles": [
+      "仕様とサイズを選ぶ · Style",
+      "Size · Quantity · Buy now"
+    ],
+    "clickSteps": [
+      "Style · ウエスト、ヒップ、丈を測り、伸縮性、数量と返品条件を確認します。",
+      "Size · 実寸、色、数量、同梱品、最新の価格と在庫を確認してください。",
+      "Quantity · − / +",
+      "Total · Buy now · 掲載価格は参考価格です。送料やその他の費用が別途かかる場合があります。"
+    ],
+    "loginTitle": "Login · USFans",
+    "loginSteps": [
+      "紹介コードT2JMMC付きの登録ボタンを使います。登録、注文、支払いはUSFansで行います。",
+      "USFansに登録して在庫、配送と最終金額を確認してください。"
+    ],
+    "siteSteps": [
+      "パンツのカテゴリーからAMIショートパンツの写真か商品名を開きます。写真と参考QCを見て、購入ボタンを使います。",
+      "過去の検品参考写真であり、ご自身の注文の写真ではありません。色や仕様が異なる場合があります。",
+      "USFansで商品を開く"
+    ],
+    "account": {
+      "confirm": [
+        "Confirm OrderでSKUと数量を確認します。Order SummaryにはProduct PriceとDomestic Freight (China)が表示されます。規約を読んで同意する場合のみチェックし、Submitへ進みます。国際送料は含まれません。",
+        "いいえ。中国国内送料、国際送料、その他の対象費用が追加される場合があります。",
+        "実寸、色、数量、同梱品、最新の価格と在庫を確認してください。"
+      ],
+      "confirmTitle": "注文と支払いを確認する",
+      "loginHelp": "Login · USFans",
+      "nav": "USFans → {label}",
+      "tab": "{label} → 商品一覧",
+      "search": "{label} → Search",
+      "empty": "注文・入庫商品・荷物のない実際のアカウント画面です。詳細や操作は該当データがある場合に表示されます。",
+      "entry": "USFans",
+      "warehouse": "入庫後にWarehouseでご自身の注文写真を開きます。カタログの過去写真は、この検品の代わりにはなりません。",
+      "submit": "入庫済み商品を選び、宛名、国、郵便番号、配送ルートと梱包を確認します。倉庫が空の場合、発送フォームは表示されません。",
+      "payment": "ParcelのPayment Pendingから荷物を開きます。支払い前に料金、重量、寸法を確認してください。梱包後に金額が調整される場合があります。",
+      "dispatch": "All Parcelで該当の荷物を開き、処理状況を確認します。支払い待ちは発送済みという意味ではありません。",
+      "transit": "In transitを選び、荷物の追跡情報を開きます。空の一覧には追跡できる荷物がありません。",
+      "received": "受け取り確定前に中身を確認します。Receivedは状態フィルターであり、受け取り確定ボタンではありません。不具合があれば写真と梱包を保管してください。"
+    }
+  },
+  "ko": {
+    "enlarge": "이미지 확대",
+    "site": [
+      "",
+      "",
+      "",
+      "상품 목록",
+      "상세 보기",
+      "USFans에서 상품 열기"
+    ],
+    "sameItem": "AMI — 반바지",
+    "realCapture": "USFans · 2026-10-09 · 목록 가격은 참고용이며 배송비와 기타 비용이 추가될 수 있습니다.",
+    "qcExample": "과거 QC 참고 사진이며 본인 주문 사진이 아닙니다. 색상과 옵션이 다를 수 있습니다.",
+    "screenTitles": [
+      "옵션과 사이즈 선택 · Style",
+      "Size · Quantity · Buy now"
+    ],
+    "clickSteps": [
+      "Style · 허리, 엉덩이와 길이를 재고 신축성, 수량과 반품 조건을 확인하세요.",
+      "Size · 실측, 색상, 수량, 구성품, 최신 가격과 재고를 확인하세요.",
+      "Quantity · − / +",
+      "Total · Buy now · 목록 가격은 참고용이며 배송비와 기타 비용이 추가될 수 있습니다."
+    ],
+    "loginTitle": "Login · USFans",
+    "loginSteps": [
+      "추천 코드 T2JMMC가 있는 가입 버튼을 사용하세요. 가입, 주문과 결제는 USFans에서 진행합니다.",
+      "USFans에 가입해 재고, 배송과 최종 비용을 확인하세요."
+    ],
+    "siteSteps": [
+      "바지 카테고리에서 AMI 반바지의 사진이나 이름을 여세요. 상품 사진과 참고 QC를 확인하고 구매 버튼을 사용합니다.",
+      "과거 QC 참고 사진이며 본인 주문 사진이 아닙니다. 색상과 옵션이 다를 수 있습니다.",
+      "USFans에서 상품 열기"
+    ],
+    "account": {
+      "confirm": [
+        "Confirm Order에서 SKU와 수량을 확인하세요. Order Summary에 Product Price와 Domestic Freight (China)가 표시됩니다. 약관을 읽고 동의할 경우 체크한 뒤 Submit으로 진행하세요. 국제 배송비는 포함되지 않습니다.",
+        "아니요. 중국 내 배송비, 국제 배송비와 기타 해당 비용이 추가될 수 있습니다.",
+        "실측, 색상, 수량, 구성품, 최신 가격과 재고를 확인하세요."
+      ],
+      "confirmTitle": "주문 및 결제 확인",
+      "loginHelp": "Login · USFans",
+      "nav": "USFans → {label}",
+      "tab": "{label} → 상품 목록",
+      "search": "{label} → Search",
+      "empty": "주문·입고 상품·소포가 없는 실제 계정 화면입니다. 해당 기록이 있어야 상세 정보와 작업 버튼이 나타납니다.",
+      "entry": "USFans",
+      "warehouse": "입고 후 Warehouse에서 본인 주문 사진을 여세요. 과거 상품 목록 사진이 이 검수를 대신하지 않습니다.",
+      "submit": "입고 상품을 선택하고 수취인, 국가, 우편번호, 노선과 포장을 확인하세요. 창고가 비어 있으면 발송 양식이 나타나지 않습니다.",
+      "payment": "Parcel의 Payment Pending에서 소포를 여세요. 결제 전에 요금, 무게와 크기를 확인하세요. 포장 후 금액이 조정될 수 있습니다.",
+      "dispatch": "All Parcel에서 해당 소포를 열어 처리 상태를 확인하세요. 결제 대기는 발송 완료를 뜻하지 않습니다.",
+      "transit": "In transit을 선택해 소포 추적을 여세요. 빈 목록에는 추적할 소포가 없습니다.",
+      "received": "수령 확정 전에 내용물을 확인하세요. Received는 상태 필터이며 수령 확정 버튼이 아닙니다. 문제가 있으면 사진과 포장을 보관하세요."
+    }
+  },
+  "nb": {
+    "enlarge": "Forstørr bilde",
+    "site": [
+      "",
+      "",
+      "",
+      "Katalog",
+      "Detaljer",
+      "Åpne produktet på USFans"
+    ],
+    "sameItem": "AMI — Shorts",
+    "realCapture": "USFans · 2026-10-09 · Katalogpriser er veiledende; frakt og andre kostnader kan komme i tillegg.",
+    "qcExample": "Historiske QC-bilder, ikke av din bestilling. Farger og varianter kan variere.",
+    "screenTitles": [
+      "Velg variant og størrelse · Style",
+      "Size · Quantity · Buy now"
+    ],
+    "clickSteps": [
+      "Style · Mål midje, hofter og lengde; kontroller elastisitet, antall og returvilkår.",
+      "Size · Sammenlign mål, farge, antall, innhold, gjeldende pris og lagerstatus.",
+      "Quantity · − / +",
+      "Total · Buy now · Katalogpriser er veiledende; frakt og andre kostnader kan komme i tillegg."
+    ],
+    "loginTitle": "Login · USFans",
+    "loginSteps": [
+      "Bruk registreringsknappen med T2JMMC. Konto, bestilling og betaling håndteres av USFans.",
+      "Registrer deg hos USFans for lagerstatus, frakt og totalpris."
+    ],
+    "siteSteps": [
+      "Velg buksekategorien og åpne AMI-shortsen via bilde eller navn. Se bilder og referanse-QC, og bruk kjøpsknappen.",
+      "Historiske QC-bilder, ikke av din bestilling. Farger og varianter kan variere.",
+      "Åpne produktet på USFans"
+    ],
+    "account": {
+      "confirm": [
+        "Kontroller SKU og antall i Confirm Order. Order Summary viser Product Price og Domestic Freight (China). Les vilkårene før samtykke og Submit; internasjonal frakt er ikke inkludert.",
+        "Nei. Innenlandsfrakt i Kina, internasjonal frakt og andre avgifter kan komme i tillegg.",
+        "Sammenlign mål, farge, antall, innhold, gjeldende pris og lagerstatus."
+      ],
+      "confirmTitle": "Bekreft bestilling og betaling",
+      "loginHelp": "Login · USFans",
+      "nav": "USFans → {label}",
+      "tab": "{label} → Katalog",
+      "search": "{label} → Search",
+      "empty": "Ekte kontoside uten bestillinger, lagervarer eller pakker; detaljer vises først når en relevant registrering finnes.",
+      "entry": "USFans",
+      "warehouse": "Åpne Warehouse etter ankomst og se bildene av din bestilling. Historiske katalogbilder erstatter ikke denne kontrollen.",
+      "submit": "Velg lagervarer og kontroller mottaker, land, postnummer, rute og emballasje. Et tomt lager viser ikke fraktskjemaet.",
+      "payment": "Velg Payment Pending i Parcel og åpne pakken. Kontroller pris, vekt og mål før betaling; emballering kan endre prisen.",
+      "dispatch": "Åpne riktig pakke under All Parcel og se status. Ventende betaling betyr ikke at pakken er sendt.",
+      "transit": "Velg In transit og åpne pakkens sporing. En tom liste inneholder ingen forsendelser.",
+      "received": "Kontroller innhold før mottaksbekreftelse. Received er et filter, ikke en bekreftelsesknapp. Ta vare på bilder og emballasje ved problemer."
+    }
+  },
+  "nl": {
+    "enlarge": "Afbeelding vergroten",
+    "site": [
+      "",
+      "",
+      "",
+      "Catalogus",
+      "Details",
+      "Product op USFans openen"
+    ],
+    "sameItem": "AMI — Shorts",
+    "realCapture": "USFans · 2026-10-09 · Catalogusprijzen zijn indicatief; verzending en andere kosten kunnen erbij komen.",
+    "qcExample": "Historische QC-foto’s, niet van jouw bestelling. Kleur en uitvoering kunnen verschillen.",
+    "screenTitles": [
+      "Kies uitvoering en maat · Style",
+      "Size · Quantity · Buy now"
+    ],
+    "clickSteps": [
+      "Style · Meet taille, heupen en lengte; controleer rek, aantal en retourvoorwaarden.",
+      "Size · Vergelijk maten, kleur, aantal en inbegrepen onderdelen. Controleer actuele beschikbaarheid en prijs.",
+      "Quantity · − / +",
+      "Total · Buy now · Catalogusprijzen zijn indicatief; verzending en andere kosten kunnen erbij komen."
+    ],
+    "loginTitle": "Login · USFans",
+    "loginSteps": [
+      "Gebruik de registratieknop met code T2JMMC. Registratie, bestelling en betaling vinden op USFans plaats.",
+      "Registreer bij USFans om voorraad, verzending en totaalprijs te controleren."
+    ],
+    "siteSteps": [
+      "Kies de categorie broeken en open de afbeelding of naam van de AMI-shorts. Bekijk foto’s en referentie-QC en gebruik daarna de aankoopknop.",
+      "Historische QC-foto’s, niet van jouw bestelling. Kleur en uitvoering kunnen verschillen.",
+      "Product op USFans openen"
+    ],
+    "account": {
+      "confirm": [
+        "Controleer SKU, maat en aantal op Confirm Order. Order Summary toont Product Price en Domestic Freight (China). Lees de voorwaarden voordat je instemt en Submit kiest; internationale verzending is niet inbegrepen.",
+        "Nee. Binnenlands vervoer in China, internationale verzending en andere toepasselijke kosten kunnen erbij komen.",
+        "Vergelijk maten, kleur, aantal en inbegrepen onderdelen. Controleer actuele beschikbaarheid en prijs."
+      ],
+      "confirmTitle": "Controleer en betaal de bestelling",
+      "loginHelp": "Login · USFans",
+      "nav": "USFans → {label}",
+      "tab": "{label} → Catalogus",
+      "search": "{label} → Search",
+      "empty": "Echte accountpagina zonder bestellingen, voorraad of pakketten; details verschijnen pas bij een bestaande registratie.",
+      "entry": "USFans",
+      "warehouse": "Open Warehouse. Zoek na aankomst je artikel en bekijk de foto’s van je eigen bestelling. Historische catalogusfoto’s vervangen deze controle niet.",
+      "submit": "Selecteer beschikbare artikelen in Warehouse. Controleer ontvanger, land en postcode en vergelijk routes en verpakking. Een leeg magazijn toont geen verzendformulier.",
+      "payment": "Kies Payment Pending in Parcel. Open het pakket en controleer offerte, gewicht en afmetingen vóór betaling. Het bedrag kan na verpakking veranderen.",
+      "dispatch": "Kies All Parcel en open het juiste pakket. Bekijk de verwerking; een openstaande betaling betekent niet dat het pakket verzonden is.",
+      "transit": "Kies In transit en open het pakket voor updates. Een lege lijst bevat geen trackinggegevens.",
+      "received": "Controleer verpakking en inhoud vóór ontvangstbevestiging. Received is een statusfilter, geen bevestigingsknop. Bewaar foto’s en verpakking bij problemen."
+    }
+  },
+  "pl": {
+    "enlarge": "Powiększ zdjęcie",
+    "site": [
+      "",
+      "",
+      "",
+      "Katalog",
+      "Szczegóły",
+      "Otwórz produkt w USFans"
+    ],
+    "sameItem": "AMI — Szorty",
+    "realCapture": "USFans · 2026-10-09 · Ceny katalogowe są orientacyjne; mogą dojść koszty dostawy i inne opłaty.",
+    "qcExample": "Historyczne zdjęcia QC, nie zdjęcia Twojego zamówienia. Kolory i wersje mogą się różnić.",
+    "screenTitles": [
+      "Wybierz wariant i rozmiar · Style",
+      "Size · Quantity · Buy now"
+    ],
+    "clickSteps": [
+      "Style · Zmierz pas, biodra i długość; sprawdź elastyczność, ilość i zasady zwrotu.",
+      "Size · Porównaj wymiary, kolor, liczbę sztuk i zawartość zestawu. Sprawdź aktualną cenę oraz dostępność.",
+      "Quantity · − / +",
+      "Total · Buy now · Ceny katalogowe są orientacyjne; mogą dojść koszty dostawy i inne opłaty."
+    ],
+    "loginTitle": "Login · USFans",
+    "loginSteps": [
+      "Użyj przycisku rejestracji z kodem T2JMMC. Rejestracja, zamówienia i płatności odbywają się w USFans.",
+      "Zarejestruj się w USFans, aby sprawdzić dostępność, wysyłkę i pełny koszt."
+    ],
+    "siteSteps": [
+      "W katalogu wybierz spodnie i otwórz zdjęcie lub nazwę szortów AMI. Sprawdź zdjęcia i historyczne QC, potem użyj przycisku zakupu.",
+      "Historyczne zdjęcia QC, nie zdjęcia Twojego zamówienia. Kolory i wersje mogą się różnić.",
+      "Otwórz produkt w USFans"
+    ],
+    "account": {
+      "confirm": [
+        "Na Confirm Order sprawdź SKU, rozmiar i ilość. Order Summary pokazuje Product Price i Domestic Freight (China). Przeczytaj warunki przed zgodą i Submit; wysyłka międzynarodowa nie jest wliczona.",
+        "Nie. Mogą dojść dostawa krajowa w Chinach, wysyłka międzynarodowa i inne należne opłaty.",
+        "Porównaj wymiary, kolor, liczbę sztuk i zawartość zestawu. Sprawdź aktualną cenę oraz dostępność."
+      ],
+      "confirmTitle": "Potwierdź zamówienie i płatność",
+      "loginHelp": "Login · USFans",
+      "nav": "USFans → {label}",
+      "tab": "{label} → Katalog",
+      "search": "{label} → Search",
+      "empty": "Prawdziwa strona konta bez zamówień, towarów i paczek; szczegóły pojawiają się po utworzeniu odpowiedniego wpisu.",
+      "entry": "USFans",
+      "warehouse": "Otwórz Warehouse. Po przyjęciu towaru znajdź swój produkt i obejrzyj zdjęcia zamówienia. Historyczne zdjęcia katalogowe nie zastępują kontroli.",
+      "submit": "W Warehouse zaznacz dostępne produkty. Sprawdź odbiorcę, kraj, kod pocztowy, trasy i pakowanie. Pusty magazyn nie pokazuje formularza wysyłki.",
+      "payment": "W Parcel wybierz Payment Pending, otwórz paczkę i sprawdź wycenę, wagę oraz wymiary przed płatnością. Koszt może się zmienić po spakowaniu.",
+      "dispatch": "W All Parcel otwórz właściwą paczkę i sprawdź postęp. Oczekiwanie na płatność nie oznacza nadania.",
+      "transit": "Wybierz In transit i otwórz paczkę, aby sprawdzić aktualizacje. Pusta lista nie zawiera przesyłek do śledzenia.",
+      "received": "Sprawdź opakowanie i zawartość przed potwierdzeniem odbioru. Received jest filtrem, a nie przyciskiem potwierdzenia. Zachowaj zdjęcia i opakowanie w razie reklamacji."
+    }
+  },
+  "ro": {
+    "enlarge": "Mărește imaginea",
+    "site": [
+      "",
+      "",
+      "",
+      "Catalog",
+      "Detalii",
+      "Deschide produsul pe USFans"
+    ],
+    "sameItem": "AMI — Șorturi",
+    "realCapture": "USFans · 2026-10-09 · Prețurile sunt orientative; transportul și alte taxe se pot adăuga.",
+    "qcExample": "Fotografii QC istorice, nu ale comenzii tale. Culorile și variantele pot diferi.",
+    "screenTitles": [
+      "Alege varianta și mărimea · Style",
+      "Size · Quantity · Buy now"
+    ],
+    "clickSteps": [
+      "Style · Măsoară talia, șoldurile și lungimea; verifică elasticitatea, cantitatea și returul.",
+      "Size · Dimensiunile, culoarea, cantitatea, conținutul, prețul actual și disponibilitatea.",
+      "Quantity · − / +",
+      "Total · Buy now · Prețurile sunt orientative; transportul și alte taxe se pot adăuga."
+    ],
+    "loginTitle": "Login · USFans",
+    "loginSteps": [
+      "Folosește butonul de înregistrare cu T2JMMC. Contul, comenzile și plățile sunt gestionate de USFans.",
+      "Înregistrează-te pe USFans pentru stoc, transport și preț final."
+    ],
+    "siteSteps": [
+      "În categoria pantaloni deschide șorturile AMI prin fotografie sau nume. Verifică imaginile și QC de referință, apoi folosește butonul de cumpărare.",
+      "Fotografii QC istorice, nu ale comenzii tale. Culorile și variantele pot diferi.",
+      "Deschide produsul pe USFans"
+    ],
+    "account": {
+      "confirm": [
+        "În Confirm Order verifică SKU și cantitatea. Order Summary arată Product Price și Domestic Freight (China). Citește termenii înainte de acceptare și Submit; transportul internațional este exclus.",
+        "Nu. Transportul intern din China, cel internațional și alte taxe se pot adăuga.",
+        "Dimensiunile, culoarea, cantitatea, conținutul, prețul actual și disponibilitatea."
+      ],
+      "confirmTitle": "Confirmă comanda și plata",
+      "loginHelp": "Login · USFans",
+      "nav": "USFans → {label}",
+      "tab": "{label} → Catalog",
+      "search": "{label} → Search",
+      "empty": "Pagină reală de cont fără comenzi, articole sau colete; detaliile apar numai pentru înregistrări existente.",
+      "entry": "USFans",
+      "warehouse": "După sosire deschide Warehouse și fotografiile comenzii tale. Imaginile istorice nu înlocuiesc această verificare.",
+      "submit": "Selectează articolele din depozit și verifică destinatarul, țara, codul poștal, ruta și ambalajul. Depozitul gol nu afișează formularul de expediere.",
+      "payment": "În Parcel selectează Payment Pending și deschide coletul. Verifică prețul, greutatea și dimensiunile înainte de plată; ambalarea poate schimba costul.",
+      "dispatch": "În All Parcel deschide coletul corect și verifică starea. O plată în așteptare nu înseamnă expediere.",
+      "transit": "Selectează In transit și deschide urmărirea coletului. Lista goală nu conține expedieri.",
+      "received": "Verifică conținutul înainte de confirmarea primirii. Received este filtru, nu buton de confirmare. Păstrează fotografiile și ambalajul în caz de probleme."
+    }
+  },
+  "ru": {
+    "enlarge": "Увеличить изображение",
+    "site": [
+      "",
+      "",
+      "",
+      "Каталог",
+      "Подробнее",
+      "Открыть товар в USFans"
+    ],
+    "sameItem": "AMI — Шорты",
+    "realCapture": "USFans · 2026-10-09 · Цены каталога ориентировочные; доставка и другие расходы могут добавляться.",
+    "qcExample": "Исторические QC-фото, не вашего заказа. Цвет и вариант могут отличаться.",
+    "screenTitles": [
+      "Выберите вариант и размер · Style",
+      "Size · Quantity · Buy now"
+    ],
+    "clickSteps": [
+      "Style · Измерьте талию, бёдра и длину; проверьте эластичность, количество и возврат.",
+      "Size · Размеры, цвет, количество, комплектность, актуальную цену и наличие.",
+      "Quantity · − / +",
+      "Total · Buy now · Цены каталога ориентировочные; доставка и другие расходы могут добавляться."
+    ],
+    "loginTitle": "Login · USFans",
+    "loginSteps": [
+      "Используйте кнопку регистрации с T2JMMC. Аккаунт, заказы и платежи обслуживает USFans.",
+      "Зарегистрируйтесь в USFans для проверки наличия, доставки и полной цены."
+    ],
+    "siteSteps": [
+      "В категории брюк откройте шорты AMI по фото или названию. Просмотрите изображения и справочные QC, затем используйте кнопку покупки.",
+      "Исторические QC-фото, не вашего заказа. Цвет и вариант могут отличаться.",
+      "Открыть товар в USFans"
+    ],
+    "account": {
+      "confirm": [
+        "В Confirm Order проверьте SKU и количество. Order Summary показывает Product Price и Domestic Freight (China). Прочтите условия до согласия и Submit; международная доставка не включена.",
+        "Нет. Возможны доставка по Китаю, международная перевозка и другие платежи.",
+        "Размеры, цвет, количество, комплектность, актуальную цену и наличие."
+      ],
+      "confirmTitle": "Подтвердите заказ и оплату",
+      "loginHelp": "Login · USFans",
+      "nav": "USFans → {label}",
+      "tab": "{label} → Каталог",
+      "search": "{label} → Search",
+      "empty": "Настоящая страница аккаунта без заказов, товаров или посылок; детали доступны только для существующей записи.",
+      "entry": "USFans",
+      "warehouse": "После поступления откройте Warehouse и фотографии своего заказа. Исторические снимки не заменяют проверку.",
+      "submit": "Выберите складские товары, проверьте получателя, страну, индекс, маршрут и упаковку. Пустой склад не показывает форму отправки.",
+      "payment": "В Parcel выберите Payment Pending и откройте посылку. До оплаты проверьте стоимость, вес и размеры; упаковка может изменить цену.",
+      "dispatch": "В All Parcel откройте нужную посылку и проверьте статус. Ожидание оплаты не означает отправку.",
+      "transit": "Выберите In transit и откройте отслеживание. Пустой список не содержит отправлений.",
+      "received": "Проверьте содержимое до подтверждения получения. Received — фильтр, не кнопка подтверждения. Сохраните фото и упаковку на случай проблем."
+    }
+  },
+  "sk": {
+    "enlarge": "Zväčšiť obrázok",
+    "site": [
+      "",
+      "",
+      "",
+      "Katalóg",
+      "Podrobnosti",
+      "Otvoriť produkt na USFans"
+    ],
+    "sameItem": "AMI — Šortky",
+    "realCapture": "USFans · 2026-10-09 · Katalógové ceny sú orientačné; doprava a ďalšie poplatky môžu byť navyše.",
+    "qcExample": "Historické QC fotografie, nie vaša objednávka. Farby a varianty sa môžu líšiť.",
+    "screenTitles": [
+      "Vyberte variant a veľkosť · Style",
+      "Size · Quantity · Buy now"
+    ],
+    "clickSteps": [
+      "Style · Zmerajte pás, boky a dĺžku; overte pružnosť, počet a vrátenie.",
+      "Size · Rozmery, farbu, počet kusov, obsah balenia a aktuálnu cenu a dostupnosť.",
+      "Quantity · − / +",
+      "Total · Buy now · Katalógové ceny sú orientačné; doprava a ďalšie poplatky môžu byť navyše."
+    ],
+    "loginTitle": "Login · USFans",
+    "loginSteps": [
+      "Použite registračné tlačidlo s T2JMMC. Účet, objednávky a platby spravuje USFans.",
+      "Registrujte sa v USFans pre overenie skladu, dopravy a konečnej ceny."
+    ],
+    "siteSteps": [
+      "V kategórii nohavíc otvorte AMI šortky cez obrázok alebo názov. Skontrolujte snímky a referenčné QC, potom použite nákupné tlačidlo.",
+      "Historické QC fotografie, nie vaša objednávka. Farby a varianty sa môžu líšiť.",
+      "Otvoriť produkt na USFans"
+    ],
+    "account": {
+      "confirm": [
+        "V Confirm Order overte SKU a počet. Order Summary uvádza Product Price a Domestic Freight (China). Pred súhlasom a Submit čítajte podmienky; medzinárodná doprava nie je zahrnutá.",
+        "Nie. Doprava v Číne, medzinárodná preprava a ďalšie poplatky môžu byť navyše.",
+        "Rozmery, farbu, počet kusov, obsah balenia a aktuálnu cenu a dostupnosť."
+      ],
+      "confirmTitle": "Potvrďte objednávku a platbu",
+      "loginHelp": "Login · USFans",
+      "nav": "USFans → {label}",
+      "tab": "{label} → Katalóg",
+      "search": "{label} → Search",
+      "empty": "Skutočná stránka účtu bez objednávok, tovaru či balíkov; podrobnosti sa zobrazia až pre existujúci záznam.",
+      "entry": "USFans",
+      "warehouse": "Po prijatí otvorte Warehouse a fotografie svojej objednávky. Historické snímky túto kontrolu nenahrádzajú.",
+      "submit": "Vyberte skladové položky, overte príjemcu, krajinu, PSČ, trasu a balenie. Prázdny sklad nezobrazuje odosielací formulár.",
+      "payment": "V Parcel zvoľte Payment Pending a otvorte balík. Pred platbou overte cenu, váhu a rozmery; balenie môže cenu zmeniť.",
+      "dispatch": "V All Parcel otvorte správny balík a overte stav. Čakajúca platba neznamená odoslanie.",
+      "transit": "Zvoľte In transit a otvorte sledovanie balíka. Prázdny zoznam neobsahuje zásielky.",
+      "received": "Pred potvrdením overte obsah. Received je filter, nie potvrdzovacie tlačidlo. Pre reklamáciu uschovajte fotografie a obal."
+    }
+  },
+  "sv": {
+    "enlarge": "Förstora bild",
+    "site": [
+      "",
+      "",
+      "",
+      "Katalog",
+      "Detaljer",
+      "Öppna produkten på USFans"
+    ],
+    "sameItem": "AMI — Shorts",
+    "realCapture": "USFans · 2026-10-09 · Katalogpriser är ungefärliga; frakt och andra avgifter kan tillkomma.",
+    "qcExample": "Historiska QC-bilder, inte din beställning. Färg och modell kan skilja sig.",
+    "screenTitles": [
+      "Välj modell och storlek · Style",
+      "Size · Quantity · Buy now"
+    ],
+    "clickSteps": [
+      "Style · Mät midja, höfter och längd; kontrollera stretch, antal och returvillkor.",
+      "Size · Jämför mått, färg, antal, innehåll, aktuell tillgänglighet och pris.",
+      "Quantity · − / +",
+      "Total · Buy now · Katalogpriser är ungefärliga; frakt och andra avgifter kan tillkomma."
+    ],
+    "loginTitle": "Login · USFans",
+    "loginSteps": [
+      "Använd registreringsknappen med T2JMMC. Konto, beställning och betalning hanteras av USFans.",
+      "Registrera dig på USFans för lagerstatus, frakt och slutkostnad."
+    ],
+    "siteSteps": [
+      "Välj byxkategorin och öppna AMI-shortsen via bilden eller namnet. Granska bilder och referens-QC och använd köpknappen.",
+      "Historiska QC-bilder, inte din beställning. Färg och modell kan skilja sig.",
+      "Öppna produkten på USFans"
+    ],
+    "account": {
+      "confirm": [
+        "I Confirm Order: kontrollera SKU och antal. Order Summary visar Product Price och Domestic Freight (China). Läs villkoren före godkännande och Submit. Internationell frakt ingår inte.",
+        "Nej. Inrikesfrakt i Kina, internationell frakt och andra avgifter kan tillkomma.",
+        "Jämför mått, färg, antal, innehåll, aktuell tillgänglighet och pris."
+      ],
+      "confirmTitle": "Bekräfta och betala",
+      "loginHelp": "Login · USFans",
+      "nav": "USFans → {label}",
+      "tab": "{label} → Katalog",
+      "search": "{label} → Search",
+      "empty": "Verklig kontosida utan beställningar, lagerartiklar eller paket; detaljer visas först när motsvarande post finns.",
+      "entry": "USFans",
+      "warehouse": "Öppna Warehouse efter varans ankomst och kontrollera dina beställningsbilder. Historiska katalogbilder ersätter inte denna kontroll.",
+      "submit": "Välj lagerartiklar, kontrollera mottagare, land och postnummer samt rutt och emballage. Ett tomt lager visar inget fraktformulär.",
+      "payment": "Välj Payment Pending i Parcel och öppna paketet. Kontrollera pris, vikt och mått före betalning; slutlig packning kan påverka priset.",
+      "dispatch": "Öppna rätt paket under All Parcel och läs status. En väntande betalning betyder inte att paketet skickats.",
+      "transit": "Välj In transit och öppna paketets spårning. En tom lista innehåller inga försändelser.",
+      "received": "Kontrollera innehållet före mottagningsbekräftelse. Received är ett filter, ingen bekräftelseknapp. Spara foton och emballage vid problem."
+    }
+  },
+  "tr": {
+    "enlarge": "Görseli büyüt",
+    "site": [
+      "",
+      "",
+      "",
+      "Katalog",
+      "Ayrıntılar",
+      "Ürünü USFans’ta aç"
+    ],
+    "sameItem": "AMI — Şort",
+    "realCapture": "USFans · 2026-10-09 · Katalog fiyatları yaklaşık değerlerdir; kargo ve diğer ücretler eklenebilir.",
+    "qcExample": "Geçmiş QC fotoğraflarıdır, kendi siparişiniz değildir. Renk ve model değişebilir.",
+    "screenTitles": [
+      "Model ve beden seçin · Style",
+      "Size · Quantity · Buy now"
+    ],
+    "clickSteps": [
+      "Style · Bel, kalça ve boyu ölçün; esneklik, miktar ve iade koşullarını doğrulayın.",
+      "Size · Ölçü, renk, miktar, paket içeriği, güncel fiyat ve stok durumunu.",
+      "Quantity · − / +",
+      "Total · Buy now · Katalog fiyatları yaklaşık değerlerdir; kargo ve diğer ücretler eklenebilir."
+    ],
+    "loginTitle": "Login · USFans",
+    "loginSteps": [
+      "T2JMMC kodlu kayıt düğmesini kullanın. Hesap, sipariş ve ödemeyi USFans yönetir.",
+      "Stok, kargo ve toplam fiyatı görmek için USFans’a kaydolun."
+    ],
+    "siteSteps": [
+      "Pantolon kategorisinde AMI şortun görselini veya adını açın. Fotoğrafları ve referans QC’yi inceleyip satın alma düğmesini kullanın.",
+      "Geçmiş QC fotoğraflarıdır, kendi siparişiniz değildir. Renk ve model değişebilir.",
+      "Ürünü USFans’ta aç"
+    ],
+    "account": {
+      "confirm": [
+        "Confirm Order içinde SKU ve miktarı doğrulayın. Order Summary, Product Price ve Domestic Freight (China) tutarlarını gösterir. Onay ve Submit öncesi koşulları okuyun; uluslararası kargo dahil değildir.",
+        "Hayır. Çin içi kargo, uluslararası kargo ve diğer ücretler eklenebilir.",
+        "Ölçü, renk, miktar, paket içeriği, güncel fiyat ve stok durumunu."
+      ],
+      "confirmTitle": "Sipariş ve ödemeyi kontrol edin",
+      "loginHelp": "Login · USFans",
+      "nav": "USFans → {label}",
+      "tab": "{label} → Katalog",
+      "search": "{label} → Search",
+      "empty": "Sipariş, depo ürünü veya paketi bulunmayan gerçek hesap sayfası; ayrıntılar yalnız mevcut kayıtta görünür.",
+      "entry": "USFans",
+      "warehouse": "Ürün ulaştığında Warehouse ve kendi siparişinizin fotoğraflarını açın. Eski katalog fotoğrafları bu kontrolün yerine geçmez.",
+      "submit": "Depodaki ürünleri seçin; alıcı, ülke, posta kodu, hat ve ambalajı kontrol edin. Boş depoda gönderim formu görünmez.",
+      "payment": "Parcel içinde Payment Pending seçip paketi açın. Ödeme öncesi ücret, ağırlık ve boyutları kontrol edin; paketleme fiyatı değiştirebilir.",
+      "dispatch": "All Parcel altında doğru paketi açıp durumunu kontrol edin. Bekleyen ödeme, gönderimin yapıldığı anlamına gelmez.",
+      "transit": "In transit seçip paket takibini açın. Boş listede takip edilecek gönderi yoktur.",
+      "received": "Teslim onayı öncesi içeriği kontrol edin. Received bir filtredir, onay düğmesi değildir. Sorun varsa fotoğraf ve ambalajı saklayın."
+    }
+  },
+  "uk": {
+    "enlarge": "Збільшити зображення",
+    "site": [
+      "",
+      "",
+      "",
+      "Каталог",
+      "Докладніше",
+      "Відкрити товар в USFans"
+    ],
+    "sameItem": "AMI — Шорти",
+    "realCapture": "USFans · 2026-10-09 · Ціни каталогу орієнтовні; доставка та інші витрати можуть додаватися.",
+    "qcExample": "Історичні QC-фото, не вашого замовлення. Колір і варіант можуть відрізнятися.",
+    "screenTitles": [
+      "Виберіть варіант і розмір · Style",
+      "Size · Quantity · Buy now"
+    ],
+    "clickSteps": [
+      "Style · Виміряйте талію, стегна й довжину; перевірте еластичність, кількість і повернення.",
+      "Size · Виміри, колір, кількість, комплектацію, актуальну ціну та наявність.",
+      "Quantity · − / +",
+      "Total · Buy now · Ціни каталогу орієнтовні; доставка та інші витрати можуть додаватися."
+    ],
+    "loginTitle": "Login · USFans",
+    "loginSteps": [
+      "Скористайтеся кнопкою реєстрації з T2JMMC. Обліковий запис, замовлення й оплати обслуговує USFans.",
+      "Зареєструйтеся в USFans для перевірки наявності, доставки й повної ціни."
+    ],
+    "siteSteps": [
+      "У категорії штанів відкрийте шорти AMI за фото чи назвою. Перегляньте зображення й довідкові QC, потім кнопку купівлі.",
+      "Історичні QC-фото, не вашого замовлення. Колір і варіант можуть відрізнятися.",
+      "Відкрити товар в USFans"
+    ],
+    "account": {
+      "confirm": [
+        "У Confirm Order перевірте SKU та кількість. Order Summary показує Product Price і Domestic Freight (China). Прочитайте умови перед згодою та Submit; міжнародна доставка не включена.",
+        "Ні. Можуть додаватися доставка Китаєм, міжнародна доставка та інші платежі.",
+        "Виміри, колір, кількість, комплектацію, актуальну ціну та наявність."
+      ],
+      "confirmTitle": "Підтвердьте замовлення й оплату",
+      "loginHelp": "Login · USFans",
+      "nav": "USFans → {label}",
+      "tab": "{label} → Каталог",
+      "search": "{label} → Search",
+      "empty": "Справжня сторінка облікового запису без замовлень, товарів чи посилок; деталі доступні лише для наявного запису.",
+      "entry": "USFans",
+      "warehouse": "Після надходження відкрийте Warehouse та фотографії свого замовлення. Історичні знімки не замінюють перевірку.",
+      "submit": "Виберіть товари на складі, перевірте одержувача, країну, індекс, маршрут і пакування. Порожній склад не показує форму відправлення.",
+      "payment": "У Parcel виберіть Payment Pending і відкрийте посилку. Перед оплатою перевірте вартість, вагу й розміри; пакування може змінити ціну.",
+      "dispatch": "У All Parcel відкрийте потрібну посилку й перевірте статус. Очікування оплати не означає відправлення.",
+      "transit": "Виберіть In transit та відкрийте відстеження. Порожній список не містить відправлень.",
+      "received": "Перевірте вміст до підтвердження отримання. Received — фільтр, а не кнопка підтвердження. Збережіть фото й пакування на випадок проблем."
+    }
+  }
+}

@@ -1,0 +1,1466 @@
+{
+  "en": {
+    "tabs": [
+      "Before you order",
+      "QC & warehouse",
+      "Shipping & support"
+    ],
+    "intro": "From finding an item to checking your parcel: the practical answers you need before your first order.",
+    "note": "Independent guidance, informed by the USFans Help Center. Check USFans for current fees, deadlines and order-specific decisions.",
+    "help": "USFans Help Center ↗",
+    "register": "Create a USFans account ↗",
+    "items": [
+      [
+        "How do I buy something I find here?",
+        "Open the item, review its details, then follow the USFans product link. Select the exact size, colour and quantity on USFans before paying. Findsbook is an independent discovery site; USFans handles your account, purchasing, warehouse and parcel. Our referral links include T2JMMC."
+      ],
+      [
+        "Does the price shown include delivery to my door?",
+        "Treat our recorded price and currency conversion as a browsing estimate. Budget separately for the item, delivery to the Chinese warehouse, international shipping and any applicable service, payment or import charges. Review the current USFans checkout and shipping quote before committing."
+      ],
+      [
+        "What should I check before placing an order?",
+        "Match the seller's measurements to something you own, confirm the exact variant and check availability on the live listing. Our catalogue is a snapshot, so prices, stock and options can change. Check shipping eligibility before buying liquids, perfume or electronics."
+      ],
+      [
+        "Do I need an account, and where does the registration button go?",
+        "You can browse Findsbook without a USFans account. To place an order, create or sign in to an account on USFans. Our registration link opens usfans.com/register?ref=T2JMMC. If you see the homepage, check whether you are already signed in; use a private window if you need to view the sign-up form."
+      ],
+      [
+        "Are the QC photos here photos of my own order?",
+        "No. They are reference photos associated with the listed item, not a promise about your next purchase. USFans checks and photographs goods after warehouse arrival. Review the photos attached to your own order before arranging international shipping; photos alone do not establish authenticity or hidden performance."
+      ],
+      [
+        "What should I look for in my warehouse QC photos?",
+        "Compare colour, size labels, quantity and visible condition with what you ordered. For fit or an unclear detail, ask USFans about additional photographs or measurements before shipping. Check availability and any charge for that service rather than assuming standard QC covers every detail."
+      ],
+      [
+        "Can I wait for more items and ship them together?",
+        "Use your USFans Warehouse to review stored items and plan a parcel once the items you want are ready. Check the current storage deadline and whether those goods can share a route. Compare a combined parcel with separate shipments; consolidation is not a guarantee of the lowest final cost."
+      ],
+      [
+        "What if the item looks wrong or I want to return it?",
+        "Contact USFans through the order as soon as you notice the issue, ideally while the item is still in the warehouse. Include the order number and clear photo evidence. Check that item's return terms and deadline: eligibility, seller approval and possible charges vary. Findsbook cannot approve a return or issue a refund."
+      ],
+      [
+        "How do I estimate international shipping?",
+        "Use the USFans shipping estimate with your destination and expected parcel weight and dimensions. Check the route's billing rules, including whether volumetric weight applies. Packaging and the final measured parcel can affect the quote, so an item price or rough estimate is not a final shipping bill."
+      ],
+      [
+        "Why might no shipping route be available?",
+        "Before paying, check with USFans whether your item can travel to your destination. Product restrictions and parcel size or weight can limit the available routes; liquids and some other goods need particular care. If no route appears, ask USFans to review the items and parcel rather than assuming every catalogue item can be shipped everywhere."
+      ],
+      [
+        "How long will delivery take, and where do I track it?",
+        "Allow for separate stages: seller dispatch, arrival and processing at the warehouse, then international delivery after you submit a parcel. Check the selected route's estimate and follow your order and parcel tracking inside USFans. If tracking stalls or a parcel arrives damaged, contact USFans with the parcel number and supporting evidence."
+      ],
+      [
+        "Who should I contact about payment, an order or a refund?",
+        "Use USFans support while signed in for account, payment, warehouse, shipping and refund questions. Include the relevant order or parcel number and a concise description of the problem. Findsbook helps you discover and compare items; we cannot access your USFans account or change an order. The official Help Center below is the next step for policy details."
+      ]
+    ]
+  },
+  "zh": {
+    "tabs": [
+      "下单前",
+      "QC 与仓储",
+      "运输与售后"
+    ],
+    "intro": "从发现商品到查看包裹，把第一次购买前真正需要了解的问题讲清楚。",
+    "note": "本站为独立选品网站，以下内容参考 USFans 帮助中心整理。费用、时限和具体订单处理请以主站当前说明为准。",
+    "help": "查看 USFans 官方帮助中心 ↗",
+    "register": "注册 USFans 账号 ↗",
+    "items": [
+      [
+        "在这里找到喜欢的商品后，怎么买？",
+        "先打开商品详情，核对信息，再通过商品链接前往 USFans。在主站选择准确的尺码、颜色和数量后下单付款。Findsbook 是独立选品网站；账号、代购、仓储和包裹由 USFans 处理。本站推荐链接带有推荐码 T2JMMC。"
+      ],
+      [
+        "这里显示的价格，是到手总价吗？",
+        "不是。本站记录价格和币种换算仅方便选品比较。预算还应考虑商品寄往中国仓库的运费、国际运费，以及可能产生的服务、支付或进口费用。付款前查看 USFans 实际结算金额和运输报价。"
+      ],
+      [
+        "下单前最需要确认什么？",
+        "用卖家的尺寸表对照自己已有的衣服或鞋子，确认具体款式、颜色和尺码，并在实时商品页检查库存。本站目录是记录信息，价格、库存和选项可能变化。购买香水、液体或电子产品前，先确认能否寄往你的目的地。"
+      ],
+      [
+        "需要注册吗？为什么点击注册有时看到首页？",
+        "浏览 Findsbook 不需要 USFans 账号，下单则需要在 USFans 注册或登录。本站注册链接为 usfans.com/register?ref=T2JMMC。如果打开后看到首页，先检查是否已登录；需要查看新用户注册页面时，可以在浏览器无痕窗口打开。"
+      ],
+      [
+        "本站 QC 图片就是我收到的那件商品吗？",
+        "不是。本站 QC 是对应商品的参考图片，不能代表下一笔订单一定相同。商品到达 USFans 仓库后，主站会检查并拍照。申请国际运输前，请查看自己订单下的 QC 图片；图片也不能证明真伪或无法从外观判断的性能。"
+      ],
+      [
+        "收到仓库 QC 后，应该看哪些细节？",
+        "先核对颜色、尺码标签、数量和可见外观是否与订单一致。若需要确认尺寸或某处细节，在发货前向 USFans 询问补拍或测量服务，并确认是否可提供及是否收费。不要默认常规 QC 已经检查了所有细节。"
+      ],
+      [
+        "可以等其他商品到仓，再一起寄出吗？",
+        "在 USFans 的仓库页面查看已入库商品，待想合寄的商品准备好后规划包裹。先查看当前仓储期限，以及这些商品是否适用同一运输线路。将合寄与分开发送的报价进行比较；合箱不代表最终费用一定最低。"
+      ],
+      [
+        "发现商品不对，或者想退货，怎么办？",
+        "发现问题后尽快通过 USFans 对应订单联系处理，最好在商品仍留在仓库时提出。提供订单号和清晰图片，先核实该商品的退换条件及申请时限。能否退换、卖家是否同意、是否产生费用均需具体确认；本站不能批准退货或办理退款。"
+      ],
+      [
+        "国际运费怎么估算？为什么要看体积？",
+        "在 USFans 运费估算中填写目的地，并参考预计包裹重量和尺寸。查看所选线路的计费规则，确认是否涉及体积重。包装和最终测量结果都可能影响报价，因此商品标价或初步估算不能当作最终运费。"
+      ],
+      [
+        "为什么提交包裹时没有可选线路？",
+        "购买前先向 USFans 确认商品能否运往目的地。商品类型限制、包裹尺寸或重量可能影响可用线路，液体等商品尤其需要提前确认。如果没有线路可选，请让主站核查商品和包裹情况；本站收录商品不代表所有地区都能配送。"
+      ],
+      [
+        "多久能收到？在哪里查物流？",
+        "整个过程包括卖家发货、仓库收货处理，以及提交包裹后的国际运输，不能只看其中一段时间。参考所选线路的预计时效，并在 USFans 内查看订单和包裹物流。如物流长时间不更新或收件时发现破损，带上包裹编号和相关凭证联系主站。"
+      ],
+      [
+        "支付、订单或退款问题应该找谁？",
+        "请登录 USFans 联系主站客服处理账号、支付、仓储、运输和退款问题，并提供相关订单号或包裹号及简洁的问题说明。Findsbook 用于发现和比较商品，无法访问你的 USFans 账号或修改订单。具体政策可从下方官方帮助中心继续查询。"
+      ]
+    ]
+  },
+  "de": {
+    "tabs": [
+      "Vor der Bestellung",
+      "QC & Lager",
+      "Versand & Hilfe"
+    ],
+    "intro": "Vom Fund bis zum Paket: praktische Antworten für deine erste Bestellung.",
+    "note": "Unabhängige Hinweise auf Grundlage des USFans-Hilfezentrums. Aktuelle Gebühren, Fristen und Entscheidungen zu Bestellungen findest du bei USFans.",
+    "help": "USFans-Hilfezentrum ↗",
+    "register": "USFans-Konto erstellen ↗",
+    "items": [
+      [
+        "Wie kaufe ich einen Artikel, den ich hier finde?",
+        "Öffne die Artikeldetails und folge dem Produktlink zu USFans. Wähle dort vor dem Bezahlen die genaue Größe, Farbe und Menge. Findsbook ist ein unabhängiger Produktkatalog; Konto, Einkauf, Lager und Paket werden von USFans verwaltet. Unsere Empfehlungslinks enthalten T2JMMC."
+      ],
+      [
+        "Ist der angezeigte Preis der Gesamtpreis inklusive Lieferung?",
+        "Unsere erfassten Preise und Währungsumrechnungen dienen der Orientierung. Berücksichtige zusätzlich den Versand ins chinesische Lager, den internationalen Versand und mögliche Service-, Zahlungs- oder Einfuhrkosten. Prüfe vor dem Kauf die aktuellen Beträge und Versandangebote bei USFans."
+      ],
+      [
+        "Was sollte ich vor dem Bestellen prüfen?",
+        "Vergleiche die Maße des Verkäufers mit einem passenden Artikel, den du besitzt. Prüfe Variante und Verfügbarkeit im aktuellen Angebot. Unser Katalog ist eine Momentaufnahme; Preise, Bestand und Optionen können sich ändern. Kläre vor dem Kauf von Flüssigkeiten, Parfüm oder Elektronik die Versandmöglichkeit."
+      ],
+      [
+        "Brauche ich ein Konto und wohin führt die Registrierung?",
+        "Zum Stöbern auf Findsbook brauchst du kein USFans-Konto. Zum Bestellen registrierst du dich bei USFans oder meldest dich dort an. Unser Link führt zu usfans.com/register?ref=T2JMMC. Erscheint die Startseite, prüfe, ob du bereits angemeldet bist; öffne bei Bedarf ein privates Fenster für das Registrierungsformular."
+      ],
+      [
+        "Zeigen die QC-Fotos hier meine eigene Bestellung?",
+        "Nein. Es sind Referenzfotos zum gelisteten Artikel, keine Zusage für deinen nächsten Kauf. USFans prüft und fotografiert Waren nach ihrer Ankunft im Lager. Kontrolliere vor dem internationalen Versand die Fotos deiner eigenen Bestellung. Fotos belegen weder Echtheit noch nicht sichtbare Funktionen."
+      ],
+      [
+        "Worauf sollte ich bei meinen QC-Fotos achten?",
+        "Vergleiche Farbe, Größenetikett, Menge und sichtbaren Zustand mit deiner Bestellung. Frage vor dem Versand nach zusätzlichen Fotos oder Messungen, wenn Maße oder Details unklar sind. Kläre Verfügbarkeit und mögliche Gebühren; die Standardprüfung deckt nicht automatisch jedes Detail ab."
+      ],
+      [
+        "Kann ich auf weitere Artikel warten und alles zusammen versenden?",
+        "Prüfe eingelagerte Artikel in deinem USFans-Lager und plane ein Paket, sobald die gewünschten Waren bereit sind. Beachte die aktuelle Lagerfrist und ob die Waren dieselbe Versandroute nutzen dürfen. Vergleiche Sammel- und Einzelversand; Zusammenlegen garantiert nicht den niedrigsten Endpreis."
+      ],
+      [
+        "Was mache ich bei einem falschen Artikel oder einem Rückgabewunsch?",
+        "Kontaktiere USFans möglichst sofort über die Bestellung, idealerweise noch während der Lagerung. Füge Bestellnummer und aussagekräftige Fotos hinzu. Prüfe Rückgabebedingungen und Frist des Artikels: Zulässigkeit, Zustimmung des Verkäufers und Kosten können variieren. Findsbook kann keine Rückgabe oder Erstattung genehmigen."
+      ],
+      [
+        "Wie schätze ich internationale Versandkosten?",
+        "Nutze die USFans-Versandschätzung mit Zielland, erwartetem Paketgewicht und Maßen. Prüfe die Abrechnungsregeln der Route, einschließlich möglicher Berechnung nach Volumengewicht. Verpackung und endgültige Messwerte können den Preis verändern; eine grobe Schätzung ist keine finale Rechnung."
+      ],
+      [
+        "Warum wird keine Versandroute angeboten?",
+        "Kläre vor dem Kauf mit USFans, ob der Artikel an dein Ziel versendet werden kann. Warenbeschränkungen sowie Paketgröße und Gewicht können Routen begrenzen; bei Flüssigkeiten ist besondere Prüfung nötig. Bitte USFans um Prüfung, wenn keine Route erscheint. Katalogeinträge sind keine weltweite Versandzusage."
+      ],
+      [
+        "Wie lange dauert die Lieferung und wo verfolge ich sie?",
+        "Plane getrennte Schritte ein: Versand durch den Verkäufer, Eingang und Bearbeitung im Lager sowie internationaler Versand nach Paketauftrag. Prüfe die Schätzung deiner Route und den Bestell- und Paketstatus bei USFans. Bei ausbleibenden Updates oder Schäden kontaktiere USFans mit Paketnummer und Belegen."
+      ],
+      [
+        "Wer hilft bei Zahlung, Bestellung oder Erstattung?",
+        "Melde dich bei USFans an und kontaktiere den Support für Konto, Zahlung, Lager, Versand oder Erstattung. Gib Bestell- oder Paketnummer und eine kurze Problembeschreibung an. Findsbook hilft beim Entdecken und Vergleichen, kann aber dein USFans-Konto nicht einsehen oder Bestellungen ändern. Richtlinien findest du im offiziellen Hilfezentrum unten."
+      ]
+    ]
+  },
+  "es": {
+    "tabs": [
+      "Antes de comprar",
+      "QC y almacén",
+      "Envíos y ayuda"
+    ],
+    "intro": "Desde encontrar un artículo hasta seguir tu paquete: respuestas prácticas para tu primer pedido.",
+    "note": "Orientación independiente basada en el centro de ayuda de USFans. Consulta allí las tarifas, los plazos y las decisiones sobre tu pedido.",
+    "help": "Centro de ayuda de USFans ↗",
+    "register": "Crear una cuenta en USFans ↗",
+    "items": [
+      [
+        "¿Cómo compro algo que encuentro aquí?",
+        "Abre la ficha, revisa sus detalles y sigue el enlace del producto a USFans. Allí elige la talla, el color y la cantidad exactos antes de pagar. Findsbook es un catálogo independiente; USFans gestiona tu cuenta, la compra, el almacén y el paquete. Nuestros enlaces de recomendación incluyen T2JMMC."
+      ],
+      [
+        "¿El precio mostrado incluye la entrega en mi domicilio?",
+        "El precio registrado y la conversión de moneda son orientativos. Añade a tu presupuesto el envío al almacén chino, el envío internacional y los posibles cargos de servicio, pago o importación. Revisa el importe actual de compra y la cotización de envío en USFans antes de decidir."
+      ],
+      [
+        "¿Qué debo comprobar antes de comprar?",
+        "Compara las medidas del vendedor con una prenda o un calzado que ya tengas. Confirma la variante y la disponibilidad en el anuncio actual. Nuestro catálogo es una instantánea: los precios, el stock y las opciones pueden cambiar. Antes de comprar líquidos, perfumes o electrónica, comprueba si se pueden enviar a tu destino."
+      ],
+      [
+        "¿Necesito una cuenta y adónde lleva el botón de registro?",
+        "Puedes explorar Findsbook sin una cuenta de USFans. Para comprar, regístrate o inicia sesión en USFans. Nuestro enlace abre usfans.com/register?ref=T2JMMC. Si aparece la página de inicio, comprueba si ya has iniciado sesión; usa una ventana privada si necesitas ver el formulario de registro."
+      ],
+      [
+        "¿Las fotos QC de aquí son de mi propio pedido?",
+        "No. Son fotos de referencia asociadas al artículo, no una garantía sobre tu próxima compra. USFans revisa y fotografía los productos cuando llegan al almacén. Consulta las fotos de tu propio pedido antes del envío internacional. Las fotos no acreditan autenticidad ni funciones que no se ven."
+      ],
+      [
+        "¿Qué debo revisar en las fotos QC del almacén?",
+        "Compara el color, las etiquetas de talla, la cantidad y el estado visible con tu pedido. Si faltan medidas o detalles, pregunta a USFans por fotos adicionales o mediciones antes del envío. Confirma disponibilidad y posibles cargos; no supongas que la revisión estándar cubre cada detalle."
+      ],
+      [
+        "¿Puedo esperar a otros artículos y enviarlos juntos?",
+        "Revisa los artículos guardados en tu almacén de USFans y prepara el paquete cuando estén listos los que quieres reunir. Comprueba el plazo de almacenamiento y si pueden compartir una ruta. Compara el envío conjunto con envíos separados: agrupar no garantiza el menor coste final."
+      ],
+      [
+        "¿Qué hago si el artículo está mal o quiero devolverlo?",
+        "Contacta con USFans desde el pedido en cuanto detectes el problema, preferiblemente mientras siga en el almacén. Adjunta el número de pedido y fotos claras. Revisa las condiciones y el plazo del artículo: la admisión, la aprobación del vendedor y los costes pueden variar. Findsbook no puede autorizar devoluciones ni reembolsos."
+      ],
+      [
+        "¿Cómo calculo el envío internacional?",
+        "Usa el estimador de USFans con tu destino, el peso previsto y las dimensiones del paquete. Revisa las reglas de la ruta, incluido si utiliza peso volumétrico. El embalaje y la medición final pueden modificar la cotización; una estimación inicial no es la factura final del envío."
+      ],
+      [
+        "¿Por qué no aparece ninguna ruta de envío?",
+        "Antes de comprar, consulta a USFans si el artículo puede llegar a tu destino. Las restricciones del producto y el tamaño o peso del paquete pueden limitar las rutas; los líquidos requieren especial atención. Si no hay ruta, pide que revisen los artículos y el paquete. Estar en nuestro catálogo no garantiza envío a todos los países."
+      ],
+      [
+        "¿Cuánto tarda y dónde sigo mi paquete?",
+        "Cuenta con varias etapas: envío del vendedor, recepción y procesamiento en almacén, y transporte internacional después de solicitar el paquete. Consulta la estimación de tu ruta y el seguimiento del pedido y del paquete en USFans. Si no hay novedades o llega dañado, contacta con USFans con el número del paquete y pruebas."
+      ],
+      [
+        "¿Quién resuelve problemas de pago, pedido o reembolso?",
+        "Inicia sesión en USFans y contacta con su soporte para asuntos de cuenta, pago, almacén, transporte o reembolso. Incluye el número de pedido o paquete y una descripción breve. Findsbook sirve para descubrir y comparar artículos; no accedemos a tu cuenta ni modificamos pedidos. Consulta las políticas en el centro de ayuda oficial de abajo."
+      ]
+    ]
+  },
+  "fr": {
+    "tabs": [
+      "Avant l’achat",
+      "QC et entrepôt",
+      "Livraison et aide"
+    ],
+    "intro": "Du choix d’un article au suivi du colis : les réponses utiles pour votre première commande.",
+    "note": "Conseils indépendants fondés sur le centre d’aide USFans. Consultez USFans pour les frais, délais et décisions concernant votre commande.",
+    "help": "Centre d’aide USFans ↗",
+    "register": "Créer un compte USFans ↗",
+    "items": [
+      [
+        "Comment acheter un article trouvé ici ?",
+        "Ouvrez sa fiche, vérifiez les détails puis suivez le lien du produit vers USFans. Choisissez-y la taille, la couleur et la quantité exactes avant de payer. Findsbook est un catalogue indépendant ; USFans gère votre compte, l’achat, l’entrepôt et le colis. Nos liens de recommandation incluent T2JMMC."
+      ],
+      [
+        "Le prix affiché comprend-il la livraison chez moi ?",
+        "Le prix enregistré et la conversion monétaire servent de repères. Prévoyez aussi le transport jusqu’à l’entrepôt chinois, l’expédition internationale et les éventuels frais de service, de paiement ou d’importation. Vérifiez le montant actuel et le devis de transport sur USFans avant de vous engager."
+      ],
+      [
+        "Que vérifier avant de commander ?",
+        "Comparez les mesures du vendeur à un vêtement ou à des chaussures que vous possédez. Confirmez la variante et la disponibilité sur l’annonce actuelle. Notre catalogue est un instantané : prix, stocks et options peuvent changer. Vérifiez l’admissibilité au transport avant d’acheter liquides, parfums ou appareils électroniques."
+      ],
+      [
+        "Faut-il un compte et où mène l’inscription ?",
+        "Vous pouvez parcourir Findsbook sans compte USFans. Pour commander, inscrivez-vous ou connectez-vous à USFans. Notre lien ouvre usfans.com/register?ref=T2JMMC. Si la page d’accueil apparaît, vérifiez si vous êtes déjà connecté ; utilisez une fenêtre privée pour consulter le formulaire d’inscription si nécessaire."
+      ],
+      [
+        "Les photos QC ici montrent-elles ma propre commande ?",
+        "Non. Ce sont des photos de référence liées à l’article, sans garantie pour votre prochain achat. USFans contrôle et photographie les produits après leur arrivée à l’entrepôt. Consultez les photos de votre commande avant l’expédition internationale. Les photos ne prouvent ni l’authenticité ni les performances invisibles."
+      ],
+      [
+        "Quels détails regarder sur mes photos QC ?",
+        "Comparez couleur, étiquettes de taille, quantité et état visible avec votre commande. Si les dimensions ou un détail restent incertains, demandez à USFans des photos ou mesures supplémentaires avant l’expédition. Vérifiez la disponibilité et le coût éventuel ; le contrôle standard ne couvre pas nécessairement chaque détail."
+      ],
+      [
+        "Puis-je attendre d’autres articles pour les expédier ensemble ?",
+        "Consultez les articles stockés dans votre entrepôt USFans et préparez un colis lorsque les articles souhaités sont prêts. Vérifiez la durée de stockage actuelle et leur compatibilité avec une même ligne. Comparez regroupement et envois séparés : regrouper ne garantit pas le prix final le plus bas."
+      ],
+      [
+        "Que faire si l’article ne convient pas ou doit être retourné ?",
+        "Contactez rapidement USFans depuis la commande, de préférence pendant que l’article est encore à l’entrepôt. Joignez le numéro de commande et des photos claires. Vérifiez les conditions et le délai de retour : admissibilité, accord du vendeur et frais peuvent varier. Findsbook ne peut autoriser ni retour ni remboursement."
+      ],
+      [
+        "Comment estimer les frais d’expédition internationale ?",
+        "Utilisez l’estimation USFans avec votre destination, le poids et les dimensions prévus du colis. Consultez les règles de facturation de la ligne, notamment l’éventuel poids volumétrique. L’emballage et les mesures finales peuvent modifier le devis ; une estimation initiale n’est pas une facture définitive."
+      ],
+      [
+        "Pourquoi aucune ligne de transport n’est-elle proposée ?",
+        "Avant l’achat, demandez à USFans si l’article peut être envoyé à votre destination. Les restrictions liées au produit, aux dimensions ou au poids peuvent limiter les lignes ; les liquides demandent une attention particulière. Si aucune ligne n’apparaît, faites vérifier les articles et le colis. Notre catalogue ne garantit pas une livraison partout."
+      ],
+      [
+        "Combien de temps faut-il et où suivre mon colis ?",
+        "Prévoyez plusieurs étapes : expédition du vendeur, réception et traitement à l’entrepôt, puis transport international après la demande d’envoi. Consultez l’estimation de la ligne et le suivi des commandes et colis dans USFans. En cas de suivi bloqué ou de dommages, contactez USFans avec le numéro du colis et des justificatifs."
+      ],
+      [
+        "Qui contacter pour un paiement, une commande ou un remboursement ?",
+        "Connectez-vous à USFans pour joindre son assistance au sujet du compte, du paiement, de l’entrepôt, du transport ou du remboursement. Indiquez le numéro de commande ou de colis et décrivez brièvement le problème. Findsbook aide à découvrir et comparer ; nous ne pouvons accéder à votre compte ni modifier une commande. Consultez le centre d’aide officiel ci-dessous."
+      ]
+    ]
+  },
+  "pt": {
+    "tabs": [
+      "Antes de comprar",
+      "QC e armazém",
+      "Envio e suporte"
+    ],
+    "intro": "Da descoberta de um produto ao acompanhamento da encomenda: respostas práticas para sua primeira compra.",
+    "note": "Orientações independentes baseadas na central de ajuda da USFans. Consulte a USFans para taxas, prazos e decisões sobre seu pedido.",
+    "help": "Central de ajuda da USFans ↗",
+    "register": "Criar uma conta na USFans ↗",
+    "items": [
+      [
+        "Como compro um produto que encontro aqui?",
+        "Abra a página do produto, confira os detalhes e siga o link para a USFans. Lá, escolha tamanho, cor e quantidade exatos antes de pagar. Findsbook é um catálogo independente; a USFans cuida da conta, compra, armazenagem e encomenda. Nossos links de indicação incluem T2JMMC."
+      ],
+      [
+        "O preço mostrado inclui a entrega na minha casa?",
+        "O preço registrado e a conversão de moeda são referências para comparar produtos. Considere também o frete até o armazém chinês, o frete internacional e possíveis taxas de serviço, pagamento ou importação. Confira os valores atuais e a cotação de envio na USFans antes de comprar."
+      ],
+      [
+        "O que devo conferir antes de fazer o pedido?",
+        "Compare as medidas do vendedor com uma peça ou calçado que você já possui. Confirme a variante e a disponibilidade no anúncio atual. Nosso catálogo é um registro: preços, estoque e opções podem mudar. Antes de comprar líquidos, perfumes ou eletrônicos, confirme se podem ser enviados ao seu destino."
+      ],
+      [
+        "Preciso de uma conta e para onde vai o botão de cadastro?",
+        "Você pode navegar no Findsbook sem conta na USFans. Para comprar, cadastre-se ou entre na USFans. Nosso link abre usfans.com/register?ref=T2JMMC. Se aparecer a página inicial, veja se você já está conectado; use uma janela anônima caso precise acessar o formulário de cadastro."
+      ],
+      [
+        "As fotos QC daqui mostram meu próprio pedido?",
+        "Não. São fotos de referência associadas ao produto, sem garantir como será sua próxima compra. A USFans verifica e fotografa os produtos após a chegada ao armazém. Confira as fotos do seu próprio pedido antes do envio internacional. Fotos não comprovam autenticidade nem desempenho que não possa ser visto."
+      ],
+      [
+        "O que devo observar nas fotos QC do armazém?",
+        "Compare cor, etiquetas de tamanho, quantidade e estado visível com seu pedido. Se faltarem medidas ou detalhes, pergunte à USFans sobre fotos adicionais ou medições antes do envio. Confirme disponibilidade e possíveis cobranças; não presuma que a inspeção padrão verifica todos os detalhes."
+      ],
+      [
+        "Posso esperar outros produtos e enviar tudo junto?",
+        "Confira os produtos armazenados na sua área de armazém da USFans e planeje a encomenda quando os itens desejados estiverem prontos. Verifique o prazo de armazenagem e se podem compartilhar uma rota. Compare envio conjunto e separado: consolidar não garante o menor custo final."
+      ],
+      [
+        "E se o produto estiver errado ou eu quiser devolver?",
+        "Contate a USFans pelo pedido assim que notar o problema, de preferência enquanto o produto estiver no armazém. Inclua o número do pedido e fotos claras. Verifique condições e prazo de devolução do item: aceitação, aprovação do vendedor e custos variam. Findsbook não pode autorizar devoluções nem reembolsos."
+      ],
+      [
+        "Como estimo o frete internacional?",
+        "Use a estimativa da USFans com seu destino, peso previsto e dimensões do pacote. Confira as regras de cobrança da rota, incluindo eventual peso volumétrico. A embalagem e as medidas finais podem alterar a cotação; uma estimativa inicial não é a cobrança definitiva do frete."
+      ],
+      [
+        "Por que nenhuma rota de envio aparece?",
+        "Antes de comprar, confirme com a USFans se o produto pode seguir para seu destino. Restrições do produto, tamanho e peso do pacote podem limitar as rotas; líquidos merecem atenção especial. Se não houver rota, peça uma análise dos itens e do pacote. Estar no nosso catálogo não garante entrega em todos os países."
+      ],
+      [
+        "Quanto tempo demora e onde acompanho a encomenda?",
+        "Considere etapas separadas: envio pelo vendedor, recebimento e processamento no armazém e transporte internacional após solicitar a encomenda. Consulte a previsão da rota escolhida e o acompanhamento de pedidos e pacotes na USFans. Se o rastreio parar ou houver danos, contate a USFans com o número da encomenda e comprovantes."
+      ],
+      [
+        "Quem resolve problemas de pagamento, pedido ou reembolso?",
+        "Entre na USFans e fale com o suporte para questões de conta, pagamento, armazém, transporte ou reembolso. Informe o número do pedido ou pacote e descreva o problema de forma breve. Findsbook ajuda a descobrir e comparar produtos; não acessamos sua conta nem alteramos pedidos. Consulte as políticas na central oficial abaixo."
+      ]
+    ]
+  },
+  "ar": {
+    "tabs": [
+      "قبل الطلب",
+      "صور المستودع والفحص QC",
+      "ادفع الشحن الدولي"
+    ],
+    "intro": "استكشف المنتجات وقارن التفاصيل واحفظ المفضلة.",
+    "note": "موقع مستقل غير تابع لـ USFans. قد تحقق الروابط عمولة إحالة ولا تضمن أصالة المنتجات أو جودتها.",
+    "help": "USFans · الأسئلة الشائعة",
+    "register": "التسجيل في USFans",
+    "items": [
+      [
+        "كيف أشتري؟",
+        "افتح المنتج ثم العرض نفسه في USFans. تحقق من الخيار والتكاليف قبل الطلب."
+      ],
+      [
+        "هل يشمل السعر كل شيء؟",
+        "لا. قد تضاف أجور الشحن داخل الصين والشحن الدولي ورسوم أخرى مستحقة."
+      ],
+      [
+        "ماذا أفحص أولًا؟",
+        "القياسات واللون والكمية والمحتويات والسعر الحالي وتوفر المخزون."
+      ],
+      [
+        "كيف أسجل؟",
+        "استخدم زر التسجيل برمز T2JMMC. تتم إدارة الحساب والطلبات والمدفوعات لدى USFans."
+      ],
+      [
+        "هل صور QC تخص طلبي؟",
+        "لا، إنها مراجع سابقة. افحص صور طلبك في Warehouse بعد وصول المنتج للمستودع."
+      ],
+      [
+        "ماذا أفحص في QC؟",
+        "الملصقات واللون والكمية والخياطة والعيوب الظاهرة. اطلب صورًا أو قياسات إضافية عند الحاجة."
+      ],
+      [
+        "هل يمكن جمع المنتجات؟",
+        "اختر المنتجات المتوفرة بالمستودع والمسموح شحنها عبر المسار نفسه."
+      ],
+      [
+        "كيف أطلب الإرجاع؟",
+        "تواصل عبر الطلب قبل الشحن الدولي. تختلف الشروط والمواعيد والرسوم حسب المنتج."
+      ],
+      [
+        "كم تكلفة الشحن؟",
+        "تعتمد على الوجهة والمسار والوزن والأبعاد بعد التغليف. تحقق من عرض USFans الحالي."
+      ],
+      [
+        "لماذا لا يظهر مسار شحن؟",
+        "تحقق من البلد وقيود المنتج، خصوصًا السوائل والبطاريات، واستفسر من الدعم."
+      ],
+      [
+        "أين أتتبع الطرد؟",
+        "افتح الطرد في Parcel. عند غياب التحديثات أعطِ الدعم رقم الطرد."
+      ],
+      [
+        "من يعالج مشكلة الدفع؟",
+        "USFans عبر الطلب أو الطرد المعني. لا يستطيع هذا الكتالوج تعديلهما."
+      ]
+    ]
+  },
+  "cs": {
+    "tabs": [
+      "Před objednáním",
+      "Skladové fotografie / QC",
+      "Zaplaťte mezinárodní přepravu"
+    ],
+    "intro": "Objevujte produkty, porovnávejte podrobnosti a ukládejte oblíbené.",
+    "note": "Nezávislý web bez vazby na USFans. Odkazy mohou přinést provizi; pravost ani kvalita nejsou zaručeny.",
+    "help": "USFans · Časté dotazy",
+    "register": "Registrace u USFans",
+    "items": [
+      [
+        "Jak nakoupit?",
+        "Otevřete produkt a stejnou nabídku na USFans. Před objednáním ověřte variantu a náklady."
+      ],
+      [
+        "Zahrnuje cena vše?",
+        "Ne. Připočítává se případná doprava v Číně, mezinárodní přeprava a další poplatky."
+      ],
+      [
+        "Co ověřit před nákupem?",
+        "Rozměry, barvu, počet kusů, obsah balení a aktuální cenu a dostupnost."
+      ],
+      [
+        "Jak se registrovat?",
+        "Použijte tlačítko registrace s kódem T2JMMC. Účet, objednávky a platby spravuje USFans."
+      ],
+      [
+        "Jsou QC fotografie z mé objednávky?",
+        "Ne, jde o historické reference. Po příjmu zboží zkontrolujte své fotografie ve Warehouse."
+      ],
+      [
+        "Co kontrolovat na QC?",
+        "Štítky, barvu, počet, švy a viditelné vady. Podle potřeby požádejte o další snímky nebo měření."
+      ],
+      [
+        "Lze spojit více produktů?",
+        "Vyberte skladové položky, které jsou povolené pro stejnou přepravní trasu."
+      ],
+      [
+        "Jak požádat o vrácení?",
+        "Kontaktujte podporu přes objednávku před mezinárodní přepravou. Podmínky, lhůty a poplatky se liší."
+      ],
+      [
+        "Kolik stojí doprava?",
+        "Závisí na cíli, trase, zabalené hmotnosti a rozměrech. Ověřte aktuální nabídku USFans."
+      ],
+      [
+        "Proč chybí přepravní trasa?",
+        "Ověřte zemi a omezení výrobku, zejména kapalin a baterií. Kontaktujte podporu."
+      ],
+      [
+        "Kde sledovat zásilku?",
+        "Otevřete balík v Parcel. Při chybějících aktualizacích sdělte podpoře číslo balíku."
+      ],
+      [
+        "Kdo řeší problémy s platbou?",
+        "USFans přes příslušnou objednávku nebo balík. Tento katalog je nemůže měnit."
+      ]
+    ]
+  },
+  "da": {
+    "tabs": [
+      "Før bestilling",
+      "Lagerbilleder / QC",
+      "Betal international fragt"
+    ],
+    "intro": "Udforsk produkter, sammenlign detaljer og gem favoritter.",
+    "note": "Uafhængig side uden tilknytning til USFans. Links kan give provision; ingen garanti for ægthed eller kvalitet.",
+    "help": "USFans · Ofte stillede spørgsmål",
+    "register": "Tilmeld dig USFans",
+    "items": [
+      [
+        "Hvordan køber jeg?",
+        "Åbn produktet og samme opslag på USFans. Kontrollér variant og omkostninger før bestilling."
+      ],
+      [
+        "Er alle omkostninger med?",
+        "Nej. Indenrigsfragt i Kina, international fragt og andre gebyrer kan komme oveni."
+      ],
+      [
+        "Hvad skal jeg kontrollere?",
+        "Sammenlign mål, farve, antal, indhold, aktuel pris og lagerstatus."
+      ],
+      [
+        "Hvordan tilmelder jeg mig?",
+        "Brug registreringsknappen med T2JMMC. Konto, ordre og betaling håndteres af USFans."
+      ],
+      [
+        "Er QC-billederne fra min ordre?",
+        "Nej, de er historiske referencer. Se dine egne billeder i Warehouse efter ankomst."
+      ],
+      [
+        "Hvad skal QC vise?",
+        "Kontrollér mærker, farve, antal, syninger og synlige fejl. Bed om flere billeder eller mål ved behov."
+      ],
+      [
+        "Kan varer sendes samlet?",
+        "Vælg tilgængelige lagervarer, som er tilladt på samme fragtrute."
+      ],
+      [
+        "Hvordan anmoder jeg om retur?",
+        "Kontakt support via ordren før international afsendelse. Vilkår, frister og gebyrer varierer."
+      ],
+      [
+        "Hvad koster fragten?",
+        "Destination, rute, pakket vægt og mål afgør prisen. Se USFans aktuelle tilbud."
+      ],
+      [
+        "Hvorfor mangler en rute?",
+        "Kontrollér destination og varebegrænsninger, især væsker og batterier. Spørg support."
+      ],
+      [
+        "Hvor sporer jeg pakken?",
+        "Åbn pakken i Parcel. Giv support pakkenummeret, hvis opdateringer mangler."
+      ],
+      [
+        "Hvem hjælper med betaling?",
+        "USFans via den relevante ordre eller pakke. Kataloget kan ikke ændre dem."
+      ]
+    ]
+  },
+  "el": {
+    "tabs": [
+      "Πριν παραγγείλετε",
+      "Φωτογραφίες αποθήκης / QC",
+      "Πληρώστε διεθνή μεταφορά"
+    ],
+    "intro": "Ανακαλύψτε προϊόντα, συγκρίνετε λεπτομέρειες και αποθηκεύστε αγαπημένα.",
+    "note": "Ανεξάρτητη ιστοσελίδα χωρίς σύνδεση με το USFans. Οι σύνδεσμοι ενδέχεται να αποφέρουν προμήθεια· δεν εγγυώνται γνησιότητα ή ποιότητα.",
+    "help": "USFans · Συχνές ερωτήσεις",
+    "register": "Εγγραφή στο USFans",
+    "items": [
+      [
+        "Πώς αγοράζω;",
+        "Ανοίξτε το προϊόν και την ίδια αγγελία στο USFans. Ελέγξτε έκδοση και κόστος πριν παραγγείλετε."
+      ],
+      [
+        "Περιλαμβάνονται όλα στην τιμή;",
+        "Όχι. Εσωτερική μεταφορά στην Κίνα, διεθνής αποστολή και άλλες χρεώσεις μπορεί να προστεθούν."
+      ],
+      [
+        "Τι ελέγχω πρώτα;",
+        "Διαστάσεις, χρώμα, ποσότητα, περιεχόμενο, τρέχουσα τιμή και διαθεσιμότητα."
+      ],
+      [
+        "Πώς εγγράφομαι;",
+        "Χρησιμοποιήστε την εγγραφή με T2JMMC. Το USFans διαχειρίζεται λογαριασμό, παραγγελίες και πληρωμές."
+      ],
+      [
+        "Είναι οι φωτογραφίες QC της παραγγελίας μου;",
+        "Όχι, είναι παλαιότερα παραδείγματα. Ελέγξτε τις δικές σας στο Warehouse μετά την άφιξη."
+      ],
+      [
+        "Τι εξετάζω στο QC;",
+        "Ετικέτες, χρώμα, ποσότητα, ραφές και ορατές ατέλειες. Ζητήστε επιπλέον φωτογραφίες ή μετρήσεις εάν χρειάζονται."
+      ],
+      [
+        "Μπορώ να ενώσω προϊόντα;",
+        "Επιλέξτε διαθέσιμα προϊόντα αποθήκης που επιτρέπονται στην ίδια διαδρομή αποστολής."
+      ],
+      [
+        "Πώς ζητώ επιστροφή;",
+        "Επικοινωνήστε μέσω παραγγελίας πριν τη διεθνή αποστολή. Όροι, προθεσμίες και χρεώσεις διαφέρουν."
+      ],
+      [
+        "Πόσο κοστίζουν τα μεταφορικά;",
+        "Εξαρτώνται από προορισμό, διαδρομή, συσκευασμένο βάρος και διαστάσεις. Δείτε την τρέχουσα προσφορά USFans."
+      ],
+      [
+        "Γιατί δεν υπάρχει διαδρομή;",
+        "Ελέγξτε χώρα και περιορισμούς προϊόντος, ιδίως υγρά και μπαταρίες. Ρωτήστε την υποστήριξη."
+      ],
+      [
+        "Πού παρακολουθώ το δέμα;",
+        "Ανοίξτε το στο Parcel. Αν δεν ενημερώνεται, δώστε τον αριθμό δέματος στην υποστήριξη."
+      ],
+      [
+        "Ποιος βοηθά με πληρωμές;",
+        "Το USFans μέσω της συγκεκριμένης παραγγελίας ή δέματος. Ο κατάλογος δεν μπορεί να τα αλλάξει."
+      ]
+    ]
+  },
+  "fi": {
+    "tabs": [
+      "Ennen tilaamista",
+      "Varastokuvat / QC",
+      "Maksa kansainvälinen toimitus"
+    ],
+    "intro": "Tutustu tuotteisiin, vertaa tietoja ja tallenna suosikkisi.",
+    "note": "Riippumaton sivusto, ei USFansin kumppani. Linkeistä voi kertyä palkkiota; aitoutta tai laatua ei taata.",
+    "help": "USFans · Usein kysyttyä",
+    "register": "Rekisteröidy USFansiin",
+    "items": [
+      [
+        "Miten ostan?",
+        "Avaa tuote ja sama ilmoitus USFansissa. Tarkista vaihtoehto ja kulut ennen tilaamista."
+      ],
+      [
+        "Sisältääkö hinta kaiken?",
+        "Ei. Kiinan sisäinen toimitus, kansainvälinen kuljetus ja muut maksut voivat tulla lisäksi."
+      ],
+      [
+        "Mitä tarkistan ensin?",
+        "Vertaa mittoja, väriä, määrää, sisältöä sekä ajantasaista hintaa ja saatavuutta."
+      ],
+      [
+        "Miten rekisteröidyn?",
+        "Käytä rekisteröintipainiketta ja koodia T2JMMC. USFans hoitaa tilin, tilauksen ja maksun."
+      ],
+      [
+        "Ovatko QC-kuvat tilauksestani?",
+        "Eivät. Ne ovat historiallisia viitekuvia. Tarkista omat kuvasi Warehouse-sivulta saapumisen jälkeen."
+      ],
+      [
+        "Mitä QC-kuvista tarkistetaan?",
+        "Merkinnät, väri, määrä, saumat ja näkyvät virheet. Pyydä tarvittaessa lisäkuvia tai mittoja."
+      ],
+      [
+        "Voiko tuotteet yhdistää?",
+        "Valitse varastosta tuotteet, jotka voidaan lähettää samalla kuljetusreitillä."
+      ],
+      [
+        "Miten pyydän palautusta?",
+        "Ota yhteyttä tilauksen kautta ennen kansainvälistä lähetystä. Ehdot, määräajat ja maksut vaihtelevat."
+      ],
+      [
+        "Mitä toimitus maksaa?",
+        "Kohde, reitti, pakattu paino ja mitat ratkaisevat. Tarkista USFansin ajantasainen tarjous."
+      ],
+      [
+        "Miksi reittiä ei löydy?",
+        "Tarkista kohde ja tuoterajoitukset, erityisesti nesteet ja akut. Kysy asiakaspalvelusta."
+      ],
+      [
+        "Missä seuraan pakettia?",
+        "Avaa paketti Parcel-sivulla. Anna pakettinumero asiakaspalvelulle, jos päivityksiä puuttuu."
+      ],
+      [
+        "Kuka auttaa maksuissa?",
+        "USFans kyseisen tilauksen tai paketin kautta. Tämä luettelo ei voi muuttaa niitä."
+      ]
+    ]
+  },
+  "hu": {
+    "tabs": [
+      "Rendelés előtt",
+      "Raktári képek / QC",
+      "Fizesd a nemzetközi szállítást"
+    ],
+    "intro": "Fedezd fel a termékeket, hasonlítsd össze a részleteket és mentsd a kedvenceket.",
+    "note": "Független oldal, nem kapcsolódik a USFanshoz. A hivatkozások jutalékot hozhatnak; nincs eredetiségi vagy minőségi garancia.",
+    "help": "USFans · Gyakori kérdések",
+    "register": "Regisztráció a USFans oldalon",
+    "items": [
+      [
+        "Hogyan vásárolhatok?",
+        "Nyisd meg a terméket és ugyanazt a hirdetést a USFans oldalon. Ellenőrizd a változatot és költségeket."
+      ],
+      [
+        "Mindent tartalmaz az ár?",
+        "Nem. Kínai belföldi és nemzetközi szállítás, valamint más díjak is felmerülhetnek."
+      ],
+      [
+        "Mit ellenőrizzek először?",
+        "Méretek, szín, mennyiség, csomagtartalom, aktuális ár és készlet."
+      ],
+      [
+        "Hogyan regisztráljak?",
+        "Használd a regisztrációs gombot a T2JMMC kóddal. A fiókot, rendelést és fizetést a USFans kezeli."
+      ],
+      [
+        "A QC-képek az én rendelésemről készültek?",
+        "Nem, korábbi referenciák. Beérkezés után a Warehouse oldalon nézd meg a saját képeidet."
+      ],
+      [
+        "Mit nézzek a QC-képeken?",
+        "Címkéket, színt, mennyiséget, varrásokat és látható hibákat. Kérj további képet vagy mérést, ha szükséges."
+      ],
+      [
+        "Összevonhatók a termékek?",
+        "Válassz raktári tételeket, amelyek ugyanazon útvonalon szállíthatók."
+      ],
+      [
+        "Hogyan kérjek visszaküldést?",
+        "A nemzetközi feladás előtt keresd az ügyfélszolgálatot a rendelésből. Feltételek, határidők és díjak eltérhetnek."
+      ],
+      [
+        "Mennyibe kerül a szállítás?",
+        "A cél, útvonal, csomagolt tömeg és méret határozza meg. Ellenőrizd a USFans aktuális ajánlatát."
+      ],
+      [
+        "Miért nincs szállítási útvonal?",
+        "Ellenőrizd a célországot és korlátozásokat, főleg folyadékoknál és akkumulátoroknál. Kérdezd az ügyfélszolgálatot."
+      ],
+      [
+        "Hol követhetem a csomagot?",
+        "Nyisd meg a Parcel oldalon. Frissítések hiányában add meg a csomagszámot az ügyfélszolgálatnak."
+      ],
+      [
+        "Ki segít fizetési problémánál?",
+        "A USFans az érintett rendelésen vagy csomagon keresztül. A katalógus nem módosíthatja ezeket."
+      ]
+    ]
+  },
+  "it": {
+    "tabs": [
+      "Prima di ordinare",
+      "Foto del magazzino / QC",
+      "Paga il trasporto internazionale"
+    ],
+    "intro": "Esplora i prodotti, confronta i dettagli e salva i tuoi preferiti.",
+    "note": "Sito indipendente, non affiliato a USFans. I link possono generare commissioni; nessuna garanzia di autenticità o qualità.",
+    "help": "USFans · Domande frequenti",
+    "register": "Registrati su USFans",
+    "items": [
+      [
+        "Come si acquista?",
+        "Apri il prodotto del catalogo e passa alla stessa inserzione su USFans. Controlla variante e costi prima di ordinare."
+      ],
+      [
+        "Il prezzo comprende tutto?",
+        "No. Al prezzo si possono aggiungere trasporto interno cinese, spedizione internazionale e altri oneri applicabili."
+      ],
+      [
+        "Cosa verificare prima dell’acquisto?",
+        "Confronta misure, colore, quantità e contenuto della confezione; verifica prezzo e disponibilità aggiornati."
+      ],
+      [
+        "Come registrarsi?",
+        "Usa il pulsante di registrazione con codice T2JMMC. Registrazione, ordini e pagamenti avvengono su USFans."
+      ],
+      [
+        "Le foto QC sono del mio ordine?",
+        "No. Le immagini del catalogo sono riferimenti storici. Dopo l’arrivo controlla le foto del tuo ordine nel magazzino USFans."
+      ],
+      [
+        "Cosa controllare nel QC?",
+        "Verifica etichette, colore, quantità, cuciture e difetti visibili. Se necessario richiedi misure o foto aggiuntive."
+      ],
+      [
+        "Posso unire più articoli?",
+        "Se disponibili e compatibili con la rotta, seleziona gli articoli in magazzino per preparare un unico pacco."
+      ],
+      [
+        "Come richiedere un reso?",
+        "Contatta l’assistenza tramite l’ordine prima della spedizione internazionale. Condizioni, scadenze e costi dipendono dall’articolo."
+      ],
+      [
+        "Quanto costa la spedizione?",
+        "Dipende da destinazione, rotta, peso e dimensioni del pacco. Fa fede il preventivo aggiornato di USFans."
+      ],
+      [
+        "Perché non trovo una rotta?",
+        "Controlla destinazione e restrizioni dell’articolo. Batterie e liquidi possono limitare le opzioni; chiedi all’assistenza."
+      ],
+      [
+        "Dove seguo il pacco?",
+        "In Parcel apri la registrazione del pacco e consulta il tracciamento. Se non si aggiorna, comunica il numero all’assistenza."
+      ],
+      [
+        "Chi risolve problemi di ordine o pagamento?",
+        "USFans gestisce gli ordini. Contatta l’assistenza dall’ordine o dal pacco interessato; questo catalogo non può modificarli."
+      ]
+    ]
+  },
+  "ja": {
+    "tabs": [
+      "注文前の確認",
+      "倉庫・検品写真（QC）",
+      "国際送料を支払う"
+    ],
+    "intro": "商品を探し、詳細を比較してお気に入りを保存しましょう。",
+    "note": "USFansとは提携していない独立サイトです。紹介リンクから報酬を得る場合があります。商品の真贋や品質を保証するものではありません。",
+    "help": "USFans · よくある質問",
+    "register": "USFansに登録",
+    "items": [
+      [
+        "購入方法は？",
+        "カタログの商品を開き、USFansの同じ商品ページへ進みます。仕様と費用を確認してから注文してください。"
+      ],
+      [
+        "表示価格にすべて含まれますか？",
+        "いいえ。中国国内送料、国際送料、その他の対象費用が追加される場合があります。"
+      ],
+      [
+        "購入前に何を確認しますか？",
+        "実寸、色、数量、同梱品、最新の価格と在庫を確認してください。"
+      ],
+      [
+        "登録方法は？",
+        "紹介コードT2JMMC付きの登録ボタンを使います。登録、注文、支払いはUSFansで行います。"
+      ],
+      [
+        "QC写真は自分の注文ですか？",
+        "いいえ。過去の参考写真です。入庫後にWarehouseでご自身の注文写真を確認してください。"
+      ],
+      [
+        "QCで何を見ますか？",
+        "ラベル、色、数量、縫製、目に見える不具合を確認します。必要なら追加撮影や採寸を依頼してください。"
+      ],
+      [
+        "複数の商品をまとめられますか？",
+        "同じ配送ルートで発送可能な入庫済み商品を選んで、荷物をまとめます。"
+      ],
+      [
+        "返品するには？",
+        "国際発送前に注文画面からサポートへ連絡してください。条件、期限、費用は商品ごとに異なります。"
+      ],
+      [
+        "送料はいくらですか？",
+        "配送先、ルート、梱包後の重量と寸法によります。USFansの最新の見積もりを確認してください。"
+      ],
+      [
+        "配送ルートが出ないのはなぜですか？",
+        "国と商品の制限、特に液体や電池の可否を確認し、サポートへ相談してください。"
+      ],
+      [
+        "荷物はどこで追跡しますか？",
+        "Parcelで該当する荷物を開きます。更新がない場合は荷物番号をサポートに伝えてください。"
+      ],
+      [
+        "支払いの問題は誰に相談しますか？",
+        "該当する注文や荷物からUSFansへ連絡してください。このカタログでは注文を変更できません。"
+      ]
+    ]
+  },
+  "ko": {
+    "tabs": [
+      "주문 전 확인",
+      "창고 검수 사진 / QC",
+      "국제 배송비 결제"
+    ],
+    "intro": "상품을 둘러보고 상세 정보를 비교하며 마음에 드는 상품을 저장하세요.",
+    "note": "USFans와 제휴하지 않은 독립 사이트입니다. 링크로 수수료를 받을 수 있으며 정품 여부나 품질을 보증하지 않습니다.",
+    "help": "USFans · 자주 묻는 질문",
+    "register": "USFans 가입",
+    "items": [
+      [
+        "어떻게 구매하나요?",
+        "상품을 열고 USFans의 같은 판매 페이지로 이동합니다. 옵션과 비용을 확인한 후 주문하세요."
+      ],
+      [
+        "가격에 모든 비용이 포함되나요?",
+        "아니요. 중국 내 배송비, 국제 배송비와 기타 해당 비용이 추가될 수 있습니다."
+      ],
+      [
+        "구매 전에 무엇을 확인하나요?",
+        "실측, 색상, 수량, 구성품, 최신 가격과 재고를 확인하세요."
+      ],
+      [
+        "어떻게 가입하나요?",
+        "추천 코드 T2JMMC가 있는 가입 버튼을 사용하세요. 가입, 주문과 결제는 USFans에서 진행합니다."
+      ],
+      [
+        "QC 사진은 제 주문인가요?",
+        "아니요. 과거 참고 사진입니다. 입고 후 Warehouse에서 본인 주문의 사진을 확인하세요."
+      ],
+      [
+        "QC에서 무엇을 보나요?",
+        "라벨, 색상, 수량, 봉제와 눈에 보이는 결함을 확인합니다. 필요하면 추가 촬영이나 실측을 요청하세요."
+      ],
+      [
+        "여러 상품을 합칠 수 있나요?",
+        "같은 배송 노선을 이용할 수 있는 입고 상품을 선택해 한 소포로 준비할 수 있습니다."
+      ],
+      [
+        "반품은 어떻게 요청하나요?",
+        "국제 발송 전에 주문에서 고객지원에 문의하세요. 조건, 기한과 비용은 상품마다 다릅니다."
+      ],
+      [
+        "배송비는 얼마인가요?",
+        "도착 국가, 노선, 포장 후 무게와 크기에 따라 다릅니다. USFans의 최신 견적을 확인하세요."
+      ],
+      [
+        "배송 노선이 없는 이유는 무엇인가요?",
+        "국가와 상품 제한, 특히 액체나 배터리 조건을 확인하고 고객지원에 문의하세요."
+      ],
+      [
+        "어디서 배송을 추적하나요?",
+        "Parcel에서 해당 소포를 여세요. 업데이트가 없으면 소포 번호를 고객지원에 알려주세요."
+      ],
+      [
+        "결제 문제는 누가 처리하나요?",
+        "해당 주문이나 소포에서 USFans에 문의하세요. 이 상품 목록은 주문을 수정할 수 없습니다."
+      ]
+    ]
+  },
+  "nb": {
+    "tabs": [
+      "Før bestilling",
+      "Lagerbilder / QC",
+      "Betal internasjonal frakt"
+    ],
+    "intro": "Utforsk produkter, sammenlign detaljer og lagre favoritter.",
+    "note": "Uavhengig nettsted uten tilknytning til USFans. Lenker kan gi provisjon; ingen garanti for ekthet eller kvalitet.",
+    "help": "USFans · Vanlige spørsmål",
+    "register": "Registrer deg hos USFans",
+    "items": [
+      [
+        "Hvordan kjøper jeg?",
+        "Åpne produktet og samme annonse hos USFans. Kontroller variant og kostnader før bestilling."
+      ],
+      [
+        "Er alle kostnader inkludert?",
+        "Nei. Innenlandsfrakt i Kina, internasjonal frakt og andre avgifter kan komme i tillegg."
+      ],
+      [
+        "Hva kontrollerer jeg først?",
+        "Sammenlign mål, farge, antall, innhold, gjeldende pris og lagerstatus."
+      ],
+      [
+        "Hvordan registrerer jeg meg?",
+        "Bruk registreringsknappen med T2JMMC. Konto, bestilling og betaling håndteres av USFans."
+      ],
+      [
+        "Er QC-bildene fra min bestilling?",
+        "Nei, de er historiske referanser. Se egne bilder i Warehouse etter ankomst."
+      ],
+      [
+        "Hva kontrollerer jeg i QC?",
+        "Etiketter, farge, antall, sømmer og synlige feil. Be om ekstra bilder eller mål ved behov."
+      ],
+      [
+        "Kan varer sendes sammen?",
+        "Velg tilgjengelige lagervarer som er tillatt på samme fraktrute."
+      ],
+      [
+        "Hvordan ber jeg om retur?",
+        "Kontakt support gjennom bestillingen før internasjonal frakt. Vilkår, frister og gebyrer varierer."
+      ],
+      [
+        "Hva koster frakten?",
+        "Destinasjon, rute, pakket vekt og mål avgjør prisen. Kontroller USFans gjeldende tilbud."
+      ],
+      [
+        "Hvorfor mangler en rute?",
+        "Kontroller destinasjon og varebegrensninger, særlig væsker og batterier. Spør support."
+      ],
+      [
+        "Hvor sporer jeg pakken?",
+        "Åpne pakken i Parcel. Oppgi pakkenummer til support ved manglende oppdateringer."
+      ],
+      [
+        "Hvem hjelper med betaling?",
+        "USFans via den aktuelle bestillingen eller pakken. Katalogen kan ikke endre dem."
+      ]
+    ]
+  },
+  "nl": {
+    "tabs": [
+      "Voor je bestelt",
+      "Magazijnfoto’s / QC",
+      "Betaal internationaal vervoer"
+    ],
+    "intro": "Ontdek producten, vergelijk details en bewaar je favorieten.",
+    "note": "Onafhankelijke website, niet verbonden aan USFans. Links kunnen commissie opleveren; geen garantie op echtheid of kwaliteit.",
+    "help": "USFans · Veelgestelde vragen",
+    "register": "Registreren bij USFans",
+    "items": [
+      [
+        "Hoe bestel ik?",
+        "Open een catalogusproduct en vervolgens dezelfde aanbieding op USFans. Controleer uitvoering en kosten voordat je bestelt."
+      ],
+      [
+        "Is de prijs inclusief alles?",
+        "Nee. Binnenlands vervoer in China, internationale verzending en andere toepasselijke kosten kunnen erbij komen."
+      ],
+      [
+        "Wat controleer ik vooraf?",
+        "Vergelijk maten, kleur, aantal en inbegrepen onderdelen. Controleer actuele beschikbaarheid en prijs."
+      ],
+      [
+        "Hoe registreer ik me?",
+        "Gebruik de registratieknop met code T2JMMC. Registratie, bestelling en betaling vinden op USFans plaats."
+      ],
+      [
+        "Zijn de QC-foto’s van mijn bestelling?",
+        "Nee. Catalogusfoto’s zijn historische voorbeelden. Bekijk na aankomst de foto’s van je eigen bestelling in Warehouse."
+      ],
+      [
+        "Wat controleer ik op QC-foto’s?",
+        "Controleer labels, kleur, aantal, naden en zichtbare gebreken. Vraag zo nodig extra foto’s of metingen."
+      ],
+      [
+        "Kan ik artikelen samen verzenden?",
+        "Selecteer geschikte opgeslagen artikelen voor één pakket, als de gekozen verzendroute dat toestaat."
+      ],
+      [
+        "Hoe vraag ik een retour aan?",
+        "Neem vóór internationale verzending via de bestelling contact op. Voorwaarden, termijnen en kosten verschillen per artikel."
+      ],
+      [
+        "Wat kost verzending?",
+        "Dat hangt af van bestemming, route, verpakt gewicht en afmetingen. Controleer de actuele USFans-offerte."
+      ],
+      [
+        "Waarom ontbreekt een verzendroute?",
+        "Controleer bestemming en productbeperkingen. Vloeistoffen en batterijen kunnen opties beperken; vraag de klantenservice."
+      ],
+      [
+        "Waar volg ik mijn pakket?",
+        "Open het pakket in Parcel en bekijk de tracking. Geef bij ontbrekende updates het pakketnummer aan de klantenservice."
+      ],
+      [
+        "Wie helpt bij betaal- of bestelproblemen?",
+        "USFans verwerkt bestellingen. Vraag hulp via de betreffende bestelling of het pakket; deze catalogus kan ze niet wijzigen."
+      ]
+    ]
+  },
+  "pl": {
+    "tabs": [
+      "Przed zamówieniem",
+      "Zdjęcia magazynowe / QC",
+      "Opłać wysyłkę międzynarodową"
+    ],
+    "intro": "Odkrywaj produkty, porównuj szczegóły i zapisuj ulubione.",
+    "note": "Niezależna strona, niepowiązana z USFans. Linki mogą przynosić prowizję; brak gwarancji autentyczności lub jakości.",
+    "help": "USFans · Pytania i odpowiedzi",
+    "register": "Zarejestruj się w USFans",
+    "items": [
+      [
+        "Jak kupować?",
+        "Otwórz produkt w katalogu, a następnie tę samą ofertę w USFans. Przed zamówieniem sprawdź wariant i koszty."
+      ],
+      [
+        "Czy cena obejmuje wszystko?",
+        "Nie. Mogą dojść dostawa krajowa w Chinach, wysyłka międzynarodowa i inne należne opłaty."
+      ],
+      [
+        "Co sprawdzić przed zakupem?",
+        "Porównaj wymiary, kolor, liczbę sztuk i zawartość zestawu. Sprawdź aktualną cenę oraz dostępność."
+      ],
+      [
+        "Jak się zarejestrować?",
+        "Użyj przycisku rejestracji z kodem T2JMMC. Rejestracja, zamówienia i płatności odbywają się w USFans."
+      ],
+      [
+        "Czy QC przedstawia moje zamówienie?",
+        "Nie. Zdjęcia katalogowe to materiały historyczne. Po dostawie sprawdź zdjęcia własnego zamówienia w Warehouse."
+      ],
+      [
+        "Co oceniać na QC?",
+        "Sprawdź metki, kolor, ilość, szwy i widoczne wady. W razie potrzeby poproś o dodatkowe zdjęcia lub pomiary."
+      ],
+      [
+        "Czy można połączyć produkty?",
+        "Wybierz zgodne z trasą produkty dostępne w magazynie, aby przygotować wspólną paczkę."
+      ],
+      [
+        "Jak poprosić o zwrot?",
+        "Skontaktuj się przez zamówienie przed wysyłką międzynarodową. Warunki, terminy i opłaty zależą od produktu."
+      ],
+      [
+        "Ile kosztuje wysyłka?",
+        "Zależy od kraju, trasy, wagi i wymiarów zapakowanej paczki. Sprawdź aktualną wycenę USFans."
+      ],
+      [
+        "Dlaczego nie ma trasy dostawy?",
+        "Sprawdź kraj i ograniczenia towaru. Baterie i płyny mogą ograniczać wybór; zapytaj obsługę."
+      ],
+      [
+        "Gdzie śledzić paczkę?",
+        "Otwórz paczkę w Parcel i sprawdź śledzenie. Przy braku aktualizacji podaj obsłudze numer paczki."
+      ],
+      [
+        "Kto pomaga w sprawach płatności?",
+        "USFans obsługuje zamówienia. Skontaktuj się przez odpowiednie zamówienie lub paczkę; katalog nie może ich zmieniać."
+      ]
+    ]
+  },
+  "ro": {
+    "tabs": [
+      "Înainte de comandă",
+      "Fotografii depozit / QC",
+      "Plătește transportul internațional"
+    ],
+    "intro": "Descoperă produse, compară detaliile și salvează favoritele.",
+    "note": "Site independent, fără afiliere cu USFans. Linkurile pot genera comisioane; autenticitatea și calitatea nu sunt garantate.",
+    "help": "USFans · Întrebări frecvente",
+    "register": "Înregistrează-te pe USFans",
+    "items": [
+      [
+        "Cum cumpăr?",
+        "Deschide produsul și aceeași ofertă pe USFans. Verifică varianta și costurile înainte de comandă."
+      ],
+      [
+        "Prețul include totul?",
+        "Nu. Transportul intern din China, cel internațional și alte taxe se pot adăuga."
+      ],
+      [
+        "Ce verific înainte?",
+        "Dimensiunile, culoarea, cantitatea, conținutul, prețul actual și disponibilitatea."
+      ],
+      [
+        "Cum mă înregistrez?",
+        "Folosește butonul de înregistrare cu T2JMMC. Contul, comenzile și plățile sunt gestionate de USFans."
+      ],
+      [
+        "Fotografiile QC sunt ale comenzii mele?",
+        "Nu, sunt referințe istorice. Verifică fotografiile tale în Warehouse după sosire."
+      ],
+      [
+        "Ce verific în QC?",
+        "Etichete, culoare, număr de bucăți, cusături și defecte vizibile. Cere fotografii sau măsurători suplimentare dacă trebuie."
+      ],
+      [
+        "Pot combina produse?",
+        "Selectează articole din depozit permise pe aceeași rută de transport."
+      ],
+      [
+        "Cum cer returul?",
+        "Contactează asistența prin comandă înainte de transportul internațional. Condițiile, termenele și taxele diferă."
+      ],
+      [
+        "Cât costă transportul?",
+        "Depinde de destinație, rută, greutatea ambalată și dimensiuni. Verifică oferta actuală USFans."
+      ],
+      [
+        "De ce lipsește o rută?",
+        "Verifică țara și restricțiile produsului, mai ales lichide și baterii. Întreabă asistența."
+      ],
+      [
+        "Unde urmăresc coletul?",
+        "Deschide coletul în Parcel. Dacă lipsesc actualizări, comunică asistenței numărul coletului."
+      ],
+      [
+        "Cine rezolvă problemele de plată?",
+        "USFans, prin comanda sau coletul respectiv. Catalogul nu le poate modifica."
+      ]
+    ]
+  },
+  "ru": {
+    "tabs": [
+      "Перед заказом",
+      "Складские фотографии / QC",
+      "Оплатите международную доставку"
+    ],
+    "intro": "Находите товары, сравнивайте детали и сохраняйте любимые.",
+    "note": "Независимый сайт, не связанный с USFans. Ссылки могут приносить комиссию; подлинность и качество не гарантируются.",
+    "help": "USFans · Частые вопросы",
+    "register": "Регистрация в USFans",
+    "items": [
+      [
+        "Как купить?",
+        "Откройте товар и то же объявление в USFans. Перед заказом проверьте вариант и расходы."
+      ],
+      [
+        "Всё включено в цену?",
+        "Нет. Возможны доставка по Китаю, международная перевозка и другие платежи."
+      ],
+      [
+        "Что проверить сначала?",
+        "Размеры, цвет, количество, комплектность, актуальную цену и наличие."
+      ],
+      [
+        "Как зарегистрироваться?",
+        "Используйте кнопку регистрации с T2JMMC. Аккаунт, заказы и платежи обслуживает USFans."
+      ],
+      [
+        "QC-фото от моего заказа?",
+        "Нет, это исторические примеры. После поступления проверьте собственные фото в Warehouse."
+      ],
+      [
+        "Что смотреть на QC?",
+        "Этикетки, цвет, количество, швы и видимые дефекты. При необходимости попросите дополнительные фото или замеры."
+      ],
+      [
+        "Можно объединить товары?",
+        "Выберите складские позиции, разрешённые для одного маршрута доставки."
+      ],
+      [
+        "Как запросить возврат?",
+        "Обратитесь через заказ до международной отправки. Условия, сроки и расходы различаются."
+      ],
+      [
+        "Сколько стоит доставка?",
+        "Зависит от страны, маршрута, упакованного веса и размеров. Проверьте актуальный расчёт USFans."
+      ],
+      [
+        "Почему нет маршрута?",
+        "Проверьте страну и ограничения товара, особенно жидкостей и аккумуляторов. Спросите поддержку."
+      ],
+      [
+        "Где отслеживать посылку?",
+        "Откройте её в Parcel. Если обновлений нет, сообщите поддержке номер посылки."
+      ],
+      [
+        "Кто поможет с оплатой?",
+        "USFans через соответствующий заказ или посылку. Этот каталог не может их изменять."
+      ]
+    ]
+  },
+  "sk": {
+    "tabs": [
+      "Pred objednaním",
+      "Skladové fotografie / QC",
+      "Zaplaťte medzinárodnú dopravu"
+    ],
+    "intro": "Objavujte produkty, porovnávajte podrobnosti a ukladajte obľúbené.",
+    "note": "Nezávislý web bez prepojenia na USFans. Odkazy môžu prinášať províziu; pravosť ani kvalita nie sú zaručené.",
+    "help": "USFans · Časté otázky",
+    "register": "Registrácia v USFans",
+    "items": [
+      [
+        "Ako nakúpiť?",
+        "Otvorte produkt a rovnakú ponuku na USFans. Pred objednaním overte variant a náklady."
+      ],
+      [
+        "Zahŕňa cena všetko?",
+        "Nie. Doprava v Číne, medzinárodná preprava a ďalšie poplatky môžu byť navyše."
+      ],
+      [
+        "Čo overiť pred nákupom?",
+        "Rozmery, farbu, počet kusov, obsah balenia a aktuálnu cenu a dostupnosť."
+      ],
+      [
+        "Ako sa zaregistrovať?",
+        "Použite registračné tlačidlo s T2JMMC. Účet, objednávky a platby spravuje USFans."
+      ],
+      [
+        "Sú QC fotografie z mojej objednávky?",
+        "Nie, sú historické. Po prijatí tovaru skontrolujte vlastné fotografie vo Warehouse."
+      ],
+      [
+        "Čo kontrolovať na QC?",
+        "Štítky, farbu, počet, švy a viditeľné vady. Podľa potreby žiadajte ďalšie snímky alebo merania."
+      ],
+      [
+        "Možno produkty spojiť?",
+        "Vyberte skladové položky povolené pre rovnakú prepravnú trasu."
+      ],
+      [
+        "Ako požiadať o vrátenie?",
+        "Kontaktujte podporu cez objednávku pred medzinárodnou prepravou. Podmienky, lehoty a poplatky sa líšia."
+      ],
+      [
+        "Koľko stojí doprava?",
+        "Závisí od cieľa, trasy, zabalenej hmotnosti a rozmerov. Overte aktuálnu ponuku USFans."
+      ],
+      [
+        "Prečo chýba trasa?",
+        "Overte krajinu a obmedzenia výrobku, najmä kvapalín a batérií. Kontaktujte podporu."
+      ],
+      [
+        "Kde sledovať zásielku?",
+        "Otvorte balík v Parcel. Pri chýbajúcich aktualizáciách dajte podpore číslo balíka."
+      ],
+      [
+        "Kto rieši platby?",
+        "USFans cez príslušnú objednávku alebo balík. Katalóg ich nemôže meniť."
+      ]
+    ]
+  },
+  "sv": {
+    "tabs": [
+      "Före beställning",
+      "Lagerbilder / QC",
+      "Betala internationell frakt"
+    ],
+    "intro": "Utforska produkter, jämför detaljer och spara favoriter.",
+    "note": "Oberoende webbplats utan koppling till USFans. Länkar kan ge provision; äkthet och kvalitet garanteras inte.",
+    "help": "USFans · Vanliga frågor",
+    "register": "Registrera dig på USFans",
+    "items": [
+      [
+        "Hur köper jag?",
+        "Öppna produkten och samma annons på USFans. Kontrollera modell och kostnader före beställning."
+      ],
+      [
+        "Ingår alla kostnader?",
+        "Nej. Inrikesfrakt i Kina, internationell frakt och andra avgifter kan tillkomma."
+      ],
+      [
+        "Vad kontrollerar jag först?",
+        "Jämför mått, färg, antal, innehåll, aktuell tillgänglighet och pris."
+      ],
+      [
+        "Hur registrerar jag mig?",
+        "Använd registreringsknappen med T2JMMC. Konto, beställning och betalning hanteras av USFans."
+      ],
+      [
+        "Är QC-bilderna från min beställning?",
+        "Nej, de är historiska referenser. Kontrollera dina egna bilder i Warehouse efter ankomst."
+      ],
+      [
+        "Vad granskar jag i QC?",
+        "Etiketter, färg, antal, sömmar och synliga fel. Be vid behov om fler bilder eller mått."
+      ],
+      [
+        "Kan produkter samfraktas?",
+        "Välj tillgängliga lagerartiklar som är godkända för samma fraktrutt."
+      ],
+      [
+        "Hur begär jag retur?",
+        "Kontakta support via beställningen före internationell frakt. Villkor, tidsfrister och avgifter varierar."
+      ],
+      [
+        "Vad kostar frakten?",
+        "Destination, rutt, packad vikt och mått styr priset. Kontrollera USFans aktuella offert."
+      ],
+      [
+        "Varför saknas en fraktrutt?",
+        "Kontrollera destination och produktrestriktioner, särskilt batterier och vätskor. Fråga supporten."
+      ],
+      [
+        "Var spårar jag paketet?",
+        "Öppna paketet i Parcel. Vid uteblivna uppdateringar, ge supporten paketnumret."
+      ],
+      [
+        "Vem hjälper med betalning?",
+        "USFans support via beställningen eller paketet. Denna katalog kan inte ändra dem."
+      ]
+    ]
+  },
+  "tr": {
+    "tabs": [
+      "Siparişten önce",
+      "Depo fotoğrafları / QC",
+      "Uluslararası kargoyu ödeyin"
+    ],
+    "intro": "Ürünleri keşfedin, ayrıntıları karşılaştırın ve favorilerinizi kaydedin.",
+    "note": "USFans’a bağlı olmayan bağımsız site. Bağlantılar komisyon getirebilir; özgünlük veya kalite garantisi yoktur.",
+    "help": "USFans · Sık sorulan sorular",
+    "register": "USFans’a kaydol",
+    "items": [
+      [
+        "Nasıl satın alırım?",
+        "Ürünü ve aynı ilanı USFans’ta açın. Siparişten önce model ve masrafları kontrol edin."
+      ],
+      [
+        "Fiyat her şeyi kapsar mı?",
+        "Hayır. Çin içi kargo, uluslararası kargo ve diğer ücretler eklenebilir."
+      ],
+      [
+        "Önce neyi kontrol etmeliyim?",
+        "Ölçü, renk, miktar, paket içeriği, güncel fiyat ve stok durumunu."
+      ],
+      [
+        "Nasıl kaydolurum?",
+        "T2JMMC kodlu kayıt düğmesini kullanın. Hesap, sipariş ve ödemeyi USFans yönetir."
+      ],
+      [
+        "QC fotoğrafları benim siparişim mi?",
+        "Hayır, geçmiş örneklerdir. Ürün ulaştığında Warehouse bölümünde kendi fotoğraflarınızı inceleyin."
+      ],
+      [
+        "QC’de neye bakmalıyım?",
+        "Etiket, renk, miktar, dikiş ve görünür kusurlara. Gerekirse ek fotoğraf veya ölçüm isteyin."
+      ],
+      [
+        "Ürünleri birleştirebilir miyim?",
+        "Aynı kargo hattına uygun, depoda bulunan ürünleri seçebilirsiniz."
+      ],
+      [
+        "İade nasıl istenir?",
+        "Uluslararası gönderimden önce sipariş üzerinden destekle görüşün. Koşullar, süreler ve ücretler değişir."
+      ],
+      [
+        "Kargo ne kadar?",
+        "Hedef ülke, hat, paketlenmiş ağırlık ve boyuta bağlıdır. USFans’ın güncel teklifini kontrol edin."
+      ],
+      [
+        "Neden kargo hattı yok?",
+        "Ülke ve ürün kısıtlamalarını, özellikle sıvı ve pilleri kontrol edin. Desteğe danışın."
+      ],
+      [
+        "Paketi nerede takip ederim?",
+        "Parcel bölümünde paketi açın. Güncelleme yoksa destek ekibine paket numarasını verin."
+      ],
+      [
+        "Ödeme sorunlarına kim bakar?",
+        "İlgili sipariş veya paket üzerinden USFans. Bu katalog kayıtları değiştiremez."
+      ]
+    ]
+  },
+  "uk": {
+    "tabs": [
+      "Перед замовленням",
+      "Складські фото / QC",
+      "Оплатіть міжнародну доставку"
+    ],
+    "intro": "Знаходьте товари, порівнюйте деталі й зберігайте улюблені.",
+    "note": "Незалежний сайт, не пов’язаний з USFans. Посилання можуть приносити комісію; справжність і якість не гарантовані.",
+    "help": "USFans · Поширені запитання",
+    "register": "Реєстрація в USFans",
+    "items": [
+      [
+        "Як придбати?",
+        "Відкрийте товар і ту саму пропозицію в USFans. Перед замовленням перевірте варіант і витрати."
+      ],
+      [
+        "Чи все включено в ціну?",
+        "Ні. Можуть додаватися доставка Китаєм, міжнародна доставка та інші платежі."
+      ],
+      [
+        "Що перевірити спочатку?",
+        "Виміри, колір, кількість, комплектацію, актуальну ціну та наявність."
+      ],
+      [
+        "Як зареєструватися?",
+        "Скористайтеся кнопкою реєстрації з T2JMMC. Обліковий запис, замовлення й оплати обслуговує USFans."
+      ],
+      [
+        "QC-фото з мого замовлення?",
+        "Ні, це історичні приклади. Після надходження перевірте власні фото у Warehouse."
+      ],
+      [
+        "Що дивитися на QC?",
+        "Етикетки, колір, кількість, шви й видимі дефекти. За потреби попросіть додаткові фото або виміри."
+      ],
+      [
+        "Чи можна об’єднати товари?",
+        "Виберіть складські товари, дозволені для одного маршруту доставки."
+      ],
+      [
+        "Як попросити повернення?",
+        "Зверніться через замовлення до міжнародного відправлення. Умови, строки й оплати різняться."
+      ],
+      [
+        "Скільки коштує доставка?",
+        "Залежить від країни, маршруту, упакованої ваги й розмірів. Перевірте актуальний розрахунок USFans."
+      ],
+      [
+        "Чому немає маршруту?",
+        "Перевірте країну й обмеження товару, особливо рідин та акумуляторів. Запитайте підтримку."
+      ],
+      [
+        "Де відстежувати посилку?",
+        "Відкрийте її у Parcel. За відсутності оновлень надайте підтримці номер посилки."
+      ],
+      [
+        "Хто допоможе з оплатою?",
+        "USFans через відповідне замовлення або посилку. Цей каталог не може їх змінювати."
+      ]
+    ]
+  }
+}

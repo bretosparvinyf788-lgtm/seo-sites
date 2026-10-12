@@ -1,0 +1,228 @@
+{
+  "name": "Nederlands",
+  "currency": "EUR",
+  "nav": [
+    "Home",
+    "Catalogus",
+    "Categorieën",
+    "Beginnersgids",
+    "Veelgestelde vragen",
+    "Registreren bij USFans",
+    "Taal",
+    "Valuta"
+  ],
+  "cats": [
+    "Schoenen en slippers",
+    "T-shirts",
+    "Kleding",
+    "Hoodies",
+    "Broeken en shorts",
+    "Riemen",
+    "Tassen",
+    "Parfum",
+    "Elektronica",
+    "Accessoires"
+  ],
+  "labels": [
+    "Alle producten",
+    "Details",
+    "Vastgelegde prijs",
+    "Catalogusprijzen zijn indicatief; verzending en andere kosten kunnen erbij komen.",
+    "Van kiezen tot bezorgen",
+    "Terug naar catalogus",
+    "Originele aanbieding bekijken",
+    "Product op USFans openen",
+    "Verkoperslink kopiëren",
+    "Link gekopieerd",
+    "Productfoto’s",
+    "Magazijnfoto’s / QC",
+    "Geen passende QC-foto’s beschikbaar.",
+    "Voor je bestelt",
+    "Onafhankelijke productcatalogus met aankoopinstructies.",
+    "Onafhankelijke website, niet verbonden aan USFans. Links kunnen commissie opleveren; geen garantie op echtheid of kwaliteit.",
+    "Catalogusvolgorde",
+    "Prijs oplopend",
+    "Prijs aflopend",
+    "Geen producten beschikbaar.",
+    "Volledige broncategorie bekijken",
+    "Historische QC-foto’s, niet van jouw bestelling. Kleur en uitvoering kunnen verschillen.",
+    "Oorspronkelijk product-ID",
+    "Afbeelding vergroten",
+    "Afbeelding sluiten",
+    "Verwijzingscode",
+    "Controlepunten per categorie",
+    "Categorie bekijken",
+    "Maat en specificaties",
+    "Foto’s controleren"
+  ],
+  "explore": [
+    "Ontdekken",
+    "Opgeslagen",
+    "Recent bekeken",
+    "Product opslaan",
+    "Verwijderen uit opgeslagen",
+    "Met QC-foto’s",
+    "Productbudget",
+    "Elke prijs",
+    "Filters wissen",
+    "Meer tonen",
+    "{shown} van {total} producten",
+    "Opnieuw proberen",
+    "Geschiedenis wissen",
+    "Alle categorieën",
+    "Sorteren op",
+    "Laden…",
+    "Wisselkoersdatum"
+  ],
+  "faq": [
+    [
+      "Hoe bestel ik?",
+      "Open een catalogusproduct en vervolgens dezelfde aanbieding op USFans. Controleer uitvoering en kosten voordat je bestelt."
+    ],
+    [
+      "Is de prijs inclusief alles?",
+      "Nee. Binnenlands vervoer in China, internationale verzending en andere toepasselijke kosten kunnen erbij komen."
+    ],
+    [
+      "Wat controleer ik vooraf?",
+      "Vergelijk maten, kleur, aantal en inbegrepen onderdelen. Controleer actuele beschikbaarheid en prijs."
+    ],
+    [
+      "Hoe registreer ik me?",
+      "Gebruik de registratieknop met code T2JMMC. Registratie, bestelling en betaling vinden op USFans plaats."
+    ],
+    [
+      "Zijn de QC-foto’s van mijn bestelling?",
+      "Nee. Catalogusfoto’s zijn historische voorbeelden. Bekijk na aankomst de foto’s van je eigen bestelling in Warehouse."
+    ],
+    [
+      "Wat controleer ik op QC-foto’s?",
+      "Controleer labels, kleur, aantal, naden en zichtbare gebreken. Vraag zo nodig extra foto’s of metingen."
+    ],
+    [
+      "Kan ik artikelen samen verzenden?",
+      "Selecteer geschikte opgeslagen artikelen voor één pakket, als de gekozen verzendroute dat toestaat."
+    ],
+    [
+      "Hoe vraag ik een retour aan?",
+      "Neem vóór internationale verzending via de bestelling contact op. Voorwaarden, termijnen en kosten verschillen per artikel."
+    ],
+    [
+      "Wat kost verzending?",
+      "Dat hangt af van bestemming, route, verpakt gewicht en afmetingen. Controleer de actuele USFans-offerte."
+    ],
+    [
+      "Waarom ontbreekt een verzendroute?",
+      "Controleer bestemming en productbeperkingen. Vloeistoffen en batterijen kunnen opties beperken; vraag de klantenservice."
+    ],
+    [
+      "Waar volg ik mijn pakket?",
+      "Open het pakket in Parcel en bekijk de tracking. Geef bij ontbrekende updates het pakketnummer aan de klantenservice."
+    ],
+    [
+      "Wie helpt bij betaal- of bestelproblemen?",
+      "USFans verwerkt bestellingen. Vraag hulp via de betreffende bestelling of het pakket; deze catalogus kan ze niet wijzigen."
+    ]
+  ],
+  "steps": [
+    [
+      "Kies een product op USFans",
+      "Kies de categorie broeken en open de afbeelding of naam van de AMI-shorts. Bekijk foto’s en referentie-QC en gebruik daarna de aankoopknop."
+    ],
+    [
+      "Kies uitvoering en maat",
+      "Klik onder Style op de uitvoering en onder Size op de passende maat. Vergelijk afmetingen, stel Quantity in met − / +, controleer Total en klik Buy now."
+    ],
+    [
+      "Controleer en betaal de bestelling",
+      "Controleer SKU, maat en aantal op Confirm Order. Order Summary toont Product Price en Domestic Freight (China). Lees de voorwaarden voordat je instemt en Submit kiest; internationale verzending is niet inbegrepen."
+    ],
+    [
+      "Volg de aankoop",
+      "Open Order vanuit het accountmenu. Kies bijvoorbeeld Payment Pending, zoek op productnaam of nummer en klik Search. Controleer eventuele bevestigingsverzoeken."
+    ],
+    [
+      "Controleer magazijn en QC",
+      "Open Warehouse. Zoek na aankomst je artikel en bekijk de foto’s van je eigen bestelling. Historische catalogusfoto’s vervangen deze controle niet."
+    ],
+    [
+      "Maak een pakket",
+      "Selecteer beschikbare artikelen in Warehouse. Controleer ontvanger, land en postcode en vergelijk routes en verpakking. Een leeg magazijn toont geen verzendformulier."
+    ],
+    [
+      "Betaal internationaal vervoer",
+      "Kies Payment Pending in Parcel. Open het pakket en controleer offerte, gewicht en afmetingen vóór betaling. Het bedrag kan na verpakking veranderen."
+    ],
+    [
+      "Wacht op verpakking en vertrek",
+      "Kies All Parcel en open het juiste pakket. Bekijk de verwerking; een openstaande betaling betekent niet dat het pakket verzonden is."
+    ],
+    [
+      "Volg het vervoer",
+      "Kies In transit en open het pakket voor updates. Een lege lijst bevat geen trackinggegevens."
+    ],
+    [
+      "Ontvang en controleer",
+      "Controleer verpakking en inhoud vóór ontvangstbevestiging. Received is een statusfilter, geen bevestigingsknop. Bewaar foto’s en verpakking bij problemen."
+    ]
+  ],
+  "tips": [
+    "Vergelijk maattabel, vorm, naden en zolen; controleer kleur en verpakking.",
+    "Vergelijk borst, schouders en lengte; bekijk prints voor en achter.",
+    "Controleer maten en aantal kledingstukken; een outfitfoto bewijst de inhoud niet.",
+    "Controleer borst, mouwen, capuchon, boorden en rits; bevestig stof en voering.",
+    "Meet taille, heupen en lengte; controleer rek, aantal en retourvoorwaarden.",
+    "Controleer bruikbare lengte, breedte, gesp en gaten; bevestig materiaal.",
+    "Vergelijk afmetingen, vakken, banden, sluitingen en inbegrepen onderdelen.",
+    "Controleer volume en variant. Foto’s bewijzen geur of echtheid niet; controleer vloeistofverzending.",
+    "Controleer model, aansluitingen, voeding en accessoires; let op batterijbeperkingen.",
+    "Controleer maten, sluitingen en materiaal. Foto’s bewijzen prestaties of echtheid niet."
+  ],
+  "types": [
+    "Shorts",
+    "Sneakers",
+    "Schoenen",
+    "Tas",
+    "Voetbalshirts",
+    "Kledingset",
+    "Sets van verschillende merken",
+    "Bedrukt shirt",
+    "T-shirt",
+    "Hoodie",
+    "Hoodie met rits",
+    "Pet",
+    "Trainingsshirt",
+    "Spijkerjas",
+    "Corduroy bomberjack",
+    "Vest",
+    "Jas",
+    "Gewassen bedrukte shorts",
+    "Boxershorts",
+    "Broek",
+    "Riem",
+    "Geruite riem",
+    "Rugzak",
+    "Reistas",
+    "Gewatteerde hobotas",
+    "Parfum",
+    "Smartwatch",
+    "Draagbare Bluetooth-luidspreker",
+    "Hoofdtelefoon",
+    "Draadloze opladerset",
+    "Sportsokken",
+    "Bril",
+    "Zonnebril"
+  ],
+  "notes": [
+    "Ontdek producten, vergelijk details en bewaar je favorieten.",
+    "Registreer bij USFans om voorraad, verzending en totaalprijs te controleren.",
+    "Opgeslagen voor deze browser via een cookie; geen synchronisatie tussen apparaten.",
+    "Lijst tijdelijk niet beschikbaar. Probeer opnieuw.",
+    "Geen resultaten: wijzig categorie of budget.",
+    "Gebruik het hartje om een product op te slaan.",
+    "Open een product om het hier terug te zien.",
+    "Alleen indicatieve omrekening; controleer het eindbedrag op USFans.",
+    "Wisselkoers niet beschikbaar voor deze valuta; prijzen in USD.",
+    "Echte accountpagina zonder bestellingen, voorraad of pakketten; details verschijnen pas bij een bestaande registratie."
+  ]
+}

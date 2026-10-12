@@ -1,0 +1,228 @@
+{
+  "name": "Slovenčina",
+  "currency": "EUR",
+  "nav": [
+    "Domov",
+    "Katalóg",
+    "Kategórie",
+    "Príručka pre začiatočníkov",
+    "Časté otázky",
+    "Registrácia v USFans",
+    "Jazyk",
+    "Mena"
+  ],
+  "cats": [
+    "Topánky a šľapky",
+    "Tričká",
+    "Oblečenie",
+    "Mikiny",
+    "Nohavice a šortky",
+    "Opasky",
+    "Tašky",
+    "Parfumy",
+    "Elektronika",
+    "Doplnky"
+  ],
+  "labels": [
+    "Všetky produkty",
+    "Podrobnosti",
+    "Zaznamenaná cena",
+    "Katalógové ceny sú orientačné; doprava a ďalšie poplatky môžu byť navyše.",
+    "Od výberu po doručenie",
+    "Späť do katalógu",
+    "Otvoriť pôvodnú ponuku",
+    "Otvoriť produkt na USFans",
+    "Kopírovať odkaz predajcu",
+    "Odkaz skopírovaný",
+    "Fotografie produktu",
+    "Skladové fotografie / QC",
+    "Zodpovedajúce QC fotografie nie sú dostupné.",
+    "Pred objednaním",
+    "Nezávislý katalóg produktov a nákupných pokynov.",
+    "Nezávislý web bez prepojenia na USFans. Odkazy môžu prinášať províziu; pravosť ani kvalita nie sú zaručené.",
+    "Poradie katalógu",
+    "Cena vzostupne",
+    "Cena zostupne",
+    "Žiadne produkty.",
+    "Celá kategória pri zdroji",
+    "Historické QC fotografie, nie vaša objednávka. Farby a varianty sa môžu líšiť.",
+    "ID pôvodného produktu",
+    "Zväčšiť obrázok",
+    "Zavrieť obrázok",
+    "Odporúčací kód",
+    "Kontrola tejto kategórie",
+    "Prehliadať kategóriu",
+    "Veľkosť a parametre",
+    "Skontrolujte fotografie"
+  ],
+  "explore": [
+    "Objavovať",
+    "Uložené",
+    "Nedávno zobrazené",
+    "Uložiť produkt",
+    "Odstrániť uložený produkt",
+    "S QC fotografiami",
+    "Rozpočet na produkt",
+    "Ľubovoľná cena",
+    "Obnoviť filtre",
+    "Zobraziť ďalšie",
+    "{shown} z {total} produktov",
+    "Skúsiť znova",
+    "Vymazať históriu",
+    "Všetky kategórie",
+    "Zoradiť podľa",
+    "Načítava sa…",
+    "Dátum kurzu"
+  ],
+  "faq": [
+    [
+      "Ako nakúpiť?",
+      "Otvorte produkt a rovnakú ponuku na USFans. Pred objednaním overte variant a náklady."
+    ],
+    [
+      "Zahŕňa cena všetko?",
+      "Nie. Doprava v Číne, medzinárodná preprava a ďalšie poplatky môžu byť navyše."
+    ],
+    [
+      "Čo overiť pred nákupom?",
+      "Rozmery, farbu, počet kusov, obsah balenia a aktuálnu cenu a dostupnosť."
+    ],
+    [
+      "Ako sa zaregistrovať?",
+      "Použite registračné tlačidlo s T2JMMC. Účet, objednávky a platby spravuje USFans."
+    ],
+    [
+      "Sú QC fotografie z mojej objednávky?",
+      "Nie, sú historické. Po prijatí tovaru skontrolujte vlastné fotografie vo Warehouse."
+    ],
+    [
+      "Čo kontrolovať na QC?",
+      "Štítky, farbu, počet, švy a viditeľné vady. Podľa potreby žiadajte ďalšie snímky alebo merania."
+    ],
+    [
+      "Možno produkty spojiť?",
+      "Vyberte skladové položky povolené pre rovnakú prepravnú trasu."
+    ],
+    [
+      "Ako požiadať o vrátenie?",
+      "Kontaktujte podporu cez objednávku pred medzinárodnou prepravou. Podmienky, lehoty a poplatky sa líšia."
+    ],
+    [
+      "Koľko stojí doprava?",
+      "Závisí od cieľa, trasy, zabalenej hmotnosti a rozmerov. Overte aktuálnu ponuku USFans."
+    ],
+    [
+      "Prečo chýba trasa?",
+      "Overte krajinu a obmedzenia výrobku, najmä kvapalín a batérií. Kontaktujte podporu."
+    ],
+    [
+      "Kde sledovať zásielku?",
+      "Otvorte balík v Parcel. Pri chýbajúcich aktualizáciách dajte podpore číslo balíka."
+    ],
+    [
+      "Kto rieši platby?",
+      "USFans cez príslušnú objednávku alebo balík. Katalóg ich nemôže meniť."
+    ]
+  ],
+  "steps": [
+    [
+      "Vyberte produkt na USFans",
+      "V kategórii nohavíc otvorte AMI šortky cez obrázok alebo názov. Skontrolujte snímky a referenčné QC, potom použite nákupné tlačidlo."
+    ],
+    [
+      "Vyberte variant a veľkosť",
+      "Zvoľte Style a Size podľa rozmerov. Upravte Quantity cez − / +, overte Total a kliknite Buy now."
+    ],
+    [
+      "Potvrďte objednávku a platbu",
+      "V Confirm Order overte SKU a počet. Order Summary uvádza Product Price a Domestic Freight (China). Pred súhlasom a Submit čítajte podmienky; medzinárodná doprava nie je zahrnutá."
+    ],
+    [
+      "Sledujte nákup",
+      "Otvorte Order, zvoľte Payment Pending alebo iný filter, zadajte názov či číslo a kliknite Search. Prečítajte správy."
+    ],
+    [
+      "Skontrolujte sklad a QC",
+      "Po prijatí otvorte Warehouse a fotografie svojej objednávky. Historické snímky túto kontrolu nenahrádzajú."
+    ],
+    [
+      "Pripravte balík",
+      "Vyberte skladové položky, overte príjemcu, krajinu, PSČ, trasu a balenie. Prázdny sklad nezobrazuje odosielací formulár."
+    ],
+    [
+      "Zaplaťte medzinárodnú dopravu",
+      "V Parcel zvoľte Payment Pending a otvorte balík. Pred platbou overte cenu, váhu a rozmery; balenie môže cenu zmeniť."
+    ],
+    [
+      "Počkajte na zabalenie",
+      "V All Parcel otvorte správny balík a overte stav. Čakajúca platba neznamená odoslanie."
+    ],
+    [
+      "Sledujte prepravu",
+      "Zvoľte In transit a otvorte sledovanie balíka. Prázdny zoznam neobsahuje zásielky."
+    ],
+    [
+      "Prevezmite a skontrolujte",
+      "Pred potvrdením overte obsah. Received je filter, nie potvrdzovacie tlačidlo. Pre reklamáciu uschovajte fotografie a obal."
+    ]
+  ],
+  "tips": [
+    "Porovnajte tabuľku veľkostí, tvar, švy a podrážky; overte farbu a krabicu.",
+    "Porovnajte hrudník, ramená a dĺžku, potlač spredu aj zozadu.",
+    "Overte rozmery a počet kusov; fotografia outfitu nedokazuje obsah.",
+    "Overte rukávy, kapucňu, lemy, zips, materiál a podšívku.",
+    "Zmerajte pás, boky a dĺžku; overte pružnosť, počet a vrátenie.",
+    "Overte použiteľnú dĺžku, šírku, pracku, otvory a materiál.",
+    "Porovnajte rozmery, priehradky, popruhy, zapínanie a príslušenstvo.",
+    "Overte objem, variant a prepravu kvapalín. Snímky nedokazujú vôňu ani pravosť.",
+    "Overte model, konektory, napájanie, príslušenstvo a obmedzenia batérií.",
+    "Overte rozmery, zapínanie a materiál. Snímky nedokazujú funkčnosť ani pravosť."
+  ],
+  "types": [
+    "Šortky",
+    "Tenisky",
+    "Obuv",
+    "Taška",
+    "Futbalové dresy",
+    "Súprava",
+    "Súpravy rôznych značiek",
+    "Tričko s potlačou",
+    "Tričko",
+    "Mikina s kapucňou",
+    "Mikina na zips",
+    "Šiltovka",
+    "Tréningové tričko",
+    "Džínsová bunda",
+    "Menčestrový bomber",
+    "Kardigán",
+    "Bunda",
+    "Oprané šortky s potlačou",
+    "Boxerky",
+    "Nohavice",
+    "Opasok",
+    "Kockovaný opasok",
+    "Batoh",
+    "Cestovná taška",
+    "Prešívaná hobo kabelka",
+    "Parfum",
+    "Inteligentné hodinky",
+    "Prenosný Bluetooth reproduktor",
+    "Slúchadlá",
+    "Súprava bezdrôtových nabíjačiek",
+    "Športové ponožky",
+    "Okuliare",
+    "Slnečné okuliare"
+  ],
+  "notes": [
+    "Objavujte produkty, porovnávajte podrobnosti a ukladajte obľúbené.",
+    "Registrujte sa v USFans pre overenie skladu, dopravy a konečnej ceny.",
+    "Zoznam sa ukladá v tomto prehliadači cez cookie; nesynchronizuje sa medzi zariadeniami.",
+    "Zoznam je dočasne nedostupný. Skúste znova.",
+    "Žiadne výsledky: zmeňte kategóriu alebo rozpočet.",
+    "Uložte produkt pomocou srdiečka.",
+    "Otvorte produkt, aby sa tu objavil.",
+    "Len orientačný prepočet; konečnú sumu overte na USFans.",
+    "Kurz meny nie je dostupný; ceny sú v USD.",
+    "Skutočná stránka účtu bez objednávok, tovaru či balíkov; podrobnosti sa zobrazia až pre existujúci záznam."
+  ]
+}

@@ -1,0 +1,1778 @@
+{
+  "en": {
+    "nav": "Beginner guide",
+    "title": "Your first USFans order, step by step.",
+    "intro": "Start with a find. Check your own QC. Then arrange delivery. This guide follows the journey from Findsbook to your USFans account.",
+    "toc": "Your next step",
+    "onSite": "On USFans",
+    "onAgent": "On USFans",
+    "check": "Before moving on",
+    "open": "Read the beginner guide",
+    "official": "Official USFans guide",
+    "browse": "Explore products",
+    "register": "Register on USFans",
+    "faq": "Questions? Read the FAQ",
+    "note": "Findsbook is an independent discovery site. Orders, payments, inspections and shipping are handled by USFans. Our registration link includes referral code T2JMMC. Check current USFans terms for fees, deadlines and available services.",
+    "payments": [
+      "Plan for two payment stages",
+      "Item purchase",
+      "The item and delivery to the Chinese warehouse are paid for first.",
+      "International delivery",
+      "Arrange and pay for the overseas parcel separately after the goods are ready. Allow for applicable extra fees and import charges."
+    ],
+    "steps": [
+      [
+        "Choose a product on USFans",
+        "Browse a category, narrow the price range or use the QC filter. Open a product’s own detail page to compare its main images, recorded price and reference QC. Use Saved to keep a shortlist in this browser.",
+        "A saved item is not a purchase or a reservation. Catalogue prices and stock are not live guarantees."
+      ],
+      [
+        "Select options and submit the order",
+        "Read the category advice and compare the seller’s measurements with something you own. Use the product’s USFans button to open that item on the purchasing platform.",
+        "Reference QC belongs to a previous item, not your order. Recheck colour, size, quantity and availability on the live product page."
+      ],
+      [
+        "Pay for the item",
+        "Register using the link below or sign in to your existing USFans account. Select the exact variant, add it to the cart or proceed to purchase, and review the first payment before submitting.",
+        "Check the item cost, Chinese domestic delivery and any displayed fees. Paying for the item does not submit an international parcel."
+      ],
+      [
+        "Wait for the agent purchase",
+        "USFans places the purchase with the seller. Follow the order in your USFans account and respond if the agent requests clarification. Seller dispatch and warehouse processing are separate stages.",
+        "Check order messages if something needs confirmation. Contact USFans through the relevant order for a purchase issue."
+      ],
+      [
+        "Check QC and warehouse storage",
+        "Once the goods are stored, open Warehouse on USFans and inspect the photos attached to your order. Compare labels, colour, quantity and visible condition. Ask about additional photos or measurements when needed.",
+        "Resolve a wrong item or return request before arranging international shipping. Check the item’s return conditions, deadline and any extra-service charge."
+      ],
+      [
+        "Submit a parcel",
+        "Select ready items in Warehouse, enter the recipient’s delivery details and compare the available routes. Decide whether to combine items and whether any packaging or other optional service is useful.",
+        "Check storage deadlines, destination restrictions, address and postcode. Confirm route eligibility before purchasing perfume, liquids or electronics."
+      ],
+      [
+        "Pay international shipping",
+        "Review the shipping deposit or amount shown by USFans for your destination and route. Read the billing basis, including weight and dimensions, and the current adjustment rules before payment.",
+        "The final packed size and weight can affect shipping costs. Compare the full cost, not only the item price or a preliminary estimate."
+      ],
+      [
+        "Packing and dispatch",
+        "After the parcel request and payment are processed, the warehouse prepares the selected items for dispatch. Follow the parcel status in your USFans account.",
+        "Packing and dispatch are not the same as final delivery. Check the parcel record for the next update."
+      ],
+      [
+        "Track the delivery",
+        "Open Parcels in your account, select the correct parcel and read its tracking history. Follow the latest updates rather than estimating arrival from the item order date.",
+        "If updates stop, contact support with the parcel number."
+      ],
+      [
+        "Receive and check your items",
+        "Check the packaging and contents on arrival. Keep photos and packaging if anything is missing or damaged, then contact support through that parcel.",
+        "Confirm receipt only after you have checked the parcel."
+      ]
+    ]
+  },
+  "zh": {
+    "nav": "新手指南",
+    "title": "第一次用 USFans，从选品到收货。",
+    "intro": "先找到喜欢的商品，再检查自己订单的 QC，最后安排国际寄送。按照你的实际购买路径，一步一步操作。",
+    "toc": "查看购买步骤",
+    "onSite": "在 USFans 操作",
+    "onAgent": "在 USFans 操作",
+    "check": "进入下一步前",
+    "open": "查看完整新手指南",
+    "official": "USFans 官方新手指南",
+    "browse": "开始挑选商品",
+    "register": "注册 USFans 账号",
+    "faq": "还有疑问？查看 FAQ",
+    "note": "Findsbook 是独立选品网站，订单、付款、验货和运输由 USFans 处理。本站注册链接带有推荐码 T2JMMC。费用、期限和可用服务请以 USFans 当前规则为准。",
+    "payments": [
+      "先了解两个付款阶段",
+      "商品购买阶段",
+      "先支付商品及寄往中国仓库的境内运费。",
+      "国际寄送阶段",
+      "商品准备好后，再单独提交包裹并支付国际运输费用。预算还应考虑适用的额外费用和进口费用。"
+    ],
+    "steps": [
+      [
+        "在 USFans 挑选商品",
+        "浏览分类，按预算筛选，或开启 QC 筛选。进入商品独立详情页，对比主图、记录价格和参考 QC。可以用收藏功能，把候选商品留在当前浏览器的清单中。",
+        "收藏不等于下单或预留库存。本站价格和库存信息不能代替主站实时确认。"
+      ],
+      [
+        "选择规格并提交订单",
+        "阅读分类选购提示，用卖家尺寸表对照自己已有的衣服或鞋子。点击商品详情中的 USFans 购买按钮，进入对应商品页面。",
+        "参考 QC 不是你本次订单的照片。请在实时商品页重新核对颜色、尺码、数量和库存。"
+      ],
+      [
+        "支付商品费用",
+        "通过下方链接注册 USFans，已有账号则直接登录。选好具体款式后加入购物车或进入购买，检查第一阶段应付金额，再提交付款。",
+        "核对商品费用、中国境内运费及页面显示的其他费用。支付商品款并不等于已经提交国际包裹。"
+      ],
+      [
+        "等待代购采购",
+        "USFans 向卖家采购商品。你可以在主站账号中跟进订单，如果代购人员要求补充信息，及时回复。卖家发货和仓库处理是两个不同环节。",
+        "遇到待确认状态，先查看订单留言。购买问题通过对应订单联系 USFans 处理。"
+      ],
+      [
+        "到仓验货与 QC 检查",
+        "商品入库后，进入 USFans 的 Warehouse／仓库页面，查看自己订单下的照片。核对标签、颜色、数量和外观；需要确认细节或尺寸时，询问补拍或测量服务。",
+        "先处理错款、瑕疵或退货申请，再安排国际寄送。确认商品退换条件、申请期限和额外服务费用。"
+      ],
+      [
+        "提交国际包裹",
+        "在仓库中选择准备寄出的商品，填写收件信息，再比较可用线路。结合商品情况决定是否合箱，以及是否需要包装等可选服务。",
+        "核对仓储期限、目的地限制、地址和邮编。香水、液体或电子产品的运输资格应在购买前确认。"
+      ],
+      [
+        "支付国际运费",
+        "查看 USFans 根据目的地和线路显示的运费预付款或应付金额。付款前阅读重量、尺寸等计费依据，以及主站当前的费用调整规则。",
+        "最终包装后的体积和重量可能影响费用。比较整体到手预算，不要只看商品标价或初步运费估算。"
+      ],
+      [
+        "仓库打包并发货",
+        "包裹申请和付款处理完成后，仓库会准备已选商品并安排出库。进入 USFans 账号查看包裹状态。",
+        "打包和出库不等于已送达，后续进度以对应包裹记录为准。"
+      ],
+      [
+        "跟踪包裹运输",
+        "进入账号中的 Parcels／包裹，打开对应包裹查看物流记录。根据最新物流节点跟进，不要从商品下单日期推算签收时间。",
+        "长时间没有物流更新时，提供包裹编号联系客服查询。"
+      ],
+      [
+        "签收并检查商品",
+        "收到包裹后检查外包装和内件；如有缺件或破损，保留照片和包装，通过对应包裹申请售后。",
+        "检查包裹后，再按页面提示确认收货。"
+      ]
+    ]
+  },
+  "de": {
+    "nav": "Einsteiger-Guide",
+    "title": "Deine erste USFans-Bestellung, Schritt für Schritt.",
+    "intro": "Entdecke einen Artikel, prüfe deine eigenen QC-Fotos und organisiere den Versand. Dein Weg von Findsbook zu deinem USFans-Konto.",
+    "toc": "Die nächsten Schritte",
+    "onSite": "Auf USFans",
+    "onAgent": "Auf USFans",
+    "check": "Vor dem nächsten Schritt",
+    "open": "Einsteiger-Guide lesen",
+    "official": "Offizieller USFans-Guide",
+    "browse": "Produkte entdecken",
+    "register": "Bei USFans registrieren",
+    "faq": "Noch Fragen? Zur FAQ",
+    "note": "Findsbook ist ein unabhängiger Produktkatalog. USFans übernimmt Bestellung, Zahlung, Prüfung und Versand. Unser Registrierungslink enthält T2JMMC. Aktuelle Gebühren, Fristen und Leistungen findest du bei USFans.",
+    "payments": [
+      "Zwei Zahlungsphasen einplanen",
+      "Warenkauf",
+      "Zuerst bezahlst du den Artikel und den Versand zum chinesischen Lager.",
+      "Internationaler Versand",
+      "Wenn die Waren bereit sind, beauftragst und bezahlst du den Auslandsversand separat. Plane mögliche Zusatz- und Einfuhrkosten ein."
+    ],
+    "steps": [
+      [
+        "Auf USFans auswählen",
+        "Wähle eine Kategorie, grenze das Budget ein oder nutze den QC-Filter. Öffne die Produktseite und vergleiche Hauptbilder, erfassten Preis und Referenz-QC. Mit Gespeichert behältst du Favoriten in diesem Browser.",
+        "Speichern ist weder Kauf noch Reservierung. Preise und Bestand müssen im aktuellen Angebot bestätigt werden."
+      ],
+      [
+        "Optionen wählen und bestellen",
+        "Lies die Kategoriehinweise und vergleiche Verkäufermaße mit einem passenden eigenen Artikel. Über den USFans-Button der Produktseite gelangst du zum entsprechenden Angebot.",
+        "Referenz-QC zeigt nicht deine Bestellung. Prüfe Farbe, Größe, Menge und Verfügbarkeit im aktuellen Angebot erneut."
+      ],
+      [
+        "Artikel bezahlen",
+        "Registriere dich über den Link unten oder melde dich bei USFans an. Wähle die genaue Variante, lege sie in den Warenkorb oder starte den Kauf. Prüfe die erste Zahlung vor dem Absenden.",
+        "Kontrolliere Warenpreis, chinesischen Inlandsversand und angezeigte Gebühren. Die Warenzahlung beauftragt noch keinen internationalen Versand."
+      ],
+      [
+        "Einkauf durch den Agenten",
+        "USFans kauft beim Verkäufer ein. Verfolge die Bestellung im Konto und antworte auf Rückfragen. Versand durch den Verkäufer und Lagerbearbeitung sind getrennte Schritte.",
+        "Prüfe Bestellnachrichten bei offenen Rückfragen. Wende dich bei Einkaufsproblemen über die Bestellung an USFans."
+      ],
+      [
+        "QC und Einlagerung prüfen",
+        "Öffne nach der Einlagerung Warehouse bei USFans. Vergleiche Etiketten, Farbe, Menge und sichtbaren Zustand auf den Fotos deiner Bestellung. Frage bei Bedarf nach zusätzlichen Bildern oder Messungen.",
+        "Kläre falsche Ware, Mängel oder Rückgabe vor dem Auslandsversand. Prüfe Rückgabefrist, Bedingungen und Zusatzkosten."
+      ],
+      [
+        "Paket beauftragen",
+        "Wähle versandbereite Artikel im Lager, trage die Lieferdaten ein und vergleiche verfügbare Routen. Entscheide über Zusammenlegung, Verpackung und sinnvolle Zusatzleistungen.",
+        "Prüfe Lagerfrist, Zielbeschränkungen, Adresse und Postleitzahl. Kläre die Versandfähigkeit von Parfüm, Flüssigkeiten oder Elektronik vor dem Kauf."
+      ],
+      [
+        "Internationalen Versand bezahlen",
+        "Prüfe die von USFans angezeigte Versandanzahlung oder den Betrag für Ziel und Route. Lies die Regeln zu Gewicht, Abmessungen und späteren Anpassungen vor der Zahlung.",
+        "Endgültige Verpackungsmaße und Gewicht können den Preis verändern. Vergleiche Gesamtkosten statt nur Warenpreis oder erster Schätzung."
+      ],
+      [
+        "Verpackung und Versand",
+        "Nach Bearbeitung von Paketauftrag und Zahlung bereitet das Lager die ausgewählten Waren zum Versand vor. Verfolge den Status in deinem USFans-Konto.",
+        "Verpacken und Versenden bedeuten noch keine Zustellung. Prüfe den Paketstatus."
+      ],
+      [
+        "Lieferung verfolgen",
+        "Öffne Parcels, wähle das richtige Paket und lies den Trackingverlauf. Richte dich nach aktuellen Meldungen.",
+        "Bei fehlenden Updates den Support mit Paketnummer kontaktieren."
+      ],
+      [
+        "Empfangen und prüfen",
+        "Prüfe Verpackung und Inhalt bei Ankunft. Bewahre bei Problemen Fotos und Verpackung auf und kontaktiere den Support über das Paket.",
+        "Erhalt erst nach Prüfung bestätigen."
+      ]
+    ]
+  },
+  "es": {
+    "nav": "Guía para empezar",
+    "title": "Tu primer pedido en USFans, paso a paso.",
+    "intro": "Encuentra un producto, revisa tus propias fotos QC y organiza el envío. Sigue el recorrido desde Findsbook hasta tu cuenta de USFans.",
+    "toc": "Los próximos pasos",
+    "onSite": "En USFans",
+    "onAgent": "En USFans",
+    "check": "Antes de continuar",
+    "open": "Leer la guía para empezar",
+    "official": "Guía oficial de USFans",
+    "browse": "Explorar productos",
+    "register": "Registrarme en USFans",
+    "faq": "¿Dudas? Consulta las FAQ",
+    "note": "Findsbook es un catálogo independiente. USFans gestiona pedidos, pagos, inspección y envío. Nuestro enlace de registro incluye T2JMMC. Consulta las tarifas, plazos y servicios vigentes en USFans.",
+    "payments": [
+      "Prepara dos etapas de pago",
+      "Compra del producto",
+      "Primero pagas el artículo y el transporte al almacén chino.",
+      "Envío internacional",
+      "Cuando los productos estén listos, solicita y paga el paquete internacional por separado. Considera posibles cargos adicionales y de importación."
+    ],
+    "steps": [
+      [
+        "Elegir en USFans",
+        "Explora las categorías, limita el presupuesto o usa el filtro QC. Abre la ficha para comparar imágenes principales, precio registrado y QC de referencia. Usa Guardados para mantener una selección en este navegador.",
+        "Guardar no es comprar ni reservar stock. Confirma precios y disponibilidad en el anuncio actual."
+      ],
+      [
+        "Elegir opciones y enviar pedido",
+        "Lee los consejos de categoría y compara las medidas del vendedor con algo que ya tengas. El botón USFans de la ficha abre el producto correspondiente.",
+        "Las fotos QC de referencia no son de tu pedido. Revisa de nuevo color, talla, cantidad y disponibilidad en el anuncio actual."
+      ],
+      [
+        "Pagar los artículos",
+        "Regístrate con el enlace inferior o inicia sesión en USFans. Elige la variante exacta, añade al carrito o inicia la compra y revisa el primer pago antes de enviarlo.",
+        "Comprueba el precio, el transporte nacional chino y las tarifas indicadas. Pagar el artículo todavía no solicita un paquete internacional."
+      ],
+      [
+        "Compra por el agente",
+        "USFans compra al vendedor. Sigue el pedido en tu cuenta y responde si el agente necesita información. El envío del vendedor y el procesamiento en almacén son fases distintas.",
+        "Consulta los mensajes si falta una confirmación. Contacta con USFans desde el pedido para problemas de compra."
+      ],
+      [
+        "Revisar QC y almacenaje",
+        "Una vez almacenado, abre Warehouse en USFans y mira las fotos de tu propio pedido. Compara etiquetas, color, cantidad y estado visible. Pregunta por fotos o medidas adicionales si las necesitas.",
+        "Resuelve errores o solicitudes de devolución antes del envío internacional. Comprueba condiciones, plazo y coste de servicios adicionales."
+      ],
+      [
+        "Solicitar un paquete",
+        "Selecciona los artículos listos en el almacén, introduce los datos del destinatario y compara rutas. Decide si conviene reunir productos y añadir embalaje u otros servicios opcionales.",
+        "Revisa el plazo de almacenamiento, restricciones, dirección y código postal. Confirma antes de comprar si perfumes, líquidos o electrónica se pueden enviar."
+      ],
+      [
+        "Pagar el envío internacional",
+        "Consulta el depósito o importe que USFans muestra para tu destino y ruta. Lee las reglas de cálculo por peso y dimensiones y las condiciones actuales de ajuste antes de pagar.",
+        "Las medidas y el peso del paquete final pueden cambiar el coste. Compara el presupuesto completo, no solo el precio del producto o una estimación inicial."
+      ],
+      [
+        "Embalaje y despacho",
+        "Tras procesar la solicitud y el pago, el almacén prepara los artículos para su despacho. Sigue el estado del paquete en tu cuenta.",
+        "Preparación y despacho no significan entrega final. Revisa el estado del paquete."
+      ],
+      [
+        "Seguir la entrega",
+        "Abre Parcels, elige el paquete correcto y consulta su historial de seguimiento. Sigue las actualizaciones recientes.",
+        "Si no hay novedades, contacta con soporte con el número del paquete."
+      ],
+      [
+        "Recibir y revisar",
+        "Revisa embalaje y contenido al recibirlo. Si hay problemas, conserva fotos y embalaje y contacta con soporte desde ese paquete.",
+        "Confirma la recepción después de revisar el paquete."
+      ]
+    ]
+  },
+  "fr": {
+    "nav": "Guide débutant",
+    "title": "Votre première commande USFans, étape par étape.",
+    "intro": "Trouvez un article, examinez vos propres photos QC, puis organisez la livraison. Suivez le parcours de Findsbook à votre compte USFans.",
+    "toc": "Les prochaines étapes",
+    "onSite": "Sur USFans",
+    "onAgent": "Sur USFans",
+    "check": "Avant de continuer",
+    "open": "Lire le guide débutant",
+    "official": "Guide officiel USFans",
+    "browse": "Explorer les articles",
+    "register": "Créer un compte USFans",
+    "faq": "Des questions ? Voir la FAQ",
+    "note": "Findsbook est un catalogue indépendant. USFans gère commandes, paiements, contrôles et livraison. Notre lien d’inscription contient T2JMMC. Consultez les frais, délais et services actuels sur USFans.",
+    "payments": [
+      "Prévoir deux étapes de paiement",
+      "Achat des articles",
+      "Payez d’abord les articles et leur transport vers l’entrepôt chinois.",
+      "Expédition internationale",
+      "Une fois les articles prêts, demandez et payez séparément l’expédition internationale. Prévoyez les éventuels frais supplémentaires et d’importation."
+    ],
+    "steps": [
+      [
+        "Choisir sur USFans",
+        "Parcourez les catégories, limitez le budget ou activez le filtre QC. Ouvrez la fiche pour comparer images principales, prix enregistré et QC de référence. Utilisez les favoris pour garder une sélection dans ce navigateur.",
+        "Un favori n’est ni un achat ni une réservation. Confirmez prix et disponibilité dans l’annonce actuelle."
+      ],
+      [
+        "Choisir les options et commander",
+        "Lisez les conseils de catégorie et comparez les mesures du vendeur à un article que vous possédez. Le bouton USFans de la fiche ouvre le produit correspondant.",
+        "Les photos QC de référence ne montrent pas votre commande. Revérifiez couleur, taille, quantité et disponibilité sur la fiche actuelle."
+      ],
+      [
+        "Payer les articles",
+        "Inscrivez-vous avec le lien ci-dessous ou connectez-vous à USFans. Choisissez la variante exacte, ajoutez au panier ou lancez l’achat, puis contrôlez le premier paiement avant validation.",
+        "Vérifiez prix, livraison intérieure chinoise et frais affichés. Payer l’article ne déclenche pas encore un envoi international."
+      ],
+      [
+        "Achat par l’agent",
+        "USFans achète auprès du vendeur. Suivez la commande dans votre compte et répondez aux demandes de précision. Expédition du vendeur et traitement à l’entrepôt sont deux étapes distinctes.",
+        "Consultez les messages en cas de confirmation demandée. Pour un problème d’achat, contactez USFans depuis la commande."
+      ],
+      [
+        "Contrôler QC et stockage",
+        "Après stockage, ouvrez Warehouse sur USFans et examinez les photos de votre commande. Comparez étiquettes, couleur, quantité et état visible. Demandez des photos ou mesures supplémentaires si nécessaire.",
+        "Résolvez erreurs et demandes de retour avant l’envoi international. Vérifiez conditions, délai de retour et prix des services supplémentaires."
+      ],
+      [
+        "Demander un colis",
+        "Sélectionnez les articles prêts, indiquez les coordonnées du destinataire et comparez les lignes disponibles. Décidez du regroupement et des éventuelles options d’emballage ou autres services.",
+        "Vérifiez durée de stockage, restrictions, adresse et code postal. Confirmez le transport des parfums, liquides ou appareils électroniques avant l’achat."
+      ],
+      [
+        "Payer le transport international",
+        "Examinez l’acompte ou le montant affiché par USFans pour la destination et la ligne. Lisez les règles de poids, dimensions et ajustements avant de payer.",
+        "Les dimensions et le poids du colis emballé peuvent modifier le coût. Comparez le budget total plutôt que le seul prix de l’article ou une estimation préliminaire."
+      ],
+      [
+        "Emballage et expédition",
+        "Après traitement de la demande et du paiement, l’entrepôt prépare les articles pour l’expédition. Suivez le statut dans votre compte.",
+        "Préparation et expédition ne signifient pas livraison finale. Consultez le statut du colis."
+      ],
+      [
+        "Suivre la livraison",
+        "Ouvrez Parcels, sélectionnez le bon colis et consultez son historique de suivi. Suivez les dernières mises à jour.",
+        "Sans nouvelles, contactez l’assistance avec le numéro du colis."
+      ],
+      [
+        "Recevoir et vérifier",
+        "Vérifiez emballage et contenu à réception. En cas de problème, conservez photos et emballage et contactez l’assistance depuis le colis.",
+        "Confirmez la réception après vérification."
+      ]
+    ]
+  },
+  "pt": {
+    "nav": "Guia para iniciantes",
+    "title": "Seu primeiro pedido na USFans, passo a passo.",
+    "intro": "Encontre um produto, confira suas próprias fotos QC e organize o envio. Acompanhe o caminho do Findsbook até sua conta na USFans.",
+    "toc": "Os próximos passos",
+    "onSite": "No USFans",
+    "onAgent": "Na USFans",
+    "check": "Antes de continuar",
+    "open": "Ler o guia para iniciantes",
+    "official": "Guia oficial da USFans",
+    "browse": "Explorar produtos",
+    "register": "Criar conta na USFans",
+    "faq": "Dúvidas? Veja as FAQ",
+    "note": "Findsbook é um catálogo independente. A USFans cuida dos pedidos, pagamentos, inspeções e envios. Nosso link de cadastro inclui T2JMMC. Consulte as taxas, prazos e serviços atuais na USFans.",
+    "payments": [
+      "Planeje duas etapas de pagamento",
+      "Compra dos produtos",
+      "Primeiro você paga o produto e o frete até o armazém chinês.",
+      "Envio internacional",
+      "Quando os produtos estiverem prontos, solicite e pague o pacote internacional separadamente. Considere possíveis taxas adicionais e de importação."
+    ],
+    "steps": [
+      [
+        "Escolher no USFans",
+        "Explore categorias, limite o orçamento ou ative o filtro QC. Abra a página do produto e compare fotos principais, preço registrado e QC de referência. Use Salvos para manter uma seleção neste navegador.",
+        "Salvar não é comprar nem reservar estoque. Confirme preço e disponibilidade no anúncio atual."
+      ],
+      [
+        "Selecionar opções e fazer pedido",
+        "Leia as orientações da categoria e compare as medidas do vendedor com algo que você já possui. O botão USFans na página abre o produto correspondente.",
+        "As fotos QC de referência não são do seu pedido. Confira novamente cor, tamanho, quantidade e disponibilidade no anúncio atual."
+      ],
+      [
+        "Pagar os produtos",
+        "Cadastre-se pelo link abaixo ou entre na USFans. Escolha a variante exata, adicione ao carrinho ou inicie a compra e revise o primeiro pagamento antes de enviar.",
+        "Confira preço, frete doméstico chinês e taxas exibidas. Pagar pelo produto ainda não solicita um pacote internacional."
+      ],
+      [
+        "Compra pelo agente",
+        "A USFans compra do vendedor. Acompanhe o pedido na conta e responda se o agente pedir esclarecimentos. Envio do vendedor e processamento no armazém são etapas separadas.",
+        "Leia as mensagens se houver confirmação pendente. Para problemas de compra, fale com a USFans pelo pedido correspondente."
+      ],
+      [
+        "Conferir QC e armazenagem",
+        "Depois da armazenagem, abra Warehouse na USFans e veja as fotos do seu pedido. Compare etiquetas, cor, quantidade e estado visível. Pergunte sobre fotos ou medições adicionais se necessário.",
+        "Resolva produtos errados ou devoluções antes do envio internacional. Confira condições, prazo de devolução e custo de serviços extras."
+      ],
+      [
+        "Solicitar uma encomenda",
+        "Selecione produtos prontos no armazém, informe os dados do destinatário e compare as rotas disponíveis. Decida se vale juntar itens e selecionar embalagem ou outros serviços opcionais.",
+        "Confira prazo de armazenagem, restrições, endereço e código postal. Confirme antes da compra se perfumes, líquidos ou eletrônicos podem ser enviados."
+      ],
+      [
+        "Pagar o frete internacional",
+        "Confira o depósito ou valor mostrado pela USFans para seu destino e rota. Leia as regras de peso, dimensões e ajustes antes de pagar.",
+        "Peso e medidas do pacote final podem alterar o custo. Compare o orçamento completo, não apenas o preço do produto ou uma estimativa inicial."
+      ],
+      [
+        "Embalagem e despacho",
+        "Após processar a solicitação e o pagamento, o armazém prepara os produtos para despacho. Acompanhe o estado na sua conta.",
+        "Preparação e despacho não significam entrega final. Confira o estado da encomenda."
+      ],
+      [
+        "Acompanhar a entrega",
+        "Abra Parcels, selecione a encomenda correta e consulte o histórico de rastreamento. Siga as atualizações recentes.",
+        "Sem atualizações, contate o suporte com o número da encomenda."
+      ],
+      [
+        "Receber e conferir",
+        "Confira embalagem e conteúdo ao receber. Se houver problemas, guarde fotos e embalagem e fale com o suporte pela encomenda.",
+        "Confirme o recebimento após conferir o pacote."
+      ]
+    ]
+  },
+  "ar": {
+    "nav": "دليل المبتدئين",
+    "title": "دليل المبتدئين · USFans",
+    "intro": "من الاختيار إلى الاستلام",
+    "toc": "دليل المبتدئين",
+    "onSite": "USFans",
+    "onAgent": "USFans",
+    "check": "قبل الطلب",
+    "open": "دليل المبتدئين",
+    "official": "دليل المبتدئين",
+    "browse": "الكتالوج",
+    "register": "التسجيل في USFans",
+    "faq": "الأسئلة الشائعة",
+    "note": "موقع مستقل غير تابع لـ USFans. قد تحقق الروابط عمولة إحالة ولا تضمن أصالة المنتجات أو جودتها.",
+    "payments": [
+      "أسعار الكتالوج استرشادية وقد تضاف تكاليف الشحن ورسوم أخرى.",
+      "راجع الطلب والدفع",
+      "لا. قد تضاف أجور الشحن داخل الصين والشحن الدولي ورسوم أخرى مستحقة.",
+      "ادفع الشحن الدولي",
+      "تعتمد على الوجهة والمسار والوزن والأبعاد بعد التغليف. تحقق من عرض USFans الحالي."
+    ],
+    "steps": [
+      [
+        "اختر منتجًا على USFans",
+        "من فئة السراويل افتح صورة شورت AMI أو اسمه. راجع الصور وفحص QC المرجعي ثم استخدم زر الشراء.",
+        "القياسات واللون والكمية والمحتويات والسعر الحالي وتوفر المخزون."
+      ],
+      [
+        "اختر النوع والمقاس",
+        "اختر Style وSize وفق القياسات. اضبط Quantity باستخدام − / +، وراجع Total ثم اضغط Buy now.",
+        "القياسات واللون والكمية والمحتويات والسعر الحالي وتوفر المخزون."
+      ],
+      [
+        "راجع الطلب والدفع",
+        "في Confirm Order تحقق من SKU والكمية. يعرض Order Summary بندي Product Price وDomestic Freight (China). اقرأ الشروط قبل الموافقة وSubmit؛ الشحن الدولي غير مشمول.",
+        "لا. قد تضاف أجور الشحن داخل الصين والشحن الدولي ورسوم أخرى مستحقة."
+      ],
+      [
+        "تابع عملية الشراء",
+        "افتح Order واختر Payment Pending أو فلترًا آخر. أدخل الاسم أو الرقم واضغط Search، ثم راجع الرسائل وطلبات التأكيد.",
+        "USFans عبر الطلب أو الطرد المعني. لا يستطيع هذا الكتالوج تعديلهما."
+      ],
+      [
+        "افحص المستودع وQC",
+        "بعد وصول المنتج افتح Warehouse وصور طلبك الخاص. صور الكتالوج السابقة لا تغني عن هذا الفحص.",
+        "الملصقات واللون والكمية والخياطة والعيوب الظاهرة. اطلب صورًا أو قياسات إضافية عند الحاجة."
+      ],
+      [
+        "جهّز الطرد الدولي",
+        "حدد منتجات المستودع وتحقق من المستلم والبلد والرمز البريدي والمسار والتغليف. لا يظهر نموذج الإرسال عندما يكون المستودع فارغًا.",
+        "اختر المنتجات المتوفرة بالمستودع والمسموح شحنها عبر المسار نفسه."
+      ],
+      [
+        "ادفع الشحن الدولي",
+        "في Parcel اختر Payment Pending وافتح الطرد. تحقق من الرسوم والوزن والأبعاد قبل الدفع؛ قد تتغير التكلفة بعد التغليف.",
+        "تعتمد على الوجهة والمسار والوزن والأبعاد بعد التغليف. تحقق من عرض USFans الحالي."
+      ],
+      [
+        "انتظر التغليف والإرسال",
+        "من All Parcel افتح الطرد الصحيح وراجع حالته. انتظار الدفع لا يعني أن الطرد أُرسل.",
+        "افتح الطرد في Parcel. عند غياب التحديثات أعطِ الدعم رقم الطرد."
+      ],
+      [
+        "تتبع النقل",
+        "اختر In transit وافتح تتبع الطرد. القائمة الفارغة لا تحتوي على شحنات لتتبعها.",
+        "افتح الطرد في Parcel. عند غياب التحديثات أعطِ الدعم رقم الطرد."
+      ],
+      [
+        "استلم وافحص",
+        "افحص المحتويات قبل تأكيد الاستلام. Received فلتر للحالة وليس زر تأكيد. احتفظ بالصور والتغليف عند وجود مشكلة.",
+        "تواصل عبر الطلب قبل الشحن الدولي. تختلف الشروط والمواعيد والرسوم حسب المنتج."
+      ]
+    ]
+  },
+  "cs": {
+    "nav": "Průvodce pro začátečníky",
+    "title": "Průvodce pro začátečníky · USFans",
+    "intro": "Od výběru k doručení",
+    "toc": "Průvodce pro začátečníky",
+    "onSite": "USFans",
+    "onAgent": "USFans",
+    "check": "Před objednáním",
+    "open": "Průvodce pro začátečníky",
+    "official": "Průvodce pro začátečníky",
+    "browse": "Katalog",
+    "register": "Registrace u USFans",
+    "faq": "Časté dotazy",
+    "note": "Nezávislý web bez vazby na USFans. Odkazy mohou přinést provizi; pravost ani kvalita nejsou zaručeny.",
+    "payments": [
+      "Katalogové ceny jsou orientační; doprava a další poplatky mohou být navíc.",
+      "Potvrďte objednávku a platbu",
+      "Ne. Připočítává se případná doprava v Číně, mezinárodní přeprava a další poplatky.",
+      "Zaplaťte mezinárodní přepravu",
+      "Závisí na cíli, trase, zabalené hmotnosti a rozměrech. Ověřte aktuální nabídku USFans."
+    ],
+    "steps": [
+      [
+        "Vyberte produkt na USFans",
+        "V kategorii kalhot otevřete AMI šortky kliknutím na obrázek nebo název. Zkontrolujte snímky a referenční QC a použijte nákupní tlačítko.",
+        "Rozměry, barvu, počet kusů, obsah balení a aktuální cenu a dostupnost."
+      ],
+      [
+        "Vyberte variantu a velikost",
+        "Zvolte Style a Size podle rozměrů. Upravte Quantity pomocí − / +, ověřte Total a klikněte Buy now.",
+        "Rozměry, barvu, počet kusů, obsah balení a aktuální cenu a dostupnost."
+      ],
+      [
+        "Potvrďte objednávku a platbu",
+        "V Confirm Order ověřte SKU a počet. Order Summary uvádí Product Price a Domestic Freight (China). Před souhlasem a Submit si přečtěte podmínky; mezinárodní doprava není zahrnuta.",
+        "Ne. Připočítává se případná doprava v Číně, mezinárodní přeprava a další poplatky."
+      ],
+      [
+        "Sledujte nákup",
+        "Otevřete Order, vyberte Payment Pending nebo jiný filtr, zadejte název či číslo a klikněte Search. Přečtěte případné zprávy.",
+        "USFans přes příslušnou objednávku nebo balík. Tento katalog je nemůže měnit."
+      ],
+      [
+        "Zkontrolujte sklad a QC",
+        "Po příjmu zboží otevřete Warehouse a fotografie vlastní objednávky. Historické snímky tuto kontrolu nenahrazují.",
+        "Štítky, barvu, počet, švy a viditelné vady. Podle potřeby požádejte o další snímky nebo měření."
+      ],
+      [
+        "Připravte balík",
+        "Vyberte skladové položky, ověřte příjemce, zemi, PSČ, trasu a balení. Prázdný sklad nezobrazí formulář odeslání.",
+        "Vyberte skladové položky, které jsou povolené pro stejnou přepravní trasu."
+      ],
+      [
+        "Zaplaťte mezinárodní přepravu",
+        "V Parcel zvolte Payment Pending a otevřete balík. Před platbou ověřte cenu, váhu a rozměry; balení může cenu změnit.",
+        "Závisí na cíli, trase, zabalené hmotnosti a rozměrech. Ověřte aktuální nabídku USFans."
+      ],
+      [
+        "Vyčkejte na zabalení",
+        "V All Parcel otevřete správný balík a ověřte stav. Čekající platba neznamená odeslání.",
+        "Otevřete balík v Parcel. Při chybějících aktualizacích sdělte podpoře číslo balíku."
+      ],
+      [
+        "Sledujte přepravu",
+        "Zvolte In transit a otevřete sledování balíku. Prázdný seznam neobsahuje zásilky.",
+        "Otevřete balík v Parcel. Při chybějících aktualizacích sdělte podpoře číslo balíku."
+      ],
+      [
+        "Převezměte a zkontrolujte",
+        "Před potvrzením ověřte obsah. Received je filtr, nikoli potvrzovací tlačítko. Pro reklamaci uchovejte fotografie a obal.",
+        "Kontaktujte podporu přes objednávku před mezinárodní přepravou. Podmínky, lhůty a poplatky se liší."
+      ]
+    ]
+  },
+  "da": {
+    "nav": "Begynderguide",
+    "title": "Begynderguide · USFans",
+    "intro": "Fra valg til levering",
+    "toc": "Begynderguide",
+    "onSite": "USFans",
+    "onAgent": "USFans",
+    "check": "Før bestilling",
+    "open": "Begynderguide",
+    "official": "Begynderguide",
+    "browse": "Katalog",
+    "register": "Tilmeld dig USFans",
+    "faq": "Ofte stillede spørgsmål",
+    "note": "Uafhængig side uden tilknytning til USFans. Links kan give provision; ingen garanti for ægthed eller kvalitet.",
+    "payments": [
+      "Katalogpriser er vejledende; fragt og andre gebyrer kan tilkomme.",
+      "Bekræft ordre og betaling",
+      "Nej. Indenrigsfragt i Kina, international fragt og andre gebyrer kan komme oveni.",
+      "Betal international fragt",
+      "Destination, rute, pakket vægt og mål afgør prisen. Se USFans aktuelle tilbud."
+    ],
+    "steps": [
+      [
+        "Vælg et produkt på USFans",
+        "Vælg bukser og åbn AMI-shorts via foto eller navn. Se billeder og reference-QC, og brug købsknappen.",
+        "Sammenlign mål, farve, antal, indhold, aktuel pris og lagerstatus."
+      ],
+      [
+        "Vælg variant og størrelse",
+        "Vælg Style og Size ud fra mål. Justér Quantity med − / +, kontrollér Total og klik Buy now.",
+        "Sammenlign mål, farve, antal, indhold, aktuel pris og lagerstatus."
+      ],
+      [
+        "Bekræft ordre og betaling",
+        "Kontrollér SKU og antal i Confirm Order. Order Summary viser Product Price og Domestic Freight (China). Læs vilkår før accept og Submit; international fragt er ikke med.",
+        "Nej. Indenrigsfragt i Kina, international fragt og andre gebyrer kan komme oveni."
+      ],
+      [
+        "Følg købet",
+        "Åbn Order. Vælg Payment Pending eller andre filtre, skriv navn eller nummer, og klik Search. Læs eventuelle beskeder.",
+        "USFans via den relevante ordre eller pakke. Kataloget kan ikke ændre dem."
+      ],
+      [
+        "Kontrollér lager og QC",
+        "Åbn Warehouse efter ankomst og se billederne af din ordre. Historiske katalogbilleder erstatter ikke denne kontrol.",
+        "Kontrollér mærker, farve, antal, syninger og synlige fejl. Bed om flere billeder eller mål ved behov."
+      ],
+      [
+        "Opret pakken",
+        "Vælg lagervarer og kontrollér modtager, land, postnummer, rute og emballage. Et tomt lager viser ingen fragtformular.",
+        "Vælg tilgængelige lagervarer, som er tilladt på samme fragtrute."
+      ],
+      [
+        "Betal international fragt",
+        "Vælg Payment Pending i Parcel, åbn pakken og kontrollér pris, vægt og mål før betaling. Pakning kan ændre prisen.",
+        "Destination, rute, pakket vægt og mål afgør prisen. Se USFans aktuelle tilbud."
+      ],
+      [
+        "Vent på pakning",
+        "Åbn den rigtige pakke i All Parcel og læs status. Afventende betaling betyder ikke, at pakken er sendt.",
+        "Åbn pakken i Parcel. Giv support pakkenummeret, hvis opdateringer mangler."
+      ],
+      [
+        "Følg transporten",
+        "Vælg In transit og åbn pakkens sporing. En tom liste indeholder ingen forsendelser.",
+        "Åbn pakken i Parcel. Giv support pakkenummeret, hvis opdateringer mangler."
+      ],
+      [
+        "Modtag og kontrollér",
+        "Kontrollér indhold før kvittering. Received er et filter, ikke en bekræftelsesknap. Gem billeder og emballage ved problemer.",
+        "Kontakt support via ordren før international afsendelse. Vilkår, frister og gebyrer varierer."
+      ]
+    ]
+  },
+  "el": {
+    "nav": "Οδηγός αρχαρίων",
+    "title": "Οδηγός αρχαρίων · USFans",
+    "intro": "Από την επιλογή στην παράδοση",
+    "toc": "Οδηγός αρχαρίων",
+    "onSite": "USFans",
+    "onAgent": "USFans",
+    "check": "Πριν παραγγείλετε",
+    "open": "Οδηγός αρχαρίων",
+    "official": "Οδηγός αρχαρίων",
+    "browse": "Κατάλογος",
+    "register": "Εγγραφή στο USFans",
+    "faq": "Συχνές ερωτήσεις",
+    "note": "Ανεξάρτητη ιστοσελίδα χωρίς σύνδεση με το USFans. Οι σύνδεσμοι ενδέχεται να αποφέρουν προμήθεια· δεν εγγυώνται γνησιότητα ή ποιότητα.",
+    "payments": [
+      "Οι τιμές είναι ενδεικτικές· μεταφορικά και άλλες χρεώσεις μπορεί να προστεθούν.",
+      "Επιβεβαιώστε παραγγελία και πληρωμή",
+      "Όχι. Εσωτερική μεταφορά στην Κίνα, διεθνής αποστολή και άλλες χρεώσεις μπορεί να προστεθούν.",
+      "Πληρώστε διεθνή μεταφορά",
+      "Εξαρτώνται από προορισμό, διαδρομή, συσκευασμένο βάρος και διαστάσεις. Δείτε την τρέχουσα προσφορά USFans."
+    ],
+    "steps": [
+      [
+        "Επιλέξτε προϊόν στο USFans",
+        "Στην κατηγορία παντελονιών ανοίξτε το σορτς AMI από εικόνα ή όνομα. Ελέγξτε φωτογραφίες και QC αναφοράς, έπειτα το κουμπί αγοράς.",
+        "Διαστάσεις, χρώμα, ποσότητα, περιεχόμενο, τρέχουσα τιμή και διαθεσιμότητα."
+      ],
+      [
+        "Επιλέξτε έκδοση και μέγεθος",
+        "Επιλέξτε Style και Size βάσει μετρήσεων. Ρυθμίστε Quantity με − / +, ελέγξτε Total και πατήστε Buy now.",
+        "Διαστάσεις, χρώμα, ποσότητα, περιεχόμενο, τρέχουσα τιμή και διαθεσιμότητα."
+      ],
+      [
+        "Επιβεβαιώστε παραγγελία και πληρωμή",
+        "Στο Confirm Order ελέγξτε SKU και ποσότητα. Το Order Summary δείχνει Product Price και Domestic Freight (China). Διαβάστε όρους πριν αποδοχή και Submit· εξαιρείται η διεθνής αποστολή.",
+        "Όχι. Εσωτερική μεταφορά στην Κίνα, διεθνής αποστολή και άλλες χρεώσεις μπορεί να προστεθούν."
+      ],
+      [
+        "Παρακολουθήστε την αγορά",
+        "Ανοίξτε Order, επιλέξτε Payment Pending ή άλλο φίλτρο, γράψτε όνομα ή αριθμό και πατήστε Search. Διαβάστε τυχόν μηνύματα.",
+        "Το USFans μέσω της συγκεκριμένης παραγγελίας ή δέματος. Ο κατάλογος δεν μπορεί να τα αλλάξει."
+      ],
+      [
+        "Ελέγξτε αποθήκη και QC",
+        "Μετά την άφιξη ανοίξτε Warehouse και φωτογραφίες της δικής σας παραγγελίας. Οι παλαιότερες εικόνες δεν αντικαθιστούν τον έλεγχο.",
+        "Ετικέτες, χρώμα, ποσότητα, ραφές και ορατές ατέλειες. Ζητήστε επιπλέον φωτογραφίες ή μετρήσεις εάν χρειάζονται."
+      ],
+      [
+        "Ετοιμάστε το δέμα",
+        "Επιλέξτε προϊόντα αποθήκης και ελέγξτε παραλήπτη, χώρα, ταχυδρομικό κώδικα, διαδρομή και συσκευασία. Η άδεια αποθήκη δεν εμφανίζει φόρμα αποστολής.",
+        "Επιλέξτε διαθέσιμα προϊόντα αποθήκης που επιτρέπονται στην ίδια διαδρομή αποστολής."
+      ],
+      [
+        "Πληρώστε διεθνή μεταφορά",
+        "Στο Parcel επιλέξτε Payment Pending και ανοίξτε το δέμα. Ελέγξτε κόστος, βάρος και διαστάσεις πριν πληρώσετε· η συσκευασία μπορεί να αλλάξει την τιμή.",
+        "Εξαρτώνται από προορισμό, διαδρομή, συσκευασμένο βάρος και διαστάσεις. Δείτε την τρέχουσα προσφορά USFans."
+      ],
+      [
+        "Περιμένετε συσκευασία",
+        "Στο All Parcel ανοίξτε το σωστό δέμα και ελέγξτε κατάσταση. Εκκρεμής πληρωμή δεν σημαίνει αποστολή.",
+        "Ανοίξτε το στο Parcel. Αν δεν ενημερώνεται, δώστε τον αριθμό δέματος στην υποστήριξη."
+      ],
+      [
+        "Παρακολουθήστε μεταφορά",
+        "Επιλέξτε In transit και ανοίξτε την παρακολούθηση. Άδεια λίστα δεν περιέχει αποστολές.",
+        "Ανοίξτε το στο Parcel. Αν δεν ενημερώνεται, δώστε τον αριθμό δέματος στην υποστήριξη."
+      ],
+      [
+        "Παραλάβετε και ελέγξτε",
+        "Ελέγξτε περιεχόμενο πριν επιβεβαιώσετε παραλαβή. Το Received είναι φίλτρο, όχι κουμπί επιβεβαίωσης. Κρατήστε φωτογραφίες και συσκευασία για προβλήματα.",
+        "Επικοινωνήστε μέσω παραγγελίας πριν τη διεθνή αποστολή. Όροι, προθεσμίες και χρεώσεις διαφέρουν."
+      ]
+    ]
+  },
+  "fi": {
+    "nav": "Aloittelijan opas",
+    "title": "Aloittelijan opas · USFans",
+    "intro": "Valinnasta toimitukseen",
+    "toc": "Aloittelijan opas",
+    "onSite": "USFans",
+    "onAgent": "USFans",
+    "check": "Ennen tilaamista",
+    "open": "Aloittelijan opas",
+    "official": "Aloittelijan opas",
+    "browse": "Tuoteluettelo",
+    "register": "Rekisteröidy USFansiin",
+    "faq": "Usein kysyttyä",
+    "note": "Riippumaton sivusto, ei USFansin kumppani. Linkeistä voi kertyä palkkiota; aitoutta tai laatua ei taata.",
+    "payments": [
+      "Luettelohinnat ovat suuntaa antavia; toimitus ja muut kulut voivat tulla lisäksi.",
+      "Vahvista tilaus ja maksu",
+      "Ei. Kiinan sisäinen toimitus, kansainvälinen kuljetus ja muut maksut voivat tulla lisäksi.",
+      "Maksa kansainvälinen toimitus",
+      "Kohde, reitti, pakattu paino ja mitat ratkaisevat. Tarkista USFansin ajantasainen tarjous."
+    ],
+    "steps": [
+      [
+        "Valitse tuote USFansissa",
+        "Valitse housukategoria ja avaa AMI-shortsit kuvasta tai nimestä. Tarkista kuvat ja viite-QC ja käytä ostopainiketta.",
+        "Vertaa mittoja, väriä, määrää, sisältöä sekä ajantasaista hintaa ja saatavuutta."
+      ],
+      [
+        "Valitse vaihtoehto ja koko",
+        "Valitse Style ja Size mittojen perusteella. Muuta Quantity painikkeilla − / +, tarkista Total ja valitse Buy now.",
+        "Vertaa mittoja, väriä, määrää, sisältöä sekä ajantasaista hintaa ja saatavuutta."
+      ],
+      [
+        "Vahvista tilaus ja maksu",
+        "Tarkista SKU ja määrä Confirm Order -sivulla. Order Summary näyttää Product Price ja Domestic Freight (China). Lue ehdot ennen hyväksymistä ja Submit-painiketta; kansainvälinen toimitus ei sisälly.",
+        "Ei. Kiinan sisäinen toimitus, kansainvälinen kuljetus ja muut maksut voivat tulla lisäksi."
+      ],
+      [
+        "Seuraa ostoa",
+        "Avaa Order. Käytä Payment Pending -suodatinta tai muita suodattimia, kirjoita nimi tai numero ja paina Search. Lue mahdolliset viestit.",
+        "USFans kyseisen tilauksen tai paketin kautta. Tämä luettelo ei voi muuttaa niitä."
+      ],
+      [
+        "Tarkista varasto ja QC",
+        "Avaa Warehouse tuotteen saavuttua ja tarkista oman tilauksesi kuvat. Luettelon historialliset kuvat eivät korvaa tarkistusta.",
+        "Merkinnät, väri, määrä, saumat ja näkyvät virheet. Pyydä tarvittaessa lisäkuvia tai mittoja."
+      ],
+      [
+        "Valmistele paketti",
+        "Valitse varastotuotteet ja tarkista vastaanottaja, maa, postinumero, reitti ja pakkaus. Tyhjä varasto ei näytä lähetyslomaketta.",
+        "Valitse varastosta tuotteet, jotka voidaan lähettää samalla kuljetusreitillä."
+      ],
+      [
+        "Maksa kansainvälinen toimitus",
+        "Valitse Parcel-sivulla Payment Pending ja avaa paketti. Tarkista hinta, paino ja mitat ennen maksua; pakkaaminen voi muuttaa hintaa.",
+        "Kohde, reitti, pakattu paino ja mitat ratkaisevat. Tarkista USFansin ajantasainen tarjous."
+      ],
+      [
+        "Odota pakkaamista",
+        "Avaa oikea paketti All Parcel -näkymässä ja tarkista tila. Odottava maksu ei tarkoita lähetettyä pakettia.",
+        "Avaa paketti Parcel-sivulla. Anna pakettinumero asiakaspalvelulle, jos päivityksiä puuttuu."
+      ],
+      [
+        "Seuraa kuljetusta",
+        "Valitse In transit ja avaa paketin seuranta. Tyhjässä luettelossa ei ole seurattavia lähetyksiä.",
+        "Avaa paketti Parcel-sivulla. Anna pakettinumero asiakaspalvelulle, jos päivityksiä puuttuu."
+      ],
+      [
+        "Vastaanota ja tarkista",
+        "Tarkista sisältö ennen vastaanoton vahvistamista. Received on suodatin, ei vahvistuspainike. Säilytä kuvat ja pakkaus ongelmatilanteessa.",
+        "Ota yhteyttä tilauksen kautta ennen kansainvälistä lähetystä. Ehdot, määräajat ja maksut vaihtelevat."
+      ]
+    ]
+  },
+  "hu": {
+    "nav": "Útmutató kezdőknek",
+    "title": "Útmutató kezdőknek · USFans",
+    "intro": "A választástól a kézbesítésig",
+    "toc": "Útmutató kezdőknek",
+    "onSite": "USFans",
+    "onAgent": "USFans",
+    "check": "Rendelés előtt",
+    "open": "Útmutató kezdőknek",
+    "official": "Útmutató kezdőknek",
+    "browse": "Katalógus",
+    "register": "Regisztráció a USFans oldalon",
+    "faq": "Gyakori kérdések",
+    "note": "Független oldal, nem kapcsolódik a USFanshoz. A hivatkozások jutalékot hozhatnak; nincs eredetiségi vagy minőségi garancia.",
+    "payments": [
+      "A katalógusár tájékoztató; szállítás és más költségek hozzáadódhatnak.",
+      "Ellenőrizd a rendelést és fizetést",
+      "Nem. Kínai belföldi és nemzetközi szállítás, valamint más díjak is felmerülhetnek.",
+      "Fizesd a nemzetközi szállítást",
+      "A cél, útvonal, csomagolt tömeg és méret határozza meg. Ellenőrizd a USFans aktuális ajánlatát."
+    ],
+    "steps": [
+      [
+        "Válassz terméket a USFans oldalon",
+        "A nadrágok között nyisd meg az AMI rövidnadrág képét vagy nevét. Nézd meg a képeket és a referencia-QC-t, majd használd a vásárlási gombot.",
+        "Méretek, szín, mennyiség, csomagtartalom, aktuális ár és készlet."
+      ],
+      [
+        "Válassz változatot és méretet",
+        "A Style és Size mezőben válassz a mérések alapján. A Quantity értékét − / + gombbal állítsd, ellenőrizd a Total értéket és kattints Buy now.",
+        "Méretek, szín, mennyiség, csomagtartalom, aktuális ár és készlet."
+      ],
+      [
+        "Ellenőrizd a rendelést és fizetést",
+        "A Confirm Order oldalon ellenőrizd az SKU-t és darabszámot. Az Order Summary tartalmazza a Product Price és Domestic Freight (China) tételeket. Olvasd el a feltételeket a jóváhagyás és Submit előtt; nemzetközi szállítás nincs benne.",
+        "Nem. Kínai belföldi és nemzetközi szállítás, valamint más díjak is felmerülhetnek."
+      ],
+      [
+        "Kövesd a beszerzést",
+        "Nyisd meg az Order menüt. Válassz Payment Pending vagy más szűrőt, írj nevet vagy számot, majd Search. Olvasd el az üzeneteket.",
+        "A USFans az érintett rendelésen vagy csomagon keresztül. A katalógus nem módosíthatja ezeket."
+      ],
+      [
+        "Ellenőrizd a raktárt és QC-t",
+        "Beérkezés után nyisd meg a Warehouse oldalt és a saját rendelés képeit. Korábbi képek ezt nem helyettesítik.",
+        "Címkéket, színt, mennyiséget, varrásokat és látható hibákat. Kérj további képet vagy mérést, ha szükséges."
+      ],
+      [
+        "Készíts csomagot",
+        "Válaszd ki a raktári tételeket, ellenőrizd a címzettet, országot, irányítószámot, útvonalat és csomagolást. Üres raktárnál nincs feladási űrlap.",
+        "Válassz raktári tételeket, amelyek ugyanazon útvonalon szállíthatók."
+      ],
+      [
+        "Fizesd a nemzetközi szállítást",
+        "A Parcel oldalon válaszd a Payment Pending szűrőt és nyisd meg a csomagot. Fizetés előtt ellenőrizd az árat, tömeget és méreteket; csomagolás után változhatnak.",
+        "A cél, útvonal, csomagolt tömeg és méret határozza meg. Ellenőrizd a USFans aktuális ajánlatát."
+      ],
+      [
+        "Várd meg a csomagolást",
+        "Az All Parcel alatt nyisd meg a megfelelő csomagot és nézd az állapotot. A fizetésre várás nem jelent feladást.",
+        "Nyisd meg a Parcel oldalon. Frissítések hiányában add meg a csomagszámot az ügyfélszolgálatnak."
+      ],
+      [
+        "Kövesd a szállítást",
+        "Válaszd az In transit szűrőt, majd a csomagkövetést. Üres listában nincs követhető csomag.",
+        "Nyisd meg a Parcel oldalon. Frissítések hiányában add meg a csomagszámot az ügyfélszolgálatnak."
+      ],
+      [
+        "Vedd át és ellenőrizd",
+        "Átvételi igazolás előtt ellenőrizd a tartalmat. A Received szűrő, nem igazoló gomb. Problémánál őrizd meg a képeket és csomagolást.",
+        "A nemzetközi feladás előtt keresd az ügyfélszolgálatot a rendelésből. Feltételek, határidők és díjak eltérhetnek."
+      ]
+    ]
+  },
+  "it": {
+    "nav": "Guida per principianti",
+    "title": "Guida per principianti · USFans",
+    "intro": "Dalla scelta alla consegna",
+    "toc": "Guida per principianti",
+    "onSite": "USFans",
+    "onAgent": "USFans",
+    "check": "Prima di ordinare",
+    "open": "Guida per principianti",
+    "official": "Guida per principianti",
+    "browse": "Catalogo",
+    "register": "Registrati su USFans",
+    "faq": "Domande frequenti",
+    "note": "Sito indipendente, non affiliato a USFans. I link possono generare commissioni; nessuna garanzia di autenticità o qualità.",
+    "payments": [
+      "Prezzi indicativi del catalogo; spedizione e altri costi possono aggiungersi.",
+      "Conferma l’ordine e il pagamento",
+      "No. Al prezzo si possono aggiungere trasporto interno cinese, spedizione internazionale e altri oneri applicabili.",
+      "Paga il trasporto internazionale",
+      "Dipende da destinazione, rotta, peso e dimensioni del pacco. Fa fede il preventivo aggiornato di USFans."
+    ],
+    "steps": [
+      [
+        "Scegli un prodotto su USFans",
+        "Nel catalogo scegli la categoria pantaloni e apri la foto o il nome dei pantaloncini AMI. Controlla immagini e QC; poi premi il pulsante di acquisto.",
+        "Confronta misure, colore, quantità e contenuto della confezione; verifica prezzo e disponibilità aggiornati."
+      ],
+      [
+        "Scegli le opzioni",
+        "In Style seleziona la variante; in Size scegli la taglia confrontando le misure. Regola Quantity con − / +, controlla Total e premi Buy now.",
+        "Confronta misure, colore, quantità e contenuto della confezione; verifica prezzo e disponibilità aggiornati."
+      ],
+      [
+        "Conferma l’ordine e il pagamento",
+        "In Confirm Order verifica SKU, taglia e quantità. Order Summary separa Product Price e Domestic Freight (China). Leggi le condizioni prima di accettarle e premere Submit; la spedizione internazionale è esclusa.",
+        "No. Al prezzo si possono aggiungere trasporto interno cinese, spedizione internazionale e altri oneri applicabili."
+      ],
+      [
+        "Segui l’acquisto",
+        "Apri Order dal menu dell’account. Usa Payment Pending o gli altri filtri, cerca nome o numero e premi Search. Controlla eventuali richieste di conferma.",
+        "USFans gestisce gli ordini. Contatta l’assistenza dall’ordine o dal pacco interessato; questo catalogo non può modificarli."
+      ],
+      [
+        "Controlla il QC in magazzino",
+        "Apri Warehouse. Dopo l’arrivo cerca il tuo articolo e controlla le foto dell’ordine. Le immagini storiche del catalogo non sostituiscono questo controllo.",
+        "Verifica etichette, colore, quantità, cuciture e difetti visibili. Se necessario richiedi misure o foto aggiuntive."
+      ],
+      [
+        "Prepara il pacco",
+        "In Warehouse seleziona gli articoli disponibili, verifica destinatario, paese e codice postale e confronta rotte e imballaggio. Il modulo non appare a magazzino vuoto.",
+        "Se disponibili e compatibili con la rotta, seleziona gli articoli in magazzino per preparare un unico pacco."
+      ],
+      [
+        "Paga il trasporto internazionale",
+        "In Parcel scegli Payment Pending, apri il pacco e verifica preventivo, peso e dimensioni prima di pagare. Il costo finale può variare dopo l’imballaggio.",
+        "Dipende da destinazione, rotta, peso e dimensioni del pacco. Fa fede il preventivo aggiornato di USFans."
+      ],
+      [
+        "Attendi imballaggio e partenza",
+        "In Parcel usa All Parcel e apri la registrazione corretta. Controlla lo stato di lavorazione; un pagamento ancora richiesto non equivale a una spedizione avvenuta.",
+        "In Parcel apri la registrazione del pacco e consulta il tracciamento. Se non si aggiorna, comunica il numero all’assistenza."
+      ],
+      [
+        "Segui il trasporto",
+        "Scegli In transit e apri il pacco per leggere gli aggiornamenti. Una lista vuota non contiene spedizioni da seguire.",
+        "In Parcel apri la registrazione del pacco e consulta il tracciamento. Se non si aggiorna, comunica il numero all’assistenza."
+      ],
+      [
+        "Ricevi e controlla",
+        "Controlla imballaggio e contenuto prima della conferma. Received filtra i pacchi consegnati: non è il pulsante di conferma. Conserva foto e imballaggio per eventuale assistenza.",
+        "Contatta l’assistenza tramite l’ordine prima della spedizione internazionale. Condizioni, scadenze e costi dipendono dall’articolo."
+      ]
+    ]
+  },
+  "ja": {
+    "nav": "初心者ガイド",
+    "title": "初心者ガイド · USFans",
+    "intro": "商品選びから受け取りまで",
+    "toc": "初心者ガイド",
+    "onSite": "USFans",
+    "onAgent": "USFans",
+    "check": "注文前の確認",
+    "open": "初心者ガイド",
+    "official": "初心者ガイド",
+    "browse": "商品一覧",
+    "register": "USFansに登録",
+    "faq": "よくある質問",
+    "note": "USFansとは提携していない独立サイトです。紹介リンクから報酬を得る場合があります。商品の真贋や品質を保証するものではありません。",
+    "payments": [
+      "掲載価格は参考価格です。送料やその他の費用が別途かかる場合があります。",
+      "注文と支払いを確認する",
+      "いいえ。中国国内送料、国際送料、その他の対象費用が追加される場合があります。",
+      "国際送料を支払う",
+      "配送先、ルート、梱包後の重量と寸法によります。USFansの最新の見積もりを確認してください。"
+    ],
+    "steps": [
+      [
+        "USFansで商品を選ぶ",
+        "パンツのカテゴリーからAMIショートパンツの写真か商品名を開きます。写真と参考QCを見て、購入ボタンを使います。",
+        "実寸、色、数量、同梱品、最新の価格と在庫を確認してください。"
+      ],
+      [
+        "仕様とサイズを選ぶ",
+        "Styleで仕様、Sizeで実寸に合うサイズを選びます。Quantityを− / +で調整し、Totalを確認してBuy nowを押します。",
+        "実寸、色、数量、同梱品、最新の価格と在庫を確認してください。"
+      ],
+      [
+        "注文と支払いを確認する",
+        "Confirm OrderでSKUと数量を確認します。Order SummaryにはProduct PriceとDomestic Freight (China)が表示されます。規約を読んで同意する場合のみチェックし、Submitへ進みます。国際送料は含まれません。",
+        "いいえ。中国国内送料、国際送料、その他の対象費用が追加される場合があります。"
+      ],
+      [
+        "買い付け状況を確認する",
+        "Orderを開き、Payment Pendingなどで絞り込みます。商品名や番号を入力してSearchを押し、確認依頼やメッセージを確認します。",
+        "該当する注文や荷物からUSFansへ連絡してください。このカタログでは注文を変更できません。"
+      ],
+      [
+        "入庫後のQCを確認する",
+        "入庫後にWarehouseでご自身の注文写真を開きます。カタログの過去写真は、この検品の代わりにはなりません。",
+        "ラベル、色、数量、縫製、目に見える不具合を確認します。必要なら追加撮影や採寸を依頼してください。"
+      ],
+      [
+        "国際発送を申し込む",
+        "入庫済み商品を選び、宛名、国、郵便番号、配送ルートと梱包を確認します。倉庫が空の場合、発送フォームは表示されません。",
+        "同じ配送ルートで発送可能な入庫済み商品を選んで、荷物をまとめます。"
+      ],
+      [
+        "国際送料を支払う",
+        "ParcelのPayment Pendingから荷物を開きます。支払い前に料金、重量、寸法を確認してください。梱包後に金額が調整される場合があります。",
+        "配送先、ルート、梱包後の重量と寸法によります。USFansの最新の見積もりを確認してください。"
+      ],
+      [
+        "梱包と出庫を待つ",
+        "All Parcelで該当の荷物を開き、処理状況を確認します。支払い待ちは発送済みという意味ではありません。",
+        "Parcelで該当する荷物を開きます。更新がない場合は荷物番号をサポートに伝えてください。"
+      ],
+      [
+        "配送状況を追跡する",
+        "In transitを選び、荷物の追跡情報を開きます。空の一覧には追跡できる荷物がありません。",
+        "Parcelで該当する荷物を開きます。更新がない場合は荷物番号をサポートに伝えてください。"
+      ],
+      [
+        "受け取って確認する",
+        "受け取り確定前に中身を確認します。Receivedは状態フィルターであり、受け取り確定ボタンではありません。不具合があれば写真と梱包を保管してください。",
+        "国際発送前に注文画面からサポートへ連絡してください。条件、期限、費用は商品ごとに異なります。"
+      ]
+    ]
+  },
+  "ko": {
+    "nav": "초보자 가이드",
+    "title": "초보자 가이드 · USFans",
+    "intro": "상품 선택부터 배송까지",
+    "toc": "초보자 가이드",
+    "onSite": "USFans",
+    "onAgent": "USFans",
+    "check": "주문 전 확인",
+    "open": "초보자 가이드",
+    "official": "초보자 가이드",
+    "browse": "상품 목록",
+    "register": "USFans 가입",
+    "faq": "자주 묻는 질문",
+    "note": "USFans와 제휴하지 않은 독립 사이트입니다. 링크로 수수료를 받을 수 있으며 정품 여부나 품질을 보증하지 않습니다.",
+    "payments": [
+      "목록 가격은 참고용이며 배송비와 기타 비용이 추가될 수 있습니다.",
+      "주문 및 결제 확인",
+      "아니요. 중국 내 배송비, 국제 배송비와 기타 해당 비용이 추가될 수 있습니다.",
+      "국제 배송비 결제",
+      "도착 국가, 노선, 포장 후 무게와 크기에 따라 다릅니다. USFans의 최신 견적을 확인하세요."
+    ],
+    "steps": [
+      [
+        "USFans에서 상품 선택",
+        "바지 카테고리에서 AMI 반바지의 사진이나 이름을 여세요. 상품 사진과 참고 QC를 확인하고 구매 버튼을 사용합니다.",
+        "실측, 색상, 수량, 구성품, 최신 가격과 재고를 확인하세요."
+      ],
+      [
+        "옵션과 사이즈 선택",
+        "Style에서 옵션, Size에서 실측에 맞는 사이즈를 고르세요. Quantity를 − / +로 조절하고 Total 확인 후 Buy now를 누르세요.",
+        "실측, 색상, 수량, 구성품, 최신 가격과 재고를 확인하세요."
+      ],
+      [
+        "주문 및 결제 확인",
+        "Confirm Order에서 SKU와 수량을 확인하세요. Order Summary에 Product Price와 Domestic Freight (China)가 표시됩니다. 약관을 읽고 동의할 경우 체크한 뒤 Submit으로 진행하세요. 국제 배송비는 포함되지 않습니다.",
+        "아니요. 중국 내 배송비, 국제 배송비와 기타 해당 비용이 추가될 수 있습니다."
+      ],
+      [
+        "구매 진행 확인",
+        "Order를 열고 Payment Pending 등으로 필터링하세요. 상품명이나 번호를 입력해 Search를 누르고 확인 요청이나 메시지를 읽으세요.",
+        "해당 주문이나 소포에서 USFans에 문의하세요. 이 상품 목록은 주문을 수정할 수 없습니다."
+      ],
+      [
+        "입고 및 QC 확인",
+        "입고 후 Warehouse에서 본인 주문 사진을 여세요. 과거 상품 목록 사진이 이 검수를 대신하지 않습니다.",
+        "라벨, 색상, 수량, 봉제와 눈에 보이는 결함을 확인합니다. 필요하면 추가 촬영이나 실측을 요청하세요."
+      ],
+      [
+        "국제 소포 준비",
+        "입고 상품을 선택하고 수취인, 국가, 우편번호, 노선과 포장을 확인하세요. 창고가 비어 있으면 발송 양식이 나타나지 않습니다.",
+        "같은 배송 노선을 이용할 수 있는 입고 상품을 선택해 한 소포로 준비할 수 있습니다."
+      ],
+      [
+        "국제 배송비 결제",
+        "Parcel의 Payment Pending에서 소포를 여세요. 결제 전에 요금, 무게와 크기를 확인하세요. 포장 후 금액이 조정될 수 있습니다.",
+        "도착 국가, 노선, 포장 후 무게와 크기에 따라 다릅니다. USFans의 최신 견적을 확인하세요."
+      ],
+      [
+        "포장 및 출고 대기",
+        "All Parcel에서 해당 소포를 열어 처리 상태를 확인하세요. 결제 대기는 발송 완료를 뜻하지 않습니다.",
+        "Parcel에서 해당 소포를 여세요. 업데이트가 없으면 소포 번호를 고객지원에 알려주세요."
+      ],
+      [
+        "배송 추적",
+        "In transit을 선택해 소포 추적을 여세요. 빈 목록에는 추적할 소포가 없습니다.",
+        "Parcel에서 해당 소포를 여세요. 업데이트가 없으면 소포 번호를 고객지원에 알려주세요."
+      ],
+      [
+        "수령 및 확인",
+        "수령 확정 전에 내용물을 확인하세요. Received는 상태 필터이며 수령 확정 버튼이 아닙니다. 문제가 있으면 사진과 포장을 보관하세요.",
+        "국제 발송 전에 주문에서 고객지원에 문의하세요. 조건, 기한과 비용은 상품마다 다릅니다."
+      ]
+    ]
+  },
+  "nb": {
+    "nav": "Nybegynnerguide",
+    "title": "Nybegynnerguide · USFans",
+    "intro": "Fra valg til levering",
+    "toc": "Nybegynnerguide",
+    "onSite": "USFans",
+    "onAgent": "USFans",
+    "check": "Før bestilling",
+    "open": "Nybegynnerguide",
+    "official": "Nybegynnerguide",
+    "browse": "Katalog",
+    "register": "Registrer deg hos USFans",
+    "faq": "Vanlige spørsmål",
+    "note": "Uavhengig nettsted uten tilknytning til USFans. Lenker kan gi provisjon; ingen garanti for ekthet eller kvalitet.",
+    "payments": [
+      "Katalogpriser er veiledende; frakt og andre kostnader kan komme i tillegg.",
+      "Bekreft bestilling og betaling",
+      "Nei. Innenlandsfrakt i Kina, internasjonal frakt og andre avgifter kan komme i tillegg.",
+      "Betal internasjonal frakt",
+      "Destinasjon, rute, pakket vekt og mål avgjør prisen. Kontroller USFans gjeldende tilbud."
+    ],
+    "steps": [
+      [
+        "Velg et produkt på USFans",
+        "Velg buksekategorien og åpne AMI-shortsen via bilde eller navn. Se bilder og referanse-QC, og bruk kjøpsknappen.",
+        "Sammenlign mål, farge, antall, innhold, gjeldende pris og lagerstatus."
+      ],
+      [
+        "Velg variant og størrelse",
+        "Velg Style og Size ut fra mål. Juster Quantity med − / +, kontroller Total og klikk Buy now.",
+        "Sammenlign mål, farge, antall, innhold, gjeldende pris og lagerstatus."
+      ],
+      [
+        "Bekreft bestilling og betaling",
+        "Kontroller SKU og antall i Confirm Order. Order Summary viser Product Price og Domestic Freight (China). Les vilkårene før samtykke og Submit; internasjonal frakt er ikke inkludert.",
+        "Nei. Innenlandsfrakt i Kina, internasjonal frakt og andre avgifter kan komme i tillegg."
+      ],
+      [
+        "Følg innkjøpet",
+        "Åpne Order. Velg Payment Pending eller andre filtre, skriv navn eller nummer og klikk Search. Les eventuelle meldinger.",
+        "USFans via den aktuelle bestillingen eller pakken. Katalogen kan ikke endre dem."
+      ],
+      [
+        "Kontroller lager og QC",
+        "Åpne Warehouse etter ankomst og se bildene av din bestilling. Historiske katalogbilder erstatter ikke denne kontrollen.",
+        "Etiketter, farge, antall, sømmer og synlige feil. Be om ekstra bilder eller mål ved behov."
+      ],
+      [
+        "Opprett pakken",
+        "Velg lagervarer og kontroller mottaker, land, postnummer, rute og emballasje. Et tomt lager viser ikke fraktskjemaet.",
+        "Velg tilgjengelige lagervarer som er tillatt på samme fraktrute."
+      ],
+      [
+        "Betal internasjonal frakt",
+        "Velg Payment Pending i Parcel og åpne pakken. Kontroller pris, vekt og mål før betaling; emballering kan endre prisen.",
+        "Destinasjon, rute, pakket vekt og mål avgjør prisen. Kontroller USFans gjeldende tilbud."
+      ],
+      [
+        "Vent på pakking",
+        "Åpne riktig pakke under All Parcel og se status. Ventende betaling betyr ikke at pakken er sendt.",
+        "Åpne pakken i Parcel. Oppgi pakkenummer til support ved manglende oppdateringer."
+      ],
+      [
+        "Følg transporten",
+        "Velg In transit og åpne pakkens sporing. En tom liste inneholder ingen forsendelser.",
+        "Åpne pakken i Parcel. Oppgi pakkenummer til support ved manglende oppdateringer."
+      ],
+      [
+        "Motta og kontroller",
+        "Kontroller innhold før mottaksbekreftelse. Received er et filter, ikke en bekreftelsesknapp. Ta vare på bilder og emballasje ved problemer.",
+        "Kontakt support gjennom bestillingen før internasjonal frakt. Vilkår, frister og gebyrer varierer."
+      ]
+    ]
+  },
+  "nl": {
+    "nav": "Beginnersgids",
+    "title": "Beginnersgids · USFans",
+    "intro": "Van kiezen tot bezorgen",
+    "toc": "Beginnersgids",
+    "onSite": "USFans",
+    "onAgent": "USFans",
+    "check": "Voor je bestelt",
+    "open": "Beginnersgids",
+    "official": "Beginnersgids",
+    "browse": "Catalogus",
+    "register": "Registreren bij USFans",
+    "faq": "Veelgestelde vragen",
+    "note": "Onafhankelijke website, niet verbonden aan USFans. Links kunnen commissie opleveren; geen garantie op echtheid of kwaliteit.",
+    "payments": [
+      "Catalogusprijzen zijn indicatief; verzending en andere kosten kunnen erbij komen.",
+      "Controleer en betaal de bestelling",
+      "Nee. Binnenlands vervoer in China, internationale verzending en andere toepasselijke kosten kunnen erbij komen.",
+      "Betaal internationaal vervoer",
+      "Dat hangt af van bestemming, route, verpakt gewicht en afmetingen. Controleer de actuele USFans-offerte."
+    ],
+    "steps": [
+      [
+        "Kies een product op USFans",
+        "Kies de categorie broeken en open de afbeelding of naam van de AMI-shorts. Bekijk foto’s en referentie-QC en gebruik daarna de aankoopknop.",
+        "Vergelijk maten, kleur, aantal en inbegrepen onderdelen. Controleer actuele beschikbaarheid en prijs."
+      ],
+      [
+        "Kies uitvoering en maat",
+        "Klik onder Style op de uitvoering en onder Size op de passende maat. Vergelijk afmetingen, stel Quantity in met − / +, controleer Total en klik Buy now.",
+        "Vergelijk maten, kleur, aantal en inbegrepen onderdelen. Controleer actuele beschikbaarheid en prijs."
+      ],
+      [
+        "Controleer en betaal de bestelling",
+        "Controleer SKU, maat en aantal op Confirm Order. Order Summary toont Product Price en Domestic Freight (China). Lees de voorwaarden voordat je instemt en Submit kiest; internationale verzending is niet inbegrepen.",
+        "Nee. Binnenlands vervoer in China, internationale verzending en andere toepasselijke kosten kunnen erbij komen."
+      ],
+      [
+        "Volg de aankoop",
+        "Open Order vanuit het accountmenu. Kies bijvoorbeeld Payment Pending, zoek op productnaam of nummer en klik Search. Controleer eventuele bevestigingsverzoeken.",
+        "USFans verwerkt bestellingen. Vraag hulp via de betreffende bestelling of het pakket; deze catalogus kan ze niet wijzigen."
+      ],
+      [
+        "Controleer magazijn en QC",
+        "Open Warehouse. Zoek na aankomst je artikel en bekijk de foto’s van je eigen bestelling. Historische catalogusfoto’s vervangen deze controle niet.",
+        "Controleer labels, kleur, aantal, naden en zichtbare gebreken. Vraag zo nodig extra foto’s of metingen."
+      ],
+      [
+        "Maak een pakket",
+        "Selecteer beschikbare artikelen in Warehouse. Controleer ontvanger, land en postcode en vergelijk routes en verpakking. Een leeg magazijn toont geen verzendformulier.",
+        "Selecteer geschikte opgeslagen artikelen voor één pakket, als de gekozen verzendroute dat toestaat."
+      ],
+      [
+        "Betaal internationaal vervoer",
+        "Kies Payment Pending in Parcel. Open het pakket en controleer offerte, gewicht en afmetingen vóór betaling. Het bedrag kan na verpakking veranderen.",
+        "Dat hangt af van bestemming, route, verpakt gewicht en afmetingen. Controleer de actuele USFans-offerte."
+      ],
+      [
+        "Wacht op verpakking en vertrek",
+        "Kies All Parcel en open het juiste pakket. Bekijk de verwerking; een openstaande betaling betekent niet dat het pakket verzonden is.",
+        "Open het pakket in Parcel en bekijk de tracking. Geef bij ontbrekende updates het pakketnummer aan de klantenservice."
+      ],
+      [
+        "Volg het vervoer",
+        "Kies In transit en open het pakket voor updates. Een lege lijst bevat geen trackinggegevens.",
+        "Open het pakket in Parcel en bekijk de tracking. Geef bij ontbrekende updates het pakketnummer aan de klantenservice."
+      ],
+      [
+        "Ontvang en controleer",
+        "Controleer verpakking en inhoud vóór ontvangstbevestiging. Received is een statusfilter, geen bevestigingsknop. Bewaar foto’s en verpakking bij problemen.",
+        "Neem vóór internationale verzending via de bestelling contact op. Voorwaarden, termijnen en kosten verschillen per artikel."
+      ]
+    ]
+  },
+  "pl": {
+    "nav": "Poradnik dla początkujących",
+    "title": "Poradnik dla początkujących · USFans",
+    "intro": "Od wyboru do dostawy",
+    "toc": "Poradnik dla początkujących",
+    "onSite": "USFans",
+    "onAgent": "USFans",
+    "check": "Przed zamówieniem",
+    "open": "Poradnik dla początkujących",
+    "official": "Poradnik dla początkujących",
+    "browse": "Katalog",
+    "register": "Zarejestruj się w USFans",
+    "faq": "Pytania i odpowiedzi",
+    "note": "Niezależna strona, niepowiązana z USFans. Linki mogą przynosić prowizję; brak gwarancji autentyczności lub jakości.",
+    "payments": [
+      "Ceny katalogowe są orientacyjne; mogą dojść koszty dostawy i inne opłaty.",
+      "Potwierdź zamówienie i płatność",
+      "Nie. Mogą dojść dostawa krajowa w Chinach, wysyłka międzynarodowa i inne należne opłaty.",
+      "Opłać wysyłkę międzynarodową",
+      "Zależy od kraju, trasy, wagi i wymiarów zapakowanej paczki. Sprawdź aktualną wycenę USFans."
+    ],
+    "steps": [
+      [
+        "Wybierz produkt w USFans",
+        "W katalogu wybierz spodnie i otwórz zdjęcie lub nazwę szortów AMI. Sprawdź zdjęcia i historyczne QC, potem użyj przycisku zakupu.",
+        "Porównaj wymiary, kolor, liczbę sztuk i zawartość zestawu. Sprawdź aktualną cenę oraz dostępność."
+      ],
+      [
+        "Wybierz wariant i rozmiar",
+        "W Style wybierz wariant, w Size rozmiar według wymiarów. Ustaw Quantity przyciskami − / +, sprawdź Total i kliknij Buy now.",
+        "Porównaj wymiary, kolor, liczbę sztuk i zawartość zestawu. Sprawdź aktualną cenę oraz dostępność."
+      ],
+      [
+        "Potwierdź zamówienie i płatność",
+        "Na Confirm Order sprawdź SKU, rozmiar i ilość. Order Summary pokazuje Product Price i Domestic Freight (China). Przeczytaj warunki przed zgodą i Submit; wysyłka międzynarodowa nie jest wliczona.",
+        "Nie. Mogą dojść dostawa krajowa w Chinach, wysyłka międzynarodowa i inne należne opłaty."
+      ],
+      [
+        "Śledź zakup",
+        "Otwórz Order w menu konta. Użyj Payment Pending lub innych filtrów, wpisz nazwę albo numer i kliknij Search. Sprawdź prośby o potwierdzenie.",
+        "USFans obsługuje zamówienia. Skontaktuj się przez odpowiednie zamówienie lub paczkę; katalog nie może ich zmieniać."
+      ],
+      [
+        "Sprawdź magazyn i QC",
+        "Otwórz Warehouse. Po przyjęciu towaru znajdź swój produkt i obejrzyj zdjęcia zamówienia. Historyczne zdjęcia katalogowe nie zastępują kontroli.",
+        "Sprawdź metki, kolor, ilość, szwy i widoczne wady. W razie potrzeby poproś o dodatkowe zdjęcia lub pomiary."
+      ],
+      [
+        "Przygotuj paczkę",
+        "W Warehouse zaznacz dostępne produkty. Sprawdź odbiorcę, kraj, kod pocztowy, trasy i pakowanie. Pusty magazyn nie pokazuje formularza wysyłki.",
+        "Wybierz zgodne z trasą produkty dostępne w magazynie, aby przygotować wspólną paczkę."
+      ],
+      [
+        "Opłać wysyłkę międzynarodową",
+        "W Parcel wybierz Payment Pending, otwórz paczkę i sprawdź wycenę, wagę oraz wymiary przed płatnością. Koszt może się zmienić po spakowaniu.",
+        "Zależy od kraju, trasy, wagi i wymiarów zapakowanej paczki. Sprawdź aktualną wycenę USFans."
+      ],
+      [
+        "Poczekaj na pakowanie i nadanie",
+        "W All Parcel otwórz właściwą paczkę i sprawdź postęp. Oczekiwanie na płatność nie oznacza nadania.",
+        "Otwórz paczkę w Parcel i sprawdź śledzenie. Przy braku aktualizacji podaj obsłudze numer paczki."
+      ],
+      [
+        "Śledź transport",
+        "Wybierz In transit i otwórz paczkę, aby sprawdzić aktualizacje. Pusta lista nie zawiera przesyłek do śledzenia.",
+        "Otwórz paczkę w Parcel i sprawdź śledzenie. Przy braku aktualizacji podaj obsłudze numer paczki."
+      ],
+      [
+        "Odbierz i sprawdź",
+        "Sprawdź opakowanie i zawartość przed potwierdzeniem odbioru. Received jest filtrem, a nie przyciskiem potwierdzenia. Zachowaj zdjęcia i opakowanie w razie reklamacji.",
+        "Skontaktuj się przez zamówienie przed wysyłką międzynarodową. Warunki, terminy i opłaty zależą od produktu."
+      ]
+    ]
+  },
+  "ro": {
+    "nav": "Ghid pentru începători",
+    "title": "Ghid pentru începători · USFans",
+    "intro": "De la alegere la livrare",
+    "toc": "Ghid pentru începători",
+    "onSite": "USFans",
+    "onAgent": "USFans",
+    "check": "Înainte de comandă",
+    "open": "Ghid pentru începători",
+    "official": "Ghid pentru începători",
+    "browse": "Catalog",
+    "register": "Înregistrează-te pe USFans",
+    "faq": "Întrebări frecvente",
+    "note": "Site independent, fără afiliere cu USFans. Linkurile pot genera comisioane; autenticitatea și calitatea nu sunt garantate.",
+    "payments": [
+      "Prețurile sunt orientative; transportul și alte taxe se pot adăuga.",
+      "Confirmă comanda și plata",
+      "Nu. Transportul intern din China, cel internațional și alte taxe se pot adăuga.",
+      "Plătește transportul internațional",
+      "Depinde de destinație, rută, greutatea ambalată și dimensiuni. Verifică oferta actuală USFans."
+    ],
+    "steps": [
+      [
+        "Alege un produs pe USFans",
+        "În categoria pantaloni deschide șorturile AMI prin fotografie sau nume. Verifică imaginile și QC de referință, apoi folosește butonul de cumpărare.",
+        "Dimensiunile, culoarea, cantitatea, conținutul, prețul actual și disponibilitatea."
+      ],
+      [
+        "Alege varianta și mărimea",
+        "Selectează Style și Size pe baza măsurătorilor. Modifică Quantity cu − / +, verifică Total și apasă Buy now.",
+        "Dimensiunile, culoarea, cantitatea, conținutul, prețul actual și disponibilitatea."
+      ],
+      [
+        "Confirmă comanda și plata",
+        "În Confirm Order verifică SKU și cantitatea. Order Summary arată Product Price și Domestic Freight (China). Citește termenii înainte de acceptare și Submit; transportul internațional este exclus.",
+        "Nu. Transportul intern din China, cel internațional și alte taxe se pot adăuga."
+      ],
+      [
+        "Urmărește achiziția",
+        "Deschide Order, alege Payment Pending sau alt filtru, introdu numele ori numărul și apasă Search. Citește mesajele primite.",
+        "USFans, prin comanda sau coletul respectiv. Catalogul nu le poate modifica."
+      ],
+      [
+        "Verifică depozitul și QC",
+        "După sosire deschide Warehouse și fotografiile comenzii tale. Imaginile istorice nu înlocuiesc această verificare.",
+        "Etichete, culoare, număr de bucăți, cusături și defecte vizibile. Cere fotografii sau măsurători suplimentare dacă trebuie."
+      ],
+      [
+        "Pregătește coletul",
+        "Selectează articolele din depozit și verifică destinatarul, țara, codul poștal, ruta și ambalajul. Depozitul gol nu afișează formularul de expediere.",
+        "Selectează articole din depozit permise pe aceeași rută de transport."
+      ],
+      [
+        "Plătește transportul internațional",
+        "În Parcel selectează Payment Pending și deschide coletul. Verifică prețul, greutatea și dimensiunile înainte de plată; ambalarea poate schimba costul.",
+        "Depinde de destinație, rută, greutatea ambalată și dimensiuni. Verifică oferta actuală USFans."
+      ],
+      [
+        "Așteaptă ambalarea",
+        "În All Parcel deschide coletul corect și verifică starea. O plată în așteptare nu înseamnă expediere.",
+        "Deschide coletul în Parcel. Dacă lipsesc actualizări, comunică asistenței numărul coletului."
+      ],
+      [
+        "Urmărește transportul",
+        "Selectează In transit și deschide urmărirea coletului. Lista goală nu conține expedieri.",
+        "Deschide coletul în Parcel. Dacă lipsesc actualizări, comunică asistenței numărul coletului."
+      ],
+      [
+        "Primește și verifică",
+        "Verifică conținutul înainte de confirmarea primirii. Received este filtru, nu buton de confirmare. Păstrează fotografiile și ambalajul în caz de probleme.",
+        "Contactează asistența prin comandă înainte de transportul internațional. Condițiile, termenele și taxele diferă."
+      ]
+    ]
+  },
+  "ru": {
+    "nav": "Руководство для начинающих",
+    "title": "Руководство для начинающих · USFans",
+    "intro": "От выбора до доставки",
+    "toc": "Руководство для начинающих",
+    "onSite": "USFans",
+    "onAgent": "USFans",
+    "check": "Перед заказом",
+    "open": "Руководство для начинающих",
+    "official": "Руководство для начинающих",
+    "browse": "Каталог",
+    "register": "Регистрация в USFans",
+    "faq": "Частые вопросы",
+    "note": "Независимый сайт, не связанный с USFans. Ссылки могут приносить комиссию; подлинность и качество не гарантируются.",
+    "payments": [
+      "Цены каталога ориентировочные; доставка и другие расходы могут добавляться.",
+      "Подтвердите заказ и оплату",
+      "Нет. Возможны доставка по Китаю, международная перевозка и другие платежи.",
+      "Оплатите международную доставку",
+      "Зависит от страны, маршрута, упакованного веса и размеров. Проверьте актуальный расчёт USFans."
+    ],
+    "steps": [
+      [
+        "Выберите товар в USFans",
+        "В категории брюк откройте шорты AMI по фото или названию. Просмотрите изображения и справочные QC, затем используйте кнопку покупки.",
+        "Размеры, цвет, количество, комплектность, актуальную цену и наличие."
+      ],
+      [
+        "Выберите вариант и размер",
+        "Выберите Style и Size по замерам. Измените Quantity кнопками − / +, проверьте Total и нажмите Buy now.",
+        "Размеры, цвет, количество, комплектность, актуальную цену и наличие."
+      ],
+      [
+        "Подтвердите заказ и оплату",
+        "В Confirm Order проверьте SKU и количество. Order Summary показывает Product Price и Domestic Freight (China). Прочтите условия до согласия и Submit; международная доставка не включена.",
+        "Нет. Возможны доставка по Китаю, международная перевозка и другие платежи."
+      ],
+      [
+        "Следите за выкупом",
+        "Откройте Order, выберите Payment Pending или другой фильтр, введите название либо номер и нажмите Search. Проверьте сообщения.",
+        "USFans через соответствующий заказ или посылку. Этот каталог не может их изменять."
+      ],
+      [
+        "Проверьте склад и QC",
+        "После поступления откройте Warehouse и фотографии своего заказа. Исторические снимки не заменяют проверку.",
+        "Этикетки, цвет, количество, швы и видимые дефекты. При необходимости попросите дополнительные фото или замеры."
+      ],
+      [
+        "Подготовьте посылку",
+        "Выберите складские товары, проверьте получателя, страну, индекс, маршрут и упаковку. Пустой склад не показывает форму отправки.",
+        "Выберите складские позиции, разрешённые для одного маршрута доставки."
+      ],
+      [
+        "Оплатите международную доставку",
+        "В Parcel выберите Payment Pending и откройте посылку. До оплаты проверьте стоимость, вес и размеры; упаковка может изменить цену.",
+        "Зависит от страны, маршрута, упакованного веса и размеров. Проверьте актуальный расчёт USFans."
+      ],
+      [
+        "Дождитесь упаковки",
+        "В All Parcel откройте нужную посылку и проверьте статус. Ожидание оплаты не означает отправку.",
+        "Откройте её в Parcel. Если обновлений нет, сообщите поддержке номер посылки."
+      ],
+      [
+        "Отслеживайте перевозку",
+        "Выберите In transit и откройте отслеживание. Пустой список не содержит отправлений.",
+        "Откройте её в Parcel. Если обновлений нет, сообщите поддержке номер посылки."
+      ],
+      [
+        "Получите и проверьте",
+        "Проверьте содержимое до подтверждения получения. Received — фильтр, не кнопка подтверждения. Сохраните фото и упаковку на случай проблем.",
+        "Обратитесь через заказ до международной отправки. Условия, сроки и расходы различаются."
+      ]
+    ]
+  },
+  "sk": {
+    "nav": "Príručka pre začiatočníkov",
+    "title": "Príručka pre začiatočníkov · USFans",
+    "intro": "Od výberu po doručenie",
+    "toc": "Príručka pre začiatočníkov",
+    "onSite": "USFans",
+    "onAgent": "USFans",
+    "check": "Pred objednaním",
+    "open": "Príručka pre začiatočníkov",
+    "official": "Príručka pre začiatočníkov",
+    "browse": "Katalóg",
+    "register": "Registrácia v USFans",
+    "faq": "Časté otázky",
+    "note": "Nezávislý web bez prepojenia na USFans. Odkazy môžu prinášať províziu; pravosť ani kvalita nie sú zaručené.",
+    "payments": [
+      "Katalógové ceny sú orientačné; doprava a ďalšie poplatky môžu byť navyše.",
+      "Potvrďte objednávku a platbu",
+      "Nie. Doprava v Číne, medzinárodná preprava a ďalšie poplatky môžu byť navyše.",
+      "Zaplaťte medzinárodnú dopravu",
+      "Závisí od cieľa, trasy, zabalenej hmotnosti a rozmerov. Overte aktuálnu ponuku USFans."
+    ],
+    "steps": [
+      [
+        "Vyberte produkt na USFans",
+        "V kategórii nohavíc otvorte AMI šortky cez obrázok alebo názov. Skontrolujte snímky a referenčné QC, potom použite nákupné tlačidlo.",
+        "Rozmery, farbu, počet kusov, obsah balenia a aktuálnu cenu a dostupnosť."
+      ],
+      [
+        "Vyberte variant a veľkosť",
+        "Zvoľte Style a Size podľa rozmerov. Upravte Quantity cez − / +, overte Total a kliknite Buy now.",
+        "Rozmery, farbu, počet kusov, obsah balenia a aktuálnu cenu a dostupnosť."
+      ],
+      [
+        "Potvrďte objednávku a platbu",
+        "V Confirm Order overte SKU a počet. Order Summary uvádza Product Price a Domestic Freight (China). Pred súhlasom a Submit čítajte podmienky; medzinárodná doprava nie je zahrnutá.",
+        "Nie. Doprava v Číne, medzinárodná preprava a ďalšie poplatky môžu byť navyše."
+      ],
+      [
+        "Sledujte nákup",
+        "Otvorte Order, zvoľte Payment Pending alebo iný filter, zadajte názov či číslo a kliknite Search. Prečítajte správy.",
+        "USFans cez príslušnú objednávku alebo balík. Katalóg ich nemôže meniť."
+      ],
+      [
+        "Skontrolujte sklad a QC",
+        "Po prijatí otvorte Warehouse a fotografie svojej objednávky. Historické snímky túto kontrolu nenahrádzajú.",
+        "Štítky, farbu, počet, švy a viditeľné vady. Podľa potreby žiadajte ďalšie snímky alebo merania."
+      ],
+      [
+        "Pripravte balík",
+        "Vyberte skladové položky, overte príjemcu, krajinu, PSČ, trasu a balenie. Prázdny sklad nezobrazuje odosielací formulár.",
+        "Vyberte skladové položky povolené pre rovnakú prepravnú trasu."
+      ],
+      [
+        "Zaplaťte medzinárodnú dopravu",
+        "V Parcel zvoľte Payment Pending a otvorte balík. Pred platbou overte cenu, váhu a rozmery; balenie môže cenu zmeniť.",
+        "Závisí od cieľa, trasy, zabalenej hmotnosti a rozmerov. Overte aktuálnu ponuku USFans."
+      ],
+      [
+        "Počkajte na zabalenie",
+        "V All Parcel otvorte správny balík a overte stav. Čakajúca platba neznamená odoslanie.",
+        "Otvorte balík v Parcel. Pri chýbajúcich aktualizáciách dajte podpore číslo balíka."
+      ],
+      [
+        "Sledujte prepravu",
+        "Zvoľte In transit a otvorte sledovanie balíka. Prázdny zoznam neobsahuje zásielky.",
+        "Otvorte balík v Parcel. Pri chýbajúcich aktualizáciách dajte podpore číslo balíka."
+      ],
+      [
+        "Prevezmite a skontrolujte",
+        "Pred potvrdením overte obsah. Received je filter, nie potvrdzovacie tlačidlo. Pre reklamáciu uschovajte fotografie a obal.",
+        "Kontaktujte podporu cez objednávku pred medzinárodnou prepravou. Podmienky, lehoty a poplatky sa líšia."
+      ]
+    ]
+  },
+  "sv": {
+    "nav": "Nybörjarguide",
+    "title": "Nybörjarguide · USFans",
+    "intro": "Från val till leverans",
+    "toc": "Nybörjarguide",
+    "onSite": "USFans",
+    "onAgent": "USFans",
+    "check": "Före beställning",
+    "open": "Nybörjarguide",
+    "official": "Nybörjarguide",
+    "browse": "Katalog",
+    "register": "Registrera dig på USFans",
+    "faq": "Vanliga frågor",
+    "note": "Oberoende webbplats utan koppling till USFans. Länkar kan ge provision; äkthet och kvalitet garanteras inte.",
+    "payments": [
+      "Katalogpriser är ungefärliga; frakt och andra avgifter kan tillkomma.",
+      "Bekräfta och betala",
+      "Nej. Inrikesfrakt i Kina, internationell frakt och andra avgifter kan tillkomma.",
+      "Betala internationell frakt",
+      "Destination, rutt, packad vikt och mått styr priset. Kontrollera USFans aktuella offert."
+    ],
+    "steps": [
+      [
+        "Välj en produkt på USFans",
+        "Välj byxkategorin och öppna AMI-shortsen via bilden eller namnet. Granska bilder och referens-QC och använd köpknappen.",
+        "Jämför mått, färg, antal, innehåll, aktuell tillgänglighet och pris."
+      ],
+      [
+        "Välj modell och storlek",
+        "Välj Style och Size efter måtten. Justera Quantity med − / +, kontrollera Total och klicka Buy now.",
+        "Jämför mått, färg, antal, innehåll, aktuell tillgänglighet och pris."
+      ],
+      [
+        "Bekräfta och betala",
+        "I Confirm Order: kontrollera SKU och antal. Order Summary visar Product Price och Domestic Freight (China). Läs villkoren före godkännande och Submit. Internationell frakt ingår inte.",
+        "Nej. Inrikesfrakt i Kina, internationell frakt och andra avgifter kan tillkomma."
+      ],
+      [
+        "Följ inköpet",
+        "Öppna Order. Välj Payment Pending eller andra filter, ange namn eller nummer och klicka Search. Läs eventuella meddelanden.",
+        "USFans support via beställningen eller paketet. Denna katalog kan inte ändra dem."
+      ],
+      [
+        "Granska QC i lagret",
+        "Öppna Warehouse efter varans ankomst och kontrollera dina beställningsbilder. Historiska katalogbilder ersätter inte denna kontroll.",
+        "Etiketter, färg, antal, sömmar och synliga fel. Be vid behov om fler bilder eller mått."
+      ],
+      [
+        "Skapa paketet",
+        "Välj lagerartiklar, kontrollera mottagare, land och postnummer samt rutt och emballage. Ett tomt lager visar inget fraktformulär.",
+        "Välj tillgängliga lagerartiklar som är godkända för samma fraktrutt."
+      ],
+      [
+        "Betala internationell frakt",
+        "Välj Payment Pending i Parcel och öppna paketet. Kontrollera pris, vikt och mått före betalning; slutlig packning kan påverka priset.",
+        "Destination, rutt, packad vikt och mått styr priset. Kontrollera USFans aktuella offert."
+      ],
+      [
+        "Vänta på packning",
+        "Öppna rätt paket under All Parcel och läs status. En väntande betalning betyder inte att paketet skickats.",
+        "Öppna paketet i Parcel. Vid uteblivna uppdateringar, ge supporten paketnumret."
+      ],
+      [
+        "Spåra transporten",
+        "Välj In transit och öppna paketets spårning. En tom lista innehåller inga försändelser.",
+        "Öppna paketet i Parcel. Vid uteblivna uppdateringar, ge supporten paketnumret."
+      ],
+      [
+        "Ta emot och kontrollera",
+        "Kontrollera innehållet före mottagningsbekräftelse. Received är ett filter, ingen bekräftelseknapp. Spara foton och emballage vid problem.",
+        "Kontakta support via beställningen före internationell frakt. Villkor, tidsfrister och avgifter varierar."
+      ]
+    ]
+  },
+  "tr": {
+    "nav": "Başlangıç rehberi",
+    "title": "Başlangıç rehberi · USFans",
+    "intro": "Seçimden teslimata",
+    "toc": "Başlangıç rehberi",
+    "onSite": "USFans",
+    "onAgent": "USFans",
+    "check": "Siparişten önce",
+    "open": "Başlangıç rehberi",
+    "official": "Başlangıç rehberi",
+    "browse": "Katalog",
+    "register": "USFans’a kaydol",
+    "faq": "Sık sorulan sorular",
+    "note": "USFans’a bağlı olmayan bağımsız site. Bağlantılar komisyon getirebilir; özgünlük veya kalite garantisi yoktur.",
+    "payments": [
+      "Katalog fiyatları yaklaşık değerlerdir; kargo ve diğer ücretler eklenebilir.",
+      "Sipariş ve ödemeyi kontrol edin",
+      "Hayır. Çin içi kargo, uluslararası kargo ve diğer ücretler eklenebilir.",
+      "Uluslararası kargoyu ödeyin",
+      "Hedef ülke, hat, paketlenmiş ağırlık ve boyuta bağlıdır. USFans’ın güncel teklifini kontrol edin."
+    ],
+    "steps": [
+      [
+        "USFans’ta ürün seçin",
+        "Pantolon kategorisinde AMI şortun görselini veya adını açın. Fotoğrafları ve referans QC’yi inceleyip satın alma düğmesini kullanın.",
+        "Ölçü, renk, miktar, paket içeriği, güncel fiyat ve stok durumunu."
+      ],
+      [
+        "Model ve beden seçin",
+        "Ölçülere göre Style ve Size seçin. Quantity değerini − / + ile ayarlayın, Total tutarını kontrol edip Buy now düğmesine basın.",
+        "Ölçü, renk, miktar, paket içeriği, güncel fiyat ve stok durumunu."
+      ],
+      [
+        "Sipariş ve ödemeyi kontrol edin",
+        "Confirm Order içinde SKU ve miktarı doğrulayın. Order Summary, Product Price ve Domestic Freight (China) tutarlarını gösterir. Onay ve Submit öncesi koşulları okuyun; uluslararası kargo dahil değildir.",
+        "Hayır. Çin içi kargo, uluslararası kargo ve diğer ücretler eklenebilir."
+      ],
+      [
+        "Satın almayı izleyin",
+        "Order bölümünü açın, Payment Pending veya başka filtre seçin. Ad ya da numara yazıp Search düğmesine basın; mesajları okuyun.",
+        "İlgili sipariş veya paket üzerinden USFans. Bu katalog kayıtları değiştiremez."
+      ],
+      [
+        "Depo ve QC’yi inceleyin",
+        "Ürün ulaştığında Warehouse ve kendi siparişinizin fotoğraflarını açın. Eski katalog fotoğrafları bu kontrolün yerine geçmez.",
+        "Etiket, renk, miktar, dikiş ve görünür kusurlara. Gerekirse ek fotoğraf veya ölçüm isteyin."
+      ],
+      [
+        "Paket hazırlayın",
+        "Depodaki ürünleri seçin; alıcı, ülke, posta kodu, hat ve ambalajı kontrol edin. Boş depoda gönderim formu görünmez.",
+        "Aynı kargo hattına uygun, depoda bulunan ürünleri seçebilirsiniz."
+      ],
+      [
+        "Uluslararası kargoyu ödeyin",
+        "Parcel içinde Payment Pending seçip paketi açın. Ödeme öncesi ücret, ağırlık ve boyutları kontrol edin; paketleme fiyatı değiştirebilir.",
+        "Hedef ülke, hat, paketlenmiş ağırlık ve boyuta bağlıdır. USFans’ın güncel teklifini kontrol edin."
+      ],
+      [
+        "Paketlemeyi bekleyin",
+        "All Parcel altında doğru paketi açıp durumunu kontrol edin. Bekleyen ödeme, gönderimin yapıldığı anlamına gelmez.",
+        "Parcel bölümünde paketi açın. Güncelleme yoksa destek ekibine paket numarasını verin."
+      ],
+      [
+        "Taşımayı takip edin",
+        "In transit seçip paket takibini açın. Boş listede takip edilecek gönderi yoktur.",
+        "Parcel bölümünde paketi açın. Güncelleme yoksa destek ekibine paket numarasını verin."
+      ],
+      [
+        "Teslim alın ve kontrol edin",
+        "Teslim onayı öncesi içeriği kontrol edin. Received bir filtredir, onay düğmesi değildir. Sorun varsa fotoğraf ve ambalajı saklayın.",
+        "Uluslararası gönderimden önce sipariş üzerinden destekle görüşün. Koşullar, süreler ve ücretler değişir."
+      ]
+    ]
+  },
+  "uk": {
+    "nav": "Посібник для початківців",
+    "title": "Посібник для початківців · USFans",
+    "intro": "Від вибору до доставки",
+    "toc": "Посібник для початківців",
+    "onSite": "USFans",
+    "onAgent": "USFans",
+    "check": "Перед замовленням",
+    "open": "Посібник для початківців",
+    "official": "Посібник для початківців",
+    "browse": "Каталог",
+    "register": "Реєстрація в USFans",
+    "faq": "Поширені запитання",
+    "note": "Незалежний сайт, не пов’язаний з USFans. Посилання можуть приносити комісію; справжність і якість не гарантовані.",
+    "payments": [
+      "Ціни каталогу орієнтовні; доставка та інші витрати можуть додаватися.",
+      "Підтвердьте замовлення й оплату",
+      "Ні. Можуть додаватися доставка Китаєм, міжнародна доставка та інші платежі.",
+      "Оплатіть міжнародну доставку",
+      "Залежить від країни, маршруту, упакованої ваги й розмірів. Перевірте актуальний розрахунок USFans."
+    ],
+    "steps": [
+      [
+        "Виберіть товар в USFans",
+        "У категорії штанів відкрийте шорти AMI за фото чи назвою. Перегляньте зображення й довідкові QC, потім кнопку купівлі.",
+        "Виміри, колір, кількість, комплектацію, актуальну ціну та наявність."
+      ],
+      [
+        "Виберіть варіант і розмір",
+        "Виберіть Style і Size за вимірами. Змініть Quantity кнопками − / +, перевірте Total і натисніть Buy now.",
+        "Виміри, колір, кількість, комплектацію, актуальну ціну та наявність."
+      ],
+      [
+        "Підтвердьте замовлення й оплату",
+        "У Confirm Order перевірте SKU та кількість. Order Summary показує Product Price і Domestic Freight (China). Прочитайте умови перед згодою та Submit; міжнародна доставка не включена.",
+        "Ні. Можуть додаватися доставка Китаєм, міжнародна доставка та інші платежі."
+      ],
+      [
+        "Стежте за закупівлею",
+        "Відкрийте Order, виберіть Payment Pending чи інший фільтр, введіть назву або номер і натисніть Search. Перевірте повідомлення.",
+        "USFans через відповідне замовлення або посилку. Цей каталог не може їх змінювати."
+      ],
+      [
+        "Перевірте склад і QC",
+        "Після надходження відкрийте Warehouse та фотографії свого замовлення. Історичні знімки не замінюють перевірку.",
+        "Етикетки, колір, кількість, шви й видимі дефекти. За потреби попросіть додаткові фото або виміри."
+      ],
+      [
+        "Підготуйте посилку",
+        "Виберіть товари на складі, перевірте одержувача, країну, індекс, маршрут і пакування. Порожній склад не показує форму відправлення.",
+        "Виберіть складські товари, дозволені для одного маршруту доставки."
+      ],
+      [
+        "Оплатіть міжнародну доставку",
+        "У Parcel виберіть Payment Pending і відкрийте посилку. Перед оплатою перевірте вартість, вагу й розміри; пакування може змінити ціну.",
+        "Залежить від країни, маршруту, упакованої ваги й розмірів. Перевірте актуальний розрахунок USFans."
+      ],
+      [
+        "Дочекайтеся пакування",
+        "У All Parcel відкрийте потрібну посилку й перевірте статус. Очікування оплати не означає відправлення.",
+        "Відкрийте її у Parcel. За відсутності оновлень надайте підтримці номер посилки."
+      ],
+      [
+        "Відстежуйте перевезення",
+        "Виберіть In transit та відкрийте відстеження. Порожній список не містить відправлень.",
+        "Відкрийте її у Parcel. За відсутності оновлень надайте підтримці номер посилки."
+      ],
+      [
+        "Отримайте й перевірте",
+        "Перевірте вміст до підтвердження отримання. Received — фільтр, а не кнопка підтвердження. Збережіть фото й пакування на випадок проблем.",
+        "Зверніться через замовлення до міжнародного відправлення. Умови, строки й оплати різняться."
+      ]
+    ]
+  }
+}

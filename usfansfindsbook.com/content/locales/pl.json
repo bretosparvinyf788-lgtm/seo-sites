@@ -1,0 +1,228 @@
+{
+  "name": "Polski",
+  "currency": "PLN",
+  "nav": [
+    "Strona główna",
+    "Katalog",
+    "Kategorie",
+    "Poradnik dla początkujących",
+    "Pytania i odpowiedzi",
+    "Zarejestruj się w USFans",
+    "Język",
+    "Waluta"
+  ],
+  "cats": [
+    "Buty i klapki",
+    "Koszulki",
+    "Odzież",
+    "Bluzy",
+    "Spodnie i szorty",
+    "Paski",
+    "Torby",
+    "Perfumy",
+    "Elektronika",
+    "Akcesoria"
+  ],
+  "labels": [
+    "Wszystkie produkty",
+    "Szczegóły",
+    "Zapisana cena",
+    "Ceny katalogowe są orientacyjne; mogą dojść koszty dostawy i inne opłaty.",
+    "Od wyboru do dostawy",
+    "Wróć do katalogu",
+    "Otwórz ofertę źródłową",
+    "Otwórz produkt w USFans",
+    "Kopiuj link sprzedawcy",
+    "Link skopiowany",
+    "Zdjęcia produktu",
+    "Zdjęcia magazynowe / QC",
+    "Brak pasujących zdjęć QC.",
+    "Przed zamówieniem",
+    "Niezależny katalog produktów i instrukcji zakupowych.",
+    "Niezależna strona, niepowiązana z USFans. Linki mogą przynosić prowizję; brak gwarancji autentyczności lub jakości.",
+    "Kolejność katalogowa",
+    "Cena rosnąco",
+    "Cena malejąco",
+    "Brak produktów.",
+    "Otwórz pełną kategorię źródłową",
+    "Historyczne zdjęcia QC, nie zdjęcia Twojego zamówienia. Kolory i wersje mogą się różnić.",
+    "ID produktu źródłowego",
+    "Powiększ zdjęcie",
+    "Zamknij zdjęcie",
+    "Kod polecający",
+    "Co sprawdzić w tej kategorii",
+    "Przeglądaj kategorię",
+    "Rozmiar i specyfikacja",
+    "Sprawdź zdjęcia"
+  ],
+  "explore": [
+    "Odkrywaj",
+    "Zapisane",
+    "Ostatnio oglądane",
+    "Zapisz produkt",
+    "Usuń z zapisanych",
+    "Ze zdjęciami QC",
+    "Budżet produktu",
+    "Dowolna cena",
+    "Wyczyść filtry",
+    "Pokaż więcej",
+    "{shown} z {total} produktów",
+    "Spróbuj ponownie",
+    "Wyczyść historię",
+    "Wszystkie kategorie",
+    "Sortuj według",
+    "Wczytywanie…",
+    "Data kursu"
+  ],
+  "faq": [
+    [
+      "Jak kupować?",
+      "Otwórz produkt w katalogu, a następnie tę samą ofertę w USFans. Przed zamówieniem sprawdź wariant i koszty."
+    ],
+    [
+      "Czy cena obejmuje wszystko?",
+      "Nie. Mogą dojść dostawa krajowa w Chinach, wysyłka międzynarodowa i inne należne opłaty."
+    ],
+    [
+      "Co sprawdzić przed zakupem?",
+      "Porównaj wymiary, kolor, liczbę sztuk i zawartość zestawu. Sprawdź aktualną cenę oraz dostępność."
+    ],
+    [
+      "Jak się zarejestrować?",
+      "Użyj przycisku rejestracji z kodem T2JMMC. Rejestracja, zamówienia i płatności odbywają się w USFans."
+    ],
+    [
+      "Czy QC przedstawia moje zamówienie?",
+      "Nie. Zdjęcia katalogowe to materiały historyczne. Po dostawie sprawdź zdjęcia własnego zamówienia w Warehouse."
+    ],
+    [
+      "Co oceniać na QC?",
+      "Sprawdź metki, kolor, ilość, szwy i widoczne wady. W razie potrzeby poproś o dodatkowe zdjęcia lub pomiary."
+    ],
+    [
+      "Czy można połączyć produkty?",
+      "Wybierz zgodne z trasą produkty dostępne w magazynie, aby przygotować wspólną paczkę."
+    ],
+    [
+      "Jak poprosić o zwrot?",
+      "Skontaktuj się przez zamówienie przed wysyłką międzynarodową. Warunki, terminy i opłaty zależą od produktu."
+    ],
+    [
+      "Ile kosztuje wysyłka?",
+      "Zależy od kraju, trasy, wagi i wymiarów zapakowanej paczki. Sprawdź aktualną wycenę USFans."
+    ],
+    [
+      "Dlaczego nie ma trasy dostawy?",
+      "Sprawdź kraj i ograniczenia towaru. Baterie i płyny mogą ograniczać wybór; zapytaj obsługę."
+    ],
+    [
+      "Gdzie śledzić paczkę?",
+      "Otwórz paczkę w Parcel i sprawdź śledzenie. Przy braku aktualizacji podaj obsłudze numer paczki."
+    ],
+    [
+      "Kto pomaga w sprawach płatności?",
+      "USFans obsługuje zamówienia. Skontaktuj się przez odpowiednie zamówienie lub paczkę; katalog nie może ich zmieniać."
+    ]
+  ],
+  "steps": [
+    [
+      "Wybierz produkt w USFans",
+      "W katalogu wybierz spodnie i otwórz zdjęcie lub nazwę szortów AMI. Sprawdź zdjęcia i historyczne QC, potem użyj przycisku zakupu."
+    ],
+    [
+      "Wybierz wariant i rozmiar",
+      "W Style wybierz wariant, w Size rozmiar według wymiarów. Ustaw Quantity przyciskami − / +, sprawdź Total i kliknij Buy now."
+    ],
+    [
+      "Potwierdź zamówienie i płatność",
+      "Na Confirm Order sprawdź SKU, rozmiar i ilość. Order Summary pokazuje Product Price i Domestic Freight (China). Przeczytaj warunki przed zgodą i Submit; wysyłka międzynarodowa nie jest wliczona."
+    ],
+    [
+      "Śledź zakup",
+      "Otwórz Order w menu konta. Użyj Payment Pending lub innych filtrów, wpisz nazwę albo numer i kliknij Search. Sprawdź prośby o potwierdzenie."
+    ],
+    [
+      "Sprawdź magazyn i QC",
+      "Otwórz Warehouse. Po przyjęciu towaru znajdź swój produkt i obejrzyj zdjęcia zamówienia. Historyczne zdjęcia katalogowe nie zastępują kontroli."
+    ],
+    [
+      "Przygotuj paczkę",
+      "W Warehouse zaznacz dostępne produkty. Sprawdź odbiorcę, kraj, kod pocztowy, trasy i pakowanie. Pusty magazyn nie pokazuje formularza wysyłki."
+    ],
+    [
+      "Opłać wysyłkę międzynarodową",
+      "W Parcel wybierz Payment Pending, otwórz paczkę i sprawdź wycenę, wagę oraz wymiary przed płatnością. Koszt może się zmienić po spakowaniu."
+    ],
+    [
+      "Poczekaj na pakowanie i nadanie",
+      "W All Parcel otwórz właściwą paczkę i sprawdź postęp. Oczekiwanie na płatność nie oznacza nadania."
+    ],
+    [
+      "Śledź transport",
+      "Wybierz In transit i otwórz paczkę, aby sprawdzić aktualizacje. Pusta lista nie zawiera przesyłek do śledzenia."
+    ],
+    [
+      "Odbierz i sprawdź",
+      "Sprawdź opakowanie i zawartość przed potwierdzeniem odbioru. Received jest filtrem, a nie przyciskiem potwierdzenia. Zachowaj zdjęcia i opakowanie w razie reklamacji."
+    ]
+  ],
+  "tips": [
+    "Porównaj tabelę rozmiarów, kształt, szwy i podeszwy; sprawdź kolor i opakowanie.",
+    "Porównaj klatkę, ramiona i długość; sprawdź nadruki z przodu i tyłu.",
+    "Sprawdź wymiary i liczbę części; zdjęcie stylizacji nie potwierdza zawartości.",
+    "Sprawdź klatkę, rękawy, kaptur, ściągacze i zamek; potwierdź materiał i podszewkę.",
+    "Zmierz pas, biodra i długość; sprawdź elastyczność, ilość i zasady zwrotu.",
+    "Sprawdź użyteczną długość, szerokość, klamrę i otwory; potwierdź materiał.",
+    "Porównaj wymiary, kieszenie, paski, zapięcia i dołączone części.",
+    "Sprawdź pojemność i wersję. Zdjęcia nie dowodzą zapachu ani autentyczności; sprawdź przewóz płynów.",
+    "Sprawdź model, złącza, zasilanie i akcesoria; zweryfikuj ograniczenia dotyczące baterii.",
+    "Sprawdź wymiary, zapięcia i materiał. Zdjęcia nie potwierdzają parametrów ani autentyczności."
+  ],
+  "types": [
+    "Szorty",
+    "Sneakersy",
+    "Obuwie",
+    "Torba",
+    "Koszulki piłkarskie",
+    "Komplet odzieży",
+    "Komplety różnych marek",
+    "Koszulka z nadrukiem",
+    "T-shirt",
+    "Bluza z kapturem",
+    "Bluza rozpinana",
+    "Czapka",
+    "Koszulka treningowa",
+    "Kurtka jeansowa",
+    "Sztruksowa bomberka",
+    "Kardigan",
+    "Kurtka",
+    "Sprane szorty z nadrukiem",
+    "Bokserki",
+    "Spodnie",
+    "Pasek",
+    "Pasek w kratę",
+    "Plecak",
+    "Torba podróżna",
+    "Pikowana torba hobo",
+    "Perfumy",
+    "Smartwatch",
+    "Przenośny głośnik Bluetooth",
+    "Słuchawki",
+    "Zestaw ładowarek bezprzewodowych",
+    "Skarpety sportowe",
+    "Okulary",
+    "Okulary przeciwsłoneczne"
+  ],
+  "notes": [
+    "Odkrywaj produkty, porównuj szczegóły i zapisuj ulubione.",
+    "Zarejestruj się w USFans, aby sprawdzić dostępność, wysyłkę i pełny koszt.",
+    "Lista jest zapisana dla tej przeglądarki przez plik cookie; brak synchronizacji urządzeń.",
+    "Lista jest chwilowo niedostępna. Spróbuj ponownie.",
+    "Brak wyników: zmień kategorię lub budżet.",
+    "Kliknij serce, aby zapisać produkt.",
+    "Otwórz produkt, aby pojawił się tutaj.",
+    "Przeliczenie orientacyjne; sprawdź końcową kwotę w USFans.",
+    "Brak kursu tej waluty; ceny są w USD.",
+    "Prawdziwa strona konta bez zamówień, towarów i paczek; szczegóły pojawiają się po utworzeniu odpowiedniego wpisu."
+  ]
+}

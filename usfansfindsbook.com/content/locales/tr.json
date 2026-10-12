@@ -1,0 +1,228 @@
+{
+  "name": "Türkçe",
+  "currency": "TRY",
+  "nav": [
+    "Ana sayfa",
+    "Katalog",
+    "Kategoriler",
+    "Başlangıç rehberi",
+    "Sık sorulan sorular",
+    "USFans’a kaydol",
+    "Dil",
+    "Para birimi"
+  ],
+  "cats": [
+    "Ayakkabı ve terlik",
+    "Tişört",
+    "Giyim",
+    "Kapüşonlu",
+    "Pantolon ve şort",
+    "Kemer",
+    "Çanta",
+    "Parfüm",
+    "Elektronik",
+    "Aksesuar"
+  ],
+  "labels": [
+    "Tüm ürünler",
+    "Ayrıntılar",
+    "Kaydedilen fiyat",
+    "Katalog fiyatları yaklaşık değerlerdir; kargo ve diğer ücretler eklenebilir.",
+    "Seçimden teslimata",
+    "Kataloğa dön",
+    "Kaynak ilanı aç",
+    "Ürünü USFans’ta aç",
+    "Satıcı bağlantısını kopyala",
+    "Bağlantı kopyalandı",
+    "Ürün fotoğrafları",
+    "Depo fotoğrafları / QC",
+    "Eşleşen QC fotoğrafı yok.",
+    "Siparişten önce",
+    "Bağımsız ürün kataloğu ve alışveriş rehberi.",
+    "USFans’a bağlı olmayan bağımsız site. Bağlantılar komisyon getirebilir; özgünlük veya kalite garantisi yoktur.",
+    "Katalog sırası",
+    "Fiyat artan",
+    "Fiyat azalan",
+    "Ürün bulunamadı.",
+    "Kaynak kategoriyi aç",
+    "Geçmiş QC fotoğraflarıdır, kendi siparişiniz değildir. Renk ve model değişebilir.",
+    "Kaynak ürün kimliği",
+    "Görseli büyüt",
+    "Görseli kapat",
+    "Referans kodu",
+    "Kategori kontrolleri",
+    "Kategoriyi keşfet",
+    "Beden ve özellikler",
+    "Fotoğrafları kontrol et"
+  ],
+  "explore": [
+    "Keşfet",
+    "Kaydedilenler",
+    "Son görüntülenenler",
+    "Ürünü kaydet",
+    "Kaydı kaldır",
+    "QC fotoğraflı",
+    "Ürün bütçesi",
+    "Her fiyat",
+    "Filtreleri sıfırla",
+    "Daha fazla",
+    "{total} üründen {shown}",
+    "Tekrar dene",
+    "Geçmişi temizle",
+    "Tüm kategoriler",
+    "Sırala",
+    "Yükleniyor…",
+    "Kur tarihi"
+  ],
+  "faq": [
+    [
+      "Nasıl satın alırım?",
+      "Ürünü ve aynı ilanı USFans’ta açın. Siparişten önce model ve masrafları kontrol edin."
+    ],
+    [
+      "Fiyat her şeyi kapsar mı?",
+      "Hayır. Çin içi kargo, uluslararası kargo ve diğer ücretler eklenebilir."
+    ],
+    [
+      "Önce neyi kontrol etmeliyim?",
+      "Ölçü, renk, miktar, paket içeriği, güncel fiyat ve stok durumunu."
+    ],
+    [
+      "Nasıl kaydolurum?",
+      "T2JMMC kodlu kayıt düğmesini kullanın. Hesap, sipariş ve ödemeyi USFans yönetir."
+    ],
+    [
+      "QC fotoğrafları benim siparişim mi?",
+      "Hayır, geçmiş örneklerdir. Ürün ulaştığında Warehouse bölümünde kendi fotoğraflarınızı inceleyin."
+    ],
+    [
+      "QC’de neye bakmalıyım?",
+      "Etiket, renk, miktar, dikiş ve görünür kusurlara. Gerekirse ek fotoğraf veya ölçüm isteyin."
+    ],
+    [
+      "Ürünleri birleştirebilir miyim?",
+      "Aynı kargo hattına uygun, depoda bulunan ürünleri seçebilirsiniz."
+    ],
+    [
+      "İade nasıl istenir?",
+      "Uluslararası gönderimden önce sipariş üzerinden destekle görüşün. Koşullar, süreler ve ücretler değişir."
+    ],
+    [
+      "Kargo ne kadar?",
+      "Hedef ülke, hat, paketlenmiş ağırlık ve boyuta bağlıdır. USFans’ın güncel teklifini kontrol edin."
+    ],
+    [
+      "Neden kargo hattı yok?",
+      "Ülke ve ürün kısıtlamalarını, özellikle sıvı ve pilleri kontrol edin. Desteğe danışın."
+    ],
+    [
+      "Paketi nerede takip ederim?",
+      "Parcel bölümünde paketi açın. Güncelleme yoksa destek ekibine paket numarasını verin."
+    ],
+    [
+      "Ödeme sorunlarına kim bakar?",
+      "İlgili sipariş veya paket üzerinden USFans. Bu katalog kayıtları değiştiremez."
+    ]
+  ],
+  "steps": [
+    [
+      "USFans’ta ürün seçin",
+      "Pantolon kategorisinde AMI şortun görselini veya adını açın. Fotoğrafları ve referans QC’yi inceleyip satın alma düğmesini kullanın."
+    ],
+    [
+      "Model ve beden seçin",
+      "Ölçülere göre Style ve Size seçin. Quantity değerini − / + ile ayarlayın, Total tutarını kontrol edip Buy now düğmesine basın."
+    ],
+    [
+      "Sipariş ve ödemeyi kontrol edin",
+      "Confirm Order içinde SKU ve miktarı doğrulayın. Order Summary, Product Price ve Domestic Freight (China) tutarlarını gösterir. Onay ve Submit öncesi koşulları okuyun; uluslararası kargo dahil değildir."
+    ],
+    [
+      "Satın almayı izleyin",
+      "Order bölümünü açın, Payment Pending veya başka filtre seçin. Ad ya da numara yazıp Search düğmesine basın; mesajları okuyun."
+    ],
+    [
+      "Depo ve QC’yi inceleyin",
+      "Ürün ulaştığında Warehouse ve kendi siparişinizin fotoğraflarını açın. Eski katalog fotoğrafları bu kontrolün yerine geçmez."
+    ],
+    [
+      "Paket hazırlayın",
+      "Depodaki ürünleri seçin; alıcı, ülke, posta kodu, hat ve ambalajı kontrol edin. Boş depoda gönderim formu görünmez."
+    ],
+    [
+      "Uluslararası kargoyu ödeyin",
+      "Parcel içinde Payment Pending seçip paketi açın. Ödeme öncesi ücret, ağırlık ve boyutları kontrol edin; paketleme fiyatı değiştirebilir."
+    ],
+    [
+      "Paketlemeyi bekleyin",
+      "All Parcel altında doğru paketi açıp durumunu kontrol edin. Bekleyen ödeme, gönderimin yapıldığı anlamına gelmez."
+    ],
+    [
+      "Taşımayı takip edin",
+      "In transit seçip paket takibini açın. Boş listede takip edilecek gönderi yoktur."
+    ],
+    [
+      "Teslim alın ve kontrol edin",
+      "Teslim onayı öncesi içeriği kontrol edin. Received bir filtredir, onay düğmesi değildir. Sorun varsa fotoğraf ve ambalajı saklayın."
+    ]
+  ],
+  "tips": [
+    "Beden tablosu, biçim, dikiş ve tabanları karşılaştırın; renk ve kutuyu doğrulayın.",
+    "Göğüs, omuz ve uzunluk ölçülerini, ön ve arka baskıyı kontrol edin.",
+    "Ölçü ve parça sayısını doğrulayın; kombin fotoğrafı içeriği kanıtlamaz.",
+    "Kol, kapüşon, manşet, fermuar, kumaş ve astarı kontrol edin.",
+    "Bel, kalça ve boyu ölçün; esneklik, miktar ve iade koşullarını doğrulayın.",
+    "Kullanılabilir uzunluk, genişlik, toka, delik ve malzemeyi kontrol edin.",
+    "Boyut, bölme, askı, kapama ve dahil parçaları karşılaştırın.",
+    "Hacim, seçenek ve sıvı taşımasını doğrulayın. Fotoğraflar koku veya özgünlüğü kanıtlamaz.",
+    "Model, bağlantı, güç, aksesuar ve pil kısıtlamalarını kontrol edin.",
+    "Ölçü, kapama ve malzemeyi kontrol edin; görseller performans veya özgünlük kanıtı değildir."
+  ],
+  "types": [
+    "Şort",
+    "Spor ayakkabı",
+    "Ayakkabı",
+    "Çanta",
+    "Futbol formaları",
+    "Giyim takımı",
+    "Farklı marka takımlar",
+    "Baskılı üst",
+    "Tişört",
+    "Kapüşonlu sweatshirt",
+    "Fermuarlı kapüşonlu",
+    "Şapka",
+    "Antrenman tişörtü",
+    "Kot ceket",
+    "Kadife bomber",
+    "Hırka",
+    "Ceket",
+    "Yıkanmış baskılı şort",
+    "Boxer",
+    "Pantolon",
+    "Kemer",
+    "Ekose kemer",
+    "Sırt çantası",
+    "Seyahat çantası",
+    "Kapitone hobo çanta",
+    "Parfüm",
+    "Akıllı saat",
+    "Taşınabilir Bluetooth hoparlör",
+    "Kulaklık",
+    "Kablosuz şarj seti",
+    "Spor çorap",
+    "Gözlük",
+    "Güneş gözlüğü"
+  ],
+  "notes": [
+    "Ürünleri keşfedin, ayrıntıları karşılaştırın ve favorilerinizi kaydedin.",
+    "Stok, kargo ve toplam fiyatı görmek için USFans’a kaydolun.",
+    "Liste bu tarayıcıda çerezle saklanır; cihazlar arasında eşitlenmez.",
+    "Liste geçici olarak kullanılamıyor. Tekrar deneyin.",
+    "Sonuç yok: kategori veya bütçeyi değiştirin.",
+    "Kalp düğmesiyle ürün kaydedin.",
+    "Burada görmek için bir ürünü açın.",
+    "Yaklaşık kur dönüşümü; son tutarı USFans’ta kontrol edin.",
+    "Para biriminin kuru alınamadı; fiyatlar USD olarak gösterilir.",
+    "Sipariş, depo ürünü veya paketi bulunmayan gerçek hesap sayfası; ayrıntılar yalnız mevcut kayıtta görünür."
+  ]
+}

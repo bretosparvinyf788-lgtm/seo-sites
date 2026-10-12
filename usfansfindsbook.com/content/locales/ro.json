@@ -1,0 +1,228 @@
+{
+  "name": "Română",
+  "currency": "RON",
+  "nav": [
+    "Acasă",
+    "Catalog",
+    "Categorii",
+    "Ghid pentru începători",
+    "Întrebări frecvente",
+    "Înregistrează-te pe USFans",
+    "Limbă",
+    "Monedă"
+  ],
+  "cats": [
+    "Încălțăminte și papuci",
+    "Tricouri",
+    "Îmbrăcăminte",
+    "Hanorace",
+    "Pantaloni și șorturi",
+    "Curele",
+    "Genți",
+    "Parfumuri",
+    "Electronice",
+    "Accesorii"
+  ],
+  "labels": [
+    "Toate produsele",
+    "Detalii",
+    "Preț înregistrat",
+    "Prețurile sunt orientative; transportul și alte taxe se pot adăuga.",
+    "De la alegere la livrare",
+    "Înapoi la catalog",
+    "Deschide oferta originală",
+    "Deschide produsul pe USFans",
+    "Copiază linkul vânzătorului",
+    "Link copiat",
+    "Fotografii produs",
+    "Fotografii depozit / QC",
+    "Nu există fotografii QC corespunzătoare.",
+    "Înainte de comandă",
+    "Catalog independent de produse și instrucțiuni de cumpărare.",
+    "Site independent, fără afiliere cu USFans. Linkurile pot genera comisioane; autenticitatea și calitatea nu sunt garantate.",
+    "Ordinea catalogului",
+    "Preț crescător",
+    "Preț descrescător",
+    "Niciun produs disponibil.",
+    "Categoria completă la sursă",
+    "Fotografii QC istorice, nu ale comenzii tale. Culorile și variantele pot diferi.",
+    "ID produs original",
+    "Mărește imaginea",
+    "Închide imaginea",
+    "Cod de recomandare",
+    "Verificări pentru categorie",
+    "Explorează categoria",
+    "Mărime și specificații",
+    "Verifică fotografiile"
+  ],
+  "explore": [
+    "Descoperă",
+    "Salvate",
+    "Vizualizate recent",
+    "Salvează produsul",
+    "Elimină din salvate",
+    "Cu fotografii QC",
+    "Buget produs",
+    "Orice preț",
+    "Resetează filtrele",
+    "Arată mai multe",
+    "{shown} din {total} produse",
+    "Reîncearcă",
+    "Șterge istoricul",
+    "Toate categoriile",
+    "Sortează după",
+    "Se încarcă…",
+    "Data cursului"
+  ],
+  "faq": [
+    [
+      "Cum cumpăr?",
+      "Deschide produsul și aceeași ofertă pe USFans. Verifică varianta și costurile înainte de comandă."
+    ],
+    [
+      "Prețul include totul?",
+      "Nu. Transportul intern din China, cel internațional și alte taxe se pot adăuga."
+    ],
+    [
+      "Ce verific înainte?",
+      "Dimensiunile, culoarea, cantitatea, conținutul, prețul actual și disponibilitatea."
+    ],
+    [
+      "Cum mă înregistrez?",
+      "Folosește butonul de înregistrare cu T2JMMC. Contul, comenzile și plățile sunt gestionate de USFans."
+    ],
+    [
+      "Fotografiile QC sunt ale comenzii mele?",
+      "Nu, sunt referințe istorice. Verifică fotografiile tale în Warehouse după sosire."
+    ],
+    [
+      "Ce verific în QC?",
+      "Etichete, culoare, număr de bucăți, cusături și defecte vizibile. Cere fotografii sau măsurători suplimentare dacă trebuie."
+    ],
+    [
+      "Pot combina produse?",
+      "Selectează articole din depozit permise pe aceeași rută de transport."
+    ],
+    [
+      "Cum cer returul?",
+      "Contactează asistența prin comandă înainte de transportul internațional. Condițiile, termenele și taxele diferă."
+    ],
+    [
+      "Cât costă transportul?",
+      "Depinde de destinație, rută, greutatea ambalată și dimensiuni. Verifică oferta actuală USFans."
+    ],
+    [
+      "De ce lipsește o rută?",
+      "Verifică țara și restricțiile produsului, mai ales lichide și baterii. Întreabă asistența."
+    ],
+    [
+      "Unde urmăresc coletul?",
+      "Deschide coletul în Parcel. Dacă lipsesc actualizări, comunică asistenței numărul coletului."
+    ],
+    [
+      "Cine rezolvă problemele de plată?",
+      "USFans, prin comanda sau coletul respectiv. Catalogul nu le poate modifica."
+    ]
+  ],
+  "steps": [
+    [
+      "Alege un produs pe USFans",
+      "În categoria pantaloni deschide șorturile AMI prin fotografie sau nume. Verifică imaginile și QC de referință, apoi folosește butonul de cumpărare."
+    ],
+    [
+      "Alege varianta și mărimea",
+      "Selectează Style și Size pe baza măsurătorilor. Modifică Quantity cu − / +, verifică Total și apasă Buy now."
+    ],
+    [
+      "Confirmă comanda și plata",
+      "În Confirm Order verifică SKU și cantitatea. Order Summary arată Product Price și Domestic Freight (China). Citește termenii înainte de acceptare și Submit; transportul internațional este exclus."
+    ],
+    [
+      "Urmărește achiziția",
+      "Deschide Order, alege Payment Pending sau alt filtru, introdu numele ori numărul și apasă Search. Citește mesajele primite."
+    ],
+    [
+      "Verifică depozitul și QC",
+      "După sosire deschide Warehouse și fotografiile comenzii tale. Imaginile istorice nu înlocuiesc această verificare."
+    ],
+    [
+      "Pregătește coletul",
+      "Selectează articolele din depozit și verifică destinatarul, țara, codul poștal, ruta și ambalajul. Depozitul gol nu afișează formularul de expediere."
+    ],
+    [
+      "Plătește transportul internațional",
+      "În Parcel selectează Payment Pending și deschide coletul. Verifică prețul, greutatea și dimensiunile înainte de plată; ambalarea poate schimba costul."
+    ],
+    [
+      "Așteaptă ambalarea",
+      "În All Parcel deschide coletul corect și verifică starea. O plată în așteptare nu înseamnă expediere."
+    ],
+    [
+      "Urmărește transportul",
+      "Selectează In transit și deschide urmărirea coletului. Lista goală nu conține expedieri."
+    ],
+    [
+      "Primește și verifică",
+      "Verifică conținutul înainte de confirmarea primirii. Received este filtru, nu buton de confirmare. Păstrează fotografiile și ambalajul în caz de probleme."
+    ]
+  ],
+  "tips": [
+    "Compară tabelul de mărimi, forma, cusăturile și tălpile; verifică nuanța și cutia.",
+    "Compară pieptul, umerii și lungimea, imprimeurile din față și spate.",
+    "Verifică dimensiunile și numărul pieselor; fotografia ținutei nu dovedește conținutul.",
+    "Verifică mânecile, gluga, manșetele, fermoarul, materialul și căptușeala.",
+    "Măsoară talia, șoldurile și lungimea; verifică elasticitatea, cantitatea și returul.",
+    "Verifică lungimea utilă, lățimea, catarama, găurile și materialul.",
+    "Compară dimensiunile, compartimentele, curelele, închiderile și accesoriile.",
+    "Verifică volumul, varianta și transportul lichidelor. Fotografiile nu dovedesc mirosul sau autenticitatea.",
+    "Verifică modelul, conectorii, alimentarea, accesoriile și restricțiile bateriilor.",
+    "Verifică dimensiunile, închiderile și materialul. Fotografiile nu dovedesc performanța sau autenticitatea."
+  ],
+  "types": [
+    "Șorturi",
+    "Pantofi sport",
+    "Încălțăminte",
+    "Geantă",
+    "Tricouri de fotbal",
+    "Set de haine",
+    "Seturi de mărci diferite",
+    "Bluză imprimată",
+    "Tricou",
+    "Hanorac",
+    "Hanorac cu fermoar",
+    "Șapcă",
+    "Tricou de antrenament",
+    "Geacă de blugi",
+    "Bomber din catifea reiată",
+    "Cardigan",
+    "Geacă",
+    "Șorturi prespălate cu imprimeu",
+    "Boxeri",
+    "Pantaloni",
+    "Curea",
+    "Curea în carouri",
+    "Rucsac",
+    "Geantă de voiaj",
+    "Geantă hobo matlasată",
+    "Parfum",
+    "Ceas inteligent",
+    "Boxă Bluetooth portabilă",
+    "Căști",
+    "Set de încărcătoare wireless",
+    "Șosete sport",
+    "Ochelari",
+    "Ochelari de soare"
+  ],
+  "notes": [
+    "Descoperă produse, compară detaliile și salvează favoritele.",
+    "Înregistrează-te pe USFans pentru stoc, transport și preț final.",
+    "Lista se salvează pentru acest browser prin cookie; nu se sincronizează între dispozitive.",
+    "Lista este temporar indisponibilă. Reîncearcă.",
+    "Niciun rezultat: schimbă categoria sau bugetul.",
+    "Salvează un produs cu butonul inimă.",
+    "Deschide un produs pentru a-l vedea aici.",
+    "Conversie orientativă; verifică suma finală pe USFans.",
+    "Cursul monedei nu este disponibil; prețurile sunt în USD.",
+    "Pagină reală de cont fără comenzi, articole sau colete; detaliile apar numai pentru înregistrări existente."
+  ]
+}

@@ -1,0 +1,1754 @@
+{
+  "en": {
+    "title": "Find the right category. Know what to check.",
+    "intro": "Explore the ten categories below for practical checks before you open a USFans listing. Catalog photos and historical QC are references; the available options and your own order may differ.",
+    "labels": [
+      "Choose the fit or specification",
+      "Read the photos carefully",
+      "Confirm before ordering"
+    ],
+    "browse": "Browse this category",
+    "detailTitle": "Before choosing from this category",
+    "items": {
+      "shoes": {
+        "intro": "Sneakers and other footwear are grouped here for comparing silhouettes, colors and construction. Start with how you plan to wear the pair, then narrow down the actual size and variant instead of choosing from the thumbnail alone.",
+        "choose": "Compare the seller’s size chart with a pair that fits you. Check which sizing system is used and whether any measurement describes the foot or the shoe; do not assume the same number fits across different listings.",
+        "photos": "Look at both shoes, heel alignment, toe shape, stitching and outsole edges. Where a size label or insole measurement is visible, check it against the selected variant. Photos cannot establish comfort or long-term durability.",
+        "confirm": "Verify the exact color, size, included box and current price on the purchase page. Check the shipping estimate for the actual packaged item; a catalog price does not include every delivery cost."
+      },
+      "shirts": {
+        "intro": "This category brings together T-shirts, football jerseys and graphic tops. Similar front designs can hide different cuts, fabrics or back prints, so use the full listing to understand the particular version offered.",
+        "choose": "Compare chest width, shoulder width and length with a top you already own. Check whether measurements are flat or around the body. Decide between a fitted, regular or loose shape before selecting the size.",
+        "photos": "Inspect front and back prints, collar shape, sleeve finishes and visible seams. For jerseys, check the requested name, number and patches when shown. Lighting and photo processing can affect apparent colors.",
+        "confirm": "Confirm fabric information, color and personalization options with the seller. Do not infer fabric weight, stretch, official licensing or authenticity from the product title or a clear photograph."
+      },
+      "clothing": {
+        "intro": "Jackets, cardigans and coordinated clothing sets sit together in this broader clothing category. First identify whether the listing sells one garment or several pieces; a styled outfit in the photo is not a reliable packing list.",
+        "choose": "For outerwear, compare chest, shoulders and sleeve length while allowing for layers. For a set, check the top and bottom measurements separately; one size selection may apply to both pieces.",
+        "photos": "Use front, back and close-up images to inspect fasteners, pockets, cuffs and lining where visible. For sets, check each included piece rather than judging the whole order from a single outfit photo.",
+        "confirm": "Verify the number of pieces, fabric description and lining or insulation details. Photos alone cannot confirm warmth, waterproof performance or that accessories shown with the garment are included."
+      },
+      "hoodies": {
+        "intro": "Pullover and zip-up hoodies are collected here for comparing shape, graphics and finishing. The same size label can describe a cropped, regular or oversized cut, making measurements more useful than the label alone.",
+        "choose": "Check chest width, body length, shoulder width and sleeve length. Compare with your own hoodie and consider whether you want space for another layer. Read the seller’s fabric and lining description.",
+        "photos": "Inspect the hood, drawstrings if present, cuffs, hem, pocket seams and printed or embroidered areas. On zip-up styles, look at the zipper alignment and both sides of the front.",
+        "confirm": "Confirm the selected color and whether the listing describes a lined or unlined version. A bulky-looking photo cannot prove fabric weight, softness or warmth; ask for missing details before paying."
+      },
+      "pants": {
+        "intro": "Trousers, shorts and underwear are included in this category. Choose the garment type first, because everyday trousers, loose shorts and close-fitting underwear need different measurements and should not be compared by size labels alone.",
+        "choose": "Check waist measurements and whether the waistband stretches. For trousers and shorts, compare rise, hips, thigh width and inseam or overall length. For underwear, follow the specific listing’s measurement guidance.",
+        "photos": "Look at waistband stitching, hems, pocket placement and fabric panels where visible. When a measurement photo is available, check where the tape starts and ends instead of relying only on the written number.",
+        "confirm": "Confirm the number of pieces in a pack, the chosen color and the seller’s return conditions for the exact item. One product photograph may represent a single piece or a multi-pack."
+      },
+      "belts": {
+        "intro": "Belts are best compared by usable fit, width and buckle construction rather than the advertised length alone. This category includes different buckle shapes and patterned straps, which may use different length conventions.",
+        "choose": "Measure a belt you wear from the buckle reference point to the hole you use, then compare with the seller’s diagram. Check strap width against your trouser loops and whether adjustment is actually supported.",
+        "photos": "Inspect the buckle, attachment point, punched holes, strap edges and visible stitching. Check patterned sections and surface finish in close-up, while allowing for lighting differences between images.",
+        "confirm": "Ask whether the listed length refers to the whole strap or the usable fastening range. Confirm the stated material, buckle finish and included packaging; appearance alone cannot establish leather grade or authenticity."
+      },
+      "bags": {
+        "intro": "Backpacks, shoulder bags and other carry styles are grouped here. Think about what you need to carry before comparing appearance: a compact shoulder bag and an everyday backpack serve very different purposes.",
+        "choose": "Check width, height and depth, plus strap length and adjustment range. If you need to fit a laptop or a particular item, compare its measurements with the stated internal compartment size, not just external dimensions.",
+        "photos": "Inspect handles, strap attachment points, closures, corners, hardware and lining where visible. A photograph with stuffing can make a bag look larger or more structured than it is when empty.",
+        "confirm": "Confirm included straps, removable parts and pockets with the seller. Verify the stated material and exact color; product images do not prove carrying capacity, water resistance or material quality."
+      },
+      "perfume": {
+        "intro": "Fragrance listings need checks beyond the appearance of the bottle. Use this category to compare the stated version, bottle volume and packaging, while treating the seller’s product name as information to verify rather than proof of origin.",
+        "choose": "Check the listed volume and concentration, such as EDT or EDP when specified. Distinguish a full-size bottle, sample, refill and set; a photo may show several items even when the selected option includes only one.",
+        "photos": "Review the bottle, cap, label and packaging for visible damage or mismatches. Neither catalog nor QC photos can establish the scent, ingredients, authenticity or how long a fragrance will last.",
+        "confirm": "Before ordering, confirm the selected contents and whether USFans can accept and ship that exact liquid product to your destination on an available route. Do not assume a normal clothing shipping option applies."
+      },
+      "electronics": {
+        "intro": "Watches, headphones, speakers and charging accessories appear in this electronics category. Similar-looking devices may have different specifications, so start with compatibility and the exact model described by the seller.",
+        "choose": "Check the model, connector, power requirements and supported devices. For wireless products, verify the features you actually need rather than assuming them from a familiar product name or shape.",
+        "photos": "Inspect visible model labels, ports, screens, controls and included accessories. Ordinary QC images can show appearance and packing contents, but they are not evidence of battery health, sound quality or electrical performance.",
+        "confirm": "Confirm specifications, included cables or adapters, warranty and return terms. Check whether the chosen shipping route accepts the item, particularly if it contains a battery; availability depends on the actual product and destination."
+      },
+      "other": {
+        "intro": "Caps, sunglasses, bracelets and other accessories are collected here when they do not fit the main categories. Open the full item description first: each accessory has its own sizing, materials and included-parts questions.",
+        "choose": "For caps, check head circumference and adjustment. For sunglasses, compare frame, bridge and temple dimensions. For bracelets, check the usable circumference and fastening style rather than judging size from the photo.",
+        "photos": "Review closures, hinges, stitching, engraving and visible surface finish as appropriate to the item. If measurements or multiple angles are missing, ask for the details needed to judge the selected version.",
+        "confirm": "Confirm the exact item and what comes with it. Photos cannot verify lens protection, material composition or authenticity; request reliable specifications for any functional claim that matters to your purchase."
+      }
+    }
+  },
+  "zh": {
+    "title": "选对分类，也看懂选购细节",
+    "intro": "这里按现有十个分类整理了实用的挑选说明。商品展示图和历史 QC 图仅作参考，可选款式、包装内容以及你实际订单的情况可能不同。",
+    "labels": [
+      "核对尺寸与规格",
+      "看图时重点检查",
+      "下单前再确认"
+    ],
+    "browse": "浏览这个分类",
+    "detailTitle": "挑选这个分类前，先检查这些",
+    "items": {
+      "shoes": {
+        "intro": "这里收录运动鞋及其他鞋款，方便比较鞋型、配色和外观细节。先想清楚日常搭配和穿着需求，再确认具体尺码与版本，不要仅凭一张缩略图决定购买。",
+        "choose": "拿一双合脚的鞋作为参考，对照卖家的尺码表。确认使用的是哪一种尺码体系，以及长度指脚长、鞋内长还是鞋底长；不同商品的同一码数不一定穿着一致。",
+        "photos": "查看左右脚是否对应、后跟是否对齐、鞋头形状、车线和鞋底边缘。若照片展示尺码标或鞋垫测量，核对是否与所选规格一致。图片无法证明舒适度或长期耐穿程度。",
+        "confirm": "在购买页核对配色、尺码、是否带鞋盒和当前售价。运费应参考实际包装后的商品估算，目录中的商品价格不代表包含全部运输费用。"
+      },
+      "shirts": {
+        "intro": "本分类包括 T 恤、足球球衣和图案上衣。正面图案相似的商品，版型、面料说明或背面印花可能不同，因此需要结合完整详情辨别具体出售的是哪一款。",
+        "choose": "对照自己常穿上衣的胸宽、肩宽和衣长，先明确修身、常规或宽松的穿着需求。留意卖家给的是平铺尺寸还是围度，不要把两种测量方式直接比较。",
+        "photos": "重点看正反面印花、领口形状、袖口收边和可见接缝。球衣若有姓名、号码或徽章选项，核对图片与定制内容是否对应；光线和图片处理可能影响颜色。",
+        "confirm": "确认面料描述、颜色及是否支持所需定制。商品标题或清晰照片不能证明克重、弹性、官方授权或真伪，重要信息缺失时应先询问卖家。"
+      },
+      "clothing": {
+        "intro": "服装分类集中展示夹克、开衫和搭配套装等商品。首先分清链接出售的是一件衣服还是多件组合，展示照片中的完整穿搭并不等于实际发货清单。",
+        "choose": "选外套时比较胸围、肩宽和袖长，并为内搭留出空间；选套装时分别核对上装与下装的尺寸。一组选项可能同时决定两件商品的尺码，不能只检查上衣。",
+        "photos": "结合正面、背面和局部照片检查拉链或纽扣、口袋、袖口以及可见内衬。套装需要分别查看每件包含的单品，不能只用整体搭配图判断全部细节。",
+        "confirm": "确认套装件数、面料说明及是否带内衬或填充。照片本身无法证明保暖性、防水性能，也不能确认搭配展示的其他配饰是否包含在售价内。"
+      },
+      "hoodies": {
+        "intro": "这里汇集套头和拉链连帽衫，便于比较廓形、图案及收边。同样的尺码标签可能对应短款、常规版或宽松版，实际尺寸往往比标签更有参考价值。",
+        "choose": "核对胸宽、衣长、肩宽与袖长，并与自己合适的连帽衫对比。根据是否需要叠穿决定余量，同时查看卖家对面料和内里的具体描述。",
+        "photos": "检查帽型、抽绳（如有）、袖口、下摆、口袋接缝以及印花或刺绣区域。拉链款可重点观察拉链走向、前襟两侧是否对齐以及可见的缝合细节。",
+        "confirm": "确认颜色和具体版本，分清卖家描述的是有内里还是无内里的款式。外观看起来厚实并不能证明面料克重、柔软度或保暖性，缺失信息应在付款前问清。"
+      },
+      "pants": {
+        "intro": "裤子分类包含长裤、短裤和内裤。应先按衣物用途区分，再对照合适的尺寸；日常长裤、宽松短裤和贴身内裤不能仅凭同一个尺码字母互相比较。",
+        "choose": "查看腰围的测量方式以及腰头是否有弹性。长裤和短裤还需要比较前裆、臀围、腿围、内侧裤长或总裤长；内裤则以具体商品提供的尺码说明为准。",
+        "photos": "留意腰头车线、裤脚、口袋位置和可见面料拼接。有测量照片时，确认软尺的起止位置和衣物是否拉伸，不要只读取照片中的某一个数字。",
+        "confirm": "核对单件还是多条装、选择的颜色以及该商品适用的退换条件。相同展示图可能对应不同件数的选项，不能把照片里出现的全部颜色理解为一套。"
+      },
+      "belts": {
+        "intro": "挑选腰带时，应把可用佩戴范围、带宽和扣头结构放在总长度前面比较。本分类包含不同扣头和纹样款式，卖家标注长度的方式也可能不一致。",
+        "choose": "量取自己常用腰带从扣头参考点到常用孔位的长度，再对照卖家的示意图。检查带宽是否适合裤袢，并确认商品是否真正支持需要的调节方式。",
+        "photos": "观察扣头、连接处、孔位、带身边缘和可见车线。纹样和表面处理可放大查看，但不同照片的光照会改变颜色与光泽，不能只依靠单张图判断。",
+        "confirm": "问清标注的是整条长度还是实际扣合范围，并确认所描述的材质、扣头颜色及包装内容。外观照片不能证明皮料等级或商品真伪。"
+      },
+      "bags": {
+        "intro": "这里收录背包、单肩包和其他包袋。先列出平时要携带的物品，再比较外观；小型单肩包和通勤背包的容量、背负方式与使用场景并不相同。",
+        "choose": "检查长、宽、高及肩带长度、可调范围。如果需要装电脑或某件固定物品，要对比内部分隔尺寸，不能仅用包袋外部尺寸推断一定能够放入。",
+        "photos": "重点看提手、肩带连接点、闭合结构、边角、五金和可见内衬。有填充物的展示照片会影响包袋的体积感与挺括程度，需要结合其他角度判断。",
+        "confirm": "确认随包附带哪些肩带、可拆部件和内部口袋，并核对材质描述及所选颜色。图片不能证明承重能力、防水性能或材料品质。"
+      },
+      "perfume": {
+        "intro": "香水类商品需要核对瓶身之外的信息。本分类可用于比较卖家标注的版本、容量和包装，但商品名称只能作为待核实信息，不能据此认定来源或真伪。",
+        "choose": "查看容量和已注明的浓度类型，例如 EDT 或 EDP；分清正装、小样、补充装及套装。图片可能同时展示多个物品，而当前选项只包含其中一个。",
+        "photos": "检查瓶身、瓶盖、标签和包装是否有可见破损或不一致。商品图和 QC 图都无法验证气味、成分、真伪或留香时间，不能把外观检查当作这些方面的检测。",
+        "confirm": "下单前确认具体包含的内容，并向 USFans 核实该液体商品能否接收、有哪些路线可寄往目的地。不要默认普通服装可用的运输方式同样适用于香水。"
+      },
+      "electronics": {
+        "intro": "电子产品分类包括手表、耳机、音箱和充电配件等商品。外形相似的设备可能采用不同规格，因此应先确认具体型号和兼容要求，而不是仅凭熟悉的名称或造型判断。",
+        "choose": "核对型号、接口、供电要求和适用设备。对无线产品，要确认自己实际需要的功能是否被明确说明，不能把同类设备常见的功能直接套用到当前商品。",
+        "photos": "观察可见型号标签、接口、屏幕、按键和配件清单。普通 QC 图片只能帮助检查外观和包装内容，不能证明电池健康、音质、功率或电气性能。",
+        "confirm": "确认技术规格、是否附带线材或适配器、保修和退换条款。含电池商品还应核对所选运输路线是否接受，实际可用方案取决于具体商品和目的地。"
+      },
+      "other": {
+        "intro": "帽子、太阳镜、手链及其他不属于主要分类的配饰集中在这里。不同配饰要检查的尺寸、材质和附带部件各不相同，先打开完整详情，明确正在比较的具体单品。",
+        "choose": "帽子看头围与调节方式；太阳镜看镜框宽度、鼻梁和镜腿尺寸；手链看实际佩戴周长与扣合结构。不要根据模特图或单独的商品图推断适合自己的大小。",
+        "photos": "按单品类型检查扣件、转轴、车线、刻字和可见表面处理。若缺少尺寸说明或多个角度，先补齐影响判断的信息，再决定所选版本是否符合需要。",
+        "confirm": "确认出售的具体商品及随附物品。图片不能验证镜片防护能力、材质成分或真伪；对影响购买决定的功能声明，应要求提供可靠的规格说明。"
+      }
+    }
+  },
+  "de": {
+    "title": "Die passende Kategorie finden und gezielt prüfen",
+    "intro": "Diese zehn Kategorien enthalten konkrete Hinweise zur Auswahl. Produktbilder und frühere QC-Fotos dienen als Referenz; Varianten, Lieferumfang und deine eigene Bestellung können abweichen.",
+    "labels": [
+      "Passform und Spezifikation",
+      "Fotos richtig beurteilen",
+      "Vor der Bestellung klären"
+    ],
+    "browse": "Kategorie ansehen",
+    "detailTitle": "Vor der Auswahl prüfen",
+    "items": {
+      "shoes": {
+        "intro": "Hier findest du Sneaker und weitere Schuhe zum Vergleich von Form, Farbe und Verarbeitung. Entscheide zuerst, wie du das Paar tragen möchtest, und prüfe danach die konkrete Größe und Variante.",
+        "choose": "Vergleiche die Größentabelle mit einem passenden Schuh. Kläre, welches Größensystem gilt und ob eine Länge den Fuß, Innenraum oder die Sohle beschreibt. Gleiche Größenangaben können unterschiedlich ausfallen.",
+        "photos": "Prüfe beide Schuhe, Fersen, Zehenform, Nähte und Sohlenkanten. Sichtbare Größenetiketten und Einlegesohlen-Messungen sollten zur Variante passen. Komfort und Haltbarkeit lassen sich aus Fotos nicht feststellen.",
+        "confirm": "Bestätige Farbe, Größe, Schuhkarton und aktuellen Preis. Versandkosten hängen vom tatsächlich verpackten Artikel ab; der Katalogpreis enthält nicht automatisch sämtliche Lieferkosten."
+      },
+      "shirts": {
+        "intro": "T-Shirts, Fußballtrikots und bedruckte Oberteile stehen in dieser Kategorie. Ähnliche Vorderseiten können unterschiedliche Schnitte, Stoffangaben oder Rückendrucke verdecken; deshalb zählt die vollständige Beschreibung.",
+        "choose": "Vergleiche Brustweite, Schulterbreite und Länge mit einem eigenen Oberteil. Unterscheide flach gemessene Breite und Umfang. Wähle den gewünschten Sitz, bevor du dich auf ein Größenetikett verlässt.",
+        "photos": "Betrachte Vorder- und Rückendruck, Kragen, Ärmelabschlüsse und Nähte. Prüfe bei Trikots Namen, Nummern und Aufnäher, sofern sichtbar. Licht und Bildbearbeitung können Farben verändern.",
+        "confirm": "Kläre Stoffbeschreibung, Farbe und Personalisierung. Produktname oder Fotos belegen weder Stoffgewicht und Elastizität noch offizielle Lizenzierung oder Echtheit."
+      },
+      "clothing": {
+        "intro": "Jacken, Cardigans und Kleidungssets bilden diese vielseitige Kategorie. Prüfe zuerst, ob ein einzelnes Kleidungsstück oder mehrere Teile angeboten werden. Ein komplettes Outfit auf einem Foto ist keine Packliste.",
+        "choose": "Vergleiche bei Jacken Brust, Schultern und Ärmel mit Platz für weitere Schichten. Prüfe bei Sets Ober- und Unterteil getrennt; eine Größenwahl kann für beide Teile gelten.",
+        "photos": "Nutze Vorder-, Rück- und Detailansichten für Verschlüsse, Taschen, Bündchen und sichtbares Futter. Bei Sets sollte jedes enthaltene Teil einzeln beurteilt werden.",
+        "confirm": "Bestätige Teilezahl, Materialbeschreibung sowie Futter oder Füllung. Fotos belegen weder Wärmeleistung noch Wasserdichtigkeit und zeigen möglicherweise nicht enthaltenes Zubehör."
+      },
+      "hoodies": {
+        "intro": "Pullover-Hoodies und Modelle mit Reißverschluss lassen sich hier nach Schnitt und Verarbeitung vergleichen. Ein Größenetikett kann für einen kurzen, normalen oder weiten Schnitt stehen; Maße sind hilfreicher.",
+        "choose": "Prüfe Brustweite, Körperlänge, Schultern und Ärmel anhand eines passenden Hoodies. Plane bei Bedarf Platz für zusätzliche Schichten ein und lies die Angaben zu Stoff und Innenseite.",
+        "photos": "Betrachte Kapuze, vorhandene Kordeln, Bündchen, Saum, Taschennähte und Druck oder Stickerei. Prüfe bei Zip-Hoodies den Verlauf des Reißverschlusses und beide Vorderseiten.",
+        "confirm": "Kläre Farbe und gefütterte oder ungefütterte Ausführung. Eine voluminöse Aufnahme beweist weder Stoffgewicht noch Weichheit oder Wärme; frage fehlende Angaben vor der Zahlung nach."
+      },
+      "pants": {
+        "intro": "Hosen, Shorts und Unterwäsche sind hier zusammengefasst. Wähle zuerst die Art des Kleidungsstücks, da Alltagshosen, weite Shorts und körpernahe Unterwäsche verschiedene Maße benötigen.",
+        "choose": "Prüfe Bundmaß und Dehnbarkeit. Vergleiche bei Hosen und Shorts Leibhöhe, Hüfte, Oberschenkel sowie Innenbein- oder Gesamtlänge. Nutze für Unterwäsche die jeweilige Größenerklärung.",
+        "photos": "Achte auf Bundnähte, Säume, Taschenposition und sichtbare Stoffbahnen. Bei Messfotos zählen Anfang und Ende des Maßbands sowie die Frage, ob der Stoff gedehnt ist.",
+        "confirm": "Bestätige Stückzahl, Farbe und Rückgabebedingungen für den konkreten Artikel. Ein Bild kann eine Einzelware oder ein Mehrfachpaket darstellen; abgebildete Farben müssen nicht alle enthalten sein."
+      },
+      "belts": {
+        "intro": "Bei Gürteln sind nutzbare Passform, Breite und Schnalle wichtiger als eine isolierte Gesamtlänge. Unterschiedliche Modelle und Muster können mit unterschiedlichen Messmethoden angeboten werden.",
+        "choose": "Miss einen passenden Gürtel vom Bezugspunkt an der Schnalle bis zum genutzten Loch und vergleiche die Verkäuferzeichnung. Prüfe Breite, Gürtelschlaufen und tatsächliche Verstellmöglichkeiten.",
+        "photos": "Betrachte Schnalle, Befestigung, Löcher, Kanten und Nähte. Detailbilder helfen beim Muster und Finish, wobei Licht Farbe und Glanz beeinflusst.",
+        "confirm": "Kläre, ob die Länge den gesamten Riemen oder den nutzbaren Schließbereich bezeichnet. Bestätige Materialangabe, Schnallenfarbe und Verpackung; Fotos beweisen weder Lederqualität noch Echtheit."
+      },
+      "bags": {
+        "intro": "Rucksäcke, Schultertaschen und weitere Taschen sind hier gesammelt. Überlege zuerst, was hineinpassen muss: Eine kompakte Schultertasche erfüllt andere Aufgaben als ein Alltagsrucksack.",
+        "choose": "Prüfe Breite, Höhe, Tiefe und verstellbare Trägerlängen. Vergleiche für einen Laptop die Innenmaße des Fachs mit deinem Gerät, statt nur von Außenmaßen auszugehen.",
+        "photos": "Achte auf Griffe, Trägeransätze, Verschlüsse, Ecken, Beschläge und sichtbares Futter. Füllmaterial kann die Tasche größer oder formstabiler erscheinen lassen.",
+        "confirm": "Bestätige enthaltene Träger, abnehmbare Teile, Fächer, Materialbeschreibung und Farbe. Bilder belegen weder Tragkraft und Wasserbeständigkeit noch Materialqualität."
+      },
+      "perfume": {
+        "intro": "Duftangebote erfordern mehr als einen Blick auf den Flakon. Vergleiche angegebene Version, Volumen und Verpackung, aber betrachte den Produktnamen nicht als Herkunfts- oder Echtheitsnachweis.",
+        "choose": "Prüfe Volumen und angegebene Konzentration wie EDT oder EDP. Unterscheide Originalgröße, Probe, Nachfüllung und Set; die Auswahl kann nur einen Teil des Fotos umfassen.",
+        "photos": "Suche nach sichtbaren Schäden oder Unterschieden an Flakon, Deckel, Etikett und Verpackung. Fotos belegen weder Duft und Inhaltsstoffe noch Echtheit oder Haltbarkeit des Geruchs.",
+        "confirm": "Kläre den genauen Inhalt und ob USFans das Flüssigprodukt über eine verfügbare Route an dein Ziel versenden kann. Eine für Kleidung verfügbare Versandart gilt nicht automatisch für Parfum."
+      },
+      "electronics": {
+        "intro": "Uhren, Kopfhörer, Lautsprecher und Ladezubehör stehen in dieser Kategorie. Ähnlich aussehende Geräte können andere Spezifikationen haben; entscheidend sind das genaue Modell und die Kompatibilität.",
+        "choose": "Prüfe Modell, Anschlüsse, Stromanforderungen und unterstützte Geräte. Lass dir benötigte drahtlose Funktionen ausdrücklich bestätigen, statt sie aus Name oder Aussehen abzuleiten.",
+        "photos": "Betrachte Modellaufkleber, Anschlüsse, Display, Bedienelemente und Zubehör. Normale QC-Fotos zeigen Zustand und Lieferumfang, belegen aber keine Akkugesundheit, Klangqualität oder elektrische Leistung.",
+        "confirm": "Bestätige Spezifikationen, Kabel, Adapter, Garantie und Rückgabe. Prüfe bei Akkuprodukten besonders die Annahme durch die Versandroute; Möglichkeiten hängen vom Artikel und Ziel ab."
+      },
+      "other": {
+        "intro": "Kappen, Sonnenbrillen, Armbänder und weitere Accessoires finden hier Platz. Jedes Produkt benötigt eigene Angaben zu Maßen, Material und Zubehör; öffne daher zuerst die vollständige Beschreibung.",
+        "choose": "Prüfe bei Kappen Kopfumfang und Verstellung, bei Brillen Rahmen-, Steg- und Bügelmaße und bei Armbändern den nutzbaren Umfang. Fotos ersetzen keine Größenangaben.",
+        "photos": "Kontrolliere je nach Artikel Verschlüsse, Scharniere, Nähte, Gravuren und Oberflächen. Fordere fehlende Maße oder Ansichten an, wenn sie für deine Auswahl wichtig sind.",
+        "confirm": "Bestätige den genauen Artikel und Lieferumfang. Fotos beweisen weder Linsenschutz und Materialzusammensetzung noch Echtheit; wichtige Funktionsversprechen brauchen verlässliche Spezifikationen."
+      }
+    }
+  },
+  "es": {
+    "title": "Elige la categoría y aprende qué revisar",
+    "intro": "Estas diez categorías incluyen comprobaciones prácticas. Las fotos del catálogo y los QC históricos son referencias: las variantes, el contenido y tu pedido pueden ser distintos.",
+    "labels": [
+      "Talla y especificaciones",
+      "Qué revisar en las fotos",
+      "Antes de pedir"
+    ],
+    "browse": "Explorar esta categoría",
+    "detailTitle": "Qué comprobar antes de elegir",
+    "items": {
+      "shoes": {
+        "intro": "Aquí se reúnen zapatillas y otros tipos de calzado para comparar formas, colores y acabados. Piensa primero en el uso que les darás y después comprueba la talla y la variante concreta.",
+        "choose": "Compara la tabla del vendedor con un par que te quede bien. Verifica el sistema de tallas y si una longitud corresponde al pie, al interior o a la suela. El mismo número puede variar entre anuncios.",
+        "photos": "Revisa ambos zapatos, la alineación de talones, punteras, costuras y bordes de la suela. Las etiquetas y medidas visibles deben coincidir con la variante. Las fotos no demuestran comodidad ni durabilidad.",
+        "confirm": "Confirma color, talla, caja incluida y precio actual. Calcula el envío para el artículo realmente embalado: el precio del catálogo no incluye necesariamente todos los gastos de entrega."
+      },
+      "shirts": {
+        "intro": "Esta categoría reúne camisetas, camisetas de fútbol y prendas con gráficos. Un frontal parecido puede ocultar cortes, tejidos o estampados traseros distintos; consulta siempre la descripción completa.",
+        "choose": "Compara ancho de pecho, hombros y largo con una prenda propia. Distingue las medidas en plano del contorno y decide si quieres un ajuste ceñido, regular o amplio.",
+        "photos": "Examina estampados delanteros y traseros, cuello, mangas y costuras. En camisetas de fútbol, comprueba nombre, número y parches cuando se muestren. La iluminación puede alterar los colores.",
+        "confirm": "Confirma tejido, color y personalización. Un nombre o una fotografía no prueban gramaje, elasticidad, licencia oficial ni autenticidad; pregunta por los detalles que falten."
+      },
+      "clothing": {
+        "intro": "Chaquetas, cárdigans y conjuntos forman esta categoría de ropa. Identifica primero si el anuncio vende una sola prenda o varias: un conjunto fotografiado no constituye una lista de lo incluido.",
+        "choose": "Para chaquetas, compara pecho, hombros y mangas dejando espacio para otras capas. En conjuntos, revisa por separado la parte superior e inferior; una talla puede aplicarse a ambas.",
+        "photos": "Utiliza fotos frontales, traseras y de detalle para revisar cierres, bolsillos, puños y forro visible. Comprueba individualmente todas las piezas del conjunto.",
+        "confirm": "Confirma número de prendas, material, forro y relleno descritos. Las fotos no demuestran abrigo o impermeabilidad ni garantizan que se incluyan los accesorios de la imagen."
+      },
+      "hoodies": {
+        "intro": "Aquí puedes comparar sudaderas con capucha, tanto cerradas como con cremallera. Una misma etiqueta de talla puede corresponder a un corte corto, normal u holgado; las medidas son más útiles.",
+        "choose": "Comprueba pecho, largo, hombros y mangas con una sudadera que te quede bien. Considera si necesitas espacio para otra capa y lee la descripción del tejido y del interior.",
+        "photos": "Revisa capucha, cordones si los hay, puños, bajo, costuras de bolsillos y estampados o bordados. En modelos abiertos, observa la alineación de la cremallera y de ambos lados.",
+        "confirm": "Confirma color y versión con o sin forro. Una apariencia gruesa no demuestra gramaje, suavidad o capacidad de abrigo; aclara esas características antes de pagar."
+      },
+      "pants": {
+        "intro": "Pantalones, shorts y ropa interior se agrupan aquí. Elige primero el tipo de prenda: un pantalón diario, un short amplio y una prenda interior ajustada requieren medidas distintas.",
+        "choose": "Comprueba cintura y elasticidad del cinturón. Para pantalones y shorts, compara tiro, cadera, muslo y entrepierna o largo total. Para ropa interior, sigue la guía específica del anuncio.",
+        "photos": "Observa costuras de cintura, bajos, bolsillos y paneles visibles. En fotos de medición, revisa el inicio y final de la cinta y si el tejido está estirado.",
+        "confirm": "Confirma unidades por paquete, color elegido y condiciones de devolución del artículo. Una imagen puede representar una unidad o un paquete; los colores mostrados no están necesariamente incluidos."
+      },
+      "belts": {
+        "intro": "En cinturones conviene comparar el rango de ajuste, la anchura y la hebilla antes que una longitud aislada. Los vendedores pueden usar distintos criterios de medición.",
+        "choose": "Mide un cinturón propio desde el punto de referencia de la hebilla hasta el agujero que utilizas y compara el esquema del vendedor. Comprueba anchura y posibilidades reales de ajuste.",
+        "photos": "Revisa hebilla, fijación, agujeros, cantos y costuras. Amplía los detalles del patrón y del acabado, recordando que la luz cambia el color y el brillo.",
+        "confirm": "Aclara si la longitud indicada es total o corresponde al rango útil de cierre. Confirma material, acabado y embalaje; las imágenes no prueban calidad del cuero ni autenticidad."
+      },
+      "bags": {
+        "intro": "Mochilas, bolsos de hombro y otros bolsos se reúnen en esta categoría. Decide qué necesitas llevar antes de comparar el aspecto: una bandolera pequeña no cumple la misma función que una mochila diaria.",
+        "choose": "Revisa ancho, alto, fondo y longitud ajustable de las correas. Para un portátil, compara sus medidas con el compartimento interior y no solo con las dimensiones externas.",
+        "photos": "Inspecciona asas, uniones de correas, cierres, esquinas, herrajes y forro visible. El relleno de una foto puede hacer que el bolso parezca más amplio o estructurado.",
+        "confirm": "Confirma correas incluidas, piezas desmontables, bolsillos, material y color. Las fotos no demuestran capacidad de carga, resistencia al agua ni calidad del material."
+      },
+      "perfume": {
+        "intro": "Los perfumes requieren revisar más que el frasco. Compara versión, volumen y embalaje declarados, tratando el nombre del producto como información que verificar y no como prueba de procedencia.",
+        "choose": "Comprueba volumen y concentración indicada, como EDT o EDP. Distingue frasco completo, muestra, recarga y conjunto; la opción seleccionada puede incluir solo parte de lo fotografiado.",
+        "photos": "Examina daños o diferencias visibles en frasco, tapón, etiqueta y caja. Las fotos no verifican olor, ingredientes, autenticidad ni duración de la fragancia.",
+        "confirm": "Confirma el contenido exacto y si USFans puede recibir y enviar ese líquido a tu destino mediante una ruta disponible. No des por válida una opción de envío pensada para ropa."
+      },
+      "electronics": {
+        "intro": "Esta categoría incluye relojes, auriculares, altavoces y accesorios de carga. Dispositivos parecidos pueden tener especificaciones diferentes; empieza por el modelo exacto y la compatibilidad.",
+        "choose": "Comprueba modelo, conectores, requisitos de alimentación y equipos compatibles. Verifica expresamente las funciones inalámbricas que necesitas, sin deducirlas del nombre o de la forma.",
+        "photos": "Revisa etiquetas visibles, puertos, pantallas, controles y accesorios. Las fotos QC habituales muestran aspecto y contenido, pero no prueban salud de batería, sonido ni rendimiento eléctrico.",
+        "confirm": "Confirma especificaciones, cables, adaptadores, garantía y devoluciones. Comprueba que la ruta acepta el producto, especialmente si contiene batería; depende del artículo y del destino."
+      },
+      "other": {
+        "intro": "Gorras, gafas de sol, pulseras y otros accesorios se agrupan aquí. Cada tipo necesita preguntas distintas sobre talla, materiales y componentes; abre primero la descripción completa.",
+        "choose": "Para gorras, revisa contorno y ajuste; para gafas, montura, puente y patillas; para pulseras, contorno útil y cierre. No deduzcas el tamaño adecuado de una foto.",
+        "photos": "Examina cierres, bisagras, costuras, grabados y superficies según corresponda. Si faltan medidas o ángulos necesarios, solicita esos datos antes de elegir la variante.",
+        "confirm": "Confirma el artículo exacto y lo incluido. Las imágenes no verifican protección de lentes, composición ni autenticidad; pide especificaciones fiables para las funciones que influyan en tu compra."
+      }
+    }
+  },
+  "fr": {
+    "title": "Choisir une catégorie et savoir quoi vérifier",
+    "intro": "Ces dix catégories proposent des vérifications concrètes. Les photos du catalogue et les anciens QC servent de référence ; les variantes, le contenu et votre commande peuvent différer.",
+    "labels": [
+      "Taille et caractéristiques",
+      "Examiner les photos",
+      "Confirmer avant de commander"
+    ],
+    "browse": "Voir cette catégorie",
+    "detailTitle": "À vérifier avant de choisir",
+    "items": {
+      "shoes": {
+        "intro": "Cette catégorie réunit des baskets et autres chaussures pour comparer formes, couleurs et finitions. Déterminez d’abord votre usage, puis vérifiez la pointure et la variante précise plutôt que de choisir sur une vignette.",
+        "choose": "Comparez le tableau du vendeur à une paire adaptée. Vérifiez le système de pointures et si la longueur désigne le pied, l’intérieur ou la semelle. Un même numéro peut correspondre à des dimensions différentes.",
+        "photos": "Examinez les deux chaussures, l’alignement des talons, les bouts, coutures et bords des semelles. Vérifiez les étiquettes et mesures visibles. Les photos ne prouvent ni confort ni durabilité.",
+        "confirm": "Confirmez couleur, pointure, boîte incluse et prix actuel. Estimez le transport pour le produit réellement emballé ; le prix du catalogue ne comprend pas automatiquement tous les frais."
+      },
+      "shirts": {
+        "intro": "T-shirts, maillots de football et hauts imprimés se trouvent ici. Des devants similaires peuvent masquer des coupes, tissus ou impressions au dos différents : consultez la description complète.",
+        "choose": "Comparez poitrine, épaules et longueur à un haut que vous possédez. Distinguez largeur à plat et tour complet. Choisissez une coupe ajustée, classique ou ample avant de sélectionner la taille.",
+        "photos": "Vérifiez impressions avant et arrière, col, finitions des manches et coutures. Pour les maillots, contrôlez nom, numéro et écussons visibles. L’éclairage peut modifier les couleurs perçues.",
+        "confirm": "Confirmez tissu, couleur et personnalisation. Le nom ou une photo ne démontre ni grammage, élasticité, licence officielle ni authenticité ; demandez les précisions manquantes."
+      },
+      "clothing": {
+        "intro": "Vestes, cardigans et ensembles composent cette catégorie. Identifiez d’abord si l’annonce vend un vêtement ou plusieurs pièces : une tenue complète photographiée ne décrit pas forcément le contenu livré.",
+        "choose": "Pour une veste, comparez poitrine, épaules et manches en prévoyant les couches dessous. Pour un ensemble, vérifiez haut et bas séparément ; une taille choisie peut s’appliquer aux deux.",
+        "photos": "Regardez vues avant, arrière et détails des fermetures, poches, poignets et doublure visible. Contrôlez chaque pièce d’un ensemble individuellement.",
+        "confirm": "Confirmez nombre de pièces, matière annoncée, doublure et garnissage. Les photos ne prouvent ni chaleur ni imperméabilité et peuvent montrer des accessoires non inclus."
+      },
+      "hoodies": {
+        "intro": "Cette catégorie permet de comparer les sweats à capuche classiques et zippés. Une même taille peut désigner une coupe courte, normale ou ample ; les mesures sont plus utiles que l’étiquette.",
+        "choose": "Vérifiez poitrine, longueur, épaules et manches avec un sweat adapté. Prévoyez de la place si vous superposez les vêtements et lisez les indications sur le tissu et l’intérieur.",
+        "photos": "Examinez capuche, cordons éventuels, poignets, ourlet, poches et zones imprimées ou brodées. Sur un modèle zippé, vérifiez l’alignement de la fermeture et des deux pans.",
+        "confirm": "Confirmez couleur et version doublée ou non. Un aspect épais ne démontre ni grammage, douceur ni chaleur ; clarifiez les informations importantes avant le paiement."
+      },
+      "pants": {
+        "intro": "Pantalons, shorts et sous-vêtements sont regroupés ici. Commencez par choisir le type de vêtement : un pantalon quotidien, un short ample et un sous-vêtement près du corps demandent des mesures différentes.",
+        "choose": "Vérifiez le tour de taille et l’élasticité de la ceinture. Comparez fourche, hanches, cuisses et entrejambe ou longueur totale. Pour les sous-vêtements, suivez le guide propre à l’annonce.",
+        "photos": "Observez coutures de ceinture, ourlets, emplacement des poches et panneaux visibles. Sur une photo de mesure, contrôlez les points de départ et d’arrivée du ruban et l’étirement du tissu.",
+        "confirm": "Confirmez quantité par lot, couleur et conditions de retour de l’article. Une photo peut représenter une pièce ou un lot ; toutes les couleurs montrées ne sont pas nécessairement incluses."
+      },
+      "belts": {
+        "intro": "Pour une ceinture, comparez la plage de réglage, la largeur et la boucle avant de retenir une longueur totale. Les vendeurs peuvent utiliser différentes conventions de mesure.",
+        "choose": "Mesurez une ceinture adaptée entre le repère de la boucle et le trou utilisé, puis comparez le schéma du vendeur. Vérifiez largeur, passants du pantalon et possibilités réelles de réglage.",
+        "photos": "Inspectez boucle, fixation, trous, bords et coutures. Agrandissez les motifs et finitions, en tenant compte des variations de couleur et de brillance dues à la lumière.",
+        "confirm": "Demandez si la longueur désigne toute la sangle ou la plage utile de fermeture. Confirmez matière annoncée, finition et emballage ; l’apparence ne prouve ni qualité du cuir ni authenticité."
+      },
+      "bags": {
+        "intro": "Sacs à dos, sacs portés à l’épaule et autres sacs sont réunis ici. Définissez ce que vous devez transporter : un petit sac et un sac à dos quotidien répondent à des besoins différents.",
+        "choose": "Vérifiez largeur, hauteur, profondeur et réglage des sangles. Pour un ordinateur, comparez ses dimensions au compartiment intérieur, sans vous fier seulement aux dimensions externes.",
+        "photos": "Inspectez poignées, attaches, fermetures, angles, pièces métalliques et doublure visible. Le rembourrage d’une photo peut donner une impression de volume ou de rigidité accrue.",
+        "confirm": "Confirmez sangles, pièces amovibles, poches, matière annoncée et couleur. Les images ne démontrent ni charge supportée, résistance à l’eau ni qualité des matériaux."
+      },
+      "perfume": {
+        "intro": "Les parfums nécessitent des vérifications au-delà du flacon. Comparez version, volume et emballage annoncés, sans prendre le nom du produit comme preuve d’origine ou d’authenticité.",
+        "choose": "Vérifiez volume et concentration précisée, comme EDT ou EDP. Distinguez flacon, échantillon, recharge et coffret ; l’option choisie peut ne contenir qu’une partie de la photo.",
+        "photos": "Cherchez dommages ou différences visibles sur flacon, bouchon, étiquette et emballage. Les photos ne permettent pas de vérifier odeur, ingrédients, authenticité ou tenue du parfum.",
+        "confirm": "Confirmez le contenu exact et demandez si USFans peut recevoir puis expédier ce liquide à votre destination par une ligne disponible. Une option adaptée aux vêtements ne convient pas nécessairement au parfum."
+      },
+      "electronics": {
+        "intro": "Montres, casques, enceintes et accessoires de charge figurent dans cette catégorie. Des appareils similaires peuvent avoir des caractéristiques différentes ; privilégiez le modèle exact et sa compatibilité.",
+        "choose": "Contrôlez modèle, connecteurs, alimentation et appareils compatibles. Faites préciser les fonctions sans fil nécessaires au lieu de les déduire d’un nom connu ou d’une forme familière.",
+        "photos": "Examinez étiquettes, ports, écrans, commandes et accessoires visibles. Les QC habituels montrent l’apparence et le contenu, sans prouver l’état de la batterie, le son ou les performances électriques.",
+        "confirm": "Confirmez caractéristiques, câbles, adaptateurs, garantie et retours. Vérifiez l’acceptation par la ligne de transport, surtout avec une batterie ; cela dépend du produit et de la destination."
+      },
+      "other": {
+        "intro": "Casquettes, lunettes de soleil, bracelets et autres accessoires sont rassemblés ici. Chaque type exige ses propres renseignements sur les tailles, matières et pièces fournies ; ouvrez la description complète.",
+        "choose": "Pour une casquette, vérifiez tour de tête et réglage ; pour des lunettes, monture, pont et branches ; pour un bracelet, tour utile et fermeture. Une photo ne suffit pas pour choisir la taille.",
+        "photos": "Examinez fermoirs, charnières, coutures, gravures et finitions selon l’article. Demandez les mesures ou vues manquantes lorsqu’elles sont nécessaires pour juger la variante.",
+        "confirm": "Confirmez l’article et ses accessoires. Les images ne vérifient ni protection des verres, composition ni authenticité ; exigez des caractéristiques fiables pour toute fonction déterminante."
+      }
+    }
+  },
+  "pt": {
+    "title": "Escolha a categoria e saiba o que conferir",
+    "intro": "Estas dez categorias trazem verificações práticas. Fotos do catálogo e QC históricos servem como referência; as variantes, os itens incluídos e seu pedido podem ser diferentes.",
+    "labels": [
+      "Tamanho e especificações",
+      "O que observar nas fotos",
+      "Antes de comprar"
+    ],
+    "browse": "Ver esta categoria",
+    "detailTitle": "O que conferir antes de escolher",
+    "items": {
+      "shoes": {
+        "intro": "Tênis e outros calçados estão reunidos aqui para comparar formatos, cores e acabamento. Comece pelo uso que pretende dar ao par e depois confira o tamanho e a variante exata, além da miniatura.",
+        "choose": "Compare a tabela do vendedor com um par que veste bem. Confira o sistema de numeração e se o comprimento corresponde ao pé, ao interior ou à sola. O mesmo número pode variar entre anúncios.",
+        "photos": "Observe os dois pés, alinhamento dos calcanhares, biqueiras, costuras e bordas da sola. Etiquetas e medidas visíveis devem corresponder à variante. Fotos não comprovam conforto nem durabilidade.",
+        "confirm": "Confirme cor, tamanho, caixa incluída e preço atual. Estime o frete para o produto realmente embalado; o preço do catálogo não inclui necessariamente todos os custos de entrega."
+      },
+      "shirts": {
+        "intro": "Camisetas, camisas de futebol e peças estampadas compõem esta categoria. Frentes parecidas podem esconder cortes, tecidos e estampas nas costas diferentes; consulte a descrição completa.",
+        "choose": "Compare largura do peito, ombros e comprimento com uma peça sua. Diferencie medidas planas de circunferência. Defina se deseja um caimento justo, regular ou amplo antes de escolher a etiqueta de tamanho.",
+        "photos": "Confira estampas dianteiras e traseiras, gola, mangas e costuras. Em camisas de futebol, observe nome, número e escudos quando mostrados. A iluminação pode alterar a percepção das cores.",
+        "confirm": "Confirme tecido, cor e personalização. O nome ou uma fotografia não comprovam gramatura, elasticidade, licença oficial nem autenticidade; pergunte pelos detalhes ausentes."
+      },
+      "clothing": {
+        "intro": "Jaquetas, cardigãs e conjuntos estão nesta categoria de roupas. Identifique primeiro se o anúncio vende uma peça ou várias: um visual completo na foto não equivale à lista do que será enviado.",
+        "choose": "Para jaquetas, compare peito, ombros e mangas com espaço para sobreposição. Em conjuntos, confira a parte superior e inferior separadamente; uma única escolha de tamanho pode valer para ambas.",
+        "photos": "Use fotos de frente, costas e detalhes para examinar fechos, bolsos, punhos e forro visível. Confira individualmente cada peça incluída no conjunto.",
+        "confirm": "Confirme quantidade de peças, material descrito, forro e enchimento. Fotos não comprovam aquecimento ou impermeabilidade, nem garantem que os acessórios de composição estejam incluídos."
+      },
+      "hoodies": {
+        "intro": "Aqui estão moletons com capuz, fechados ou com zíper, para comparar cortes e acabamento. Uma mesma etiqueta pode indicar uma peça curta, normal ou larga; medidas são mais úteis.",
+        "choose": "Confira peito, comprimento, ombros e mangas com um moletom que veste bem. Considere espaço para outra camada e leia as informações sobre tecido e parte interna.",
+        "photos": "Observe capuz, cordões se houver, punhos, barra, costuras dos bolsos e áreas estampadas ou bordadas. Nos modelos abertos, confira o alinhamento do zíper e dos dois lados.",
+        "confirm": "Confirme a cor e a versão com ou sem forro. Aparência volumosa não comprova gramatura, maciez ou aquecimento; esclareça as informações importantes antes de pagar."
+      },
+      "pants": {
+        "intro": "Calças, shorts e roupas íntimas são agrupados aqui. Primeiro escolha o tipo: uma calça diária, um short largo e uma peça íntima justa precisam de medidas diferentes, mesmo com etiquetas semelhantes.",
+        "choose": "Confira cintura e elasticidade do cós. Em calças e shorts, compare gancho, quadril, coxa e entrepernas ou comprimento total. Para roupas íntimas, siga a orientação específica do anúncio.",
+        "photos": "Observe costuras do cós, barras, posição dos bolsos e painéis visíveis. Nas fotos de medição, confira início e fim da fita e se o tecido está esticado.",
+        "confirm": "Confirme unidades por pacote, cor escolhida e condições de devolução do item. A mesma foto pode representar uma peça ou um conjunto; todas as cores exibidas não estão necessariamente incluídas."
+      },
+      "belts": {
+        "intro": "Nos cintos, compare faixa útil de ajuste, largura e fivela antes de olhar apenas o comprimento total. Vendedores podem adotar pontos de referência diferentes para medir.",
+        "choose": "Meça um cinto adequado do ponto indicado na fivela até o furo utilizado e compare com o desenho do vendedor. Confira largura, passadores da calça e possibilidades reais de ajuste.",
+        "photos": "Examine fivela, fixação, furos, bordas e costuras. Amplie padrões e acabamento, considerando que a luz altera a cor e o brilho entre imagens.",
+        "confirm": "Pergunte se o comprimento descreve toda a tira ou a faixa útil de fechamento. Confirme material, acabamento e embalagem; a aparência não comprova qualidade do couro nem autenticidade."
+      },
+      "bags": {
+        "intro": "Mochilas, bolsas de ombro e outras bolsas aparecem aqui. Pense no que precisa transportar antes de comparar o visual: uma bolsa pequena não atende às mesmas necessidades de uma mochila diária.",
+        "choose": "Confira largura, altura, profundidade e ajuste das alças. Para um notebook, compare suas medidas com o compartimento interno e não apenas com as dimensões externas.",
+        "photos": "Examine alças, pontos de fixação, fechos, cantos, ferragens e forro visível. O enchimento de uma foto pode fazer a bolsa parecer maior ou mais estruturada.",
+        "confirm": "Confirme alças incluídas, peças removíveis, bolsos, material descrito e cor. Fotos não comprovam capacidade de carga, resistência à água nem qualidade do material."
+      },
+      "perfume": {
+        "intro": "Perfumes exigem verificações além do frasco. Compare versão, volume e embalagem declarados, tratando o nome do produto como informação a confirmar, não como prova de origem.",
+        "choose": "Confira volume e concentração indicada, como EDT ou EDP. Diferencie frasco, amostra, refil e conjunto; a opção escolhida pode conter apenas parte dos itens fotografados.",
+        "photos": "Procure danos ou diferenças visíveis no frasco, tampa, rótulo e embalagem. Fotos não verificam cheiro, ingredientes, autenticidade nem duração da fragrância.",
+        "confirm": "Confirme o conteúdo exato e se o USFans pode receber e enviar esse líquido ao destino por uma rota disponível. Uma opção de frete para roupas não se aplica automaticamente a perfumes."
+      },
+      "electronics": {
+        "intro": "Relógios, fones, caixas de som e acessórios de carga estão nesta categoria. Aparelhos semelhantes podem ter especificações distintas; comece pelo modelo exato e pela compatibilidade.",
+        "choose": "Verifique modelo, conectores, alimentação e dispositivos compatíveis. Confirme expressamente as funções sem fio necessárias, sem deduzi-las de um nome conhecido ou formato familiar.",
+        "photos": "Confira etiquetas, portas, telas, controles e acessórios visíveis. Fotos QC comuns mostram aparência e conteúdo, mas não comprovam saúde da bateria, qualidade sonora nem desempenho elétrico.",
+        "confirm": "Confirme especificações, cabos, adaptadores, garantia e devoluções. Verifique se a rota aceita o produto, especialmente com bateria; as opções dependem do item e do destino."
+      },
+      "other": {
+        "intro": "Bonés, óculos de sol, pulseiras e outros acessórios ficam nesta categoria. Cada tipo exige suas próprias informações sobre tamanho, material e componentes; abra primeiro a descrição completa.",
+        "choose": "Em bonés, confira circunferência e ajuste; em óculos, armação, ponte e hastes; em pulseiras, circunferência útil e fecho. Não deduza o tamanho adequado apenas pela foto.",
+        "photos": "Examine fechos, dobradiças, costuras, gravações e superfícies conforme o item. Solicite medidas ou ângulos ausentes quando forem necessários para avaliar a variante.",
+        "confirm": "Confirme o produto exato e os itens incluídos. Imagens não verificam proteção das lentes, composição nem autenticidade; peça especificações confiáveis para funções importantes à compra."
+      }
+    }
+  },
+  "ar": {
+    "title": "الفئات",
+    "intro": "استكشف المنتجات وقارن التفاصيل واحفظ المفضلة.",
+    "labels": [
+      "المقاس والمواصفات",
+      "افحص الصور",
+      "قبل الطلب"
+    ],
+    "browse": "تصفح الفئة",
+    "detailTitle": "فحوص هذه الفئة",
+    "items": {
+      "shoes": {
+        "intro": "قارن جدول المقاسات والشكل والخياطة والنعال وتحقق من اللون والعلبة.",
+        "choose": "القياسات واللون والكمية والمحتويات والسعر الحالي وتوفر المخزون.",
+        "photos": "الملصقات واللون والكمية والخياطة والعيوب الظاهرة. اطلب صورًا أو قياسات إضافية عند الحاجة.",
+        "confirm": "لا. قد تضاف أجور الشحن داخل الصين والشحن الدولي ورسوم أخرى مستحقة."
+      },
+      "shirts": {
+        "intro": "قارن قياسات الصدر والكتفين والطول والطباعة الأمامية والخلفية.",
+        "choose": "القياسات واللون والكمية والمحتويات والسعر الحالي وتوفر المخزون.",
+        "photos": "الملصقات واللون والكمية والخياطة والعيوب الظاهرة. اطلب صورًا أو قياسات إضافية عند الحاجة.",
+        "confirm": "لا. قد تضاف أجور الشحن داخل الصين والشحن الدولي ورسوم أخرى مستحقة."
+      },
+      "clothing": {
+        "intro": "تحقق من القياسات وعدد القطع؛ صورة التنسيق لا تثبت المحتويات.",
+        "choose": "القياسات واللون والكمية والمحتويات والسعر الحالي وتوفر المخزون.",
+        "photos": "الملصقات واللون والكمية والخياطة والعيوب الظاهرة. اطلب صورًا أو قياسات إضافية عند الحاجة.",
+        "confirm": "لا. قد تضاف أجور الشحن داخل الصين والشحن الدولي ورسوم أخرى مستحقة."
+      },
+      "hoodies": {
+        "intro": "افحص الأكمام والغطاء والحواف والسحاب والخامة والبطانة.",
+        "choose": "القياسات واللون والكمية والمحتويات والسعر الحالي وتوفر المخزون.",
+        "photos": "الملصقات واللون والكمية والخياطة والعيوب الظاهرة. اطلب صورًا أو قياسات إضافية عند الحاجة.",
+        "confirm": "لا. قد تضاف أجور الشحن داخل الصين والشحن الدولي ورسوم أخرى مستحقة."
+      },
+      "pants": {
+        "intro": "قس الخصر والوركين والطول وتحقق من المرونة والكمية وشروط الإرجاع.",
+        "choose": "القياسات واللون والكمية والمحتويات والسعر الحالي وتوفر المخزون.",
+        "photos": "الملصقات واللون والكمية والخياطة والعيوب الظاهرة. اطلب صورًا أو قياسات إضافية عند الحاجة.",
+        "confirm": "لا. قد تضاف أجور الشحن داخل الصين والشحن الدولي ورسوم أخرى مستحقة."
+      },
+      "belts": {
+        "intro": "تحقق من الطول القابل للاستخدام والعرض والمشبك والثقوب والخامة.",
+        "choose": "القياسات واللون والكمية والمحتويات والسعر الحالي وتوفر المخزون.",
+        "photos": "الملصقات واللون والكمية والخياطة والعيوب الظاهرة. اطلب صورًا أو قياسات إضافية عند الحاجة.",
+        "confirm": "لا. قد تضاف أجور الشحن داخل الصين والشحن الدولي ورسوم أخرى مستحقة."
+      },
+      "bags": {
+        "intro": "قارن الأبعاد والجيوب والأحزمة والإغلاق والقطع المرفقة.",
+        "choose": "القياسات واللون والكمية والمحتويات والسعر الحالي وتوفر المخزون.",
+        "photos": "الملصقات واللون والكمية والخياطة والعيوب الظاهرة. اطلب صورًا أو قياسات إضافية عند الحاجة.",
+        "confirm": "لا. قد تضاف أجور الشحن داخل الصين والشحن الدولي ورسوم أخرى مستحقة."
+      },
+      "perfume": {
+        "intro": "تحقق من السعة والخيار وإمكانية شحن السوائل. الصور لا تثبت الرائحة أو الأصالة.",
+        "choose": "القياسات واللون والكمية والمحتويات والسعر الحالي وتوفر المخزون.",
+        "photos": "الملصقات واللون والكمية والخياطة والعيوب الظاهرة. اطلب صورًا أو قياسات إضافية عند الحاجة.",
+        "confirm": "لا. قد تضاف أجور الشحن داخل الصين والشحن الدولي ورسوم أخرى مستحقة."
+      },
+      "electronics": {
+        "intro": "تحقق من الطراز والمنافذ والطاقة والملحقات وقيود البطاريات.",
+        "choose": "القياسات واللون والكمية والمحتويات والسعر الحالي وتوفر المخزون.",
+        "photos": "الملصقات واللون والكمية والخياطة والعيوب الظاهرة. اطلب صورًا أو قياسات إضافية عند الحاجة.",
+        "confirm": "لا. قد تضاف أجور الشحن داخل الصين والشحن الدولي ورسوم أخرى مستحقة."
+      },
+      "other": {
+        "intro": "تحقق من الأبعاد والإغلاق والخامة؛ الصور لا تثبت الأداء أو الأصالة.",
+        "choose": "القياسات واللون والكمية والمحتويات والسعر الحالي وتوفر المخزون.",
+        "photos": "الملصقات واللون والكمية والخياطة والعيوب الظاهرة. اطلب صورًا أو قياسات إضافية عند الحاجة.",
+        "confirm": "لا. قد تضاف أجور الشحن داخل الصين والشحن الدولي ورسوم أخرى مستحقة."
+      }
+    }
+  },
+  "cs": {
+    "title": "Kategorie",
+    "intro": "Objevujte produkty, porovnávejte podrobnosti a ukládejte oblíbené.",
+    "labels": [
+      "Velikost a parametry",
+      "Zkontrolujte fotografie",
+      "Před objednáním"
+    ],
+    "browse": "Procházet kategorii",
+    "detailTitle": "Kontrola této kategorie",
+    "items": {
+      "shoes": {
+        "intro": "Porovnejte tabulku velikostí, tvar, švy a podrážky; ověřte barvu a krabici.",
+        "choose": "Rozměry, barvu, počet kusů, obsah balení a aktuální cenu a dostupnost.",
+        "photos": "Štítky, barvu, počet, švy a viditelné vady. Podle potřeby požádejte o další snímky nebo měření.",
+        "confirm": "Ne. Připočítává se případná doprava v Číně, mezinárodní přeprava a další poplatky."
+      },
+      "shirts": {
+        "intro": "Porovnejte hrudník, ramena a délku, potisk vpředu i vzadu.",
+        "choose": "Rozměry, barvu, počet kusů, obsah balení a aktuální cenu a dostupnost.",
+        "photos": "Štítky, barvu, počet, švy a viditelné vady. Podle potřeby požádejte o další snímky nebo měření.",
+        "confirm": "Ne. Připočítává se případná doprava v Číně, mezinárodní přeprava a další poplatky."
+      },
+      "clothing": {
+        "intro": "Ověřte rozměry a počet kusů; fotografie outfitu nedokládá obsah.",
+        "choose": "Rozměry, barvu, počet kusů, obsah balení a aktuální cenu a dostupnost.",
+        "photos": "Štítky, barvu, počet, švy a viditelné vady. Podle potřeby požádejte o další snímky nebo měření.",
+        "confirm": "Ne. Připočítává se případná doprava v Číně, mezinárodní přeprava a další poplatky."
+      },
+      "hoodies": {
+        "intro": "Ověřte rukávy, kapuci, lemy, zip, materiál a podšívku.",
+        "choose": "Rozměry, barvu, počet kusů, obsah balení a aktuální cenu a dostupnost.",
+        "photos": "Štítky, barvu, počet, švy a viditelné vady. Podle potřeby požádejte o další snímky nebo měření.",
+        "confirm": "Ne. Připočítává se případná doprava v Číně, mezinárodní přeprava a další poplatky."
+      },
+      "pants": {
+        "intro": "Změřte pas, boky a délku; ověřte pružnost, počet a možnosti vrácení.",
+        "choose": "Rozměry, barvu, počet kusů, obsah balení a aktuální cenu a dostupnost.",
+        "photos": "Štítky, barvu, počet, švy a viditelné vady. Podle potřeby požádejte o další snímky nebo měření.",
+        "confirm": "Ne. Připočítává se případná doprava v Číně, mezinárodní přeprava a další poplatky."
+      },
+      "belts": {
+        "intro": "Ověřte použitelnou délku, šířku, sponu, otvory a materiál.",
+        "choose": "Rozměry, barvu, počet kusů, obsah balení a aktuální cenu a dostupnost.",
+        "photos": "Štítky, barvu, počet, švy a viditelné vady. Podle potřeby požádejte o další snímky nebo měření.",
+        "confirm": "Ne. Připočítává se případná doprava v Číně, mezinárodní přeprava a další poplatky."
+      },
+      "bags": {
+        "intro": "Porovnejte rozměry, přihrádky, popruhy, zapínání a příslušenství.",
+        "choose": "Rozměry, barvu, počet kusů, obsah balení a aktuální cenu a dostupnost.",
+        "photos": "Štítky, barvu, počet, švy a viditelné vady. Podle potřeby požádejte o další snímky nebo měření.",
+        "confirm": "Ne. Připočítává se případná doprava v Číně, mezinárodní přeprava a další poplatky."
+      },
+      "perfume": {
+        "intro": "Ověřte objem, variantu a přepravu kapalin. Fotografie nedokládá vůni ani pravost.",
+        "choose": "Rozměry, barvu, počet kusů, obsah balení a aktuální cenu a dostupnost.",
+        "photos": "Štítky, barvu, počet, švy a viditelné vady. Podle potřeby požádejte o další snímky nebo měření.",
+        "confirm": "Ne. Připočítává se případná doprava v Číně, mezinárodní přeprava a další poplatky."
+      },
+      "electronics": {
+        "intro": "Ověřte model, konektory, napájení, příslušenství a omezení baterií.",
+        "choose": "Rozměry, barvu, počet kusů, obsah balení a aktuální cenu a dostupnost.",
+        "photos": "Štítky, barvu, počet, švy a viditelné vady. Podle potřeby požádejte o další snímky nebo měření.",
+        "confirm": "Ne. Připočítává se případná doprava v Číně, mezinárodní přeprava a další poplatky."
+      },
+      "other": {
+        "intro": "Ověřte rozměry, zapínání a materiál. Snímky nedokládají funkčnost ani pravost.",
+        "choose": "Rozměry, barvu, počet kusů, obsah balení a aktuální cenu a dostupnost.",
+        "photos": "Štítky, barvu, počet, švy a viditelné vady. Podle potřeby požádejte o další snímky nebo měření.",
+        "confirm": "Ne. Připočítává se případná doprava v Číně, mezinárodní přeprava a další poplatky."
+      }
+    }
+  },
+  "da": {
+    "title": "Kategorier",
+    "intro": "Udforsk produkter, sammenlign detaljer og gem favoritter.",
+    "labels": [
+      "Størrelse og specifikation",
+      "Kontrollér billeder",
+      "Før bestilling"
+    ],
+    "browse": "Se kategorien",
+    "detailTitle": "Kontrol af kategorien",
+    "items": {
+      "shoes": {
+        "intro": "Sammenlign størrelsestabel, form, syninger og såler; kontrollér farve og æske.",
+        "choose": "Sammenlign mål, farve, antal, indhold, aktuel pris og lagerstatus.",
+        "photos": "Kontrollér mærker, farve, antal, syninger og synlige fejl. Bed om flere billeder eller mål ved behov.",
+        "confirm": "Nej. Indenrigsfragt i Kina, international fragt og andre gebyrer kan komme oveni."
+      },
+      "shirts": {
+        "intro": "Sammenlign bryst, skuldre og længde samt tryk foran og bagpå.",
+        "choose": "Sammenlign mål, farve, antal, indhold, aktuel pris og lagerstatus.",
+        "photos": "Kontrollér mærker, farve, antal, syninger og synlige fejl. Bed om flere billeder eller mål ved behov.",
+        "confirm": "Nej. Indenrigsfragt i Kina, international fragt og andre gebyrer kan komme oveni."
+      },
+      "clothing": {
+        "intro": "Kontrollér mål og antal dele; et outfitfoto beviser ikke indholdet.",
+        "choose": "Sammenlign mål, farve, antal, indhold, aktuel pris og lagerstatus.",
+        "photos": "Kontrollér mærker, farve, antal, syninger og synlige fejl. Bed om flere billeder eller mål ved behov.",
+        "confirm": "Nej. Indenrigsfragt i Kina, international fragt og andre gebyrer kan komme oveni."
+      },
+      "hoodies": {
+        "intro": "Kontrollér ærmer, hætte, manchetter, lynlås, stof og for.",
+        "choose": "Sammenlign mål, farve, antal, indhold, aktuel pris og lagerstatus.",
+        "photos": "Kontrollér mærker, farve, antal, syninger og synlige fejl. Bed om flere billeder eller mål ved behov.",
+        "confirm": "Nej. Indenrigsfragt i Kina, international fragt og andre gebyrer kan komme oveni."
+      },
+      "pants": {
+        "intro": "Mål talje, hofter og længde; kontrollér elasticitet, antal og returvilkår.",
+        "choose": "Sammenlign mål, farve, antal, indhold, aktuel pris og lagerstatus.",
+        "photos": "Kontrollér mærker, farve, antal, syninger og synlige fejl. Bed om flere billeder eller mål ved behov.",
+        "confirm": "Nej. Indenrigsfragt i Kina, international fragt og andre gebyrer kan komme oveni."
+      },
+      "belts": {
+        "intro": "Kontrollér brugbar længde, bredde, spænde, huller og materiale.",
+        "choose": "Sammenlign mål, farve, antal, indhold, aktuel pris og lagerstatus.",
+        "photos": "Kontrollér mærker, farve, antal, syninger og synlige fejl. Bed om flere billeder eller mål ved behov.",
+        "confirm": "Nej. Indenrigsfragt i Kina, international fragt og andre gebyrer kan komme oveni."
+      },
+      "bags": {
+        "intro": "Sammenlign mål, rum, remme, lukning og medfølgende dele.",
+        "choose": "Sammenlign mål, farve, antal, indhold, aktuel pris og lagerstatus.",
+        "photos": "Kontrollér mærker, farve, antal, syninger og synlige fejl. Bed om flere billeder eller mål ved behov.",
+        "confirm": "Nej. Indenrigsfragt i Kina, international fragt og andre gebyrer kan komme oveni."
+      },
+      "perfume": {
+        "intro": "Kontrollér volumen, variant og regler for væsker. Billeder beviser ikke duft eller ægthed.",
+        "choose": "Sammenlign mål, farve, antal, indhold, aktuel pris og lagerstatus.",
+        "photos": "Kontrollér mærker, farve, antal, syninger og synlige fejl. Bed om flere billeder eller mål ved behov.",
+        "confirm": "Nej. Indenrigsfragt i Kina, international fragt og andre gebyrer kan komme oveni."
+      },
+      "electronics": {
+        "intro": "Kontrollér model, stik, strøm og tilbehør samt batteribegrænsninger.",
+        "choose": "Sammenlign mål, farve, antal, indhold, aktuel pris og lagerstatus.",
+        "photos": "Kontrollér mærker, farve, antal, syninger og synlige fejl. Bed om flere billeder eller mål ved behov.",
+        "confirm": "Nej. Indenrigsfragt i Kina, international fragt og andre gebyrer kan komme oveni."
+      },
+      "other": {
+        "intro": "Kontrollér mål, lukninger og materialer; billeder beviser ikke funktion eller ægthed.",
+        "choose": "Sammenlign mål, farve, antal, indhold, aktuel pris og lagerstatus.",
+        "photos": "Kontrollér mærker, farve, antal, syninger og synlige fejl. Bed om flere billeder eller mål ved behov.",
+        "confirm": "Nej. Indenrigsfragt i Kina, international fragt og andre gebyrer kan komme oveni."
+      }
+    }
+  },
+  "el": {
+    "title": "Κατηγορίες",
+    "intro": "Ανακαλύψτε προϊόντα, συγκρίνετε λεπτομέρειες και αποθηκεύστε αγαπημένα.",
+    "labels": [
+      "Μέγεθος και προδιαγραφές",
+      "Ελέγξτε τις φωτογραφίες",
+      "Πριν παραγγείλετε"
+    ],
+    "browse": "Περιήγηση κατηγορίας",
+    "detailTitle": "Έλεγχοι κατηγορίας",
+    "items": {
+      "shoes": {
+        "intro": "Συγκρίνετε μεγεθολόγιο, σχήμα, ραφές και σόλες· ελέγξτε χρώμα και κουτί.",
+        "choose": "Διαστάσεις, χρώμα, ποσότητα, περιεχόμενο, τρέχουσα τιμή και διαθεσιμότητα.",
+        "photos": "Ετικέτες, χρώμα, ποσότητα, ραφές και ορατές ατέλειες. Ζητήστε επιπλέον φωτογραφίες ή μετρήσεις εάν χρειάζονται.",
+        "confirm": "Όχι. Εσωτερική μεταφορά στην Κίνα, διεθνής αποστολή και άλλες χρεώσεις μπορεί να προστεθούν."
+      },
+      "shirts": {
+        "intro": "Συγκρίνετε στήθος, ώμους, μήκος και εκτυπώσεις εμπρός και πίσω.",
+        "choose": "Διαστάσεις, χρώμα, ποσότητα, περιεχόμενο, τρέχουσα τιμή και διαθεσιμότητα.",
+        "photos": "Ετικέτες, χρώμα, ποσότητα, ραφές και ορατές ατέλειες. Ζητήστε επιπλέον φωτογραφίες ή μετρήσεις εάν χρειάζονται.",
+        "confirm": "Όχι. Εσωτερική μεταφορά στην Κίνα, διεθνής αποστολή και άλλες χρεώσεις μπορεί να προστεθούν."
+      },
+      "clothing": {
+        "intro": "Ελέγξτε διαστάσεις και αριθμό τεμαχίων· εικόνα συνόλου δεν αποδεικνύει το περιεχόμενο.",
+        "choose": "Διαστάσεις, χρώμα, ποσότητα, περιεχόμενο, τρέχουσα τιμή και διαθεσιμότητα.",
+        "photos": "Ετικέτες, χρώμα, ποσότητα, ραφές και ορατές ατέλειες. Ζητήστε επιπλέον φωτογραφίες ή μετρήσεις εάν χρειάζονται.",
+        "confirm": "Όχι. Εσωτερική μεταφορά στην Κίνα, διεθνής αποστολή και άλλες χρεώσεις μπορεί να προστεθούν."
+      },
+      "hoodies": {
+        "intro": "Ελέγξτε μανίκια, κουκούλα, τελειώματα, φερμουάρ, ύφασμα και επένδυση.",
+        "choose": "Διαστάσεις, χρώμα, ποσότητα, περιεχόμενο, τρέχουσα τιμή και διαθεσιμότητα.",
+        "photos": "Ετικέτες, χρώμα, ποσότητα, ραφές και ορατές ατέλειες. Ζητήστε επιπλέον φωτογραφίες ή μετρήσεις εάν χρειάζονται.",
+        "confirm": "Όχι. Εσωτερική μεταφορά στην Κίνα, διεθνής αποστολή και άλλες χρεώσεις μπορεί να προστεθούν."
+      },
+      "pants": {
+        "intro": "Μετρήστε μέση, γοφούς και μήκος· ελέγξτε ελαστικότητα, ποσότητα και επιστροφές.",
+        "choose": "Διαστάσεις, χρώμα, ποσότητα, περιεχόμενο, τρέχουσα τιμή και διαθεσιμότητα.",
+        "photos": "Ετικέτες, χρώμα, ποσότητα, ραφές και ορατές ατέλειες. Ζητήστε επιπλέον φωτογραφίες ή μετρήσεις εάν χρειάζονται.",
+        "confirm": "Όχι. Εσωτερική μεταφορά στην Κίνα, διεθνής αποστολή και άλλες χρεώσεις μπορεί να προστεθούν."
+      },
+      "belts": {
+        "intro": "Ελέγξτε ωφέλιμο μήκος, πλάτος, αγκράφα, οπές και υλικό.",
+        "choose": "Διαστάσεις, χρώμα, ποσότητα, περιεχόμενο, τρέχουσα τιμή και διαθεσιμότητα.",
+        "photos": "Ετικέτες, χρώμα, ποσότητα, ραφές και ορατές ατέλειες. Ζητήστε επιπλέον φωτογραφίες ή μετρήσεις εάν χρειάζονται.",
+        "confirm": "Όχι. Εσωτερική μεταφορά στην Κίνα, διεθνής αποστολή και άλλες χρεώσεις μπορεί να προστεθούν."
+      },
+      "bags": {
+        "intro": "Συγκρίνετε διαστάσεις, θήκες, ιμάντες, κλεισίματα και αξεσουάρ.",
+        "choose": "Διαστάσεις, χρώμα, ποσότητα, περιεχόμενο, τρέχουσα τιμή και διαθεσιμότητα.",
+        "photos": "Ετικέτες, χρώμα, ποσότητα, ραφές και ορατές ατέλειες. Ζητήστε επιπλέον φωτογραφίες ή μετρήσεις εάν χρειάζονται.",
+        "confirm": "Όχι. Εσωτερική μεταφορά στην Κίνα, διεθνής αποστολή και άλλες χρεώσεις μπορεί να προστεθούν."
+      },
+      "perfume": {
+        "intro": "Ελέγξτε όγκο, έκδοση και αποστολή υγρών. Φωτογραφίες δεν αποδεικνύουν άρωμα ή γνησιότητα.",
+        "choose": "Διαστάσεις, χρώμα, ποσότητα, περιεχόμενο, τρέχουσα τιμή και διαθεσιμότητα.",
+        "photos": "Ετικέτες, χρώμα, ποσότητα, ραφές και ορατές ατέλειες. Ζητήστε επιπλέον φωτογραφίες ή μετρήσεις εάν χρειάζονται.",
+        "confirm": "Όχι. Εσωτερική μεταφορά στην Κίνα, διεθνής αποστολή και άλλες χρεώσεις μπορεί να προστεθούν."
+      },
+      "electronics": {
+        "intro": "Ελέγξτε μοντέλο, θύρες, τροφοδοσία, αξεσουάρ και περιορισμούς μπαταριών.",
+        "choose": "Διαστάσεις, χρώμα, ποσότητα, περιεχόμενο, τρέχουσα τιμή και διαθεσιμότητα.",
+        "photos": "Ετικέτες, χρώμα, ποσότητα, ραφές και ορατές ατέλειες. Ζητήστε επιπλέον φωτογραφίες ή μετρήσεις εάν χρειάζονται.",
+        "confirm": "Όχι. Εσωτερική μεταφορά στην Κίνα, διεθνής αποστολή και άλλες χρεώσεις μπορεί να προστεθούν."
+      },
+      "other": {
+        "intro": "Ελέγξτε μέγεθος, κλείσιμο και υλικό. Εικόνες δεν αποδεικνύουν απόδοση ή γνησιότητα.",
+        "choose": "Διαστάσεις, χρώμα, ποσότητα, περιεχόμενο, τρέχουσα τιμή και διαθεσιμότητα.",
+        "photos": "Ετικέτες, χρώμα, ποσότητα, ραφές και ορατές ατέλειες. Ζητήστε επιπλέον φωτογραφίες ή μετρήσεις εάν χρειάζονται.",
+        "confirm": "Όχι. Εσωτερική μεταφορά στην Κίνα, διεθνής αποστολή και άλλες χρεώσεις μπορεί να προστεθούν."
+      }
+    }
+  },
+  "fi": {
+    "title": "Kategoriat",
+    "intro": "Tutustu tuotteisiin, vertaa tietoja ja tallenna suosikkisi.",
+    "labels": [
+      "Koko ja ominaisuudet",
+      "Tarkista kuvat",
+      "Ennen tilaamista"
+    ],
+    "browse": "Selaa kategoriaa",
+    "detailTitle": "Kategorian tarkistuslista",
+    "items": {
+      "shoes": {
+        "intro": "Vertaa kokotaulukkoa, muotoa, saumoja ja pohjia; tarkista väri ja pakkaus.",
+        "choose": "Vertaa mittoja, väriä, määrää, sisältöä sekä ajantasaista hintaa ja saatavuutta.",
+        "photos": "Merkinnät, väri, määrä, saumat ja näkyvät virheet. Pyydä tarvittaessa lisäkuvia tai mittoja.",
+        "confirm": "Ei. Kiinan sisäinen toimitus, kansainvälinen kuljetus ja muut maksut voivat tulla lisäksi."
+      },
+      "shirts": {
+        "intro": "Vertaa rinnan, hartioiden ja pituuden mittoja sekä painatuksia molemmin puolin.",
+        "choose": "Vertaa mittoja, väriä, määrää, sisältöä sekä ajantasaista hintaa ja saatavuutta.",
+        "photos": "Merkinnät, väri, määrä, saumat ja näkyvät virheet. Pyydä tarvittaessa lisäkuvia tai mittoja.",
+        "confirm": "Ei. Kiinan sisäinen toimitus, kansainvälinen kuljetus ja muut maksut voivat tulla lisäksi."
+      },
+      "clothing": {
+        "intro": "Tarkista mitat ja vaatekappaleiden määrä; asukuva ei todista sisältöä.",
+        "choose": "Vertaa mittoja, väriä, määrää, sisältöä sekä ajantasaista hintaa ja saatavuutta.",
+        "photos": "Merkinnät, väri, määrä, saumat ja näkyvät virheet. Pyydä tarvittaessa lisäkuvia tai mittoja.",
+        "confirm": "Ei. Kiinan sisäinen toimitus, kansainvälinen kuljetus ja muut maksut voivat tulla lisäksi."
+      },
+      "hoodies": {
+        "intro": "Tarkista hihat, huppu, resorit, vetoketju, kangas ja vuori.",
+        "choose": "Vertaa mittoja, väriä, määrää, sisältöä sekä ajantasaista hintaa ja saatavuutta.",
+        "photos": "Merkinnät, väri, määrä, saumat ja näkyvät virheet. Pyydä tarvittaessa lisäkuvia tai mittoja.",
+        "confirm": "Ei. Kiinan sisäinen toimitus, kansainvälinen kuljetus ja muut maksut voivat tulla lisäksi."
+      },
+      "pants": {
+        "intro": "Mittaa vyötärö, lantio ja pituus; tarkista jousto, määrä ja palautusehdot.",
+        "choose": "Vertaa mittoja, väriä, määrää, sisältöä sekä ajantasaista hintaa ja saatavuutta.",
+        "photos": "Merkinnät, väri, määrä, saumat ja näkyvät virheet. Pyydä tarvittaessa lisäkuvia tai mittoja.",
+        "confirm": "Ei. Kiinan sisäinen toimitus, kansainvälinen kuljetus ja muut maksut voivat tulla lisäksi."
+      },
+      "belts": {
+        "intro": "Tarkista käyttökelpoinen pituus, leveys, solki, reiät ja materiaali.",
+        "choose": "Vertaa mittoja, väriä, määrää, sisältöä sekä ajantasaista hintaa ja saatavuutta.",
+        "photos": "Merkinnät, väri, määrä, saumat ja näkyvät virheet. Pyydä tarvittaessa lisäkuvia tai mittoja.",
+        "confirm": "Ei. Kiinan sisäinen toimitus, kansainvälinen kuljetus ja muut maksut voivat tulla lisäksi."
+      },
+      "bags": {
+        "intro": "Vertaa mittoja, lokeroita, hihnoja, sulkimia ja mukana tulevia osia.",
+        "choose": "Vertaa mittoja, väriä, määrää, sisältöä sekä ajantasaista hintaa ja saatavuutta.",
+        "photos": "Merkinnät, väri, määrä, saumat ja näkyvät virheet. Pyydä tarvittaessa lisäkuvia tai mittoja.",
+        "confirm": "Ei. Kiinan sisäinen toimitus, kansainvälinen kuljetus ja muut maksut voivat tulla lisäksi."
+      },
+      "perfume": {
+        "intro": "Tarkista tilavuus, versio ja nesteiden kuljetus. Kuvat eivät todista tuoksua tai aitoutta.",
+        "choose": "Vertaa mittoja, väriä, määrää, sisältöä sekä ajantasaista hintaa ja saatavuutta.",
+        "photos": "Merkinnät, väri, määrä, saumat ja näkyvät virheet. Pyydä tarvittaessa lisäkuvia tai mittoja.",
+        "confirm": "Ei. Kiinan sisäinen toimitus, kansainvälinen kuljetus ja muut maksut voivat tulla lisäksi."
+      },
+      "electronics": {
+        "intro": "Tarkista malli, liitännät, virransyöttö, tarvikkeet ja akkurajoitukset.",
+        "choose": "Vertaa mittoja, väriä, määrää, sisältöä sekä ajantasaista hintaa ja saatavuutta.",
+        "photos": "Merkinnät, väri, määrä, saumat ja näkyvät virheet. Pyydä tarvittaessa lisäkuvia tai mittoja.",
+        "confirm": "Ei. Kiinan sisäinen toimitus, kansainvälinen kuljetus ja muut maksut voivat tulla lisäksi."
+      },
+      "other": {
+        "intro": "Tarkista mitat, sulkimet ja materiaalit. Kuvat eivät todista suorituskykyä tai aitoutta.",
+        "choose": "Vertaa mittoja, väriä, määrää, sisältöä sekä ajantasaista hintaa ja saatavuutta.",
+        "photos": "Merkinnät, väri, määrä, saumat ja näkyvät virheet. Pyydä tarvittaessa lisäkuvia tai mittoja.",
+        "confirm": "Ei. Kiinan sisäinen toimitus, kansainvälinen kuljetus ja muut maksut voivat tulla lisäksi."
+      }
+    }
+  },
+  "hu": {
+    "title": "Kategóriák",
+    "intro": "Fedezd fel a termékeket, hasonlítsd össze a részleteket és mentsd a kedvenceket.",
+    "labels": [
+      "Méret és jellemzők",
+      "Képek ellenőrzése",
+      "Rendelés előtt"
+    ],
+    "browse": "Kategória böngészése",
+    "detailTitle": "A kategória ellenőrzése",
+    "items": {
+      "shoes": {
+        "intro": "Hasonlítsd össze a mérettáblát, formát, varrást és talpat; ellenőrizd a színt és dobozt.",
+        "choose": "Méretek, szín, mennyiség, csomagtartalom, aktuális ár és készlet.",
+        "photos": "Címkéket, színt, mennyiséget, varrásokat és látható hibákat. Kérj további képet vagy mérést, ha szükséges.",
+        "confirm": "Nem. Kínai belföldi és nemzetközi szállítás, valamint más díjak is felmerülhetnek."
+      },
+      "shirts": {
+        "intro": "Ellenőrizd a mell-, váll- és hosszméretet, az elülső és hátsó mintát.",
+        "choose": "Méretek, szín, mennyiség, csomagtartalom, aktuális ár és készlet.",
+        "photos": "Címkéket, színt, mennyiséget, varrásokat és látható hibákat. Kérj további képet vagy mérést, ha szükséges.",
+        "confirm": "Nem. Kínai belföldi és nemzetközi szállítás, valamint más díjak is felmerülhetnek."
+      },
+      "clothing": {
+        "intro": "Ellenőrizd a méreteket és darabszámot; az összeállítás képe nem bizonyítja a tartalmat.",
+        "choose": "Méretek, szín, mennyiség, csomagtartalom, aktuális ár és készlet.",
+        "photos": "Címkéket, színt, mennyiséget, varrásokat és látható hibákat. Kérj további képet vagy mérést, ha szükséges.",
+        "confirm": "Nem. Kínai belföldi és nemzetközi szállítás, valamint más díjak is felmerülhetnek."
+      },
+      "hoodies": {
+        "intro": "Vizsgáld az ujjat, kapucnit, passzét, cipzárt, anyagot és bélést.",
+        "choose": "Méretek, szín, mennyiség, csomagtartalom, aktuális ár és készlet.",
+        "photos": "Címkéket, színt, mennyiséget, varrásokat és látható hibákat. Kérj további képet vagy mérést, ha szükséges.",
+        "confirm": "Nem. Kínai belföldi és nemzetközi szállítás, valamint más díjak is felmerülhetnek."
+      },
+      "pants": {
+        "intro": "Mérj derekat, csípőt és hosszt; ellenőrizd a rugalmasságot, mennyiséget és visszaküldést.",
+        "choose": "Méretek, szín, mennyiség, csomagtartalom, aktuális ár és készlet.",
+        "photos": "Címkéket, színt, mennyiséget, varrásokat és látható hibákat. Kérj további képet vagy mérést, ha szükséges.",
+        "confirm": "Nem. Kínai belföldi és nemzetközi szállítás, valamint más díjak is felmerülhetnek."
+      },
+      "belts": {
+        "intro": "Ellenőrizd a használható hosszt, szélességet, csatot, lyukakat és anyagot.",
+        "choose": "Méretek, szín, mennyiség, csomagtartalom, aktuális ár és készlet.",
+        "photos": "Címkéket, színt, mennyiséget, varrásokat és látható hibákat. Kérj további képet vagy mérést, ha szükséges.",
+        "confirm": "Nem. Kínai belföldi és nemzetközi szállítás, valamint más díjak is felmerülhetnek."
+      },
+      "bags": {
+        "intro": "Hasonlítsd össze a méreteket, rekeszeket, pántokat, zárakat és tartozékokat.",
+        "choose": "Méretek, szín, mennyiség, csomagtartalom, aktuális ár és készlet.",
+        "photos": "Címkéket, színt, mennyiséget, varrásokat és látható hibákat. Kérj további képet vagy mérést, ha szükséges.",
+        "confirm": "Nem. Kínai belföldi és nemzetközi szállítás, valamint más díjak is felmerülhetnek."
+      },
+      "perfume": {
+        "intro": "Ellenőrizd a térfogatot, változatot és folyadékszállítást. Kép nem bizonyít illatot vagy eredetiséget.",
+        "choose": "Méretek, szín, mennyiség, csomagtartalom, aktuális ár és készlet.",
+        "photos": "Címkéket, színt, mennyiséget, varrásokat és látható hibákat. Kérj további képet vagy mérést, ha szükséges.",
+        "confirm": "Nem. Kínai belföldi és nemzetközi szállítás, valamint más díjak is felmerülhetnek."
+      },
+      "electronics": {
+        "intro": "Ellenőrizd a modellt, csatlakozókat, tápellátást, tartozékokat és akkumulátorkorlátozásokat.",
+        "choose": "Méretek, szín, mennyiség, csomagtartalom, aktuális ár és készlet.",
+        "photos": "Címkéket, színt, mennyiséget, varrásokat és látható hibákat. Kérj további képet vagy mérést, ha szükséges.",
+        "confirm": "Nem. Kínai belföldi és nemzetközi szállítás, valamint más díjak is felmerülhetnek."
+      },
+      "other": {
+        "intro": "Ellenőrizd a méreteket, zárakat és anyagot; kép nem bizonyít teljesítményt vagy eredetiséget.",
+        "choose": "Méretek, szín, mennyiség, csomagtartalom, aktuális ár és készlet.",
+        "photos": "Címkéket, színt, mennyiséget, varrásokat és látható hibákat. Kérj további képet vagy mérést, ha szükséges.",
+        "confirm": "Nem. Kínai belföldi és nemzetközi szállítás, valamint más díjak is felmerülhetnek."
+      }
+    }
+  },
+  "it": {
+    "title": "Categorie",
+    "intro": "Esplora i prodotti, confronta i dettagli e salva i tuoi preferiti.",
+    "labels": [
+      "Taglia e specifiche",
+      "Controlla le fotografie",
+      "Prima di ordinare"
+    ],
+    "browse": "Esplora la categoria",
+    "detailTitle": "Controlli per questa categoria",
+    "items": {
+      "shoes": {
+        "intro": "Confronta tabella taglie, forma, cuciture e suole; verifica colore e confezione.",
+        "choose": "Confronta misure, colore, quantità e contenuto della confezione; verifica prezzo e disponibilità aggiornati.",
+        "photos": "Verifica etichette, colore, quantità, cuciture e difetti visibili. Se necessario richiedi misure o foto aggiuntive.",
+        "confirm": "No. Al prezzo si possono aggiungere trasporto interno cinese, spedizione internazionale e altri oneri applicabili."
+      },
+      "shirts": {
+        "intro": "Confronta torace, spalle e lunghezza; controlla stampe anteriori e posteriori.",
+        "choose": "Confronta misure, colore, quantità e contenuto della confezione; verifica prezzo e disponibilità aggiornati.",
+        "photos": "Verifica etichette, colore, quantità, cuciture e difetti visibili. Se necessario richiedi misure o foto aggiuntive.",
+        "confirm": "No. Al prezzo si possono aggiungere trasporto interno cinese, spedizione internazionale e altri oneri applicabili."
+      },
+      "clothing": {
+        "intro": "Verifica misure e numero di capi; foto di un completo non provano cosa sia incluso.",
+        "choose": "Confronta misure, colore, quantità e contenuto della confezione; verifica prezzo e disponibilità aggiornati.",
+        "photos": "Verifica etichette, colore, quantità, cuciture e difetti visibili. Se necessario richiedi misure o foto aggiuntive.",
+        "confirm": "No. Al prezzo si possono aggiungere trasporto interno cinese, spedizione internazionale e altri oneri applicabili."
+      },
+      "hoodies": {
+        "intro": "Controlla torace, maniche, cappuccio, polsini e zip; conferma tessuto e fodera.",
+        "choose": "Confronta misure, colore, quantità e contenuto della confezione; verifica prezzo e disponibilità aggiornati.",
+        "photos": "Verifica etichette, colore, quantità, cuciture e difetti visibili. Se necessario richiedi misure o foto aggiuntive.",
+        "confirm": "No. Al prezzo si possono aggiungere trasporto interno cinese, spedizione internazionale e altri oneri applicabili."
+      },
+      "pants": {
+        "intro": "Misura vita, fianchi e lunghezza; verifica elasticità, quantità e condizioni di reso.",
+        "choose": "Confronta misure, colore, quantità e contenuto della confezione; verifica prezzo e disponibilità aggiornati.",
+        "photos": "Verifica etichette, colore, quantità, cuciture e difetti visibili. Se necessario richiedi misure o foto aggiuntive.",
+        "confirm": "No. Al prezzo si possono aggiungere trasporto interno cinese, spedizione internazionale e altri oneri applicabili."
+      },
+      "belts": {
+        "intro": "Controlla lunghezza utilizzabile, larghezza, fibbia e fori; conferma materiale.",
+        "choose": "Confronta misure, colore, quantità e contenuto della confezione; verifica prezzo e disponibilità aggiornati.",
+        "photos": "Verifica etichette, colore, quantità, cuciture e difetti visibili. Se necessario richiedi misure o foto aggiuntive.",
+        "confirm": "No. Al prezzo si possono aggiungere trasporto interno cinese, spedizione internazionale e altri oneri applicabili."
+      },
+      "bags": {
+        "intro": "Confronta dimensioni, scomparti, tracolle, chiusure e contenuto incluso.",
+        "choose": "Confronta misure, colore, quantità e contenuto della confezione; verifica prezzo e disponibilità aggiornati.",
+        "photos": "Verifica etichette, colore, quantità, cuciture e difetti visibili. Se necessario richiedi misure o foto aggiuntive.",
+        "confirm": "No. Al prezzo si possono aggiungere trasporto interno cinese, spedizione internazionale e altri oneri applicabili."
+      },
+      "perfume": {
+        "intro": "Verifica volume e versione; foto non provano autenticità o profumo. Conferma la spedibilità dei liquidi.",
+        "choose": "Confronta misure, colore, quantità e contenuto della confezione; verifica prezzo e disponibilità aggiornati.",
+        "photos": "Verifica etichette, colore, quantità, cuciture e difetti visibili. Se necessario richiedi misure o foto aggiuntive.",
+        "confirm": "No. Al prezzo si possono aggiungere trasporto interno cinese, spedizione internazionale e altri oneri applicabili."
+      },
+      "electronics": {
+        "intro": "Verifica modello, porte, alimentazione e accessori; controlla restrizioni sulle batterie.",
+        "choose": "Confronta misure, colore, quantità e contenuto della confezione; verifica prezzo e disponibilità aggiornati.",
+        "photos": "Verifica etichette, colore, quantità, cuciture e difetti visibili. Se necessario richiedi misure o foto aggiuntive.",
+        "confirm": "No. Al prezzo si possono aggiungere trasporto interno cinese, spedizione internazionale e altri oneri applicabili."
+      },
+      "other": {
+        "intro": "Controlla misure, chiusure e materiali. Le immagini non certificano prestazioni o autenticità.",
+        "choose": "Confronta misure, colore, quantità e contenuto della confezione; verifica prezzo e disponibilità aggiornati.",
+        "photos": "Verifica etichette, colore, quantità, cuciture e difetti visibili. Se necessario richiedi misure o foto aggiuntive.",
+        "confirm": "No. Al prezzo si possono aggiungere trasporto interno cinese, spedizione internazionale e altri oneri applicabili."
+      }
+    }
+  },
+  "ja": {
+    "title": "カテゴリー",
+    "intro": "商品を探し、詳細を比較してお気に入りを保存しましょう。",
+    "labels": [
+      "サイズ・仕様",
+      "写真を確認",
+      "注文前の確認"
+    ],
+    "browse": "このカテゴリーを見る",
+    "detailTitle": "カテゴリー別の確認事項",
+    "items": {
+      "shoes": {
+        "intro": "サイズ表、形、縫製、靴底を比較し、色と箱の有無を確認します。",
+        "choose": "実寸、色、数量、同梱品、最新の価格と在庫を確認してください。",
+        "photos": "ラベル、色、数量、縫製、目に見える不具合を確認します。必要なら追加撮影や採寸を依頼してください。",
+        "confirm": "いいえ。中国国内送料、国際送料、その他の対象費用が追加される場合があります。"
+      },
+      "shirts": {
+        "intro": "身幅、肩幅、着丈と、前後のプリントを確認します。",
+        "choose": "実寸、色、数量、同梱品、最新の価格と在庫を確認してください。",
+        "photos": "ラベル、色、数量、縫製、目に見える不具合を確認します。必要なら追加撮影や採寸を依頼してください。",
+        "confirm": "いいえ。中国国内送料、国際送料、その他の対象費用が追加される場合があります。"
+      },
+      "clothing": {
+        "intro": "実寸と点数を確認します。着用例の写真だけで同梱品を判断しないでください。",
+        "choose": "実寸、色、数量、同梱品、最新の価格と在庫を確認してください。",
+        "photos": "ラベル、色、数量、縫製、目に見える不具合を確認します。必要なら追加撮影や採寸を依頼してください。",
+        "confirm": "いいえ。中国国内送料、国際送料、その他の対象費用が追加される場合があります。"
+      },
+      "hoodies": {
+        "intro": "袖、フード、裾、ファスナー、素材と裏地を確認します。",
+        "choose": "実寸、色、数量、同梱品、最新の価格と在庫を確認してください。",
+        "photos": "ラベル、色、数量、縫製、目に見える不具合を確認します。必要なら追加撮影や採寸を依頼してください。",
+        "confirm": "いいえ。中国国内送料、国際送料、その他の対象費用が追加される場合があります。"
+      },
+      "pants": {
+        "intro": "ウエスト、ヒップ、丈を測り、伸縮性、数量と返品条件を確認します。",
+        "choose": "実寸、色、数量、同梱品、最新の価格と在庫を確認してください。",
+        "photos": "ラベル、色、数量、縫製、目に見える不具合を確認します。必要なら追加撮影や採寸を依頼してください。",
+        "confirm": "いいえ。中国国内送料、国際送料、その他の対象費用が追加される場合があります。"
+      },
+      "belts": {
+        "intro": "使用可能な長さ、幅、バックル、穴と素材を確認します。",
+        "choose": "実寸、色、数量、同梱品、最新の価格と在庫を確認してください。",
+        "photos": "ラベル、色、数量、縫製、目に見える不具合を確認します。必要なら追加撮影や採寸を依頼してください。",
+        "confirm": "いいえ。中国国内送料、国際送料、その他の対象費用が追加される場合があります。"
+      },
+      "bags": {
+        "intro": "寸法、収納部、ストラップ、開閉部と付属品を比較します。",
+        "choose": "実寸、色、数量、同梱品、最新の価格と在庫を確認してください。",
+        "photos": "ラベル、色、数量、縫製、目に見える不具合を確認します。必要なら追加撮影や採寸を依頼してください。",
+        "confirm": "いいえ。中国国内送料、国際送料、その他の対象費用が追加される場合があります。"
+      },
+      "perfume": {
+        "intro": "容量、仕様と液体の配送可否を確認します。写真では香りや真贋は判断できません。",
+        "choose": "実寸、色、数量、同梱品、最新の価格と在庫を確認してください。",
+        "photos": "ラベル、色、数量、縫製、目に見える不具合を確認します。必要なら追加撮影や採寸を依頼してください。",
+        "confirm": "いいえ。中国国内送料、国際送料、その他の対象費用が追加される場合があります。"
+      },
+      "electronics": {
+        "intro": "型番、接続端子、電源、付属品と電池の配送制限を確認します。",
+        "choose": "実寸、色、数量、同梱品、最新の価格と在庫を確認してください。",
+        "photos": "ラベル、色、数量、縫製、目に見える不具合を確認します。必要なら追加撮影や採寸を依頼してください。",
+        "confirm": "いいえ。中国国内送料、国際送料、その他の対象費用が追加される場合があります。"
+      },
+      "other": {
+        "intro": "寸法、留め具と素材を確認します。写真は性能や真贋の証明にはなりません。",
+        "choose": "実寸、色、数量、同梱品、最新の価格と在庫を確認してください。",
+        "photos": "ラベル、色、数量、縫製、目に見える不具合を確認します。必要なら追加撮影や採寸を依頼してください。",
+        "confirm": "いいえ。中国国内送料、国際送料、その他の対象費用が追加される場合があります。"
+      }
+    }
+  },
+  "ko": {
+    "title": "카테고리",
+    "intro": "상품을 둘러보고 상세 정보를 비교하며 마음에 드는 상품을 저장하세요.",
+    "labels": [
+      "사이즈·사양",
+      "사진 확인",
+      "주문 전 확인"
+    ],
+    "browse": "카테고리 둘러보기",
+    "detailTitle": "카테고리 확인 사항",
+    "items": {
+      "shoes": {
+        "intro": "사이즈표, 형태, 봉제와 밑창을 비교하고 색상과 상자 포함 여부를 확인하세요.",
+        "choose": "실측, 색상, 수량, 구성품, 최신 가격과 재고를 확인하세요.",
+        "photos": "라벨, 색상, 수량, 봉제와 눈에 보이는 결함을 확인합니다. 필요하면 추가 촬영이나 실측을 요청하세요.",
+        "confirm": "아니요. 중국 내 배송비, 국제 배송비와 기타 해당 비용이 추가될 수 있습니다."
+      },
+      "shirts": {
+        "intro": "가슴, 어깨, 길이와 앞뒤 프린트를 비교하세요.",
+        "choose": "실측, 색상, 수량, 구성품, 최신 가격과 재고를 확인하세요.",
+        "photos": "라벨, 색상, 수량, 봉제와 눈에 보이는 결함을 확인합니다. 필요하면 추가 촬영이나 실측을 요청하세요.",
+        "confirm": "아니요. 중국 내 배송비, 국제 배송비와 기타 해당 비용이 추가될 수 있습니다."
+      },
+      "clothing": {
+        "intro": "실측과 구성 수량을 확인하세요. 착장 사진만으로 구성품을 판단하지 마세요.",
+        "choose": "실측, 색상, 수량, 구성품, 최신 가격과 재고를 확인하세요.",
+        "photos": "라벨, 색상, 수량, 봉제와 눈에 보이는 결함을 확인합니다. 필요하면 추가 촬영이나 실측을 요청하세요.",
+        "confirm": "아니요. 중국 내 배송비, 국제 배송비와 기타 해당 비용이 추가될 수 있습니다."
+      },
+      "hoodies": {
+        "intro": "소매, 후드, 시보리, 지퍼, 원단과 안감을 확인하세요.",
+        "choose": "실측, 색상, 수량, 구성품, 최신 가격과 재고를 확인하세요.",
+        "photos": "라벨, 색상, 수량, 봉제와 눈에 보이는 결함을 확인합니다. 필요하면 추가 촬영이나 실측을 요청하세요.",
+        "confirm": "아니요. 중국 내 배송비, 국제 배송비와 기타 해당 비용이 추가될 수 있습니다."
+      },
+      "pants": {
+        "intro": "허리, 엉덩이와 길이를 재고 신축성, 수량과 반품 조건을 확인하세요.",
+        "choose": "실측, 색상, 수량, 구성품, 최신 가격과 재고를 확인하세요.",
+        "photos": "라벨, 색상, 수량, 봉제와 눈에 보이는 결함을 확인합니다. 필요하면 추가 촬영이나 실측을 요청하세요.",
+        "confirm": "아니요. 중국 내 배송비, 국제 배송비와 기타 해당 비용이 추가될 수 있습니다."
+      },
+      "belts": {
+        "intro": "사용 가능한 길이, 너비, 버클, 구멍과 소재를 확인하세요.",
+        "choose": "실측, 색상, 수량, 구성품, 최신 가격과 재고를 확인하세요.",
+        "photos": "라벨, 색상, 수량, 봉제와 눈에 보이는 결함을 확인합니다. 필요하면 추가 촬영이나 실측을 요청하세요.",
+        "confirm": "아니요. 중국 내 배송비, 국제 배송비와 기타 해당 비용이 추가될 수 있습니다."
+      },
+      "bags": {
+        "intro": "크기, 수납공간, 스트랩, 잠금장치와 구성품을 비교하세요.",
+        "choose": "실측, 색상, 수량, 구성품, 최신 가격과 재고를 확인하세요.",
+        "photos": "라벨, 색상, 수량, 봉제와 눈에 보이는 결함을 확인합니다. 필요하면 추가 촬영이나 실측을 요청하세요.",
+        "confirm": "아니요. 중국 내 배송비, 국제 배송비와 기타 해당 비용이 추가될 수 있습니다."
+      },
+      "perfume": {
+        "intro": "용량, 옵션과 액체 배송 가능 여부를 확인하세요. 사진은 향이나 정품 여부를 증명하지 않습니다.",
+        "choose": "실측, 색상, 수량, 구성품, 최신 가격과 재고를 확인하세요.",
+        "photos": "라벨, 색상, 수량, 봉제와 눈에 보이는 결함을 확인합니다. 필요하면 추가 촬영이나 실측을 요청하세요.",
+        "confirm": "아니요. 중국 내 배송비, 국제 배송비와 기타 해당 비용이 추가될 수 있습니다."
+      },
+      "electronics": {
+        "intro": "모델, 단자, 전원, 구성품과 배터리 배송 제한을 확인하세요.",
+        "choose": "실측, 색상, 수량, 구성품, 최신 가격과 재고를 확인하세요.",
+        "photos": "라벨, 색상, 수량, 봉제와 눈에 보이는 결함을 확인합니다. 필요하면 추가 촬영이나 실측을 요청하세요.",
+        "confirm": "아니요. 중국 내 배송비, 국제 배송비와 기타 해당 비용이 추가될 수 있습니다."
+      },
+      "other": {
+        "intro": "크기, 잠금장치와 소재를 확인하세요. 사진은 성능이나 정품 여부를 증명하지 않습니다.",
+        "choose": "실측, 색상, 수량, 구성품, 최신 가격과 재고를 확인하세요.",
+        "photos": "라벨, 색상, 수량, 봉제와 눈에 보이는 결함을 확인합니다. 필요하면 추가 촬영이나 실측을 요청하세요.",
+        "confirm": "아니요. 중국 내 배송비, 국제 배송비와 기타 해당 비용이 추가될 수 있습니다."
+      }
+    }
+  },
+  "nb": {
+    "title": "Kategorier",
+    "intro": "Utforsk produkter, sammenlign detaljer og lagre favoritter.",
+    "labels": [
+      "Størrelse og spesifikasjon",
+      "Kontroller bildene",
+      "Før bestilling"
+    ],
+    "browse": "Utforsk kategorien",
+    "detailTitle": "Kontrollpunkter for kategorien",
+    "items": {
+      "shoes": {
+        "intro": "Sammenlign størrelsestabell, form, sømmer og såler; kontroller farge og eske.",
+        "choose": "Sammenlign mål, farge, antall, innhold, gjeldende pris og lagerstatus.",
+        "photos": "Etiketter, farge, antall, sømmer og synlige feil. Be om ekstra bilder eller mål ved behov.",
+        "confirm": "Nei. Innenlandsfrakt i Kina, internasjonal frakt og andre avgifter kan komme i tillegg."
+      },
+      "shirts": {
+        "intro": "Sammenlign bryst, skuldre og lengde samt trykk foran og bak.",
+        "choose": "Sammenlign mål, farge, antall, innhold, gjeldende pris og lagerstatus.",
+        "photos": "Etiketter, farge, antall, sømmer og synlige feil. Be om ekstra bilder eller mål ved behov.",
+        "confirm": "Nei. Innenlandsfrakt i Kina, internasjonal frakt og andre avgifter kan komme i tillegg."
+      },
+      "clothing": {
+        "intro": "Kontroller mål og antall plagg; et antrekksbilde beviser ikke innholdet.",
+        "choose": "Sammenlign mål, farge, antall, innhold, gjeldende pris og lagerstatus.",
+        "photos": "Etiketter, farge, antall, sømmer og synlige feil. Be om ekstra bilder eller mål ved behov.",
+        "confirm": "Nei. Innenlandsfrakt i Kina, internasjonal frakt og andre avgifter kan komme i tillegg."
+      },
+      "hoodies": {
+        "intro": "Kontroller ermer, hette, mansjetter, glidelås, stoff og fôr.",
+        "choose": "Sammenlign mål, farge, antall, innhold, gjeldende pris og lagerstatus.",
+        "photos": "Etiketter, farge, antall, sømmer og synlige feil. Be om ekstra bilder eller mål ved behov.",
+        "confirm": "Nei. Innenlandsfrakt i Kina, internasjonal frakt og andre avgifter kan komme i tillegg."
+      },
+      "pants": {
+        "intro": "Mål midje, hofter og lengde; kontroller elastisitet, antall og returvilkår.",
+        "choose": "Sammenlign mål, farge, antall, innhold, gjeldende pris og lagerstatus.",
+        "photos": "Etiketter, farge, antall, sømmer og synlige feil. Be om ekstra bilder eller mål ved behov.",
+        "confirm": "Nei. Innenlandsfrakt i Kina, internasjonal frakt og andre avgifter kan komme i tillegg."
+      },
+      "belts": {
+        "intro": "Kontroller brukbar lengde, bredde, spenne, hull og materiale.",
+        "choose": "Sammenlign mål, farge, antall, innhold, gjeldende pris og lagerstatus.",
+        "photos": "Etiketter, farge, antall, sømmer og synlige feil. Be om ekstra bilder eller mål ved behov.",
+        "confirm": "Nei. Innenlandsfrakt i Kina, internasjonal frakt og andre avgifter kan komme i tillegg."
+      },
+      "bags": {
+        "intro": "Sammenlign mål, rom, remmer, lukking og inkluderte deler.",
+        "choose": "Sammenlign mål, farge, antall, innhold, gjeldende pris og lagerstatus.",
+        "photos": "Etiketter, farge, antall, sømmer og synlige feil. Be om ekstra bilder eller mål ved behov.",
+        "confirm": "Nei. Innenlandsfrakt i Kina, internasjonal frakt og andre avgifter kan komme i tillegg."
+      },
+      "perfume": {
+        "intro": "Kontroller volum, variant og regler for væsker. Bilder beviser ikke duft eller ekthet.",
+        "choose": "Sammenlign mål, farge, antall, innhold, gjeldende pris og lagerstatus.",
+        "photos": "Etiketter, farge, antall, sømmer og synlige feil. Be om ekstra bilder eller mål ved behov.",
+        "confirm": "Nei. Innenlandsfrakt i Kina, internasjonal frakt og andre avgifter kan komme i tillegg."
+      },
+      "electronics": {
+        "intro": "Kontroller modell, tilkoblinger, strøm og tilbehør samt batteribegrensninger.",
+        "choose": "Sammenlign mål, farge, antall, innhold, gjeldende pris og lagerstatus.",
+        "photos": "Etiketter, farge, antall, sømmer og synlige feil. Be om ekstra bilder eller mål ved behov.",
+        "confirm": "Nei. Innenlandsfrakt i Kina, internasjonal frakt og andre avgifter kan komme i tillegg."
+      },
+      "other": {
+        "intro": "Kontroller mål, lukking og materialer. Bilder beviser ikke funksjon eller ekthet.",
+        "choose": "Sammenlign mål, farge, antall, innhold, gjeldende pris og lagerstatus.",
+        "photos": "Etiketter, farge, antall, sømmer og synlige feil. Be om ekstra bilder eller mål ved behov.",
+        "confirm": "Nei. Innenlandsfrakt i Kina, internasjonal frakt og andre avgifter kan komme i tillegg."
+      }
+    }
+  },
+  "nl": {
+    "title": "Categorieën",
+    "intro": "Ontdek producten, vergelijk details en bewaar je favorieten.",
+    "labels": [
+      "Maat en specificaties",
+      "Foto’s controleren",
+      "Voor je bestelt"
+    ],
+    "browse": "Categorie bekijken",
+    "detailTitle": "Controlepunten per categorie",
+    "items": {
+      "shoes": {
+        "intro": "Vergelijk maattabel, vorm, naden en zolen; controleer kleur en verpakking.",
+        "choose": "Vergelijk maten, kleur, aantal en inbegrepen onderdelen. Controleer actuele beschikbaarheid en prijs.",
+        "photos": "Controleer labels, kleur, aantal, naden en zichtbare gebreken. Vraag zo nodig extra foto’s of metingen.",
+        "confirm": "Nee. Binnenlands vervoer in China, internationale verzending en andere toepasselijke kosten kunnen erbij komen."
+      },
+      "shirts": {
+        "intro": "Vergelijk borst, schouders en lengte; bekijk prints voor en achter.",
+        "choose": "Vergelijk maten, kleur, aantal en inbegrepen onderdelen. Controleer actuele beschikbaarheid en prijs.",
+        "photos": "Controleer labels, kleur, aantal, naden en zichtbare gebreken. Vraag zo nodig extra foto’s of metingen.",
+        "confirm": "Nee. Binnenlands vervoer in China, internationale verzending en andere toepasselijke kosten kunnen erbij komen."
+      },
+      "clothing": {
+        "intro": "Controleer maten en aantal kledingstukken; een outfitfoto bewijst de inhoud niet.",
+        "choose": "Vergelijk maten, kleur, aantal en inbegrepen onderdelen. Controleer actuele beschikbaarheid en prijs.",
+        "photos": "Controleer labels, kleur, aantal, naden en zichtbare gebreken. Vraag zo nodig extra foto’s of metingen.",
+        "confirm": "Nee. Binnenlands vervoer in China, internationale verzending en andere toepasselijke kosten kunnen erbij komen."
+      },
+      "hoodies": {
+        "intro": "Controleer borst, mouwen, capuchon, boorden en rits; bevestig stof en voering.",
+        "choose": "Vergelijk maten, kleur, aantal en inbegrepen onderdelen. Controleer actuele beschikbaarheid en prijs.",
+        "photos": "Controleer labels, kleur, aantal, naden en zichtbare gebreken. Vraag zo nodig extra foto’s of metingen.",
+        "confirm": "Nee. Binnenlands vervoer in China, internationale verzending en andere toepasselijke kosten kunnen erbij komen."
+      },
+      "pants": {
+        "intro": "Meet taille, heupen en lengte; controleer rek, aantal en retourvoorwaarden.",
+        "choose": "Vergelijk maten, kleur, aantal en inbegrepen onderdelen. Controleer actuele beschikbaarheid en prijs.",
+        "photos": "Controleer labels, kleur, aantal, naden en zichtbare gebreken. Vraag zo nodig extra foto’s of metingen.",
+        "confirm": "Nee. Binnenlands vervoer in China, internationale verzending en andere toepasselijke kosten kunnen erbij komen."
+      },
+      "belts": {
+        "intro": "Controleer bruikbare lengte, breedte, gesp en gaten; bevestig materiaal.",
+        "choose": "Vergelijk maten, kleur, aantal en inbegrepen onderdelen. Controleer actuele beschikbaarheid en prijs.",
+        "photos": "Controleer labels, kleur, aantal, naden en zichtbare gebreken. Vraag zo nodig extra foto’s of metingen.",
+        "confirm": "Nee. Binnenlands vervoer in China, internationale verzending en andere toepasselijke kosten kunnen erbij komen."
+      },
+      "bags": {
+        "intro": "Vergelijk afmetingen, vakken, banden, sluitingen en inbegrepen onderdelen.",
+        "choose": "Vergelijk maten, kleur, aantal en inbegrepen onderdelen. Controleer actuele beschikbaarheid en prijs.",
+        "photos": "Controleer labels, kleur, aantal, naden en zichtbare gebreken. Vraag zo nodig extra foto’s of metingen.",
+        "confirm": "Nee. Binnenlands vervoer in China, internationale verzending en andere toepasselijke kosten kunnen erbij komen."
+      },
+      "perfume": {
+        "intro": "Controleer volume en variant. Foto’s bewijzen geur of echtheid niet; controleer vloeistofverzending.",
+        "choose": "Vergelijk maten, kleur, aantal en inbegrepen onderdelen. Controleer actuele beschikbaarheid en prijs.",
+        "photos": "Controleer labels, kleur, aantal, naden en zichtbare gebreken. Vraag zo nodig extra foto’s of metingen.",
+        "confirm": "Nee. Binnenlands vervoer in China, internationale verzending en andere toepasselijke kosten kunnen erbij komen."
+      },
+      "electronics": {
+        "intro": "Controleer model, aansluitingen, voeding en accessoires; let op batterijbeperkingen.",
+        "choose": "Vergelijk maten, kleur, aantal en inbegrepen onderdelen. Controleer actuele beschikbaarheid en prijs.",
+        "photos": "Controleer labels, kleur, aantal, naden en zichtbare gebreken. Vraag zo nodig extra foto’s of metingen.",
+        "confirm": "Nee. Binnenlands vervoer in China, internationale verzending en andere toepasselijke kosten kunnen erbij komen."
+      },
+      "other": {
+        "intro": "Controleer maten, sluitingen en materiaal. Foto’s bewijzen prestaties of echtheid niet.",
+        "choose": "Vergelijk maten, kleur, aantal en inbegrepen onderdelen. Controleer actuele beschikbaarheid en prijs.",
+        "photos": "Controleer labels, kleur, aantal, naden en zichtbare gebreken. Vraag zo nodig extra foto’s of metingen.",
+        "confirm": "Nee. Binnenlands vervoer in China, internationale verzending en andere toepasselijke kosten kunnen erbij komen."
+      }
+    }
+  },
+  "pl": {
+    "title": "Kategorie",
+    "intro": "Odkrywaj produkty, porównuj szczegóły i zapisuj ulubione.",
+    "labels": [
+      "Rozmiar i specyfikacja",
+      "Sprawdź zdjęcia",
+      "Przed zamówieniem"
+    ],
+    "browse": "Przeglądaj kategorię",
+    "detailTitle": "Co sprawdzić w tej kategorii",
+    "items": {
+      "shoes": {
+        "intro": "Porównaj tabelę rozmiarów, kształt, szwy i podeszwy; sprawdź kolor i opakowanie.",
+        "choose": "Porównaj wymiary, kolor, liczbę sztuk i zawartość zestawu. Sprawdź aktualną cenę oraz dostępność.",
+        "photos": "Sprawdź metki, kolor, ilość, szwy i widoczne wady. W razie potrzeby poproś o dodatkowe zdjęcia lub pomiary.",
+        "confirm": "Nie. Mogą dojść dostawa krajowa w Chinach, wysyłka międzynarodowa i inne należne opłaty."
+      },
+      "shirts": {
+        "intro": "Porównaj klatkę, ramiona i długość; sprawdź nadruki z przodu i tyłu.",
+        "choose": "Porównaj wymiary, kolor, liczbę sztuk i zawartość zestawu. Sprawdź aktualną cenę oraz dostępność.",
+        "photos": "Sprawdź metki, kolor, ilość, szwy i widoczne wady. W razie potrzeby poproś o dodatkowe zdjęcia lub pomiary.",
+        "confirm": "Nie. Mogą dojść dostawa krajowa w Chinach, wysyłka międzynarodowa i inne należne opłaty."
+      },
+      "clothing": {
+        "intro": "Sprawdź wymiary i liczbę części; zdjęcie stylizacji nie potwierdza zawartości.",
+        "choose": "Porównaj wymiary, kolor, liczbę sztuk i zawartość zestawu. Sprawdź aktualną cenę oraz dostępność.",
+        "photos": "Sprawdź metki, kolor, ilość, szwy i widoczne wady. W razie potrzeby poproś o dodatkowe zdjęcia lub pomiary.",
+        "confirm": "Nie. Mogą dojść dostawa krajowa w Chinach, wysyłka międzynarodowa i inne należne opłaty."
+      },
+      "hoodies": {
+        "intro": "Sprawdź klatkę, rękawy, kaptur, ściągacze i zamek; potwierdź materiał i podszewkę.",
+        "choose": "Porównaj wymiary, kolor, liczbę sztuk i zawartość zestawu. Sprawdź aktualną cenę oraz dostępność.",
+        "photos": "Sprawdź metki, kolor, ilość, szwy i widoczne wady. W razie potrzeby poproś o dodatkowe zdjęcia lub pomiary.",
+        "confirm": "Nie. Mogą dojść dostawa krajowa w Chinach, wysyłka międzynarodowa i inne należne opłaty."
+      },
+      "pants": {
+        "intro": "Zmierz pas, biodra i długość; sprawdź elastyczność, ilość i zasady zwrotu.",
+        "choose": "Porównaj wymiary, kolor, liczbę sztuk i zawartość zestawu. Sprawdź aktualną cenę oraz dostępność.",
+        "photos": "Sprawdź metki, kolor, ilość, szwy i widoczne wady. W razie potrzeby poproś o dodatkowe zdjęcia lub pomiary.",
+        "confirm": "Nie. Mogą dojść dostawa krajowa w Chinach, wysyłka międzynarodowa i inne należne opłaty."
+      },
+      "belts": {
+        "intro": "Sprawdź użyteczną długość, szerokość, klamrę i otwory; potwierdź materiał.",
+        "choose": "Porównaj wymiary, kolor, liczbę sztuk i zawartość zestawu. Sprawdź aktualną cenę oraz dostępność.",
+        "photos": "Sprawdź metki, kolor, ilość, szwy i widoczne wady. W razie potrzeby poproś o dodatkowe zdjęcia lub pomiary.",
+        "confirm": "Nie. Mogą dojść dostawa krajowa w Chinach, wysyłka międzynarodowa i inne należne opłaty."
+      },
+      "bags": {
+        "intro": "Porównaj wymiary, kieszenie, paski, zapięcia i dołączone części.",
+        "choose": "Porównaj wymiary, kolor, liczbę sztuk i zawartość zestawu. Sprawdź aktualną cenę oraz dostępność.",
+        "photos": "Sprawdź metki, kolor, ilość, szwy i widoczne wady. W razie potrzeby poproś o dodatkowe zdjęcia lub pomiary.",
+        "confirm": "Nie. Mogą dojść dostawa krajowa w Chinach, wysyłka międzynarodowa i inne należne opłaty."
+      },
+      "perfume": {
+        "intro": "Sprawdź pojemność i wersję. Zdjęcia nie dowodzą zapachu ani autentyczności; sprawdź przewóz płynów.",
+        "choose": "Porównaj wymiary, kolor, liczbę sztuk i zawartość zestawu. Sprawdź aktualną cenę oraz dostępność.",
+        "photos": "Sprawdź metki, kolor, ilość, szwy i widoczne wady. W razie potrzeby poproś o dodatkowe zdjęcia lub pomiary.",
+        "confirm": "Nie. Mogą dojść dostawa krajowa w Chinach, wysyłka międzynarodowa i inne należne opłaty."
+      },
+      "electronics": {
+        "intro": "Sprawdź model, złącza, zasilanie i akcesoria; zweryfikuj ograniczenia dotyczące baterii.",
+        "choose": "Porównaj wymiary, kolor, liczbę sztuk i zawartość zestawu. Sprawdź aktualną cenę oraz dostępność.",
+        "photos": "Sprawdź metki, kolor, ilość, szwy i widoczne wady. W razie potrzeby poproś o dodatkowe zdjęcia lub pomiary.",
+        "confirm": "Nie. Mogą dojść dostawa krajowa w Chinach, wysyłka międzynarodowa i inne należne opłaty."
+      },
+      "other": {
+        "intro": "Sprawdź wymiary, zapięcia i materiał. Zdjęcia nie potwierdzają parametrów ani autentyczności.",
+        "choose": "Porównaj wymiary, kolor, liczbę sztuk i zawartość zestawu. Sprawdź aktualną cenę oraz dostępność.",
+        "photos": "Sprawdź metki, kolor, ilość, szwy i widoczne wady. W razie potrzeby poproś o dodatkowe zdjęcia lub pomiary.",
+        "confirm": "Nie. Mogą dojść dostawa krajowa w Chinach, wysyłka międzynarodowa i inne należne opłaty."
+      }
+    }
+  },
+  "ro": {
+    "title": "Categorii",
+    "intro": "Descoperă produse, compară detaliile și salvează favoritele.",
+    "labels": [
+      "Mărime și specificații",
+      "Verifică fotografiile",
+      "Înainte de comandă"
+    ],
+    "browse": "Explorează categoria",
+    "detailTitle": "Verificări pentru categorie",
+    "items": {
+      "shoes": {
+        "intro": "Compară tabelul de mărimi, forma, cusăturile și tălpile; verifică nuanța și cutia.",
+        "choose": "Dimensiunile, culoarea, cantitatea, conținutul, prețul actual și disponibilitatea.",
+        "photos": "Etichete, culoare, număr de bucăți, cusături și defecte vizibile. Cere fotografii sau măsurători suplimentare dacă trebuie.",
+        "confirm": "Nu. Transportul intern din China, cel internațional și alte taxe se pot adăuga."
+      },
+      "shirts": {
+        "intro": "Compară pieptul, umerii și lungimea, imprimeurile din față și spate.",
+        "choose": "Dimensiunile, culoarea, cantitatea, conținutul, prețul actual și disponibilitatea.",
+        "photos": "Etichete, culoare, număr de bucăți, cusături și defecte vizibile. Cere fotografii sau măsurători suplimentare dacă trebuie.",
+        "confirm": "Nu. Transportul intern din China, cel internațional și alte taxe se pot adăuga."
+      },
+      "clothing": {
+        "intro": "Verifică dimensiunile și numărul pieselor; fotografia ținutei nu dovedește conținutul.",
+        "choose": "Dimensiunile, culoarea, cantitatea, conținutul, prețul actual și disponibilitatea.",
+        "photos": "Etichete, culoare, număr de bucăți, cusături și defecte vizibile. Cere fotografii sau măsurători suplimentare dacă trebuie.",
+        "confirm": "Nu. Transportul intern din China, cel internațional și alte taxe se pot adăuga."
+      },
+      "hoodies": {
+        "intro": "Verifică mânecile, gluga, manșetele, fermoarul, materialul și căptușeala.",
+        "choose": "Dimensiunile, culoarea, cantitatea, conținutul, prețul actual și disponibilitatea.",
+        "photos": "Etichete, culoare, număr de bucăți, cusături și defecte vizibile. Cere fotografii sau măsurători suplimentare dacă trebuie.",
+        "confirm": "Nu. Transportul intern din China, cel internațional și alte taxe se pot adăuga."
+      },
+      "pants": {
+        "intro": "Măsoară talia, șoldurile și lungimea; verifică elasticitatea, cantitatea și returul.",
+        "choose": "Dimensiunile, culoarea, cantitatea, conținutul, prețul actual și disponibilitatea.",
+        "photos": "Etichete, culoare, număr de bucăți, cusături și defecte vizibile. Cere fotografii sau măsurători suplimentare dacă trebuie.",
+        "confirm": "Nu. Transportul intern din China, cel internațional și alte taxe se pot adăuga."
+      },
+      "belts": {
+        "intro": "Verifică lungimea utilă, lățimea, catarama, găurile și materialul.",
+        "choose": "Dimensiunile, culoarea, cantitatea, conținutul, prețul actual și disponibilitatea.",
+        "photos": "Etichete, culoare, număr de bucăți, cusături și defecte vizibile. Cere fotografii sau măsurători suplimentare dacă trebuie.",
+        "confirm": "Nu. Transportul intern din China, cel internațional și alte taxe se pot adăuga."
+      },
+      "bags": {
+        "intro": "Compară dimensiunile, compartimentele, curelele, închiderile și accesoriile.",
+        "choose": "Dimensiunile, culoarea, cantitatea, conținutul, prețul actual și disponibilitatea.",
+        "photos": "Etichete, culoare, număr de bucăți, cusături și defecte vizibile. Cere fotografii sau măsurători suplimentare dacă trebuie.",
+        "confirm": "Nu. Transportul intern din China, cel internațional și alte taxe se pot adăuga."
+      },
+      "perfume": {
+        "intro": "Verifică volumul, varianta și transportul lichidelor. Fotografiile nu dovedesc mirosul sau autenticitatea.",
+        "choose": "Dimensiunile, culoarea, cantitatea, conținutul, prețul actual și disponibilitatea.",
+        "photos": "Etichete, culoare, număr de bucăți, cusături și defecte vizibile. Cere fotografii sau măsurători suplimentare dacă trebuie.",
+        "confirm": "Nu. Transportul intern din China, cel internațional și alte taxe se pot adăuga."
+      },
+      "electronics": {
+        "intro": "Verifică modelul, conectorii, alimentarea, accesoriile și restricțiile bateriilor.",
+        "choose": "Dimensiunile, culoarea, cantitatea, conținutul, prețul actual și disponibilitatea.",
+        "photos": "Etichete, culoare, număr de bucăți, cusături și defecte vizibile. Cere fotografii sau măsurători suplimentare dacă trebuie.",
+        "confirm": "Nu. Transportul intern din China, cel internațional și alte taxe se pot adăuga."
+      },
+      "other": {
+        "intro": "Verifică dimensiunile, închiderile și materialul. Fotografiile nu dovedesc performanța sau autenticitatea.",
+        "choose": "Dimensiunile, culoarea, cantitatea, conținutul, prețul actual și disponibilitatea.",
+        "photos": "Etichete, culoare, număr de bucăți, cusături și defecte vizibile. Cere fotografii sau măsurători suplimentare dacă trebuie.",
+        "confirm": "Nu. Transportul intern din China, cel internațional și alte taxe se pot adăuga."
+      }
+    }
+  },
+  "ru": {
+    "title": "Категории",
+    "intro": "Находите товары, сравнивайте детали и сохраняйте любимые.",
+    "labels": [
+      "Размер и характеристики",
+      "Проверьте фотографии",
+      "Перед заказом"
+    ],
+    "browse": "Просмотреть категорию",
+    "detailTitle": "Проверка категории",
+    "items": {
+      "shoes": {
+        "intro": "Сравните таблицу размеров, форму, швы и подошвы; проверьте цвет и коробку.",
+        "choose": "Размеры, цвет, количество, комплектность, актуальную цену и наличие.",
+        "photos": "Этикетки, цвет, количество, швы и видимые дефекты. При необходимости попросите дополнительные фото или замеры.",
+        "confirm": "Нет. Возможны доставка по Китаю, международная перевозка и другие платежи."
+      },
+      "shirts": {
+        "intro": "Сравните грудь, плечи и длину, принты спереди и сзади.",
+        "choose": "Размеры, цвет, количество, комплектность, актуальную цену и наличие.",
+        "photos": "Этикетки, цвет, количество, швы и видимые дефекты. При необходимости попросите дополнительные фото или замеры.",
+        "confirm": "Нет. Возможны доставка по Китаю, международная перевозка и другие платежи."
+      },
+      "clothing": {
+        "intro": "Проверьте размеры и количество вещей; фото образа не доказывает комплектность.",
+        "choose": "Размеры, цвет, количество, комплектность, актуальную цену и наличие.",
+        "photos": "Этикетки, цвет, количество, швы и видимые дефекты. При необходимости попросите дополнительные фото или замеры.",
+        "confirm": "Нет. Возможны доставка по Китаю, международная перевозка и другие платежи."
+      },
+      "hoodies": {
+        "intro": "Проверьте рукава, капюшон, манжеты, молнию, ткань и подкладку.",
+        "choose": "Размеры, цвет, количество, комплектность, актуальную цену и наличие.",
+        "photos": "Этикетки, цвет, количество, швы и видимые дефекты. При необходимости попросите дополнительные фото или замеры.",
+        "confirm": "Нет. Возможны доставка по Китаю, международная перевозка и другие платежи."
+      },
+      "pants": {
+        "intro": "Измерьте талию, бёдра и длину; проверьте эластичность, количество и возврат.",
+        "choose": "Размеры, цвет, количество, комплектность, актуальную цену и наличие.",
+        "photos": "Этикетки, цвет, количество, швы и видимые дефекты. При необходимости попросите дополнительные фото или замеры.",
+        "confirm": "Нет. Возможны доставка по Китаю, международная перевозка и другие платежи."
+      },
+      "belts": {
+        "intro": "Проверьте полезную длину, ширину, пряжку, отверстия и материал.",
+        "choose": "Размеры, цвет, количество, комплектность, актуальную цену и наличие.",
+        "photos": "Этикетки, цвет, количество, швы и видимые дефекты. При необходимости попросите дополнительные фото или замеры.",
+        "confirm": "Нет. Возможны доставка по Китаю, международная перевозка и другие платежи."
+      },
+      "bags": {
+        "intro": "Сравните размеры, отделения, ремни, застёжки и комплектные детали.",
+        "choose": "Размеры, цвет, количество, комплектность, актуальную цену и наличие.",
+        "photos": "Этикетки, цвет, количество, швы и видимые дефекты. При необходимости попросите дополнительные фото или замеры.",
+        "confirm": "Нет. Возможны доставка по Китаю, международная перевозка и другие платежи."
+      },
+      "perfume": {
+        "intro": "Проверьте объём, вариант и перевозку жидкостей. Фото не доказывают аромат или подлинность.",
+        "choose": "Размеры, цвет, количество, комплектность, актуальную цену и наличие.",
+        "photos": "Этикетки, цвет, количество, швы и видимые дефекты. При необходимости попросите дополнительные фото или замеры.",
+        "confirm": "Нет. Возможны доставка по Китаю, международная перевозка и другие платежи."
+      },
+      "electronics": {
+        "intro": "Проверьте модель, разъёмы, питание, аксессуары и ограничения аккумуляторов.",
+        "choose": "Размеры, цвет, количество, комплектность, актуальную цену и наличие.",
+        "photos": "Этикетки, цвет, количество, швы и видимые дефекты. При необходимости попросите дополнительные фото или замеры.",
+        "confirm": "Нет. Возможны доставка по Китаю, международная перевозка и другие платежи."
+      },
+      "other": {
+        "intro": "Проверьте размеры, застёжки и материал. Фото не доказывают характеристики или подлинность.",
+        "choose": "Размеры, цвет, количество, комплектность, актуальную цену и наличие.",
+        "photos": "Этикетки, цвет, количество, швы и видимые дефекты. При необходимости попросите дополнительные фото или замеры.",
+        "confirm": "Нет. Возможны доставка по Китаю, международная перевозка и другие платежи."
+      }
+    }
+  },
+  "sk": {
+    "title": "Kategórie",
+    "intro": "Objavujte produkty, porovnávajte podrobnosti a ukladajte obľúbené.",
+    "labels": [
+      "Veľkosť a parametre",
+      "Skontrolujte fotografie",
+      "Pred objednaním"
+    ],
+    "browse": "Prehliadať kategóriu",
+    "detailTitle": "Kontrola tejto kategórie",
+    "items": {
+      "shoes": {
+        "intro": "Porovnajte tabuľku veľkostí, tvar, švy a podrážky; overte farbu a krabicu.",
+        "choose": "Rozmery, farbu, počet kusov, obsah balenia a aktuálnu cenu a dostupnosť.",
+        "photos": "Štítky, farbu, počet, švy a viditeľné vady. Podľa potreby žiadajte ďalšie snímky alebo merania.",
+        "confirm": "Nie. Doprava v Číne, medzinárodná preprava a ďalšie poplatky môžu byť navyše."
+      },
+      "shirts": {
+        "intro": "Porovnajte hrudník, ramená a dĺžku, potlač spredu aj zozadu.",
+        "choose": "Rozmery, farbu, počet kusov, obsah balenia a aktuálnu cenu a dostupnosť.",
+        "photos": "Štítky, farbu, počet, švy a viditeľné vady. Podľa potreby žiadajte ďalšie snímky alebo merania.",
+        "confirm": "Nie. Doprava v Číne, medzinárodná preprava a ďalšie poplatky môžu byť navyše."
+      },
+      "clothing": {
+        "intro": "Overte rozmery a počet kusov; fotografia outfitu nedokazuje obsah.",
+        "choose": "Rozmery, farbu, počet kusov, obsah balenia a aktuálnu cenu a dostupnosť.",
+        "photos": "Štítky, farbu, počet, švy a viditeľné vady. Podľa potreby žiadajte ďalšie snímky alebo merania.",
+        "confirm": "Nie. Doprava v Číne, medzinárodná preprava a ďalšie poplatky môžu byť navyše."
+      },
+      "hoodies": {
+        "intro": "Overte rukávy, kapucňu, lemy, zips, materiál a podšívku.",
+        "choose": "Rozmery, farbu, počet kusov, obsah balenia a aktuálnu cenu a dostupnosť.",
+        "photos": "Štítky, farbu, počet, švy a viditeľné vady. Podľa potreby žiadajte ďalšie snímky alebo merania.",
+        "confirm": "Nie. Doprava v Číne, medzinárodná preprava a ďalšie poplatky môžu byť navyše."
+      },
+      "pants": {
+        "intro": "Zmerajte pás, boky a dĺžku; overte pružnosť, počet a vrátenie.",
+        "choose": "Rozmery, farbu, počet kusov, obsah balenia a aktuálnu cenu a dostupnosť.",
+        "photos": "Štítky, farbu, počet, švy a viditeľné vady. Podľa potreby žiadajte ďalšie snímky alebo merania.",
+        "confirm": "Nie. Doprava v Číne, medzinárodná preprava a ďalšie poplatky môžu byť navyše."
+      },
+      "belts": {
+        "intro": "Overte použiteľnú dĺžku, šírku, pracku, otvory a materiál.",
+        "choose": "Rozmery, farbu, počet kusov, obsah balenia a aktuálnu cenu a dostupnosť.",
+        "photos": "Štítky, farbu, počet, švy a viditeľné vady. Podľa potreby žiadajte ďalšie snímky alebo merania.",
+        "confirm": "Nie. Doprava v Číne, medzinárodná preprava a ďalšie poplatky môžu byť navyše."
+      },
+      "bags": {
+        "intro": "Porovnajte rozmery, priehradky, popruhy, zapínanie a príslušenstvo.",
+        "choose": "Rozmery, farbu, počet kusov, obsah balenia a aktuálnu cenu a dostupnosť.",
+        "photos": "Štítky, farbu, počet, švy a viditeľné vady. Podľa potreby žiadajte ďalšie snímky alebo merania.",
+        "confirm": "Nie. Doprava v Číne, medzinárodná preprava a ďalšie poplatky môžu byť navyše."
+      },
+      "perfume": {
+        "intro": "Overte objem, variant a prepravu kvapalín. Snímky nedokazujú vôňu ani pravosť.",
+        "choose": "Rozmery, farbu, počet kusov, obsah balenia a aktuálnu cenu a dostupnosť.",
+        "photos": "Štítky, farbu, počet, švy a viditeľné vady. Podľa potreby žiadajte ďalšie snímky alebo merania.",
+        "confirm": "Nie. Doprava v Číne, medzinárodná preprava a ďalšie poplatky môžu byť navyše."
+      },
+      "electronics": {
+        "intro": "Overte model, konektory, napájanie, príslušenstvo a obmedzenia batérií.",
+        "choose": "Rozmery, farbu, počet kusov, obsah balenia a aktuálnu cenu a dostupnosť.",
+        "photos": "Štítky, farbu, počet, švy a viditeľné vady. Podľa potreby žiadajte ďalšie snímky alebo merania.",
+        "confirm": "Nie. Doprava v Číne, medzinárodná preprava a ďalšie poplatky môžu byť navyše."
+      },
+      "other": {
+        "intro": "Overte rozmery, zapínanie a materiál. Snímky nedokazujú funkčnosť ani pravosť.",
+        "choose": "Rozmery, farbu, počet kusov, obsah balenia a aktuálnu cenu a dostupnosť.",
+        "photos": "Štítky, farbu, počet, švy a viditeľné vady. Podľa potreby žiadajte ďalšie snímky alebo merania.",
+        "confirm": "Nie. Doprava v Číne, medzinárodná preprava a ďalšie poplatky môžu byť navyše."
+      }
+    }
+  },
+  "sv": {
+    "title": "Kategorier",
+    "intro": "Utforska produkter, jämför detaljer och spara favoriter.",
+    "labels": [
+      "Storlek och specifikation",
+      "Granska bilderna",
+      "Före beställning"
+    ],
+    "browse": "Utforska kategorin",
+    "detailTitle": "Kontrollera denna kategori",
+    "items": {
+      "shoes": {
+        "intro": "Jämför storlekstabell, form, sömmar och sulor; kontrollera färg och förpackning.",
+        "choose": "Jämför mått, färg, antal, innehåll, aktuell tillgänglighet och pris.",
+        "photos": "Etiketter, färg, antal, sömmar och synliga fel. Be vid behov om fler bilder eller mått.",
+        "confirm": "Nej. Inrikesfrakt i Kina, internationell frakt och andra avgifter kan tillkomma."
+      },
+      "shirts": {
+        "intro": "Jämför bröst, axlar och längd samt tryck fram och bak.",
+        "choose": "Jämför mått, färg, antal, innehåll, aktuell tillgänglighet och pris.",
+        "photos": "Etiketter, färg, antal, sömmar och synliga fel. Be vid behov om fler bilder eller mått.",
+        "confirm": "Nej. Inrikesfrakt i Kina, internationell frakt och andra avgifter kan tillkomma."
+      },
+      "clothing": {
+        "intro": "Kontrollera mått och antal plagg; en outfitbild visar inte säkert vad som ingår.",
+        "choose": "Jämför mått, färg, antal, innehåll, aktuell tillgänglighet och pris.",
+        "photos": "Etiketter, färg, antal, sömmar och synliga fel. Be vid behov om fler bilder eller mått.",
+        "confirm": "Nej. Inrikesfrakt i Kina, internationell frakt och andra avgifter kan tillkomma."
+      },
+      "hoodies": {
+        "intro": "Kontrollera ärmar, huva, muddar, dragkedja, tyg och foder.",
+        "choose": "Jämför mått, färg, antal, innehåll, aktuell tillgänglighet och pris.",
+        "photos": "Etiketter, färg, antal, sömmar och synliga fel. Be vid behov om fler bilder eller mått.",
+        "confirm": "Nej. Inrikesfrakt i Kina, internationell frakt och andra avgifter kan tillkomma."
+      },
+      "pants": {
+        "intro": "Mät midja, höfter och längd; kontrollera stretch, antal och returvillkor.",
+        "choose": "Jämför mått, färg, antal, innehåll, aktuell tillgänglighet och pris.",
+        "photos": "Etiketter, färg, antal, sömmar och synliga fel. Be vid behov om fler bilder eller mått.",
+        "confirm": "Nej. Inrikesfrakt i Kina, internationell frakt och andra avgifter kan tillkomma."
+      },
+      "belts": {
+        "intro": "Kontrollera användbar längd, bredd, spänne, hål och material.",
+        "choose": "Jämför mått, färg, antal, innehåll, aktuell tillgänglighet och pris.",
+        "photos": "Etiketter, färg, antal, sömmar och synliga fel. Be vid behov om fler bilder eller mått.",
+        "confirm": "Nej. Inrikesfrakt i Kina, internationell frakt och andra avgifter kan tillkomma."
+      },
+      "bags": {
+        "intro": "Jämför mått, fack, remmar, stängning och tillbehör.",
+        "choose": "Jämför mått, färg, antal, innehåll, aktuell tillgänglighet och pris.",
+        "photos": "Etiketter, färg, antal, sömmar och synliga fel. Be vid behov om fler bilder eller mått.",
+        "confirm": "Nej. Inrikesfrakt i Kina, internationell frakt och andra avgifter kan tillkomma."
+      },
+      "perfume": {
+        "intro": "Kontrollera volym och version samt regler för vätskefrakt. Bilder bevisar inte doft eller äkthet.",
+        "choose": "Jämför mått, färg, antal, innehåll, aktuell tillgänglighet och pris.",
+        "photos": "Etiketter, färg, antal, sömmar och synliga fel. Be vid behov om fler bilder eller mått.",
+        "confirm": "Nej. Inrikesfrakt i Kina, internationell frakt och andra avgifter kan tillkomma."
+      },
+      "electronics": {
+        "intro": "Kontrollera modell, kontakter, ström och tillbehör samt batterirestriktioner.",
+        "choose": "Jämför mått, färg, antal, innehåll, aktuell tillgänglighet och pris.",
+        "photos": "Etiketter, färg, antal, sömmar och synliga fel. Be vid behov om fler bilder eller mått.",
+        "confirm": "Nej. Inrikesfrakt i Kina, internationell frakt och andra avgifter kan tillkomma."
+      },
+      "other": {
+        "intro": "Kontrollera storlek, fästen och material. Bilder bevisar inte funktion eller äkthet.",
+        "choose": "Jämför mått, färg, antal, innehåll, aktuell tillgänglighet och pris.",
+        "photos": "Etiketter, färg, antal, sömmar och synliga fel. Be vid behov om fler bilder eller mått.",
+        "confirm": "Nej. Inrikesfrakt i Kina, internationell frakt och andra avgifter kan tillkomma."
+      }
+    }
+  },
+  "tr": {
+    "title": "Kategoriler",
+    "intro": "Ürünleri keşfedin, ayrıntıları karşılaştırın ve favorilerinizi kaydedin.",
+    "labels": [
+      "Beden ve özellikler",
+      "Fotoğrafları kontrol et",
+      "Siparişten önce"
+    ],
+    "browse": "Kategoriyi keşfet",
+    "detailTitle": "Kategori kontrolleri",
+    "items": {
+      "shoes": {
+        "intro": "Beden tablosu, biçim, dikiş ve tabanları karşılaştırın; renk ve kutuyu doğrulayın.",
+        "choose": "Ölçü, renk, miktar, paket içeriği, güncel fiyat ve stok durumunu.",
+        "photos": "Etiket, renk, miktar, dikiş ve görünür kusurlara. Gerekirse ek fotoğraf veya ölçüm isteyin.",
+        "confirm": "Hayır. Çin içi kargo, uluslararası kargo ve diğer ücretler eklenebilir."
+      },
+      "shirts": {
+        "intro": "Göğüs, omuz ve uzunluk ölçülerini, ön ve arka baskıyı kontrol edin.",
+        "choose": "Ölçü, renk, miktar, paket içeriği, güncel fiyat ve stok durumunu.",
+        "photos": "Etiket, renk, miktar, dikiş ve görünür kusurlara. Gerekirse ek fotoğraf veya ölçüm isteyin.",
+        "confirm": "Hayır. Çin içi kargo, uluslararası kargo ve diğer ücretler eklenebilir."
+      },
+      "clothing": {
+        "intro": "Ölçü ve parça sayısını doğrulayın; kombin fotoğrafı içeriği kanıtlamaz.",
+        "choose": "Ölçü, renk, miktar, paket içeriği, güncel fiyat ve stok durumunu.",
+        "photos": "Etiket, renk, miktar, dikiş ve görünür kusurlara. Gerekirse ek fotoğraf veya ölçüm isteyin.",
+        "confirm": "Hayır. Çin içi kargo, uluslararası kargo ve diğer ücretler eklenebilir."
+      },
+      "hoodies": {
+        "intro": "Kol, kapüşon, manşet, fermuar, kumaş ve astarı kontrol edin.",
+        "choose": "Ölçü, renk, miktar, paket içeriği, güncel fiyat ve stok durumunu.",
+        "photos": "Etiket, renk, miktar, dikiş ve görünür kusurlara. Gerekirse ek fotoğraf veya ölçüm isteyin.",
+        "confirm": "Hayır. Çin içi kargo, uluslararası kargo ve diğer ücretler eklenebilir."
+      },
+      "pants": {
+        "intro": "Bel, kalça ve boyu ölçün; esneklik, miktar ve iade koşullarını doğrulayın.",
+        "choose": "Ölçü, renk, miktar, paket içeriği, güncel fiyat ve stok durumunu.",
+        "photos": "Etiket, renk, miktar, dikiş ve görünür kusurlara. Gerekirse ek fotoğraf veya ölçüm isteyin.",
+        "confirm": "Hayır. Çin içi kargo, uluslararası kargo ve diğer ücretler eklenebilir."
+      },
+      "belts": {
+        "intro": "Kullanılabilir uzunluk, genişlik, toka, delik ve malzemeyi kontrol edin.",
+        "choose": "Ölçü, renk, miktar, paket içeriği, güncel fiyat ve stok durumunu.",
+        "photos": "Etiket, renk, miktar, dikiş ve görünür kusurlara. Gerekirse ek fotoğraf veya ölçüm isteyin.",
+        "confirm": "Hayır. Çin içi kargo, uluslararası kargo ve diğer ücretler eklenebilir."
+      },
+      "bags": {
+        "intro": "Boyut, bölme, askı, kapama ve dahil parçaları karşılaştırın.",
+        "choose": "Ölçü, renk, miktar, paket içeriği, güncel fiyat ve stok durumunu.",
+        "photos": "Etiket, renk, miktar, dikiş ve görünür kusurlara. Gerekirse ek fotoğraf veya ölçüm isteyin.",
+        "confirm": "Hayır. Çin içi kargo, uluslararası kargo ve diğer ücretler eklenebilir."
+      },
+      "perfume": {
+        "intro": "Hacim, seçenek ve sıvı taşımasını doğrulayın. Fotoğraflar koku veya özgünlüğü kanıtlamaz.",
+        "choose": "Ölçü, renk, miktar, paket içeriği, güncel fiyat ve stok durumunu.",
+        "photos": "Etiket, renk, miktar, dikiş ve görünür kusurlara. Gerekirse ek fotoğraf veya ölçüm isteyin.",
+        "confirm": "Hayır. Çin içi kargo, uluslararası kargo ve diğer ücretler eklenebilir."
+      },
+      "electronics": {
+        "intro": "Model, bağlantı, güç, aksesuar ve pil kısıtlamalarını kontrol edin.",
+        "choose": "Ölçü, renk, miktar, paket içeriği, güncel fiyat ve stok durumunu.",
+        "photos": "Etiket, renk, miktar, dikiş ve görünür kusurlara. Gerekirse ek fotoğraf veya ölçüm isteyin.",
+        "confirm": "Hayır. Çin içi kargo, uluslararası kargo ve diğer ücretler eklenebilir."
+      },
+      "other": {
+        "intro": "Ölçü, kapama ve malzemeyi kontrol edin; görseller performans veya özgünlük kanıtı değildir.",
+        "choose": "Ölçü, renk, miktar, paket içeriği, güncel fiyat ve stok durumunu.",
+        "photos": "Etiket, renk, miktar, dikiş ve görünür kusurlara. Gerekirse ek fotoğraf veya ölçüm isteyin.",
+        "confirm": "Hayır. Çin içi kargo, uluslararası kargo ve diğer ücretler eklenebilir."
+      }
+    }
+  },
+  "uk": {
+    "title": "Категорії",
+    "intro": "Знаходьте товари, порівнюйте деталі й зберігайте улюблені.",
+    "labels": [
+      "Розмір і характеристики",
+      "Перевірте фотографії",
+      "Перед замовленням"
+    ],
+    "browse": "Переглянути категорію",
+    "detailTitle": "Перевірка категорії",
+    "items": {
+      "shoes": {
+        "intro": "Порівняйте таблицю розмірів, форму, шви й підошви; перевірте колір і коробку.",
+        "choose": "Виміри, колір, кількість, комплектацію, актуальну ціну та наявність.",
+        "photos": "Етикетки, колір, кількість, шви й видимі дефекти. За потреби попросіть додаткові фото або виміри.",
+        "confirm": "Ні. Можуть додаватися доставка Китаєм, міжнародна доставка та інші платежі."
+      },
+      "shirts": {
+        "intro": "Порівняйте груди, плечі й довжину, принти спереду та ззаду.",
+        "choose": "Виміри, колір, кількість, комплектацію, актуальну ціну та наявність.",
+        "photos": "Етикетки, колір, кількість, шви й видимі дефекти. За потреби попросіть додаткові фото або виміри.",
+        "confirm": "Ні. Можуть додаватися доставка Китаєм, міжнародна доставка та інші платежі."
+      },
+      "clothing": {
+        "intro": "Перевірте виміри й кількість речей; фото образу не доводить комплектацію.",
+        "choose": "Виміри, колір, кількість, комплектацію, актуальну ціну та наявність.",
+        "photos": "Етикетки, колір, кількість, шви й видимі дефекти. За потреби попросіть додаткові фото або виміри.",
+        "confirm": "Ні. Можуть додаватися доставка Китаєм, міжнародна доставка та інші платежі."
+      },
+      "hoodies": {
+        "intro": "Перевірте рукави, капюшон, манжети, блискавку, тканину й підкладку.",
+        "choose": "Виміри, колір, кількість, комплектацію, актуальну ціну та наявність.",
+        "photos": "Етикетки, колір, кількість, шви й видимі дефекти. За потреби попросіть додаткові фото або виміри.",
+        "confirm": "Ні. Можуть додаватися доставка Китаєм, міжнародна доставка та інші платежі."
+      },
+      "pants": {
+        "intro": "Виміряйте талію, стегна й довжину; перевірте еластичність, кількість і повернення.",
+        "choose": "Виміри, колір, кількість, комплектацію, актуальну ціну та наявність.",
+        "photos": "Етикетки, колір, кількість, шви й видимі дефекти. За потреби попросіть додаткові фото або виміри.",
+        "confirm": "Ні. Можуть додаватися доставка Китаєм, міжнародна доставка та інші платежі."
+      },
+      "belts": {
+        "intro": "Перевірте корисну довжину, ширину, пряжку, отвори й матеріал.",
+        "choose": "Виміри, колір, кількість, комплектацію, актуальну ціну та наявність.",
+        "photos": "Етикетки, колір, кількість, шви й видимі дефекти. За потреби попросіть додаткові фото або виміри.",
+        "confirm": "Ні. Можуть додаватися доставка Китаєм, міжнародна доставка та інші платежі."
+      },
+      "bags": {
+        "intro": "Порівняйте розміри, відділення, ремені, застібки й комплектні деталі.",
+        "choose": "Виміри, колір, кількість, комплектацію, актуальну ціну та наявність.",
+        "photos": "Етикетки, колір, кількість, шви й видимі дефекти. За потреби попросіть додаткові фото або виміри.",
+        "confirm": "Ні. Можуть додаватися доставка Китаєм, міжнародна доставка та інші платежі."
+      },
+      "perfume": {
+        "intro": "Перевірте об’єм, варіант і перевезення рідин. Фото не доводять аромат чи справжність.",
+        "choose": "Виміри, колір, кількість, комплектацію, актуальну ціну та наявність.",
+        "photos": "Етикетки, колір, кількість, шви й видимі дефекти. За потреби попросіть додаткові фото або виміри.",
+        "confirm": "Ні. Можуть додаватися доставка Китаєм, міжнародна доставка та інші платежі."
+      },
+      "electronics": {
+        "intro": "Перевірте модель, роз’єми, живлення, аксесуари й обмеження акумуляторів.",
+        "choose": "Виміри, колір, кількість, комплектацію, актуальну ціну та наявність.",
+        "photos": "Етикетки, колір, кількість, шви й видимі дефекти. За потреби попросіть додаткові фото або виміри.",
+        "confirm": "Ні. Можуть додаватися доставка Китаєм, міжнародна доставка та інші платежі."
+      },
+      "other": {
+        "intro": "Перевірте розміри, застібки й матеріал. Фото не доводять характеристики чи справжність.",
+        "choose": "Виміри, колір, кількість, комплектацію, актуальну ціну та наявність.",
+        "photos": "Етикетки, колір, кількість, шви й видимі дефекти. За потреби попросіть додаткові фото або виміри.",
+        "confirm": "Ні. Можуть додаватися доставка Китаєм, міжнародна доставка та інші платежі."
+      }
+    }
+  }
+}

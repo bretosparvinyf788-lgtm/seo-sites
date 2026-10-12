@@ -1,0 +1,228 @@
+{
+  "name": "Magyar",
+  "currency": "HUF",
+  "nav": [
+    "Kezdőlap",
+    "Katalógus",
+    "Kategóriák",
+    "Útmutató kezdőknek",
+    "Gyakori kérdések",
+    "Regisztráció a USFans oldalon",
+    "Nyelv",
+    "Pénznem"
+  ],
+  "cats": [
+    "Cipők és papucsok",
+    "Pólók",
+    "Ruházat",
+    "Kapucnis felsők",
+    "Nadrágok és rövidnadrágok",
+    "Övek",
+    "Táskák",
+    "Parfümök",
+    "Elektronika",
+    "Kiegészítők"
+  ],
+  "labels": [
+    "Összes termék",
+    "Részletek",
+    "Rögzített ár",
+    "A katalógusár tájékoztató; szállítás és más költségek hozzáadódhatnak.",
+    "A választástól a kézbesítésig",
+    "Vissza a katalógushoz",
+    "Eredeti hirdetés megnyitása",
+    "Termék megnyitása a USFans oldalon",
+    "Eladói hivatkozás másolása",
+    "Hivatkozás másolva",
+    "Termékképek",
+    "Raktári képek / QC",
+    "Nincs megfelelő QC-kép.",
+    "Rendelés előtt",
+    "Független termékkatalógus és vásárlási útmutató.",
+    "Független oldal, nem kapcsolódik a USFanshoz. A hivatkozások jutalékot hozhatnak; nincs eredetiségi vagy minőségi garancia.",
+    "Katalógussorrend",
+    "Ár szerint növekvő",
+    "Ár szerint csökkenő",
+    "Nincs elérhető termék.",
+    "Teljes kategória az eredeti oldalon",
+    "Korábbi QC-képek, nem a saját rendelésed. A szín és változat eltérhet.",
+    "Eredeti termékazonosító",
+    "Kép nagyítása",
+    "Kép bezárása",
+    "Ajánlókód",
+    "A kategória ellenőrzése",
+    "Kategória böngészése",
+    "Méret és jellemzők",
+    "Képek ellenőrzése"
+  ],
+  "explore": [
+    "Felfedezés",
+    "Mentettek",
+    "Legutóbb megtekintett",
+    "Termék mentése",
+    "Mentés törlése",
+    "QC-képekkel",
+    "Termékkeret",
+    "Bármilyen ár",
+    "Szűrők törlése",
+    "Továbbiak",
+    "{shown} / {total} termék",
+    "Újra",
+    "Előzmények törlése",
+    "Összes kategória",
+    "Rendezés",
+    "Betöltés…",
+    "Árfolyam dátuma"
+  ],
+  "faq": [
+    [
+      "Hogyan vásárolhatok?",
+      "Nyisd meg a terméket és ugyanazt a hirdetést a USFans oldalon. Ellenőrizd a változatot és költségeket."
+    ],
+    [
+      "Mindent tartalmaz az ár?",
+      "Nem. Kínai belföldi és nemzetközi szállítás, valamint más díjak is felmerülhetnek."
+    ],
+    [
+      "Mit ellenőrizzek először?",
+      "Méretek, szín, mennyiség, csomagtartalom, aktuális ár és készlet."
+    ],
+    [
+      "Hogyan regisztráljak?",
+      "Használd a regisztrációs gombot a T2JMMC kóddal. A fiókot, rendelést és fizetést a USFans kezeli."
+    ],
+    [
+      "A QC-képek az én rendelésemről készültek?",
+      "Nem, korábbi referenciák. Beérkezés után a Warehouse oldalon nézd meg a saját képeidet."
+    ],
+    [
+      "Mit nézzek a QC-képeken?",
+      "Címkéket, színt, mennyiséget, varrásokat és látható hibákat. Kérj további képet vagy mérést, ha szükséges."
+    ],
+    [
+      "Összevonhatók a termékek?",
+      "Válassz raktári tételeket, amelyek ugyanazon útvonalon szállíthatók."
+    ],
+    [
+      "Hogyan kérjek visszaküldést?",
+      "A nemzetközi feladás előtt keresd az ügyfélszolgálatot a rendelésből. Feltételek, határidők és díjak eltérhetnek."
+    ],
+    [
+      "Mennyibe kerül a szállítás?",
+      "A cél, útvonal, csomagolt tömeg és méret határozza meg. Ellenőrizd a USFans aktuális ajánlatát."
+    ],
+    [
+      "Miért nincs szállítási útvonal?",
+      "Ellenőrizd a célországot és korlátozásokat, főleg folyadékoknál és akkumulátoroknál. Kérdezd az ügyfélszolgálatot."
+    ],
+    [
+      "Hol követhetem a csomagot?",
+      "Nyisd meg a Parcel oldalon. Frissítések hiányában add meg a csomagszámot az ügyfélszolgálatnak."
+    ],
+    [
+      "Ki segít fizetési problémánál?",
+      "A USFans az érintett rendelésen vagy csomagon keresztül. A katalógus nem módosíthatja ezeket."
+    ]
+  ],
+  "steps": [
+    [
+      "Válassz terméket a USFans oldalon",
+      "A nadrágok között nyisd meg az AMI rövidnadrág képét vagy nevét. Nézd meg a képeket és a referencia-QC-t, majd használd a vásárlási gombot."
+    ],
+    [
+      "Válassz változatot és méretet",
+      "A Style és Size mezőben válassz a mérések alapján. A Quantity értékét − / + gombbal állítsd, ellenőrizd a Total értéket és kattints Buy now."
+    ],
+    [
+      "Ellenőrizd a rendelést és fizetést",
+      "A Confirm Order oldalon ellenőrizd az SKU-t és darabszámot. Az Order Summary tartalmazza a Product Price és Domestic Freight (China) tételeket. Olvasd el a feltételeket a jóváhagyás és Submit előtt; nemzetközi szállítás nincs benne."
+    ],
+    [
+      "Kövesd a beszerzést",
+      "Nyisd meg az Order menüt. Válassz Payment Pending vagy más szűrőt, írj nevet vagy számot, majd Search. Olvasd el az üzeneteket."
+    ],
+    [
+      "Ellenőrizd a raktárt és QC-t",
+      "Beérkezés után nyisd meg a Warehouse oldalt és a saját rendelés képeit. Korábbi képek ezt nem helyettesítik."
+    ],
+    [
+      "Készíts csomagot",
+      "Válaszd ki a raktári tételeket, ellenőrizd a címzettet, országot, irányítószámot, útvonalat és csomagolást. Üres raktárnál nincs feladási űrlap."
+    ],
+    [
+      "Fizesd a nemzetközi szállítást",
+      "A Parcel oldalon válaszd a Payment Pending szűrőt és nyisd meg a csomagot. Fizetés előtt ellenőrizd az árat, tömeget és méreteket; csomagolás után változhatnak."
+    ],
+    [
+      "Várd meg a csomagolást",
+      "Az All Parcel alatt nyisd meg a megfelelő csomagot és nézd az állapotot. A fizetésre várás nem jelent feladást."
+    ],
+    [
+      "Kövesd a szállítást",
+      "Válaszd az In transit szűrőt, majd a csomagkövetést. Üres listában nincs követhető csomag."
+    ],
+    [
+      "Vedd át és ellenőrizd",
+      "Átvételi igazolás előtt ellenőrizd a tartalmat. A Received szűrő, nem igazoló gomb. Problémánál őrizd meg a képeket és csomagolást."
+    ]
+  ],
+  "tips": [
+    "Hasonlítsd össze a mérettáblát, formát, varrást és talpat; ellenőrizd a színt és dobozt.",
+    "Ellenőrizd a mell-, váll- és hosszméretet, az elülső és hátsó mintát.",
+    "Ellenőrizd a méreteket és darabszámot; az összeállítás képe nem bizonyítja a tartalmat.",
+    "Vizsgáld az ujjat, kapucnit, passzét, cipzárt, anyagot és bélést.",
+    "Mérj derekat, csípőt és hosszt; ellenőrizd a rugalmasságot, mennyiséget és visszaküldést.",
+    "Ellenőrizd a használható hosszt, szélességet, csatot, lyukakat és anyagot.",
+    "Hasonlítsd össze a méreteket, rekeszeket, pántokat, zárakat és tartozékokat.",
+    "Ellenőrizd a térfogatot, változatot és folyadékszállítást. Kép nem bizonyít illatot vagy eredetiséget.",
+    "Ellenőrizd a modellt, csatlakozókat, tápellátást, tartozékokat és akkumulátorkorlátozásokat.",
+    "Ellenőrizd a méreteket, zárakat és anyagot; kép nem bizonyít teljesítményt vagy eredetiséget."
+  ],
+  "types": [
+    "Rövidnadrág",
+    "Sportcipő",
+    "Lábbeli",
+    "Táska",
+    "Futballmez",
+    "Ruhaszett",
+    "Többmárkás ruhaszett",
+    "Mintás felső",
+    "Póló",
+    "Kapucnis pulóver",
+    "Cipzáras kapucnis pulóver",
+    "Sapka",
+    "Edzőpóló",
+    "Farmerdzseki",
+    "Kordbársony bomber",
+    "Kardigán",
+    "Dzseki",
+    "Koptatott mintás rövidnadrág",
+    "Boxeralsó",
+    "Nadrág",
+    "Öv",
+    "Kockás öv",
+    "Hátizsák",
+    "Utazótáska",
+    "Steppelt hobótáska",
+    "Parfüm",
+    "Okosóra",
+    "Hordozható Bluetooth-hangszóró",
+    "Fejhallgató",
+    "Vezeték nélküli töltőkészlet",
+    "Sportzokni",
+    "Szemüveg",
+    "Napszemüveg"
+  ],
+  "notes": [
+    "Fedezd fel a termékeket, hasonlítsd össze a részleteket és mentsd a kedvenceket.",
+    "Regisztrálj a USFans oldalon a készlet, szállítás és teljes ár ellenőrzéséhez.",
+    "A lista ebben a böngészőben sütivel tárolódik; nincs eszközök közötti szinkronizálás.",
+    "A lista átmenetileg nem érhető el. Próbáld újra.",
+    "Nincs találat: változtass kategóriát vagy keretet.",
+    "Mentsd a terméket a szív gombbal.",
+    "Nyiss meg egy terméket, hogy itt megjelenjen.",
+    "Tájékoztató átváltás; a végösszeget a USFans oldalon ellenőrizd.",
+    "A pénznem árfolyama nem érhető el; az árak USD-ben láthatók.",
+    "Valódi fiókoldal rendelések, raktári tételek vagy csomagok nélkül; részletek csak létező bejegyzésnél jelennek meg."
+  ]
+}

@@ -1,0 +1,228 @@
+{
+  "name": "Dansk",
+  "currency": "DKK",
+  "nav": [
+    "Hjem",
+    "Katalog",
+    "Kategorier",
+    "Begynderguide",
+    "Ofte stillede spørgsmål",
+    "Tilmeld dig USFans",
+    "Sprog",
+    "Valuta"
+  ],
+  "cats": [
+    "Sko og sandaler",
+    "T-shirts",
+    "Tøj",
+    "Hættetrøjer",
+    "Bukser og shorts",
+    "Bælter",
+    "Tasker",
+    "Parfume",
+    "Elektronik",
+    "Tilbehør"
+  ],
+  "labels": [
+    "Alle produkter",
+    "Detaljer",
+    "Registreret pris",
+    "Katalogpriser er vejledende; fragt og andre gebyrer kan tilkomme.",
+    "Fra valg til levering",
+    "Tilbage til kataloget",
+    "Åbn oprindeligt opslag",
+    "Åbn produkt på USFans",
+    "Kopiér sælgerlink",
+    "Link kopieret",
+    "Produktbilleder",
+    "Lagerbilleder / QC",
+    "Ingen tilsvarende QC-billeder.",
+    "Før bestilling",
+    "Uafhængigt produktkatalog med købsvejledning.",
+    "Uafhængig side uden tilknytning til USFans. Links kan give provision; ingen garanti for ægthed eller kvalitet.",
+    "Katalogrækkefølge",
+    "Laveste pris først",
+    "Højeste pris først",
+    "Ingen produkter tilgængelige.",
+    "Se hele kategorien hos kilden",
+    "Historiske QC-billeder, ikke din ordre. Farver og modeller kan variere.",
+    "Oprindeligt produkt-ID",
+    "Forstør billede",
+    "Luk billede",
+    "Henvisningskode",
+    "Kontrol af kategorien",
+    "Se kategorien",
+    "Størrelse og specifikation",
+    "Kontrollér billeder"
+  ],
+  "explore": [
+    "Udforsk",
+    "Gemte",
+    "Senest sete",
+    "Gem produkt",
+    "Fjern gemt produkt",
+    "Med QC-billeder",
+    "Produktbudget",
+    "Alle priser",
+    "Nulstil filtre",
+    "Vis flere",
+    "{shown} af {total} produkter",
+    "Prøv igen",
+    "Ryd historik",
+    "Alle kategorier",
+    "Sortér efter",
+    "Indlæser…",
+    "Kursdato"
+  ],
+  "faq": [
+    [
+      "Hvordan køber jeg?",
+      "Åbn produktet og samme opslag på USFans. Kontrollér variant og omkostninger før bestilling."
+    ],
+    [
+      "Er alle omkostninger med?",
+      "Nej. Indenrigsfragt i Kina, international fragt og andre gebyrer kan komme oveni."
+    ],
+    [
+      "Hvad skal jeg kontrollere?",
+      "Sammenlign mål, farve, antal, indhold, aktuel pris og lagerstatus."
+    ],
+    [
+      "Hvordan tilmelder jeg mig?",
+      "Brug registreringsknappen med T2JMMC. Konto, ordre og betaling håndteres af USFans."
+    ],
+    [
+      "Er QC-billederne fra min ordre?",
+      "Nej, de er historiske referencer. Se dine egne billeder i Warehouse efter ankomst."
+    ],
+    [
+      "Hvad skal QC vise?",
+      "Kontrollér mærker, farve, antal, syninger og synlige fejl. Bed om flere billeder eller mål ved behov."
+    ],
+    [
+      "Kan varer sendes samlet?",
+      "Vælg tilgængelige lagervarer, som er tilladt på samme fragtrute."
+    ],
+    [
+      "Hvordan anmoder jeg om retur?",
+      "Kontakt support via ordren før international afsendelse. Vilkår, frister og gebyrer varierer."
+    ],
+    [
+      "Hvad koster fragten?",
+      "Destination, rute, pakket vægt og mål afgør prisen. Se USFans aktuelle tilbud."
+    ],
+    [
+      "Hvorfor mangler en rute?",
+      "Kontrollér destination og varebegrænsninger, især væsker og batterier. Spørg support."
+    ],
+    [
+      "Hvor sporer jeg pakken?",
+      "Åbn pakken i Parcel. Giv support pakkenummeret, hvis opdateringer mangler."
+    ],
+    [
+      "Hvem hjælper med betaling?",
+      "USFans via den relevante ordre eller pakke. Kataloget kan ikke ændre dem."
+    ]
+  ],
+  "steps": [
+    [
+      "Vælg et produkt på USFans",
+      "Vælg bukser og åbn AMI-shorts via foto eller navn. Se billeder og reference-QC, og brug købsknappen."
+    ],
+    [
+      "Vælg variant og størrelse",
+      "Vælg Style og Size ud fra mål. Justér Quantity med − / +, kontrollér Total og klik Buy now."
+    ],
+    [
+      "Bekræft ordre og betaling",
+      "Kontrollér SKU og antal i Confirm Order. Order Summary viser Product Price og Domestic Freight (China). Læs vilkår før accept og Submit; international fragt er ikke med."
+    ],
+    [
+      "Følg købet",
+      "Åbn Order. Vælg Payment Pending eller andre filtre, skriv navn eller nummer, og klik Search. Læs eventuelle beskeder."
+    ],
+    [
+      "Kontrollér lager og QC",
+      "Åbn Warehouse efter ankomst og se billederne af din ordre. Historiske katalogbilleder erstatter ikke denne kontrol."
+    ],
+    [
+      "Opret pakken",
+      "Vælg lagervarer og kontrollér modtager, land, postnummer, rute og emballage. Et tomt lager viser ingen fragtformular."
+    ],
+    [
+      "Betal international fragt",
+      "Vælg Payment Pending i Parcel, åbn pakken og kontrollér pris, vægt og mål før betaling. Pakning kan ændre prisen."
+    ],
+    [
+      "Vent på pakning",
+      "Åbn den rigtige pakke i All Parcel og læs status. Afventende betaling betyder ikke, at pakken er sendt."
+    ],
+    [
+      "Følg transporten",
+      "Vælg In transit og åbn pakkens sporing. En tom liste indeholder ingen forsendelser."
+    ],
+    [
+      "Modtag og kontrollér",
+      "Kontrollér indhold før kvittering. Received er et filter, ikke en bekræftelsesknap. Gem billeder og emballage ved problemer."
+    ]
+  ],
+  "tips": [
+    "Sammenlign størrelsestabel, form, syninger og såler; kontrollér farve og æske.",
+    "Sammenlign bryst, skuldre og længde samt tryk foran og bagpå.",
+    "Kontrollér mål og antal dele; et outfitfoto beviser ikke indholdet.",
+    "Kontrollér ærmer, hætte, manchetter, lynlås, stof og for.",
+    "Mål talje, hofter og længde; kontrollér elasticitet, antal og returvilkår.",
+    "Kontrollér brugbar længde, bredde, spænde, huller og materiale.",
+    "Sammenlign mål, rum, remme, lukning og medfølgende dele.",
+    "Kontrollér volumen, variant og regler for væsker. Billeder beviser ikke duft eller ægthed.",
+    "Kontrollér model, stik, strøm og tilbehør samt batteribegrænsninger.",
+    "Kontrollér mål, lukninger og materialer; billeder beviser ikke funktion eller ægthed."
+  ],
+  "types": [
+    "Shorts",
+    "Sneakers",
+    "Fodtøj",
+    "Taske",
+    "Fodboldtrøjer",
+    "Tøjsæt",
+    "Sæt fra flere mærker",
+    "Trøje med tryk",
+    "T-shirt",
+    "Hættetrøje",
+    "Hættetrøje med lynlås",
+    "Kasket",
+    "Trænings-T-shirt",
+    "Denimjakke",
+    "Fløjlsbomber",
+    "Cardigan",
+    "Jakke",
+    "Vaskede shorts med tryk",
+    "Boxershorts",
+    "Bukser",
+    "Bælte",
+    "Ternet bælte",
+    "Rygsæk",
+    "Rejsetaske",
+    "Quiltet hobotaske",
+    "Parfume",
+    "Smartwatch",
+    "Bærbar Bluetooth-højttaler",
+    "Hovedtelefoner",
+    "Trådløst opladersæt",
+    "Sportsstrømper",
+    "Briller",
+    "Solbriller"
+  ],
+  "notes": [
+    "Udforsk produkter, sammenlign detaljer og gem favoritter.",
+    "Tilmeld dig USFans for lagerstatus, fragt og samlet pris.",
+    "Listen gemmes i denne browser med en cookie; ingen synkronisering mellem enheder.",
+    "Listen er midlertidigt utilgængelig. Prøv igen.",
+    "Ingen resultater: skift kategori eller budget.",
+    "Gem et produkt med hjerteknappen.",
+    "Åbn et produkt for at se det her.",
+    "Kun vejledende omregning; kontrollér slutbeløbet på USFans.",
+    "Ingen kurs for valutaen; priser vises i USD.",
+    "Ægte kontoside uden ordrer, lagervarer eller pakker; detaljer vises først ved en eksisterende registrering."
+  ]
+}

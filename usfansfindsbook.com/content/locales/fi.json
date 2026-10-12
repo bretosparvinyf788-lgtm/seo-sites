@@ -1,0 +1,228 @@
+{
+  "name": "Suomi",
+  "currency": "EUR",
+  "nav": [
+    "Etusivu",
+    "Tuoteluettelo",
+    "Kategoriat",
+    "Aloittelijan opas",
+    "Usein kysyttyä",
+    "Rekisteröidy USFansiin",
+    "Kieli",
+    "Valuutta"
+  ],
+  "cats": [
+    "Kengät ja sandaalit",
+    "T-paidat",
+    "Vaatteet",
+    "Hupparit",
+    "Housut ja shortsit",
+    "Vyöt",
+    "Laukut",
+    "Hajuvedet",
+    "Elektroniikka",
+    "Asusteet"
+  ],
+  "labels": [
+    "Kaikki tuotteet",
+    "Tiedot",
+    "Tallennettu hinta",
+    "Luettelohinnat ovat suuntaa antavia; toimitus ja muut kulut voivat tulla lisäksi.",
+    "Valinnasta toimitukseen",
+    "Takaisin luetteloon",
+    "Avaa alkuperäinen ilmoitus",
+    "Avaa tuote USFansissa",
+    "Kopioi myyjän linkki",
+    "Linkki kopioitu",
+    "Tuotekuvat",
+    "Varastokuvat / QC",
+    "Vastaavia QC-kuvia ei ole saatavilla.",
+    "Ennen tilaamista",
+    "Riippumaton tuoteluettelo ja osto-ohjeet.",
+    "Riippumaton sivusto, ei USFansin kumppani. Linkeistä voi kertyä palkkiota; aitoutta tai laatua ei taata.",
+    "Luettelojärjestys",
+    "Halvin ensin",
+    "Kallein ensin",
+    "Ei tuotteita saatavilla.",
+    "Avaa koko lähdekategoria",
+    "Historiallisia QC-kuvia, ei omasta tilauksestasi. Väri ja malli voivat poiketa.",
+    "Alkuperäisen tuotteen tunnus",
+    "Suurenna kuva",
+    "Sulje kuva",
+    "Suosittelukoodi",
+    "Kategorian tarkistuslista",
+    "Selaa kategoriaa",
+    "Koko ja ominaisuudet",
+    "Tarkista kuvat"
+  ],
+  "explore": [
+    "Tutustu",
+    "Tallennetut",
+    "Äskettäin katsotut",
+    "Tallenna tuote",
+    "Poista tallennettu",
+    "QC-kuvilla",
+    "Tuotebudjetti",
+    "Kaikki hinnat",
+    "Tyhjennä suodattimet",
+    "Näytä lisää",
+    "{shown} / {total} tuotetta",
+    "Yritä uudelleen",
+    "Tyhjennä historia",
+    "Kaikki kategoriat",
+    "Järjestä",
+    "Ladataan…",
+    "Kurssipäivä"
+  ],
+  "faq": [
+    [
+      "Miten ostan?",
+      "Avaa tuote ja sama ilmoitus USFansissa. Tarkista vaihtoehto ja kulut ennen tilaamista."
+    ],
+    [
+      "Sisältääkö hinta kaiken?",
+      "Ei. Kiinan sisäinen toimitus, kansainvälinen kuljetus ja muut maksut voivat tulla lisäksi."
+    ],
+    [
+      "Mitä tarkistan ensin?",
+      "Vertaa mittoja, väriä, määrää, sisältöä sekä ajantasaista hintaa ja saatavuutta."
+    ],
+    [
+      "Miten rekisteröidyn?",
+      "Käytä rekisteröintipainiketta ja koodia T2JMMC. USFans hoitaa tilin, tilauksen ja maksun."
+    ],
+    [
+      "Ovatko QC-kuvat tilauksestani?",
+      "Eivät. Ne ovat historiallisia viitekuvia. Tarkista omat kuvasi Warehouse-sivulta saapumisen jälkeen."
+    ],
+    [
+      "Mitä QC-kuvista tarkistetaan?",
+      "Merkinnät, väri, määrä, saumat ja näkyvät virheet. Pyydä tarvittaessa lisäkuvia tai mittoja."
+    ],
+    [
+      "Voiko tuotteet yhdistää?",
+      "Valitse varastosta tuotteet, jotka voidaan lähettää samalla kuljetusreitillä."
+    ],
+    [
+      "Miten pyydän palautusta?",
+      "Ota yhteyttä tilauksen kautta ennen kansainvälistä lähetystä. Ehdot, määräajat ja maksut vaihtelevat."
+    ],
+    [
+      "Mitä toimitus maksaa?",
+      "Kohde, reitti, pakattu paino ja mitat ratkaisevat. Tarkista USFansin ajantasainen tarjous."
+    ],
+    [
+      "Miksi reittiä ei löydy?",
+      "Tarkista kohde ja tuoterajoitukset, erityisesti nesteet ja akut. Kysy asiakaspalvelusta."
+    ],
+    [
+      "Missä seuraan pakettia?",
+      "Avaa paketti Parcel-sivulla. Anna pakettinumero asiakaspalvelulle, jos päivityksiä puuttuu."
+    ],
+    [
+      "Kuka auttaa maksuissa?",
+      "USFans kyseisen tilauksen tai paketin kautta. Tämä luettelo ei voi muuttaa niitä."
+    ]
+  ],
+  "steps": [
+    [
+      "Valitse tuote USFansissa",
+      "Valitse housukategoria ja avaa AMI-shortsit kuvasta tai nimestä. Tarkista kuvat ja viite-QC ja käytä ostopainiketta."
+    ],
+    [
+      "Valitse vaihtoehto ja koko",
+      "Valitse Style ja Size mittojen perusteella. Muuta Quantity painikkeilla − / +, tarkista Total ja valitse Buy now."
+    ],
+    [
+      "Vahvista tilaus ja maksu",
+      "Tarkista SKU ja määrä Confirm Order -sivulla. Order Summary näyttää Product Price ja Domestic Freight (China). Lue ehdot ennen hyväksymistä ja Submit-painiketta; kansainvälinen toimitus ei sisälly."
+    ],
+    [
+      "Seuraa ostoa",
+      "Avaa Order. Käytä Payment Pending -suodatinta tai muita suodattimia, kirjoita nimi tai numero ja paina Search. Lue mahdolliset viestit."
+    ],
+    [
+      "Tarkista varasto ja QC",
+      "Avaa Warehouse tuotteen saavuttua ja tarkista oman tilauksesi kuvat. Luettelon historialliset kuvat eivät korvaa tarkistusta."
+    ],
+    [
+      "Valmistele paketti",
+      "Valitse varastotuotteet ja tarkista vastaanottaja, maa, postinumero, reitti ja pakkaus. Tyhjä varasto ei näytä lähetyslomaketta."
+    ],
+    [
+      "Maksa kansainvälinen toimitus",
+      "Valitse Parcel-sivulla Payment Pending ja avaa paketti. Tarkista hinta, paino ja mitat ennen maksua; pakkaaminen voi muuttaa hintaa."
+    ],
+    [
+      "Odota pakkaamista",
+      "Avaa oikea paketti All Parcel -näkymässä ja tarkista tila. Odottava maksu ei tarkoita lähetettyä pakettia."
+    ],
+    [
+      "Seuraa kuljetusta",
+      "Valitse In transit ja avaa paketin seuranta. Tyhjässä luettelossa ei ole seurattavia lähetyksiä."
+    ],
+    [
+      "Vastaanota ja tarkista",
+      "Tarkista sisältö ennen vastaanoton vahvistamista. Received on suodatin, ei vahvistuspainike. Säilytä kuvat ja pakkaus ongelmatilanteessa."
+    ]
+  ],
+  "tips": [
+    "Vertaa kokotaulukkoa, muotoa, saumoja ja pohjia; tarkista väri ja pakkaus.",
+    "Vertaa rinnan, hartioiden ja pituuden mittoja sekä painatuksia molemmin puolin.",
+    "Tarkista mitat ja vaatekappaleiden määrä; asukuva ei todista sisältöä.",
+    "Tarkista hihat, huppu, resorit, vetoketju, kangas ja vuori.",
+    "Mittaa vyötärö, lantio ja pituus; tarkista jousto, määrä ja palautusehdot.",
+    "Tarkista käyttökelpoinen pituus, leveys, solki, reiät ja materiaali.",
+    "Vertaa mittoja, lokeroita, hihnoja, sulkimia ja mukana tulevia osia.",
+    "Tarkista tilavuus, versio ja nesteiden kuljetus. Kuvat eivät todista tuoksua tai aitoutta.",
+    "Tarkista malli, liitännät, virransyöttö, tarvikkeet ja akkurajoitukset.",
+    "Tarkista mitat, sulkimet ja materiaalit. Kuvat eivät todista suorituskykyä tai aitoutta."
+  ],
+  "types": [
+    "Shortsit",
+    "Tennarit",
+    "Jalkineet",
+    "Laukku",
+    "Jalkapallopaidat",
+    "Vaatesetti",
+    "Eri merkkien vaatesetit",
+    "Kuvioitu paita",
+    "T-paita",
+    "Huppari",
+    "Vetoketjuhuppari",
+    "Lippalakki",
+    "Treenipaita",
+    "Farkkutakki",
+    "Vakosamettibomber",
+    "Neuletakki",
+    "Takki",
+    "Pestyt kuviolliset shortsit",
+    "Bokserit",
+    "Housut",
+    "Vyö",
+    "Ruudullinen vyö",
+    "Reppu",
+    "Matkalaukku",
+    "Tikattu hobolaukku",
+    "Hajuvesi",
+    "Älykello",
+    "Kannettava Bluetooth-kaiutin",
+    "Kuulokkeet",
+    "Langaton lataussetti",
+    "Urheilusukat",
+    "Silmälasit",
+    "Aurinkolasit"
+  ],
+  "notes": [
+    "Tutustu tuotteisiin, vertaa tietoja ja tallenna suosikkisi.",
+    "Rekisteröidy USFansiin tarkistaaksesi saatavuuden, toimituksen ja kokonaishinnan.",
+    "Lista tallentuu tähän selaimeen evästeellä; ei laitteiden välistä synkronointia.",
+    "Lista ei ole tilapäisesti saatavilla. Yritä uudelleen.",
+    "Ei tuloksia: vaihda kategoriaa tai budjettia.",
+    "Tallenna tuote sydänpainikkeella.",
+    "Avaa tuote, jotta näet sen täällä.",
+    "Muunnos on suuntaa antava; tarkista loppusumma USFansissa.",
+    "Valuutan kurssia ei ole saatavilla; hinnat näytetään USD-määräisinä.",
+    "Aito tilisivu ilman tilauksia, varastotuotteita tai paketteja; tiedot näkyvät vasta olemassa olevalle tietueelle."
+  ]
+}
