@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://usfansparcelguide.com/sitemap.xml

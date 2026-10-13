@@ -1,0 +1,15 @@
+{
+  "version": 1,
+  "include": [
+    "/*"
+  ],
+  "exclude": [
+    "/sitemap.xml",
+    "/robots.txt",
+    "/_next/*",
+    "/guide-platform/*",
+    "/favicon.png",
+    "/favicon.svg",
+    "/usfans-logo.webp"
+  ]
+}

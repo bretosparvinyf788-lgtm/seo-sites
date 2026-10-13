@@ -7,7 +7,7 @@
   },
   "scripts": {
     "dev": "vinext dev",
-    "build": "vinext build && node scripts/build-pages.mjs",
+    "build": "node --experimental-strip-types scripts/generate-static-seo.mjs && vinext build && node scripts/build-pages.mjs",
     "verify": "node scripts/verify-pages.mjs"
   },
   "dependencies": {

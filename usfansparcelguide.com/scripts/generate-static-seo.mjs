@@ -1,0 +1,10 @@
+import {writeFile} from 'node:fs/promises';
+import {categories,SITE} from '../lib/catalog.ts';
+import {languages,localeHref} from '../lib/locales.ts';
+const paths=['/','/catalog','/categories','/updates',...categories.map(c=>`/category/${c.slug}`),'/guides/how-to-order'];
+const escape=value=>value.replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&apos;'}[c]));
+const entries=paths.flatMap(path=>languages.map(lang=>`<url><loc>${escape(SITE+localeHref(lang.code,path))}</loc>${languages.map(l=>`<xhtml:link rel="alternate" hreflang="${l.locale}" href="${escape(SITE+localeHref(l.code,path))}"/>`).join('')}</url>`));
+await writeFile('public/sitemap.xml',`<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">\n${entries.join('\n')}\n</urlset>\n`);
+await writeFile('public/robots.txt',`User-agent: *\nAllow: /\n\nSitemap: ${SITE}/sitemap.xml\n`);
+await writeFile('public/_headers','/sitemap.xml\n  Content-Type: application/xml; charset=utf-8\n  Cache-Control: public, max-age=300\n/robots.txt\n  Content-Type: text/plain; charset=utf-8\n  Cache-Control: public, max-age=300\n');
+console.log(`Generated ${entries.length} canonical sitemap URLs.`);

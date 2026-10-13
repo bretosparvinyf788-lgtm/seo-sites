@@ -1,0 +1,169 @@
+{
+  "../../../sites/usfans-finds-app/node_modules/.pnpm/vinext@1.0.0-beta.5_@vitejs+plugin-react@6.0.2_vite@8.0.13_@types+node@22.19.19_esbuild_83db80f580ed9bdd6c2d1523b512e93c/node_modules/vinext/dist/shims/internal/app-route-prefetch-policy.js": {
+    "file": "_next/static/chunks/app-route-prefetch-policy-yYGh-QhW.js",
+    "name": "app-route-prefetch-policy",
+    "src": "../../../sites/usfans-finds-app/node_modules/.pnpm/vinext@1.0.0-beta.5_@vitejs+plugin-react@6.0.2_vite@8.0.13_@types+node@22.19.19_esbuild_83db80f580ed9bdd6c2d1523b512e93c/node_modules/vinext/dist/shims/internal/app-route-prefetch-policy.js",
+    "isDynamicEntry": true,
+    "imports": [
+      "virtual:vinext-app-browser-entry"
+    ]
+  },
+  "../../../sites/usfans-finds-app/node_modules/.pnpm/vinext@1.0.0-beta.5_@vitejs+plugin-react@6.0.2_vite@8.0.13_@types+node@22.19.19_esbuild_83db80f580ed9bdd6c2d1523b512e93c/node_modules/vinext/dist/shims/layout-segment-context.js": {
+    "file": "_next/static/chunks/layout-segment-context-pEz_IFE6.js",
+    "name": "layout-segment-context",
+    "src": "../../../sites/usfans-finds-app/node_modules/.pnpm/vinext@1.0.0-beta.5_@vitejs+plugin-react@6.0.2_vite@8.0.13_@types+node@22.19.19_esbuild_83db80f580ed9bdd6c2d1523b512e93c/node_modules/vinext/dist/shims/layout-segment-context.js",
+    "isDynamicEntry": true,
+    "imports": [
+      "_rolldown-runtime-C60lm6uB.js",
+      "virtual:vinext-app-browser-entry",
+      "_framework-D_rUT4EX.js"
+    ]
+  },
+  "../../../sites/usfans-finds-app/node_modules/.pnpm/vinext@1.0.0-beta.5_@vitejs+plugin-react@6.0.2_vite@8.0.13_@types+node@22.19.19_esbuild_83db80f580ed9bdd6c2d1523b512e93c/node_modules/vinext/dist/shims/streamed-icons.js": {
+    "file": "_next/static/chunks/streamed-icons-tr6xnzDJ.js",
+    "name": "streamed-icons",
+    "src": "../../../sites/usfans-finds-app/node_modules/.pnpm/vinext@1.0.0-beta.5_@vitejs+plugin-react@6.0.2_vite@8.0.13_@types+node@22.19.19_esbuild_83db80f580ed9bdd6c2d1523b512e93c/node_modules/vinext/dist/shims/streamed-icons.js",
+    "isDynamicEntry": true,
+    "imports": [
+      "_rolldown-runtime-C60lm6uB.js",
+      "_framework-D_rUT4EX.js"
+    ]
+  },
+  "_Icon-D0zGVybZ.js": {
+    "file": "_next/static/chunks/Icon-D0zGVybZ.js",
+    "name": "Icon",
+    "imports": [
+      "_rolldown-runtime-C60lm6uB.js",
+      "_framework-D_rUT4EX.js"
+    ]
+  },
+  "_content-CDyfxBlF.js": {
+    "file": "_next/static/chunks/content-CDyfxBlF.js",
+    "name": "content",
+    "imports": [
+      "_rolldown-runtime-C60lm6uB.js",
+      "_Icon-D0zGVybZ.js",
+      "_framework-D_rUT4EX.js"
+    ]
+  },
+  "_dist-ChliZCQ5.js": {
+    "file": "_next/static/chunks/dist-ChliZCQ5.js",
+    "name": "dist",
+    "imports": [
+      "_rolldown-runtime-C60lm6uB.js",
+      "_utils-D6oq06MT.js",
+      "_framework-D_rUT4EX.js"
+    ]
+  },
+  "_framework-D_rUT4EX.js": {
+    "file": "_next/static/chunks/framework-D_rUT4EX.js",
+    "name": "framework",
+    "imports": [
+      "_rolldown-runtime-C60lm6uB.js"
+    ]
+  },
+  "_rolldown-runtime-C60lm6uB.js": {
+    "file": "_next/static/chunks/rolldown-runtime-C60lm6uB.js",
+    "name": "rolldown-runtime"
+  },
+  "_utils-D6oq06MT.js": {
+    "file": "_next/static/chunks/utils-D6oq06MT.js",
+    "name": "utils",
+    "imports": [
+      "_rolldown-runtime-C60lm6uB.js",
+      "_framework-D_rUT4EX.js"
+    ]
+  },
+  "_x-DVaYOpIi.js": {
+    "file": "_next/static/chunks/x-DVaYOpIi.js",
+    "name": "x",
+    "imports": [
+      "_content-CDyfxBlF.js"
+    ]
+  },
+  "app/components/guide-screenshot.tsx": {
+    "file": "_next/static/chunks/guide-screenshot-BQ-RBjvE.js",
+    "name": "guide-screenshot",
+    "src": "app/components/guide-screenshot.tsx",
+    "isDynamicEntry": true,
+    "imports": [
+      "_rolldown-runtime-C60lm6uB.js",
+      "_content-CDyfxBlF.js",
+      "_utils-D6oq06MT.js",
+      "_dist-ChliZCQ5.js",
+      "_x-DVaYOpIi.js",
+      "_framework-D_rUT4EX.js"
+    ]
+  },
+  "app/components/guide-step-navigation.tsx": {
+    "file": "_next/static/chunks/guide-step-navigation-DEPrZN0N.js",
+    "name": "guide-step-navigation",
+    "src": "app/components/guide-step-navigation.tsx",
+    "isDynamicEntry": true,
+    "imports": [
+      "_rolldown-runtime-C60lm6uB.js",
+      "_framework-D_rUT4EX.js"
+    ]
+  },
+  "app/components/interactive.tsx": {
+    "file": "_next/static/chunks/interactive-CKX8iMvR.js",
+    "name": "interactive",
+    "src": "app/components/interactive.tsx",
+    "isDynamicEntry": true,
+    "imports": [
+      "_rolldown-runtime-C60lm6uB.js",
+      "app/components/preferences.tsx",
+      "_content-CDyfxBlF.js",
+      "_utils-D6oq06MT.js",
+      "_dist-ChliZCQ5.js",
+      "_x-DVaYOpIi.js",
+      "_framework-D_rUT4EX.js"
+    ]
+  },
+  "app/components/page-tour.tsx": {
+    "file": "_next/static/chunks/page-tour-CJiPFAn4.js",
+    "name": "page-tour",
+    "src": "app/components/page-tour.tsx",
+    "isDynamicEntry": true,
+    "imports": [
+      "_rolldown-runtime-C60lm6uB.js",
+      "_content-CDyfxBlF.js",
+      "_x-DVaYOpIi.js",
+      "_framework-D_rUT4EX.js"
+    ]
+  },
+  "app/components/preferences.tsx": {
+    "file": "_next/static/chunks/preferences-DYxemXVh.js",
+    "name": "preferences",
+    "src": "app/components/preferences.tsx",
+    "isDynamicEntry": true,
+    "imports": [
+      "_rolldown-runtime-C60lm6uB.js",
+      "_content-CDyfxBlF.js",
+      "_utils-D6oq06MT.js",
+      "_framework-D_rUT4EX.js"
+    ]
+  },
+  "virtual:vinext-app-browser-entry": {
+    "file": "_next/static/chunks/index-BszxYSXO.js",
+    "name": "index",
+    "src": "virtual:vinext-app-browser-entry",
+    "isEntry": true,
+    "imports": [
+      "_rolldown-runtime-C60lm6uB.js",
+      "_framework-D_rUT4EX.js"
+    ],
+    "dynamicImports": [
+      "../../../sites/usfans-finds-app/node_modules/.pnpm/vinext@1.0.0-beta.5_@vitejs+plugin-react@6.0.2_vite@8.0.13_@types+node@22.19.19_esbuild_83db80f580ed9bdd6c2d1523b512e93c/node_modules/vinext/dist/shims/internal/app-route-prefetch-policy.js",
+      "app/components/guide-screenshot.tsx",
+      "app/components/interactive.tsx",
+      "app/components/preferences.tsx",
+      "../../../sites/usfans-finds-app/node_modules/.pnpm/vinext@1.0.0-beta.5_@vitejs+plugin-react@6.0.2_vite@8.0.13_@types+node@22.19.19_esbuild_83db80f580ed9bdd6c2d1523b512e93c/node_modules/vinext/dist/shims/layout-segment-context.js",
+      "virtual:vinext-app-browser-entry",
+      "app/components/page-tour.tsx",
+      "app/components/guide-step-navigation.tsx",
+      "../../../sites/usfans-finds-app/node_modules/.pnpm/vinext@1.0.0-beta.5_@vitejs+plugin-react@6.0.2_vite@8.0.13_@types+node@22.19.19_esbuild_83db80f580ed9bdd6c2d1523b512e93c/node_modules/vinext/dist/shims/streamed-icons.js",
+      "_Icon-D0zGVybZ.js"
+    ]
+  }
+}
