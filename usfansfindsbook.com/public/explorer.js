@@ -21,7 +21,8 @@ function render(){
  cards.forEach(card=>card.hidden=true);grid.append(...matches);matches.slice(0,state.limit).forEach(card=>card.hidden=false);
  const waiting=personal&&!state.ready;
  el('resultCount').textContent=words.results.replace('{shown}',Math.min(state.limit,matches.length)).replace('{total}',matches.length);
- el('loadMore').hidden=waiting||matches.length<=state.limit;
+ el('browseAll').hidden=personal;
+ el('loadMore').hidden=!personal||waiting||matches.length<=state.limit;
  el('listState').hidden=matches.length>0&&!waiting;
  el('listStateText').textContent=waiting?(state.error?words.storageError:words.loading):state.view==='saved'&&!state.saved.length?words.emptySaved:state.view==='recent'&&!state.recent.length?words.emptyRecent:words.emptyFilter;
  el('retryList').hidden=!waiting||!state.error;
