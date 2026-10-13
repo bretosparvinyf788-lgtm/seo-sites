@@ -42,3 +42,14 @@
 [dir=rtl] .guide-shot{direction:ltr}[dir=rtl] .beginner-index{border-left:1px solid var(--line);border-right:0}
 [dir=rtl] .guide-click-list li,[dir=rtl] .footer-top,[dir=rtl] .detail-copy{text-align:right}
 @media(max-width:600px){.language .dropdown{position:fixed;top:76px;left:12px;right:12px;width:auto;max-height:65vh}.controls{gap:8px}}
+
+
+/* Category navigation remains visible and wraps on narrow screens. */
+.breadcrumbs{margin:0 0 24px;font-size:13px;line-height:1.6;color:#666}
+.breadcrumbs ol{display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 0;list-style:none;margin:0;padding:0}
+.breadcrumbs li{display:flex;align-items:baseline;min-width:0;overflow-wrap:anywhere}
+.breadcrumbs li+li:before{content:"/";padding:0 10px;color:#999}
+.breadcrumbs a{color:inherit;text-decoration:underline;text-underline-offset:3px}
+.breadcrumbs a:hover,.breadcrumbs [aria-current="page"]{color:#171717}
+.breadcrumbs a:focus-visible{outline:2px solid currentColor;outline-offset:4px}
+@media(max-width:600px){.breadcrumbs{margin-bottom:18px;font-size:12px}.breadcrumbs li+li:before{padding:0 7px}}
