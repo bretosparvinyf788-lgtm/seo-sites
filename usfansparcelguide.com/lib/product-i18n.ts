@@ -1,0 +1,6 @@
+import { t, type Lang } from './content';
+import type { Product } from './catalog';
+const terms:[string,string][]=[['TECH FLEECE jacket & pants set','TECH FLEECE 夹克与裤子套装'],['GEL-NYC sneakers','GEL-NYC 运动鞋'],['Hanes boxer briefs','Hanes 平角内裤'],['Zip-up hoodie','拉链卫衣'],['Football shirt','足球球衣'],['Clothing set','服装套装'],['Boxer briefs','平角内裤'],['Eyeglass frames','眼镜框'],['Sunglasses','太阳镜'],['T-shirt','T 恤'],['Sneakers','运动鞋'],['Slippers','拖鞋'],['Trousers','长裤'],['Shorts','短裤'],['Jeans','牛仔裤'],['Hoodie','卫衣'],['Jacket','夹克'],['Clothing','服装'],['Wallet','钱包'],['Bag','包袋'],['Belt','腰带'],['Perfume','香水'],['Electronics','电子产品'],['Accessory','配饰'],['Watch','手表'],['Washed','水洗'],['Embroidered','刺绣'],['Graphic','印花'],['Relaxed-fit','宽松版型']];
+const escape=(s:string)=>s.replace(/[.*+?^${}()|[\]\\]/g,'\\$&');
+const pattern=new RegExp('(?<![A-Za-z0-9])(?:'+terms.map(([en])=>escape(en)).join('|')+')(?![A-Za-z0-9])','gi');
+export function productTitle(product:Product,lang:Lang){if(lang==='zh')return product.originalTitle.replace(/^DJ[-—]*/,'').replace(/[-—]?reptz\d+$/,'');if(lang==='en')return product.title;return product.title.replace(pattern,match=>{const term=terms.find(([en])=>en.toLowerCase()===match.toLowerCase());return term?t(lang,...term):match;});}

@@ -1,0 +1,1 @@
+export default function NotFound(){return <main className="site-main"><div className="empty-state"><h1>Page not found</h1><p>This page does not exist. Browse the catalog to find a product.</p><a className="button primary" href="/catalog">Browse finds</a></div></main>;}
