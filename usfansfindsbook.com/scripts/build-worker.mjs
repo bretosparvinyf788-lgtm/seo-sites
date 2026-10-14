@@ -1,5 +1,7 @@
 import {readFile,writeFile,mkdir,cp} from 'node:fs/promises';
 import {runtimeSource} from './catalog-runtime.mjs';
+import {prepareLiveTemplates} from './prepare-live-templates.mjs';
+await prepareLiveTemplates();
 await mkdir('dist/server',{recursive:true});
 await cp('worker.js','dist/server/index.js');
 await cp('source-catalog.js','dist/server/source-catalog.js');

@@ -19,7 +19,7 @@ test('source detail uses its actual category, gallery and correct referral',()=>
 test('live route serves page 9, preserves language/page/sort and resets sort through navigation',async()=>{
  const originalFetch=globalThis.fetch,calls=[];
  globalThis.fetch=async url=>{url=new URL(url);calls.push(url);return new Response(url.searchParams.get('page')==='9'?last:url.searchParams.get('sort_asc')==='asc'?low:first);};
- const env={ASSETS:{async fetch(request){return new Response(await readFile(`dist/client${new URL(request.url).pathname}index.html`,'utf8'));}}};
+ const env={ASSETS:{async fetch(request){return new Response(await readFile(`dist/client${new URL(request.url).pathname}`,'utf8'));}}};
  try{
   let response=await serveLivePage(new Request('https://example.test/zh/categories/pants/?page=9&sort=0'),env);
   assert.equal(response.status,200);let {document}=parseHTML(await response.text());assert.equal(document.querySelectorAll('.listing .product').length,32);assert.equal(document.querySelector('[data-live-total]').dataset.liveTotal,'432');
@@ -34,7 +34,7 @@ test('live route serves page 9, preserves language/page/sort and resets sort thr
 test('previously unlisted product has a separate live detail and can be saved',async()=>{
  const originalFetch=globalThis.fetch;globalThis.fetch=async()=>new Response(product);
  const env={
-  ASSETS:{async fetch(){return new Response(await readFile('dist/client/zh/spreadsheet/index.html','utf8'));}},
+  ASSETS:{async fetch(){return new Response(await readFile('dist/client/live-templates/zh/all.txt','utf8'));}},
   DB:{prepare(){return {bind(){return {async all(){return {results:[{product:'3294',saved_at:1,viewed_at:null}]};},async run(){return {};}};}};}}
  };
  try{

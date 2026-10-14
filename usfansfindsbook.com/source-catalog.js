@@ -81,7 +81,7 @@ export async function serveLivePage(request,env,ctx){
  const detail=segments.length===2&&segments[0]==='products'&&validProductId(segments[1]);if(!listing&&!detail)return null;
  if(!['GET','HEAD'].includes(request.method))return new Response('Method not allowed',{status:405});
  if(!u.pathname.endsWith('/')){u.pathname+='/';return Response.redirect(u.href,301);}
- const assetURL=new URL(request.url);assetURL.search='';assetURL.pathname=listing?u.pathname:pathFor(lang,'spreadsheet/');
+ const assetURL=new URL(request.url);assetURL.search='';assetURL.pathname=`/live-templates/${lang}/${listing&&segments[0]==='categories'?segments[1]:'all'}.txt`;
  const asset=await env.ASSETS.fetch(new Request(assetURL));if(!asset.ok)return asset;
  let html=await boundedText(asset);
  try{

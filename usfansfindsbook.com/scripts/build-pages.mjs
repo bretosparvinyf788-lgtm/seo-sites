@@ -1,5 +1,8 @@
 import {readFile,writeFile} from 'node:fs/promises';
 import {bundledWorker} from './catalog-runtime.mjs';
+import {prepareLiveTemplates} from './prepare-live-templates.mjs';
+import {existsSync} from 'node:fs';
+if(existsSync('dist/client/spreadsheet/index.html'))await prepareLiveTemplates();
 let worker=await bundledWorker();
 worker=worker.replace('const url=new URL(request.url);',`const url=new URL(request.url);
  if(url.hostname==='www.usfansfindsbook.com'){url.hostname='usfansfindsbook.com';url.protocol='https:';return Response.redirect(url.toString(),301);}`);
