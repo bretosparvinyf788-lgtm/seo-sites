@@ -1,4 +1,4 @@
-export type Product = { id: string; title: string; originalTitle: string; image: string; price: number; category: number; sourceUrl: string; gallery?: string[]; qc?: string[]; buy?: string; marketplaceUrl?: string };
+export type Product = { id: string; title: string; originalTitle: string; image: string; price: number; category: number; sourceUrl: string; gallery?: string[]; qc?: string[]; buy?: string; marketplaceUrl?: string; sourceReferences?: string[]; gallerySource?: 'weidian' };
 export const SOURCE = 'https://www.kakobuymake.com';
 export const REGISTER = 'https://usfans.com/register?ref=T2JMMC';
 export const SITE = 'https://usfansparcelguide.com';
@@ -48,8 +48,8 @@ export function parseDetail(html:string,id:string):Product {
  const qc:string[]=[];for(const section of html.matchAll(/<(?:section|div)\b[^>]*(?:id|class)="[^"]*(?:qc[-_ ]?(?:photos|gallery)|quality[-_ ]?control)[^"]*"[^>]*>([\s\S]*?)<\/(?:section|div)>/gi)) for(const im of section[1].matchAll(/<img\b[^>]*(?:data-src|src)="([^"]+)"/gi)){const src=image(im[1]);if(src&&!qc.includes(src))qc.push(src);}
  let buy='';for(const m of html.matchAll(/<a\b[^>]*href="([^"]+)"[^>]*>/gi))try{const u=new URL(decode(m[1]));if(['usfans.com','www.usfans.com'].includes(u.hostname)&&/^\/product\/\d+\/\d+$/.test(u.pathname)){u.searchParams.set('ref','T2JMMC');buy=u.href;break;}}catch{}
  const cat=inferCategory(originalTitle);const price=Number(clean(capture(html,/<span\b[^>]*class="current-price price"[^>]*>([\s\S]*?)<\/span>/i)).replace(/[^0-9.]/g,''));
- const itemId=buy.match(/\/product\/3\/(\d+)/)?.[1];
- return {id,originalTitle,title:englishTitle(originalTitle,cat),image:cover,price,category:cat,gallery,qc,buy,marketplaceUrl:itemId?`https://weidian.com/item.html?itemID=${itemId}`:undefined,sourceUrl:`${SOURCE}/?m=home&c=View&a=index&aid=${id}`};
+ const itemId=buy.match(/\/product\/3\/(\d+)/)?.[1] || capture(decode(html),/weidian\.com\/item\.html\?itemID=(\d+)/i);
+ return {id,originalTitle,title:englishTitle(originalTitle,cat),image:cover,price,category:cat,gallery:itemId?[]:[cover],sourceReferences:gallery,qc,buy,marketplaceUrl:itemId?`https://weidian.com/item.html?itemID=${itemId}`:undefined,sourceUrl:`${SOURCE}/?m=home&c=View&a=index&aid=${id}`};
 }
 export async function readSource(url:URL|string) {
  let edgeCache:Cache|undefined;const key=new Request(String(url));
@@ -59,4 +59,19 @@ export async function readSource(url:URL|string) {
  return text;
 }
 export async function getCatalog(category=0,page=1,sort='newest') {const u=new URL(SOURCE);u.searchParams.set('m','home');u.searchParams.set('c','Lists');u.searchParams.set('a','index');u.searchParams.set('tid',String(category||1));u.searchParams.set('page',String(page));if(sort==='price-low'||sort==='price-high'){u.searchParams.set('sort','price');u.searchParams.set('sort_asc',sort==='price-low'?'asc':'desc');}else {u.searchParams.set('sort','new');u.searchParams.set('sort_asc','desc');}return parseCatalog(await readSource(u),category);}
-export async function getProduct(id:string) {if(!/^[1-9]\d{0,9}$/.test(id))throw new Error('Invalid product');return parseDetail(await readSource(`${SOURCE}/?m=home&c=View&a=index&aid=${id}`),id);}
+export function parseWeidianGallery(html:string,itemId:string):string[]{
+ const tag=html.match(/<script\b[^>]*id=["']__rocker-render-inject__["'][^>]*>/i)?.[0];
+ const payload=tag?.match(/data-obj="([^"]*)"/i)?.[1];if(!payload)return [];
+ try{const data=JSON.parse(decode(payload));const info=data?.result?.default_model?.item_info;
+  if(String(info?.item_id)!==itemId||!Array.isArray(info.imgs))return [];
+  return [...new Set<string>(info.imgs.filter((value:unknown):value is string=>typeof value==='string').map((value:string)=>{try{const u=new URL(value);return u.protocol==='https:'&&(u.hostname==='geilicdn.com'||u.hostname.endsWith('.geilicdn.com'))?u.href:'';}catch{return '';}}).filter(Boolean))].slice(0,50);
+ }catch{return [];}
+}
+export async function getProduct(id:string) {
+ if(!/^[1-9]\d{0,9}$/.test(id))throw new Error('Invalid product');
+ const product=parseDetail(await readSource(`${SOURCE}/?m=home&c=View&a=index&aid=${id}`),id);
+ if(product.marketplaceUrl){const itemId=new URL(product.marketplaceUrl).searchParams.get('itemID')!;
+  try{const photos=parseWeidianGallery(await readSource(product.marketplaceUrl),itemId);if(photos.length){product.gallery=photos;product.gallerySource='weidian';}}catch{}
+ }
+ return product;
+}
