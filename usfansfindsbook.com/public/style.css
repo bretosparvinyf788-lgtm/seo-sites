@@ -36,6 +36,7 @@
 .guide-login-help{margin:0 20px 20px;border-top:1px solid var(--line)}.guide-login-help>summary{padding:16px 0;font-size:16px;cursor:pointer}.guide-login-help .guide-real-screen{padding:0}
 
 /* Expanded locale menu and right-to-left reading. */
+.gallery-unavailable{min-height:320px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:20px;padding:24px}.gallery-unavailable p{text-align:center}.seller-gallery-label{margin:0 0 12px}
 .language .dropdown{width:380px;max-height:65vh;overflow:auto;display:grid;grid-template-columns:1fr 1fr;gap:3px}
 .language .dropdown a{gap:12px;min-width:0}.language .dropdown a span{font-size:10px;opacity:.65}
 .currencies{max-height:60vh;overflow:auto}[data-price]{unicode-bidi:isolate}

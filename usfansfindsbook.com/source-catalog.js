@@ -55,6 +55,26 @@ export async function getLiveCatalog(category,page=1,sort='0',ctx){
  return parseSourceCatalog(await readSource(u,ctx),category);
 }
 export async function getLiveProduct(id,ctx){if(!validProductId(id))throw Error('Invalid ID');return parseSourceProduct(await readSource(new URL(`/?m=home&c=View&a=index&aid=${id}`,sourceOrigin),ctx),id);}
+function sellerImage(value){if(typeof value!=='string')return '';try{const u=new URL(value);return u.protocol==='https:'&&u.hostname==='si.geilicdn.com'?u.href:'';}catch{return '';}}
+export function parseWeidianGallery(html,itemId){
+ const encoded=capture(html,/<script\b[^>]*id="__rocker-render-inject__"[^>]*data-obj="([^"]+)"/i);
+ if(!encoded)throw Error('Seller gallery missing');
+ const item=JSON.parse(decode(encoded))?.result?.default_model?.item_info;
+ if(String(item?.item_id)!==itemId||!Array.isArray(item?.imgs))throw Error('Seller item mismatch');
+ const images=[...new Set(item.imgs.map(sellerImage).filter(Boolean))].slice(0,40);
+ if(!images.length)throw Error('Seller images unavailable');
+ return {itemId,images};
+}
+export async function getSellerGallery(product,ctx){
+ if(!/^https:\/\/weidian\.com\/item\.html\?itemID=\d+$/.test(product.market||'')||!/^\d+$/.test(product.item_id||''))throw Error('No verified Weidian listing');
+ const url=new URL(product.market),key=new Request(url);let cache;
+ try{if(typeof caches!=='undefined'){cache=caches.default;const hit=await cache.match(key);if(hit)return parseWeidianGallery(await boundedText(hit),product.item_id);}}catch{}
+ const response=await fetch(url,{headers:{'Accept':'text/html','User-Agent':'Mozilla/5.0'},signal:AbortSignal.timeout(15000)});
+ if(!response.ok)throw Error(`Seller status ${response.status}`);
+ const html=await boundedText(response),gallery=parseWeidianGallery(html,product.item_id);
+ if(cache){const put=cache.put(key,new Response(html,{headers:{'Content-Type':'text/html; charset=utf-8','Cache-Control':'public, max-age=300'}})).catch(()=>{});if(ctx)ctx.waitUntil(put);else await put;}
+ return gallery;
+}
 export function localizedTitle(p,lang){
  const known=runtimeData.featured[p.id]?.titles?.[lang];if(known)return known;
  const words=runtimeData.locales[lang]||runtimeData.locales.en;
@@ -74,7 +94,7 @@ function withQuery(html,url){
  const params=new URLSearchParams();for(const key of ['page','sort'])if(url.searchParams.has(key))params.set(key,url.searchParams.get(key));const suffix=params.size?'?'+escapeHTML(params.toString()):'';
  return html.replace(/(<link\b[^>]*(?:rel="canonical"|rel="alternate")[^>]*href=")([^"]+)(")/g,(m,a,b,c)=>a+b.split('?')[0]+suffix+c).replace(/(<div class="dropdown">)([\s\S]*?)(<\/div>)/,(m,a,b,c)=>a+b.replace(/href="([^"]+)"/g,(m,h)=>`href="${h.split('?')[0]}${suffix}"`)+c);
 }
-function responseHTML(html,status=200){return new Response(html,{status,headers:{'Content-Type':'text/html; charset=utf-8','Cache-Control':status===200?'public, max-age=0, must-revalidate':'no-store','X-Content-Type-Options':'nosniff','X-Findsbook-Catalog':'live-main-v1'}});}
+function responseHTML(html,status=200){return new Response(html,{status,headers:{'Content-Type':'text/html; charset=utf-8','Cache-Control':status===200?'public, max-age=0, must-revalidate':'no-store','X-Content-Type-Options':'nosniff','X-Findsbook-Catalog':'weidian-carousel-v1'}});}
 export async function serveLivePage(request,env,ctx){
  const u=new URL(request.url);const segments=u.pathname.split('/').filter(Boolean);let lang='en';if(runtimeData.locales[segments[0]])lang=segments.shift();
  const t=runtimeData.locales[lang];const listing=segments.length===1&&segments[0]==='spreadsheet'||segments.length===2&&segments[0]==='categories'&&categorySlugs.includes(segments[1]);
@@ -95,10 +115,13 @@ export async function serveLivePage(request,env,ctx){
   }else{
    const p=await getLiveProduct(segments[1],ctx),title=localizedTitle(p,lang),category=t.cats[categorySlugs.indexOf(p.category)];
    if(!p.qc_images.length)p.qc_images=runtimeData.featured[p.id]?.qc_images||[];
-   const images=p.images.map((im,i)=>`<button data-image="${escapeHTML(im)}"><img src="${escapeHTML(im)}" alt="${escapeHTML(title)} ${i+1}" loading="lazy"></button>`).join('');
-   const refs=p.images.slice(1);
+   let seller;try{seller=await getSellerGallery(p,ctx)}catch(error){console.error(JSON.stringify({event:'seller_gallery_error',id:p.id,message:error.message}));}
+   const sellerImages=seller?.images||[];
+   const images=sellerImages.map((im,i)=>`<button data-image="${escapeHTML(im)}"><img src="${escapeHTML(im)}" alt="${escapeHTML(title)} ${i+1}" loading="lazy"></button>`).join('');
+   const references=p.qc_images.length?p.qc_images:p.images;
+   const mainGallery=sellerImages.length?`<div class="main-photo" data-gallery-source="weidian" data-seller-item="${p.item_id}"><button class="main-image-zoom" data-zoom="${escapeHTML(sellerImages[0])}" aria-label="${escapeHTML(t.viewImage)}"><img id="mainPhoto" src="${escapeHTML(sellerImages[0])}" alt="${escapeHTML(title)}"></button></div><div class="thumbnails">${images}</div>`:`<div class="main-photo gallery-unavailable"><p>${escapeHTML(t.sellerUnavailable)}</p><a class="secondary" href="${escapeHTML(u.pathname)}">${escapeHTML(t.explorer.retry)}</a></div>`;
    const zooms=photos=>photos.map((im,i)=>`<button data-zoom="${escapeHTML(im)}" aria-label="${escapeHTML(t.viewImage)} ${i+1}"><img src="${escapeHTML(im)}" alt="${escapeHTML(title)} ${i+1}" width="400" height="400" loading="lazy"></button>`).join('');
-   const body=`<section class="section detail-page" data-current-product="${p.id}"><div class="breadcrumbs"><ol><li><a href="${pathFor(lang,'spreadsheet/')}">${escapeHTML(t.nav[1])}</a></li><li><a href="${pathFor(lang,`categories/${p.category}/`)}">${escapeHTML(category)}</a></li><li aria-current="page">#${p.id}</li></ol></div><div class="detail-grid"><div><div class="main-photo"><button class="main-image-zoom" data-zoom="${escapeHTML(p.image)}" aria-label="${escapeHTML(t.viewImage)}"><img id="mainPhoto" src="${escapeHTML(p.image)}" alt="${escapeHTML(title)}"></button></div><div class="thumbnails">${images}</div></div><div class="detail-copy"><div class="detail-save">${heart(p,t)}<span>${escapeHTML(t.explorer.saved)}</span></div><div class="kicker">${escapeHTML(category)}</div><h1>${escapeHTML(title)}</h1><p class="detail-price" data-price="${p.price}">$${p.price.toFixed(2)}</p><p class="fine">${escapeHTML(t.priceNote)}</p><p class="source-id">${escapeHTML(t.itemId)}: <strong>${escapeHTML(p.item_id||p.id)}</strong></p>${p.buy?`<a class="button wide" href="${escapeHTML(p.buy)}" target="_blank" rel="sponsored noopener">${escapeHTML(t.buy)}</a>`:''}${p.market?`<button class="copy text-link" data-copy="${escapeHTML(p.market)}" data-copied="${escapeHTML(t.copied)}">${escapeHTML(t.copy)} ⧉</button>`:''}<div class="checklist"><h3>${escapeHTML(t.check)}</h3>${t.checks.map(s=>`<p>✓ ${escapeHTML(s)}</p>`).join('')}</div><p class="source-original">${escapeHTML(p.original_title)}</p></div></div><section class="qc-panel"><h2>${escapeHTML(t.qc)}</h2><p>${escapeHTML(p.qc_images.length?t.qcNote:t.noqc)}</p>${p.qc_images.length?`<div class="qc-grid">${zooms(p.qc_images)}</div>`:''}</section>${refs.length?`<section class="qc-panel"><h2>${escapeHTML(t.photos)}</h2><p>${escapeHTML(t.referenceNote)}</p><div class="qc-grid">${zooms(refs)}</div></section>`:''}<a class="secondary" href="${pathFor(lang,`categories/${p.category}/`)}">${escapeHTML(category)} →</a></section>`;
+   const body=`<section class="section detail-page" data-current-product="${p.id}"><div class="breadcrumbs"><ol><li><a href="${pathFor(lang,'spreadsheet/')}">${escapeHTML(t.nav[1])}</a></li><li><a href="${pathFor(lang,`categories/${p.category}/`)}">${escapeHTML(category)}</a></li><li aria-current="page">#${p.id}</li></ol></div><div class="detail-grid"><div><p class="fine seller-gallery-label">Weidian · ${escapeHTML(t.photos)}</p>${mainGallery}</div><div class="detail-copy"><div class="detail-save">${heart(p,t)}<span>${escapeHTML(t.explorer.saved)}</span></div><div class="kicker">${escapeHTML(category)}</div><h1>${escapeHTML(title)}</h1><p class="detail-price" data-price="${p.price}">$${p.price.toFixed(2)}</p><p class="fine">${escapeHTML(t.priceNote)}</p><p class="source-id">${escapeHTML(t.itemId)}: <strong>${escapeHTML(p.item_id||p.id)}</strong></p>${p.buy?`<a class="button wide" href="${escapeHTML(p.buy)}" target="_blank" rel="sponsored noopener">${escapeHTML(t.buy)}</a>`:''}${p.market?`<button class="copy text-link" data-copy="${escapeHTML(p.market)}" data-copied="${escapeHTML(t.copied)}">${escapeHTML(t.copy)} ⧉</button>`:''}<div class="checklist"><h3>${escapeHTML(t.check)}</h3>${t.checks.map(s=>`<p>✓ ${escapeHTML(s)}</p>`).join('')}</div><p class="source-original">${escapeHTML(p.original_title)}</p></div></div><section class="qc-panel" data-gallery-source="main-qc-reference"><h2>${escapeHTML(t.qcReference)}</h2><p>${escapeHTML(references.length?t.referenceNote:t.noqc)}</p>${references.length?`<div class="qc-grid">${zooms(references)}</div>`:''}</section><a class="secondary" href="${pathFor(lang,`categories/${p.category}/`)}">${escapeHTML(category)} →</a></section>`;
    const path=`products/${p.id}/`;
    html=html.replace(/<main id="main">[\s\S]*?<\/main>/,`<main id="main">${body}</main>`).replace(/<title>[\s\S]*?<\/title>/,`<title>${escapeHTML(title)} | USFans Findsbook</title>`).replace(/<h1>[\s\S]*?<\/h1>/,`<h1>${escapeHTML(title)}</h1>`);
    html=html.replace(/(<link\b[^>]*(?:rel="canonical"|rel="alternate")[^>]*href=")([^"]+)(")/g,(m,a,b,c)=>a+b.replace(/spreadsheet\/$/,path)+c).replace(/(<div class="dropdown">)([\s\S]*?)(<\/div>)/,(m,a,b,c)=>a+b.replace(/spreadsheet\//g,path)+c).replace(/<meta property="og:title" content="[^"]*">/,`<meta property="og:title" content="${escapeHTML(title)}">`).replace(/(<meta property="og:url" content=")[^"]+"/,`$1https://usfansfindsbook.com${pathFor(lang,path)}"`);
