@@ -1,0 +1,11 @@
+import {readFile,writeFile,mkdir,cp} from 'node:fs/promises';
+import {runtimeSource} from './catalog-runtime.mjs';
+await mkdir('dist/server',{recursive:true});
+await cp('worker.js','dist/server/index.js');
+await cp('source-catalog.js','dist/server/source-catalog.js');
+await writeFile('dist/server/catalog-runtime-data.js',await runtimeSource());
+const products=JSON.parse(await readFile('catalog.json','utf8'));
+await writeFile('dist/server/product-ids.js',`export const productIds=${JSON.stringify(products.map(p=>p.id))};\n`);
+await mkdir('dist/.openai',{recursive:true});
+await cp('.openai/hosting.json','dist/.openai/hosting.json');
+await cp('drizzle','dist/.openai/drizzle',{recursive:true});

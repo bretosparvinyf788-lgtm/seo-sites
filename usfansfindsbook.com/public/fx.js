@@ -13,6 +13,7 @@ document.querySelectorAll('[data-budget-usd]').forEach(el=>el.textContent='≤ '
 document.querySelectorAll('[data-currency]').forEach(b=>{b.disabled=false;b.setAttribute('aria-pressed',String(b.dataset.currency===currency))});
 document.querySelectorAll('[data-fx-status]').forEach(el=>el.textContent=(currency!==wanted?w.unavailable:currency==='USD'?w.base:w.date+': '+data.dates[currency]+' · Frankfurter')+' '+w.notice)}
 function accept(d){if(!d||!d.rates||!d.dates)return;for(const c of quotes)if(Number.isFinite(d.rates[c])&&d.rates[c]>0&&fresh(d.dates[c])&&(!data.dates[c]||d.dates[c]>=data.dates[c])){data.rates[c]=d.rates[c];data.dates[c]=d.dates[c]}draw()}
+document.addEventListener('findsbook:prices',draw);
 document.querySelectorAll('[data-currency]').forEach(b=>b.addEventListener('click',()=>{wanted=b.dataset.currency;try{localStorage.setItem('findsbook-currency',wanted)}catch{}draw();b.closest('details').open=false}));
 try{accept(JSON.parse(localStorage.getItem('findsbook-fx-v2')||'null'))}catch{}draw();
 (async()=>{try{const r=await fetch('/fx-rates.json',{cache:'no-cache'});if(r.ok)accept(await r.json())}catch{}

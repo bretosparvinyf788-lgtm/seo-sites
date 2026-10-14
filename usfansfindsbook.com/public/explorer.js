@@ -15,7 +15,7 @@ function render(){
  document.querySelectorAll('[data-category-filter]').forEach(b=>{const active=b.dataset.categoryFilter===state.category;b.classList.toggle('active',active);b.setAttribute('aria-pressed',String(active))});
  const personal=state.view!=='discover';el('storageNote').hidden=!personal;el('clearRecent').hidden=state.view!=='recent'||!state.ready||!state.recent.length;
  const sort=el('exploreSort').value;
- let matches=cards.filter(card=>(state.view==='discover'||state[state.view].includes(card.dataset.id))&&(state.category==='all'||card.dataset.category===state.category));
+ let matches=cards.filter(card=>(state.view==='discover'?!card.hasAttribute('data-personal-card'):state[state.view].includes(card.dataset.id))&&(state.category==='all'||card.dataset.category===state.category));
  if(sort!=='0')matches.sort((a,b)=>(Number(a.dataset.cost)-Number(b.dataset.cost))*(sort==='1'?1:-1));
  else if(personal)matches.sort((a,b)=>state[state.view].indexOf(a.dataset.id)-state[state.view].indexOf(b.dataset.id));
  cards.forEach(card=>card.hidden=true);grid.append(...matches);matches.slice(0,state.limit).forEach(card=>card.hidden=false);
@@ -32,7 +32,8 @@ function render(){
 function reset(){state.category='all';state.limit=10;el('exploreSort').value='0'}
 function changeView(view){state.view=['saved','recent'].includes(view)?view:'discover';reset();render()}
 function accept(data){if(!Array.isArray(data.saved)||!Array.isArray(data.recent))throw Error('Invalid list');state.saved=data.saved;state.recent=data.recent;state.ready=true;state.error=false;render()}
-async function load(){state.error=false;render();try{accept(await api());const current=document.querySelector('[data-current-product]')?.dataset.currentProduct;if(current)accept(await api('POST',{action:'view',id:current}))}catch{state.error=true;render()}}
+async function hydrate(data){if(!grid)return;const missing=[...new Set([...data.saved,...data.recent])].filter(id=>!cards.some(card=>card.dataset.id===id));for(let i=0;i<missing.length;i+=24){const response=await fetch('/api/products?lang='+encodeURIComponent(document.documentElement.lang)+'&ids='+missing.slice(i,i+24).join(','),{credentials:'same-origin'});if(!response.ok)throw Error('Products unavailable');const result=await response.json();for(const html of result.cards){const container=document.createElement('div');container.innerHTML=html;const card=container.firstElementChild;if(!card||cards.some(c=>c.dataset.id===card.dataset.id))continue;card.setAttribute('data-personal-card','');card.hidden=true;cards.push(card);grid.append(card);bindSave(card.querySelector('[data-save]'));}document.dispatchEvent(new Event('findsbook:prices'));}}
+async function load(){state.error=false;render();try{const data=await api();await hydrate(data);accept(data);const current=document.querySelector('[data-current-product]')?.dataset.currentProduct;if(current)accept(await api('POST',{action:'view',id:current}))}catch{state.error=true;render()}}
 if(grid){
  document.querySelectorAll('[data-view]').forEach(b=>b.addEventListener('click',()=>{history.replaceState(null,'','#'+b.dataset.view);changeView(b.dataset.view)}));
  document.querySelectorAll('[data-category-filter]').forEach(b=>b.addEventListener('click',()=>{state.category=b.dataset.categoryFilter;state.limit=10;render()}));
@@ -45,10 +46,11 @@ if(grid){
  addEventListener('hashchange',()=>changeView(location.hash.slice(1)));
  changeView(location.hash.slice(1));
 }
-document.querySelectorAll('[data-save]').forEach(button=>button.addEventListener('click',async()=>{
+function bindSave(button){if(!button)return;button.addEventListener('click',async()=>{
  if(!state.ready){await load();if(!state.ready){toast(words.storageError);return}}
  const id=button.dataset.save,remove=state.saved.includes(id);document.querySelectorAll('[data-save]').forEach(b=>b.disabled=true);
  try{accept(await api('POST',{action:remove?'unsave':'save',id}));toast(remove?words.removedToast:words.savedToast)}catch{toast(words.storageError);paintSaved()}
-}));
+});}
+document.querySelectorAll('[data-save]').forEach(bindSave);
 load();
 })();
