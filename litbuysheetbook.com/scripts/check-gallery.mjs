@@ -1,0 +1,23 @@
+import fs from 'node:fs';
+import vm from 'node:vm';
+import assert from 'node:assert/strict';
+import worker from '../worker/index.js';
+const context=vm.createContext({URL,URLSearchParams,AbortSignal});
+vm.runInContext(fs.readFileSync('src/data.js','utf8')+';this.parse=parseSellerGallery;',context);
+const itemId='7757300773';
+function html(id,images){return '<script id="__rocker-render-inject__" data-obj="'+JSON.stringify({result:{default_model:{item_info:{item_id:id,imgs:images},sku_properties:{attr_list:[{attr_values:[{img:'https://si.geilicdn.com/style.jpg'}]}]}}}}).replaceAll('"','&quot;')+'"></script>';}
+const valid=html(itemId,['https://si.geilicdn.com/main.jpg','https://si.geilicdn.com/main.jpg','https://outside.example/image.jpg']);
+const parsed=context.parse(valid,itemId);
+assert.equal(parsed.images.length,1);assert.equal(parsed.styles.length,1);
+assert.throws(()=>context.parse(valid,'99999'),/mismatch/);
+assert.throws(()=>context.parse('<html>unavailable</html>',itemId),/missing/);
+assert.throws(()=>context.parse(html(itemId,['http://si.geilicdn.com/image.jpg']),itemId),/No seller/);
+globalThis.fetch=async()=>new Response(valid);
+let response=await worker.fetch(new Request('https://litbuysheetbook.com/api/gallery?id=2944'));
+assert.equal(response.status,200);assert.equal((await response.json()).itemId,itemId);
+globalThis.fetch=async()=>new Response(html('wrong',['https://si.geilicdn.com/a.jpg']));
+response=await worker.fetch(new Request('https://litbuysheetbook.com/api/gallery?id=2944'));
+assert.equal(response.status,502);
+response=await worker.fetch(new Request('https://litbuysheetbook.com/api/gallery?id=../1'));
+assert.equal(response.status,400);
+console.log('PASS seller ID, image host and scheme, duplicates, styles, unavailable response, invalid input.');

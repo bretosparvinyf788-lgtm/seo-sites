@@ -1,0 +1,13 @@
+{
+  "name": "litbuysheetbook-com",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/build-pages.mjs",
+    "check": "node scripts/check.mjs",
+    "validate": "node scripts/validate-artifact.mjs"
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}

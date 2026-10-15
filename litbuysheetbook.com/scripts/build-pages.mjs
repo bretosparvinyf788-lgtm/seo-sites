@@ -1,0 +1,12 @@
+import fs from 'node:fs';
+import {execFileSync} from 'node:child_process';
+fs.mkdirSync('worker',{recursive:true});
+execFileSync(process.execPath,['scripts/assemble.mjs'],{stdio:'inherit'});
+execFileSync(process.execPath,['scripts/check.mjs'],{stdio:'inherit'});
+fs.rmSync('dist',{recursive:true,force:true});
+fs.mkdirSync('dist',{recursive:true});
+fs.copyFileSync('worker/index.js','dist/_worker.js');
+fs.copyFileSync('fixtures/favicon.png','dist/favicon.png');
+fs.writeFileSync('dist/_routes.json',JSON.stringify({version:1,include:['/*'],exclude:[]}));
+execFileSync(process.execPath,['scripts/validate-artifact.mjs'],{stdio:'inherit'});
+console.log('Cloudflare Pages build complete: dist/_worker.js');
