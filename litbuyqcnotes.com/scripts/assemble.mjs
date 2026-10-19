@@ -19,4 +19,4 @@ for(const file of ['data.js','content.js','notes.js','retention.js','sheet.js'])
 code+=localeExtension+'\n'+faqExtension+'\n'+beginnerExtension+'\n';
 code+='const CSS='+JSON.stringify(fs.readFileSync('src/style.css','utf8'))+';\nconst CLIENT='+JSON.stringify(titleCode+fs.readFileSync('src/client.js','utf8')+'\n'+fs.readFileSync('src/retention-client.js','utf8'))+';\n';
 for(const file of ['render.js','beginner.js','server.js'])code+=fs.readFileSync('src/'+file,'utf8')+'\n';
-fs.writeFileSync('worker/index.js',code);console.log('Assembled QC Notes:',snapshot.length,'new source products,',archive.length,'previous selection items retained for bookmarks,',Object.values(references).flat().length,'local references.');
+fs.mkdirSync('worker',{recursive:true});fs.writeFileSync('worker/index.js',code);console.log('Assembled QC Notes:',snapshot.length,'new source products,',archive.length,'previous selection items retained for bookmarks,',Object.values(references).flat().length,'local references.');
