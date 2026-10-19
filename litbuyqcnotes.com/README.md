@@ -38,3 +38,7 @@ node scripts/check-pages.mjs
 Checks cover 24 languages, complete guide content, all 11 guide images, native step anchors, 648 sitemap URLs, product/category links, source outage behavior, saved/currency/history/note controls, HTTPS redirects and static-asset MIME types. Canonical URLs and hreflang follow the served origin. Private preview and Pages preview hosts remain noindex; only the exact custom domain is indexable. Saved pages and error responses are not indexed.
 
 The retained `.openai/hosting.json` identifies the separate private Sites preview and does not contain credentials. `npm run build` continues to build that preview artifact; `build:pages` is the external Cloudflare target. Keep domain verification codes and the site’s dedicated Analytics measurement in the source when configured; never add account credentials.
+
+## Dedicated Analytics
+
+GA4 measurement: `G-9HK1RS4WJZ`, web stream `16156581128` in the VIP Sites Analytics account. The tag is emitted only on the canonical public origin, so private development and Pages preview traffic are not sent to the public site’s property. No credentials, visitor notes or order data are embedded in the tag.
