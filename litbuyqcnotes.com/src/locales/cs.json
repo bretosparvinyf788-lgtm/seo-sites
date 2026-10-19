@@ -1,0 +1,197 @@
+{
+  "name": "Čeština",
+  "ui": [
+    "Úvod",
+    "Produkty",
+    "Kategorie",
+    "Průvodci",
+    "Časté dotazy",
+    "Registrovat se na Litbuy",
+    "VYBRANÉ PRODUKTY · DÍL 01",
+    "Tabulka produktů",
+    "Objevujte produkty, prohlédněte si podrobnosti a fotografie a naplánujte další objednávku.",
+    "Prohlédnout produkty",
+    "Jak začít",
+    "VÝBĚR QC NOTES",
+    "Stojí za bližší pohled",
+    "Zobrazit všechny produkty",
+    "Najděte svou kategorii",
+    "Deset kategorií pro snazší výběr dalšího produktu.",
+    "Nákupní průvodce",
+    "Od prvního produktu k první zásilce.",
+    "Odpovědi na vaše otázky",
+    "Nezávislý výběr produktů pro nakupující přes Litbuy.",
+    "Některé odkazy jsou partnerské a mohou nám přinést provizi. Jde o nezávislý web, nikoli oficiální web Litbuy.",
+    "Řadit podle",
+    "Nejnovější",
+    "Cena: od nejnižší",
+    "Cena: od nejvyšší",
+    "Předchozí",
+    "Další",
+    "Strana",
+    "Zobrazit na Litbuy",
+    "Pouze orientační cena zboží. Doprava, doplňkové služby a konečná částka se účtují zvlášť.",
+    "Fotografie produktu",
+    "QC a referenční fotografie",
+    "Fotografie pocházejí z galerie zdrojového produktu a mohou zobrazovat dřívější kus nebo šarži. Nezaručují stav vaší objednávky. Před odesláním zkontrolujte vlastní skladové fotografie.",
+    "Pro tento produkt nejsou k dispozici další kontrolní fotografie.",
+    "Tento produkt je dočasně nedostupný.",
+    "Zkusit znovu",
+    "Zpět na produkty",
+    "Jazyk",
+    "Měna",
+    "Nabídka",
+    "Přečíst průvodce",
+    "ID produktu na tržišti",
+    "Původní název produktu",
+    "Produktové a kontrolní či referenční fotografie se zobrazují odděleně.",
+    "Přepočet měny je orientační. Konečné poplatky se stanoví při platbě.",
+    "Na této stránce nebyly nalezeny žádné produkty.",
+    "Všechny kategorie",
+    "Uložené produkty",
+    "Uložit produkt",
+    "Odebrat uložený produkt",
+    "Zobrazení seznamu",
+    "Zobrazení fotografií",
+    "Aktualizováno 14. října 2026",
+    "Zdrojový katalog je dočasně nedostupný. Zkuste to znovu."
+  ],
+  "categories": [
+    "Boty a pantofle",
+    "Trička",
+    "Oblečení",
+    "Mikiny s kapucí",
+    "Kalhoty",
+    "Opasky",
+    "Tašky",
+    "Parfémy",
+    "Elektronika",
+    "Ostatní produkty"
+  ],
+  "terms": [
+    "Tričko",
+    "Polokošile",
+    "Fotbalový dres",
+    "Tepláková souprava",
+    "Svetr",
+    "Šortky",
+    "Tenisky",
+    "Taška",
+    "Brýle",
+    "Náramek",
+    "Džíny",
+    "Mikina s kapucí",
+    "Opasek",
+    "Parfém",
+    "Elektronika",
+    "Doplněk",
+    "Oblečení",
+    "Pantofle",
+    "Kalhoty",
+    "Boxerky",
+    "Bunda",
+    "Kšiltovka",
+    "Šála"
+  ],
+  "retention": [
+    "Váš výběr čeká na pokračování",
+    "Ukládejte produkty, sledujte orientační mezisoučet a vraťte se k podrobnostem, které zvažujete.",
+    "Mezisoučet uložených produktů",
+    "Pouze orientační ceny zboží. Doprava a volitelné služby nejsou zahrnuty.",
+    "Pokračujte, kde jste skončili",
+    "Otevřete stránku produktu a začněte seznam naposledy prohlížených položek.",
+    "Vymazat historii",
+    "Vaše osobní QC poznámky",
+    "Ke každému produktu ukládejte samostatné připomínky. Prohlédněte si referenční fotografie a zapište, co chcete ještě ověřit.",
+    "Vyberte produkt",
+    "Zaznamenané kontroly",
+    "Osobní poznámky",
+    "Například: porovnat délku rukávu nebo požádat o detailní fotografii zapínání.",
+    "Uloženo v tomto prohlížeči",
+    "Obnovit tento produkt",
+    "Zobrazit QC a referenční fotografie",
+    "Jde o vaše připomínky, nikoli schválenou kontrolu kvality nebo kontrolu vlastní objednávky.",
+    "Více z vašich kategorií",
+    "Odkazy podle uložených a naposledy prohlížených produktů.",
+    "Úložiště prohlížeče není dostupné. Změny zůstanou pouze na této stránce.",
+    "Referenční fotografie jsou dočasně nedostupné. Otevřete produkt a zkuste to znovu."
+  ],
+  "checks": [
+    "Potvrďte ID nabídky a zvolenou variantu",
+    "Ověřte, zda jsou viditelné detaily dostatečně jasné",
+    "Zapište důležité rozměry nebo specifikace",
+    "Poznamenejte nezodpovězené otázky"
+  ],
+  "notes": [
+    "Objevujte produkty, ověřujte detaily a upřesňujte svůj výběr.",
+    "Zatím nemáte uložené produkty. Použijte záložku u produktu.",
+    "Referenční snímky, nikoli kontrola vaší objednávky",
+    "Zdrojový výběr zachycen 14. října 2026",
+    "Otevřít produkt",
+    "Zavřít",
+    "Aktuální zdroj je dočasně nedostupný.",
+    "Zobrazuje se uložený zdrojový výběr. Pro aktuální produkty zkuste načtení znovu.",
+    "Stránka nebyla nalezena",
+    "Uloženo pouze v tomto prohlížeči. Nejde o nákupní košík Litbuy.",
+    "Fotografie prodejce se nepodařilo načíst. Původní hlavní snímek zůstává dostupný."
+  ],
+  "sheet": [
+    "Produkt",
+    "Kategorie",
+    "Orientační cena",
+    "QC / fotografie",
+    "Akce",
+    "Vybrané produkty",
+    "Všechny produkty",
+    "Uložené produkty",
+    "Viditelné produkty",
+    "Přejetím zobrazíte všechny sloupce",
+    "Kompaktní",
+    "Prostorné",
+    "Prohlédnout celý katalog",
+    "Vaše tabulka produktů.",
+    "Porovnávejte ceny, ukládejte oblíbené produkty a prohlížejte jejich QC referenční fotografie."
+  ],
+  "faq": [
+    [
+      "Jak zobrazím více než dvanáct produktů na úvodní stránce?",
+      "Dvanáct úvodních položek je výběr, ne celý katalog. Otevřete kategorii a její úplnou stránku nebo zvolte Zobrazit všechny produkty. Kategorie mají řazení podle ceny a stránkování. Pokud zdroj neodpovídá, upozornění označí případný uložený referenční výběr."
+    ],
+    [
+      "Kam přejdu po kliknutí na produkt?",
+      "Obrázek nebo název nejdříve otevře samostatnou stránku produktu v tomto webu, s ID, orientační cenou a dostupnými fotografiemi. Zobrazit na Litbuy následně otevře odpovídající nabídku přes náš partnerský odkaz. Před platbou na Litbuy ověřte velikost, barvu, množství a aktuální cenu."
+    ],
+    [
+      "Kontrolují QC reference přesně kus z mé objednávky?",
+      "Ne. Jde o dřívější fotografie ze zdrojové galerie, které mohou zobrazovat jinou barvu, starší šarži nebo produkt jiného kupujícího. Pomáhají posoudit detaily, ale nepotvrzují kvalitu vaší objednávky. Před odesláním zkontrolujte skladové fotografie vlastního nákupu na Litbuy."
+    ],
+    [
+      "Jak fungují čtyři kontrolní body a osobní poznámky?",
+      "Vyberte produkt v QC poznámkách, označte zaznamenané kontroly a otevřete Osobní poznámky pro připomínku. Každý produkt ukládá údaje odděleně v tomto prohlížeči. Počítadlo ukazuje záznamy, nikoli hodnocení kvality. Obnovení smaže jen poznámky daného produktu; nic se neposílá na Litbuy."
+    ],
+    [
+      "Jsou uložené produkty nákupním košíkem nebo rezervací?",
+      "Ne. Záložka vytváří osobní výběr v tomto prohlížeči. Mezisoučet sčítá orientační ceny bez dopravy a volitelných služeb. Uložení nerezervuje zboží a nepřidává je do košíku Litbuy. Až budete chtít pokračovat k nákupu, otevřete stránku produktu."
+    ],
+    [
+      "Co uchovává historie a co odstraní její vymazání?",
+      "Otevření stránky produktu ho přidá do historie. Web uchovává nejvýše osm položek a na úvodu ukazuje čtyři nejnovější. Vymazání historie nemaže uložené produkty ani QC poznámky. Data jsou místní a po smazání úložiště nebo změně prohlížeče nemusí být dostupná."
+    ],
+    [
+      "Proč se cena může lišit od částky při platbě?",
+      "Zdrojová orientační cena v USD se přepočítává kurzem s uvedeným datem. Změna měny aktualizuje také mezisoučet uložených produktů. Prodejce, Litbuy a poskytovatel platby mohou používat jiné ceny či kurzy. Před zaplacením ověřte aktuální cenu, dopravu a zvolené služby."
+    ],
+    [
+      "Co se změní po výběru jiného jazyka?",
+      "Web nabízí 24 jazyků. Navigace, kategorie, typy produktů, časté dotazy a QC ovládání se přizpůsobí výběru a odkazy jazyk zachovají. Značky, ID a původní názvy zůstávají identifikátory. Vlastní poznámky se uchovávají tak, jak jste je napsali, bez automatického překladu."
+    ],
+    [
+      "Proč kategorie někdy hlásí nedostupný zdroj?",
+      "Úplné stránky kategorií načítají produkty z kakobuymake.com. Pokud je zdroj dočasně nedostupný, stránka vysvětlí problém a může zobrazit uložené referenční produkty. To nepotvrzuje současný stav skladu. Zkuste načtení později a před objednáním ověřte aktuální nabídku Litbuy."
+    ],
+    [
+      "Kde se registruji, platím nebo řeším objednávku?",
+      "Registrovat se na Litbuy otevře registraci s pozvánkou tohoto webu. Platby, úpravy, skladová kontrola a doprava se řeší ve vašem účtu Litbuy. QC Notes je nezávislý katalog a tyto objednávky nespravuje. Některé vnější odkazy jsou partnerské a mohou přinést provizi."
+    ]
+  ]
+}

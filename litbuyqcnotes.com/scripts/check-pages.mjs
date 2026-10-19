@@ -1,0 +1,7 @@
+import fs from 'node:fs';
+import assert from 'node:assert/strict';
+const source=fs.readFileSync('dist/_worker.js','utf8');assert(Buffer.byteLength(source)<1000000);const worker=(await import('data:text/javascript;base64,'+Buffer.from(source).toString('base64'))).default;
+const env={ASSETS:{fetch:async request=>{const file='dist'+new URL(request.url).pathname;return new Response(fs.readFileSync(file))}}};
+for(const pathname of ['/','/beginner-guide?lang=zh','/beginner-guide?lang=ar','/product/2878','/sitemap.xml','/robots.txt','/cover/2878','/guide-images/official-12.png']){const r=await worker.fetch(new Request('https://litbuyqcnotes.com'+pathname),env);assert.equal(r.status,200);if(pathname.includes('guide?')){const html=await r.text();assert.equal((html.match(/<section class="walkthrough-step"/g)||[]).length,8);assert(!html.includes('<details'));}if(pathname==='/sitemap.xml')assert.equal(((await r.text()).match(/<url>/g)||[]).length,648);if(pathname==='/robots.txt')assert((await r.text()).includes('Allow: /'));if(pathname==='/cover/2878')assert(r.headers.get('content-type').startsWith('image/'));}
+for(const url of ['http://litbuyqcnotes.com/faq?lang=de','https://www.litbuyqcnotes.com/faq?lang=de']){const r=await worker.fetch(new Request(url),env);assert.equal(r.status,301);assert.equal(r.headers.get('location'),'https://litbuyqcnotes.com/faq?lang=de');}
+console.log('Pages artifact passed: 648 sitemap URLs, HTTPS/www redirects, guide steps, product route and native static image responses.');

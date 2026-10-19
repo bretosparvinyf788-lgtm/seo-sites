@@ -1,0 +1,197 @@
+{
+  "name": "Suomi",
+  "ui": [
+    "Etusivu",
+    "Tuotteet",
+    "Kategoriat",
+    "Oppaat",
+    "Usein kysytyt kysymykset",
+    "Rekisteröidy Litbuyhin",
+    "VALITUT TUOTTEET · OSA 01",
+    "Tuotetaulukko",
+    "Löydä tuotteita, tarkista yksityiskohdat ja kuvat ja suunnittele seuraava tilauksesi.",
+    "Tutustu tuotteisiin",
+    "Näin pääset alkuun",
+    "QC NOTES -VALIKOIMA",
+    "Tutustumisen arvoisia",
+    "Näytä kaikki tuotteet",
+    "Löydä oma kategoriasi",
+    "Kymmenen kategoriaa helpottaa seuraavan tuotteen löytämistä.",
+    "Osto-opas",
+    "Ensimmäisestä tuotteesta ensimmäiseen pakettiin.",
+    "Vastauksia kysymyksiisi",
+    "Riippumaton tuotevalikoima Litbuyssa asioiville.",
+    "Osa linkeistä on kumppanuuslinkkejä, joista voimme saada palkkion. Tämä on riippumaton sivusto, ei Litbuyn virallinen verkkosivusto.",
+    "Järjestä",
+    "Uusimmat",
+    "Hinta: halvin ensin",
+    "Hinta: kallein ensin",
+    "Edellinen",
+    "Seuraava",
+    "Sivu",
+    "Katso Litbuyssa",
+    "Vain tuotteen viitehinta. Toimitus, lisäpalvelut ja lopullinen maksettava summa määritetään erikseen.",
+    "Tuotekuva",
+    "QC- ja viitekuvat",
+    "Kuvat ovat lähteen tuotekuvastosta ja voivat esittää aiempaa tuotetta tai erää. Ne eivät takaa oman tilauksesi laatua. Tarkista oman tilauksesi varastokuvat ennen lähetystä.",
+    "Tuotteesta ei ole muita tarkastuskuvia.",
+    "Tuote ei ole tilapäisesti saatavilla.",
+    "Yritä uudelleen",
+    "Takaisin tuotteisiin",
+    "Kieli",
+    "Valuutta",
+    "Valikko",
+    "Lue opas",
+    "Tuotteen tunnus kauppapaikalla",
+    "Alkuperäinen tuotenimi",
+    "Tuotekuvat sekä tarkastus- ja viitekuvat esitetään erikseen.",
+    "Valuuttamuunnos on arvio. Lopulliset kulut vahvistetaan kassalla.",
+    "Tältä sivulta ei löytynyt tuotteita.",
+    "Kaikki kategoriat",
+    "Tallennetut tuotteet",
+    "Tallenna tuote",
+    "Poista tallennettu tuote",
+    "Luettelonäkymä",
+    "Kuvanäkymä",
+    "Päivitetty 14. lokakuuta 2026",
+    "Lähdeluettelo ei ole tilapäisesti käytettävissä. Yritä uudelleen."
+  ],
+  "categories": [
+    "Kengät ja tohvelit",
+    "T-paidat",
+    "Vaatteet",
+    "Hupparit",
+    "Housut",
+    "Vyöt",
+    "Laukut",
+    "Hajuvedet",
+    "Elektroniikka",
+    "Muut tuotteet"
+  ],
+  "terms": [
+    "T-paita",
+    "Pikeepaita",
+    "Jalkapallopaita",
+    "Verryttelypuku",
+    "Neule",
+    "Shortsit",
+    "Tennarit",
+    "Laukku",
+    "Silmälasit",
+    "Rannekoru",
+    "Farkut",
+    "Huppari",
+    "Vyö",
+    "Hajuvesi",
+    "Elektroniikka",
+    "Asuste",
+    "Vaate",
+    "Tohvelit",
+    "Housut",
+    "Bokserit",
+    "Takki",
+    "Lippalakki",
+    "Huivi"
+  ],
+  "retention": [
+    "Valintasi odottavat jatkamista",
+    "Tallenna tuotteita, tarkista viitehintojen välisumma ja palaa harkitsemiisi yksityiskohtiin.",
+    "Tallennettujen tuotteiden välisumma",
+    "Vain tuotteiden viitehinnat. Toimitus ja valinnaiset palvelut veloitetaan erikseen.",
+    "Jatka siitä, mihin jäit",
+    "Avaa tuotesivu, niin viimeksi katsomasi tuotteet alkavat näkyä tässä.",
+    "Tyhjennä historia",
+    "Omat QC-muistiinpanosi",
+    "Tallenna omat muistutukset kullekin tuotteelle. Tutki viitekuvia ja kirjaa asiat, jotka haluat vielä tarkistaa.",
+    "Valitse tuote",
+    "Kirjatut tarkistukset",
+    "Omat muistiinpanot",
+    "Esimerkiksi: vertaa hihan pituutta tai pyydä lähikuva kiinnityksestä.",
+    "Tallennettu tähän selaimeen",
+    "Nollaa tämän tuotteen tiedot",
+    "Näytä QC- ja viitekuvat",
+    "Nämä ovat omia muistutuksiasi, eivät hyväksytty laaduntarkastus tai oman tilauksesi tarkastus.",
+    "Lisää omista kategorioistasi",
+    "Pikalinkit tallennettujen ja viimeksi katsottujen tuotteiden perusteella.",
+    "Selaintallennus ei ole käytettävissä. Muutokset säilyvät vain tällä sivulla.",
+    "Viitekuvat eivät ole tilapäisesti käytettävissä. Avaa tuote ja yritä uudelleen."
+  ],
+  "checks": [
+    "Vahvista tuotetunnus ja valittu vaihtoehto",
+    "Tarkista, näkyvätkö yksityiskohdat riittävän selvästi",
+    "Kirjaa olennaiset mitat tai tekniset tiedot",
+    "Kirjaa vastausta odottavat kysymykset"
+  ],
+  "notes": [
+    "Löydä tuotteita, tarkista yksityiskohdat ja tarkenna valintojasi.",
+    "Ei tallennettuja tuotteita. Käytä tuotteen kirjanmerkkipainiketta.",
+    "Viitekuvia, ei oman tilauksesi tarkastus",
+    "Lähdevalikoima tallennettu 14. lokakuuta 2026",
+    "Avaa tuote",
+    "Sulje",
+    "Ajantasainen lähde ei ole tilapäisesti käytettävissä.",
+    "Näytetään tallennettu lähdevalikoima. Yritä uudelleen saadaksesi ajantasaiset tuotteet.",
+    "Sivua ei löytynyt",
+    "Tallennetaan vain tähän selaimeen. Tämä ei ole Litbuyn ostoskori.",
+    "Myyjän kuvia ei voitu ladata. Alkuperäinen pääkuva on edelleen käytettävissä."
+  ],
+  "sheet": [
+    "Tuote",
+    "Kategoria",
+    "Viitehinta",
+    "QC / kuvat",
+    "Toiminnot",
+    "Valitut tuotteet",
+    "Kaikki tuotteet",
+    "Tallennetut tuotteet",
+    "Näkyvät tuotteet",
+    "Näytä kaikki sarakkeet pyyhkäisemällä",
+    "Tiivis",
+    "Väljä",
+    "Selaa koko luetteloa",
+    "Oma tuotetaulukkosi.",
+    "Vertaa hintoja, tallenna suosikkisi ja tutki tuotteiden QC-viitekuvia."
+  ],
+  "faq": [
+    [
+      "Miten näen enemmän kuin etusivun kaksitoista tuotetta?",
+      "Etusivun kaksitoista tuotetta ovat valikoima, eivät koko luettelo. Avaa kategoria nähdäksesi sen oman täydellisen sivun tai valitse Näytä kaikki tuotteet. Kategorioissa on hintajärjestys ja sivutus. Jos lähde ei vastaa, ilmoitus kertoo mahdollisen tallennetun viitevalikoiman näyttämisestä."
+    ],
+    [
+      "Mihin tuotteen napsauttaminen johtaa?",
+      "Kuva tai nimi avaa ensin tämän sivuston erillisen tuotesivun, jossa näkyvät tuotetunnus, viitehinta ja saatavilla olevat kuvat. Katso Litbuyssa avaa vastaavan ilmoituksen kumppanuuslinkillämme. Tarkista koko, väri, määrä ja ajantasainen hinta Litbuyssa ennen maksamista."
+    ],
+    [
+      "Tarkistavatko QC-viitekuvat juuri oman tilaukseni tuotteen?",
+      "Eivät. Ne ovat lähdegallerian aiempia kuvia ja voivat näyttää toisen värin, vanhemman erän tai muun ostajan tuotteen. Ne auttavat arvioimaan yksityiskohtia mutta eivät hyväksy tilaustasi. Tarkista oman Litbuy-tilauksesi varastokuvat ennen lähettämistä."
+    ],
+    [
+      "Miten neljä tarkistuskohtaa ja omat muistiinpanot toimivat?",
+      "Valitse tuote QC-muistiinpanoissa, merkitse kirjatut tarkistukset ja avaa Omat muistiinpanot lisätäksesi muistutuksen. Jokaisen tuotteen tiedot tallennetaan erikseen tähän selaimeen. Laskuri kuvaa kirjauksiasi, ei laatupisteitä. Nollaus poistaa vain kyseisen tuotteen muistiinpanot; mitään ei lähetetä Litbuyhin."
+    ],
+    [
+      "Ovatko tallennetut tuotteet ostoskori tai varaus?",
+      "Eivät. Kirjanmerkki luo oman valintalistan tähän selaimeen. Välisumma laskee yhteen viitehinnat ilman toimitusta tai lisäpalveluja. Tallentaminen ei varaa tuotteita eikä lisää mitään Litbuyn ostoskoriin. Avaa tuotteen sivu, kun haluat jatkaa Litbuyhin."
+    ],
+    [
+      "Mitä katseluhistoria säilyttää ja mitä sen tyhjentäminen poistaa?",
+      "Avattu tuotesivu lisätään historiaan. Sivusto säilyttää enintään kahdeksan tuotetta ja näyttää etusivulla neljä viimeisintä. Historian tyhjentäminen ei poista tallennettuja tuotteita tai QC-muistiinpanoja. Tiedot ovat paikallisia ja voivat puuttua selaintallennuksen tyhjennyksen tai selaimen vaihtamisen jälkeen."
+    ],
+    [
+      "Miksi hinta voi poiketa kassalla maksettavasta summasta?",
+      "Lähteen USD-viitehinta muunnetaan päivätyllä vaihtokurssilla. Valuutan vaihtaminen päivittää myös tallennettujen tuotteiden välisumman. Myyjä, Litbuy ja maksupalvelu voivat käyttää muita hintoja tai kursseja. Tarkista ajantasainen hinta, toimitus ja valitut palvelut ennen maksamista."
+    ],
+    [
+      "Mikä muuttuu, kun valitsen toisen kielen?",
+      "Sivusto tarjoaa 24 kieltä. Navigaatio, kategoriat, tuotetyypit, UKK ja QC-toiminnot seuraavat valintaa, ja linkit säilyttävät kielen. Merkit, tuotetunnukset ja alkuperäiset nimet pysyvät tunnisteina. Omat muistiinpanosi tallennetaan kirjoittamassasi muodossa eikä niitä käännetä automaattisesti."
+    ],
+    [
+      "Miksi kategoria ilmoittaa toisinaan lähteen olevan poissa käytöstä?",
+      "Täydet kategoriasivut lukevat tuotteet kakobuymake.comista. Jos lähde ei ole tilapäisesti käytettävissä, sivu kertoo ongelmasta ja voi näyttää tallennettuja viitetuotteita. Se ei vahvista tämänhetkistä saatavuutta. Yritä myöhemmin uudelleen ja tarkista ajantasainen Litbuy-ilmoitus ennen tilaamista."
+    ],
+    [
+      "Missä rekisteröidyn, maksan tai saan apua tilaukseen?",
+      "Rekisteröidy Litbuyhin avaa rekisteröinnin tämän sivuston kutsulinkillä. Maksut, muutokset, varastotarkastukset ja lähetys hoidetaan Litbuy-tililläsi. QC Notes on riippumaton tuoteluettelo eikä voi hallita näitä tilauksia. Osa ulkoisista linkeistä on kumppanuuslinkkejä, joista voimme saada palkkion."
+    ]
+  ]
+}

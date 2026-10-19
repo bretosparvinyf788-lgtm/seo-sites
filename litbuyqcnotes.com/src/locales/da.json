@@ -1,0 +1,197 @@
+{
+  "name": "Dansk",
+  "ui": [
+    "Forside",
+    "Produkter",
+    "Kategorier",
+    "Vejledninger",
+    "Ofte stillede spørgsmål",
+    "Opret konto hos Litbuy",
+    "UDVALGTE PRODUKTER · DEL 01",
+    "Regneark",
+    "Find produkter, gennemgå detaljer og billeder, og planlæg din næste bestilling.",
+    "Se produkterne",
+    "Kom godt i gang",
+    "QC NOTES UDVALG",
+    "Værd at se nærmere på",
+    "Se alle produkter",
+    "Find din kategori",
+    "Ti kategorier gør det lettere at finde dit næste produkt.",
+    "Indkøbsvejledningen",
+    "Fra dit første produkt til din første pakke.",
+    "Svar på dine spørgsmål",
+    "Et uafhængigt produktudvalg til dig, der handler via Litbuy.",
+    "Nogle links er affiliatelinks, som kan give os provision. Dette er en uafhængig hjemmeside, ikke Litbuys officielle hjemmeside.",
+    "Sortér efter",
+    "Nyeste",
+    "Pris: lav til høj",
+    "Pris: høj til lav",
+    "Forrige",
+    "Næste",
+    "Side",
+    "Se hos Litbuy",
+    "Kun en vejledende varepris. Fragt, ekstra tjenester og det endelige beløb beregnes særskilt.",
+    "Produktbillede",
+    "QC- og referencebilleder",
+    "Billederne kommer fra kildens produktgalleri og kan vise en tidligere vare eller et tidligere parti. De garanterer ikke noget om din bestilling. Gennemgå dine egne lagerbilleder før afsendelse.",
+    "Der er ingen yderligere kontrolbilleder af denne vare.",
+    "Varen er midlertidigt utilgængelig.",
+    "Prøv igen",
+    "Tilbage til produkterne",
+    "Sprog",
+    "Valuta",
+    "Menu",
+    "Læs vejledningen",
+    "Vare-ID på platformen",
+    "Oprindelig produkttitel",
+    "Produktbilleder og kontrol- eller referencebilleder vises hver for sig.",
+    "Valutaomregning er vejledende. Det endelige beløb fastsættes ved betaling.",
+    "Ingen produkter fundet på denne side.",
+    "Alle kategorier",
+    "Gemte produkter",
+    "Gem produkt",
+    "Fjern gemt produkt",
+    "Listevisning",
+    "Billedvisning",
+    "Opdateret 14. oktober 2026",
+    "Kildekataloget er midlertidigt utilgængeligt. Prøv igen."
+  ],
+  "categories": [
+    "Sko og hjemmesko",
+    "T-shirts",
+    "Tøj",
+    "Hættetrøjer",
+    "Bukser",
+    "Bælter",
+    "Tasker",
+    "Parfume",
+    "Elektronik",
+    "Andre produkter"
+  ],
+  "terms": [
+    "T-shirt",
+    "Polotrøje",
+    "Fodboldtrøje",
+    "Træningsdragt",
+    "Trøje",
+    "Shorts",
+    "Sneakers",
+    "Taske",
+    "Briller",
+    "Armbånd",
+    "Jeans",
+    "Hættetrøje",
+    "Bælte",
+    "Parfume",
+    "Elektronik",
+    "Tilbehør",
+    "Tøj",
+    "Hjemmesko",
+    "Bukser",
+    "Boxershorts",
+    "Jakke",
+    "Kasket",
+    "Halstørklæde"
+  ],
+  "retention": [
+    "Dit udvalg, klar til at fortsætte",
+    "Gem produkter, se en vejledende subtotal og vend tilbage til de detaljer, du overvejede.",
+    "Subtotal for gemte varer",
+    "Kun vejledende varepriser. Fragt og valgfrie tjenester kommer oveni.",
+    "Fortsæt, hvor du slap",
+    "Åbn en produktside for at begynde listen over senest sete varer.",
+    "Ryd historik",
+    "Dine personlige QC-noter",
+    "Gem særskilte påmindelser for hver vare. Se referencebillederne, og notér det, du stadig vil kontrollere.",
+    "Vælg en vare",
+    "Noterede kontrolpunkter",
+    "Personlige noter",
+    "For eksempel: sammenlign ærmelængden eller bed om et nærbillede af lukkemekanismen.",
+    "Gemt i denne browser",
+    "Nulstil denne vare",
+    "Se QC- og referencebilleder",
+    "Dette er dine påmindelser, ikke en godkendt kvalitetskontrol eller en kontrol af din egen bestilling.",
+    "Mere i dine kategorier",
+    "Genveje baseret på gemte og senest sete varer.",
+    "Browserlagring er utilgængelig. Ændringer gemmes kun på denne side.",
+    "Referencebillederne er midlertidigt utilgængelige. Åbn varen for at prøve igen."
+  ],
+  "checks": [
+    "Bekræft vare-ID og den valgte variant",
+    "Kontrollér, om de synlige detaljer er tydelige nok",
+    "Notér relevante mål eller specifikationer",
+    "Skriv ubesvarede spørgsmål ned"
+  ],
+  "notes": [
+    "Find produkter, undersøg detaljer, og forbedr dit udvalg.",
+    "Ingen gemte produkter endnu. Brug bogmærket på et produkt.",
+    "Referencebilleder, ikke kontrollen af din bestilling",
+    "Kildeudvalg registreret 14. oktober 2026",
+    "Åbn vare",
+    "Luk",
+    "Den aktuelle kilde er midlertidigt utilgængelig.",
+    "Det gemte kildeudvalg vises. Prøv igen for aktuelle produkter.",
+    "Siden blev ikke fundet",
+    "Gemmes kun i denne browser. Dette er ikke en Litbuy-indkøbskurv.",
+    "Sælgerens billeder kunne ikke indlæses. Det oprindelige hovedbillede er stadig tilgængeligt."
+  ],
+  "sheet": [
+    "Produkt",
+    "Kategori",
+    "Vejledende pris",
+    "QC / billeder",
+    "Handlinger",
+    "Udvalgte produkter",
+    "Alle produkter",
+    "Gemte produkter",
+    "Synlige produkter",
+    "Stryg for at se alle kolonner",
+    "Kompakt",
+    "Luftig",
+    "Se hele kataloget",
+    "Dit produktark.",
+    "Sammenlign priser, gem dine favoritter, og gennemgå produkternes QC-referencebilleder."
+  ],
+  "faq": [
+    [
+      "Hvordan ser jeg flere end de tolv produkter på forsiden?",
+      "Forsidens tolv varer er et udvalg, ikke hele kataloget. Åbn en kategori for dens fulde side, eller vælg Se alle produkter. Kategorierne har prissortering og sideinddeling. Hvis kilden ikke kan nås, viser en besked, når et gemt referenceudvalg bliver brugt."
+    ],
+    [
+      "Hvor kommer jeg hen ved at klikke på et produkt?",
+      "Billedet eller navnet åbner først en selvstændig produktside her med vare-ID, vejledende pris og tilgængelige billeder. Se hos Litbuy åbner derefter den matchende annonce via vores affiliatelink. Kontrollér størrelse, farve, antal og aktuel pris hos Litbuy før betaling."
+    ],
+    [
+      "Kontrollerer QC-referencerne netop min bestilte vare?",
+      "Nej. Det er eksisterende billeder fra kildegalleriet, som kan vise en anden farve, et tidligere parti eller en anden købers vare. De hjælper dig med at se detaljer, men godkender ikke din bestilling. Kontrollér lagerbillederne af din egen Litbuy-bestilling før afsendelse."
+    ],
+    [
+      "Hvordan bruger jeg de fire kontrolpunkter og personlige noter?",
+      "Vælg en vare i QC-noterne, markér dine noterede punkter, og åbn Personlige noter for en påmindelse. Hvert produkt gemmer sine egne data i browseren. Tælleren viser dine registreringer, ikke en kvalitetsvurdering. Nulstil sletter kun denne vares noter; intet sendes til Litbuy."
+    ],
+    [
+      "Er gemte produkter en indkøbskurv eller en reservation?",
+      "Nej. Bogmærket opretter et personligt udvalg i denne browser. Subtotalen lægger vejledende varepriser sammen uden fragt eller valgfrie tjenester. At gemme reserverer ikke lager og tilføjer intet til Litbuys kurv. Åbn produktets side, når du vil videre til Litbuy."
+    ],
+    [
+      "Hvad gemmer historikken, og hvad sletter Ryd historik?",
+      "En åbnet produktside tilføjes til historikken. Sitet gemmer op til otte varer og viser de fire seneste på forsiden. Ryd historik fjerner kun listen, ikke gemte varer eller QC-noter. Data er lokale og kan mangle efter rydning af browserlager eller skift af browser."
+    ],
+    [
+      "Hvorfor kan prisen afvige fra beløbet ved betaling?",
+      "Kildens vejledende USD-pris omregnes med en dateret kurs. Valutaændringer opdaterer også subtotalen for gemte varer. Sælger, Litbuy og betalingsudbyder kan bruge andre priser eller kurser. Kontrollér aktuel varepris, fragt og valgte tjenester ved betaling."
+    ],
+    [
+      "Hvad ændres, når jeg vælger et andet sprog?",
+      "Sitet understøtter 24 sprog. Navigation, kategorier, produkttyper, FAQ og QC-funktioner følger valget, og produkt- og kategorilinks bevarer sproget. Mærkenavne, vare-ID og oprindelige titler forbliver identifikatorer. Dine egne noter gemmes som skrevet og oversættes ikke automatisk."
+    ],
+    [
+      "Hvorfor melder en kategori nogle gange, at kilden er utilgængelig?",
+      "De fulde kategorisider læser produkter fra kakobuymake.com. Hvis kilden midlertidigt er utilgængelig, forklarer siden problemet og kan vise gemte referencevarer. Det bekræfter ikke aktuel lagerstatus. Prøv igen senere, og kontrollér den aktuelle Litbuy-annonce før bestilling."
+    ],
+    [
+      "Hvor opretter jeg konto, betaler eller får hjælp til en ordre?",
+      "Opret konto hos Litbuy åbner registrering med sitets invitationslink. Betaling, ændringer, lagerkontrol og forsendelse håndteres på din Litbuy-konto. QC Notes er et uafhængigt produktkatalog og kan ikke administrere disse bestillinger. Nogle eksterne links er affiliatelinks og kan give provision."
+    ]
+  ]
+}

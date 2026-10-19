@@ -1,0 +1,197 @@
+{
+  "name": "Svenska",
+  "ui": [
+    "Hem",
+    "Produkter",
+    "Kategorier",
+    "Guider",
+    "Vanliga frågor",
+    "Registrera dig på Litbuy",
+    "UTVALDA PRODUKTER · DEL 01",
+    "Kalkylblad",
+    "Upptäck produkter, granska detaljer och bilder och planera din nästa beställning.",
+    "Utforska produkterna",
+    "Kom igång",
+    "QC NOTES URVAL",
+    "Värda en närmare titt",
+    "Visa alla produkter",
+    "Hitta din kategori",
+    "Tio kategorier för att enklare hitta nästa produkt.",
+    "Shoppingguiden",
+    "Från din första produkt till ditt första paket.",
+    "Svar på dina frågor",
+    "Ett oberoende produkturval för dig som handlar med Litbuy.",
+    "Vissa länkar är affiliatelänkar och kan ge oss provision. Detta är en oberoende webbplats, inte Litbuys officiella webbplats.",
+    "Sortera efter",
+    "Nyast",
+    "Pris: lågt till högt",
+    "Pris: högt till lågt",
+    "Föregående",
+    "Nästa",
+    "Sida",
+    "Visa på Litbuy",
+    "Endast ett ungefärligt artikelpris. Frakt, tilläggstjänster och slutligt belopp tillkommer separat.",
+    "Produktbild",
+    "QC- och referensbilder",
+    "Bilderna kommer från källproduktens galleri och kan visa en tidigare artikel eller leverans. De garanterar inte skicket på din beställning. Granska dina egna lagerbilder före frakt.",
+    "Inga fler kontrollbilder finns för denna artikel.",
+    "Artikeln är tillfälligt otillgänglig.",
+    "Försök igen",
+    "Tillbaka till produkterna",
+    "Språk",
+    "Valuta",
+    "Meny",
+    "Läs guiden",
+    "Artikel-ID på plattformen",
+    "Ursprunglig produkttitel",
+    "Produktbilder och kontroll- eller referensbilder visas separat.",
+    "Valutaomräkningen är ungefärlig. Slutliga avgifter bestäms i kassan.",
+    "Inga produkter hittades på sidan.",
+    "Alla kategorier",
+    "Sparade produkter",
+    "Spara produkt",
+    "Ta bort sparad produkt",
+    "Listvy",
+    "Bildvy",
+    "Uppdaterad 14 oktober 2026",
+    "Källkatalogen är tillfälligt otillgänglig. Försök igen."
+  ],
+  "categories": [
+    "Skor och tofflor",
+    "T-shirts",
+    "Kläder",
+    "Huvtröjor",
+    "Byxor",
+    "Bälten",
+    "Väskor",
+    "Parfym",
+    "Elektronik",
+    "Övriga produkter"
+  ],
+  "terms": [
+    "T-shirt",
+    "Pikétröja",
+    "Fotbollströja",
+    "Träningsoverall",
+    "Tröja",
+    "Shorts",
+    "Sneakers",
+    "Väska",
+    "Glasögon",
+    "Armband",
+    "Jeans",
+    "Huvtröja",
+    "Bälte",
+    "Parfym",
+    "Elektronik",
+    "Accessoar",
+    "Kläder",
+    "Tofflor",
+    "Byxor",
+    "Boxerkalsonger",
+    "Jacka",
+    "Keps",
+    "Halsduk"
+  ],
+  "retention": [
+    "Ditt urval, redo att fortsätta",
+    "Spara produkter, se ett ungefärligt delbelopp och återvänd till detaljerna du funderade på.",
+    "Delbelopp för sparade artiklar",
+    "Endast referenspriser. Frakt och valfria tjänster tillkommer.",
+    "Fortsätt där du slutade",
+    "Öppna en produktsida för att börja spara dina senast visade artiklar.",
+    "Rensa historik",
+    "Dina QC-anteckningar",
+    "Spara separata påminnelser för varje artikel. Granska referensbilderna och anteckna det du fortfarande vill kontrollera.",
+    "Välj artikel",
+    "Antecknade kontroller",
+    "Personliga anteckningar",
+    "Till exempel: jämför ärmlängden eller be om en närbild på spännet.",
+    "Sparat i den här webbläsaren",
+    "Återställ denna artikel",
+    "Visa QC- och referensbilder",
+    "Detta är dina påminnelser, inte ett godkänt QC-resultat eller en kontroll av din beställning.",
+    "Mer i dina kategorier",
+    "Genvägar baserade på sparade och senast visade artiklar.",
+    "Webbläsarlagring är inte tillgänglig. Ändringarna finns bara kvar på den här sidan.",
+    "Referensbilderna är tillfälligt otillgängliga. Öppna artikeln för att försöka igen."
+  ],
+  "checks": [
+    "Bekräfta artikel-ID och vald variant",
+    "Kontrollera att de synliga detaljerna är tydliga",
+    "Anteckna relevanta mått eller specifikationer",
+    "Skriv upp obesvarade frågor"
+  ],
+  "notes": [
+    "Upptäck produkter, granska detaljer och förfina ditt urval.",
+    "Inga sparade produkter ännu. Använd bokmärket på en produkt.",
+    "Referensbilder, inte din beställnings kontroll",
+    "Källurval sparat 14 oktober 2026",
+    "Öppna artikel",
+    "Stäng",
+    "Den aktuella källan är tillfälligt otillgänglig.",
+    "Det sparade källurvalet visas. Försök igen för aktuella produkter.",
+    "Sidan hittades inte",
+    "Sparas bara i den här webbläsaren. Detta är ingen Litbuy-varukorg.",
+    "Säljarens bilder kunde inte laddas. Den ursprungliga huvudbilden visas fortfarande."
+  ],
+  "sheet": [
+    "Produkt",
+    "Kategori",
+    "Referenspris",
+    "QC / bilder",
+    "Åtgärder",
+    "Utvalda produkter",
+    "Alla produkter",
+    "Sparade produkter",
+    "Synliga produkter",
+    "Svep för att se alla kolumner",
+    "Kompakt",
+    "Luftig",
+    "Visa hela katalogen",
+    "Ditt produktblad.",
+    "Jämför priser, spara dina favoriter och granska produkternas QC-referensbilder."
+  ],
+  "faq": [
+    [
+      "Hur ser jag fler än de tolv produkterna på startsidan?",
+      "Startsidan visar tolv utvalda artiklar, inte hela katalogen. Öppna en kategori för dess fullständiga sida eller välj Visa alla produkter. Kategorierna har prissortering och sidindelning. Om källan inte går att nå visar ett meddelande när ett sparat referensurval används."
+    ],
+    [
+      "Vart kommer jag när jag klickar på en produkt?",
+      "Bilden eller namnet öppnar först en separat produktsida här, med artikel-ID, referenspris och tillgängliga foton. Visa på Litbuy öppnar sedan rätt annons via vår affiliatelänk. Kontrollera storlek, färg, antal och aktuellt pris på Litbuy innan du betalar."
+    ],
+    [
+      "Kontrollerar QC-referenserna just min beställda artikel?",
+      "Nej. Det är befintliga bilder från källans galleri och de kan visa en annan färg, en äldre leverans eller en annan köpares artikel. De hjälper dig granska detaljer men godkänner inte din beställning. Kontrollera lagerbilderna för din egen Litbuy-beställning före frakt."
+    ],
+    [
+      "Hur fungerar de fyra kontrollerna och personliga anteckningar?",
+      "Välj en artikel i QC-anteckningarna, markera dina noterade punkter och öppna Personliga anteckningar för en påminnelse. Varje produkt lagrar egna uppgifter i webbläsaren. Räknaren visar dina anteckningar, inget kvalitetsbetyg. Återställ tar bara bort den artikelns anteckningar; inget skickas till Litbuy."
+    ],
+    [
+      "Är sparade produkter en varukorg eller reservation?",
+      "Nej. Bokmärket skapar ett personligt urval i den här webbläsaren. Delsumman lägger ihop referenspriser utan frakt eller tillval. Att spara reserverar inget lager och lägger inget i Litbuys varukorg. Öppna produktsidan när du vill fortsätta till Litbuy."
+    ],
+    [
+      "Vad sparas i historiken och vad rensar Rensa historik?",
+      "En öppnad produktsida läggs till i historiken. Webbplatsen behåller upp till åtta artiklar och visar de fyra senaste på startsidan. Rensa historik tar inte bort favoriter eller QC-anteckningar. Uppgifterna är lokala och kan saknas efter att lagringen rensats eller i en annan webbläsare."
+    ],
+    [
+      "Varför kan priset skilja sig från beloppet i kassan?",
+      "Källans USD-referenspris räknas om med en daterad växelkurs. Valutavalet uppdaterar också sparade produkters delsumma. Säljaren, Litbuy och betalningsleverantören kan använda andra priser eller kurser. Kontrollera aktuellt pris, frakt och valda tjänster innan du betalar."
+    ],
+    [
+      "Vad ändras när jag väljer ett annat språk?",
+      "Webbplatsen har 24 språk. Navigation, kategorier, produkttyper, FAQ och QC-kontroller följer ditt val, liksom produkt- och kategorilänkar. Märken, artikel-ID och originaltitlar finns kvar som identifierare. Egna anteckningar sparas precis som du skrev dem och översätts inte automatiskt."
+    ],
+    [
+      "Varför visar en kategori ibland att källan är otillgänglig?",
+      "Fullständiga kategorisidor hämtar produkter från kakobuymake.com. Om källan tillfälligt inte svarar förklarar sidan det och kan visa sparade referensprodukter. Detta bekräftar inte aktuellt lager. Försök senare och kontrollera den aktuella Litbuy-annonsen innan beställning."
+    ],
+    [
+      "Var registrerar jag mig, betalar eller får hjälp med en beställning?",
+      "Registrera dig på Litbuy öppnar registreringen med webbplatsens inbjudningslänk. Betalningar, ändringar, lagerkontroll och frakt hanteras på ditt Litbuy-konto. QC Notes är en oberoende katalog och hanterar inte dessa beställningar. Vissa externa länkar är affiliatelänkar och kan ge provision."
+    ]
+  ]
+}

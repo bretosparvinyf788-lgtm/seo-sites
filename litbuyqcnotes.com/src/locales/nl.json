@@ -1,0 +1,197 @@
+{
+  "name": "Nederlands",
+  "ui": [
+    "Home",
+    "Producten",
+    "Categorieën",
+    "Handleidingen",
+    "Veelgestelde vragen",
+    "Aanmelden bij Litbuy",
+    "GESELECTEERDE PRODUCTEN · DEEL 01",
+    "Spreadsheet",
+    "Ontdek producten, bekijk de details en foto's en stel zorgvuldig je volgende bestelling samen.",
+    "Producten bekijken",
+    "Aan de slag",
+    "DE QC NOTES SELECTIE",
+    "Het bekijken waard",
+    "Alle producten bekijken",
+    "Kies je categorie",
+    "Tien categorieën om gericht je volgende product te vinden.",
+    "De winkelgids",
+    "Van je eerste product tot je eerste pakket.",
+    "Antwoorden op je vragen",
+    "Een onafhankelijke productselectie voor wie via Litbuy winkelt.",
+    "Sommige links zijn affiliatelinks. We kunnen een commissie ontvangen. Dit is een onafhankelijke website, niet de officiële Litbuy-website.",
+    "Sorteren op",
+    "Nieuwste",
+    "Prijs: laag naar hoog",
+    "Prijs: hoog naar laag",
+    "Vorige",
+    "Volgende",
+    "Pagina",
+    "Bekijken op Litbuy",
+    "Alleen een richtprijs voor het artikel. Verzending, extra diensten en het uiteindelijke afrekenbedrag komen daar apart bij.",
+    "Productfoto",
+    "QC- en referentiefoto's",
+    "Deze foto's komen uit de oorspronkelijke productgalerij en kunnen een eerder artikel of een eerdere partij tonen. Ze garanderen niets voor jouw bestelling. Controleer voor verzending de magazijnfoto's van je eigen bestelling.",
+    "Er zijn geen aanvullende inspectiefoto's voor dit artikel.",
+    "Dit artikel is tijdelijk niet beschikbaar.",
+    "Opnieuw proberen",
+    "Terug naar producten",
+    "Taal",
+    "Valuta",
+    "Menu",
+    "Handleiding lezen",
+    "Artikel-ID op het platform",
+    "Oorspronkelijke producttitel",
+    "Productfoto's en inspectie- of referentiefoto's worden afzonderlijk getoond.",
+    "De valutaomrekening is een schatting. Het uiteindelijke bedrag wordt bij het afrekenen bepaald.",
+    "Geen producten gevonden op deze pagina.",
+    "Alle categorieën",
+    "Opgeslagen producten",
+    "Product opslaan",
+    "Opgeslagen product verwijderen",
+    "Lijstweergave",
+    "Fotoweergave",
+    "Bijgewerkt op 14 oktober 2026",
+    "De broncatalogus is tijdelijk niet beschikbaar. Probeer het opnieuw."
+  ],
+  "categories": [
+    "Schoenen en slippers",
+    "T-shirts",
+    "Kleding",
+    "Hoodies",
+    "Broeken",
+    "Riemen",
+    "Tassen",
+    "Parfum",
+    "Elektronica",
+    "Overige producten"
+  ],
+  "terms": [
+    "T-shirt",
+    "Poloshirt",
+    "Voetbalshirt",
+    "Trainingspak",
+    "Trui",
+    "Shorts",
+    "Sneakers",
+    "Tas",
+    "Bril",
+    "Armband",
+    "Jeans",
+    "Hoodie",
+    "Riem",
+    "Parfum",
+    "Elektronica",
+    "Accessoire",
+    "Kleding",
+    "Slippers",
+    "Broek",
+    "Boxershort",
+    "Jas",
+    "Pet",
+    "Sjaal"
+  ],
+  "retention": [
+    "Je selectie, klaar om verder te gaan",
+    "Sla producten op, bekijk hun richtprijstotaal en ga later verder met je keuze.",
+    "Subtotaal opgeslagen artikelen",
+    "Alleen richtprijzen. Verzending en optionele diensten zijn niet inbegrepen.",
+    "Ga verder waar je gebleven was",
+    "Open een productpagina om je recent bekeken artikelen hier terug te vinden.",
+    "Geschiedenis wissen",
+    "Je persoonlijke QC-notities",
+    "Bewaar aparte aandachtspunten per artikel. Bekijk de referentiefoto's en noteer wat je nog wilt controleren.",
+    "Kies een artikel",
+    "Genoteerde controles",
+    "Persoonlijke notities",
+    "Bijvoorbeeld: vergelijk de mouwlengte of vraag om een detailfoto van de sluiting.",
+    "Opgeslagen in deze browser",
+    "Dit artikel opnieuw instellen",
+    "QC- en referentiefoto's bekijken",
+    "Dit zijn persoonlijke herinneringen, geen goedkeuring van de QC of controle van jouw bestelling.",
+    "Meer in jouw categorieën",
+    "Snelkoppelingen op basis van opgeslagen en recent bekeken artikelen.",
+    "Browseropslag is niet beschikbaar. Wijzigingen blijven alleen op deze pagina bewaard.",
+    "Referentiefoto's zijn tijdelijk niet beschikbaar. Open het artikel om opnieuw te proberen."
+  ],
+  "checks": [
+    "Controleer het artikel-ID en de gekozen variant",
+    "Beoordeel of de zichtbare details duidelijk genoeg zijn",
+    "Noteer relevante afmetingen of specificaties",
+    "Schrijf onbeantwoorde vragen op"
+  ],
+  "notes": [
+    "Ontdekken, controleren en je selectie verfijnen.",
+    "Nog geen opgeslagen producten. Gebruik het bladwijzerpictogram bij een product.",
+    "Referentiefoto's, niet de inspectie van jouw bestelling",
+    "Bronselectie vastgelegd op 14 oktober 2026",
+    "Artikel openen",
+    "Sluiten",
+    "De actuele bron is tijdelijk niet beschikbaar.",
+    "De opgeslagen bronselectie wordt getoond. Probeer opnieuw voor actuele producten.",
+    "Pagina niet gevonden",
+    "Alleen opgeslagen in deze browser. Dit is geen Litbuy-winkelmandje.",
+    "Verkopersfoto's konden niet worden geladen. De oorspronkelijke hoofdfoto blijft beschikbaar."
+  ],
+  "sheet": [
+    "Product",
+    "Categorie",
+    "Richtprijs",
+    "QC / foto's",
+    "Acties",
+    "Geselecteerde producten",
+    "Alle producten",
+    "Opgeslagen producten",
+    "Zichtbare producten",
+    "Veeg om alle kolommen te zien",
+    "Compact",
+    "Ruim",
+    "Volledige catalogus bekijken",
+    "Jouw productoverzicht.",
+    "Vergelijk prijzen, sla je favorieten op en bekijk de QC-referentiefoto's per product."
+  ],
+  "faq": [
+    [
+      "Hoe bekijk ik meer dan de twaalf producten op de homepage?",
+      "De twaalf producten op de homepage vormen een selectie, niet de hele catalogus. Open een categorie voor de volledige categoriepagina of kies Alle producten bekijken. Daar kun je op prijs sorteren en naar volgende pagina's gaan. Bij een bronstoring maakt een melding duidelijk wanneer een opgeslagen selectie wordt getoond."
+    ],
+    [
+      "Waar kom ik terecht als ik op een product klik?",
+      "De afbeelding of naam opent eerst een aparte detailpagina op deze website, met artikel-ID, richtprijs en beschikbare foto's. Bekijken op Litbuy opent daarna de bijbehorende aanbieding via onze affiliatelink. Controleer maat, kleur, aantal en actuele prijs op Litbuy voordat je betaalt."
+    ],
+    [
+      "Controleren de QC-referenties precies mijn bestelde artikel?",
+      "Nee. Dit zijn bestaande foto's uit de brongalerij. Ze kunnen een andere kleur, eerdere partij of aankoop van iemand anders tonen. Ze helpen details te beoordelen, maar keuren jouw bestelling niet goed. Controleer voor verzending de magazijnfoto's die bij je eigen Litbuy-bestelling horen."
+    ],
+    [
+      "Hoe werken de vier controles en persoonlijke notities?",
+      "Kies een artikel bij de QC-notities, vink genoteerde controles aan en open Persoonlijke notities voor een herinnering. Elk product bewaart zijn eigen gegevens in deze browser. De teller toont je aantekeningen, geen kwaliteitsscore. Opnieuw instellen wist alleen de notities van dat artikel; Litbuy ontvangt niets."
+    ],
+    [
+      "Zijn opgeslagen producten een winkelmandje of reservering?",
+      "Nee. De bladwijzer maakt een persoonlijke selectie in deze browser. Het subtotaal telt richtprijzen op, zonder verzending of optionele diensten. Opslaan reserveert geen voorraad en voegt niets toe aan je Litbuy-winkelmandje. Open de productpagina wanneer je wilt doorgaan naar Litbuy."
+    ],
+    [
+      "Wat bewaart recent bekeken en wat wist Geschiedenis wissen?",
+      "Een geopende productpagina wordt aan je geschiedenis toegevoegd. De site bewaart maximaal acht artikelen en toont de laatste vier op de homepage. Geschiedenis wissen verwijdert alleen die lijst; favorieten en QC-notities blijven behouden. Na wissen van browseropslag of wisselen van browser kunnen lokale gegevens ontbreken."
+    ],
+    [
+      "Waarom kan de prijs verschillen van het afrekenbedrag?",
+      "De USD-richtprijs van de bron wordt omgerekend met een gedateerde wisselkoers. De valutakeuze verandert ook je opgeslagen subtotaal. De verkoper, Litbuy en je betaalprovider kunnen andere prijzen of koersen hanteren. Controleer de actuele artikelprijs, verzending en gekozen diensten bij het afrekenen."
+    ],
+    [
+      "Wat verandert wanneer ik een andere taal kies?",
+      "De site biedt 24 talen. Navigatie, categorieën, producttypen, FAQ en QC-bediening volgen je keuze; product- en categorielinks behouden die taal. Merken, artikel-ID's en oorspronkelijke titels blijven herkenningspunten. Je eigen notities blijven precies zoals je ze schreef en worden niet automatisch vertaald."
+    ],
+    [
+      "Waarom meldt een categorie soms dat de bron onbereikbaar is?",
+      "Volledige categoriepagina's lezen producten van kakobuymake.com. Als die bron tijdelijk niet beschikbaar is, licht de pagina dat toe en kan een opgeslagen referentieselectie verschijnen. Dat bevestigt geen actuele voorraad. Probeer later opnieuw en controleer de Litbuy-aanbieding voordat je bestelt."
+    ],
+    [
+      "Waar registreer ik me, betaal ik en krijg ik hulp bij bestellingen?",
+      "Aanmelden bij Litbuy opent de registratie met de uitnodigingslink van deze site. Betalingen, wijzigingen, magazijncontrole en verzending regel je in je Litbuy-account. QC Notes is een onafhankelijke catalogus en beheert deze bestellingen niet. Sommige externe links zijn affiliatelinks en kunnen een commissie opleveren."
+    ]
+  ]
+}

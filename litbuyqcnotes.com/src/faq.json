@@ -1,0 +1,1274 @@
+{
+  "en": {
+    "title": "Your finds. Your questions.",
+    "intro": "How this Litbuy QC Notes spreadsheet works, from browsing the full categories to saving an item and reviewing its QC references.",
+    "groups": [
+      "Browse & open products",
+      "QC photos & notes",
+      "Saved & recently viewed",
+      "Prices & languages",
+      "Catalog & Litbuy orders"
+    ],
+    "items": [
+      [
+        "How do I see more than the 12 homepage finds?",
+        "The homepage is a selection of 12 items, not the full catalog. Choose a category to open its dedicated page, or use View all finds for the full listing. Category pages provide price sorting and pagination. If the source cannot be reached, a notice identifies any saved selection being shown."
+      ],
+      [
+        "Where do I go when I click a product?",
+        "The image or product name opens a separate detail page on this site. There you can review the marketplace item ID, reference price and available photos. View on Litbuy then opens the matching listing with the site's referral link. Confirm the size, color, quantity and current price on Litbuy before paying."
+      ],
+      [
+        "Are the QC references a check of the item I will receive?",
+        "No. These are existing photos from the source product gallery and may show a different color, earlier batch or another buyer's item. They help you identify details to examine, but they do not approve your order. Check the warehouse inspection photos attached to your own Litbuy order before shipping."
+      ],
+      [
+        "How do the four QC checks and personal notes work?",
+        "Select an item in the QC notes section, tick the checks you have recorded, and expand Personal notes to add a reminder. Each product keeps its own checks and text in this browser. The progress count measures your recorded reminders only. Reset this item clears that product's notes; nothing is sent to Litbuy."
+      ],
+      [
+        "Are saved finds a shopping cart or a reservation?",
+        "No. The bookmark builds a personal shortlist in this browser. Its subtotal adds reference item prices and excludes shipping and optional services. Saving does not reserve stock, place an order or add anything to a Litbuy cart. Open each product's detail page when you want to continue to Litbuy."
+      ],
+      [
+        "What is kept in recently viewed, and what does Clear history remove?",
+        "Opening a product detail page adds it to your recent history; the site keeps up to eight recent items and previews the latest four on the homepage. Clear history removes that browsing list without deleting saved finds or QC notes. These records are local, so clearing browser storage or using another browser can make them unavailable."
+      ],
+      [
+        "Why can the displayed price differ from checkout?",
+        "The site starts with the source's USD reference price and converts it using a dated exchange rate. Changing currency also updates saved-item subtotals. The seller, Litbuy and your payment provider may use different prices or rates. Check the current listing, shipping and selected services at checkout for the amount you will pay."
+      ],
+      [
+        "What changes when I select another language?",
+        "The site offers 24 languages. Navigation, categories, product-type names, FAQ and QC controls change with your selection, and category and product links keep that language. Brand names, item IDs and original listing titles remain as identifiers. Your own notes stay exactly as you wrote them; they are not automatically translated."
+      ],
+      [
+        "Why does a category sometimes show an availability notice?",
+        "Full category pages read products from kakobuymake.com. If that source is temporarily unavailable, the page explains the issue and may show saved reference products for that category. That fallback is not live stock confirmation. Use the retry option later and check the current Litbuy listing before ordering."
+      ],
+      [
+        "Where do I register, pay or get help with an order?",
+        "The Join Litbuy button opens Litbuy registration using this site's invitation link. Payments, order changes, warehouse checks and shipping are handled in your Litbuy account. QC Notes is an independent product directory and cannot manage those orders. Some outbound links are affiliate links and may earn a commission."
+      ]
+    ]
+  },
+  "zh": {
+    "title": "选品时，你可能想知道",
+    "intro": "围绕本站的完整分类、12 款首页精选、QC 参考图、收藏清单与 Litbuy 跳转流程，解答实际使用中的问题。",
+    "groups": [
+      "分类浏览与商品详情",
+      "QC 图片与个人笔记",
+      "收藏与最近浏览",
+      "价格、货币与语言",
+      "商品数据与 Litbuy 订单"
+    ],
+    "items": [
+      [
+        "首页只有 12 款，怎样查看某个分类的全部商品？",
+        "首页的 12 款是精选展示，并不代表全部商品。点击分类名称会进入该分类的独立页面，也可以通过“查看全部商品”进入完整列表。分类页提供价格排序和分页；如果主站暂时无法读取，页面会明确提示，并说明是否正在展示已保存的参考商品。"
+      ],
+      [
+        "点击商品后，会直接进入 Litbuy 吗？",
+        "不会。点击商品图片或名称，先进入本站独立商品详情页，查看原平台商品 ID、参考价格和可用图片。再点击“前往 Litbuy 查看”，才会通过本站推广链接打开对应商品。付款前请在 Litbuy 核对尺码、颜色、数量及实时价格。"
+      ],
+      [
+        "这里的 QC 参考图，是我将收到的那件商品的质检图吗？",
+        "不是。这些图片来自主站已有商品图库，可能属于其他颜色、此前批次或其他买家的商品。它们可以帮助你了解需要检查的细节，但不代表你的订单已经质检通过。寄出前，请检查自己 Litbuy 订单对应的仓库质检图片。"
+      ],
+      [
+        "QC 笔记的四个检查项和个人备注怎么用？",
+        "在 QC 笔记区选择商品，勾选自己已记录的检查事项，展开“个人笔记”后填写提醒。每件商品的勾选和文字分别保存在当前浏览器中。进度数字只表示你的备忘记录数量，并非质检评分；重置仅清除当前商品的笔记，也不会向 Litbuy 发送内容。"
+      ],
+      [
+        "收藏商品相当于加入购物车或预留库存吗？",
+        "不是。收藏图标只用于在当前浏览器整理心仪清单。参考价小计仅累加商品价格，不包含运费和增值服务。收藏不会锁定库存、生成订单，也不会同步加入 Litbuy 购物车。准备购买时，请打开对应详情页再前往 Litbuy。"
+      ],
+      [
+        "最近浏览会保留什么？清空后会影响收藏吗？",
+        "打开独立商品详情页后，商品会进入最近浏览记录。本站最多保留最近 8 件，并在首页预览最新 4 件。“清空浏览记录”只删除这份浏览列表，不会删除收藏和 QC 笔记。数据存储在当前浏览器，清除浏览器存储或换用其他浏览器后可能无法继续读取。"
+      ],
+      [
+        "为什么这里的价格和最终付款金额不一样？",
+        "本站基于主站的美元参考价，按注明日期的汇率进行换算；切换货币时，收藏小计也会同步变化。卖家实时价格、Litbuy 与支付机构采用的汇率可能不同。最终应在对应商品页及结算时确认实时价格、运费和所选服务费用。"
+      ],
+      [
+        "切换语言后，哪些内容会跟着变化？",
+        "本站支持 24 种语言，导航、分类、商品类型名称、FAQ 和 QC 操作文案都会切换；分类及商品链接也会保留当前语言。品牌名、商品 ID 和原商品标题用于核对来源，因此保留原有标识。你自己填写的笔记会原样保存，不会自动翻译。"
+      ],
+      [
+        "为什么分类页有时会提示商品源暂时不可用？",
+        "完整分类页从 kakobuymake.com 读取商品。主站暂时无法连接时，页面会说明原因，并可能显示该分类中已保存的参考商品。这不代表实时库存已经确认。可稍后使用重试入口重新读取，购买前仍需检查 Litbuy 当前商品页。"
+      ],
+      [
+        "注册、付款以及订单问题应该在哪里处理？",
+        "导航中的“注册 Litbuy”会通过本站邀请链接打开 Litbuy 注册页面。付款、订单修改、仓库质检和寄送都在你的 Litbuy 账户中处理。QC Notes 是独立商品目录，无法代为管理订单。本站部分外部链接属于推广链接，可能产生佣金。"
+      ]
+    ]
+  },
+  "de": {
+    "title": "Deine Funde. Deine Fragen.",
+    "intro": "So nutzt du Kategorien, Produktseiten, QC-Referenzen und deine persönliche Auswahl auf Litbuy QC Notes.",
+    "groups": [
+      "Kategorien und Produkte",
+      "QC-Fotos und Notizen",
+      "Gespeichert und zuletzt angesehen",
+      "Preise und Sprachen",
+      "Katalog und Litbuy-Bestellungen"
+    ],
+    "items": [
+      [
+        "Wie finde ich mehr als die zwölf Startseitenprodukte?",
+        "Die zwölf Artikel auf der Startseite sind eine Auswahl, nicht der gesamte Katalog. Ein Klick auf eine Kategorie öffnet ihre eigene Seite; Alle Funde führt zur vollständigen Liste. Dort kannst du nach Preis sortieren und weitere Seiten öffnen. Ist die Quelle nicht erreichbar, kennzeichnet ein Hinweis die gespeicherte Referenzauswahl."
+      ],
+      [
+        "Wohin führt ein Klick auf ein Produkt?",
+        "Bild und Produktname öffnen zunächst eine eigene Detailseite auf dieser Website. Dort findest du Artikelnummer, Referenzpreis und verfügbare Bilder. Bei Litbuy ansehen öffnet anschließend das passende Angebot über unseren Affiliate-Link. Prüfe Größe, Farbe, Menge und aktuellen Preis auf Litbuy vor der Zahlung."
+      ],
+      [
+        "Zeigen die QC-Referenzen genau den Artikel meiner Bestellung?",
+        "Nein. Die vorhandenen Bilder stammen aus der Quellgalerie und können eine andere Farbe, eine ältere Charge oder den Artikel eines anderen Käufers zeigen. Sie helfen beim Prüfen von Details, bestätigen aber nicht deine Bestellung. Kontrolliere vor dem Versand die Lagerbilder deiner eigenen Litbuy-Bestellung."
+      ],
+      [
+        "Wie funktionieren die vier Prüfpunkte und persönlichen Notizen?",
+        "Wähle im QC-Bereich einen Artikel, markiere deine notierten Prüfpunkte und öffne Persönliche Notizen für einen eigenen Hinweis. Jeder Artikel speichert seine Angaben getrennt in diesem Browser. Der Zähler zeigt nur deine Aufzeichnungen, keine QC-Bewertung. Zurücksetzen löscht nur die Notizen dieses Artikels; Litbuy erhält sie nicht."
+      ],
+      [
+        "Sind gespeicherte Funde ein Warenkorb oder eine Reservierung?",
+        "Nein. Das Lesezeichen erstellt eine persönliche Auswahl in diesem Browser. Die Zwischensumme enthält nur Referenzpreise, keinen Versand und keine Zusatzleistungen. Speichern reserviert keinen Bestand und legt nichts in den Litbuy-Warenkorb. Öffne die Produktdetails, wenn du auf Litbuy weiter einkaufen möchtest."
+      ],
+      [
+        "Was speichert der Verlauf und was löscht Verlauf löschen?",
+        "Eine geöffnete Produktdetailseite wird im Verlauf erfasst. Die Website behält bis zu acht Artikel und zeigt die letzten vier auf der Startseite. Verlauf löschen entfernt nur diese Liste; gespeicherte Funde und QC-Notizen bleiben erhalten. Nach dem Löschen des Browserspeichers oder in einem anderen Browser stehen lokale Daten möglicherweise nicht bereit."
+      ],
+      [
+        "Warum kann der angezeigte Preis vom Zahlbetrag abweichen?",
+        "Ausgangspunkt ist der USD-Referenzpreis der Quelle, umgerechnet mit einem datierten Wechselkurs. Ein Währungswechsel aktualisiert auch die gespeicherte Zwischensumme. Verkäufer, Litbuy und Zahlungsanbieter können andere Preise oder Kurse verwenden. Prüfe den aktuellen Artikelpreis, Versand und gewählte Leistungen vor der Zahlung."
+      ],
+      [
+        "Welche Inhalte wechseln mit der Sprache?",
+        "Die Website unterstützt 24 Sprachen. Navigation, Kategorien, Produktartnamen, FAQ und QC-Bedienelemente wechseln gemeinsam; Produkt- und Kategorielinks behalten die gewählte Sprache. Markennamen, Artikelnummern und ursprüngliche Angebotstitel bleiben zur Identifikation erhalten. Deine eigenen Notizen werden unverändert gespeichert und nicht automatisch übersetzt."
+      ],
+      [
+        "Warum meldet eine Kategorie manchmal eine nicht erreichbare Quelle?",
+        "Vollständige Kategorieseiten laden Produkte von kakobuymake.com. Ist die Quelle vorübergehend nicht erreichbar, erklärt die Seite das Problem und zeigt gegebenenfalls gespeicherte Referenzartikel. Das bestätigt keinen aktuellen Lagerbestand. Versuche es später erneut und prüfe das aktuelle Litbuy-Angebot vor einer Bestellung."
+      ],
+      [
+        "Wo registriere ich mich und wer bearbeitet Bestellprobleme?",
+        "Bei Litbuy registrieren öffnet die Registrierung mit dem Einladungslink dieser Website. Zahlungen, Änderungen, Lagerprüfung und Versand verwaltest du in deinem Litbuy-Konto. QC Notes ist ein unabhängiger Produktkatalog und kann Bestellungen nicht verwalten. Einige externe Links sind Affiliate-Links und können eine Provision einbringen."
+      ]
+    ]
+  },
+  "fr": {
+    "title": "Vos trouvailles. Vos questions.",
+    "intro": "Utilisez les catégories complètes, les fiches produit, les références QC et votre sélection personnelle sur Litbuy QC Notes.",
+    "groups": [
+      "Catégories et produits",
+      "Photos et notes QC",
+      "Favoris et historique",
+      "Prix et langues",
+      "Catalogue et commandes Litbuy"
+    ],
+    "items": [
+      [
+        "Comment voir plus que les douze produits de l’accueil ?",
+        "Les douze articles de l’accueil sont une sélection, pas tout le catalogue. Cliquez sur une catégorie pour ouvrir sa page dédiée, ou sur Tous les produits pour consulter la liste complète. Les catégories proposent tri par prix et pagination. Si la source est inaccessible, un message identifie la sélection enregistrée affichée."
+      ],
+      [
+        "Que se passe-t-il quand j’ouvre un produit ?",
+        "L’image ou le nom ouvre d’abord une fiche distincte sur ce site, avec l’identifiant, le prix indicatif et les photos disponibles. Voir sur Litbuy ouvre ensuite l’annonce correspondante via notre lien affilié. Vérifiez taille, couleur, quantité et prix actuel sur Litbuy avant de payer."
+      ],
+      [
+        "Les références QC montrent-elles l’article de ma commande ?",
+        "Non. Ces images proviennent de la galerie source et peuvent montrer une autre couleur, un ancien lot ou l’article d’un autre acheteur. Elles aident à repérer les détails à vérifier, mais ne valident pas votre commande. Contrôlez vos propres photos d’entrepôt avant l’expédition."
+      ],
+      [
+        "Comment utiliser les quatre contrôles et les notes personnelles ?",
+        "Choisissez un article dans les notes QC, cochez les points consignés puis ouvrez Notes personnelles pour ajouter un rappel. Chaque article conserve ses données séparément dans ce navigateur. Le compteur indique vos rappels, pas une note de qualité. Réinitialiser efface uniquement les notes de cet article ; rien n’est envoyé à Litbuy."
+      ],
+      [
+        "Les favoris constituent-ils un panier ou une réservation ?",
+        "Non. Le signet crée une sélection personnelle dans ce navigateur. Son sous-total additionne les prix indicatifs, sans transport ni options. Enregistrer ne réserve aucun stock et n’ajoute rien au panier Litbuy. Ouvrez la fiche du produit lorsque vous souhaitez poursuivre votre achat sur Litbuy."
+      ],
+      [
+        "Que conserve l’historique et que supprime son effacement ?",
+        "Ouvrir une fiche produit ajoute l’article à l’historique. Le site conserve jusqu’à huit articles et affiche les quatre plus récents sur l’accueil. Effacer l’historique ne supprime ni favoris ni notes QC. Ces données étant locales, elles peuvent manquer après un nettoyage du stockage ou dans un autre navigateur."
+      ],
+      [
+        "Pourquoi le prix peut-il différer du montant à payer ?",
+        "Le prix indicatif en USD de la source est converti avec un taux daté. Changer de devise actualise également le sous-total des favoris. Le vendeur, Litbuy et votre prestataire de paiement peuvent appliquer d’autres prix ou taux. Vérifiez le prix actuel, le transport et les options lors du paiement."
+      ],
+      [
+        "Quels éléments changent lorsque je choisis une autre langue ?",
+        "Le site propose 24 langues. Navigation, catégories, types de produits, FAQ et commandes QC suivent votre choix, tout comme les liens des catégories et produits. Marques, identifiants et titres d’origine restent des repères. Vos propres notes sont conservées telles que vous les avez écrites, sans traduction automatique."
+      ],
+      [
+        "Pourquoi une catégorie indique-t-elle parfois une source indisponible ?",
+        "Les pages complètes lisent les produits depuis kakobuymake.com. Si la source est temporairement inaccessible, la page explique le problème et peut afficher des références enregistrées pour cette catégorie. Cela ne confirme aucun stock actuel. Réessayez plus tard et contrôlez l’annonce Litbuy avant de commander."
+      ],
+      [
+        "Où m’inscrire, payer ou demander de l’aide pour une commande ?",
+        "Rejoindre Litbuy ouvre l’inscription avec le lien d’invitation de ce site. Paiements, modifications, contrôles d’entrepôt et expédition se gèrent dans votre compte Litbuy. QC Notes est un catalogue indépendant qui ne peut pas gérer ces commandes. Certains liens externes sont affiliés et peuvent nous rapporter une commission."
+      ]
+    ]
+  },
+  "es": {
+    "title": "Tus productos. Tus preguntas.",
+    "intro": "Cómo usar las categorías completas, las fichas, las referencias QC y tu selección personal en Litbuy QC Notes.",
+    "groups": [
+      "Categorías y productos",
+      "Fotos y notas QC",
+      "Guardados e historial",
+      "Precios e idiomas",
+      "Catálogo y pedidos Litbuy"
+    ],
+    "items": [
+      [
+        "¿Cómo veo más de los doce productos de la portada?",
+        "La portada muestra doce productos seleccionados, no todo el catálogo. Abre una categoría para visitar su página completa o usa Ver todos. Las categorías incluyen orden por precio y paginación. Si la fuente no responde, un aviso indica cuándo se muestra una selección guardada como referencia."
+      ],
+      [
+        "¿Adónde voy al pulsar un producto?",
+        "La imagen o el nombre abre primero una ficha independiente en este sitio, con el ID, precio orientativo y fotos disponibles. Ver en Litbuy abre después el anuncio correspondiente mediante nuestro enlace afiliado. Confirma talla, color, cantidad y precio actual en Litbuy antes de pagar."
+      ],
+      [
+        "¿Las referencias QC revisan la unidad de mi pedido?",
+        "No. Son imágenes existentes de la galería original y pueden mostrar otro color, un lote anterior o el artículo de otro comprador. Ayudan a identificar detalles, pero no aprueban tu pedido. Revisa las fotos de almacén vinculadas a tu propia compra antes del envío."
+      ],
+      [
+        "¿Cómo uso las cuatro comprobaciones y mis notas?",
+        "Selecciona un artículo en las notas QC, marca los puntos registrados y abre Notas personales para escribir un recordatorio. Cada producto guarda sus datos por separado en este navegador. El contador mide tus anotaciones, no la calidad. Restablecer borra solo las notas de ese artículo; no se envía nada a Litbuy."
+      ],
+      [
+        "¿Los productos guardados son un carrito o una reserva?",
+        "No. El marcador crea una selección personal en este navegador. Su subtotal suma precios orientativos sin envío ni servicios opcionales. Guardar no reserva existencias ni añade productos al carrito de Litbuy. Abre la ficha correspondiente cuando quieras continuar la compra en Litbuy."
+      ],
+      [
+        "¿Qué conserva el historial y qué elimina Borrar historial?",
+        "Abrir una ficha añade el producto al historial. Se conservan hasta ocho artículos y la portada muestra los cuatro más recientes. Borrar historial no elimina favoritos ni notas QC. Los datos son locales: limpiar el almacenamiento o usar otro navegador puede impedir recuperarlos."
+      ],
+      [
+        "¿Por qué el precio puede ser distinto al pagar?",
+        "El precio orientativo de la fuente en USD se convierte con un cambio fechado. Cambiar la moneda también actualiza el subtotal guardado. El vendedor, Litbuy y tu proveedor de pago pueden aplicar otros precios o cambios. Confirma precio actual, transporte y servicios al pagar."
+      ],
+      [
+        "¿Qué cambia al seleccionar otro idioma?",
+        "El sitio ofrece 24 idiomas. Navegación, categorías, tipos de producto, FAQ y controles QC cambian juntos, y los enlaces conservan el idioma elegido. Marcas, ID y títulos originales siguen como identificadores. Tus propias notas permanecen tal como las escribiste, sin traducción automática."
+      ],
+      [
+        "¿Por qué una categoría avisa de una fuente no disponible?",
+        "Las categorías completas leen productos de kakobuymake.com. Si la fuente falla temporalmente, la página explica el problema y puede mostrar referencias guardadas de esa categoría. Esto no confirma existencias actuales. Reintenta más tarde y comprueba el anuncio de Litbuy antes de pedir."
+      ],
+      [
+        "¿Dónde me registro, pago o consulto un pedido?",
+        "Registrarse en Litbuy abre el registro con la invitación de este sitio. Pagos, cambios, inspecciones de almacén y envíos se gestionan en tu cuenta Litbuy. QC Notes es un catálogo independiente y no puede gestionar esos pedidos. Algunos enlaces externos son afiliados y pueden generar una comisión."
+      ]
+    ]
+  },
+  "it": {
+    "title": "I tuoi prodotti. Le tue domande.",
+    "intro": "Come utilizzare categorie complete, schede prodotto, riferimenti QC e selezione personale su Litbuy QC Notes.",
+    "groups": [
+      "Categorie e prodotti",
+      "Foto e note QC",
+      "Salvati e cronologia",
+      "Prezzi e lingue",
+      "Catalogo e ordini Litbuy"
+    ],
+    "items": [
+      [
+        "Come vedo più dei dodici prodotti in homepage?",
+        "I dodici articoli in homepage sono una selezione, non l’intero catalogo. Apri una categoria per visitarne la pagina completa oppure scegli Tutti i prodotti. Le categorie offrono ordinamento per prezzo e paginazione. Se la fonte non risponde, un avviso identifica l’eventuale selezione salvata mostrata come riferimento."
+      ],
+      [
+        "Dove porta un clic su un prodotto?",
+        "L’immagine o il nome apre prima una scheda autonoma su questo sito, con ID, prezzo indicativo e immagini disponibili. Vedi su Litbuy apre poi l’annuncio corrispondente tramite il nostro link affiliato. Controlla taglia, colore, quantità e prezzo corrente su Litbuy prima di pagare."
+      ],
+      [
+        "Le foto QC controllano il pezzo del mio ordine?",
+        "No. Sono immagini già presenti nella galleria originale e possono mostrare un altro colore, un lotto precedente o l’articolo di un altro acquirente. Aiutano a individuare dettagli, ma non approvano il tuo ordine. Controlla le foto di magazzino del tuo acquisto prima della spedizione."
+      ],
+      [
+        "Come uso i quattro controlli e le note personali?",
+        "Scegli un articolo nelle note QC, spunta i punti annotati e apri Note personali per aggiungere un promemoria. Ogni prodotto conserva i dati separatamente in questo browser. Il contatore indica le tue annotazioni, non un voto di qualità. Reimposta cancella solo le note di quell’articolo; nulla viene inviato a Litbuy."
+      ],
+      [
+        "I prodotti salvati sono un carrello o una prenotazione?",
+        "No. Il segnalibro crea una selezione personale in questo browser. Il subtotale somma prezzi indicativi senza spedizione o servizi opzionali. Salvare non riserva disponibilità e non aggiunge nulla al carrello Litbuy. Apri la scheda del prodotto quando vuoi proseguire l’acquisto su Litbuy."
+      ],
+      [
+        "Che cosa conserva la cronologia e che cosa cancella la pulizia?",
+        "Aprire una scheda aggiunge il prodotto alla cronologia. Il sito conserva fino a otto articoli e ne mostra quattro recenti in homepage. Cancella cronologia non elimina preferiti o note QC. I dati sono locali e potrebbero non essere disponibili dopo aver pulito il browser o cambiato browser."
+      ],
+      [
+        "Perché il prezzo può differire dall’importo finale?",
+        "Il riferimento in USD della fonte viene convertito con un cambio datato. Cambiare valuta aggiorna anche il subtotale dei preferiti. Venditore, Litbuy e gestore dei pagamenti possono applicare prezzi o cambi diversi. Verifica prezzo attuale, trasporto e servizi selezionati prima del pagamento."
+      ],
+      [
+        "Che cosa cambia scegliendo un’altra lingua?",
+        "Il sito offre 24 lingue. Navigazione, categorie, tipi di prodotto, FAQ e comandi QC cambiano insieme; i link mantengono la scelta. Marchi, ID e titoli originali restano identificativi. Le tue note personali vengono conservate come le hai scritte e non sono tradotte automaticamente."
+      ],
+      [
+        "Perché una categoria segnala una fonte non disponibile?",
+        "Le categorie complete leggono i prodotti da kakobuymake.com. Se la fonte è temporaneamente irraggiungibile, la pagina spiega il problema e può mostrare riferimenti salvati della categoria. Non è una conferma di disponibilità. Riprova più tardi e controlla l’annuncio Litbuy prima di ordinare."
+      ],
+      [
+        "Dove mi registro, pago o chiedo assistenza per un ordine?",
+        "Registrati su Litbuy apre l’iscrizione con l’invito di questo sito. Pagamenti, modifiche, controlli in magazzino e spedizioni si gestiscono nel tuo account Litbuy. QC Notes è un catalogo indipendente e non può gestire questi ordini. Alcuni link esterni sono affiliati e possono generare una commissione."
+      ]
+    ]
+  },
+  "pt": {
+    "title": "Os seus produtos. As suas perguntas.",
+    "intro": "Como usar as categorias completas, as páginas de produto, as referências QC e a sua seleção no Litbuy QC Notes.",
+    "groups": [
+      "Categorias e produtos",
+      "Fotos e notas QC",
+      "Guardados e histórico",
+      "Preços e idiomas",
+      "Catálogo e encomendas Litbuy"
+    ],
+    "items": [
+      [
+        "Como vejo mais do que os doze produtos da página inicial?",
+        "Os doze artigos da página inicial são uma seleção, não o catálogo completo. Abra uma categoria para visitar a respetiva página ou escolha Ver todos. As categorias incluem ordenação por preço e paginação. Se a fonte estiver indisponível, um aviso identifica qualquer seleção guardada apresentada como referência."
+      ],
+      [
+        "O que acontece ao abrir um produto?",
+        "A imagem ou o nome abre primeiro uma página independente neste site, com ID, preço indicativo e fotos disponíveis. Ver na Litbuy abre depois o anúncio correspondente através do nosso link afiliado. Confirme tamanho, cor, quantidade e preço atual na Litbuy antes de pagar."
+      ],
+      [
+        "As referências QC verificam a peça da minha encomenda?",
+        "Não. São fotos já existentes na galeria original e podem mostrar outra cor, um lote anterior ou o artigo de outro comprador. Ajudam a identificar detalhes a verificar, mas não aprovam a sua encomenda. Consulte as fotos de armazém da sua própria compra antes do envio."
+      ],
+      [
+        "Como uso as quatro verificações e as notas pessoais?",
+        "Escolha um artigo nas notas QC, assinale os pontos registados e abra Notas pessoais para escrever um lembrete. Cada produto guarda os seus dados separadamente neste navegador. O contador representa anotações, não uma classificação de qualidade. Repor elimina apenas as notas desse artigo; nada é enviado à Litbuy."
+      ],
+      [
+        "Os produtos guardados são um carrinho ou uma reserva?",
+        "Não. O marcador cria uma seleção pessoal neste navegador. O subtotal soma preços indicativos, sem transporte ou serviços opcionais. Guardar não reserva stock nem adiciona produtos ao carrinho Litbuy. Abra a página do artigo quando quiser continuar a compra na Litbuy."
+      ],
+      [
+        "O que fica no histórico e o que remove Limpar histórico?",
+        "Abrir uma página de produto adiciona o artigo ao histórico. O site conserva até oito artigos e mostra os quatro mais recentes na página inicial. Limpar histórico não apaga favoritos ou notas QC. Os dados são locais e podem não estar disponíveis após limpar o armazenamento ou mudar de navegador."
+      ],
+      [
+        "Porque pode o preço diferir do valor final?",
+        "O preço indicativo em USD da fonte é convertido com uma taxa datada. A mudança de moeda atualiza também o subtotal guardado. O vendedor, a Litbuy e o prestador de pagamento podem usar outros preços ou taxas. Confirme preço atual, transporte e serviços no pagamento."
+      ],
+      [
+        "O que muda ao escolher outro idioma?",
+        "O site disponibiliza 24 idiomas. Navegação, categorias, tipos de produto, FAQ e controlos QC acompanham a escolha, assim como os links. Marcas, ID e títulos originais permanecem como identificadores. As suas próprias notas ficam exatamente como as escreveu e não são traduzidas automaticamente."
+      ],
+      [
+        "Porque aparece um aviso de fonte indisponível numa categoria?",
+        "As categorias completas leem produtos de kakobuymake.com. Se a fonte estiver temporariamente inacessível, a página explica o problema e pode mostrar referências guardadas dessa categoria. Isto não confirma stock atual. Tente novamente mais tarde e confira o anúncio Litbuy antes de encomendar."
+      ],
+      [
+        "Onde me registo, pago ou obtenho ajuda com uma encomenda?",
+        "Registar na Litbuy abre o registo com o convite deste site. Pagamentos, alterações, inspeções de armazém e envios são geridos na sua conta Litbuy. QC Notes é um catálogo independente e não gere essas encomendas. Alguns links externos são afiliados e podem gerar uma comissão."
+      ]
+    ]
+  },
+  "pl": {
+    "title": "Twoje produkty. Twoje pytania.",
+    "intro": "Jak korzystać z pełnych kategorii, stron produktów, zdjęć referencyjnych QC i własnej listy na Litbuy QC Notes.",
+    "groups": [
+      "Kategorie i produkty",
+      "Zdjęcia i notatki QC",
+      "Zapisane i historia",
+      "Ceny i języki",
+      "Katalog i zamówienia Litbuy"
+    ],
+    "items": [
+      [
+        "Jak zobaczyć więcej niż dwanaście produktów na stronie głównej?",
+        "Dwanaście produktów na stronie głównej to wybór, a nie cały katalog. Kliknij kategorię, aby otworzyć jej pełną stronę, lub wybierz Wszystkie produkty. Kategorie oferują sortowanie cen i kolejne strony. Jeśli źródło jest niedostępne, komunikat oznacza ewentualny zapisany wybór referencyjny."
+      ],
+      [
+        "Dokąd prowadzi kliknięcie produktu?",
+        "Zdjęcie lub nazwa najpierw otwiera osobną stronę produktu w tym serwisie, z ID, orientacyjną ceną i dostępnymi zdjęciami. Zobacz w Litbuy otwiera dopasowaną ofertę przez nasz link afiliacyjny. Przed zapłatą sprawdź rozmiar, kolor, ilość i aktualną cenę na Litbuy."
+      ],
+      [
+        "Czy zdjęcia QC sprawdzają egzemplarz z mojego zamówienia?",
+        "Nie. To wcześniejsze zdjęcia z galerii źródłowej, które mogą pokazywać inny kolor, starszą partię albo zakup innej osoby. Pomagają wybrać szczegóły do sprawdzenia, ale nie zatwierdzają zamówienia. Przed wysyłką obejrzyj zdjęcia magazynowe własnego zamówienia Litbuy."
+      ],
+      [
+        "Jak działają cztery punkty kontroli i osobiste notatki?",
+        "Wybierz produkt w notatkach QC, zaznacz zapisane punkty i rozwiń Osobiste notatki, aby dodać przypomnienie. Każdy produkt ma oddzielne dane w tej przeglądarce. Licznik pokazuje tylko zanotowane punkty, a nie ocenę jakości. Reset usuwa notatki tego produktu; nic nie jest wysyłane do Litbuy."
+      ],
+      [
+        "Czy zapisane produkty są koszykiem lub rezerwacją?",
+        "Nie. Zakładka tworzy osobistą listę w tej przeglądarce. Suma obejmuje orientacyjne ceny bez wysyłki i dodatkowych usług. Zapisanie nie rezerwuje towaru ani nie dodaje go do koszyka Litbuy. Otwórz stronę produktu, gdy chcesz kontynuować zakup na Litbuy."
+      ],
+      [
+        "Co przechowuje historia i co usuwa jej wyczyszczenie?",
+        "Otwarcie strony produktu dodaje go do historii. Serwis zachowuje do ośmiu pozycji i pokazuje cztery najnowsze na stronie głównej. Wyczyszczenie historii nie usuwa zapisanych produktów ani notatek QC. Dane są lokalne, więc po wyczyszczeniu pamięci lub zmianie przeglądarki mogą być niedostępne."
+      ],
+      [
+        "Dlaczego cena może różnić się od kwoty przy płatności?",
+        "Orientacyjna cena źródłowa w USD jest przeliczana według kursu z podaną datą. Zmiana waluty aktualizuje też sumę zapisanych produktów. Sprzedawca, Litbuy i operator płatności mogą używać innych cen lub kursów. Przy płatności sprawdź aktualną cenę, wysyłkę i wybrane usługi."
+      ],
+      [
+        "Co zmienia się po wybraniu innego języka?",
+        "Serwis obsługuje 24 języki. Nawigacja, kategorie, typy produktów, FAQ i kontrolki QC zmieniają się razem, a linki zachowują wybór. Marki, ID i oryginalne tytuły pozostają identyfikatorami. Twoje notatki są zachowywane w zapisanej formie i nie są automatycznie tłumaczone."
+      ],
+      [
+        "Dlaczego kategoria czasem informuje o niedostępnym źródle?",
+        "Pełne kategorie pobierają produkty z kakobuymake.com. Gdy źródło jest chwilowo niedostępne, strona wyjaśnia problem i może pokazać zapisane produkty referencyjne danej kategorii. Nie potwierdza to bieżącego stanu magazynu. Spróbuj później i sprawdź aktualną ofertę Litbuy przed zakupem."
+      ],
+      [
+        "Gdzie się rejestruję, płacę i uzyskuję pomoc przy zamówieniu?",
+        "Zarejestruj się w Litbuy otwiera rejestrację z zaproszeniem tego serwisu. Płatności, zmiany, kontrola magazynowa i wysyłka są obsługiwane na koncie Litbuy. QC Notes to niezależny katalog i nie zarządza tymi zamówieniami. Część linków jest afiliacyjna i może przynieść prowizję."
+      ]
+    ]
+  },
+  "nl": {
+    "title": "Jouw producten. Jouw vragen.",
+    "intro": "Zo gebruik je volledige categorieën, productpagina's, QC-referenties en je persoonlijke selectie op Litbuy QC Notes.",
+    "groups": [
+      "Categorieën en producten",
+      "QC-foto's en notities",
+      "Opgeslagen en recent bekeken",
+      "Prijzen en talen",
+      "Catalogus en Litbuy-bestellingen"
+    ],
+    "items": [
+      [
+        "Hoe bekijk ik meer dan de twaalf producten op de homepage?",
+        "De twaalf producten op de homepage vormen een selectie, niet de hele catalogus. Open een categorie voor de volledige categoriepagina of kies Alle producten bekijken. Daar kun je op prijs sorteren en naar volgende pagina's gaan. Bij een bronstoring maakt een melding duidelijk wanneer een opgeslagen selectie wordt getoond."
+      ],
+      [
+        "Waar kom ik terecht als ik op een product klik?",
+        "De afbeelding of naam opent eerst een aparte detailpagina op deze website, met artikel-ID, richtprijs en beschikbare foto's. Bekijken op Litbuy opent daarna de bijbehorende aanbieding via onze affiliatelink. Controleer maat, kleur, aantal en actuele prijs op Litbuy voordat je betaalt."
+      ],
+      [
+        "Controleren de QC-referenties precies mijn bestelde artikel?",
+        "Nee. Dit zijn bestaande foto's uit de brongalerij. Ze kunnen een andere kleur, eerdere partij of aankoop van iemand anders tonen. Ze helpen details te beoordelen, maar keuren jouw bestelling niet goed. Controleer voor verzending de magazijnfoto's die bij je eigen Litbuy-bestelling horen."
+      ],
+      [
+        "Hoe werken de vier controles en persoonlijke notities?",
+        "Kies een artikel bij de QC-notities, vink genoteerde controles aan en open Persoonlijke notities voor een herinnering. Elk product bewaart zijn eigen gegevens in deze browser. De teller toont je aantekeningen, geen kwaliteitsscore. Opnieuw instellen wist alleen de notities van dat artikel; Litbuy ontvangt niets."
+      ],
+      [
+        "Zijn opgeslagen producten een winkelmandje of reservering?",
+        "Nee. De bladwijzer maakt een persoonlijke selectie in deze browser. Het subtotaal telt richtprijzen op, zonder verzending of optionele diensten. Opslaan reserveert geen voorraad en voegt niets toe aan je Litbuy-winkelmandje. Open de productpagina wanneer je wilt doorgaan naar Litbuy."
+      ],
+      [
+        "Wat bewaart recent bekeken en wat wist Geschiedenis wissen?",
+        "Een geopende productpagina wordt aan je geschiedenis toegevoegd. De site bewaart maximaal acht artikelen en toont de laatste vier op de homepage. Geschiedenis wissen verwijdert alleen die lijst; favorieten en QC-notities blijven behouden. Na wissen van browseropslag of wisselen van browser kunnen lokale gegevens ontbreken."
+      ],
+      [
+        "Waarom kan de prijs verschillen van het afrekenbedrag?",
+        "De USD-richtprijs van de bron wordt omgerekend met een gedateerde wisselkoers. De valutakeuze verandert ook je opgeslagen subtotaal. De verkoper, Litbuy en je betaalprovider kunnen andere prijzen of koersen hanteren. Controleer de actuele artikelprijs, verzending en gekozen diensten bij het afrekenen."
+      ],
+      [
+        "Wat verandert wanneer ik een andere taal kies?",
+        "De site biedt 24 talen. Navigatie, categorieën, producttypen, FAQ en QC-bediening volgen je keuze; product- en categorielinks behouden die taal. Merken, artikel-ID's en oorspronkelijke titels blijven herkenningspunten. Je eigen notities blijven precies zoals je ze schreef en worden niet automatisch vertaald."
+      ],
+      [
+        "Waarom meldt een categorie soms dat de bron onbereikbaar is?",
+        "Volledige categoriepagina's lezen producten van kakobuymake.com. Als die bron tijdelijk niet beschikbaar is, licht de pagina dat toe en kan een opgeslagen referentieselectie verschijnen. Dat bevestigt geen actuele voorraad. Probeer later opnieuw en controleer de Litbuy-aanbieding voordat je bestelt."
+      ],
+      [
+        "Waar registreer ik me, betaal ik en krijg ik hulp bij bestellingen?",
+        "Aanmelden bij Litbuy opent de registratie met de uitnodigingslink van deze site. Betalingen, wijzigingen, magazijncontrole en verzending regel je in je Litbuy-account. QC Notes is een onafhankelijke catalogus en beheert deze bestellingen niet. Sommige externe links zijn affiliatelinks en kunnen een commissie opleveren."
+      ]
+    ]
+  },
+  "sv": {
+    "title": "Dina produkter. Dina frågor.",
+    "intro": "Så använder du fullständiga kategorier, produktsidor, QC-referenser och ditt eget urval på Litbuy QC Notes.",
+    "groups": [
+      "Kategorier och produkter",
+      "QC-bilder och anteckningar",
+      "Sparat och senast visat",
+      "Priser och språk",
+      "Katalog och Litbuy-beställningar"
+    ],
+    "items": [
+      [
+        "Hur ser jag fler än de tolv produkterna på startsidan?",
+        "Startsidan visar tolv utvalda artiklar, inte hela katalogen. Öppna en kategori för dess fullständiga sida eller välj Visa alla produkter. Kategorierna har prissortering och sidindelning. Om källan inte går att nå visar ett meddelande när ett sparat referensurval används."
+      ],
+      [
+        "Vart kommer jag när jag klickar på en produkt?",
+        "Bilden eller namnet öppnar först en separat produktsida här, med artikel-ID, referenspris och tillgängliga foton. Visa på Litbuy öppnar sedan rätt annons via vår affiliatelänk. Kontrollera storlek, färg, antal och aktuellt pris på Litbuy innan du betalar."
+      ],
+      [
+        "Kontrollerar QC-referenserna just min beställda artikel?",
+        "Nej. Det är befintliga bilder från källans galleri och de kan visa en annan färg, en äldre leverans eller en annan köpares artikel. De hjälper dig granska detaljer men godkänner inte din beställning. Kontrollera lagerbilderna för din egen Litbuy-beställning före frakt."
+      ],
+      [
+        "Hur fungerar de fyra kontrollerna och personliga anteckningar?",
+        "Välj en artikel i QC-anteckningarna, markera dina noterade punkter och öppna Personliga anteckningar för en påminnelse. Varje produkt lagrar egna uppgifter i webbläsaren. Räknaren visar dina anteckningar, inget kvalitetsbetyg. Återställ tar bara bort den artikelns anteckningar; inget skickas till Litbuy."
+      ],
+      [
+        "Är sparade produkter en varukorg eller reservation?",
+        "Nej. Bokmärket skapar ett personligt urval i den här webbläsaren. Delsumman lägger ihop referenspriser utan frakt eller tillval. Att spara reserverar inget lager och lägger inget i Litbuys varukorg. Öppna produktsidan när du vill fortsätta till Litbuy."
+      ],
+      [
+        "Vad sparas i historiken och vad rensar Rensa historik?",
+        "En öppnad produktsida läggs till i historiken. Webbplatsen behåller upp till åtta artiklar och visar de fyra senaste på startsidan. Rensa historik tar inte bort favoriter eller QC-anteckningar. Uppgifterna är lokala och kan saknas efter att lagringen rensats eller i en annan webbläsare."
+      ],
+      [
+        "Varför kan priset skilja sig från beloppet i kassan?",
+        "Källans USD-referenspris räknas om med en daterad växelkurs. Valutavalet uppdaterar också sparade produkters delsumma. Säljaren, Litbuy och betalningsleverantören kan använda andra priser eller kurser. Kontrollera aktuellt pris, frakt och valda tjänster innan du betalar."
+      ],
+      [
+        "Vad ändras när jag väljer ett annat språk?",
+        "Webbplatsen har 24 språk. Navigation, kategorier, produkttyper, FAQ och QC-kontroller följer ditt val, liksom produkt- och kategorilänkar. Märken, artikel-ID och originaltitlar finns kvar som identifierare. Egna anteckningar sparas precis som du skrev dem och översätts inte automatiskt."
+      ],
+      [
+        "Varför visar en kategori ibland att källan är otillgänglig?",
+        "Fullständiga kategorisidor hämtar produkter från kakobuymake.com. Om källan tillfälligt inte svarar förklarar sidan det och kan visa sparade referensprodukter. Detta bekräftar inte aktuellt lager. Försök senare och kontrollera den aktuella Litbuy-annonsen innan beställning."
+      ],
+      [
+        "Var registrerar jag mig, betalar eller får hjälp med en beställning?",
+        "Registrera dig på Litbuy öppnar registreringen med webbplatsens inbjudningslänk. Betalningar, ändringar, lagerkontroll och frakt hanteras på ditt Litbuy-konto. QC Notes är en oberoende katalog och hanterar inte dessa beställningar. Vissa externa länkar är affiliatelänkar och kan ge provision."
+      ]
+    ]
+  },
+  "da": {
+    "title": "Dine produkter. Dine spørgsmål.",
+    "intro": "Sådan bruger du de fulde kategorier, produktsider, QC-referencer og dit personlige udvalg på Litbuy QC Notes.",
+    "groups": [
+      "Kategorier og produkter",
+      "QC-billeder og noter",
+      "Gemte varer og historik",
+      "Priser og sprog",
+      "Katalog og Litbuy-bestillinger"
+    ],
+    "items": [
+      [
+        "Hvordan ser jeg flere end de tolv produkter på forsiden?",
+        "Forsidens tolv varer er et udvalg, ikke hele kataloget. Åbn en kategori for dens fulde side, eller vælg Se alle produkter. Kategorierne har prissortering og sideinddeling. Hvis kilden ikke kan nås, viser en besked, når et gemt referenceudvalg bliver brugt."
+      ],
+      [
+        "Hvor kommer jeg hen ved at klikke på et produkt?",
+        "Billedet eller navnet åbner først en selvstændig produktside her med vare-ID, vejledende pris og tilgængelige billeder. Se hos Litbuy åbner derefter den matchende annonce via vores affiliatelink. Kontrollér størrelse, farve, antal og aktuel pris hos Litbuy før betaling."
+      ],
+      [
+        "Kontrollerer QC-referencerne netop min bestilte vare?",
+        "Nej. Det er eksisterende billeder fra kildegalleriet, som kan vise en anden farve, et tidligere parti eller en anden købers vare. De hjælper dig med at se detaljer, men godkender ikke din bestilling. Kontrollér lagerbillederne af din egen Litbuy-bestilling før afsendelse."
+      ],
+      [
+        "Hvordan bruger jeg de fire kontrolpunkter og personlige noter?",
+        "Vælg en vare i QC-noterne, markér dine noterede punkter, og åbn Personlige noter for en påmindelse. Hvert produkt gemmer sine egne data i browseren. Tælleren viser dine registreringer, ikke en kvalitetsvurdering. Nulstil sletter kun denne vares noter; intet sendes til Litbuy."
+      ],
+      [
+        "Er gemte produkter en indkøbskurv eller en reservation?",
+        "Nej. Bogmærket opretter et personligt udvalg i denne browser. Subtotalen lægger vejledende varepriser sammen uden fragt eller valgfrie tjenester. At gemme reserverer ikke lager og tilføjer intet til Litbuys kurv. Åbn produktets side, når du vil videre til Litbuy."
+      ],
+      [
+        "Hvad gemmer historikken, og hvad sletter Ryd historik?",
+        "En åbnet produktside tilføjes til historikken. Sitet gemmer op til otte varer og viser de fire seneste på forsiden. Ryd historik fjerner kun listen, ikke gemte varer eller QC-noter. Data er lokale og kan mangle efter rydning af browserlager eller skift af browser."
+      ],
+      [
+        "Hvorfor kan prisen afvige fra beløbet ved betaling?",
+        "Kildens vejledende USD-pris omregnes med en dateret kurs. Valutaændringer opdaterer også subtotalen for gemte varer. Sælger, Litbuy og betalingsudbyder kan bruge andre priser eller kurser. Kontrollér aktuel varepris, fragt og valgte tjenester ved betaling."
+      ],
+      [
+        "Hvad ændres, når jeg vælger et andet sprog?",
+        "Sitet understøtter 24 sprog. Navigation, kategorier, produkttyper, FAQ og QC-funktioner følger valget, og produkt- og kategorilinks bevarer sproget. Mærkenavne, vare-ID og oprindelige titler forbliver identifikatorer. Dine egne noter gemmes som skrevet og oversættes ikke automatisk."
+      ],
+      [
+        "Hvorfor melder en kategori nogle gange, at kilden er utilgængelig?",
+        "De fulde kategorisider læser produkter fra kakobuymake.com. Hvis kilden midlertidigt er utilgængelig, forklarer siden problemet og kan vise gemte referencevarer. Det bekræfter ikke aktuel lagerstatus. Prøv igen senere, og kontrollér den aktuelle Litbuy-annonce før bestilling."
+      ],
+      [
+        "Hvor opretter jeg konto, betaler eller får hjælp til en ordre?",
+        "Opret konto hos Litbuy åbner registrering med sitets invitationslink. Betaling, ændringer, lagerkontrol og forsendelse håndteres på din Litbuy-konto. QC Notes er et uafhængigt produktkatalog og kan ikke administrere disse bestillinger. Nogle eksterne links er affiliatelinks og kan give provision."
+      ]
+    ]
+  },
+  "no": {
+    "title": "Dine produkter. Dine spørsmål.",
+    "intro": "Slik bruker du fulle kategorier, produktsider, QC-referanser og ditt personlige utvalg på Litbuy QC Notes.",
+    "groups": [
+      "Kategorier og produkter",
+      "QC-bilder og notater",
+      "Lagret og nylig vist",
+      "Priser og språk",
+      "Katalog og Litbuy-bestillinger"
+    ],
+    "items": [
+      [
+        "Hvordan ser jeg mer enn de tolv produktene på forsiden?",
+        "De tolv varene på forsiden er et utvalg, ikke hele katalogen. Åpne en kategori for den fullstendige siden eller velg Se alle produkter. Kategoriene har prissortering og sideinndeling. Hvis kilden ikke kan nås, viser et varsel når et lagret referanseutvalg brukes."
+      ],
+      [
+        "Hvor kommer jeg når jeg klikker på et produkt?",
+        "Bildet eller navnet åpner først en egen detaljside her med vare-ID, veiledende pris og tilgjengelige bilder. Se hos Litbuy åpner deretter riktig annonse via vår affiliatelenke. Kontroller størrelse, farge, antall og aktuell pris på Litbuy før betaling."
+      ],
+      [
+        "Kontrollerer QC-referansene akkurat varen i min bestilling?",
+        "Nei. Dette er eksisterende bilder fra kildegalleriet og kan vise en annen farge, et tidligere parti eller en annen kjøpers vare. De hjelper deg å vurdere detaljer, men godkjenner ikke bestillingen. Se lagerbildene for din egen Litbuy-bestilling før sending."
+      ],
+      [
+        "Hvordan fungerer de fire kontrollpunktene og personlige notater?",
+        "Velg en vare i QC-notatene, kryss av punktene du har notert, og åpne Personlige notater for en påminnelse. Hvert produkt lagrer egne data i nettleseren. Telleren viser registreringer, ikke en kvalitetsvurdering. Tilbakestill sletter bare den varens notater; ingenting sendes til Litbuy."
+      ],
+      [
+        "Er lagrede produkter en handlekurv eller reservasjon?",
+        "Nei. Bokmerket lager et personlig utvalg i denne nettleseren. Delsummen legger sammen veiledende varepriser uten frakt eller valgfrie tjenester. Lagring reserverer ikke lager og legger ingenting i Litbuy-handlekurven. Åpne produktsiden når du vil fortsette til Litbuy."
+      ],
+      [
+        "Hva lagres i historikken og hva fjerner Tøm historikk?",
+        "En åpnet produktside legges til historikken. Nettstedet beholder opptil åtte varer og viser de fire nyeste på forsiden. Tøm historikk fjerner ikke lagrede produkter eller QC-notater. Opplysningene er lokale og kan mangle etter tømming av nettleserlagring eller bytte av nettleser."
+      ],
+      [
+        "Hvorfor kan prisen avvike fra beløpet ved betaling?",
+        "Kildens veiledende USD-pris omregnes med en datert valutakurs. Valutavalget oppdaterer også delsummen for lagrede varer. Selgeren, Litbuy og betalingsleverandøren kan bruke andre priser eller kurser. Kontroller aktuell varepris, frakt og valgte tjenester før du betaler."
+      ],
+      [
+        "Hva endres når jeg velger et annet språk?",
+        "Nettstedet tilbyr 24 språk. Navigasjon, kategorier, produkttyper, FAQ og QC-kontroller følger valget, og lenker beholder språket. Merkenavn, vare-ID og opprinnelige titler beholdes som identifikatorer. Dine egne notater lagres slik du skrev dem og oversettes ikke automatisk."
+      ],
+      [
+        "Hvorfor sier en kategori noen ganger at kilden er utilgjengelig?",
+        "De fullstendige kategorisidene leser produkter fra kakobuymake.com. Hvis kilden er midlertidig utilgjengelig, forklarer siden problemet og kan vise lagrede referansevarer. Dette bekrefter ikke aktuell lagerstatus. Prøv igjen senere og kontroller den gjeldende Litbuy-annonsen før bestilling."
+      ],
+      [
+        "Hvor registrerer jeg meg, betaler eller får hjelp med en ordre?",
+        "Registrer deg hos Litbuy åpner registrering med nettstedets invitasjonslenke. Betalinger, endringer, lagerkontroll og sending håndteres i Litbuy-kontoen din. QC Notes er en uavhengig produktkatalog og kan ikke administrere disse bestillingene. Enkelte eksterne lenker er affiliatelenker og kan gi provisjon."
+      ]
+    ]
+  },
+  "fi": {
+    "title": "Sinun tuotteesi. Sinun kysymyksesi.",
+    "intro": "Näin käytät kokonaisia kategorioita, tuotesivuja, QC-viitekuvia ja omaa valintalistaasi Litbuy QC Notesissa.",
+    "groups": [
+      "Kategoriat ja tuotteet",
+      "QC-kuvat ja muistiinpanot",
+      "Tallennetut ja katsotut",
+      "Hinnat ja kielet",
+      "Luettelo ja Litbuy-tilaukset"
+    ],
+    "items": [
+      [
+        "Miten näen enemmän kuin etusivun kaksitoista tuotetta?",
+        "Etusivun kaksitoista tuotetta ovat valikoima, eivät koko luettelo. Avaa kategoria nähdäksesi sen oman täydellisen sivun tai valitse Näytä kaikki tuotteet. Kategorioissa on hintajärjestys ja sivutus. Jos lähde ei vastaa, ilmoitus kertoo mahdollisen tallennetun viitevalikoiman näyttämisestä."
+      ],
+      [
+        "Mihin tuotteen napsauttaminen johtaa?",
+        "Kuva tai nimi avaa ensin tämän sivuston erillisen tuotesivun, jossa näkyvät tuotetunnus, viitehinta ja saatavilla olevat kuvat. Katso Litbuyssa avaa vastaavan ilmoituksen kumppanuuslinkillämme. Tarkista koko, väri, määrä ja ajantasainen hinta Litbuyssa ennen maksamista."
+      ],
+      [
+        "Tarkistavatko QC-viitekuvat juuri oman tilaukseni tuotteen?",
+        "Eivät. Ne ovat lähdegallerian aiempia kuvia ja voivat näyttää toisen värin, vanhemman erän tai muun ostajan tuotteen. Ne auttavat arvioimaan yksityiskohtia mutta eivät hyväksy tilaustasi. Tarkista oman Litbuy-tilauksesi varastokuvat ennen lähettämistä."
+      ],
+      [
+        "Miten neljä tarkistuskohtaa ja omat muistiinpanot toimivat?",
+        "Valitse tuote QC-muistiinpanoissa, merkitse kirjatut tarkistukset ja avaa Omat muistiinpanot lisätäksesi muistutuksen. Jokaisen tuotteen tiedot tallennetaan erikseen tähän selaimeen. Laskuri kuvaa kirjauksiasi, ei laatupisteitä. Nollaus poistaa vain kyseisen tuotteen muistiinpanot; mitään ei lähetetä Litbuyhin."
+      ],
+      [
+        "Ovatko tallennetut tuotteet ostoskori tai varaus?",
+        "Eivät. Kirjanmerkki luo oman valintalistan tähän selaimeen. Välisumma laskee yhteen viitehinnat ilman toimitusta tai lisäpalveluja. Tallentaminen ei varaa tuotteita eikä lisää mitään Litbuyn ostoskoriin. Avaa tuotteen sivu, kun haluat jatkaa Litbuyhin."
+      ],
+      [
+        "Mitä katseluhistoria säilyttää ja mitä sen tyhjentäminen poistaa?",
+        "Avattu tuotesivu lisätään historiaan. Sivusto säilyttää enintään kahdeksan tuotetta ja näyttää etusivulla neljä viimeisintä. Historian tyhjentäminen ei poista tallennettuja tuotteita tai QC-muistiinpanoja. Tiedot ovat paikallisia ja voivat puuttua selaintallennuksen tyhjennyksen tai selaimen vaihtamisen jälkeen."
+      ],
+      [
+        "Miksi hinta voi poiketa kassalla maksettavasta summasta?",
+        "Lähteen USD-viitehinta muunnetaan päivätyllä vaihtokurssilla. Valuutan vaihtaminen päivittää myös tallennettujen tuotteiden välisumman. Myyjä, Litbuy ja maksupalvelu voivat käyttää muita hintoja tai kursseja. Tarkista ajantasainen hinta, toimitus ja valitut palvelut ennen maksamista."
+      ],
+      [
+        "Mikä muuttuu, kun valitsen toisen kielen?",
+        "Sivusto tarjoaa 24 kieltä. Navigaatio, kategoriat, tuotetyypit, UKK ja QC-toiminnot seuraavat valintaa, ja linkit säilyttävät kielen. Merkit, tuotetunnukset ja alkuperäiset nimet pysyvät tunnisteina. Omat muistiinpanosi tallennetaan kirjoittamassasi muodossa eikä niitä käännetä automaattisesti."
+      ],
+      [
+        "Miksi kategoria ilmoittaa toisinaan lähteen olevan poissa käytöstä?",
+        "Täydet kategoriasivut lukevat tuotteet kakobuymake.comista. Jos lähde ei ole tilapäisesti käytettävissä, sivu kertoo ongelmasta ja voi näyttää tallennettuja viitetuotteita. Se ei vahvista tämänhetkistä saatavuutta. Yritä myöhemmin uudelleen ja tarkista ajantasainen Litbuy-ilmoitus ennen tilaamista."
+      ],
+      [
+        "Missä rekisteröidyn, maksan tai saan apua tilaukseen?",
+        "Rekisteröidy Litbuyhin avaa rekisteröinnin tämän sivuston kutsulinkillä. Maksut, muutokset, varastotarkastukset ja lähetys hoidetaan Litbuy-tililläsi. QC Notes on riippumaton tuoteluettelo eikä voi hallita näitä tilauksia. Osa ulkoisista linkeistä on kumppanuuslinkkejä, joista voimme saada palkkion."
+      ]
+    ]
+  },
+  "cs": {
+    "title": "Vaše produkty. Vaše otázky.",
+    "intro": "Jak na Litbuy QC Notes využít úplné kategorie, stránky produktů, QC reference a vlastní seznam vybraných položek.",
+    "groups": [
+      "Kategorie a produkty",
+      "QC fotografie a poznámky",
+      "Uložené a prohlížené",
+      "Ceny a jazyky",
+      "Katalog a objednávky Litbuy"
+    ],
+    "items": [
+      [
+        "Jak zobrazím více než dvanáct produktů na úvodní stránce?",
+        "Dvanáct úvodních položek je výběr, ne celý katalog. Otevřete kategorii a její úplnou stránku nebo zvolte Zobrazit všechny produkty. Kategorie mají řazení podle ceny a stránkování. Pokud zdroj neodpovídá, upozornění označí případný uložený referenční výběr."
+      ],
+      [
+        "Kam přejdu po kliknutí na produkt?",
+        "Obrázek nebo název nejdříve otevře samostatnou stránku produktu v tomto webu, s ID, orientační cenou a dostupnými fotografiemi. Zobrazit na Litbuy následně otevře odpovídající nabídku přes náš partnerský odkaz. Před platbou na Litbuy ověřte velikost, barvu, množství a aktuální cenu."
+      ],
+      [
+        "Kontrolují QC reference přesně kus z mé objednávky?",
+        "Ne. Jde o dřívější fotografie ze zdrojové galerie, které mohou zobrazovat jinou barvu, starší šarži nebo produkt jiného kupujícího. Pomáhají posoudit detaily, ale nepotvrzují kvalitu vaší objednávky. Před odesláním zkontrolujte skladové fotografie vlastního nákupu na Litbuy."
+      ],
+      [
+        "Jak fungují čtyři kontrolní body a osobní poznámky?",
+        "Vyberte produkt v QC poznámkách, označte zaznamenané kontroly a otevřete Osobní poznámky pro připomínku. Každý produkt ukládá údaje odděleně v tomto prohlížeči. Počítadlo ukazuje záznamy, nikoli hodnocení kvality. Obnovení smaže jen poznámky daného produktu; nic se neposílá na Litbuy."
+      ],
+      [
+        "Jsou uložené produkty nákupním košíkem nebo rezervací?",
+        "Ne. Záložka vytváří osobní výběr v tomto prohlížeči. Mezisoučet sčítá orientační ceny bez dopravy a volitelných služeb. Uložení nerezervuje zboží a nepřidává je do košíku Litbuy. Až budete chtít pokračovat k nákupu, otevřete stránku produktu."
+      ],
+      [
+        "Co uchovává historie a co odstraní její vymazání?",
+        "Otevření stránky produktu ho přidá do historie. Web uchovává nejvýše osm položek a na úvodu ukazuje čtyři nejnovější. Vymazání historie nemaže uložené produkty ani QC poznámky. Data jsou místní a po smazání úložiště nebo změně prohlížeče nemusí být dostupná."
+      ],
+      [
+        "Proč se cena může lišit od částky při platbě?",
+        "Zdrojová orientační cena v USD se přepočítává kurzem s uvedeným datem. Změna měny aktualizuje také mezisoučet uložených produktů. Prodejce, Litbuy a poskytovatel platby mohou používat jiné ceny či kurzy. Před zaplacením ověřte aktuální cenu, dopravu a zvolené služby."
+      ],
+      [
+        "Co se změní po výběru jiného jazyka?",
+        "Web nabízí 24 jazyků. Navigace, kategorie, typy produktů, časté dotazy a QC ovládání se přizpůsobí výběru a odkazy jazyk zachovají. Značky, ID a původní názvy zůstávají identifikátory. Vlastní poznámky se uchovávají tak, jak jste je napsali, bez automatického překladu."
+      ],
+      [
+        "Proč kategorie někdy hlásí nedostupný zdroj?",
+        "Úplné stránky kategorií načítají produkty z kakobuymake.com. Pokud je zdroj dočasně nedostupný, stránka vysvětlí problém a může zobrazit uložené referenční produkty. To nepotvrzuje současný stav skladu. Zkuste načtení později a před objednáním ověřte aktuální nabídku Litbuy."
+      ],
+      [
+        "Kde se registruji, platím nebo řeším objednávku?",
+        "Registrovat se na Litbuy otevře registraci s pozvánkou tohoto webu. Platby, úpravy, skladová kontrola a doprava se řeší ve vašem účtu Litbuy. QC Notes je nezávislý katalog a tyto objednávky nespravuje. Některé vnější odkazy jsou partnerské a mohou přinést provizi."
+      ]
+    ]
+  },
+  "ru": {
+    "title": "Ваши товары. Ваши вопросы.",
+    "intro": "Как пользоваться полными категориями, страницами товаров, справочными фото QC и личной подборкой на Litbuy QC Notes.",
+    "groups": [
+      "Категории и товары",
+      "Фото и заметки QC",
+      "Сохранённое и история",
+      "Цены и языки",
+      "Каталог и заказы Litbuy"
+    ],
+    "items": [
+      [
+        "Как посмотреть больше двенадцати товаров с главной страницы?",
+        "Двенадцать товаров на главной — это подборка, а не весь каталог. Откройте категорию или полный список товаров. Страницы категорий поддерживают сортировку по цене и переход по страницам. Если источник недоступен, уведомление сообщает о показе сохранённых справочных товаров."
+      ],
+      [
+        "Куда ведёт нажатие на товар?",
+        "Фото или название сначала открывает отдельную страницу товара на этом сайте с ID, ориентировочной ценой и фотографиями. Кнопка Смотреть на Litbuy ведёт к соответствующему предложению по партнёрской ссылке. Перед оплатой проверьте размер, цвет, количество и актуальную цену."
+      ],
+      [
+        "Проверяют ли фотографии QC именно мой заказ?",
+        "Нет. Это существующие фото исходной галереи: другая расцветка, прежняя партия или товар другого покупателя. Они помогают оценить детали, но не подтверждают качество вашего заказа. Перед отправкой изучите складские фото именно своего заказа Litbuy."
+      ],
+      [
+        "Как пользоваться четырьмя проверками и личными заметками?",
+        "Выберите товар в блоке QC, отметьте записанные проверки и раскройте Личные заметки. Данные каждого товара хранятся отдельно в этом браузере. Счётчик показывает ваши записи, а не оценку качества. Сброс удаляет заметки только выбранного товара; Litbuy ничего не получает."
+      ],
+      [
+        "Сохранённые товары — это корзина или резерв?",
+        "Нет. Закладка формирует личную подборку в браузере. Сумма включает ориентировочные цены без доставки и дополнительных услуг. Сохранение не резервирует товар и не добавляет его в корзину Litbuy. Для покупки откройте страницу товара и перейдите на Litbuy."
+      ],
+      [
+        "Что хранит история и что удаляет её очистка?",
+        "Просмотр страницы товара добавляет его в историю. Сайт хранит до восьми последних товаров и показывает четыре на главной. Очистка истории не затрагивает сохранённое и заметки QC. Данные локальные: после очистки хранилища или смены браузера они могут отсутствовать."
+      ],
+      [
+        "Почему цена может отличаться от суммы при оплате?",
+        "Исходная ориентировочная цена в USD пересчитывается по курсу с указанной датой. Смена валюты обновляет и сумму сохранённого. Продавец, Litbuy и платёжный сервис могут использовать другие цены или курсы. Проверьте текущую цену, доставку и услуги при оплате."
+      ],
+      [
+        "Что меняется при выборе другого языка?",
+        "Навигация, категории, названия типов товаров, FAQ и элементы QC меняются вместе; ссылки сохраняют выбранный язык. Бренды, ID и исходные названия остаются идентификаторами. Ваши личные заметки сохраняются без изменений и автоматически не переводятся."
+      ],
+      [
+        "Почему категория сообщает о недоступности источника?",
+        "Полные категории читают товары с kakobuymake.com. При временном сбое страница объясняет проблему и может показать сохранённые справочные товары. Это не подтверждение текущего наличия. Повторите запрос позже и проверьте актуальное предложение Litbuy перед заказом."
+      ],
+      [
+        "Где зарегистрироваться, оплатить или решить вопрос по заказу?",
+        "Кнопка регистрации открывает Litbuy по приглашению этого сайта. Оплата, изменения, складская проверка и отправка выполняются в вашем аккаунте Litbuy. QC Notes — независимый каталог, он не управляет заказами. Некоторые внешние ссылки партнёрские и могут приносить комиссию."
+      ]
+    ]
+  },
+  "uk": {
+    "title": "Ваші товари. Ваші запитання.",
+    "intro": "Як користуватися повними категоріями, сторінками товарів, довідковими фото QC та особистою добіркою на Litbuy QC Notes.",
+    "groups": [
+      "Категорії й товари",
+      "Фото й нотатки QC",
+      "Збережене та історія",
+      "Ціни й мови",
+      "Каталог і замовлення Litbuy"
+    ],
+    "items": [
+      [
+        "Як переглянути більше дванадцяти товарів на головній?",
+        "Дванадцять товарів на головній — це добірка, а не весь каталог. Відкрийте категорію або повний список товарів. Категорії мають сортування за ціною й сторінки. Якщо джерело недоступне, повідомлення пояснює показ збережених довідкових товарів."
+      ],
+      [
+        "Куди веде натискання на товар?",
+        "Фото чи назва спочатку відкриває окрему сторінку на цьому сайті з ID, орієнтовною ціною та фото. Переглянути на Litbuy відкриває відповідну пропозицію за партнерським посиланням. Перед оплатою перевірте розмір, колір, кількість і поточну ціну на Litbuy."
+      ],
+      [
+        "Чи перевіряють QC-фотографії саме моє замовлення?",
+        "Ні. Це наявні фото вихідної галереї: інший колір, попередня партія або товар іншого покупця. Вони допомагають розглянути деталі, але не підтверджують якість замовлення. Перед відправленням перевірте складські фото власного замовлення Litbuy."
+      ],
+      [
+        "Як працюють чотири перевірки та особисті нотатки?",
+        "Виберіть товар у блоці QC, позначте записані перевірки й розгорніть Особисті нотатки. Дані кожного товару зберігаються окремо в браузері. Лічильник показує записи, а не оцінку якості. Скидання видаляє нотатки лише цього товару; Litbuy нічого не отримує."
+      ],
+      [
+        "Збережені товари — це кошик або резервування?",
+        "Ні. Закладка створює особисту добірку в браузері. Сума охоплює орієнтовні ціни без доставки та додаткових послуг. Збереження не резервує товар і не додає його до кошика Litbuy. Для покупки відкрийте товар і перейдіть на Litbuy."
+      ],
+      [
+        "Що зберігає історія та що видаляє її очищення?",
+        "Відкрита сторінка додає товар до історії. Сайт зберігає до восьми останніх товарів і показує чотири на головній. Очищення історії не видаляє збережене та нотатки QC. Дані локальні: після очищення сховища або зміни браузера вони можуть бути недоступні."
+      ],
+      [
+        "Чому ціна може відрізнятися від суми оплати?",
+        "Орієнтовна ціна джерела в USD перераховується за курсом із зазначеною датою. Зміна валюти оновлює й суму збереженого. Продавець, Litbuy та платіжний сервіс можуть застосовувати інші ціни чи курси. Перевірте ціну, доставку й послуги під час оплати."
+      ],
+      [
+        "Що змінюється після вибору іншої мови?",
+        "Навігація, категорії, назви типів товарів, FAQ і керування QC змінюються разом; посилання зберігають вибрану мову. Бренди, ID та початкові назви залишаються ідентифікаторами. Власні нотатки зберігаються без змін і автоматично не перекладаються."
+      ],
+      [
+        "Чому категорія повідомляє про недоступність джерела?",
+        "Повні категорії читають товари з kakobuymake.com. Під час тимчасового збою сторінка пояснює проблему та може показувати збережені довідкові товари. Це не підтвердження поточної наявності. Спробуйте пізніше й перевірте актуальну пропозицію Litbuy перед замовленням."
+      ],
+      [
+        "Де зареєструватися, сплатити або вирішити питання замовлення?",
+        "Кнопка реєстрації відкриває Litbuy за запрошенням цього сайту. Оплата, зміни, складська перевірка та відправлення виконуються у вашому обліковому записі Litbuy. QC Notes — незалежний каталог, він не керує замовленнями. Деякі зовнішні посилання партнерські та можуть приносити комісію."
+      ]
+    ]
+  },
+  "ro": {
+    "title": "Produsele tale. Întrebările tale.",
+    "intro": "Cum folosești categoriile complete, paginile produselor, referințele QC și selecția personală pe Litbuy QC Notes.",
+    "groups": [
+      "Categorii și produse",
+      "Fotografii și notițe QC",
+      "Salvate și istoric",
+      "Prețuri și limbi",
+      "Catalog și comenzi Litbuy"
+    ],
+    "items": [
+      [
+        "Cum văd mai mult de cele douăsprezece produse de pe prima pagină?",
+        "Cele douăsprezece produse sunt o selecție, nu întregul catalog. Deschide o categorie sau lista completă. Categoriile oferă sortare după preț și paginare. Dacă sursa nu răspunde, un mesaj identifică selecția de referință salvată care este afișată."
+      ],
+      [
+        "Unde ajung când deschid un produs?",
+        "Imaginea sau numele deschide mai întâi o pagină separată aici, cu ID, preț orientativ și fotografii. Vezi pe Litbuy deschide oferta corespunzătoare prin linkul nostru afiliat. Verifică mărimea, culoarea, cantitatea și prețul actual pe Litbuy înainte de plată."
+      ],
+      [
+        "Fotografiile QC verifică exact articolul comenzii mele?",
+        "Nu. Sunt fotografii existente din galeria sursă și pot arăta altă culoare, un lot anterior sau articolul altui cumpărător. Ajută la observarea detaliilor, dar nu aprobă comanda. Verifică fotografiile din depozit ale propriei comenzi Litbuy înainte de expediere."
+      ],
+      [
+        "Cum folosesc cele patru verificări și notițele personale?",
+        "Alege produsul în secțiunea QC, bifează punctele notate și extinde Notițe personale pentru un memento. Datele fiecărui produs se păstrează separat în browser. Contorul indică notițe, nu calitate. Resetarea șterge doar acel produs; nimic nu se trimite către Litbuy."
+      ],
+      [
+        "Produsele salvate sunt un coș sau o rezervare?",
+        "Nu. Marcajul creează o selecție personală în browser. Subtotalul însumează prețuri orientative fără transport sau servicii suplimentare. Salvarea nu rezervă stoc și nu adaugă nimic în coșul Litbuy. Deschide produsul pentru a continua cumpărarea pe Litbuy."
+      ],
+      [
+        "Ce păstrează istoricul și ce elimină ștergerea lui?",
+        "Deschiderea unei pagini adaugă produsul în istoric. Se păstrează până la opt produse, iar prima pagină afișează ultimele patru. Ștergerea istoricului nu elimină favoritele sau notițele QC. Datele sunt locale și pot lipsi după ștergerea stocării sau schimbarea browserului."
+      ],
+      [
+        "De ce poate diferi prețul de suma plătită?",
+        "Referința sursei în USD se convertește cu un curs datat. Schimbarea monedei actualizează și subtotalul salvat. Vânzătorul, Litbuy și procesatorul plății pot folosi alte prețuri sau cursuri. Confirmă prețul actual, transportul și serviciile la plată."
+      ],
+      [
+        "Ce se schimbă când aleg altă limbă?",
+        "Navigarea, categoriile, tipurile de produse, FAQ și controalele QC se schimbă împreună; linkurile păstrează limba aleasă. Mărcile, ID-urile și titlurile originale rămân identificatori. Propriile notițe sunt păstrate exact cum le-ai scris și nu sunt traduse automat."
+      ],
+      [
+        "De ce apare uneori un avertisment despre sursa indisponibilă?",
+        "Categoriile complete citesc produse din kakobuymake.com. Dacă sursa este temporar inaccesibilă, pagina explică problema și poate arăta produse de referință salvate. Nu este o confirmare de stoc actual. Reîncearcă mai târziu și verifică oferta Litbuy înainte de comandă."
+      ],
+      [
+        "Unde mă înregistrez, plătesc sau cer ajutor pentru comandă?",
+        "Butonul de înregistrare deschide Litbuy prin invitația acestui site. Plățile, modificările, verificările din depozit și expedierea se gestionează în contul Litbuy. QC Notes este un catalog independent și nu gestionează comenzile. Unele linkuri externe sunt afiliate și pot genera comision."
+      ]
+    ]
+  },
+  "hu": {
+    "title": "A termékeid. A kérdéseid.",
+    "intro": "Így használhatod a teljes kategóriákat, termékoldalakat, QC-referenciákat és saját válogatásodat a Litbuy QC Notes oldalán.",
+    "groups": [
+      "Kategóriák és termékek",
+      "QC-képek és jegyzetek",
+      "Mentések és előzmények",
+      "Árak és nyelvek",
+      "Katalógus és Litbuy-rendelések"
+    ],
+    "items": [
+      [
+        "Hogyan nézhetek meg többet a kezdőlap tizenkét termékénél?",
+        "A kezdőlap tizenkét terméke válogatás, nem a teljes katalógus. Nyiss meg egy kategóriát vagy a teljes listát. A kategóriákban árrendezés és lapozás használható. Ha a forrás nem válaszol, egy jelzés megmutatja, hogy mentett referenciatermékek láthatók."
+      ],
+      [
+        "Hová jutok egy termékre kattintva?",
+        "A kép vagy a név először ennek az oldalnak egy külön terméklapját nyitja meg azonosítóval, tájékoztató árral és képekkel. A Litbuy-gomb a megfelelő ajánlatra vezet partnerlinken. Fizetés előtt ellenőrizd a méretet, színt, mennyiséget és aktuális árat."
+      ],
+      [
+        "A QC-képek a saját rendelésem pontos darabját ellenőrzik?",
+        "Nem. Ezek a forrásgaléria meglévő képei, amelyek más színt, korábbi szériát vagy más vevő termékét mutathatják. Segítenek a részletek áttekintésében, de nem hagyják jóvá a rendelésedet. Feladás előtt ellenőrizd a saját Litbuy-rendelésed raktári képeit."
+      ],
+      [
+        "Hogyan működik a négy ellenőrzési pont és a saját jegyzet?",
+        "Válassz terméket a QC-részben, jelöld a feljegyzett pontokat, és nyisd le a Saját jegyzeteket. A termékek adatai külön tárolódnak a böngészőben. A számláló a feljegyzéseket jelzi, nem a minőséget. A visszaállítás csak az adott terméket törli; Litbuy nem kap adatot."
+      ],
+      [
+        "A mentett termékek kosarat vagy foglalást jelentenek?",
+        "Nem. A könyvjelző személyes válogatást hoz létre a böngészőben. A részösszeg tájékoztató árakat ad össze szállítás és extra szolgáltatások nélkül. A mentés nem foglal készletet és nem ad terméket a Litbuy-kosárhoz. Vásárláshoz nyisd meg a termékoldalt."
+      ],
+      [
+        "Mit tárolnak az előzmények és mit töröl az ürítésük?",
+        "A termékoldal megnyitása hozzáadja a terméket az előzményekhez. Legfeljebb nyolc termék marad meg, négy legutóbbi látható a kezdőlapon. A törlés nem érinti a mentéseket vagy QC-jegyzeteket. Az adatok helyiek, tárhelytörlés vagy böngészőváltás után hiányozhatnak."
+      ],
+      [
+        "Miért térhet el az ár a fizetendő összegtől?",
+        "A forrás USD-ben megadott tájékoztató ára dátummal jelzett árfolyamon váltódik át. A pénznemváltás a mentett részösszeget is frissíti. Az eladó, Litbuy és a fizetési szolgáltató más árat vagy árfolyamot használhat. Fizetéskor ellenőrizd az árat, szállítást és szolgáltatásokat."
+      ],
+      [
+        "Mi változik, ha másik nyelvet választok?",
+        "A navigáció, kategóriák, terméktípusok, GYIK és QC-kezelők együtt változnak; a linkek megtartják a választott nyelvet. A márkák, azonosítók és eredeti címek változatlan azonosítók maradnak. A saját jegyzeteid az általad megírt formában tárolódnak, automatikus fordítás nélkül."
+      ],
+      [
+        "Miért jelez egy kategória néha elérhetetlen forrást?",
+        "A teljes kategóriák a kakobuymake.com oldalról olvasnak termékeket. Átmeneti hiba esetén az oldal tájékoztat, és mentett referenciatermékeket mutathat. Ez nem igazolja az aktuális készletet. Próbáld később újra, és rendelés előtt ellenőrizd a Litbuy-ajánlatot."
+      ],
+      [
+        "Hol regisztrálok, fizetek vagy intézem a rendelésemet?",
+        "A regisztrációs gomb a Litbuy oldalát nyitja meg e webhely meghívójával. Fizetés, módosítás, raktári ellenőrzés és feladás a Litbuy-fiókodban történik. A QC Notes független katalógus, nem kezeli ezeket a rendeléseket. Egyes külső partnerlinkek jutalékot eredményezhetnek."
+      ]
+    ]
+  },
+  "el": {
+    "title": "Τα προϊόντα σας. Οι ερωτήσεις σας.",
+    "intro": "Πώς να χρησιμοποιείτε πλήρεις κατηγορίες, σελίδες προϊόντων, αναφορές QC και προσωπικές επιλογές στο Litbuy QC Notes.",
+    "groups": [
+      "Κατηγορίες και προϊόντα",
+      "Φωτογραφίες και σημειώσεις QC",
+      "Αποθηκευμένα και ιστορικό",
+      "Τιμές και γλώσσες",
+      "Κατάλογος και παραγγελίες Litbuy"
+    ],
+    "items": [
+      [
+        "Πώς βλέπω περισσότερα από τα δώδεκα προϊόντα της αρχικής;",
+        "Τα δώδεκα προϊόντα είναι μια επιλογή, όχι ολόκληρος ο κατάλογος. Ανοίξτε μια κατηγορία ή τη συνολική λίστα. Οι κατηγορίες έχουν ταξινόμηση τιμής και σελιδοποίηση. Αν η πηγή δεν απαντά, μια ειδοποίηση αναγνωρίζει την αποθηκευμένη επιλογή αναφοράς."
+      ],
+      [
+        "Πού οδηγεί το πάτημα σε προϊόν;",
+        "Η εικόνα ή το όνομα ανοίγει πρώτα ξεχωριστή σελίδα εδώ με κωδικό, ενδεικτική τιμή και φωτογραφίες. Το Δείτε στο Litbuy ανοίγει την αντίστοιχη προσφορά με σύνδεσμο συνεργάτη. Πριν πληρώσετε, ελέγξτε μέγεθος, χρώμα, ποσότητα και τρέχουσα τιμή στο Litbuy."
+      ],
+      [
+        "Ελέγχουν οι φωτογραφίες QC το δικό μου τεμάχιο;",
+        "Όχι. Είναι υπάρχουσες φωτογραφίες της πηγής και μπορεί να δείχνουν άλλο χρώμα, παλαιότερη παρτίδα ή προϊόν άλλου αγοραστή. Βοηθούν στην εξέταση λεπτομερειών, αλλά δεν εγκρίνουν την παραγγελία. Δείτε τις φωτογραφίες αποθήκης της δικής σας παραγγελίας πριν από την αποστολή."
+      ],
+      [
+        "Πώς λειτουργούν οι τέσσερις έλεγχοι και οι προσωπικές σημειώσεις;",
+        "Επιλέξτε προϊόν στο QC, σημειώστε καταγεγραμμένους ελέγχους και ανοίξτε τις Προσωπικές σημειώσεις. Κάθε προϊόν αποθηκεύει χωριστά δεδομένα στο πρόγραμμα περιήγησης. Ο μετρητής δείχνει καταγραφές, όχι βαθμολογία ποιότητας. Η επαναφορά καθαρίζει μόνο αυτό το προϊόν· τίποτα δεν αποστέλλεται στο Litbuy."
+      ],
+      [
+        "Είναι τα αποθηκευμένα προϊόντα καλάθι ή κράτηση;",
+        "Όχι. Ο σελιδοδείκτης δημιουργεί προσωπική λίστα στο πρόγραμμα περιήγησης. Το υποσύνολο προσθέτει ενδεικτικές τιμές χωρίς μεταφορικά ή προαιρετικές υπηρεσίες. Η αποθήκευση δεν δεσμεύει απόθεμα ούτε προσθέτει στο καλάθι Litbuy. Ανοίξτε το προϊόν για να συνεχίσετε την αγορά."
+      ],
+      [
+        "Τι κρατά το ιστορικό και τι διαγράφει η εκκαθάριση;",
+        "Το άνοιγμα σελίδας προσθέτει το προϊόν στο ιστορικό. Διατηρούνται έως οκτώ πρόσφατα προϊόντα και τέσσερα εμφανίζονται στην αρχική. Η εκκαθάριση δεν διαγράφει αγαπημένα ή σημειώσεις QC. Τα δεδομένα είναι τοπικά και μπορεί να λείπουν μετά από καθαρισμό αποθήκευσης ή αλλαγή προγράμματος περιήγησης."
+      ],
+      [
+        "Γιατί διαφέρει η τιμή από το τελικό ποσό;",
+        "Η ενδεικτική τιμή της πηγής σε USD μετατρέπεται με ισοτιμία συγκεκριμένης ημερομηνίας. Η αλλαγή νομίσματος ενημερώνει και το υποσύνολο αποθηκευμένων. Πωλητής, Litbuy και πάροχος πληρωμών μπορεί να χρησιμοποιούν άλλες τιμές ή ισοτιμίες. Ελέγξτε τιμή, μεταφορικά και υπηρεσίες στην πληρωμή."
+      ],
+      [
+        "Τι αλλάζει όταν επιλέγω άλλη γλώσσα;",
+        "Πλοήγηση, κατηγορίες, τύποι προϊόντων, συχνές ερωτήσεις και έλεγχοι QC αλλάζουν μαζί· οι σύνδεσμοι διατηρούν τη γλώσσα. Μάρκες, κωδικοί και αρχικοί τίτλοι παραμένουν αναγνωριστικά. Οι δικές σας σημειώσεις αποθηκεύονται όπως γράφτηκαν και δεν μεταφράζονται αυτόματα."
+      ],
+      [
+        "Γιατί μια κατηγορία αναφέρει μη διαθέσιμη πηγή;",
+        "Οι πλήρεις κατηγορίες διαβάζουν προϊόντα από το kakobuymake.com. Σε προσωρινή διακοπή η σελίδα εξηγεί το πρόβλημα και μπορεί να δείξει αποθηκευμένα προϊόντα αναφοράς. Αυτό δεν επιβεβαιώνει τρέχον απόθεμα. Δοκιμάστε αργότερα και ελέγξτε την προσφορά Litbuy πριν παραγγείλετε."
+      ],
+      [
+        "Πού εγγράφομαι, πληρώνω ή λύνω πρόβλημα παραγγελίας;",
+        "Η εγγραφή ανοίγει το Litbuy με την πρόσκληση αυτού του ιστοτόπου. Πληρωμές, αλλαγές, έλεγχος αποθήκης και αποστολή γίνονται στον λογαριασμό Litbuy. Το QC Notes είναι ανεξάρτητος κατάλογος και δεν διαχειρίζεται παραγγελίες. Ορισμένοι εξωτερικοί σύνδεσμοι συνεργατών μπορεί να αποφέρουν προμήθεια."
+      ]
+    ]
+  },
+  "tr": {
+    "title": "Ürünleriniz. Sorularınız.",
+    "intro": "Litbuy QC Notes'ta tam kategorileri, ürün sayfalarını, QC referanslarını ve kişisel seçkinizi nasıl kullanabilirsiniz?",
+    "groups": [
+      "Kategoriler ve ürünler",
+      "QC fotoğrafları ve notlar",
+      "Kaydedilenler ve geçmiş",
+      "Fiyatlar ve diller",
+      "Katalog ve Litbuy siparişleri"
+    ],
+    "items": [
+      [
+        "Ana sayfadaki on iki üründen fazlasını nasıl görürüm?",
+        "Ana sayfadaki on iki ürün bir seçkidir, tüm katalog değildir. Bir kategori ya da tam ürün listesini açın. Kategorilerde fiyat sıralaması ve sayfalama vardır. Kaynak yanıt vermiyorsa bir bildirim, kaydedilmiş referans seçkinin gösterildiğini açıklar."
+      ],
+      [
+        "Bir ürüne tıklayınca nereye giderim?",
+        "Görsel veya ad önce bu sitede ürün kimliği, tahmini fiyat ve fotoğrafları içeren bağımsız ayrıntı sayfasını açar. Litbuy'da görüntüle, eşleşen ilanı ortaklık bağlantısıyla açar. Ödemeden önce beden, renk, miktar ve güncel fiyatı Litbuy'da doğrulayın."
+      ],
+      [
+        "QC fotoğrafları kendi siparişimdeki ürünü mü kontrol eder?",
+        "Hayır. Kaynak galerideki mevcut fotoğraflar farklı renk, önceki parti veya başka alıcının ürününü gösterebilir. Ayrıntıları incelemeye yardımcı olur ama siparişinizi onaylamaz. Gönderimden önce kendi Litbuy siparişinize bağlı depo fotoğraflarını kontrol edin."
+      ],
+      [
+        "Dört kontrol maddesi ve kişisel notlar nasıl çalışır?",
+        "QC bölümünde ürünü seçin, kaydettiğiniz kontrolleri işaretleyin ve Kişisel notları açın. Her ürünün verileri bu tarayıcıda ayrı saklanır. Sayaç notları gösterir, kalite puanı değildir. Sıfırlama yalnızca o ürünün notlarını siler; Litbuy'a bir şey gönderilmez."
+      ],
+      [
+        "Kaydedilen ürünler sepet veya rezervasyon mudur?",
+        "Hayır. Yer imi, tarayıcıda kişisel bir liste oluşturur. Ara toplam, kargo ve isteğe bağlı hizmetler hariç tahmini fiyatları toplar. Kaydetmek stok ayırmaz veya Litbuy sepetine ürün eklemez. Alışverişe devam etmek için ürünün ayrıntı sayfasını açın."
+      ],
+      [
+        "Geçmiş neyi saklar ve temizlemek neyi siler?",
+        "Bir ürün sayfasını açmak ürünü geçmişe ekler. En fazla sekiz ürün saklanır ve ana sayfada son dördü gösterilir. Geçmişi temizlemek kaydedilenleri veya QC notlarını silmez. Veriler yereldir; depolama temizlenince veya tarayıcı değişince bulunmayabilir."
+      ],
+      [
+        "Fiyat neden ödeme tutarından farklı olabilir?",
+        "Kaynağın USD cinsinden tahmini fiyatı tarihli bir kurla dönüştürülür. Para birimini değiştirmek kaydedilenlerin ara toplamını da günceller. Satıcı, Litbuy ve ödeme sağlayıcısı farklı fiyat veya kur kullanabilir. Güncel fiyat, kargo ve seçilen hizmetleri ödeme sırasında kontrol edin."
+      ],
+      [
+        "Başka dil seçince neler değişir?",
+        "Gezinme, kategoriler, ürün türleri, sık sorulan sorular ve QC kontrolleri birlikte değişir; bağlantılar seçilen dili korur. Markalar, ürün kimlikleri ve özgün başlıklar tanımlayıcı olarak kalır. Kendi notlarınız yazdığınız biçimde saklanır ve otomatik çevrilmez."
+      ],
+      [
+        "Bir kategori neden bazen kaynak kullanılamıyor uyarısı verir?",
+        "Tam kategori sayfaları ürünleri kakobuymake.com'dan okur. Geçici kesintide sayfa sorunu açıklar ve kaydedilmiş referans ürünleri gösterebilir. Bu, güncel stok doğrulaması değildir. Daha sonra yeniden deneyin ve siparişten önce güncel Litbuy ilanını kontrol edin."
+      ],
+      [
+        "Nerede kaydolur, ödeme yapar veya sipariş desteği alırım?",
+        "Kayıt düğmesi, bu sitenin davetiyle Litbuy'ı açar. Ödeme, değişiklikler, depo kontrolü ve gönderim Litbuy hesabınızda yönetilir. QC Notes bağımsız bir katalogdur ve bu siparişleri yönetemez. Bazı dış bağlantılar satış ortaklığı bağlantılarıdır ve komisyon sağlayabilir."
+      ]
+    ]
+  },
+  "ja": {
+    "title": "このサイトの使い方とよくある質問",
+    "intro": "商品探しから写真の確認、候補の保存まで。QC Notes でできることと、Litbuy で行う手続きをご案内します。",
+    "groups": [
+      "商品を探す・詳細を見る",
+      "QC 写真と確認メモ",
+      "保存と閲覧履歴",
+      "価格と言語",
+      "カタログと Litbuy での注文"
+    ],
+    "items": [
+      [
+        "トップページの12点以外の商品はどう探せますか？",
+        "トップページの12点は厳選した一部の商品です。全商品ではありません。カテゴリーを選ぶと各カテゴリーの一覧に進めます。「すべての商品を見る」から一覧を開き、価格順の並べ替えや次のページへの移動もできます。元のサイトに接続できない場合は、保存済みの参考セレクションであることを明示します。"
+      ],
+      [
+        "商品をクリックすると、どのページが開きますか？",
+        "商品画像や商品名を押すと、まず当サイトの商品詳細ページが開きます。商品 ID、参考価格、利用可能な写真を確認できます。「Litbuy で見る」から、アフィリエイトリンクを通じて対応する掲載ページへ移動します。お支払い前に Litbuy でサイズ、色、数量、現在の価格を必ず確認してください。"
+      ],
+      [
+        "QC の参考写真は、私が注文した商品の検品写真ですか？",
+        "いいえ。元のギャラリーに掲載されている写真で、別の色、過去のロット、他の購入者の商品が写っている場合があります。細部を確認する参考にはなりますが、ご自身の注文商品の合格判定ではありません。発送前に、ご自身の Litbuy 注文に対応する倉庫写真を確認してください。"
+      ],
+      [
+        "4つの確認項目と個人メモはどう使いますか？",
+        "QC 確認メモで商品を選び、記録した確認項目にチェックを入れ、個人メモに覚えておきたいことを書けます。内容は商品ごとにこのブラウザーへ保存されます。件数は記録した項目の数で、品質の評価点ではありません。リセットはその商品のメモとチェックだけを消去し、Litbuy に情報を送ることはありません。"
+      ],
+      [
+        "保存した商品はカートや取り置きになりますか？",
+        "いいえ。ブックマークは、このブラウザー内の個人的な候補リストです。小計は参考価格のみで、送料や追加サービスを含みません。保存しても在庫の確保や Litbuy のカートへの追加は行われません。購入へ進むときは、商品詳細を開いて Litbuy の掲載内容を確認してください。"
+      ],
+      [
+        "最近見た商品には何が残り、履歴を消すと何が消えますか？",
+        "商品詳細ページを開くと閲覧履歴に追加されます。最大8件を保存し、トップページには直近の4件を表示します。「履歴を消去」はこの一覧だけを消し、保存した商品や QC メモは残します。ブラウザーの保存データを消去した場合や別のブラウザーでは、ローカルの情報を利用できないことがあります。"
+      ],
+      [
+        "表示価格と決済時の金額が違うのはなぜですか？",
+        "元のサイトの米ドル参考価格を、日付付きの為替レートで換算しています。通貨を変更すると保存商品の小計も変わります。販売者、Litbuy、決済会社の価格やレートは異なる場合があります。最終的な商品代金、送料、選択したサービスの料金は、決済画面で確認してください。"
+      ],
+      [
+        "言語を切り替えると何が変わりますか？",
+        "24言語に対応しています。ナビゲーション、カテゴリー、商品種別、FAQ、QC の操作表示が選択した言語になり、商品やカテゴリーのリンクにも引き継がれます。ブランド名、商品 ID、元の商品名は識別のため保持します。ご自身が書いたメモは原文のまま保存され、自動翻訳されません。"
+      ],
+      [
+        "カテゴリーに元のサイトへの接続エラーが出るのはなぜですか？",
+        "各カテゴリーの全商品一覧は kakobuymake.com から取得しています。一時的に接続できない場合は説明を表示し、保存済みの参考セレクションを表示することがあります。これは現在の在庫を保証するものではありません。時間を置いて再度試し、注文前に Litbuy の掲載内容を確認してください。"
+      ],
+      [
+        "登録、支払い、注文の問い合わせはどこで行いますか？",
+        "「Litbuy に登録」から、当サイトの招待リンク付き登録ページが開きます。支払い、注文変更、倉庫での確認、発送手続きは Litbuy アカウントで行います。QC Notes は独立したカタログサイトで、注文を管理していません。一部の外部リンクはアフィリエイトリンクで、当サイトが報酬を受け取る場合があります。"
+      ]
+    ]
+  },
+  "ko": {
+    "title": "사이트 이용 안내와 자주 묻는 질문",
+    "intro": "상품 탐색, 사진 확인, 후보 저장 방법과 Litbuy에서 진행하는 주문 절차를 안내합니다.",
+    "groups": [
+      "상품 탐색과 상세 보기",
+      "QC 사진과 확인 메모",
+      "저장과 최근 본 상품",
+      "가격과 언어",
+      "카탈로그와 Litbuy 주문"
+    ],
+    "items": [
+      [
+        "홈의 12개 상품 외에 더 많은 상품은 어떻게 보나요?",
+        "홈의 12개 상품은 전체 카탈로그에서 고른 일부 상품입니다. 카테고리를 누르면 해당 카테고리의 전체 페이지가 열리고, 전체 상품 보기를 통해 목록을 탐색할 수도 있습니다. 가격순 정렬과 다음 페이지 이동을 지원합니다. 원본 연결에 문제가 생겨 저장된 참고 모음을 표시하는 경우 페이지에 그 사실을 안내합니다."
+      ],
+      [
+        "상품을 누르면 어디로 이동하나요?",
+        "이미지나 상품명을 누르면 먼저 이 사이트의 개별 상세 페이지가 열립니다. 상품 ID, 참고 가격, 제공되는 사진을 확인할 수 있습니다. Litbuy에서 보기 버튼은 제휴 링크를 통해 해당 판매 페이지로 연결됩니다. 결제 전에 Litbuy에서 사이즈, 색상, 수량, 현재 가격을 다시 확인하세요."
+      ],
+      [
+        "QC 참고 사진이 제가 주문한 상품의 검수 사진인가요?",
+        "아닙니다. 원본 갤러리에 있던 사진이므로 다른 색상, 이전 생산분 또는 다른 구매자의 상품일 수 있습니다. 세부 사항을 비교하는 데 도움이 되지만 본인 주문의 검수 통과를 의미하지 않습니다. 발송 전에 본인의 Litbuy 주문에 연결된 창고 사진을 확인하세요."
+      ],
+      [
+        "네 가지 확인 항목과 개인 메모는 어떻게 사용하나요?",
+        "QC 확인 메모에서 상품을 선택하고 기록한 확인 항목에 체크한 다음 개인 메모에 필요한 내용을 적으세요. 상품마다 별도의 내용이 이 브라우저에 저장됩니다. 숫자는 기록한 항목 수이며 품질 점수가 아닙니다. 초기화는 해당 상품의 메모와 체크만 지우며 Litbuy로 정보를 보내지 않습니다."
+      ],
+      [
+        "상품 저장은 장바구니에 담기나 예약과 같은가요?",
+        "아닙니다. 북마크는 이 브라우저에서 관리하는 개인 후보 목록입니다. 소계는 참고 가격만 더하며 배송비와 추가 서비스를 포함하지 않습니다. 저장해도 재고가 확보되거나 Litbuy 장바구니에 담기지 않습니다. 구매를 진행하려면 상품 상세 페이지를 열어 Litbuy의 판매 내용을 확인하세요."
+      ],
+      [
+        "최근 본 상품에는 무엇이 남고 기록 지우기는 무엇을 삭제하나요?",
+        "상품 상세 페이지를 열면 기록에 추가됩니다. 최대 8개를 보관하며 홈에는 가장 최근 4개가 표시됩니다. 기록 지우기는 이 목록만 삭제하고 저장 상품과 QC 메모는 유지합니다. 브라우저 저장 데이터를 삭제하거나 다른 브라우저를 사용하면 기존 로컬 정보를 이용하지 못할 수 있습니다."
+      ],
+      [
+        "표시 가격과 실제 결제 금액이 다른 이유는 무엇인가요?",
+        "원본의 미국 달러 참고 가격을 날짜가 명시된 환율로 환산합니다. 통화를 바꾸면 저장 상품의 소계도 바뀝니다. 판매자, Litbuy, 결제업체가 적용하는 가격이나 환율은 다를 수 있습니다. 결제 화면에서 현재 상품 가격, 배송비와 선택한 서비스 비용을 확인하세요."
+      ],
+      [
+        "언어를 바꾸면 무엇이 달라지나요?",
+        "24개 언어를 지원합니다. 메뉴, 카테고리, 상품 유형, FAQ와 QC 조작 문구가 선택한 언어로 표시되고 상품 및 카테고리 링크에도 유지됩니다. 브랜드명, 상품 ID와 원본 상품명은 식별을 위해 유지됩니다. 직접 작성한 메모는 원문 그대로 저장되며 자동으로 번역되지 않습니다."
+      ],
+      [
+        "카테고리에 원본 연결 오류가 표시되는 이유는 무엇인가요?",
+        "전체 카테고리 페이지는 kakobuymake.com에서 상품을 가져옵니다. 원본에 일시적으로 연결할 수 없으면 안내 메시지와 함께 저장된 참고 상품 모음이 표시될 수 있습니다. 이는 현재 재고를 보장하지 않습니다. 나중에 다시 시도하고 주문 전에 Litbuy의 판매 페이지를 확인하세요."
+      ],
+      [
+        "가입, 결제와 주문 문의는 어디서 하나요?",
+        "Litbuy 가입 버튼은 이 사이트의 초대 링크가 포함된 가입 페이지를 엽니다. 결제, 주문 변경, 창고 확인과 배송은 Litbuy 계정에서 진행합니다. QC Notes는 독립적인 카탈로그이며 주문을 관리하지 않습니다. 일부 외부 링크는 제휴 링크로, 구매 시 사이트가 수수료를 받을 수 있습니다."
+      ]
+    ]
+  },
+  "ar": {
+    "title": "أسئلتك عن استخدام الموقع",
+    "intro": "تعرف على طريقة تصفح المنتجات ومراجعة الصور وحفظ اختياراتك، وعلى الخطوات التي تُنجزها عبر حساب Litbuy.",
+    "groups": [
+      "تصفح المنتجات وفتح التفاصيل",
+      "صور الفحص والملاحظات",
+      "المحفوظات وسجل المشاهدة",
+      "الأسعار واللغات",
+      "الكتالوج وطلبات Litbuy"
+    ],
+    "items": [
+      [
+        "كيف أرى منتجات أكثر من المنتجات الاثني عشر في الصفحة الرئيسية؟",
+        "المنتجات الاثنا عشر في الرئيسية مختارات من الكتالوج وليست كل المنتجات. افتح إحدى الفئات للوصول إلى صفحتها الكاملة، أو اختر عرض جميع المنتجات. يمكنك ترتيب النتائج حسب السعر والتنقل بين الصفحات. عند تعذر الوصول إلى المصدر، توضح رسالة الصفحة إن كانت المعروضات مختارات مرجعية محفوظة."
+      ],
+      [
+        "إلى أين أنتقل عند الضغط على منتج؟",
+        "تفتح صورة المنتج أو اسمه أولًا صفحة تفاصيل مستقلة داخل هذا الموقع، تتضمن المعرّف والسعر الاسترشادي والصور المتاحة. ينقلك زر عرض على Litbuy إلى صفحة البيع المقابلة عبر رابطنا التسويقي بالعمولة. تحقق من المقاس واللون والكمية والسعر الحالي على Litbuy قبل الدفع."
+      ],
+      [
+        "هل صور الفحص المرجعية تخص القطعة التي طلبتها؟",
+        "لا. هذه صور موجودة في معرض المصدر، وقد تعرض لونًا آخر أو دفعة سابقة أو قطعة اشتراها شخص آخر. تساعدك على مراجعة التفاصيل، لكنها لا تؤكد اجتياز طلبك للفحص. قبل الشحن، راجع صور المستودع المرتبطة بطلبك الشخصي في Litbuy."
+      ],
+      [
+        "كيف أستخدم بنود التحقق الأربعة والملاحظات الشخصية؟",
+        "اختر منتجًا في قسم ملاحظات الفحص، وحدد البنود التي سجلتها، وافتح الملاحظات الشخصية لكتابة تذكيراتك. تُحفظ بيانات كل منتج بشكل منفصل في هذا المتصفح. العداد يوضح عدد البنود المسجلة وليس تقييمًا للجودة. إعادة الضبط تمسح ملاحظات ذلك المنتج وبنوده فقط، ولا تُرسل أي معلومات إلى Litbuy."
+      ],
+      [
+        "هل حفظ المنتجات يعادل إضافتها إلى سلة أو حجزها؟",
+        "لا. ينشئ رمز الإشارة المرجعية قائمة اختيارات شخصية في هذا المتصفح. يجمع المجموع الفرعي الأسعار الاسترشادية دون الشحن أو الخدمات الاختيارية. الحفظ لا يحجز مخزونًا ولا يضيف شيئًا إلى سلة Litbuy. افتح صفحة تفاصيل المنتج عندما تريد متابعة الشراء على Litbuy."
+      ],
+      [
+        "ما الذي يحتفظ به سجل المشاهدة، وماذا يمسح زر مسح السجل؟",
+        "تُضاف صفحة المنتج التي تفتحها إلى سجل المشاهدة. يحتفظ الموقع بثمانية منتجات كحد أقصى ويعرض أحدث أربعة في الرئيسية. يمسح زر مسح السجل هذه القائمة فقط، وتبقى المنتجات المحفوظة وملاحظات الفحص. قد لا تتوفر بياناتك المحلية بعد مسح تخزين المتصفح أو الانتقال إلى متصفح آخر."
+      ],
+      [
+        "لماذا قد يختلف السعر المعروض عن مبلغ الدفع؟",
+        "يُحوّل السعر الاسترشادي بالدولار الأمريكي من المصدر وفق سعر صرف مؤرخ. يؤدي تغيير العملة أيضًا إلى تحديث مجموع المنتجات المحفوظة. قد تختلف الأسعار وأسعار الصرف لدى البائع وLitbuy ومزود الدفع. راجع سعر المنتج الحالي والشحن والخدمات التي اخترتها في صفحة الدفع."
+      ],
+      [
+        "ما الذي يتغير عند اختيار لغة أخرى؟",
+        "يدعم الموقع 24 لغة. تتغير القوائم والفئات وأنواع المنتجات والأسئلة الشائعة وأدوات الفحص وفق اختيارك، وتحافظ روابط المنتجات والفئات على اللغة المحددة. تبقى أسماء العلامات ومعرّفات المنتجات والعناوين الأصلية للمساعدة على التعرف عليها. تظل ملاحظاتك الشخصية كما كتبتها ولا تُترجم تلقائيًا."
+      ],
+      [
+        "لماذا تظهر أحيانًا رسالة تعذر الوصول إلى المصدر في إحدى الفئات؟",
+        "تجلب صفحات الفئات الكاملة المنتجات من kakobuymake.com. إذا تعذر الوصول إليه مؤقتًا، تشرح الصفحة المشكلة وقد تعرض مختارات مرجعية محفوظة. هذا لا يؤكد توافر المخزون الحالي. أعد المحاولة لاحقًا وتحقق من صفحة البيع على Litbuy قبل تقديم طلبك."
+      ],
+      [
+        "أين أسجل وأدفع وأحصل على مساعدة بخصوص الطلب؟",
+        "يفتح زر التسجيل في Litbuy صفحة التسجيل برابط الدعوة الخاص بهذا الموقع. تُجري الدفع وتعديل الطلب وفحص المستودع والشحن داخل حسابك على Litbuy. موقع QC Notes كتالوج مستقل ولا يدير هذه الطلبات. بعض الروابط الخارجية تسويقية بالعمولة وقد نحصل على عمولة من استخدامها."
+      ]
+    ]
+  },
+  "he": {
+    "title": "שאלות ותשובות על השימוש באתר",
+    "intro": "כל מה שצריך כדי למצוא מוצרים, לעיין בתמונות ולשמור בחירות, והשלבים שמבצעים בחשבון Litbuy.",
+    "groups": [
+      "חיפוש מוצרים ופתיחת פרטים",
+      "תמונות בדיקה והערות",
+      "מוצרים שמורים וצפיות אחרונות",
+      "מחירים ושפות",
+      "הקטלוג והזמנות ב־Litbuy"
+    ],
+    "items": [
+      [
+        "איך רואים מוצרים מעבר לשנים עשר שבעמוד הבית?",
+        "שנים עשר המוצרים בעמוד הבית הם מבחר מתוך הקטלוג, ולא הקטלוג כולו. פתחו קטגוריה כדי להגיע לעמוד המלא שלה, או בחרו בהצגת כל המוצרים. אפשר למיין לפי מחיר ולעבור לעמודים הבאים. כשיש תקלה במקור, הודעה מסבירה אם מוצג מבחר שמור לעיון."
+      ],
+      [
+        "לאן מגיעים בלחיצה על מוצר?",
+        "התמונה או שם המוצר פותחים תחילה עמוד פרטים נפרד באתר הזה, ובו מזהה הפריט, המחיר המשוער והתמונות הזמינות. הכפתור לצפייה ב־Litbuy מוביל למודעת המכירה המתאימה דרך קישור השותפים שלנו. לפני התשלום בדקו ב־Litbuy את המידה, הצבע, הכמות והמחיר העדכני."
+      ],
+      [
+        "האם תמונות הבדיקה מציגות את הפריט שהזמנתי?",
+        "לא. אלה תמונות קיימות מגלריית המקור. הן עשויות להציג צבע אחר, אצווה קודמת או רכישה של אדם אחר. הן עוזרות לבחון פרטים אך אינן מהוות אישור לבדיקה של ההזמנה שלכם. לפני המשלוח, בדקו את תמונות המחסן המשויכות להזמנה האישית שלכם ב־Litbuy."
+      ],
+      [
+        "איך משתמשים בארבעת סעיפי הבדיקה ובהערות האישיות?",
+        "בחרו פריט באזור הערות הבדיקה, סמנו את הסעיפים שרשמתם ופתחו את ההערות האישיות כדי להוסיף תזכורת. הנתונים נשמרים בנפרד לכל מוצר בדפדפן הזה. המונה מציג את מספר הסעיפים שסומנו ולא ציון איכות. איפוס מוחק רק את ההערות והסימונים של אותו פריט; שום מידע אינו נשלח ל־Litbuy."
+      ],
+      [
+        "האם שמירת מוצר היא הוספה לעגלה או שמירת מלאי?",
+        "לא. הסימנייה יוצרת רשימת בחירה אישית בדפדפן הזה. סכום הביניים מחבר מחירים משוערים בלבד, ללא משלוח או שירותים לבחירה. השמירה אינה שומרת מלאי ואינה מוסיפה דבר לעגלת Litbuy. כשתרצו להתקדם לרכישה, פתחו את עמוד הפרטים ועברו למודעת המכירה ב־Litbuy."
+      ],
+      [
+        "מה נשמר בצפיות האחרונות ומה נמחק בניקוי ההיסטוריה?",
+        "פתיחת עמוד פרטים מוסיפה את המוצר להיסטוריית הצפייה. האתר שומר עד שמונה מוצרים ומציג את ארבעת האחרונים בעמוד הבית. ניקוי ההיסטוריה מוחק רק את הרשימה הזאת, ומשאיר את המוצרים השמורים ואת הערות הבדיקה. לאחר מחיקת אחסון הדפדפן או מעבר לדפדפן אחר ייתכן שהנתונים המקומיים לא יהיו זמינים."
+      ],
+      [
+        "למה המחיר המוצג שונה לפעמים מהסכום בקופה?",
+        "המחיר המשוער בדולר אמריקאי מהמקור מומר לפי שער חליפין מתוארך. שינוי המטבע מעדכן גם את סכום המוצרים השמורים. המוכר, Litbuy וספק התשלום עשויים להשתמש במחירים או בשערים שונים. בדקו בקופה את מחיר הפריט העדכני, עלות המשלוח והשירותים שבחרתם."
+      ],
+      [
+        "מה משתנה כשבוחרים שפה אחרת?",
+        "האתר תומך ב־24 שפות. הניווט, הקטגוריות, סוגי המוצרים, השאלות הנפוצות וכלי הבדיקה מוצגים בשפה שבחרתם, וקישורי המוצרים והקטגוריות שומרים עליה. שמות מותגים, מזהי פריטים וכותרות מקוריות נשארים לצורך זיהוי. ההערות האישיות שלכם נשארות בדיוק כפי שכתבתם אותן ואינן מתורגמות אוטומטית."
+      ],
+      [
+        "למה מופיעה לפעמים הודעה שמקור הקטגוריה אינו זמין?",
+        "עמודי הקטגוריות המלאים טוענים מוצרים מ־kakobuymake.com. אם המקור אינו זמין זמנית, העמוד מסביר זאת ועשוי להציג מבחר שמור לעיון. זו אינה הבטחה למלאי עדכני. נסו שוב מאוחר יותר ובדקו את מודעת המכירה ב־Litbuy לפני ביצוע ההזמנה."
+      ],
+      [
+        "איפה נרשמים, משלמים ומקבלים עזרה לגבי הזמנות?",
+        "כפתור ההרשמה ל־Litbuy פותח את עמוד ההרשמה עם קישור ההזמנה של האתר הזה. תשלומים, שינויים בהזמנה, בדיקת המחסן ומשלוח מתבצעים בחשבון Litbuy שלכם. QC Notes הוא קטלוג עצמאי ואינו מנהל את ההזמנות האלה. חלק מהקישורים החיצוניים הם קישורי שותפים שעשויים להניב לנו עמלה."
+      ]
+    ]
+  }
+}

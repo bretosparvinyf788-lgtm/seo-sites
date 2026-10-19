@@ -1,0 +1,1346 @@
+{
+  "en": {
+    "nav": "Beginner guide",
+    "title": "Your first Litbuy order, step by step",
+    "intro": "Start with a category on QC Notes, open a product’s details, then continue on Litbuy. These eight illustrated steps take you through registration, buying, warehouse QC and shipping.",
+    "note": "Real Litbuy registration/product screenshots from 13 October 2026 and official tutorial examples. Original English labels remain in the images. Products, prices and account details are examples, not your order; check the current interface and charges.",
+    "open": "Open the illustrated guide",
+    "zoom": "Enlarge screenshot",
+    "source": "Original Litbuy tutorial",
+    "phases": [
+      "Choose & buy",
+      "Check warehouse QC",
+      "Ship & track"
+    ],
+    "steps": [
+      [
+        "Create or sign in to your account",
+        "Use Join Litbuy in our navigation. On the registration screen, enter your email, create and confirm a password, request the verification code and enter it. Review the required agreements, then select Register. Existing users can choose Log in.",
+        "The invitation field can show E32JME4UQ from this site’s link. Registration creates an account; it does not place an order or reserve an item."
+      ],
+      [
+        "Open a product and select its options",
+        "On QC Notes, choose a category and open a product’s detail page. Review its item ID and reference photos, then select View on Litbuy. On Litbuy, select Style, Size and Quantity before choosing Add to Cart or Buy Now.",
+        "Compare actual measurements with a garment that fits. Check that the destination item matches your selection. The shorts in this screenshot illustrate the controls and are not a recommendation or a fixed-price offer."
+      ],
+      [
+        "Review the order and pay for the items",
+        "On Confirm Order, fill in the requested address, check the variant and quantity, and review domestic delivery and optional services. Submit only when the details are correct. On Checkout Counter, choose an available payment method and review the full amount before Proceed to Pay.",
+        "This payment buys the items. International parcel shipping comes later. The saved subtotal on QC Notes is a reference, not the checkout amount; screenshot balances and payment fees are examples."
+      ],
+      [
+        "Follow the seller’s delivery to the warehouse",
+        "Open Orders in your Litbuy account. Use the item row to open order details, Track Shipment to follow domestic delivery and Contact Buyer to ask the purchasing agent about an issue. Read any messages requiring confirmation.",
+        "Shipped at this stage can mean the seller has sent the item to the warehouse. It does not mean international dispatch. Wait for warehouse storage and the QC photos for your own item."
+      ],
+      [
+        "Inspect your own warehouse QC photos",
+        "Open Warehouse after your item is stored. Match the item, color, size and quantity to your order, then open QC Images. Check visible condition and measurements; use Contact Buyer to ask about missing views or discrepancies before shipping.",
+        "The QC reference photos on this website are not your order’s inspection. Request any extra photos while the item is in the warehouse and check the price and applicable return terms before approving the next stage."
+      ],
+      [
+        "Select items and create your parcel",
+        "In Warehouse, select the stored items you have checked and start Create Parcel. Confirm the recipient’s name, full address, postcode and contact information. Review the included items and packaging requirements before continuing.",
+        "Combine items only when suitable for the chosen route. Accurate weight, dimensions, contents and destination affect the available services; selecting several items does not guarantee cheaper shipping."
+      ],
+      [
+        "Choose shipping and review the parcel payment",
+        "On Create Parcel, review packing, route, tax-payment terms and any optional protection. Apply an eligible coupon if available. Check the final amount and the selected service’s conditions before submitting and paying for international shipping.",
+        "Item payment and parcel payment are separate. Screenshot prices and fees are illustrative; use your account’s current quote, restrictions and any later adjustment after packing or final measurement."
+      ],
+      [
+        "Track delivery and confirm after receipt",
+        "Open the shipped parcel to see its details and tracking. Use the support icon for parcel questions. Once it arrives, check packaging, quantity, variants and visible condition before selecting Confirm Receipt.",
+        "Keep photos and packaging if anything is missing or damaged, and contact parcel support promptly. A tracking number may exist before the carrier’s first scan; this guide does not promise a delivery date."
+      ]
+    ]
+  },
+  "zh": {
+    "nav": "新手指南",
+    "title": "第一次使用 Litbuy，跟着图片一步步操作",
+    "intro": "先在 QC Notes 选择分类并打开商品详情，再进入 Litbuy。通过 8 个图文步骤，了解注册、下单、仓库 QC 和国际寄送的完整流程。",
+    "note": "配图来自 2026 年 10 月 13 日的 Litbuy 注册、商品页面截图及官方教程示例，保留原始英文界面。图中商品、价格和账户信息仅作演示，并非你的订单；请以当前页面和费用为准。",
+    "open": "查看完整图文指南",
+    "zoom": "点击放大步骤图",
+    "source": "Litbuy 官方原教程",
+    "phases": [
+      "选商品并下单",
+      "查看仓库 QC",
+      "寄送与追踪"
+    ],
+    "steps": [
+      [
+        "注册或登录 Litbuy 账户",
+        "点击本站导航栏的“注册 Litbuy”。在注册页填写邮箱、设置并确认密码，点击发送验证码，填写收到的验证码。阅读并勾选必要协议后点击 Register；已有账户可选择 Log in 登录。",
+        "通过本站链接进入时，邀请码栏可能显示 E32JME4UQ。注册只会创建账户，不会自动下单，也不会预留商品。"
+      ],
+      [
+        "打开商品并选择具体规格",
+        "在 QC Notes 选择分类，打开商品详情，核对商品 ID 并查看参考图片，然后点击“在 Litbuy 查看”。进入 Litbuy 后，依次选择 Style 款式、Size 尺码和 Quantity 数量，再点击 Add to Cart 或 Buy Now。",
+        "用合身衣物的实测尺寸对照尺码表，并确认跳转后的商品与你选择的一致。图中的短裤只用于展示操作位置，不代表推荐购买或固定报价。"
+      ],
+      [
+        "确认订单并支付商品费用",
+        "在 Confirm Order 页面补全要求的地址信息，核对规格、数量、国内运费和可选服务。确认无误后提交，在 Checkout Counter 选择可用付款方式，查看完整应付金额，再点击 Proceed to Pay。",
+        "这一步支付的是商品采购费用，国际包裹运费稍后另付。本站收藏小计只是参考，不是结算金额；图中的余额、手续费也仅为示例。"
+      ],
+      [
+        "追踪卖家发往仓库的进度",
+        "登录 Litbuy 后进入 Orders。点击商品行打开订单详情，用 Track Shipment 查看国内物流，遇到问题可通过 Contact Buyer 联系采购代理，并留意需要你确认的订单消息。",
+        "此阶段的 Shipped 可能只是卖家已发往仓库，不代表包裹已开始国际运输。请等商品完成入库，并查看属于你本人订单的 QC 照片。"
+      ],
+      [
+        "查看自己订单的仓库 QC",
+        "商品入库后打开 Warehouse，核对商品、颜色、尺码和数量，再进入 QC Images 检查外观与可见尺寸。若缺少角度、发现差异或有疑问，先用 Contact Buyer 联系代理，再决定是否寄出。",
+        "本站商品页的参考 QC 不能替代本人订单验货。需要补拍时，应在商品仍在仓库时询问，并确认额外费用和适用退换条件后再继续。"
+      ],
+      [
+        "勾选仓库商品并创建包裹",
+        "在 Warehouse 勾选已确认的入库商品，进入 Create Parcel。逐项核对收件人、完整地址、邮编和联系方式，检查包裹包含的商品与包装需求，再继续下一步。",
+        "只合并适合所选线路的商品。实际重量、体积、品类和目的地会影响可用服务；合并多个商品不一定更便宜。"
+      ],
+      [
+        "选择运输方案并支付包裹费用",
+        "在 Create Parcel 页面核对包装、运输线路、税费支付方式及可选保障。如有符合条件的优惠券，可按页面规则使用。确认最终金额及所选服务条款后，再提交并支付国际运费。",
+        "商品付款与包裹付款是两个阶段。配图中的价格和费用仅作演示，请以本人账户当前报价、限制和打包称重后的补差说明为准。"
+      ],
+      [
+        "追踪包裹，收货检查后再确认",
+        "在已寄出的包裹页面打开详情并查看物流，包裹问题可通过客服图标联系支持。收到后先检查外包装、数量、规格和明显损坏，再点击 Confirm Receipt 确认收货。",
+        "若有缺件或损坏，请保留照片和包装，及时通过包裹支持渠道反馈。生成单号不代表承运商已完成首次扫描，本指南不承诺固定到货时间。"
+      ]
+    ]
+  },
+  "de": {
+    "nav": "Einsteigeranleitung",
+    "title": "Deine erste Litbuy-Bestellung, Schritt für Schritt",
+    "intro": "Wähle auf QC Notes eine Kategorie, öffne ein Produkt und gehe dann zu Litbuy. Acht bebilderte Schritte erklären Registrierung, Kauf, Lagerprüfung und Versand.",
+    "note": "Echte Litbuy-Aufnahmen von Registrierung und Produktseite vom 13. Oktober 2026 sowie Beispiele aus dem offiziellen Tutorial. Die englische Bildoberfläche bleibt unverändert. Produkte, Preise und Kontodaten sind Beispiele, nicht deine Bestellung; aktuelle Angaben gelten.",
+    "open": "Bebilderte Anleitung öffnen",
+    "zoom": "Bild vergrößern",
+    "source": "Offizielles Litbuy-Tutorial",
+    "phases": [
+      "Auswählen und kaufen",
+      "QC im Lager prüfen",
+      "Versenden und verfolgen"
+    ],
+    "steps": [
+      [
+        "Konto erstellen oder anmelden",
+        "Öffne die Litbuy-Registrierung über unsere Navigation. Gib E-Mail und Passwort ein, bestätige das Passwort und fordere den Bestätigungscode an. Trage ihn ein, prüfe die erforderlichen Vereinbarungen und wähle Register. Mit vorhandenem Konto nutzt du Log in.",
+        "Im Einladungsfeld kann E32JME4UQ aus unserem Link stehen. Die Registrierung erstellt nur ein Konto; sie bestellt oder reserviert keinen Artikel."
+      ],
+      [
+        "Produkt öffnen und Variante auswählen",
+        "Wähle auf QC Notes eine Kategorie und öffne die Produktdetails. Prüfe Artikel-ID und Referenzbilder und gehe über den Litbuy-Button weiter. Wähle dort Style, Size und Quantity, bevor du Add to Cart oder Buy Now nutzt.",
+        "Vergleiche Maße mit passender Kleidung und prüfe, ob der Zielartikel stimmt. Die Shorts im Bild zeigen die Bedienung, keine Kaufempfehlung und kein verbindliches Preisangebot."
+      ],
+      [
+        "Bestellung prüfen und Artikel bezahlen",
+        "Ergänze bei Confirm Order die angeforderte Adresse und prüfe Variante, Menge, Inlandsversand und optionale Leistungen. Sende erst danach ab. Wähle bei Checkout Counter eine verfügbare Zahlungsart und kontrolliere die Gesamtsumme vor Proceed to Pay.",
+        "Hier bezahlst du den Wareneinkauf; internationaler Paketversand folgt später. Die gespeicherte Zwischensumme auf QC Notes ist nur ein Richtwert. Guthaben und Gebühren im Bild sind Beispiele."
+      ],
+      [
+        "Lieferung des Verkäufers zum Lager verfolgen",
+        "Öffne Orders in deinem Litbuy-Konto. Die Artikelzeile führt zu Details, Track Shipment zur Inlandsverfolgung und Contact Buyer zum Einkaufsagenten. Beachte Nachrichten, die deine Bestätigung verlangen.",
+        "Shipped kann hier nur die Lieferung des Verkäufers zum Lager bedeuten, nicht internationalen Versand. Warte auf Einlagerung und die QC-Fotos deines eigenen Artikels."
+      ],
+      [
+        "Eigene QC-Fotos im Lager prüfen",
+        "Öffne nach Einlagerung Warehouse. Gleiche Artikel, Farbe, Größe und Menge mit deiner Bestellung ab und öffne QC Images. Prüfe sichtbaren Zustand und Maße. Fehlende Ansichten oder Abweichungen klärst du vor Versand über Contact Buyer.",
+        "Die Referenzfotos auf dieser Website ersetzen keine Prüfung deiner Bestellung. Frage zusätzliche Fotos an, solange der Artikel im Lager liegt, und prüfe Kosten und geltende Rückgabebedingungen vor dem nächsten Schritt."
+      ],
+      [
+        "Artikel wählen und Paket erstellen",
+        "Markiere in Warehouse die eingelagerten und geprüften Artikel und starte Create Parcel. Kontrolliere Empfängername, vollständige Adresse, Postleitzahl und Kontaktdaten. Prüfe enthaltene Artikel und Verpackungswünsche, bevor du fortfährst.",
+        "Kombiniere nur Artikel, die zur gewählten Route passen. Gewicht, Maße, Inhalt und Ziel bestimmen die verfügbaren Leistungen; Zusammenlegen garantiert keinen günstigeren Versand."
+      ],
+      [
+        "Versand wählen und Paket bezahlen",
+        "Prüfe in Create Parcel Verpackung, Route, Steuerregelung und optionalen Schutz. Nutze gegebenenfalls einen gültigen Gutschein. Kontrolliere Endbetrag und Bedingungen des gewählten Dienstes, bevor du internationalen Versand bestätigst und bezahlst.",
+        "Artikel- und Paketzahlung sind getrennt. Preise und Gebühren im Bild sind Beispiele. Maßgeblich sind das aktuelle Angebot im Konto, Beschränkungen und mögliche Anpassungen nach Verpackung oder endgültiger Vermessung."
+      ],
+      [
+        "Sendung verfolgen und nach Erhalt bestätigen",
+        "Öffne das versandte Paket für Details und Tracking. Bei Fragen nutzt du das Supportsymbol. Prüfe nach Ankunft Verpackung, Stückzahl, Varianten und sichtbaren Zustand, bevor du Confirm Receipt wählst.",
+        "Bewahre bei Schäden oder Fehlteilen Fotos und Verpackung auf und kontaktiere zeitnah den Paketsupport. Eine Nummer kann vor dem ersten Scan existieren; diese Anleitung verspricht keinen Liefertermin."
+      ]
+    ]
+  },
+  "fr": {
+    "nav": "Guide débutant",
+    "title": "Votre première commande Litbuy, étape par étape",
+    "intro": "Choisissez une catégorie sur QC Notes, ouvrez la fiche produit puis continuez sur Litbuy. Huit étapes illustrées expliquent inscription, achat, contrôle en entrepôt et expédition.",
+    "note": "Captures réelles de l’inscription et d’un produit Litbuy du 13 octobre 2026, avec exemples du tutoriel officiel. Les images conservent leurs libellés anglais. Produits, prix et données de compte sont illustratifs et ne représentent pas votre commande. Vérifiez l’interface et les frais actuels.",
+    "open": "Ouvrir le guide illustré",
+    "zoom": "Agrandir la capture",
+    "source": "Tutoriel officiel Litbuy",
+    "phases": [
+      "Choisir et acheter",
+      "Vérifier le QC en entrepôt",
+      "Expédier et suivre"
+    ],
+    "steps": [
+      [
+        "Créer un compte ou se connecter",
+        "Ouvrez l’inscription Litbuy depuis notre navigation. Indiquez votre e-mail, créez et confirmez un mot de passe, demandez le code de vérification puis saisissez-le. Consultez les accords requis et choisissez Register. Les utilisateurs inscrits peuvent sélectionner Log in.",
+        "Le champ d’invitation peut afficher E32JME4UQ grâce à notre lien. S’inscrire crée un compte, sans commander ni réserver de produit."
+      ],
+      [
+        "Ouvrir un produit et choisir ses options",
+        "Sur QC Notes, ouvrez une catégorie puis la fiche d’un produit. Vérifiez son identifiant et ses photos de référence avant de continuer sur Litbuy. Sélectionnez Style, Size et Quantity, puis Add to Cart ou Buy Now.",
+        "Comparez les mesures à un vêtement qui vous va et vérifiez que le produit correspond. Le short illustré montre les commandes, sans constituer une recommandation ni une offre à prix fixe."
+      ],
+      [
+        "Vérifier la commande et payer les articles",
+        "Dans Confirm Order, renseignez l’adresse demandée et contrôlez variante, quantité, livraison intérieure et services facultatifs. Validez seulement après vérification. Dans Checkout Counter, choisissez un moyen de paiement disponible et vérifiez le total avant Proceed to Pay.",
+        "Ce paiement couvre l’achat des articles. L’expédition internationale se règle plus tard. Le sous-total enregistré sur QC Notes est indicatif. Solde et frais figurant sur l’image sont des exemples."
+      ],
+      [
+        "Suivre la livraison du vendeur à l’entrepôt",
+        "Ouvrez Orders dans votre compte Litbuy. La ligne du produit ouvre les détails, Track Shipment suit la livraison intérieure et Contact Buyer permet de joindre l’agent d’achat. Consultez les messages nécessitant votre confirmation.",
+        "À ce stade, Shipped peut désigner l’envoi du vendeur vers l’entrepôt, pas une expédition internationale. Attendez le stockage et les photos QC de votre propre article."
+      ],
+      [
+        "Examiner les photos QC de votre commande",
+        "Après stockage, ouvrez Warehouse. Vérifiez produit, couleur, taille et quantité, puis ouvrez QC Images. Examinez l’état visible et les mesures. Demandez les vues manquantes ou signalez les écarts avec Contact Buyer avant l’expédition.",
+        "Les photos de référence de ce site ne remplacent pas le contrôle de votre commande. Demandez les photos supplémentaires pendant le stockage et vérifiez leur coût et les conditions de retour avant de poursuivre."
+      ],
+      [
+        "Choisir les articles et créer un colis",
+        "Dans Warehouse, sélectionnez les articles stockés que vous avez vérifiés, puis lancez Create Parcel. Contrôlez nom du destinataire, adresse complète, code postal et coordonnées. Vérifiez le contenu et les besoins d’emballage avant de continuer.",
+        "Regroupez uniquement les articles compatibles avec le trajet choisi. Poids, dimensions, contenu et destination déterminent les services disponibles. Le regroupement ne garantit pas un prix inférieur."
+      ],
+      [
+        "Choisir le transport et payer le colis",
+        "Dans Create Parcel, examinez emballage, trajet, modalités fiscales et protection facultative. Appliquez un coupon admissible si possible. Vérifiez le montant final et les conditions du service avant de confirmer et payer l’expédition internationale.",
+        "Paiement des articles et paiement du colis sont séparés. Les prix illustrés ne sont que des exemples. Consultez le devis actuel de votre compte, les restrictions et les éventuels ajustements après emballage ou mesure finale."
+      ],
+      [
+        "Suivre le colis et confirmer après réception",
+        "Ouvrez les détails du colis expédié pour consulter le suivi. Utilisez l’icône d’assistance pour vos questions. À réception, vérifiez emballage, quantité, variantes et état visible avant de sélectionner Confirm Receipt.",
+        "En cas de manque ou dommage, gardez photos et emballage et contactez rapidement l’assistance colis. Un numéro peut précéder le premier scan du transporteur. Aucun délai fixe n’est garanti ici."
+      ]
+    ]
+  },
+  "es": {
+    "nav": "Guía para principiantes",
+    "title": "Tu primer pedido en Litbuy, paso a paso",
+    "intro": "Elige una categoría en QC Notes, abre los detalles de un producto y continúa en Litbuy. Ocho pasos ilustrados explican el registro, la compra, el QC de almacén y el envío.",
+    "note": "Capturas reales del registro y un producto de Litbuy del 13 de octubre de 2026 y ejemplos del tutorial oficial. Se mantienen los textos originales en inglés. Productos, precios y datos de cuenta son ejemplos, no tu pedido. Comprueba la interfaz y los cargos actuales.",
+    "open": "Abrir la guía ilustrada",
+    "zoom": "Ampliar captura",
+    "source": "Tutorial oficial de Litbuy",
+    "phases": [
+      "Elegir y comprar",
+      "Revisar el QC de almacén",
+      "Enviar y seguir"
+    ],
+    "steps": [
+      [
+        "Crear una cuenta o iniciar sesión",
+        "Abre el registro de Litbuy desde nuestra navegación. Introduce tu correo, crea y confirma una contraseña, solicita el código de verificación e introdúcelo. Revisa los acuerdos obligatorios y pulsa Register. Si ya tienes cuenta, elige Log in.",
+        "El campo de invitación puede mostrar E32JME4UQ mediante nuestro enlace. Registrarte crea una cuenta; no compra ni reserva ningún artículo."
+      ],
+      [
+        "Abrir un producto y elegir sus opciones",
+        "En QC Notes, abre una categoría y los detalles del producto. Comprueba el ID y las fotos de referencia antes de ir a Litbuy. Allí elige Style, Size y Quantity antes de pulsar Add to Cart o Buy Now.",
+        "Compara medidas con una prenda que te quede bien y confirma que el producto coincide. Los pantalones de la imagen ilustran los controles; no son una recomendación ni una oferta de precio fijo."
+      ],
+      [
+        "Revisar el pedido y pagar los artículos",
+        "En Confirm Order, completa la dirección solicitada y revisa variante, cantidad, envío nacional y servicios opcionales. Envía solo cuando esté correcto. En Checkout Counter, elige un método disponible y comprueba el total antes de Proceed to Pay.",
+        "Este pago compra los artículos. El envío internacional del paquete se paga después. El subtotal guardado en QC Notes es orientativo. El saldo y las comisiones de la captura son ejemplos."
+      ],
+      [
+        "Seguir el envío del vendedor al almacén",
+        "Abre Orders en tu cuenta Litbuy. La fila del producto abre sus detalles, Track Shipment muestra el transporte nacional y Contact Buyer permite consultar al agente de compra. Lee los mensajes que pidan confirmación.",
+        "En esta fase, Shipped puede significar que el vendedor lo ha enviado al almacén, no que haya salido internacionalmente. Espera al almacenamiento y a las fotos QC de tu propio artículo."
+      ],
+      [
+        "Examinar el QC de tu pedido en almacén",
+        "Cuando se almacene, abre Warehouse. Comprueba artículo, color, talla y cantidad y entra en QC Images. Revisa estado visible y medidas; consulta imágenes que falten o discrepancias mediante Contact Buyer antes del envío.",
+        "Las fotos de referencia de este sitio no sustituyen la inspección de tu pedido. Solicita fotos adicionales mientras el artículo siga en almacén y revisa su coste y las condiciones de devolución antes de continuar."
+      ],
+      [
+        "Seleccionar artículos y crear el paquete",
+        "En Warehouse, selecciona los artículos almacenados que hayas revisado y abre Create Parcel. Confirma nombre, dirección completa, código postal y contacto del destinatario. Comprueba los artículos incluidos y las necesidades de embalaje.",
+        "Combina solo artículos compatibles con la ruta elegida. Peso, dimensiones, contenido y destino afectan a los servicios disponibles. Reunir varios artículos no garantiza un envío más barato."
+      ],
+      [
+        "Elegir transporte y pagar el paquete",
+        "En Create Parcel, revisa embalaje, ruta, condiciones fiscales y protección opcional. Aplica un cupón válido si corresponde. Comprueba el importe final y las condiciones del servicio antes de confirmar y pagar el transporte internacional.",
+        "El pago del artículo y el del paquete son independientes. Los precios de la imagen son ilustrativos. Usa la cotización actual de tu cuenta, sus restricciones y posibles ajustes tras embalar o medir el paquete."
+      ],
+      [
+        "Seguir la entrega y confirmar tras recibir",
+        "Abre el paquete enviado para ver detalles y seguimiento. Usa el icono de soporte para consultas. Al llegar, revisa embalaje, cantidad, variantes y estado visible antes de pulsar Confirm Receipt.",
+        "Si falta algo o hay daños, conserva fotos y embalaje y contacta pronto con soporte del paquete. Puede existir un número antes del primer escaneo. Esta guía no promete una fecha de entrega."
+      ]
+    ]
+  },
+  "it": {
+    "nav": "Guida per principianti",
+    "title": "Il tuo primo ordine Litbuy, passo dopo passo",
+    "intro": "Scegli una categoria su QC Notes, apri i dettagli di un prodotto e continua su Litbuy. Otto passaggi illustrati spiegano registrazione, acquisto, QC in magazzino e spedizione.",
+    "note": "Schermate reali di registrazione e prodotto Litbuy del 13 ottobre 2026 ed esempi del tutorial ufficiale. Le etichette inglesi nelle immagini restano originali. Prodotti, prezzi e dati del conto sono esempi, non il tuo ordine. Controlla interfaccia e costi attuali.",
+    "open": "Apri la guida illustrata",
+    "zoom": "Ingrandisci schermata",
+    "source": "Tutorial ufficiale Litbuy",
+    "phases": [
+      "Scegli e acquista",
+      "Controlla il QC in magazzino",
+      "Spedisci e segui"
+    ],
+    "steps": [
+      [
+        "Crea un account o accedi",
+        "Apri la registrazione Litbuy dalla nostra navigazione. Inserisci l’e-mail, crea e conferma una password, richiedi il codice di verifica e inseriscilo. Leggi gli accordi richiesti e seleziona Register. Se hai già un account, scegli Log in.",
+        "Il campo invito può mostrare E32JME4UQ tramite il nostro link. La registrazione crea un account, senza acquistare o riservare articoli."
+      ],
+      [
+        "Apri un prodotto e scegli le opzioni",
+        "Su QC Notes, scegli una categoria e apri i dettagli del prodotto. Controlla ID e foto di riferimento, poi passa a Litbuy. Seleziona Style, Size e Quantity prima di usare Add to Cart o Buy Now.",
+        "Confronta le misure con un capo che ti veste bene e verifica che l’articolo corrisponda. Gli shorts nell’immagine mostrano i comandi, non una raccomandazione o un’offerta a prezzo fisso."
+      ],
+      [
+        "Controlla l’ordine e paga gli articoli",
+        "In Confirm Order, completa l’indirizzo richiesto e controlla variante, quantità, consegna interna e servizi facoltativi. Invia solo dopo la verifica. In Checkout Counter, scegli un metodo disponibile e controlla il totale prima di Proceed to Pay.",
+        "Questo pagamento acquista gli articoli. La spedizione internazionale del pacco si paga in seguito. Il subtotale salvato su QC Notes è indicativo. Saldo e commissioni mostrati sono esempi."
+      ],
+      [
+        "Segui la consegna del venditore al magazzino",
+        "Apri Orders nel tuo account Litbuy. La riga dell’articolo apre i dettagli, Track Shipment segue la consegna interna e Contact Buyer permette di contattare l’agente d’acquisto. Leggi i messaggi che richiedono conferma.",
+        "In questa fase Shipped può indicare l’invio del venditore al magazzino, non una partenza internazionale. Attendi lo stoccaggio e le foto QC del tuo articolo."
+      ],
+      [
+        "Esamina le foto QC del tuo ordine",
+        "Dopo lo stoccaggio, apri Warehouse. Verifica articolo, colore, taglia e quantità, poi apri QC Images. Esamina condizioni visibili e misure. Chiedi viste mancanti o segnala differenze tramite Contact Buyer prima della spedizione.",
+        "Le foto di riferimento del sito non sostituiscono il controllo del tuo ordine. Richiedi foto aggiuntive mentre l’articolo è ancora in magazzino e verifica costi e condizioni di reso prima di proseguire."
+      ],
+      [
+        "Seleziona gli articoli e crea il pacco",
+        "In Warehouse, seleziona gli articoli stoccati e controllati e avvia Create Parcel. Conferma nome del destinatario, indirizzo completo, codice postale e contatti. Verifica contenuto e necessità di imballaggio prima di continuare.",
+        "Unisci solo articoli compatibili con il percorso scelto. Peso, dimensioni, contenuto e destinazione influenzano i servizi disponibili. Unire più articoli non garantisce una spedizione più economica."
+      ],
+      [
+        "Scegli il trasporto e paga il pacco",
+        "In Create Parcel, controlla imballaggio, percorso, condizioni fiscali e protezione facoltativa. Applica un coupon valido se disponibile. Verifica importo finale e condizioni del servizio prima di confermare e pagare la spedizione internazionale.",
+        "Pagamento degli articoli e del pacco sono separati. Prezzi e costi nelle immagini sono illustrativi. Consulta il preventivo attuale del tuo account, le restrizioni e gli eventuali adeguamenti dopo imballaggio o misurazione finale."
+      ],
+      [
+        "Segui la consegna e conferma dopo il ricevimento",
+        "Apri il pacco spedito per dettagli e tracciamento. Usa l’icona di assistenza per domande. All’arrivo controlla imballaggio, quantità, varianti e condizioni visibili prima di scegliere Confirm Receipt.",
+        "Se manca qualcosa o ci sono danni, conserva foto e imballaggio e contatta tempestivamente l’assistenza del pacco. Il numero può precedere la prima scansione del corriere. Questa guida non promette una data di consegna."
+      ]
+    ]
+  },
+  "pt": {
+    "nav": "Guia para iniciantes",
+    "title": "A sua primeira encomenda Litbuy, passo a passo",
+    "intro": "Escolha uma categoria no QC Notes, abra os detalhes de um produto e continue no Litbuy. Oito passos ilustrados explicam registo, compra, QC no armazém e envio.",
+    "note": "Capturas reais de registo e produto Litbuy de 13 de outubro de 2026 e exemplos do tutorial oficial. As imagens mantêm os textos originais em inglês. Produtos, preços e dados da conta são exemplos, não a sua encomenda. Confirme a interface e os custos atuais.",
+    "open": "Abrir o guia ilustrado",
+    "zoom": "Ampliar captura",
+    "source": "Tutorial oficial Litbuy",
+    "phases": [
+      "Escolher e comprar",
+      "Verificar QC no armazém",
+      "Enviar e acompanhar"
+    ],
+    "steps": [
+      [
+        "Criar conta ou iniciar sessão",
+        "Abra o registo Litbuy na nossa navegação. Introduza o e-mail, crie e confirme a palavra-passe, peça o código de verificação e preencha-o. Leia os acordos necessários e selecione Register. Quem já tem conta pode escolher Log in.",
+        "O campo de convite pode mostrar E32JME4UQ através da nossa ligação. O registo cria uma conta; não compra nem reserva produtos."
+      ],
+      [
+        "Abrir um produto e escolher as opções",
+        "No QC Notes, escolha uma categoria e abra os detalhes do produto. Confira o ID e as fotos de referência antes de continuar no Litbuy. Selecione Style, Size e Quantity antes de Add to Cart ou Buy Now.",
+        "Compare medidas com roupa que lhe sirva e confirme que o artigo corresponde. Os calções da imagem exemplificam os controlos, não uma recomendação ou preço garantido."
+      ],
+      [
+        "Rever a encomenda e pagar os artigos",
+        "Em Confirm Order, preencha a morada pedida e reveja variante, quantidade, transporte interno e serviços opcionais. Submeta apenas após confirmar. Em Checkout Counter, escolha um meio disponível e confira o total antes de Proceed to Pay.",
+        "Este pagamento compra os artigos; o envio internacional é pago depois. O subtotal guardado no QC Notes é indicativo. Saldos e comissões das imagens são exemplos."
+      ],
+      [
+        "Acompanhar a entrega do vendedor ao armazém",
+        "Abra Orders na sua conta Litbuy. A linha do produto abre os detalhes, Track Shipment acompanha o transporte interno e Contact Buyer permite falar com o agente de compras. Leia mensagens que peçam confirmação.",
+        "Nesta fase, Shipped pode significar envio do vendedor ao armazém, não expedição internacional. Aguarde o armazenamento e as fotos QC do seu próprio artigo."
+      ],
+      [
+        "Verificar as fotos QC da sua encomenda",
+        "Após o armazenamento, abra Warehouse. Confira produto, cor, tamanho e quantidade e entre em QC Images. Verifique o estado visível e medidas. Peça ângulos em falta ou esclareça diferenças em Contact Buyer antes do envio.",
+        "As fotos de referência do site não substituem a inspeção da sua encomenda. Peça fotos adicionais ainda no armazém e confirme custos e condições de devolução antes de avançar."
+      ],
+      [
+        "Selecionar artigos e criar o pacote",
+        "Em Warehouse, selecione os artigos armazenados e verificados e inicie Create Parcel. Confirme nome, morada completa, código postal e contacto do destinatário. Reveja conteúdo e embalagem antes de continuar.",
+        "Junte apenas artigos compatíveis com a rota escolhida. Peso, dimensões, conteúdo e destino afetam os serviços disponíveis; juntar artigos não garante menor custo."
+      ],
+      [
+        "Escolher transporte e pagar o pacote",
+        "Em Create Parcel, reveja embalagem, rota, condições fiscais e proteção opcional. Aplique um cupão válido, se disponível. Confira o valor final e os termos do serviço antes de submeter e pagar o envio internacional.",
+        "O pagamento dos artigos é separado do pacote. Os valores das imagens são ilustrativos. Use a cotação atual da sua conta, as restrições e eventuais ajustes após embalar ou medir."
+      ],
+      [
+        "Acompanhar e confirmar após receber",
+        "Abra o pacote expedido para ver detalhes e rastreio. Use o ícone de apoio para dúvidas. Ao receber, verifique embalagem, quantidade, variantes e estado visível antes de selecionar Confirm Receipt.",
+        "Guarde fotos e embalagem se houver falta ou danos e contacte rapidamente o apoio do pacote. O código pode existir antes da primeira leitura. Este guia não promete uma data de entrega."
+      ]
+    ]
+  },
+  "pl": {
+    "nav": "Poradnik dla początkujących",
+    "title": "Pierwsze zamówienie Litbuy krok po kroku",
+    "intro": "Wybierz kategorię w QC Notes, otwórz szczegóły produktu i przejdź do Litbuy. Osiem ilustrowanych kroków wyjaśnia rejestrację, zakup, QC w magazynie i wysyłkę.",
+    "note": "Prawdziwe zrzuty rejestracji i produktu Litbuy z 13 października 2026 r. oraz przykłady z oficjalnego poradnika. Obrazy zachowują angielskie napisy. Produkty, ceny i dane konta są przykładami, a nie Twoim zamówieniem. Sprawdź aktualny interfejs i opłaty.",
+    "open": "Otwórz ilustrowany poradnik",
+    "zoom": "Powiększ zrzut ekranu",
+    "source": "Oficjalny poradnik Litbuy",
+    "phases": [
+      "Wybór i zakup",
+      "Kontrola QC w magazynie",
+      "Wysyłka i śledzenie"
+    ],
+    "steps": [
+      [
+        "Utwórz konto lub zaloguj się",
+        "Otwórz rejestrację Litbuy z naszej nawigacji. Podaj e-mail, utwórz i potwierdź hasło, zamów kod weryfikacyjny i wpisz go. Przeczytaj wymagane umowy i wybierz Register. Mając konto, użyj Log in.",
+        "Pole zaproszenia może zawierać E32JME4UQ z naszego linku. Rejestracja tworzy konto, ale nie składa zamówienia ani nie rezerwuje produktu."
+      ],
+      [
+        "Otwórz produkt i wybierz wariant",
+        "W QC Notes wybierz kategorię i szczegóły produktu. Sprawdź ID oraz zdjęcia referencyjne, potem przejdź do Litbuy. Wybierz Style, Size i Quantity przed Add to Cart lub Buy Now.",
+        "Porównaj wymiary z pasującą odzieżą i upewnij się, że produkt się zgadza. Szorty na zdjęciu pokazują obsługę, a nie rekomendację lub ofertę stałej ceny."
+      ],
+      [
+        "Sprawdź zamówienie i opłać produkty",
+        "W Confirm Order uzupełnij wymagany adres, sprawdź wariant, ilość, dostawę krajową i usługi dodatkowe. Zatwierdź dopiero po kontroli. W Checkout Counter wybierz dostępną płatność i sprawdź całość przed Proceed to Pay.",
+        "To płatność za zakup produktów. Przesyłkę międzynarodową opłaca się później. Suma zapisanych produktów w QC Notes jest orientacyjna. Saldo i prowizje na obrazie są przykładami."
+      ],
+      [
+        "Śledź dostawę sprzedawcy do magazynu",
+        "Otwórz Orders na koncie Litbuy. Wiersz produktu prowadzi do szczegółów, Track Shipment pokazuje dostawę krajową, a Contact Buyer pozwala zapytać agenta zakupowego. Czytaj wiadomości wymagające potwierdzenia.",
+        "Shipped może tu oznaczać wysyłkę sprzedawcy do magazynu, nie transport międzynarodowy. Poczekaj na przyjęcie do magazynu i zdjęcia QC własnego produktu."
+      ],
+      [
+        "Sprawdź zdjęcia QC własnego zamówienia",
+        "Po przyjęciu otwórz Warehouse. Porównaj produkt, kolor, rozmiar i ilość z zamówieniem, następnie otwórz QC Images. Oceń widoczny stan i wymiary; brakujące ujęcia lub różnice wyjaśnij przez Contact Buyer przed wysyłką.",
+        "Zdjęcia referencyjne na tej stronie nie zastępują kontroli zamówienia. Poproś o dodatkowe ujęcia, gdy produkt jest w magazynie, i sprawdź koszty oraz warunki zwrotu przed dalszym krokiem."
+      ],
+      [
+        "Wybierz produkty i utwórz paczkę",
+        "W Warehouse zaznacz przyjęte i sprawdzone produkty, potem rozpocznij Create Parcel. Potwierdź nazwisko odbiorcy, pełny adres, kod pocztowy i kontakt. Sprawdź zawartość oraz wymagania pakowania.",
+        "Łącz tylko produkty zgodne z wybraną trasą. Waga, wymiary, zawartość i kraj wpływają na dostępne usługi. Łączenie produktów nie gwarantuje tańszej wysyłki."
+      ],
+      [
+        "Wybierz transport i opłać paczkę",
+        "W Create Parcel sprawdź opakowanie, trasę, zasady opodatkowania i opcjonalną ochronę. Jeśli możesz, użyj ważnego kuponu. Przed zatwierdzeniem i płatnością sprawdź końcową kwotę i warunki usługi.",
+        "Płatność za produkt i paczkę to oddzielne etapy. Kwoty na zrzutach są przykładowe. Korzystaj z aktualnej wyceny konta, ograniczeń i ewentualnych korekt po pakowaniu lub ostatecznym pomiarze."
+      ],
+      [
+        "Śledź dostawę i potwierdź po odbiorze",
+        "Otwórz wysłaną paczkę, aby zobaczyć szczegóły i śledzenie. Pytania kieruj przez ikonę wsparcia. Po dostawie sprawdź opakowanie, ilość, warianty i widoczny stan przed Confirm Receipt.",
+        "Przy brakach lub uszkodzeniu zachowaj zdjęcia i opakowanie i szybko skontaktuj się z obsługą paczki. Numer może poprzedzać pierwszy skan. Poradnik nie obiecuje daty dostawy."
+      ]
+    ]
+  },
+  "nl": {
+    "nav": "Beginnersgids",
+    "title": "Je eerste Litbuy-bestelling, stap voor stap",
+    "intro": "Kies op QC Notes een categorie, open de productdetails en ga verder op Litbuy. Acht stappen met echte beelden leggen registratie, aankoop, magazijn-QC en verzending uit.",
+    "note": "Echte beelden van Litbuy-registratie en productpagina van 13 oktober 2026, plus voorbeelden uit de officiële uitleg. Engelse teksten in de beelden blijven ongewijzigd. Producten, prijzen en accountgegevens zijn voorbeelden, niet jouw bestelling. Controleer de actuele pagina en kosten.",
+    "open": "Open de gids met beelden",
+    "zoom": "Schermafbeelding vergroten",
+    "source": "Officiële Litbuy-uitleg",
+    "phases": [
+      "Kiezen en kopen",
+      "QC in het magazijn bekijken",
+      "Verzenden en volgen"
+    ],
+    "steps": [
+      [
+        "Maak een account of meld je aan",
+        "Open de Litbuy-registratie via onze navigatie. Vul je e-mail in, kies en bevestig een wachtwoord, vraag de verificatiecode aan en vul die in. Lees de vereiste voorwaarden en kies Register. Bestaande gebruikers kiezen Log in.",
+        "Het uitnodigingsveld kan via onze link E32JME4UQ bevatten. Registreren maakt een account, maar bestelt of reserveert geen product."
+      ],
+      [
+        "Open een product en kies de opties",
+        "Kies op QC Notes een categorie en open de productdetails. Controleer ID en referentiefoto’s en ga naar Litbuy. Kies Style, Size en Quantity voordat je Add to Cart of Buy Now gebruikt.",
+        "Vergelijk maten met passende kleding en controleer of het juiste artikel opent. De shorts op het beeld tonen de bediening, geen koopadvies of vast prijsaanbod."
+      ],
+      [
+        "Controleer de bestelling en betaal de artikelen",
+        "Vul bij Confirm Order het gevraagde adres in en controleer variant, aantal, binnenlandse bezorging en extra diensten. Bevestig pas daarna. Kies bij Checkout Counter een betaalwijze en controleer het totaal vóór Proceed to Pay.",
+        "Deze betaling koopt de artikelen. Internationale pakketverzending betaal je later. Het opgeslagen subtotaal op QC Notes is een richtbedrag. Saldo en kosten op de afbeelding zijn voorbeelden."
+      ],
+      [
+        "Volg levering van verkoper naar magazijn",
+        "Open Orders in je Litbuy-account. De productregel opent details, Track Shipment volgt binnenlandse bezorging en Contact Buyer bereikt de aankoopagent. Lees berichten die jouw bevestiging vragen.",
+        "Shipped kan hier alleen betekenen dat de verkoper naar het magazijn heeft verzonden, niet internationaal. Wacht op opslag en de QC-foto’s van je eigen artikel."
+      ],
+      [
+        "Bekijk QC-foto’s van je eigen bestelling",
+        "Open Warehouse nadat je artikel is opgeslagen. Vergelijk product, kleur, maat en aantal met je bestelling en open QC Images. Controleer zichtbare staat en maten. Vraag vóór verzending via Contact Buyer naar ontbrekende beelden of afwijkingen.",
+        "Referentiefoto’s op deze site vervangen jouw ordercontrole niet. Vraag extra foto’s terwijl het artikel nog in het magazijn ligt en controleer kosten en retourvoorwaarden vóór de volgende stap."
+      ],
+      [
+        "Kies artikelen en maak een pakket",
+        "Selecteer in Warehouse opgeslagen en gecontroleerde artikelen en start Create Parcel. Controleer naam, volledig adres, postcode en contactgegevens van de ontvanger. Bekijk inhoud en verpakkingswensen voordat je doorgaat.",
+        "Combineer alleen artikelen die bij de gekozen route passen. Gewicht, afmetingen, inhoud en bestemming bepalen beschikbare diensten. Combineren garandeert geen lagere verzendprijs."
+      ],
+      [
+        "Kies verzending en betaal het pakket",
+        "Controleer bij Create Parcel verpakking, route, belastingvoorwaarden en optionele bescherming. Gebruik indien mogelijk een geldige coupon. Bekijk eindbedrag en voorwaarden vóór bevestiging en betaling van internationale verzending.",
+        "Artikelbetaling en pakketbetaling zijn apart. De afgebeelde prijzen zijn voorbeelden. Gebruik de actuele offerte in je account, beperkingen en eventuele aanpassingen na verpakking of definitieve meting."
+      ],
+      [
+        "Volg levering en bevestig na ontvangst",
+        "Open het verzonden pakket voor details en tracking. Gebruik het supportpictogram voor vragen. Controleer na aankomst verpakking, aantal, varianten en zichtbare staat voordat je Confirm Receipt kiest.",
+        "Bewaar bij schade of ontbrekende spullen foto’s en verpakking en neem snel contact op met pakketsupport. Een nummer kan al vóór de eerste scan bestaan. Deze gids belooft geen bezorgdatum."
+      ]
+    ]
+  },
+  "sv": {
+    "nav": "Nybörjarguide",
+    "title": "Din första Litbuy-beställning, steg för steg",
+    "intro": "Välj en kategori på QC Notes, öppna produktdetaljer och fortsätt på Litbuy. Åtta bildsteg visar registrering, köp, lagerkontroll och frakt.",
+    "note": "Riktiga Litbuy-bilder av registrering och produktsida från 13 oktober 2026 samt exempel från den officiella guiden. Bildernas engelska texter är oförändrade. Produkter, priser och kontouppgifter är exempel, inte din beställning. Kontrollera aktuell sida och avgifter.",
+    "open": "Öppna bildguiden",
+    "zoom": "Förstora skärmbild",
+    "source": "Litbuys officiella guide",
+    "phases": [
+      "Välj och köp",
+      "Granska QC på lagret",
+      "Skicka och spåra"
+    ],
+    "steps": [
+      [
+        "Skapa konto eller logga in",
+        "Öppna Litbuys registrering från vår navigering. Ange e-post, skapa och bekräfta lösenord, begär verifieringskod och fyll i den. Läs de nödvändiga avtalen och välj Register. Befintliga användare väljer Log in.",
+        "Inbjudningsfältet kan visa E32JME4UQ via vår länk. Registrering skapar ett konto men köper eller reserverar ingen vara."
+      ],
+      [
+        "Öppna en produkt och välj alternativ",
+        "Välj kategori och produktdetaljer på QC Notes. Kontrollera artikel-ID och referensbilder och gå vidare till Litbuy. Välj Style, Size och Quantity före Add to Cart eller Buy Now.",
+        "Jämför mått med ett plagg som passar och kontrollera att rätt artikel öppnas. Shortsen i bilden visar funktionerna, inte en rekommendation eller ett fast pris."
+      ],
+      [
+        "Kontrollera beställningen och betala varorna",
+        "Fyll i begärd adress på Confirm Order och granska variant, antal, inrikesfrakt och tillval. Bekräfta först när allt stämmer. Välj betalningssätt på Checkout Counter och kontrollera totalsumman före Proceed to Pay.",
+        "Betalningen gäller varuköpet. Internationell paketfrakt betalas senare. Delsumman på QC Notes är vägledande. Saldo och avgifter i bilden är exempel."
+      ],
+      [
+        "Följ säljarens leverans till lagret",
+        "Öppna Orders i ditt Litbuy-konto. Produktraden öppnar detaljer, Track Shipment visar inrikesleverans och Contact Buyer kontaktar inköpsagenten. Läs meddelanden som kräver ditt godkännande.",
+        "Shipped kan här betyda att säljaren skickat till lagret, inte internationellt. Vänta på inlagring och QC-bilder för just din vara."
+      ],
+      [
+        "Granska din beställnings QC-bilder",
+        "Öppna Warehouse när varan lagrats. Kontrollera produkt, färg, storlek och antal och öppna QC Images. Granska synligt skick och mått; fråga om saknade vinklar eller avvikelser via Contact Buyer före frakt.",
+        "Referensbilderna på webbplatsen ersätter inte kontroll av din beställning. Be om extra bilder medan varan är på lagret och kontrollera pris och returvillkor innan du går vidare."
+      ],
+      [
+        "Välj varor och skapa paket",
+        "Markera lagrade, kontrollerade varor i Warehouse och starta Create Parcel. Bekräfta mottagarens namn, fullständiga adress, postnummer och kontaktuppgifter. Granska innehåll och förpackningsbehov innan du fortsätter.",
+        "Samla bara varor som passar vald rutt. Vikt, mått, innehåll och destination påverkar tillgängliga tjänster. Samfrakt garanterar inte ett lägre pris."
+      ],
+      [
+        "Välj frakt och betala paketet",
+        "Granska förpackning, rutt, skattevillkor och frivilligt skydd på Create Parcel. Använd en giltig kupong om möjligt. Kontrollera slutbelopp och tjänstevillkor före bekräftelse och betalning av internationell frakt.",
+        "Varubetalning och paketbetalning är separata. Bildens priser är exempel. Använd kontots aktuella offert, begränsningar och eventuella justeringar efter packning eller slutmätning."
+      ],
+      [
+        "Spåra och bekräfta efter mottagande",
+        "Öppna det skickade paketet för detaljer och spårning. Använd supportikonen vid frågor. Kontrollera förpackning, antal, varianter och synligt skick efter ankomst, innan du väljer Confirm Receipt.",
+        "Spara bilder och förpackning vid saknade eller skadade varor och kontakta paketsupporten snabbt. Ett nummer kan finnas före första skanning. Guiden lovar inget leveransdatum."
+      ]
+    ]
+  },
+  "da": {
+    "nav": "Begynderguide",
+    "title": "Din første Litbuy-bestilling, trin for trin",
+    "intro": "Vælg en kategori på QC Notes, åbn produktdetaljer og fortsæt på Litbuy. Otte trin med billeder viser registrering, køb, lager-QC og fragt.",
+    "note": "Rigtige Litbuy-skærmbilleder af registrering og produkt fra 13. oktober 2026 samt eksempler fra den officielle guide. Billedernes engelske tekst bevares. Produkter, priser og kontodata er eksempler, ikke din bestilling. Kontrollér aktuelle sider og gebyrer.",
+    "open": "Åbn guiden med billeder",
+    "zoom": "Forstør skærmbillede",
+    "source": "Litbuys officielle guide",
+    "phases": [
+      "Vælg og køb",
+      "Kontrollér lager-QC",
+      "Send og spor"
+    ],
+    "steps": [
+      [
+        "Opret konto eller log ind",
+        "Åbn Litbuy-registrering fra vores navigation. Indtast e-mail, opret og bekræft adgangskode, anmod om bekræftelseskoden og indtast den. Læs de nødvendige aftaler og vælg Register. Eksisterende brugere vælger Log in.",
+        "Invitationsfeltet kan vise E32JME4UQ via vores link. Registrering opretter kun en konto og køber eller reserverer ingen varer."
+      ],
+      [
+        "Åbn en vare og vælg muligheder",
+        "Vælg kategori og produktdetaljer på QC Notes. Kontrollér vare-ID og referencefotos, og fortsæt til Litbuy. Vælg Style, Size og Quantity, før du bruger Add to Cart eller Buy Now.",
+        "Sammenlign mål med tøj, der passer, og kontrollér, at varen matcher. Shortsene på billedet viser funktionerne, ikke en anbefaling eller et fast pristilbud."
+      ],
+      [
+        "Kontrollér ordren og betal varerne",
+        "Udfyld den ønskede adresse på Confirm Order og kontrollér variant, antal, indenrigsfragt og tilvalg. Bekræft først, når alt passer. Vælg betalingsmetode på Checkout Counter og kontrollér totalen før Proceed to Pay.",
+        "Denne betaling gælder varerne. International pakkefragt betales senere. Delsummen på QC Notes er vejledende. Saldo og gebyrer på billedet er eksempler."
+      ],
+      [
+        "Følg sælgerens levering til lageret",
+        "Åbn Orders i din Litbuy-konto. Varerækken åbner detaljer, Track Shipment viser indenrigslevering, og Contact Buyer kontakter indkøbsagenten. Læs beskeder, der kræver din bekræftelse.",
+        "Shipped kan her betyde, at sælgeren har sendt til lageret, ikke internationalt. Vent på indlagring og QC-fotos af din egen vare."
+      ],
+      [
+        "Se QC-fotos af din egen ordre",
+        "Åbn Warehouse efter indlagring. Kontrollér vare, farve, størrelse og antal, og åbn QC Images. Se synlig stand og mål. Spørg om manglende vinkler eller afvigelser via Contact Buyer inden afsendelse.",
+        "Referencefotos på hjemmesiden erstatter ikke kontrollen af din ordre. Bed om ekstra billeder, mens varen er på lager, og kontrollér pris og returvilkår før næste trin."
+      ],
+      [
+        "Vælg varer og opret pakken",
+        "Markér indlagrede, kontrollerede varer i Warehouse og start Create Parcel. Bekræft modtagernavn, fuld adresse, postnummer og kontaktoplysninger. Kontrollér indhold og emballagebehov før du fortsætter.",
+        "Saml kun varer, der passer til den valgte rute. Vægt, mål, indhold og destination påvirker tjenesterne. Samling garanterer ikke billigere fragt."
+      ],
+      [
+        "Vælg fragt og betal pakken",
+        "Kontrollér emballage, rute, skattevilkår og valgfri beskyttelse i Create Parcel. Brug en gyldig kupon, hvis muligt. Se slutbeløb og servicevilkår før bekræftelse og betaling af international fragt.",
+        "Varebetaling og pakkebetaling er adskilt. Billedpriser er eksempler. Brug kontoens aktuelle tilbud, begrænsninger og eventuelle justeringer efter pakning eller endelig måling."
+      ],
+      [
+        "Spor og bekræft efter modtagelse",
+        "Åbn den afsendte pakke for detaljer og sporing. Brug supportikonet ved spørgsmål. Kontrollér emballage, antal, varianter og synlig stand ved ankomst, før du vælger Confirm Receipt.",
+        "Gem billeder og emballage ved mangler eller skader og kontakt pakkesupport hurtigt. Et nummer kan findes før første scanning. Guiden lover ingen leveringsdato."
+      ]
+    ]
+  },
+  "no": {
+    "nav": "Nybegynnerguide",
+    "title": "Din første Litbuy-bestilling, steg for steg",
+    "intro": "Velg en kategori på QC Notes, åpne produktdetaljene og fortsett på Litbuy. Åtte illustrerte steg viser registrering, kjøp, lager-QC og frakt.",
+    "note": "Ekte Litbuy-bilder av registrering og produktside fra 13. oktober 2026 samt eksempler fra den offisielle guiden. Bildene beholder engelske tekster. Produkter, priser og kontodata er eksempler, ikke bestillingen din. Sjekk gjeldende sider og kostnader.",
+    "open": "Åpne guiden med bilder",
+    "zoom": "Forstørr skjermbilde",
+    "source": "Litbuys offisielle guide",
+    "phases": [
+      "Velg og kjøp",
+      "Kontroller QC på lageret",
+      "Send og spor"
+    ],
+    "steps": [
+      [
+        "Opprett konto eller logg inn",
+        "Åpne Litbuy-registreringen fra navigasjonen vår. Fyll inn e-post, opprett og bekreft passord, be om bekreftelseskode og skriv den inn. Les nødvendige avtaler og velg Register. Har du konto, velger du Log in.",
+        "Invitasjonsfeltet kan vise E32JME4UQ via lenken vår. Registrering oppretter bare en konto og kjøper eller reserverer ingen varer."
+      ],
+      [
+        "Åpne et produkt og velg alternativer",
+        "Velg kategori og produktdetaljer på QC Notes. Sjekk vare-ID og referansebilder og gå videre til Litbuy. Velg Style, Size og Quantity før Add to Cart eller Buy Now.",
+        "Sammenlign mål med klær som passer og kontroller at riktig vare åpnes. Shortsen i bildet viser betjeningen, ikke en anbefaling eller en fast pris."
+      ],
+      [
+        "Kontroller bestillingen og betal varene",
+        "Fyll ut etterspurt adresse på Confirm Order. Sjekk variant, antall, innenlandsfrakt og valgfrie tjenester før innsending. Velg betalingsmåte på Checkout Counter og kontroller totalbeløpet før Proceed to Pay.",
+        "Denne betalingen kjøper varene. Internasjonal pakkefrakt betales senere. Delsummen på QC Notes er veiledende. Saldo og gebyrer i bildet er eksempler."
+      ],
+      [
+        "Følg leveringen fra selger til lager",
+        "Åpne Orders i Litbuy-kontoen. Produktlinjen åpner detaljer, Track Shipment viser innenlandslevering og Contact Buyer kontakter innkjøpsagenten. Les meldinger som trenger din bekreftelse.",
+        "Shipped kan her bety at selgeren har sendt til lageret, ikke internasjonalt. Vent på lagring og QC-bilder av din egen vare."
+      ],
+      [
+        "Se QC-bildene av din egen bestilling",
+        "Åpne Warehouse etter lagring. Sjekk produkt, farge, størrelse og antall, og åpne QC Images. Se på synlig tilstand og mål. Spør om manglende vinkler eller avvik via Contact Buyer før frakt.",
+        "Referansebildene på nettstedet erstatter ikke kontrollen av din bestilling. Be om ekstra bilder mens varen er på lager, og sjekk pris og returvilkår før du går videre."
+      ],
+      [
+        "Velg varer og opprett pakken",
+        "Marker lagrede, kontrollerte varer i Warehouse og start Create Parcel. Bekreft mottakernavn, full adresse, postnummer og kontaktinformasjon. Se over innhold og emballasjebehov før neste steg.",
+        "Samle bare varer som passer den valgte ruten. Vekt, mål, innhold og destinasjon påvirker tilgjengelige tjenester. Samling garanterer ikke lavere fraktpris."
+      ],
+      [
+        "Velg frakt og betal pakken",
+        "Se over emballasje, rute, skattevilkår og valgfri beskyttelse i Create Parcel. Bruk en gyldig kupong hvis mulig. Kontroller sluttbeløp og tjenestevilkår før du bekrefter og betaler internasjonal frakt.",
+        "Varebetaling og pakkebetaling er separate. Prisene i bildene er eksempler. Bruk kontoens gjeldende tilbud, begrensninger og mulige justeringer etter pakking eller endelig måling."
+      ],
+      [
+        "Spor og bekreft etter mottak",
+        "Åpne den sendte pakken for detaljer og sporing. Bruk støtteikonet ved spørsmål. Kontroller emballasje, antall, varianter og synlig tilstand etter levering før Confirm Receipt.",
+        "Ta vare på bilder og emballasje ved mangler eller skade og kontakt pakkestøtten raskt. Et nummer kan finnes før transportørens første skanning. Guiden lover ingen leveringsdato."
+      ]
+    ]
+  },
+  "fi": {
+    "nav": "Aloittelijan opas",
+    "title": "Ensimmäinen Litbuy-tilauksesi vaihe vaiheelta",
+    "intro": "Valitse kategoria QC Notesissa, avaa tuotetiedot ja siirry Litbuyhin. Kahdeksan kuvitettua vaihetta kertoo rekisteröitymisestä, ostamisesta, varaston QC-tarkistuksesta ja toimituksesta.",
+    "note": "Aidot Litbuy-rekisteröinti- ja tuotekuvat 13.10.2026 sekä virallisen oppaan esimerkit. Kuvien englanninkieliset tekstit säilyvät alkuperäisinä. Tuotteet, hinnat ja tilitiedot ovat esimerkkejä, eivät tilauksesi. Tarkista nykyinen näkymä ja kulut.",
+    "open": "Avaa kuvitettu opas",
+    "zoom": "Suurenna näyttökuva",
+    "source": "Litbuyn virallinen opas",
+    "phases": [
+      "Valitse ja osta",
+      "Tarkista varaston QC",
+      "Lähetä ja seuraa"
+    ],
+    "steps": [
+      [
+        "Luo tili tai kirjaudu sisään",
+        "Avaa Litbuy-rekisteröinti navigaatiostamme. Anna sähköposti, luo ja vahvista salasana, pyydä vahvistuskoodi ja syötä se. Lue tarvittavat sopimukset ja valitse Register. Jos sinulla on tili, valitse Log in.",
+        "Kutsukentässä voi näkyä linkkimme E32JME4UQ. Rekisteröinti luo vain tilin eikä osta tai varaa tuotetta."
+      ],
+      [
+        "Avaa tuote ja valitse vaihtoehdot",
+        "Valitse QC Notesissa kategoria ja avaa tuotetiedot. Tarkista tuotetunnus ja viitekuvat, sitten siirry Litbuyhin. Valitse Style, Size ja Quantity ennen Add to Cart- tai Buy Now -painiketta.",
+        "Vertaa mittoja sopivaan vaatteeseen ja varmista oikea tuote. Kuvan shortsit näyttävät toimintojen sijainnin, eivät ostosuositusta tai kiinteää hintatarjousta."
+      ],
+      [
+        "Tarkista tilaus ja maksa tuotteet",
+        "Täytä pyydetty osoite Confirm Order -sivulla ja tarkista vaihtoehto, määrä, kotimaan kuljetus ja lisäpalvelut. Lähetä vasta tarkistuksen jälkeen. Valitse Checkout Counter -sivulla maksutapa ja tarkista summa ennen Proceed to Pay -painiketta.",
+        "Tämä maksu ostaa tuotteet. Kansainvälinen pakettitoimitus maksetaan myöhemmin. QC Notesin välisumma on suuntaa antava. Kuvan saldo ja maksut ovat esimerkkejä."
+      ],
+      [
+        "Seuraa myyjän toimitusta varastoon",
+        "Avaa Litbuy-tilisi Orders. Tuoterivi avaa tiedot, Track Shipment näyttää kotimaan kuljetuksen ja Contact Buyer yhdistää ostoagenttiin. Lue viestit, jotka edellyttävät vahvistustasi.",
+        "Shipped voi tässä tarkoittaa myyjän toimitusta varastoon, ei kansainvälistä lähetystä. Odota varastointia ja oman tuotteesi QC-kuvia."
+      ],
+      [
+        "Tarkista oman tilauksesi QC-kuvat",
+        "Avaa Warehouse varastoinnin jälkeen. Vertaile tuotetta, väriä, kokoa ja määrää tilaukseen ja avaa QC Images. Tarkista näkyvä kunto ja mitat. Kysy puuttuvista kuvakulmista tai eroista Contact Buyer -toiminnolla ennen lähetystä.",
+        "Sivuston viitekuvat eivät korvaa oman tilauksesi tarkistusta. Pyydä lisäkuvat tuotteen ollessa varastossa ja tarkista hinta sekä palautusehdot ennen jatkamista."
+      ],
+      [
+        "Valitse tuotteet ja luo paketti",
+        "Valitse Warehouse-sivulla varastoidut ja tarkistetut tuotteet ja aloita Create Parcel. Vahvista vastaanottajan nimi, koko osoite, postinumero ja yhteystiedot. Tarkista sisältö ja pakkaustarpeet ennen jatkamista.",
+        "Yhdistä vain valitulle reitille sopivia tuotteita. Paino, mitat, sisältö ja määränpää vaikuttavat palveluihin. Yhdistäminen ei takaa edullisempaa toimitusta."
+      ],
+      [
+        "Valitse toimitus ja maksa paketti",
+        "Tarkista Create Parcel -sivulla pakkaus, reitti, verojen maksuehdot ja valinnainen suoja. Käytä kelvollinen kuponki tarvittaessa. Tarkista loppusumma ja palveluehdot ennen kansainvälisen toimituksen vahvistamista ja maksua.",
+        "Tuotteet ja paketti maksetaan erikseen. Kuvien hinnat ovat esimerkkejä. Käytä tilisi ajankohtaista tarjousta, rajoituksia ja mahdollisia pakkauksen tai lopullisen mittauksen jälkeisiä tarkistuksia."
+      ],
+      [
+        "Seuraa toimitusta ja vahvista vastaanoton jälkeen",
+        "Avaa lähetetyn paketin tiedot ja seuranta. Kysy apua tukikuvakkeesta. Tarkista saapuessa pakkaus, määrä, vaihtoehdot ja näkyvä kunto ennen Confirm Receipt -valintaa.",
+        "Säilytä kuvat ja pakkaus, jos tuotteita puuttuu tai ne ovat vahingoittuneet, ja ota nopeasti yhteyttä pakettitukeen. Seurantatunnus voi syntyä ennen ensimmäistä skannausta. Opas ei lupaa toimituspäivää."
+      ]
+    ]
+  },
+  "cs": {
+    "nav": "Průvodce pro začátečníky",
+    "title": "Vaše první objednávka Litbuy krok za krokem",
+    "intro": "Vyberte kategorii na QC Notes, otevřete detail produktu a pokračujte na Litbuy. Osm obrázkových kroků vysvětluje registraci, nákup, skladovou kontrolu a dopravu.",
+    "note": "Skutečné snímky registrace a produktu Litbuy z 13. října 2026 a příklady z oficiálního návodu. Anglické popisky na obrázcích zůstávají původní. Produkty, ceny a údaje účtu jsou příklady, nikoli vaše objednávka. Ověřte aktuální rozhraní a poplatky.",
+    "open": "Otevřít obrázkový návod",
+    "zoom": "Zvětšit snímek",
+    "source": "Oficiální návod Litbuy",
+    "phases": [
+      "Výběr a nákup",
+      "Kontrola QC ve skladu",
+      "Odeslání a sledování"
+    ],
+    "steps": [
+      [
+        "Vytvořte účet nebo se přihlaste",
+        "Otevřete registraci Litbuy z naší navigace. Zadejte e-mail, vytvořte a potvrďte heslo, vyžádejte ověřovací kód a vyplňte jej. Přečtěte požadované dohody a zvolte Register. Máte-li účet, použijte Log in.",
+        "Pole pozvánky může díky našemu odkazu obsahovat E32JME4UQ. Registrace pouze vytvoří účet; nic neobjedná ani nerezervuje."
+      ],
+      [
+        "Otevřete produkt a vyberte variantu",
+        "Na QC Notes vyberte kategorii a detail produktu. Zkontrolujte ID a referenční fotografie a přejděte na Litbuy. Před Add to Cart nebo Buy Now nastavte Style, Size a Quantity.",
+        "Porovnejte rozměry s oblečením, které vám sedí, a ověřte správný produkt. Kraťasy na obrázku ukazují ovládání, nikoli doporučení nebo nabídku pevné ceny."
+      ],
+      [
+        "Zkontrolujte objednávku a zaplaťte zboží",
+        "V Confirm Order doplňte požadovanou adresu a zkontrolujte variantu, množství, vnitrostátní dopravu a doplňkové služby. Odešlete až po kontrole. V Checkout Counter vyberte způsob platby a ověřte celkovou částku před Proceed to Pay.",
+        "Tato platba hradí nákup zboží. Mezinárodní balík se platí později. Mezisoučet QC Notes je orientační. Zůstatek a poplatky na obrázku jsou příklady."
+      ],
+      [
+        "Sledujte doručení od prodejce do skladu",
+        "Otevřete Orders v účtu Litbuy. Řádek produktu otevře detail, Track Shipment ukáže vnitrostátní dopravu a Contact Buyer kontaktuje nákupního agenta. Čtěte zprávy vyžadující potvrzení.",
+        "Shipped může v této fázi znamenat odeslání prodejcem do skladu, nikoli do zahraničí. Vyčkejte na uskladnění a QC fotografie vlastního kusu."
+      ],
+      [
+        "Prohlédněte QC fotografie své objednávky",
+        "Po uskladnění otevřete Warehouse. Porovnejte produkt, barvu, velikost a množství s objednávkou a otevřete QC Images. Zkontrolujte viditelný stav a rozměry; chybějící záběry nebo rozdíly řešte přes Contact Buyer před odesláním.",
+        "Referenční fotografie webu nenahrazují kontrolu vaší objednávky. Další snímky žádejte ještě ve skladu a před pokračováním ověřte cenu i podmínky vrácení."
+      ],
+      [
+        "Vyberte zboží a vytvořte balík",
+        "V Warehouse označte uskladněné a zkontrolované produkty a spusťte Create Parcel. Potvrďte jméno příjemce, celou adresu, PSČ a kontakt. Před pokračováním zkontrolujte obsah a požadavky na balení.",
+        "Spojujte jen produkty vhodné pro vybranou trasu. Hmotnost, rozměry, obsah a cíl ovlivňují služby. Spojení produktů nezaručuje levnější dopravu."
+      ],
+      [
+        "Zvolte dopravu a zaplaťte balík",
+        "V Create Parcel zkontrolujte balení, trasu, daňové podmínky a volitelné krytí. Použijte platný kupon, je-li dostupný. Před potvrzením a platbou mezinárodní dopravy ověřte konečnou částku a podmínky služby.",
+        "Platba zboží a balíku je oddělená. Ceny na snímcích jsou příklady. Řiďte se aktuální nabídkou účtu, omezeními a případnými úpravami po zabalení či finálním měření."
+      ],
+      [
+        "Sledujte balík a potvrďte až po převzetí",
+        "Otevřete odeslaný balík pro detail a sledování. S dotazy použijte ikonu podpory. Po doručení zkontrolujte obal, množství, varianty a viditelný stav před Confirm Receipt.",
+        "Při poškození nebo chybějícím zboží uchovejte snímky a obal a rychle kontaktujte podporu balíku. Číslo může existovat před prvním skenem. Návod neslibuje datum doručení."
+      ]
+    ]
+  },
+  "ru": {
+    "nav": "Руководство для новичков",
+    "title": "Первый заказ Litbuy: шаг за шагом",
+    "intro": "Выберите категорию на QC Notes, откройте карточку товара и перейдите на Litbuy. Восемь шагов с изображениями объясняют регистрацию, покупку, складскую проверку и отправку.",
+    "note": "Настоящие снимки регистрации и товара Litbuy от 13 октября 2026 года и примеры официального руководства. Английские подписи сохранены. Товары, цены и данные аккаунта приведены для примера, это не ваш заказ. Проверяйте текущий интерфейс и суммы.",
+    "open": "Открыть руководство с изображениями",
+    "zoom": "Увеличить снимок",
+    "source": "Официальное руководство Litbuy",
+    "phases": [
+      "Выбор и покупка",
+      "Проверка QC на складе",
+      "Отправка и отслеживание"
+    ],
+    "steps": [
+      [
+        "Создайте аккаунт или войдите",
+        "Откройте регистрацию Litbuy через наше меню. Введите почту, создайте и подтвердите пароль, запросите проверочный код и укажите его. Прочитайте необходимые соглашения и нажмите Register. Если аккаунт уже есть, выберите Log in.",
+        "В поле приглашения может отображаться E32JME4UQ из нашей ссылки. Регистрация создаёт аккаунт, но не покупает и не резервирует товар."
+      ],
+      [
+        "Откройте товар и выберите параметры",
+        "Выберите категорию и карточку товара на QC Notes. Проверьте ID и справочные фотографии, затем перейдите на Litbuy. Укажите Style, Size и Quantity перед Add to Cart или Buy Now.",
+        "Сравните размеры с подходящей одеждой и убедитесь, что открылся нужный товар. Шорты на снимке показывают элементы управления, а не рекомендацию или фиксированное предложение."
+      ],
+      [
+        "Проверьте заказ и оплатите товары",
+        "В Confirm Order заполните запрошенный адрес, проверьте вариант, количество, внутреннюю доставку и дополнительные услуги. Отправляйте после проверки. В Checkout Counter выберите доступный способ оплаты и проверьте итог перед Proceed to Pay.",
+        "Это оплата покупки товаров. Международная отправка посылки оплачивается позже. Сумма сохранённого на QC Notes ориентировочная. Баланс и комиссии на снимке приведены для примера."
+      ],
+      [
+        "Следите за доставкой продавца на склад",
+        "Откройте Orders в аккаунте Litbuy. Строка товара открывает детали, Track Shipment показывает внутреннюю доставку, Contact Buyer связывает с агентом по закупке. Читайте сообщения, требующие подтверждения.",
+        "Shipped на этом этапе может означать отправку продавцом на склад, а не международную перевозку. Дождитесь размещения на складе и QC-фотографий именно вашего товара."
+      ],
+      [
+        "Проверьте складские QC-фотографии своего заказа",
+        "После размещения откройте Warehouse. Сверьте товар, цвет, размер и количество и откройте QC Images. Проверьте видимое состояние и замеры. Недостающие ракурсы или расхождения обсудите через Contact Buyer до отправки.",
+        "Справочные фотографии сайта не заменяют проверку вашего заказа. Дополнительные снимки запрашивайте, пока товар на складе. До продолжения уточните стоимость и применимые условия возврата."
+      ],
+      [
+        "Выберите товары и создайте посылку",
+        "В Warehouse отметьте размещённые и проверенные товары и запустите Create Parcel. Проверьте имя получателя, полный адрес, индекс и контакты. Перед продолжением уточните содержимое и требования к упаковке.",
+        "Объединяйте только товары, подходящие выбранному маршруту. Вес, размеры, содержимое и страна влияют на доступные услуги. Объединение не гарантирует более дешёвую отправку."
+      ],
+      [
+        "Выберите доставку и оплатите посылку",
+        "В Create Parcel проверьте упаковку, маршрут, налоговые условия и дополнительную защиту. Примените подходящий купон, если есть. Перед подтверждением и оплатой международной отправки проверьте итоговую сумму и условия услуги.",
+        "Оплата товара и посылки разделена. Цены на изображениях примерные. Ориентируйтесь на текущий расчёт аккаунта, ограничения и возможные корректировки после упаковки или окончательных замеров."
+      ],
+      [
+        "Отслеживайте и подтверждайте после получения",
+        "Откройте отправленную посылку для просмотра деталей и отслеживания. Вопросы задавайте через значок поддержки. После доставки проверьте упаковку, количество, варианты и видимое состояние, затем нажимайте Confirm Receipt.",
+        "При недостаче или повреждении сохраните фото и упаковку и быстро обратитесь в поддержку посылки. Номер может появиться до первого сканирования перевозчиком. Руководство не обещает дату доставки."
+      ]
+    ]
+  },
+  "uk": {
+    "nav": "Посібник для початківців",
+    "title": "Перше замовлення Litbuy: крок за кроком",
+    "intro": "Виберіть категорію на QC Notes, відкрийте деталі товару та перейдіть до Litbuy. Вісім кроків із зображеннями пояснюють реєстрацію, купівлю, складську перевірку й відправлення.",
+    "note": "Справжні знімки реєстрації та товару Litbuy від 13 жовтня 2026 року й приклади офіційного посібника. Англійські написи збережено. Товари, ціни й дані облікового запису є прикладами, а не вашим замовленням. Перевіряйте поточний інтерфейс і суми.",
+    "open": "Відкрити посібник із зображеннями",
+    "zoom": "Збільшити знімок",
+    "source": "Офіційний посібник Litbuy",
+    "phases": [
+      "Вибір і купівля",
+      "Перевірка QC на складі",
+      "Відправлення й відстеження"
+    ],
+    "steps": [
+      [
+        "Створіть обліковий запис або увійдіть",
+        "Відкрийте реєстрацію Litbuy через наше меню. Введіть пошту, створіть і підтвердьте пароль, запросіть код перевірки та введіть його. Прочитайте потрібні угоди й виберіть Register. Якщо вже маєте запис, натисніть Log in.",
+        "У полі запрошення може з’явитися E32JME4UQ з нашого посилання. Реєстрація лише створює обліковий запис, не купує та не резервує товар."
+      ],
+      [
+        "Відкрийте товар і виберіть параметри",
+        "На QC Notes виберіть категорію й деталі товару. Перевірте ID та довідкові фотографії, потім перейдіть на Litbuy. Виберіть Style, Size і Quantity перед Add to Cart або Buy Now.",
+        "Порівняйте розміри з одягом, який підходить, і перевірте відповідність товару. Шорти на знімку показують керування, а не рекомендацію чи пропозицію фіксованої ціни."
+      ],
+      [
+        "Перевірте замовлення й оплатіть товари",
+        "У Confirm Order заповніть потрібну адресу, перевірте варіант, кількість, внутрішню доставку й додаткові послуги. Надсилайте після перевірки. У Checkout Counter виберіть спосіб оплати й перевірте підсумок перед Proceed to Pay.",
+        "Це оплата купівлі товарів. Міжнародне відправлення посилки сплачується пізніше. Сума збереженого на QC Notes орієнтовна. Баланс і комісії на зображенні є прикладами."
+      ],
+      [
+        "Відстежуйте доставку продавця на склад",
+        "Відкрийте Orders у Litbuy. Рядок товару відкриває деталі, Track Shipment показує внутрішню доставку, Contact Buyer зв’язує з агентом із закупівлі. Читайте повідомлення, які потребують підтвердження.",
+        "Shipped на цьому етапі може означати відправлення продавцем на склад, а не за кордон. Дочекайтеся розміщення на складі й QC-фотографій власного товару."
+      ],
+      [
+        "Перегляньте QC-фотографії свого замовлення",
+        "Після розміщення відкрийте Warehouse. Звірте товар, колір, розмір і кількість, потім відкрийте QC Images. Перевірте видимий стан і виміри. Відсутні ракурси або розбіжності з’ясуйте через Contact Buyer до відправлення.",
+        "Довідкові фотографії сайту не замінюють перевірку вашого замовлення. Додаткові знімки запитуйте, поки товар на складі. Перед продовженням уточніть вартість і умови повернення."
+      ],
+      [
+        "Виберіть товари й створіть посилку",
+        "У Warehouse позначте розміщені й перевірені товари та почніть Create Parcel. Перевірте ім’я одержувача, повну адресу, індекс і контакти. Перегляньте вміст і вимоги до пакування.",
+        "Об’єднуйте лише товари, що підходять для обраного маршруту. Вага, розміри, вміст і країна впливають на послуги. Об’єднання не гарантує дешевшого відправлення."
+      ],
+      [
+        "Виберіть доставку й оплатіть посилку",
+        "У Create Parcel перевірте пакування, маршрут, податкові умови й додатковий захист. Застосуйте відповідний купон, якщо є. Перевірте кінцеву суму та умови послуги перед підтвердженням і міжнародною оплатою.",
+        "Оплата товарів і посилки відокремлена. Ціни на знімках ілюстративні. Керуйтеся поточним розрахунком облікового запису, обмеженнями й можливими змінами після пакування чи остаточних вимірів."
+      ],
+      [
+        "Відстежуйте та підтверджуйте після отримання",
+        "Відкрийте відправлену посилку для деталей і відстеження. Із питаннями звертайтеся через значок підтримки. Після доставки перевірте пакування, кількість, варіанти й видимий стан перед Confirm Receipt.",
+        "За нестачі чи пошкодження збережіть фотографії й пакування та швидко зверніться до підтримки посилки. Номер може з’явитися до першого сканування. Посібник не обіцяє дати доставки."
+      ]
+    ]
+  },
+  "ro": {
+    "nav": "Ghid pentru începători",
+    "title": "Prima comandă Litbuy, pas cu pas",
+    "intro": "Alege o categorie pe QC Notes, deschide detaliile produsului și continuă pe Litbuy. Opt pași ilustrați explică înregistrarea, cumpărarea, QC în depozit și expedierea.",
+    "note": "Capturi reale de înregistrare și produs Litbuy din 13 octombrie 2026 și exemple din tutorialul oficial. Textele englezești din imagini rămân originale. Produsele, prețurile și datele contului sunt exemple, nu comanda ta. Verifică interfața și costurile actuale.",
+    "open": "Deschide ghidul ilustrat",
+    "zoom": "Mărește captura",
+    "source": "Tutorialul oficial Litbuy",
+    "phases": [
+      "Alege și cumpără",
+      "Verifică QC în depozit",
+      "Expediază și urmărește"
+    ],
+    "steps": [
+      [
+        "Creează un cont sau autentifică-te",
+        "Deschide înregistrarea Litbuy din navigarea noastră. Introdu e-mailul, creează și confirmă parola, solicită codul de verificare și completează-l. Citește acordurile necesare și alege Register. Dacă ai cont, folosește Log in.",
+        "Câmpul de invitație poate afișa E32JME4UQ prin linkul nostru. Înregistrarea creează doar un cont; nu cumpără și nu rezervă produse."
+      ],
+      [
+        "Deschide produsul și alege opțiunile",
+        "Pe QC Notes, alege categoria și deschide detaliile produsului. Verifică ID-ul și fotografiile de referință, apoi continuă pe Litbuy. Selectează Style, Size și Quantity înainte de Add to Cart sau Buy Now.",
+        "Compară măsurile cu un articol care îți vine bine și confirmă produsul corect. Pantalonii din imagine arată comenzile, nu o recomandare sau o ofertă cu preț fix."
+      ],
+      [
+        "Verifică și plătește produsele",
+        "În Confirm Order completează adresa cerută și verifică varianta, cantitatea, transportul intern și serviciile opționale. Trimite doar după control. În Checkout Counter alege o metodă disponibilă și verifică totalul înainte de Proceed to Pay.",
+        "Aceasta este plata cumpărării produselor. Transportul internațional se plătește ulterior. Subtotalul QC Notes este orientativ. Soldul și comisioanele din captură sunt exemple."
+      ],
+      [
+        "Urmărește livrarea vânzătorului la depozit",
+        "Deschide Orders în contul Litbuy. Rândul produsului deschide detaliile, Track Shipment urmărește livrarea internă și Contact Buyer contactează agentul de cumpărare. Citește mesajele care cer confirmare.",
+        "Shipped poate însemna aici expedierea vânzătorului spre depozit, nu transport internațional. Așteaptă stocarea și fotografiile QC ale propriului produs."
+      ],
+      [
+        "Verifică fotografiile QC ale comenzii tale",
+        "După stocare, deschide Warehouse. Compară produsul, culoarea, mărimea și cantitatea cu comanda și deschide QC Images. Verifică starea vizibilă și măsurile; cere unghiurile lipsă sau clarifică diferențele prin Contact Buyer înainte de expediere.",
+        "Fotografiile de referință ale site-ului nu înlocuiesc controlul comenzii tale. Cere imagini suplimentare cât produsul este în depozit și verifică prețul și condițiile de retur înainte să continui."
+      ],
+      [
+        "Selectează produsele și creează coletul",
+        "Bifează în Warehouse produsele stocate și verificate și pornește Create Parcel. Confirmă numele destinatarului, adresa completă, codul poștal și contactul. Verifică produsele incluse și ambalarea înainte să continui.",
+        "Combină doar produse compatibile cu ruta aleasă. Greutatea, dimensiunile, conținutul și destinația influențează serviciile. Combinarea nu garantează transport mai ieftin."
+      ],
+      [
+        "Alege transportul și plătește coletul",
+        "În Create Parcel verifică ambalarea, ruta, condițiile fiscale și protecția opțională. Aplică un cupon eligibil dacă există. Confirmă suma finală și termenii serviciului înainte de trimitere și plata transportului internațional.",
+        "Plata produselor și plata coletului sunt separate. Prețurile din imagini sunt ilustrative. Folosește oferta actuală a contului, restricțiile și eventualele ajustări după ambalare sau măsurarea finală."
+      ],
+      [
+        "Urmărește și confirmă după primire",
+        "Deschide coletul expediat pentru detalii și urmărire. Folosește pictograma de asistență pentru întrebări. La sosire verifică ambalajul, cantitatea, variantele și starea vizibilă înainte de Confirm Receipt.",
+        "Păstrează fotografii și ambalajul dacă lipsesc produse sau există daune și contactează rapid asistența coletului. Numărul poate exista înainte de prima scanare. Ghidul nu promite o dată de livrare."
+      ]
+    ]
+  },
+  "hu": {
+    "nav": "Útmutató kezdőknek",
+    "title": "Az első Litbuy-rendelésed, lépésről lépésre",
+    "intro": "Válassz kategóriát a QC Notes oldalon, nyisd meg a termék részleteit, majd lépj tovább a Litbuyra. Nyolc képes lépés mutatja be a regisztrációt, vásárlást, raktári QC-t és szállítást.",
+    "note": "Valódi Litbuy-regisztrációs és termékképek 2026. október 13-ról, valamint a hivatalos útmutató példái. A képek angol feliratai változatlanok. A termékek, árak és fiókadatok példák, nem a rendelésed. Ellenőrizd az aktuális felületet és díjakat.",
+    "open": "Képes útmutató megnyitása",
+    "zoom": "Képernyőkép nagyítása",
+    "source": "Hivatalos Litbuy-útmutató",
+    "phases": [
+      "Választás és vásárlás",
+      "Raktári QC ellenőrzése",
+      "Feladás és követés"
+    ],
+    "steps": [
+      [
+        "Hozz létre fiókot vagy jelentkezz be",
+        "Nyisd meg a Litbuy-regisztrációt a menünkből. Add meg az e-mailt, hozz létre és erősíts meg jelszót, kérj ellenőrzőkódot és írd be. Olvasd el a szükséges megállapodásokat, majd válaszd a Register gombot. Meglévő fióknál Log in.",
+        "A meghívómezőben a linkünkről E32JME4UQ jelenhet meg. A regisztráció csak fiókot hoz létre, nem rendel és nem foglal terméket."
+      ],
+      [
+        "Nyisd meg a terméket és válassz opciókat",
+        "A QC Notes oldalon válassz kategóriát és termékrészleteket. Ellenőrizd az azonosítót és a referenciaképeket, majd lépj a Litbuyra. Válaszd ki a Style, Size és Quantity értékét az Add to Cart vagy Buy Now előtt.",
+        "Hasonlítsd a méreteket jól illő ruhához, és ellenőrizd a megfelelő terméket. A képen látható rövidnadrág a kezelést szemlélteti, nem ajánlás vagy rögzített árajánlat."
+      ],
+      [
+        "Ellenőrizd a rendelést és fizesd ki a termékeket",
+        "A Confirm Order oldalon töltsd ki a kért címet, ellenőrizd a változatot, mennyiséget, belföldi szállítást és extrákat. Csak ellenőrzés után küldd el. A Checkout Counter oldalon válassz fizetést, és nézd meg a teljes összeget a Proceed to Pay előtt.",
+        "Ez a termékek vásárlási díja. A nemzetközi csomagküldés később fizetendő. A QC Notes részösszege tájékoztató. A képen lévő egyenleg és díjak példák."
+      ],
+      [
+        "Kövesd az eladó szállítását a raktárig",
+        "Nyisd meg a Litbuy-fiók Orders részét. A terméksor részleteket nyit, a Track Shipment a belföldi szállítást mutatja, a Contact Buyer a beszerzőhöz vezet. Olvasd el a jóváhagyást kérő üzeneteket.",
+        "A Shipped itt az eladó raktárba indított szállítását jelentheti, nem a nemzetközi feladást. Várd meg a betárolást és a saját terméked QC-képeit."
+      ],
+      [
+        "Nézd meg a saját rendelésed QC-képeit",
+        "Betárolás után nyisd meg a Warehouse részt. Egyeztesd a terméket, színt, méretet és mennyiséget, majd nyisd meg a QC Images képeit. Vizsgáld meg az állapotot és méreteket; hiányzó nézeteket vagy eltéréseket a Contact Buyer segítségével tisztázz feladás előtt.",
+        "Az oldal referenciaképei nem helyettesítik a rendelésed ellenőrzését. Kérj további képet, amíg a termék raktárban van, és folytatás előtt ellenőrizd a díjat és a visszaküldési feltételeket."
+      ],
+      [
+        "Válassz termékeket és hozz létre csomagot",
+        "A Warehouse részen jelöld ki a betárolt, ellenőrzött termékeket és indítsd a Create Parcel folyamatot. Ellenőrizd a címzett nevét, teljes címét, irányítószámát és elérhetőségét. Nézd át a tartalmat és csomagolási igényt.",
+        "Csak a választott útvonalnak megfelelő termékeket egyesíts. A súly, méret, tartalom és cél befolyásolja a szolgáltatásokat. Az összevonás nem garantál olcsóbb szállítást."
+      ],
+      [
+        "Válassz szállítást és fizesd ki a csomagot",
+        "A Create Parcel részen ellenőrizd a csomagolást, útvonalat, adófizetési feltételeket és választható védelmet. Használj megfelelő kupont, ha van. Jóváhagyás és nemzetközi fizetés előtt nézd meg a végösszeget és feltételeket.",
+        "A termék és a csomag fizetése külön történik. A képek árai példák. A fiókod aktuális ajánlatát, korlátozásait és a csomagolás vagy végső mérés utáni korrekciókat vedd figyelembe."
+      ],
+      [
+        "Kövesd és átvétel után igazold vissza",
+        "Nyisd meg a feladott csomag részleteit és követését. Kérdésnél használd a támogatási ikont. Érkezéskor ellenőrizd a csomagolást, darabszámot, változatokat és látható állapotot a Confirm Receipt előtt.",
+        "Hiány vagy sérülés esetén őrizd meg a fotókat és csomagolást, és gyorsan jelezd a csomagtámogatásnak. A szám az első beolvasás előtt is megjelenhet. Az útmutató nem ígér kézbesítési dátumot."
+      ]
+    ]
+  },
+  "el": {
+    "nav": "Οδηγός για αρχάριους",
+    "title": "Η πρώτη σας παραγγελία Litbuy, βήμα βήμα",
+    "intro": "Επιλέξτε κατηγορία στο QC Notes, ανοίξτε τις λεπτομέρειες προϊόντος και συνεχίστε στο Litbuy. Οκτώ βήματα με εικόνες εξηγούν εγγραφή, αγορά, έλεγχο αποθήκης και αποστολή.",
+    "note": "Πραγματικές λήψεις εγγραφής και προϊόντος Litbuy από 13 Οκτωβρίου 2026 και παραδείγματα του επίσημου οδηγού. Οι αγγλικές ετικέτες παραμένουν αρχικές. Προϊόντα, τιμές και στοιχεία λογαριασμού είναι παραδείγματα, όχι η παραγγελία σας. Ελέγξτε την τρέχουσα οθόνη και χρεώσεις.",
+    "open": "Άνοιγμα οδηγού με εικόνες",
+    "zoom": "Μεγέθυνση στιγμιότυπου",
+    "source": "Επίσημος οδηγός Litbuy",
+    "phases": [
+      "Επιλογή και αγορά",
+      "Έλεγχος QC αποθήκης",
+      "Αποστολή και παρακολούθηση"
+    ],
+    "steps": [
+      [
+        "Δημιουργήστε λογαριασμό ή συνδεθείτε",
+        "Ανοίξτε την εγγραφή Litbuy από την πλοήγησή μας. Δώστε email, δημιουργήστε και επιβεβαιώστε κωδικό, ζητήστε κωδικό επαλήθευσης και συμπληρώστε τον. Διαβάστε τις απαιτούμενες συμφωνίες και επιλέξτε Register. Αν έχετε λογαριασμό, επιλέξτε Log in.",
+        "Το πεδίο πρόσκλησης μπορεί να δείχνει E32JME4UQ από τον σύνδεσμό μας. Η εγγραφή δημιουργεί μόνο λογαριασμό, χωρίς αγορά ή κράτηση προϊόντος."
+      ],
+      [
+        "Ανοίξτε προϊόν και επιλέξτε παραλλαγή",
+        "Στο QC Notes επιλέξτε κατηγορία και λεπτομέρειες προϊόντος. Ελέγξτε ID και φωτογραφίες αναφοράς και συνεχίστε στο Litbuy. Επιλέξτε Style, Size και Quantity πριν από Add to Cart ή Buy Now.",
+        "Συγκρίνετε διαστάσεις με ρούχο που σας ταιριάζει και ελέγξτε ότι ανοίγει το σωστό προϊόν. Το σορτς της εικόνας δείχνει τα χειριστήρια, όχι σύσταση ή σταθερή προσφορά."
+      ],
+      [
+        "Ελέγξτε παραγγελία και πληρώστε προϊόντα",
+        "Στο Confirm Order συμπληρώστε τη ζητούμενη διεύθυνση και ελέγξτε παραλλαγή, ποσότητα, εσωτερική μεταφορά και προαιρετικές υπηρεσίες. Υποβάλετε μετά τον έλεγχο. Στο Checkout Counter επιλέξτε πληρωμή και ελέγξτε το σύνολο πριν από Proceed to Pay.",
+        "Αυτή η πληρωμή αγοράζει τα προϊόντα. Η διεθνής αποστολή πληρώνεται αργότερα. Το υποσύνολο QC Notes είναι ενδεικτικό. Υπόλοιπο και προμήθειες στην εικόνα είναι παραδείγματα."
+      ],
+      [
+        "Παρακολουθήστε την παράδοση του πωλητή στην αποθήκη",
+        "Ανοίξτε Orders στον λογαριασμό Litbuy. Η γραμμή προϊόντος ανοίγει λεπτομέρειες, το Track Shipment δείχνει εσωτερική μεταφορά και το Contact Buyer επικοινωνεί με τον αγοραστή-αντιπρόσωπο. Διαβάστε μηνύματα που χρειάζονται επιβεβαίωση.",
+        "Το Shipped μπορεί εδώ να σημαίνει αποστολή του πωλητή προς την αποθήκη, όχι διεθνή αποστολή. Περιμένετε αποθήκευση και τις QC φωτογραφίες του δικού σας προϊόντος."
+      ],
+      [
+        "Εξετάστε τις QC φωτογραφίες της παραγγελίας σας",
+        "Μετά την αποθήκευση ανοίξτε Warehouse. Συγκρίνετε προϊόν, χρώμα, μέγεθος και ποσότητα και ανοίξτε QC Images. Ελέγξτε ορατή κατάσταση και μετρήσεις. Ζητήστε ελλείπουσες όψεις ή εξηγήσεις μέσω Contact Buyer πριν από αποστολή.",
+        "Οι εικόνες αναφοράς του ιστότοπου δεν αντικαθιστούν τον έλεγχο της παραγγελίας σας. Ζητήστε πρόσθετες φωτογραφίες όσο το προϊόν είναι στην αποθήκη και ελέγξτε κόστος και όρους επιστροφής πριν συνεχίσετε."
+      ],
+      [
+        "Επιλέξτε προϊόντα και δημιουργήστε δέμα",
+        "Στο Warehouse επιλέξτε αποθηκευμένα και ελεγμένα προϊόντα και ξεκινήστε Create Parcel. Επιβεβαιώστε όνομα παραλήπτη, πλήρη διεύθυνση, ταχυδρομικό κώδικα και επικοινωνία. Ελέγξτε περιεχόμενο και ανάγκες συσκευασίας.",
+        "Συνδυάστε μόνο προϊόντα συμβατά με τη διαδρομή. Βάρος, διαστάσεις, περιεχόμενο και προορισμός επηρεάζουν τις υπηρεσίες. Ο συνδυασμός δεν εγγυάται χαμηλότερο κόστος."
+      ],
+      [
+        "Επιλέξτε μεταφορά και πληρώστε το δέμα",
+        "Στο Create Parcel ελέγξτε συσκευασία, διαδρομή, φορολογικούς όρους και προαιρετική προστασία. Εφαρμόστε έγκυρο κουπόνι αν υπάρχει. Ελέγξτε τελικό ποσό και όρους υπηρεσίας πριν επιβεβαιώσετε και πληρώσετε τη διεθνή αποστολή.",
+        "Πληρωμή προϊόντων και δέματος είναι ξεχωριστές. Οι τιμές στις εικόνες είναι παραδείγματα. Χρησιμοποιήστε την τρέχουσα προσφορά λογαριασμού, περιορισμούς και πιθανές διορθώσεις μετά τη συσκευασία ή τελική μέτρηση."
+      ],
+      [
+        "Παρακολουθήστε και επιβεβαιώστε μετά την παραλαβή",
+        "Ανοίξτε το απεσταλμένο δέμα για λεπτομέρειες και παρακολούθηση. Χρησιμοποιήστε το εικονίδιο υποστήριξης για ερωτήσεις. Κατά την άφιξη ελέγξτε συσκευασία, ποσότητα, παραλλαγές και ορατή κατάσταση πριν από Confirm Receipt.",
+        "Για ελλείψεις ή ζημιές κρατήστε φωτογραφίες και συσκευασία και επικοινωνήστε άμεσα με την υποστήριξη δέματος. Ο αριθμός μπορεί να προηγείται της πρώτης σάρωσης. Ο οδηγός δεν υπόσχεται ημερομηνία παράδοσης."
+      ]
+    ]
+  },
+  "tr": {
+    "nav": "Yeni başlayanlar için rehber",
+    "title": "İlk Litbuy siparişiniz, adım adım",
+    "intro": "QC Notes’ta kategori seçin, ürün ayrıntılarını açın ve Litbuy’a geçin. Sekiz görselli adım kayıt, satın alma, depo QC kontrolü ve gönderimi açıklar.",
+    "note": "13 Ekim 2026 tarihli gerçek Litbuy kayıt ve ürün ekranları ile resmî rehber örnekleri kullanılmıştır. Görsellerdeki İngilizce metinler korunur. Ürün, fiyat ve hesap bilgileri örnektir; siparişiniz değildir. Güncel arayüz ve ücretleri kontrol edin.",
+    "open": "Görselli rehberi aç",
+    "zoom": "Ekran görüntüsünü büyüt",
+    "source": "Resmî Litbuy rehberi",
+    "phases": [
+      "Seç ve satın al",
+      "Depo QC kontrolünü yap",
+      "Gönder ve takip et"
+    ],
+    "steps": [
+      [
+        "Hesap oluşturun veya giriş yapın",
+        "Menümüzden Litbuy kayıt sayfasını açın. E-postayı girin, şifre oluşturup doğrulayın, doğrulama kodu isteyin ve girin. Gerekli sözleşmeleri okuyup Register seçeneğine basın. Hesabınız varsa Log in kullanın.",
+        "Davet alanında bağlantımızdan gelen E32JME4UQ görünebilir. Kayıt yalnızca hesap oluşturur; ürün satın almaz veya ayırmaz."
+      ],
+      [
+        "Ürünü açın ve seçenekleri belirleyin",
+        "QC Notes’ta kategori ve ürün ayrıntılarını açın. Ürün kimliğini ve referans fotoğrafları kontrol edip Litbuy’a geçin. Add to Cart veya Buy Now öncesinde Style, Size ve Quantity seçin.",
+        "Ölçüleri üzerinize olan bir giysiyle karşılaştırın ve doğru ürünün açıldığını doğrulayın. Görseldeki şort işlemleri gösterir; tavsiye veya sabit fiyat teklifi değildir."
+      ],
+      [
+        "Siparişi inceleyin ve ürünleri ödeyin",
+        "Confirm Order ekranında istenen adresi doldurup seçenek, adet, yurt içi teslimat ve ek hizmetleri kontrol edin. Doğruysa gönderin. Checkout Counter ekranında mevcut bir ödeme yöntemi seçip Proceed to Pay öncesinde toplamı inceleyin.",
+        "Bu ödeme ürün satın alımı içindir. Uluslararası paket gönderimi daha sonra ödenir. QC Notes ara toplamı referanstır. Görseldeki bakiye ve komisyonlar örnektir."
+      ],
+      [
+        "Satıcının depoya teslimatını izleyin",
+        "Litbuy hesabında Orders bölümünü açın. Ürün satırı ayrıntıları, Track Shipment yurt içi takibi, Contact Buyer satın alma temsilcisiyle görüşmeyi açar. Onay isteyen mesajları okuyun.",
+        "Bu aşamadaki Shipped, satıcının depoya gönderdiği anlamına gelebilir; uluslararası çıkış değildir. Depolama ve kendi ürününüzün QC fotoğraflarını bekleyin."
+      ],
+      [
+        "Kendi siparişinizin QC fotoğraflarını inceleyin",
+        "Depolamadan sonra Warehouse bölümünü açın. Ürün, renk, beden ve adedi eşleştirip QC Images açın. Görünür durum ve ölçüleri kontrol edin; eksik açılar veya farklar için gönderimden önce Contact Buyer kullanın.",
+        "Bu sitenin referans fotoğrafları sipariş kontrolünüzün yerine geçmez. Ürün depodayken ek fotoğraf isteyin; devam etmeden önce ücret ve iade koşullarını kontrol edin."
+      ],
+      [
+        "Ürünleri seçin ve paket oluşturun",
+        "Warehouse bölümünde depolanmış ve kontrol edilmiş ürünleri işaretleyip Create Parcel başlatın. Alıcı adı, tam adres, posta kodu ve iletişimi doğrulayın. İçeriği ve paketleme ihtiyaçlarını inceleyin.",
+        "Yalnızca seçilen rotaya uygun ürünleri birleştirin. Ağırlık, boyut, içerik ve hedef hizmetleri etkiler. Birleştirmek daha ucuz gönderimi garanti etmez."
+      ],
+      [
+        "Taşıma seçin ve paketi ödeyin",
+        "Create Parcel ekranında paketleme, rota, vergi ödeme koşulları ve isteğe bağlı korumayı inceleyin. Uygun kupon varsa uygulayın. Onay ve uluslararası gönderim ödemesinden önce son tutar ve hizmet koşullarını kontrol edin.",
+        "Ürün ve paket ödemeleri ayrıdır. Görsellerdeki fiyatlar örnektir. Hesabınızın güncel teklifini, kısıtlamaları ve paketleme ya da son ölçüm sonrası değişiklikleri esas alın."
+      ],
+      [
+        "Takip edin ve teslim aldıktan sonra onaylayın",
+        "Gönderilen paketi açıp ayrıntıları ve takibi görün. Sorular için destek simgesini kullanın. Teslimde paketleme, adet, seçenekler ve görünür durumu kontrol ettikten sonra Confirm Receipt seçin.",
+        "Eksik veya hasarlı ürün varsa fotoğraf ve ambalajı saklayıp paket desteğine hızla başvurun. Takip numarası ilk taramadan önce oluşabilir. Bu rehber teslim tarihi sözü vermez."
+      ]
+    ]
+  },
+  "ja": {
+    "nav": "はじめての方へ",
+    "title": "はじめての Litbuy 注文を、写真で一歩ずつ",
+    "intro": "QC Notes でカテゴリーを選び、商品詳細を開いて Litbuy に進みます。登録、購入、倉庫での QC、発送までを8つの画像付きステップで説明します。",
+    "note": "2026年10月13日の Litbuy 登録・商品画面の実際のスクリーンショットと、公式チュートリアルの例を使用しています。画像内の英語表示は原文のままです。商品、価格、アカウント情報は例であり、ご自身の注文ではありません。現在の画面と料金をご確認ください。",
+    "open": "画像付きガイドを開く",
+    "zoom": "手順の画像を拡大",
+    "source": "Litbuy 公式チュートリアル",
+    "phases": [
+      "商品を選んで購入",
+      "倉庫の QC を確認",
+      "発送と追跡"
+    ],
+    "steps": [
+      [
+        "アカウントを作成・ログインする",
+        "当サイトのナビゲーションから Litbuy の登録ページを開きます。メールアドレスを入力し、パスワードを設定・再入力して、認証コードを取得して入力します。必要な規約を読み、Register を選びます。登録済みの方は Log in を選択します。",
+        "当サイトのリンクでは招待欄に E32JME4UQ が表示される場合があります。登録はアカウントを作る操作で、商品を注文・取り置きするものではありません。"
+      ],
+      [
+        "商品を開き、仕様を選ぶ",
+        "QC Notes のカテゴリーから商品詳細を開きます。商品 ID と参考写真を確認し、Litbuy へ進みます。Litbuy で Style、Size、Quantity を選んでから Add to Cart または Buy Now を押します。",
+        "合う服の実寸と比較し、移動先の商品が正しいか確認してください。画像のショートパンツは操作例であり、購入推奨や固定価格の案内ではありません。"
+      ],
+      [
+        "注文を確認し、商品代金を支払う",
+        "Confirm Order で必要な住所を入力し、仕様、数量、中国国内送料、追加サービスを確認します。正しければ送信し、Checkout Counter で利用可能な支払方法と総額を確認して Proceed to Pay へ進みます。",
+        "ここでは商品を購入します。国際送料は後で別途支払います。QC Notes の保存小計は参考値です。画像の残高や手数料は例にすぎません。"
+      ],
+      [
+        "販売者から倉庫への配送を確認する",
+        "Litbuy アカウントの Orders を開きます。商品行から詳細、Track Shipment から中国国内の配送状況、Contact Buyer から購入担当者への問い合わせができます。確認が必要なメッセージも読みましょう。",
+        "この段階の Shipped は、販売者から倉庫への発送を指す場合があります。国際発送済みとは限りません。入庫と、ご自身の商品に対応する QC 写真を待ちます。"
+      ],
+      [
+        "自分の注文の倉庫 QC 写真を見る",
+        "入庫後に Warehouse を開き、商品、色、サイズ、数量を注文と照合して QC Images を確認します。見える状態や寸法を確かめ、足りない角度や相違点は発送前に Contact Buyer で問い合わせます。",
+        "当サイトの参考写真は、ご自身の注文の検品に代わるものではありません。商品が倉庫にある間に追加写真を依頼し、料金や適用される返品条件を確認してから次へ進みます。"
+      ],
+      [
+        "商品を選び、荷物を作成する",
+        "Warehouse で入庫・確認済みの商品を選び、Create Parcel を開始します。受取人の氏名、完全な住所、郵便番号、連絡先を確認し、同梱商品と梱包の希望を見直してから進みます。",
+        "選んだ配送方法で送れる商品だけをまとめてください。重量、寸法、内容、宛先で利用できるサービスが変わります。同梱しても送料が安くなるとは限りません。"
+      ],
+      [
+        "配送方法を選び、国際送料を支払う",
+        "Create Parcel で梱包、配送ルート、税金の支払条件、任意の補償を確認します。利用可能なクーポンがあれば適用し、最終金額とサービス条件を確かめてから国際発送を申し込み、支払います。",
+        "商品代金と荷物の送料は別の支払いです。画像の金額は例です。アカウント内の現在の見積もり、制限、梱包や最終計測後の調整を確認してください。"
+      ],
+      [
+        "配送を追跡し、受け取ってから確認する",
+        "発送済みの荷物を開き、詳細と追跡を確認します。問い合わせにはサポートアイコンを使います。到着したら梱包、個数、仕様、見える状態を確認してから Confirm Receipt を押します。",
+        "不足や破損があれば写真と梱包を保管し、速やかに荷物のサポートへ連絡してください。追跡番号は最初の読み取りより前に発行される場合があり、このガイドは到着日を約束しません。"
+      ]
+    ]
+  },
+  "ko": {
+    "nav": "초보자 가이드",
+    "title": "첫 Litbuy 주문, 사진으로 차근차근",
+    "intro": "QC Notes에서 카테고리와 상품 상세를 확인한 뒤 Litbuy로 이동하세요. 가입, 구매, 창고 QC와 배송까지 8개의 이미지 단계로 안내합니다.",
+    "note": "2026년 10월 13일 Litbuy 가입·상품 화면의 실제 캡처와 공식 가이드 예시를 사용합니다. 이미지의 영어 표시는 원문 그대로입니다. 상품, 가격, 계정 정보는 예시이며 본인의 주문이 아닙니다. 현재 화면과 비용을 확인하세요.",
+    "open": "이미지 가이드 열기",
+    "zoom": "단계 이미지 확대",
+    "source": "Litbuy 공식 가이드",
+    "phases": [
+      "상품 선택과 구매",
+      "창고 QC 확인",
+      "배송과 추적"
+    ],
+    "steps": [
+      [
+        "계정을 만들거나 로그인하기",
+        "사이트 메뉴에서 Litbuy 가입을 여세요. 이메일을 입력하고 비밀번호를 설정·확인한 다음 인증 코드를 요청해 입력하세요. 필수 약관을 확인한 뒤 Register를 누릅니다. 기존 계정이 있다면 Log in을 선택하세요.",
+        "사이트 링크를 통해 초대 코드 E32JME4UQ가 표시될 수 있습니다. 가입은 계정 생성이며 상품 주문이나 재고 예약이 아닙니다."
+      ],
+      [
+        "상품을 열고 옵션 선택하기",
+        "QC Notes에서 카테고리를 고르고 상품 상세를 여세요. 상품 ID와 참고 사진을 확인한 뒤 Litbuy로 이동합니다. Style, Size, Quantity를 선택한 다음 Add to Cart 또는 Buy Now를 누르세요.",
+        "맞는 옷의 실측과 비교하고 이동한 상품이 일치하는지 확인하세요. 사진 속 반바지는 조작 위치를 보여주는 예시이며 추천 상품이나 고정 가격 제안이 아닙니다."
+      ],
+      [
+        "주문 확인 후 상품 비용 결제하기",
+        "Confirm Order에서 요청하는 주소를 입력하고 옵션, 수량, 중국 내 배송비와 선택 서비스를 확인하세요. 정확하면 제출하고 Checkout Counter에서 가능한 결제 수단과 전체 금액을 확인한 뒤 Proceed to Pay를 누릅니다.",
+        "여기서는 상품을 구매합니다. 국제 배송비는 나중에 따로 결제합니다. QC Notes 저장 소계는 참고 금액이며 캡처의 잔액과 수수료도 예시입니다."
+      ],
+      [
+        "판매자에서 창고까지 배송 추적하기",
+        "Litbuy 계정에서 Orders를 여세요. 상품 행은 상세, Track Shipment는 중국 내 배송 추적, Contact Buyer는 구매 담당자 문의로 연결됩니다. 확인이 필요한 주문 메시지를 읽으세요.",
+        "이 단계의 Shipped는 판매자가 창고로 보냈다는 뜻일 수 있으며 국제 발송 완료를 뜻하지 않습니다. 입고와 본인 상품의 QC 사진을 기다리세요."
+      ],
+      [
+        "본인 주문의 창고 QC 사진 확인하기",
+        "입고 후 Warehouse를 열어 상품, 색상, 사이즈와 수량을 대조하고 QC Images를 보세요. 눈에 보이는 상태와 치수를 확인하고 부족한 각도나 차이는 배송 전에 Contact Buyer로 문의하세요.",
+        "사이트 참고 사진은 본인 주문의 검수를 대체하지 않습니다. 상품이 창고에 있을 때 추가 사진을 요청하고 비용과 적용되는 반품 조건을 확인한 뒤 진행하세요."
+      ],
+      [
+        "상품 선택 후 소포 만들기",
+        "Warehouse에서 입고·확인한 상품을 선택하고 Create Parcel을 시작하세요. 받는 사람 이름, 전체 주소, 우편번호와 연락처를 확인합니다. 포함 상품과 포장 요구사항을 검토한 뒤 진행하세요.",
+        "선택한 노선에 적합한 상품만 합치세요. 실제 무게, 크기, 내용물과 목적지에 따라 서비스가 달라지며 합배송이 항상 저렴한 것은 아닙니다."
+      ],
+      [
+        "배송 방법을 고르고 소포 비용 결제하기",
+        "Create Parcel에서 포장, 노선, 세금 지불 조건과 선택 보호 서비스를 검토하세요. 사용 가능한 쿠폰이 있으면 적용하고 최종 금액과 서비스 조건을 확인한 뒤 국제 배송을 신청·결제합니다.",
+        "상품 결제와 소포 결제는 별도입니다. 이미지 가격은 예시이므로 계정의 현재 견적, 제한 및 포장·최종 측정 이후 조정 안내를 확인하세요."
+      ],
+      [
+        "추적하고 수령 후 확인하기",
+        "발송된 소포를 열어 상세와 배송 추적을 확인하세요. 문의는 지원 아이콘을 이용합니다. 도착하면 포장, 개수, 옵션과 눈에 보이는 상태를 확인한 뒤 Confirm Receipt를 누르세요.",
+        "누락이나 파손이 있으면 사진과 포장을 보관하고 소포 지원팀에 신속히 문의하세요. 첫 운송사 스캔 전에 번호가 생길 수 있으며 이 가이드는 도착일을 약속하지 않습니다."
+      ]
+    ]
+  },
+  "ar": {
+    "nav": "دليل المبتدئين",
+    "title": "طلبك الأول من Litbuy، خطوة بخطوة",
+    "intro": "اختر فئة في QC Notes وافتح تفاصيل المنتج ثم انتقل إلى Litbuy. تشرح ثماني خطوات مصورة التسجيل والشراء وفحص المستودع والشحن.",
+    "note": "لقطات حقيقية لتسجيل Litbuy وصفحة منتج بتاريخ 13 أكتوبر 2026، مع أمثلة من الدليل الرسمي. تبقى النصوص الإنجليزية داخل الصور كما هي. المنتجات والأسعار وبيانات الحساب أمثلة وليست طلبك؛ تحقق من الواجهة والرسوم الحالية.",
+    "open": "فتح الدليل المصور",
+    "zoom": "تكبير لقطة الشاشة",
+    "source": "دليل Litbuy الرسمي",
+    "phases": [
+      "الاختيار والشراء",
+      "مراجعة فحص المستودع",
+      "الشحن والتتبع"
+    ],
+    "steps": [
+      [
+        "إنشاء حساب أو تسجيل الدخول",
+        "افتح تسجيل Litbuy من قائمة موقعنا. أدخل البريد الإلكتروني وأنشئ كلمة مرور وأكدها، ثم اطلب رمز التحقق وأدخله. راجع الاتفاقيات المطلوبة واختر Register. إذا كان لديك حساب، اختر Log in.",
+        "قد يعرض حقل الدعوة E32JME4UQ عبر رابطنا. التسجيل ينشئ حسابًا فقط ولا يشتري منتجًا أو يحجزه."
+      ],
+      [
+        "فتح المنتج واختيار المواصفات",
+        "اختر فئة في QC Notes وافتح تفاصيل المنتج. تحقق من معرّف المنتج والصور المرجعية ثم انتقل إلى Litbuy. اختر Style وSize وQuantity قبل الضغط على Add to Cart أو Buy Now.",
+        "قارن المقاسات بقطعة مناسبة لديك وتأكد من تطابق المنتج في الصفحة الجديدة. السروال في الصورة يوضح أدوات التحكم وليس توصية شراء أو عرضًا بسعر ثابت."
+      ],
+      [
+        "مراجعة الطلب ودفع ثمن المنتجات",
+        "في Confirm Order أكمل العنوان المطلوب وراجع الخيار والكمية والتوصيل المحلي والخدمات الاختيارية. أرسل بعد التأكد. في Checkout Counter اختر وسيلة دفع متاحة وراجع المبلغ الكامل قبل Proceed to Pay.",
+        "هذا الدفع لشراء المنتجات. يُدفع الشحن الدولي للطرد لاحقًا. مجموع المحفوظات في QC Notes استرشادي؛ الرصيد والعمولات في الصورة أمثلة."
+      ],
+      [
+        "متابعة توصيل البائع إلى المستودع",
+        "افتح Orders في حساب Litbuy. يفتح صف المنتج التفاصيل، ويعرض Track Shipment التوصيل المحلي، ويتيح Contact Buyer التواصل مع وكيل الشراء. اقرأ الرسائل التي تتطلب تأكيدك.",
+        "قد يعني Shipped هنا أن البائع أرسل المنتج إلى المستودع، وليس أنه شُحن دوليًا. انتظر التخزين وصور الفحص الخاصة بمنتجك نفسه."
+      ],
+      [
+        "مراجعة صور فحص طلبك الفعلي",
+        "بعد التخزين افتح Warehouse. طابق المنتج واللون والمقاس والكمية ثم افتح QC Images. راجع الحالة الظاهرة والقياسات، واسأل عبر Contact Buyer عن الزوايا الناقصة أو الاختلافات قبل الشحن.",
+        "الصور المرجعية في هذا الموقع لا تحل محل فحص طلبك. اطلب الصور الإضافية أثناء وجود المنتج في المستودع وتحقق من سعرها وشروط الإرجاع قبل المتابعة."
+      ],
+      [
+        "اختيار المنتجات وإنشاء الطرد",
+        "حدد المنتجات المخزنة التي راجعتها في Warehouse وابدأ Create Parcel. أكد اسم المستلم والعنوان الكامل والرمز البريدي وبيانات الاتصال. راجع محتويات الطرد واحتياجات التغليف قبل المتابعة.",
+        "اجمع فقط المنتجات المناسبة للمسار المختار. يؤثر الوزن والأبعاد والمحتوى والوجهة في الخدمات المتاحة؛ جمع المنتجات لا يضمن شحنًا أرخص."
+      ],
+      [
+        "اختيار الشحن ودفع رسوم الطرد",
+        "في Create Parcel راجع التغليف والمسار وشروط دفع الضرائب والحماية الاختيارية. استخدم قسيمة مؤهلة إن توفرت. تحقق من المبلغ النهائي وشروط الخدمة قبل تأكيد الشحن الدولي ودفعه.",
+        "دفع المنتجات ودفع الطرد مرحلتان منفصلتان. الأسعار في الصور توضيحية؛ اعتمد عرض حسابك الحالي والقيود وأي تعديل بعد التغليف أو القياس النهائي."
+      ],
+      [
+        "تتبع التسليم والتأكيد بعد الاستلام",
+        "افتح الطرد المشحون لعرض التفاصيل والتتبع. استخدم أيقونة الدعم للاستفسار. عند وصوله افحص التغليف والعدد والخيارات والحالة الظاهرة قبل اختيار Confirm Receipt.",
+        "احتفظ بالصور والتغليف عند وجود نقص أو تلف وتواصل سريعًا مع دعم الطرد. قد يظهر رقم التتبع قبل أول مسح من الناقل؛ هذا الدليل لا يعد بتاريخ تسليم."
+      ]
+    ]
+  },
+  "he": {
+    "nav": "מדריך למתחילים",
+    "title": "ההזמנה הראשונה שלכם ב־Litbuy, צעד אחר צעד",
+    "intro": "בחרו קטגוריה ב־QC Notes, פתחו פרטי מוצר והמשיכו ל־Litbuy. שמונה שלבים עם תמונות מסבירים הרשמה, רכישה, בדיקה במחסן ומשלוח.",
+    "note": "צילומים אמיתיים של הרשמה ומוצר ב־Litbuy מ־13 באוקטובר 2026 ודוגמאות מהמדריך הרשמי. הכיתוב האנגלי בתמונות נשאר מקורי. מוצרים, מחירים ונתוני חשבון הם דוגמאות ולא ההזמנה שלכם. בדקו את הממשק והחיובים העדכניים.",
+    "open": "פתיחת המדריך המצולם",
+    "zoom": "הגדלת צילום המסך",
+    "source": "המדריך הרשמי של Litbuy",
+    "phases": [
+      "בחירה ורכישה",
+      "בדיקת QC במחסן",
+      "משלוח ומעקב"
+    ],
+    "steps": [
+      [
+        "יצירת חשבון או כניסה",
+        "פתחו את הרשמת Litbuy מהניווט שלנו. הזינו דוא״ל, צרו ואשרו סיסמה, בקשו קוד אימות והקלידו אותו. קראו את ההסכמים הנדרשים ובחרו Register. בעלי חשבון קיים יכולים לבחור Log in.",
+        "שדה ההזמנה עשוי להציג E32JME4UQ דרך הקישור שלנו. הרשמה יוצרת חשבון בלבד ואינה קונה או שומרת מלאי."
+      ],
+      [
+        "פתיחת מוצר ובחירת האפשרויות",
+        "בחרו קטגוריה ב־QC Notes ופתחו פרטי מוצר. בדקו מזהה ותמונות לעיון והמשיכו ל־Litbuy. בחרו Style, Size ו־Quantity לפני Add to Cart או Buy Now.",
+        "השוו מידות לבגד שמתאים לכם וודאו שהמוצר בעמוד היעד תואם. המכנסיים בתמונה מדגימים את הפקדים ואינם המלצה או הצעת מחיר קבועה."
+      ],
+      [
+        "בדיקת ההזמנה ותשלום על המוצרים",
+        "ב־Confirm Order מלאו את הכתובת הנדרשת ובדקו אפשרות, כמות, משלוח מקומי ושירותים לבחירה. שלחו רק לאחר הבדיקה. ב־Checkout Counter בחרו אמצעי תשלום זמין ובדקו את הסכום המלא לפני Proceed to Pay.",
+        "התשלום הזה קונה את המוצרים. המשלוח הבינלאומי של החבילה משולם בהמשך. סכום השמורים ב־QC Notes הוא משוער; היתרה והעמלות בתמונה הן דוגמאות."
+      ],
+      [
+        "מעקב אחר משלוח המוכר למחסן",
+        "פתחו Orders בחשבון Litbuy. שורת המוצר פותחת פרטים, Track Shipment מציג משלוח מקומי ו־Contact Buyer מאפשר לפנות לנציג הרכישה. קראו הודעות שמבקשות אישור.",
+        "בשלב הזה Shipped עשוי לציין שהמוכר שלח למחסן, ולא משלוח בינלאומי. המתינו לאחסון ולתמונות QC של הפריט האישי שלכם."
+      ],
+      [
+        "בדיקת תמונות QC של ההזמנה שלכם",
+        "לאחר האחסון פתחו Warehouse. התאימו מוצר, צבע, מידה וכמות ופתחו QC Images. בדקו מצב גלוי ומידות; בקשו זוויות חסרות או בררו הבדלים דרך Contact Buyer לפני המשלוח.",
+        "תמונות העיון באתר אינן תחליף לבדיקת ההזמנה שלכם. בקשו תמונות נוספות כשהפריט במחסן ובדקו עלות ותנאי החזרה לפני שממשיכים."
+      ],
+      [
+        "בחירת מוצרים ויצירת חבילה",
+        "סמנו ב־Warehouse את המוצרים המאוחסנים שבדקתם והתחילו Create Parcel. אשרו שם נמען, כתובת מלאה, מיקוד ופרטי קשר. בדקו את תכולת החבילה ואת דרישות האריזה לפני המשך.",
+        "אחדו רק מוצרים שמתאימים למסלול הנבחר. משקל, מידות, תוכן ויעד משפיעים על השירותים. איחוד אינו מבטיח משלוח זול יותר."
+      ],
+      [
+        "בחירת משלוח ותשלום על החבילה",
+        "ב־Create Parcel בדקו אריזה, מסלול, תנאי תשלום מסים והגנה לבחירה. הפעילו קופון מתאים אם קיים. בדקו סכום סופי ותנאי השירות לפני אישור ותשלום על המשלוח הבינלאומי.",
+        "תשלום המוצרים ותשלום החבילה נפרדים. המחירים בתמונות הם להמחשה; הסתמכו על ההצעה העדכנית בחשבון, המגבלות וכל התאמה לאחר האריזה או המדידה הסופית."
+      ],
+      [
+        "מעקב ואישור לאחר קבלה",
+        "פתחו את החבילה שנשלחה לפרטים ומעקב. השתמשו בסמל התמיכה לשאלות. בהגעה בדקו אריזה, כמות, אפשרויות ומצב גלוי לפני בחירת Confirm Receipt.",
+        "במקרה של חוסר או נזק שמרו תמונות ואריזה ופנו במהירות לתמיכה בחבילה. מספר מעקב יכול להופיע לפני הסריקה הראשונה. המדריך אינו מבטיח תאריך מסירה."
+      ]
+    ]
+  }
+}
