@@ -1,0 +1,10 @@
+{
+  "name": "joyagoofindsatlas-com",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/build-pages.mjs",
+    "validate": "node scripts/validate-pages.mjs",
+    "build:pages": "node scripts/build-pages.mjs"
+  }
+}
