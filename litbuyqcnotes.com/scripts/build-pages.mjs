@@ -18,3 +18,5 @@ console.log('Cloudflare Pages:',Object.keys(assets).length,'original static asse
 import {writeCrawlerAssets} from './crawler-assets.mjs';
 
 await writeCrawlerAssets({out:'dist',worker:'dist/_worker.js',origin:'https://litbuyqcnotes.com'});
+
+await import('./prepare-indexnow.mjs');

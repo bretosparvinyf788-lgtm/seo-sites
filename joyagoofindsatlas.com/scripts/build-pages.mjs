@@ -7,3 +7,5 @@ console.log('Cloudflare Pages build ready: dist/_worker.js');
 import {writeCrawlerAssets} from './crawler-assets.mjs';
 
 await writeCrawlerAssets({out:'dist',worker:'dist/_worker.js',origin:'https://joyagoofindsatlas.com'});
+
+await import('./prepare-indexnow.mjs');

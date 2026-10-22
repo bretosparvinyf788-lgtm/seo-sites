@@ -1,0 +1,12 @@
+import fs from 'node:fs';
+import path from 'node:path';
+import {fileURLToPath} from 'node:url';
+const root=fileURLToPath(new URL('../',import.meta.url));
+const {origin,key,output}=JSON.parse(fs.readFileSync(path.join(root,'indexnow.json'),'utf8'));
+if(!/^https:\/\/[^/]+$/.test(origin)||!/^[a-f0-9]{32}$/.test(key))throw new Error('Invalid IndexNow configuration');
+const out=path.join(root,output),route='/'+key+'.txt';
+const routes=JSON.parse(fs.readFileSync(path.join(out,'_routes.json'),'utf8'));
+routes.exclude=[...new Set([...routes.exclude,route])];
+fs.writeFileSync(path.join(out,key+'.txt'),key+'\n');
+fs.writeFileSync(path.join(out,'_routes.json'),JSON.stringify(routes,null,2)+'\n');
+console.log('Prepared static IndexNow ownership file for '+new URL(origin).hostname);

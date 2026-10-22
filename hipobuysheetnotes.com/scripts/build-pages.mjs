@@ -9,3 +9,5 @@ fs.writeFileSync('dist/_worker.js',homeFallbackSource(page,'Hipobuy Sheet Notes'
 fs.writeFileSync('dist/_routes.json',JSON.stringify({version:1,include:['/*'],exclude:[]}));
 await writeCrawlerAssets({out:'dist',worker:'dist/_worker.js',origin:'https://hipobuysheetnotes.com'});
 console.log('Built production Worker and independent static crawler assets.');
+
+await import('./prepare-indexnow.mjs');

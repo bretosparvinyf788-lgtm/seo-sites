@@ -1,1 +1,12 @@
-{"name":"hipobuyqcnotes-com","private":true,"type":"module","scripts":{"build":"node scripts/build.mjs"},"engines":{"node":">=22"}}
+{
+  "name": "hipobuyqcnotes-com",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "indexnow": "node scripts/submit-indexnow.mjs"
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}

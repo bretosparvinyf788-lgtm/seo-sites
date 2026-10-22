@@ -12,3 +12,5 @@ for(const root of ['app','lib','components','public','vendor','worker.ts','vite.
 await writeFile('cloudflare-output/source-hashes.json',JSON.stringify(hashes,null,2));
 async function hashFiles(name){let entries;try{entries=await readdir(name,{withFileTypes:true});}catch{hashes[name]=createHash('sha256').update(await readFile(name)).digest('hex');return;}for(const entry of entries){if(entry.isDirectory())await hashFiles(path.join(name,entry.name));else hashes[path.join(name,entry.name)]=createHash('sha256').update(await readFile(path.join(name,entry.name))).digest('hex');}}
 console.log('Prepared Pages advanced-mode Worker and static assets.');
+
+await import('./prepare-indexnow.mjs');
