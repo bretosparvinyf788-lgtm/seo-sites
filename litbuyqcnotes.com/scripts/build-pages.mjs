@@ -15,3 +15,6 @@ code=code.slice(0,begin)+JSON.stringify(metadata)+code.slice(end);
 fs.writeFileSync(out+'/_worker.js',code);fs.writeFileSync(out+'/_headers',headers);
 fs.writeFileSync(out+'/_routes.json',JSON.stringify({version:1,include:['/*'],exclude:['/cover/*','/reference/*','/guide-images/*','/logo.png','/favicon.png']}));
 console.log('Cloudflare Pages:',Object.keys(assets).length,'original static assets; worker',Buffer.byteLength(code),'bytes.');
+import {writeCrawlerAssets} from './crawler-assets.mjs';
+
+await writeCrawlerAssets({out:'dist',worker:'dist/_worker.js',origin:'https://litbuyqcnotes.com'});

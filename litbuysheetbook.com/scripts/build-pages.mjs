@@ -10,3 +10,6 @@ fs.copyFileSync('fixtures/favicon.png','dist/favicon.png');
 fs.writeFileSync('dist/_routes.json',JSON.stringify({version:1,include:['/*'],exclude:[]}));
 execFileSync(process.execPath,['scripts/validate-artifact.mjs'],{stdio:'inherit'});
 console.log('Cloudflare Pages build complete: dist/_worker.js');
+import {writeCrawlerAssets} from './crawler-assets.mjs';
+
+await writeCrawlerAssets({out:'dist',worker:'dist/_worker.js',origin:'https://litbuysheetbook.com'});

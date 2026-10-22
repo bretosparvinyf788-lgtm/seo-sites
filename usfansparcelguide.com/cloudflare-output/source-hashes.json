@@ -18,7 +18,7 @@
   "lib/beginner-actions.ts": "24b7b373a67c0f4011192b72616e09f2f8bae8e468784bede56bf538bb8fe031",
   "lib/beginner-completion.ts": "1a9926206186804b8cf5567d776f55ee5a11b50fbcf25e986a5b12daf2e153e9",
   "lib/beginner.ts": "f1b11273cf4f9a18ffcb6d3dab007aac1eea4feaf9ab6953ac76505ed34dca52",
-  "lib/catalog.ts": "092fde25c610ba036a9fc23b09d4760b7ef1a5775992b8ed8daabcadb74c2565",
+  "lib/catalog.ts": "65c8c9082b0f2426722b8dffaea4ecedcd76926165ce1f48dde91fa28cb2dd16",
   "lib/content.ts": "ee7d87f20fff64adf2242b79e39b8996c8b826056066f53fae87128c3356cdf1",
   "lib/currencies.ts": "624464cae853f6c2abac4e1bdf3c757a73cafb065cd3c06685afec813ae929e6",
   "lib/exchange.ts": "0eee277fc0f88fffed92fc026374c3a842162adbf0b00c9ac683e2540f67b09d",

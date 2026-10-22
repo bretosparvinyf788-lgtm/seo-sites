@@ -4,3 +4,6 @@ fs.rmSync('dist',{recursive:true,force:true});fs.mkdirSync('dist',{recursive:tru
 fs.copyFileSync('worker/index.js','dist/_worker.js');
 fs.writeFileSync('dist/_routes.json',JSON.stringify({version:1,include:['/*'],exclude:[]}));
 console.log('Cloudflare Pages build ready: dist/_worker.js');
+import {writeCrawlerAssets} from './crawler-assets.mjs';
+
+await writeCrawlerAssets({out:'dist',worker:'dist/_worker.js',origin:'https://joyagoofindsatlas.com'});

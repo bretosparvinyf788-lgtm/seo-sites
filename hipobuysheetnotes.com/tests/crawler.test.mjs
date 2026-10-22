@@ -1,0 +1,31 @@
+import assert from 'node:assert/strict';
+import fs from 'node:fs';
+const app=(await import('data:text/javascript;base64,'+fs.readFileSync('dist/_worker.js').toString('base64'))).default;
+const call=path=>app.fetch(new Request('https://hipobuysheetnotes.com'+path));
+let calls=0;
+globalThis.fetch=async()=>{calls++;throw new Error('Upstream offline');};
+for(const path of ['/robots.txt','/sitemap.xml','/sitemaps/pages.xml'])assert.equal((await call(path)).status,200,path);
+assert.equal(calls,0,'Core crawl files must not depend on the catalogue');
+const robots=await(await call('/robots.txt')).text();
+assert.ok(robots.includes('Sitemap: https://hipobuysheetnotes.com/sitemaps/catalog.xml'));
+const offline=await call('/sitemaps/catalog.xml');
+assert.equal(offline.status,503);assert.equal(offline.headers.get('cache-control'),'no-store');
+globalThis.fetch=async target=>{
+  const url=new URL(target);
+  assert.equal(url.searchParams.get('c'),'Lists');assert.equal(url.searchParams.get('tid'),'1');
+  const id=url.searchParams.get('page')==='2'?'102':'101';
+  return new Response('<p>共 <strong>2</strong> 页 <strong>2</strong> 条</p><a href="/?aid='+id+'" class="product-card"><img src="/uploads/'+id+'.webp"><h3 class="product-title">Item '+id+'</h3><span class="price">$10</span></a>');
+};
+const index=await(await call('/sitemaps/catalog.xml')).text();
+assert.equal((index.match(/<sitemap>/g)||[]).length,2);
+assert.ok((await(await call('/sitemaps/products-1.xml')).text()).includes('/product/101'));
+assert.ok((await(await call('/sitemaps/products-2.xml')).text()).includes('/product/102'));
+assert.equal((await call('/sitemaps/products-3.xml')).status,404);
+const page=await(await call('/products?lang=fr&page=3&currency=EUR')).text();
+assert.ok(page.includes('href="https://hipobuysheetnotes.com/products?lang=fr&amp;page=3"'));
+assert.equal((await call('/products?q=shoes')).headers.get('x-robots-tag'),'noindex,follow');
+const routes=JSON.parse(fs.readFileSync('dist/_routes.json','utf8'));
+assert.ok(['/robots.txt','/sitemap.xml'].every(path=>routes.exclude.includes(path)));
+console.log('PASS: offline crawler files, complete catalogue pagination, no cached failure, canonical pagination and search exclusion.');
+
+assert.ok((await(await call('/')).text()).includes('<h1>Hipobuy Spreadsheet</h1>'),'Homepage must include crawlable content before JavaScript');

@@ -61,18 +61,37 @@ def guide_picture(l,i):
    visual+='<div class="guide-site-example">'+identity+'<div class="guide-example-qc">'+''.join(f'<a href="{im}" target="_blank" rel="noopener"><img src="{im}" alt="{e(name(p,l))} — QC {j+1}" loading="lazy"></a>' for j,im in enumerate(p['qc_images'][:3]))+'</div><p>'+e(w['qcExample'])+'</p></div>'
  return f'<figure class="guide-figure">{visual}<figcaption><p>{e(b["steps"][i][0])}</p><small>{e(credit)}</small></figcaption></figure>'
 def beginner(l):
- b=B[l];pay=b['payments']
- p=next(x for x in P if x.get('qc_images'))
- actions=[(url(l,'products/'+p['id']+'/'),I[l]['site'][4],False),(url(l,'products/'+p['id']+'/'),I[l]['site'][4],False),(reg,b['register'],True)]
- rail='<aside class="beginner-index" aria-label="'+e(b['toc'])+'"><p>'+e(b['toc'])+'</p><ol>'+''.join(f'<li><a href="#step-{i+1}"><span>{i+1:02}</span>{e(v[0])}</a></li>' for i,v in enumerate(b['steps']))+'</ol></aside>'
+ b=B[l];pay=b['payments'];w=I[l];t=C[l];a=w['account']
+ p=next(x for x in P if x.get('qc_images'));detail=url(l,'products/'+p['id']+'/')
+ refs='<figure class="guide-figure"><div class="guide-example-qc">'+''.join(f'<a href="{im}" target="_blank" rel="noopener"><img src="{im}" alt="{e(name(p,l))} — {j+1}" loading="lazy"></a>' for j,im in enumerate(p['qc_images'][:3]))+'</div><figcaption>'+e(w['qcExample'])+'</figcaption></figure>'
+ def shot(file,title,labels):
+  return '<figure class="guide-figure">'+guide_screen(l,file,list(enumerate(labels,1)),[],title)+'<figcaption>'+e(w['realCapture'])+'</figcaption></figure>'
+ original=b['steps']
+ entries=[
+  (*original[0],guide_picture(l,0),(detail,w['site'][4],False)),
+  (t['qc'],w['siteSteps'][1],original[1][2],refs,None),
+  (t['buy'],w['siteSteps'][2].format(buy=t['buy']),original[1][2],shot('shorts-options.jpg',w['screenTitles'][0],[w['siteSteps'][2].format(buy=t['buy'])]),(detail,w['site'][4],False)),
+  (w['loginTitle'],' '.join(w['loginSteps']),original[2][2],shot('login.jpg',w['loginTitle'],w['loginSteps']),(reg,b['register'],True)),
+  (w['screenTitles'][0],w['clickSteps'][0],original[1][2],shot('shorts-options.jpg',w['screenTitles'][0],[w['clickSteps'][0]]),None),
+  (w['screenTitles'][1],' '.join(w['clickSteps'][1:]),original[1][2],shot('shorts-quantity.jpg',w['screenTitles'][1],w['clickSteps'][1:]),None),
+  (a['confirmTitle'],' '.join(a['confirm']),original[2][2],shot('shorts-confirm.jpg',a['confirmTitle'],a['confirm']),None),
+  (*original[2],shot('shorts-confirm.jpg',a['confirmTitle'],a['confirm']),None),
+ ]+[(v[0],v[1],v[2],guide_picture(l,i),None) for i,v in enumerate(original) if i>=3]
+ assert len(entries)==15
+ rail='<aside class="beginner-index" aria-label="'+e(b['toc'])+'"><p>'+e(b['toc'])+'</p><ol>'+''.join(f'<li><a href="#step-{i+1}"><span>{i+1:02}</span>{e(v[0])}</a></li>' for i,v in enumerate(entries))+'</ol></aside>'
  steps=''
- for i,v in enumerate(b['steps']):
-  action=''
-  if i<len(actions):
-   href,label,external=actions[i]; attrs=' target="_blank" rel="sponsored noopener"' if external else ''
-   action=f'<a class="secondary" href="{href}"{attrs}>{e(label)}</a>'
-  steps+=f'<section class="beginner-step" id="step-{i+1}"><div class="beginner-step-top"><span class="beginner-number">{i+1:02}</span><span class="eyebrow">{e(b["onSite"] if i==0 else b["onAgent"])}</span></div><h2>{e(v[0])}</h2><p>{e(v[1])}</p>{guide_picture(l,i)}<div class="beginner-check"><h3>{e(b["check"])}</h3><p>{e(v[2])}</p></div>{action}</section>'
+ for i,(title,body,check,visual,action) in enumerate(entries):
+  button=''
+  if action:
+   href,label,external=action;attrs=' target="_blank" rel="sponsored noopener"' if external else ''
+   button=f'<a class="secondary" href="{href}"{attrs}>{e(label)}</a>'
+  nav='<nav class="guide-step-nav" aria-label="'+e(b['toc'])+'">'
+  if i>0:nav+=f'<a href="#step-{i}">← {i:02} · {e(entries[i-1][0])}</a>'
+  if i+1<len(entries):nav+=f'<a href="#step-{i+2}">{i+2:02} · {e(entries[i+1][0])} →</a>'
+  nav+='</nav>'
+  steps+=f'<section class="beginner-step" id="step-{i+1}"><div class="beginner-step-top"><span class="beginner-number">{i+1:02}</span><span class="eyebrow">{e(b["onSite"] if i<3 else b["onAgent"])}</span></div><h2>{e(title)}</h2><p>{e(body)}</p>{visual}<div class="beginner-check"><h3>{e(b["check"])}</h3><p>{e(check)}</p></div>{button}{nav}</section>'
  return f'<section class="section beginner-heading"><span class="eyebrow">FINDSBOOK / USFANS</span><h1>{e(b["title"])}</h1><p>{e(b["intro"])}</p></section><section class="section beginner-budget"><h2>{e(pay[0])}</h2><div class="beginner-payments"><div><span>01</span><h3>{e(pay[1])}</h3><p>{e(pay[2])}</p></div><div><span>02</span><h3>{e(pay[3])}</h3><p>{e(pay[4])}</p></div></div></section><div class="section beginner-layout">'+rail+'<div class="beginner-steps">'+steps+f'<div class="beginner-end"><p>{e(b["note"])}</p><div><a class="text-link" href="{url(l,"faq/")}">{e(b["faq"])}</a></div></div></div></div>'
+
 def categories(t,l):
  return '<div class="categories">'+''.join(f'<a href="{url(l,"categories/"+c+"/")}"><img src="{next(p["image"] for p in P if p["category"]==c)}" alt="" loading="lazy" width="180" height="180"><span>{t["cats"][i]}</span></a>' for i,c in enumerate(cats))+'</div>'
 def category_advice(t,l,cat):

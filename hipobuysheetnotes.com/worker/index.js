@@ -1,6 +1,7 @@
 const ORIGIN='https://kakobuymake.com';
 const PAGE=__PAGE__;
 const SITE='https://hipobuysheetnotes.com';
+const PUBLIC_LANGUAGES=new Set(["en", "en-GB", "en-AU", "en-NZ", "en-CA", "zh", "fr", "de", "de-CH", "it", "pl", "pt", "pt-BR", "es", "es-MX", "da", "no", "sv", "ko"]);
 function decode(s=''){return s.replace(/&(?:amp|quot|#39|lt|gt|nbsp);|&#(?:x[0-9a-f]+|\d+);/gi,m=>{const named={'&amp;':'&','&quot;':'"','&#39;':"'",'&lt;':'<','&gt;':'>','&nbsp;':' '};if(named[m.toLowerCase()])return named[m.toLowerCase()];const n=m.startsWith('&#x')?parseInt(m.slice(3,-1),16):parseInt(m.slice(2,-1),10);return Number.isFinite(n)?String.fromCodePoint(n):m})}
 function text(s=''){return decode(s.replace(/<[^>]*>/g,'').trim())}
 function capture(s,re){return s.match(re)?.[1]||''}
@@ -20,19 +21,20 @@ const xmlEscape=value=>String(value).replace(/[<>&"']/g,ch=>({'<':'&lt;','>':'&g
 const xmlResponse=body=>new Response('<?xml version="1.0" encoding="UTF-8"?>\n'+body,{headers:{'content-type':'application/xml; charset=utf-8','cache-control':'public, max-age=3600','x-content-type-options':'nosniff'}});
 const urlset=paths=>xmlResponse('<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'+[...new Set(paths)].map(path=>'<url><loc>'+xmlEscape(SITE+path)+'</loc></url>').join('')+'</urlset>');
 export default {async fetch(request){const u=new URL(request.url);
-if(u.pathname==='/robots.txt')return new Response('User-agent: *\nAllow: /\nDisallow: /api/\nSitemap: '+SITE+'/sitemap.xml\n',{headers:{'content-type':'text/plain; charset=utf-8','cache-control':'public, max-age=3600'}});
-if(u.pathname==='/sitemap.xml'||u.pathname==='/sitemaps/pages.xml'||/^\/sitemaps\/products-[1-9]\d{0,2}\.xml$/.test(u.pathname)){
+if(u.pathname==='/robots.txt')return new Response('User-agent: *\nAllow: /\nDisallow: /api/\nSitemap: '+SITE+'/sitemap.xml\nSitemap: '+SITE+'/sitemaps/catalog.xml\n',{headers:{'content-type':'text/plain; charset=utf-8','cache-control':'public, max-age=3600'}});
+// Core routes stay crawlable even when the live product source is unavailable.
+if(u.pathname==='/sitemap.xml'||u.pathname==='/sitemaps/pages.xml')return urlset(['/', '/products','/categories',...Array.from({length:10},(_,i)=>'/category/'+(i+2))]);
+if(u.pathname==='/sitemaps/catalog.xml'||/^\/sitemaps\/products-[1-9]\d{0,2}\.xml$/.test(u.pathname)){
   const match=u.pathname.match(/products-(\d+)\.xml$/),page=match?Number(match[1]):1;
-  const target=new URL(ORIGIN);if(page>1)target.searchParams.set('page',String(page));
+  const target=new URL(ORIGIN);target.searchParams.set('m','home');target.searchParams.set('c','Lists');target.searchParams.set('a','index');target.searchParams.set('tid','1');if(page>1)target.searchParams.set('page',String(page));
   try{
     const html=await source(target),info=pagination(html);
-    if(u.pathname==='/sitemap.xml')return xmlResponse('<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'+['/sitemaps/pages.xml',...Array.from({length:Math.max(1,Math.min(info.totalPages||1,999))},(_,i)=>'/sitemaps/products-'+(i+1)+'.xml')].map(path=>'<sitemap><loc>'+SITE+path+'</loc></sitemap>').join('')+'</sitemapindex>');
-    if(u.pathname==='/sitemaps/pages.xml')return urlset(['/', '/products','/categories',...categories(html).map(cat=>'/category/'+cat.id)]);
+    if(u.pathname==='/sitemaps/catalog.xml')return xmlResponse('<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'+Array.from({length:Math.max(1,Math.min(info.totalPages||1,999))},(_,i)=>'/sitemaps/products-'+(i+1)+'.xml').map(path=>'<sitemap><loc>'+SITE+path+'</loc></sitemap>').join('')+'</sitemapindex>');
     if(info.totalPages&&page>info.totalPages)return new Response('Not found',{status:404});
     return urlset(products(html).map(item=>'/product/'+item.id));
   }catch(e){console.error('sitemap upstream:',e?.message);return new Response('Sitemap source temporarily unavailable',{status:503,headers:{'retry-after':'300','cache-control':'no-store'}})}
 }
-if(['/', '/products', '/categories'].includes(u.pathname)||/^\/category\/[1-9]\d{0,2}$/.test(u.pathname)||/^\/product\/[1-9]\d{0,9}$/.test(u.pathname)){return new Response(PAGE.replace("__CANONICAL_URL__",SITE+u.pathname),{headers:{'content-type':'text/html; charset=utf-8','cache-control':'no-store'}})}
+if(['/', '/products', '/categories'].includes(u.pathname)||/^\/category\/[1-9]\d{0,2}$/.test(u.pathname)||/^\/product\/[1-9]\d{0,9}$/.test(u.pathname)){const canonical=new URL(SITE+u.pathname);const lang=u.searchParams.get('lang');if(PUBLIC_LANGUAGES.has(lang)&&lang!=='en')canonical.searchParams.set('lang',lang);const page=Number(u.searchParams.get('page'));if(Number.isSafeInteger(page)&&page>1)canonical.searchParams.set('page',String(page));const headers={'content-type':'text/html; charset=utf-8','cache-control':'no-store'};if(u.searchParams.get('q')||u.hostname!=='hipobuysheetnotes.com')headers['x-robots-tag']='noindex,follow';return new Response((u.pathname==='/'?renderHomeFallback(PAGE,lang):PAGE).replace("__CANONICAL_URL__",xmlEscape(canonical.href)),{headers})}
 if(u.pathname==='/api/rate'){
   const currency=u.searchParams.get('currency')||'USD';
   if(!CURRENCIES.has(currency))return json({error:'Unsupported currency'},400);

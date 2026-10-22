@@ -1,0 +1,10 @@
+import fs from 'node:fs';
+import assert from 'node:assert/strict';
+const source=fs.readFileSync('lib/catalog.ts','utf8');
+const functionText=source.match(/export function inferCategory\(title:string\) \{[^\n]+\}/)[0].replace('export ','').replace('title:string','title');
+const inferCategory=Function(functionText+';return inferCategory;')();
+for(const [title,expected] of [['REVENGE SHORT',6],['REVENGE SHORTS',6],['Represent shorts',6],['平角内裤',6],['牛仔裤',6],['Short sleeve T-Shirt',3],['SHORT-SLEEVE T-Shirt',3],['Wallet',8],['Cargo shorts 套装',4]])assert.equal(inferCategory(title),expected,title);
+const bundle=fs.readFileSync('cloudflare-output/_worker.js/_next/static/page-BAOmqyF6.js','utf8');
+const pattern=String.raw`trousers|\bshorts?\b(?![ -]?sleeve)|jeans`;
+assert.equal(bundle.split(pattern).length-1,1,'The deployed category rule must match the source');
+console.log('PASS: singular SHORT and plural shorts, underwear, jeans, short-sleeve exclusion, matching source and Pages bundle.');

@@ -25,5 +25,5 @@ else if(path==='/faq'){title=t.faq;body=pagehead(l,t.faq)+faq(l);schema=[faqSche
 else if(path==='/saved'){title=t.saved;body=pagehead(l,t.saved,t.savedNote)+`<div id="saved-grid" class="grid"></div><p class="empty-saved">${t.savedEmpty}</p>`}
 else status=404;
 if(!body){title=t.notFound;body=pagehead(l,title)+`<div class="catalog-end"><a class="btn" href="${link('/',l)}">${t.home} ↗</a></div>`}
-return new Response(request.method==='HEAD'?null:layout(body,l,path,title,origin,products,schema),{status,headers:{'content-type':'text/html; charset=utf-8','cache-control':'private, no-cache','x-robots-tag':'noindex, nofollow','x-content-type-options':'nosniff','referrer-policy':'strict-origin-when-cross-origin'}});
+return new Response(request.method==='HEAD'?null:layout(body,l,path,title,origin,products,schema),{status,headers:{'content-type':'text/html; charset=utf-8','cache-control':'private, no-cache','x-robots-tag':isPublicOrigin(origin)&&status===200&&path!=='/saved'?'index, follow':'noindex, follow','x-content-type-options':'nosniff','referrer-policy':'strict-origin-when-cross-origin'}});
 }};

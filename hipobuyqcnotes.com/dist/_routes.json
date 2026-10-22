@@ -1,1 +1,10 @@
-{"version":1,"include":["/*"],"exclude":[]}
+{
+  "version": 1,
+  "include": [
+    "/*"
+  ],
+  "exclude": [
+    "/robots.txt",
+    "/sitemap.xml"
+  ]
+}
