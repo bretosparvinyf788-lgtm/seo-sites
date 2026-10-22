@@ -12,10 +12,16 @@ export async function writeCrawlerAssets({out,worker,origin}) {
     files.push([path,body]);
   }
   for(const [path,body] of files)fs.writeFileSync(out+path,body);
+  // The catalog index must not wait for the upstream store on every crawler request.
+  const catalog=fs.readFileSync(new URL('../catalog-sitemap.xml',import.meta.url),'utf8');
+  if(!catalog.includes('<sitemapindex')||!catalog.includes(origin+'/sitemaps/products-'))throw new Error('Invalid catalog sitemap snapshot');
+  fs.mkdirSync(out+'/sitemaps',{recursive:true});
+  fs.writeFileSync(out+'/sitemaps/catalog.xml',catalog);
+  paths.push('/sitemaps/catalog.xml');
   const routeFile=out+'/_routes.json',routes=JSON.parse(fs.readFileSync(routeFile,'utf8'));
   routes.exclude=[...new Set([...routes.exclude,...paths])];
   fs.writeFileSync(routeFile,JSON.stringify(routes,null,2)+'\n');
   const headerFile=out+'/_headers';
   const headers=fs.existsSync(headerFile)?fs.readFileSync(headerFile,'utf8'):'';
-  fs.writeFileSync(headerFile,headers.replace(/\n?\/(?:robots\.txt|sitemap\.xml)\n(?:[ \t]+[^\n]*\n)*/g,'')+'\n/robots.txt\n  Content-Type: text/plain; charset=utf-8\n  Cache-Control: public, max-age=300\n/sitemap.xml\n  Content-Type: application/xml; charset=utf-8\n  Cache-Control: public, max-age=300\n');
+  fs.writeFileSync(headerFile,headers.replace(/\n?\/(?:robots\.txt|sitemap\.xml|sitemaps\/catalog\.xml)\n(?:[ \t]+[^\n]*\n)*/g,'')+'\n/robots.txt\n  Content-Type: text/plain; charset=utf-8\n  Cache-Control: public, max-age=300\n/sitemap.xml\n  Content-Type: application/xml; charset=utf-8\n  Cache-Control: public, max-age=300\n/sitemaps/catalog.xml\n  Content-Type: application/xml; charset=utf-8\n  Cache-Control: public, max-age=300\n');
 }
