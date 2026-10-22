@@ -37,3 +37,5 @@ console.log('Built Cloudflare Pages advanced-mode Worker.');
 import {writeCrawlerAssets} from './crawler-assets.mjs';
 
 await writeCrawlerAssets({out:'dist',worker:'dist/_worker.js',origin:'https://hipobuyqcnotes.com'});
+
+await import('./prepare-indexnow.mjs');

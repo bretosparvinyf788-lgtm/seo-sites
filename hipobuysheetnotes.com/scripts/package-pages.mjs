@@ -9,3 +9,5 @@ await mkdir('dist', { recursive: true });
 await writeFile('dist/_worker.js', handler);
 await writeFile('dist/_routes.json', JSON.stringify({version:1,include:['/*'],exclude:[]},null,2)+'\n');
 console.log('Cloudflare Pages ready: dist/_worker.js');
+
+await import('./prepare-indexnow.mjs');

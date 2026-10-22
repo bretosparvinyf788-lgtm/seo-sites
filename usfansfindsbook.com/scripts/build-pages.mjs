@@ -9,3 +9,5 @@ worker=worker.replace('const url=new URL(request.url);',`const url=new URL(reque
 await writeFile('dist/client/_worker.js',worker);
 await writeFile('dist/client/_routes.json',JSON.stringify({version:1,include:['/*'],exclude:['/robots.txt','/sitemap.xml']}));
 
+
+await import('./prepare-indexnow.mjs');

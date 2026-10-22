@@ -1,0 +1,10 @@
+import {writeFile} from 'node:fs/promises';
+const source='https://kakobuymake.com/?m=home&c=Lists&a=index&tid=1';
+const response=await fetch(source,{headers:{'user-agent':'Mozilla/5.0 (compatible; SheetNotes/1.0)'},signal:AbortSignal.timeout(25000)});
+if(!response.ok)throw new Error('Catalog source failed: '+response.status);
+const html=await response.text();
+const pages=Number(html.match(/共\s*<strong>(\d+)<\/strong>\s*页\s*<strong>\d+<\/strong>\s*条/i)?.[1]);
+if(!Number.isInteger(pages)||pages<1||pages>999)throw new Error('Catalog pagination was not verified; existing sitemap preserved');
+const maps=Array.from({length:pages},(_,i)=>'<sitemap><loc>https://hipobuysheetnotes.com/sitemaps/products-'+(i+1)+'.xml</loc></sitemap>').join('');
+await writeFile(new URL('../catalog-sitemap.xml',import.meta.url),'<?xml version="1.0" encoding="UTF-8"?>\n<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'+maps+'</sitemapindex>\n');
+console.log('Refreshed catalog sitemap from the main site: '+pages+' product sitemap pages');
