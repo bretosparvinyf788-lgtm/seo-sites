@@ -1,0 +1,42 @@
+{
+  "registration.jpg": {
+    "width": 1420,
+    "height": 480,
+    "type": "image/jpeg"
+  },
+  "catalog.jpg": {
+    "width": 1354,
+    "height": 480,
+    "type": "image/jpeg"
+  },
+  "detail.jpg": {
+    "width": 1354,
+    "height": 780,
+    "type": "image/jpeg"
+  },
+  "currentoptions.jpg": {
+    "width": 784,
+    "height": 330,
+    "type": "image/jpeg"
+  },
+  "payment.jpg": {
+    "width": 1444,
+    "height": 675,
+    "type": "image/jpeg"
+  },
+  "warehouse.jpg": {
+    "width": 1444,
+    "height": 630,
+    "type": "image/jpeg"
+  },
+  "estimation.jpg": {
+    "width": 1444,
+    "height": 400,
+    "type": "image/jpeg"
+  },
+  "tracking.jpg": {
+    "width": 1444,
+    "height": 630,
+    "type": "image/jpeg"
+  }
+}

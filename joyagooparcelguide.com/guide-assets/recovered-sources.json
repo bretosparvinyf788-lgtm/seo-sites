@@ -1,0 +1,50 @@
+[
+  {
+    "file": "registration.jpg",
+    "status": "200",
+    "bytes": 37812,
+    "source": "https://joyagoofindsatlas.com/guide/screens/registration.jpg?v=6177c5e94058"
+  },
+  {
+    "file": "catalog.jpg",
+    "status": "200",
+    "bytes": 92072,
+    "source": "https://joyagoofindsatlas.com/guide/screens/catalog.jpg?v=6177c5e94058"
+  },
+  {
+    "file": "detail.jpg",
+    "status": "200",
+    "bytes": 92072,
+    "source": "https://joyagoofindsatlas.com/guide/screens/detail.jpg?v=6177c5e94058"
+  },
+  {
+    "file": "currentoptions.jpg",
+    "status": "200",
+    "bytes": 17014,
+    "source": "https://joyagoofindsatlas.com/guide/screens/currentoptions.jpg?v=6177c5e94058"
+  },
+  {
+    "file": "payment.jpg",
+    "status": "200",
+    "bytes": 31574,
+    "source": "https://joyagoofindsatlas.com/guide/screens/payment.jpg?v=6177c5e94058"
+  },
+  {
+    "file": "warehouse.jpg",
+    "status": "200",
+    "bytes": 24345,
+    "source": "https://joyagoofindsatlas.com/guide/screens/warehouse.jpg?v=6177c5e94058"
+  },
+  {
+    "file": "estimation.jpg",
+    "status": "200",
+    "bytes": 31800,
+    "source": "https://joyagoofindsatlas.com/guide/screens/estimation.jpg?v=6177c5e94058"
+  },
+  {
+    "file": "tracking.jpg",
+    "status": "200",
+    "bytes": 23722,
+    "source": "https://joyagoofindsatlas.com/guide/screens/tracking.jpg?v=6177c5e94058"
+  }
+]

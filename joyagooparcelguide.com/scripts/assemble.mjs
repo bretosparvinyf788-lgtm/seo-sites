@@ -1,0 +1,10 @@
+import fs from 'node:fs';
+import {createHash} from 'node:crypto';
+const read=f=>fs.readFileSync(new URL('../worker/'+f,import.meta.url),'utf8');
+const logo=read('logo.js').replace('export default ','const LOGO=');
+const shotFiles=['registration.jpg','catalog.jpg','detail.jpg','currentoptions.jpg','payment.jpg','warehouse.jpg','estimation.jpg','tracking.jpg'];
+const assetMeta=JSON.parse(fs.readFileSync(new URL('../guide-assets/manifest.json',import.meta.url),'utf8'));
+const guideImages=Object.fromEntries(shotFiles.map(name=>[name,{...assetMeta[name],data:fs.readFileSync(new URL('../guide-assets/'+name,import.meta.url)).toString('base64')}]));
+const assetVersion=createHash('sha256').update(read('style.css')+read('client.js')+read('guide-instructions.js')+read('guide-meta.js')+JSON.stringify(guideImages)).digest('hex').slice(0,12);
+const output=[logo,'const ASSET_VERSION='+JSON.stringify(assetVersion)+';','const CSS='+JSON.stringify(read('style.css'))+';','const CLIENT='+JSON.stringify(read('client.js'))+';','const GUIDE_SHOTS='+JSON.stringify(shotFiles)+';','const GUIDE_IMAGES='+JSON.stringify(guideImages)+';',read('data.js'),read('currency.js'),read('content.js'),read('locales-extra.js'),read('parcel-content.js'),read('compare-content.js'),read('guide-instructions.js'),read('guide-meta.js'),read('render.js'),read('routes.js')].join('\n');
+fs.writeFileSync(new URL('../worker/index.js',import.meta.url),output);
