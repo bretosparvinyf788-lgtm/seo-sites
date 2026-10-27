@@ -5,7 +5,8 @@
   "scripts": {
     "build": "node scripts/build-pages.mjs",
     "check": "node scripts/check.mjs",
-    "validate": "node scripts/validate-artifact.mjs"
+    "validate": "node scripts/validate-artifact.mjs",
+    "indexnow": "node scripts/submit-indexnow.mjs"
   },
   "engines": {
     "node": ">=22"

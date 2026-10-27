@@ -13,3 +13,5 @@ console.log('Cloudflare Pages build complete: dist/_worker.js');
 import {writeCrawlerAssets} from './crawler-assets.mjs';
 
 await writeCrawlerAssets({out:'dist',worker:'dist/_worker.js',origin:'https://litbuysheetbook.com'});
+
+await import('./prepare-indexnow.mjs');

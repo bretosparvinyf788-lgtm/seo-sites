@@ -5,6 +5,8 @@
   ],
   "exclude": [
     "/robots.txt",
-    "/sitemap.xml"
+    "/sitemap.xml",
+    "/sitemaps/catalog.xml",
+    "/a8763b16b08a7e646f01aea526c17945.txt"
   ]
 }
