@@ -1,7 +1,7 @@
 const BOOKMARK='<svg class="bookmark-icon" viewBox="0 0 16 20" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true"><path d="M3 2h10v16l-5-4-5 4z"/></svg>';
 function href(path,l,params={}){let [p,q]=path.split('?');let s=new URLSearchParams(q||'');for(let [k,v]of Object.entries(params))s.set(k,String(v));if(l!=='en')s.set('lang',l);else s.delete('lang');return p+(s.size?'?'+s:'');}
-function cover(p){return ASSETS['/cover/'+p.id]?'/cover/'+p.id:'/image?src='+encodeURIComponent(p.image)}
-function referencePhotos(p){return REFERENCE_ROUTES[p.id]||(p.id==='2932'?['/reference/0.jpg','/reference/1.jpg']:(p.photos||[]).map(im=>'/image?src='+encodeURIComponent(im)))}
+function cover(p){return ASSETS['/cover/'+p.id]?'/cover/'+p.id:p.image}
+function referencePhotos(p){return REFERENCE_ROUTES[p.id]||(p.id==='2932'?['/reference/0.jpg','/reference/1.jpg']:(p.photos||[]).map(im=>im))}
 function photoCount(p){return referencePhotos(p).length}
 function money(p){return `<span class="money" dir="auto" data-usd="${p.price}">$${p.price.toFixed(2)}</span>`}
 function card(p,l){const t=UI[l],name=title(p,l);return `<article class="product" data-product="${esc(JSON.stringify(p))}"><a class="product-media" href="${href('/product/'+p.id,l)}"><img src="${esc(cover(p))}" alt="${esc(name)}" width="320" height="360" loading="lazy"></a><button type="button" class="save" data-save="${p.id}" aria-label="${t.save}" aria-pressed="false">${BOOKMARK}</button><small>${CAT[l][p.category-2]}</small><h3><a href="${href('/product/'+p.id,l)}">${esc(name)}</a></h3><div class="product-end">${money(p)}<a class="arrow" href="${href('/product/'+p.id,l)}" aria-label="${esc(NOTES[l].detail+' '+name)}">↗</a></div></article>`}

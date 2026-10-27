@@ -11,6 +11,13 @@
     "/favicon.png",
     "/favicon.svg",
     "/usfans-logo.webp",
-    "/2ee18debcd55e7cbd172c653200348fd.txt"
+    "/2ee18debcd55e7cbd172c653200348fd.txt",
+    "/*.css",
+    "/*.js",
+    "/cover/*",
+    "/reference/*",
+    "/guide-shots/*",
+    "/assets/*",
+    "/logo.png"
   ]
 }

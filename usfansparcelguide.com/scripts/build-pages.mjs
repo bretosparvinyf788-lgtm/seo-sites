@@ -14,3 +14,6 @@ async function hashFiles(name){let entries;try{entries=await readdir(name,{withF
 console.log('Prepared Pages advanced-mode Worker and static assets.');
 
 await import('./prepare-indexnow.mjs');
+
+import {writeStaticFallbacks} from "./static-fallbacks.mjs";
+await writeStaticFallbacks({out:"cloudflare-output",worker:"cloudflare-output/_worker.js/index.js",origin:"https://usfansparcelguide.com"});

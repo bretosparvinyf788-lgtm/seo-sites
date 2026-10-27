@@ -8,3 +8,6 @@ await writeCrawlerAssets({out:'dist',worker:'dist/_worker.js',origin:'https://jo
 console.log('Cloudflare Pages ready: Worker and validated static crawler assets');
 
 await import('./prepare-indexnow.mjs');
+
+import {writeStaticFallbacks} from "./static-fallbacks.mjs";
+await writeStaticFallbacks({"out": "dist", "worker": "dist/_worker.js", "origin": "https://joyagooparcelguide.com"});

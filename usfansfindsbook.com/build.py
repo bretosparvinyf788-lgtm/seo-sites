@@ -1,5 +1,6 @@
 import json,pathlib,html,shutil
 SHOW_GUIDES = False
+shutil.rmtree(pathlib.Path(__file__).parent/'dist/client', ignore_errors=True)
 shutil.copytree(pathlib.Path(__file__).parent/'public', pathlib.Path(__file__).parent/'dist/client', dirs_exist_ok=True)
 R=pathlib.Path(__file__).parent;D=R/'dist/client'; C=json.loads((R/'content.json').read_text());P=json.loads((R/'catalog.json').read_text());cats=['shoes','shirts','clothing','hoodies','pants','belts','bags','perfume','electronics','other'];slugs=['first-usfans-order','product-photos-and-qc','shipping-budget'];iconpaths=['M3 15l5-2 2-6 4 1 2 6 5 2v4H3z M4 17h16 M10 10l4 2','M8 4l4 2 4-2 6 4-3 5-3-2v10H8V11l-3 2-3-5z','M8 3h8l4 5-2 5-2-2v11H8V11l-2 2-2-5z M12 5v17 M9 3l3 5 3-5','M8 7q0-7 4-7t4 7l5 3-3 5-2-2v9H8v-9l-2 2-3-5z M10 17h4','M6 3h12l2 19h-6l-2-13-2 13H4z M6 6h12','M3 8h18v8H3z M6 7h6v10H6z M9 12h7','M4 8h16l1 14H3z M8 8V6a4 4 0 018 0v2','M7 8h10v14H7z M9 3h6v5H9z M9 13h6v4H9z','M7 2h10v20H7z M10 5h4 M11 19h2','M12 2l3 6 7 1-5 5 1 8-6-4-6 4 1-8-5-5 7-1z'];icons=['<svg viewBox="0 0 24 24" width="27" height="27" fill="none" stroke="currentColor" stroke-width="1.25" stroke-linejoin="round" aria-hidden="true"><path d="'+d+'"/></svg>' for d in iconpaths];reg='https://usfans.com/register?ref=T2JMMC';origin='https://usfansfindsbook.com'
 G=json.loads((R/'content/category-guides.json').read_text())

@@ -8,7 +8,7 @@ const tag=`<!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-YXWSVE47YC"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-YXWSVE47YC');</script>`;
 const embed=(html,script)=>html.replace('<head>','<head>'+tag).replace('__CLIENT_SCRIPT__',()=>script.replace(/<\/script/gi,'<\\/script')).replace(/<meta\b[^>]*name=["']robots["'][^>]*>/gi,'');
-let code=homeFallbackSource(page,'Hipobuy QC Notes')+catalogFallbackSource(page,client,'Hipobuy QC Notes')+template.replace('__PAGE__',()=>JSON.stringify(embed(page,client))).replace('__GUIDE_PAGE__',()=>JSON.stringify(embed(guides,guideClient))).replace('export default {async fetch(request)', 'const application={async fetch(request)');
+let code=homeFallbackSource(page,'Hipobuy QC Notes')+catalogFallbackSource(page,client,'Hipobuy QC Notes')+template.replace('__PAGE__',()=>JSON.stringify(embed(page,client))).replace('__GUIDE_PAGE__',()=>JSON.stringify(embed(guides,guideClient))).replace('export default {async fetch(request,env={})', 'const application={async fetch(request,env={})');
 code+=`\nconst PUBLIC_ORIGIN='https://hipobuyqcnotes.com';
 const paths=['/','/products','/categories','/guides','/guides/reading-qc-photos','/guides/measurement-checks','/guides/extra-photo-requests',...Array.from({length:10},(_,i)=>'/category/'+(i+2))];
 export default {async fetch(request,env,ctx){
@@ -41,3 +41,6 @@ import {writeCrawlerAssets} from './crawler-assets.mjs';
 await writeCrawlerAssets({out:'dist',worker:'dist/_worker.js',origin:'https://hipobuyqcnotes.com'});
 
 await import('./prepare-indexnow.mjs');
+
+import {writeStaticFallbacks} from "./static-fallbacks.mjs";
+await writeStaticFallbacks({"out": "dist", "worker": "dist/_worker.js", "origin": "https://hipobuyqcnotes.com"});

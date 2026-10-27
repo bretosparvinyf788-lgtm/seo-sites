@@ -9,7 +9,7 @@ document.addEventListener('keydown',e=>{if(e.key==='Escape')document.querySelect
 document.querySelector('.menu-toggle').addEventListener('click',e=>{const nav=document.querySelector('.nav');const open=nav.classList.toggle('open');e.currentTarget.setAttribute('aria-expanded',String(open));e.currentTarget.textContent=open?'×':'☰'});
 document.getElementById('sort')?.addEventListener('change',e=>e.target.form.requestSubmit());
 function updateSaved(){renderHomeSaved();document.querySelectorAll('[data-save]').forEach(b=>{const on=!!saved[b.dataset.save];b.classList.toggle('active',on);b.setAttribute('aria-pressed',String(on));b.setAttribute('aria-label',(on?d.ui.unsave:d.ui.save)+(b.closest('.desk-saved-row')?' · '+b.closest('.desk-saved-row').querySelector('a').textContent:''))})}
-function renderSaved(){let box=document.getElementById('saved-grid');if(!box)return;const ids=Object.keys(saved);if(!ids.length){box.innerHTML='<p class="empty">'+d.ui.nothing+'</p>';return}box.innerHTML=ids.map(id=>{const p=d.snapshot.find(x=>x.id===id)||saved[id];return '<article class="product" data-id="'+esc(id)+'"><a class="product-media" href="/product/'+esc(id)+langQuery+'"><img src="'+esc(p.cover||'/image?src='+encodeURIComponent(p.image))+'" alt="'+esc(title(p,d.lang))+'" loading="lazy"></a><button class="bookmark active" data-save="'+esc(id)+'" aria-label="'+d.ui.unsave+'" aria-pressed="true">−</button><div class="product-meta">'+esc(d.categories[p.category-2]||'')+'</div><h3><a href="/product/'+esc(id)+langQuery+'">'+esc(title(p,d.lang))+'</a></h3><span class="money" data-usd="'+Number(p.price)+'"></span></article>'}).join('');price()}
+function renderSaved(){let box=document.getElementById('saved-grid');if(!box)return;const ids=Object.keys(saved);if(!ids.length){box.innerHTML='<p class="empty">'+d.ui.nothing+'</p>';return}box.innerHTML=ids.map(id=>{const p=d.snapshot.find(x=>x.id===id)||saved[id];return '<article class="product" data-id="'+esc(id)+'"><a class="product-media" href="/product/'+esc(id)+langQuery+'"><img src="'+esc(p.cover||p.image)+'" alt="'+esc(title(p,d.lang))+'" loading="lazy"></a><button class="bookmark active" data-save="'+esc(id)+'" aria-label="'+d.ui.unsave+'" aria-pressed="true">−</button><div class="product-meta">'+esc(d.categories[p.category-2]||'')+'</div><h3><a href="/product/'+esc(id)+langQuery+'">'+esc(title(p,d.lang))+'</a></h3><span class="money" data-usd="'+Number(p.price)+'"></span></article>'}).join('');price()}
 document.addEventListener('click',e=>{const b=e.target.closest('[data-save]');if(!b)return;const id=b.dataset.save;if(saved[id])delete saved[id];else {const el=b.closest('[data-product]');const p=el?JSON.parse(el.dataset.product):d.snapshot.find(p=>p.id===id);if(p)saved[id]={...p,displayTitle:el?.querySelector('h3')?.textContent||p.displayTitle,displayCategory:el?.querySelector('.product-meta')?.textContent||p.displayCategory}}write('litbuy-sheetbook:saved',saved);updateSaved();renderSaved()});updateSaved();renderSaved();
 
 // The homepage shelf reflects the same browser-local bookmarks as /saved.
@@ -22,7 +22,7 @@ function renderHomeSaved(){
  box.innerHTML=entries.map(([id,stored])=>{
   const p=d.snapshot.find(x=>String(x.id)===id)||stored;
   if(Number.isFinite(Number(p.price))&&Number(p.price)>=0)cents+=Math.round(Number(p.price)*100);
-  return '<div class="desk-saved-row"><a href="/product/'+encodeURIComponent(id)+langQuery+'"><img src="'+esc(p.cover||'/image?src='+encodeURIComponent(p.image))+'" alt="" loading="lazy"><span>'+esc(title(p,d.lang))+'</span></a><button type="button" data-save="'+esc(id)+'" aria-label="'+esc(d.ui.unsave+' · '+title(p,d.lang))+'" aria-pressed="true">×</button></div>';
+  return '<div class="desk-saved-row"><a href="/product/'+encodeURIComponent(id)+langQuery+'"><img src="'+esc(p.cover||p.image)+'" alt="" loading="lazy"><span>'+esc(title(p,d.lang))+'</span></a><button type="button" data-save="'+esc(id)+'" aria-label="'+esc(d.ui.unsave+' · '+title(p,d.lang))+'" aria-pressed="true">×</button></div>';
  }).join('');
  const total=document.getElementById('shortlist-total');if(total){total.dataset.usd=String(cents/100);price();}
 }
@@ -35,7 +35,7 @@ function renderRecent(){
  const box=document.getElementById('recent-products');if(!box)return;
  const items=readRecent();document.getElementById('recent-empty').hidden=items.length>0;
  document.getElementById('clear-recent').hidden=items.length===0;
- box.innerHTML=items.slice(0,4).map(stored=>{const p=d.snapshot.find(x=>String(x.id)===String(stored.id))||stored;return '<a class="recent-item" href="/product/'+encodeURIComponent(p.id)+langQuery+'"><img src="'+esc(p.cover||'/image?src='+encodeURIComponent(p.image))+'" alt="" loading="lazy"><span>'+esc(title(p,d.lang))+'</span></a>';}).join('');
+ box.innerHTML=items.slice(0,4).map(stored=>{const p=d.snapshot.find(x=>String(x.id)===String(stored.id))||stored;return '<a class="recent-item" href="/product/'+encodeURIComponent(p.id)+langQuery+'"><img src="'+esc(p.cover||p.image)+'" alt="" loading="lazy"><span>'+esc(title(p,d.lang))+'</span></a>';}).join('');
 }
 const viewed=document.querySelector('[data-recent-product]');
 if(viewed){try{const p=JSON.parse(viewed.dataset.recentProduct);if(p&&/^\d+$/.test(String(p.id)))write(recentKey,[p,...readRecent().filter(x=>String(x.id)!==String(p.id))].slice(0,8));}catch{}}

@@ -15,3 +15,6 @@ import {writeCrawlerAssets} from './crawler-assets.mjs';
 await writeCrawlerAssets({out:'dist',worker:'dist/_worker.js',origin:'https://litbuysheetbook.com'});
 
 await import('./prepare-indexnow.mjs');
+
+import {writeStaticFallbacks} from "./static-fallbacks.mjs";
+await writeStaticFallbacks({"out": "dist", "worker": "dist/_worker.js", "origin": "https://litbuysheetbook.com"});

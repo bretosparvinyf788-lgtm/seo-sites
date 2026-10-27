@@ -5,9 +5,9 @@ export async function prepareLiveTemplates(){
  for(const lang of Object.keys(content)){
   const root='dist/client/'+(lang==='en'?'':lang+'/');
   const dest=`dist/client/live-templates/${lang}`;await mkdir(dest,{recursive:true});
-  for(const cat of ['all',...cats]){const path=root+(cat==='all'?'spreadsheet':`categories/${cat}`);await writeFile(`${dest}/${cat}.txt`,await readFile(`${path}/index.html`));await rm(path,{recursive:true,force:true});}
-  // Existing asset paths bypass the Worker on native Sites. Keep all product
-  // and paginated catalog URLs dynamic; templates remain private implementation assets.
-  await rm(root+'products',{recursive:true,force:true});
+  for(const cat of ['all',...cats]){const path=root+(cat==='all'?'spreadsheet':`categories/${cat}`);await writeFile(`${dest}/${cat}.txt`,await readFile(`${path}/index.html`));/* Keep public HTML available when Functions is unavailable. */}
+  // Pages still routes live requests through the Worker, while generated HTML
+  // survives fail-open fallback. Templates are separate implementation assets.
+  // Product HTML remains available to Pages static serving.
  }
 }
