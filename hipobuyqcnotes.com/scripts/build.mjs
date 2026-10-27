@@ -1,3 +1,4 @@
+import {catalogFallbackSource} from './catalog-fallbacks.mjs';
 import {homeFallbackSource} from './home-fallbacks.mjs';
 import {readFile,writeFile,mkdir} from 'node:fs/promises';
 const root=new URL('../',import.meta.url);
@@ -7,7 +8,7 @@ const tag=`<!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-YXWSVE47YC"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-YXWSVE47YC');</script>`;
 const embed=(html,script)=>html.replace('<head>','<head>'+tag).replace('__CLIENT_SCRIPT__',()=>script.replace(/<\/script/gi,'<\\/script')).replace(/<meta\b[^>]*name=["']robots["'][^>]*>/gi,'');
-let code=homeFallbackSource(page,'Hipobuy QC Notes')+template.replace('__PAGE__',()=>JSON.stringify(embed(page,client))).replace('__GUIDE_PAGE__',()=>JSON.stringify(embed(guides,guideClient))).replace('export default {async fetch(request)', 'const application={async fetch(request)');
+let code=homeFallbackSource(page,'Hipobuy QC Notes')+catalogFallbackSource(page,client,'Hipobuy QC Notes')+template.replace('__PAGE__',()=>JSON.stringify(embed(page,client))).replace('__GUIDE_PAGE__',()=>JSON.stringify(embed(guides,guideClient))).replace('export default {async fetch(request)', 'const application={async fetch(request)');
 code+=`\nconst PUBLIC_ORIGIN='https://hipobuyqcnotes.com';
 const paths=['/','/products','/categories','/guides','/guides/reading-qc-photos','/guides/measurement-checks','/guides/extra-photo-requests',...Array.from({length:10},(_,i)=>'/category/'+(i+2))];
 export default {async fetch(request,env,ctx){
@@ -24,11 +25,12 @@ export default {async fetch(request,env,ctx){
  const page=Number(url.searchParams.get('page'));if(Number.isSafeInteger(page)&&page>1)canonicalUrl.searchParams.set('page',String(page));
  const canonical=canonicalUrl.href.replaceAll('&','&amp;');
  if(url.searchParams.get('q'))headers.set('x-robots-tag','noindex,follow');
- let html=await response.text();
+ let html=await response.text(),status=response.status;
+ if(url.pathname!=='/'&&['/products','/categories'].includes(url.pathname)||/^\\/(?:category|product)\\/\\d+$/.test(url.pathname)){const rendered=await renderCatalogFallback(html,url);html=rendered.html;status=rendered.status;if(status!==200){headers.set('x-robots-tag','noindex,follow');headers.set('retry-after','60');}}
  if(url.pathname==='/')html=renderHomeFallback(html,lang||'en');
  html=html.replace(/<link\\b[^>]*rel=["']canonical["'][^>]*>/gi,'');
  html=html.replace('</head>','<link rel="canonical" href="'+canonical+'"></head>');
- return new Response(html,{status:response.status,headers});
+ return new Response(html,{status,headers});
 }};\n`;
 await mkdir(new URL('dist/',root),{recursive:true});
 await writeFile(new URL('dist/_worker.js',root),code);
