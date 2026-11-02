@@ -14,7 +14,7 @@
   "app/layout.tsx": "c6273abe6ce20fb9a602e27c5b4d78968ca8496f0394e7944138eca56043e44b",
   "app/loading.tsx": "193113745b1a6b8ee65fe112f7b5792ddda8a8051162e52eb678b367931da2dd",
   "app/not-found.tsx": "ef2ff9e1805338e643ef9e319402377326de43dcbd48a3180c8f5f9c3a73d607",
-  "app/site.tsx": "d12261da03d2e5731f8dd5a084bce1fda9df9685ede6d4aeac2811450379166a",
+  "app/site.tsx": "1c456e66e87cd35bf88af73a70c0767f623ed1335b20f6223c4af09bd181aac2",
   "lib/beginner-actions.ts": "24b7b373a67c0f4011192b72616e09f2f8bae8e468784bede56bf538bb8fe031",
   "lib/beginner-completion.ts": "1a9926206186804b8cf5567d776f55ee5a11b50fbcf25e986a5b12daf2e153e9",
   "lib/beginner.ts": "f1b11273cf4f9a18ffcb6d3dab007aac1eea4feaf9ab6953ac76505ed34dca52",
@@ -95,6 +95,7 @@
   "components/ui/toggle-group.tsx": "69f643e889e933f05c1439084480d8646f66a161c7d1cf0730ee926382ade35e",
   "components/ui/toggle.tsx": "ba4d0b0a2b2fee75dc36dfc19e32082e721024b919050c97fd5dc70faa924e16",
   "components/ui/tooltip.tsx": "a0784eb77831a799fad7991df4f1b666f876201565a80175e1aa68733574a2e4",
+  "public/2ee18debcd55e7cbd172c653200348fd.txt": "9684608d43c65d06a1b6edc0393838d21fae05fcfafc7fb6e5d419bf26092c6d",
   "public/_headers": "16920dc4be881458317a765af2504e75d57147de0309b54f470e160440562484",
   "public/favicon.png": "a28cf8e3526676db1e45380802aa5837649f1c574c51c2a96e96a04d79441225",
   "public/favicon.svg": "e6d2e59b7b5bbb0342e0fb496dfc262decbfe4426bbb7b047aec8d467d1dc6f7",
@@ -127,6 +128,5 @@
   "vite.config.ts": "0807401798e7e1ab53ffa72f9f0c2c6164cf0a19d89ea8096a0781d2ed60b8b2",
   "next.config.ts": "614bce25b089c3f19b1e17a6346c74b858034040154c6621e7d35303004767cc",
   "postcss.config.mjs": "dfac7ac2d86d326a0e5adb024e7943c181393ed17a5fcb8f0315b24c7da6ddde",
-  "package.json": "47b739560e53ff719eccbc55bfca068c1ae6ee170a774056f13d9bb637dd608a",
-  "public/2ee18debcd55e7cbd172c653200348fd.txt": "9684608d43c65d06a1b6edc0393838d21fae05fcfafc7fb6e5d419bf26092c6d"
+  "package.json": "47b739560e53ff719eccbc55bfca068c1ae6ee170a774056f13d9bb637dd608a"
 }
