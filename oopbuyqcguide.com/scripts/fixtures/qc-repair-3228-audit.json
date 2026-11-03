@@ -1,0 +1,65 @@
+{
+  "product_id": "3228",
+  "weidian_id": "7869096829",
+  "original_weidian_id": "7751050775",
+  "original_upload_archive": "照片(1).zip",
+  "reason": "Prior platform-mask heuristic misclassified the garment brand and obscured the product. Restore original pixels; remove only the separate platform mark in the empty upper-right background.",
+  "files": [
+    {
+      "source_image": "https://kakobuymake.com/uploads/allimg/20261009/1-261009155U1234.jpg",
+      "original_upload_file": "66842847-741e-4158-8a0a-93b7efa075e8.webp",
+      "original_upload_sha256": "b3002d9c06677e30d3ff4150616501b65fcdb4164c200d8c4ec1508ee912b7e9",
+      "repaired_sha256": "e4a34ff4b1fece934b9d40704e03bfc327e89db17424bbfe167e2c90219b0a2c",
+      "platform_mark_region": [
+        1668,
+        4,
+        1915,
+        299
+      ],
+      "outside_region_changed_pixels": 0,
+      "product_region_restored_from_original": true
+    },
+    {
+      "source_image": "https://kakobuymake.com/uploads/allimg/20261009/1-261009155U4531.jpg",
+      "original_upload_file": "7e70643a-53e7-4a49-bcd3-5bf3f1a9acbf.webp",
+      "original_upload_sha256": "237fe6070fcd41a4444bf6e5d6947ca79215a6e59b2c7466f1c20cf316f7e9a2",
+      "repaired_sha256": "05d54f20ed3fdade0ab4e5b74fc14b25af2ac6d2250ad8baac494f613ec4e0a8",
+      "platform_mark_region": [
+        1668,
+        4,
+        1915,
+        299
+      ],
+      "outside_region_changed_pixels": 0,
+      "product_region_restored_from_original": true
+    },
+    {
+      "source_image": "https://kakobuymake.com/uploads/allimg/20261009/1-261009155U6235.jpg",
+      "original_upload_file": "13e19a91-5c94-49e1-b5a8-05210df878bc.webp",
+      "original_upload_sha256": "b004cdd9a89f2270ed7f3e8621f58b7d75cdb0d6840e711a5de29808ef2cdd39",
+      "repaired_sha256": "17587f58050f599de993523aed90cf9c36cb3c60c1c8f59e5ba2a1cc10a6ca2c",
+      "platform_mark_region": [
+        1668,
+        4,
+        1915,
+        299
+      ],
+      "outside_region_changed_pixels": 0,
+      "product_region_restored_from_original": true
+    },
+    {
+      "source_image": "https://kakobuymake.com/uploads/allimg/20261009/1-261009155USA.jpg",
+      "original_upload_file": "f44f8edc-43eb-4675-a3fa-4d3a2c7206b2.webp",
+      "original_upload_sha256": "fe510a226ce7eec21cb9c0db499616c3fd20edc192a22fe0eb52a860f2e066f6",
+      "repaired_sha256": "4349c6e75f02fb9031a7a5836b34515ddab9f9b121e1a684d305c3735391c147",
+      "platform_mark_region": [
+        1668,
+        4,
+        1915,
+        299
+      ],
+      "outside_region_changed_pixels": 0,
+      "product_region_restored_from_original": true
+    }
+  ]
+}
