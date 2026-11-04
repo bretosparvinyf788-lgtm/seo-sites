@@ -1,0 +1,19 @@
+{
+  "$schema": "./node_modules/wrangler/config-schema.json",
+  "name": "oopbuyqcguide-com",
+  "main": "worker.mjs",
+  "compatibility_date": "2026-11-04",
+  "compatibility_flags": ["nodejs_compat"],
+  "workers_dev": false,
+  "preview_urls": false,
+  "assets": { "directory": "public", "binding": "ASSETS", "run_worker_first": true },
+  "routes": [
+    { "pattern": "oopbuyqcguide.com/*", "zone_name": "oopbuyqcguide.com" },
+    { "pattern": "www.oopbuyqcguide.com/*", "zone_name": "oopbuyqcguide.com" }
+  ],
+  "vars": {
+    "GA_MEASUREMENT_ID": "G-PSFZGP4H0M",
+    "BING_SITE_VERIFICATION": "4DD3B96656B794E764E803BEA592584F"
+  },
+  "observability": { "enabled": true }
+}

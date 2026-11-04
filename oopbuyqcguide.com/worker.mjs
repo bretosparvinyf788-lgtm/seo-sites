@@ -19,6 +19,9 @@ export default {
         if (u.hostname==='oopbuyqcguide.com' && typeof id==='string' && /^G-[A-Z0-9]+$/.test(id)) head.append(`<script async src="https://www.googletagmanager.com/gtag/js?id=${id}"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','${id}');</script>`,{html:true});
       }}).transform(response);
     }
+    const headers = new Headers(response.headers);
+    headers.set('X-Deployment-Source','seo-sites/oopbuyqcguide.com');
+    response = new Response(response.body,{status:response.status,headers});
     if(request.method==='HEAD') return new Response(null,{status:response.status,headers:response.headers});
     return response;
   }
