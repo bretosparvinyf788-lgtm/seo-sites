@@ -1,0 +1,1 @@
+import {cats,products} from '../lib/source';export default function sitemap(){return ['','/all-finds','/guide','/qc-guide','/shipping-guide',...cats.map(c=>'/categories/'+c.slug),...[...new Set(products.map(p=>p.id))].map(id=>'/products/'+id)].map(p=>({url:'https://cssbuyfindshub.com'+p,changeFrequency:(p.includes('/products/')?'weekly':'daily') as 'weekly'|'daily'}))}

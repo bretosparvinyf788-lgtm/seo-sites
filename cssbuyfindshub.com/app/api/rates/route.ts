@@ -1,0 +1,1 @@
+export async function GET(){try{const r=await fetch('https://open.er-api.com/v6/latest/USD',{signal:AbortSignal.timeout(8000)});if(!r.ok)throw Error();const d=await r.json() as any;return Response.json({rates:d.rates,updated:d.time_last_update_utc});}catch{return Response.json({rates:{USD:1},updated:null});}}

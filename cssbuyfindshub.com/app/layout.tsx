@@ -1,0 +1,4 @@
+import type { Metadata } from 'next';
+import './globals.css';
+export const metadata:Metadata={title:'CSSBuy Spreadsheet & Finds with QC | CSSBuy Finds Hub',description:'Browse CSSBuy spreadsheet finds by category, compare product photos and prices, and learn how to order, review QC and plan international shipping.',icons:{icon:[{url:'/cssbuy-icon-v1.png',sizes:'32x32',type:'image/png'},{url:'/favicon.svg?v=cssbuy1',type:'image/svg+xml'}],shortcut:'/favicon.ico?v=cssbuy1',apple:'/cssbuy-icon-v1.png'},robots:{index:true,follow:true}};
+export default function RootLayout({children}:{children:React.ReactNode}){return <html lang="en" translate="no"><head><meta name="google" content="notranslate"/><link rel="icon" type="image/png" sizes="32x32" href="/cssbuy-icon-v1.png"/><link rel="shortcut icon" href="/favicon.ico?v=cssbuy1"/></head><body>{children}</body></html>}

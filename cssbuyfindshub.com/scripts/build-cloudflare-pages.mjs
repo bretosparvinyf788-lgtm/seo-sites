@@ -1,0 +1,16 @@
+import fs from 'node:fs';
+import path from 'node:path';
+import {execFileSync} from 'node:child_process';
+const root=process.cwd();
+execFileSync(process.execPath,['node_modules/vinext/dist/cli.js','build'],{stdio:'inherit',env:{...process.env,NODE_ENV:'production'}});
+const out=path.join(root,'pages-dist');
+fs.rmSync(out,{recursive:true,force:true});fs.mkdirSync(out,{recursive:true});
+fs.cpSync('dist/client',out,{recursive:true});
+fs.mkdirSync(path.join(out,'_worker.js/app'),{recursive:true});
+fs.cpSync('dist/server',path.join(out,'_worker.js/app'),{recursive:true,filter:p=>!p.endsWith('wrangler.json')&&!p.includes('/.vite')});
+const config=JSON.parse(fs.readFileSync('deployment-config.json','utf8'));
+fs.writeFileSync(path.join(out,'_worker.js/config.js'),'export default '+JSON.stringify(config)+';\n');
+fs.copyFileSync('worker/pages-entry.mjs',path.join(out,'_worker.js/index.js'));
+fs.writeFileSync(path.join(out,'_routes.json'),JSON.stringify({version:1,include:['/*'],exclude:['/_next/*','/qc-patches/*','/favicon*','/cssbuy-icon-v1.png','/'+config.indexNowKey+'.txt']}));
+fs.writeFileSync(path.join(out,'_headers'),'/_next/*\n  Cache-Control: public, max-age=31536000, immutable\n/qc-patches/*\n  Cache-Control: public, max-age=31536000, immutable\n');
+console.log('Built complete Cloudflare Pages site in pages-dist/');
