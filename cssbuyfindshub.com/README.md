@@ -6,7 +6,23 @@ Includes the homepage, twelve featured finds, the live complete kakobuymake.com 
 
 No product database is created. The live catalog, product details and QC references are read from kakobuymake.com. Retrieved seller galleries remain distinct from QC references. Temporary source failures display the identified fallback.
 
-## Cloudflare Pages
+## Production deployment: Cloudflare Workers
+
+The required `seo-sites` repository is already connected to Pages in a different Cloudflare account. Keep this source in that repository and use Workers Builds in `wengxianxian2@gmail.com` for this domain.
+
+- Repository: bretosparvinyf788-lgtm/seo-sites
+- Production branch: main
+- Root directory: cssbuyfindshub.com
+- Worker name: cssbuyfindshub-com
+- Build command: npm run build:pages
+- Deploy command: npx wrangler deploy --config wrangler.worker.jsonc
+- Node.js: 22 or later
+- Static assets: dist/client
+- Custom hostnames: cssbuyfindshub.com and www.cssbuyfindshub.com
+
+The build and Wrangler dry run pass. The Worker bundle is 370.26 KiB gzipped. Production Analytics measurement ID is `G-Z9V5QHJJHP`, under VIP Sites Analytics. GSC ownership is verified through the domain TXT record. Bing uses its dedicated CNAME verification record. Submit `https://cssbuyfindshub.com/sitemap.xml` after the public site is live.
+
+## Alternative Cloudflare Pages configuration
 
 - Repository: bretosparvinyf788-lgtm/seo-sites
 - Production branch: main
