@@ -24,7 +24,10 @@
       "custom_domain": true
     }
   ],
-  "vars": {},
+  "vars": {
+    "GA_MEASUREMENT_ID": "G-EY5KH97XMY",
+    "GOOGLE_SITE_VERIFICATION": "0Sxd0Ccoc2np2iCWLSoqvayinclUfrCvspyG3tqek_0"
+  },
   "observability": {
     "enabled": true,
     "traces": {
