@@ -1,0 +1,1010 @@
+{
+  "tr": {
+    "name": "Türkçe",
+    "faqHeading": "Lovegobuy Sheet Lab sık sorulan sorular",
+    "faqIntro": "Bu ürün listesini incelemek, fotoğrafları karşılaştırmak ve Lovegobuy siparişinizi planlamak için pratik yanıtlar.",
+    "faqGroups": [
+      [
+        "Ürünlere göz atma ve fiyatlar",
+        "Doğru ilanı bulun ve gördüğünüz fiyatın ne anlama geldiğini öğrenin."
+      ],
+      [
+        "Fotoğraflar ve kalite kontrolü",
+        "Satın alma kararı vermeden önce fotoğrafların ne gösterdiğini anlayın."
+      ],
+      [
+        "Sipariş ve gönderim",
+        "Ödemeden paketinize kadar neler olduğunu öğrenin."
+      ]
+    ],
+    "nav": [
+      "Ürünler",
+      "Satın alma rehberi",
+      "Kalite kontrol listesi",
+      "Sık sorulan sorular",
+      "Kayıt ol",
+      "Dil",
+      "Para birimi",
+      "Menü"
+    ],
+    "hero": [
+      "LOVEGOBUY KULLANIM REHBERİ",
+      "Lovegobuy ürün listesi",
+      "Bulun. Kontrol edin. Gönderin.",
+      "Seçili ürünleri keşfedin, ayrıntıları inceleyin ve sonraki adımınızı öğrenin. İlk bağlantıdan bir sonraki paketinize uzanan daha anlaşılır bir yol."
+    ],
+    "cats": [
+      "Ayakkabılar / terlikler",
+      "Tişörtler",
+      "Moda giyim",
+      "Kapüşonlu üstler",
+      "Pantolonlar",
+      "Deri kemerler",
+      "Moda çantalar",
+      "Parfüm",
+      "Elektronik",
+      "Diğer ürünler"
+    ],
+    "ui": [
+      "Öne çıkan ürünler",
+      "Tüm ürünlere göz at",
+      "ÜRÜN DİZİNİ",
+      "Kategoriye göre keşfet",
+      "Tek koleksiyon. On keşif yolu.",
+      "Kaynak ilan",
+      "Referans fiyat · kargo hariç",
+      "Ürün ara",
+      "Ara",
+      "En yeni",
+      "Fiyat: düşükten yükseğe",
+      "Fiyat: yüksekten düşüğe",
+      "En çok görüntülenen",
+      "Sütunlar",
+      "Önceki",
+      "Sonraki",
+      "Ürün bulunamadı. Başka bir arama deneyin.",
+      "Ürün kaynağına geçici olarak erişilemiyor. Lütfen tekrar deneyin.",
+      "Tekrar dene",
+      "Satıcı fotoğrafları",
+      "Galeriye erişilemiyor. Kaynak kapak fotoğrafı gösteriliyor.",
+      "Ürün ayrıntıları",
+      "Lovegobuy'da aç",
+      "Kalite kontrolü / kaynak galerisi",
+      "Bu fotoğraflar bu kaynak ilana aittir. Gönderimden önce tam ürün seçeneğini ve kendi depo kalite kontrol fotoğraflarınızı doğrulayın.",
+      "Bu ilan için kalite kontrol fotoğrafı bulunmuyor.",
+      "Weidian bağlantısını kopyala",
+      "Bağlantı kopyalandı",
+      "Sonraki adımınız",
+      "Satın alma rehberini oku",
+      "Gönderimden önce",
+      "Önemli ayrıntıları kontrol edin.",
+      "Siparişle karşılaştırın",
+      "Beden, renk ve adedi ödemesini yaptığınız siparişle karşılaştırın.",
+      "Fotoğrafları inceleyin",
+      "Dikişlere, şekle ve görünür izlere bakın. Gerekirse yakın çekim isteyin.",
+      "Paketi gözden geçirin",
+      "Ödemeden önce kargo hattını, ağırlığı ve toplam maliyeti karşılaştırın.",
+      "Sık sorulan sorular",
+      "Ödemeden önce aklınızdakiler netleşsin.",
+      "Bağımsız ürün dizini ve satın alma rehberi. Resmî bir Lovegobuy sitesi değildir. İş ortaklığı bağlantıları bize komisyon kazandırabilir.",
+      "Ürün ilanları ile kalite kontrolü/kaynak fotoğrafları kakobuymake.com üzerinden alınır. Varsa satıcı galerileri Weidian üzerinden getirilir.",
+      "Ürün fiyatları tahminidir. Uluslararası kargo, vergiler ve olası hizmet bedelleri ayrıdır. Tüm ücretleri Lovegobuy'da doğrulayın.",
+      "Tüm ürünler",
+      "Ana sayfa",
+      "Alışveriş burada başlar",
+      "Ürün bağlantısından teslimata 8 adım.",
+      "Aşağıdaki adımları izleyin. Güncel seçenekleri ve ücretleri kendi Lovegobuy hesabınızda kontrol edin.",
+      "Resmî Lovegobuy eğitimi",
+      "Kaynak başlığı",
+      "Ürün",
+      "Gösterilen",
+      "Ürünlere dön",
+      "Referans döviz kurları",
+      "Kurlara erişilemiyor. Fiyatlar USD olarak kalır.",
+      "Kontrol listesi ilerlemesi",
+      "Kontrol listesini sıfırla",
+      "Gizlilik",
+      "Bu tarayıcıda yalnızca dil, para birimi ve kontrol listesi tercihlerinizi saklarız. Ödeme veya teslimat adresi bilgisi toplamayız. Ürün görselleri özgün kaynaklardan yüklenir.",
+      "Weidian kimliği",
+      "Mevcut değil",
+      "Satıcı bağlantısı doğrulanamadı. Lütfen özgün ilanı kontrol edin.",
+      "Kaynak ürün fotoğrafları",
+      "İlan yenilendi",
+      "Özenle seçildi · 12 ürün",
+      "Sonraki adımınız için rehberiniz",
+      "Tüm kategorileri gör"
+    ],
+    "steps": [
+      [
+        "Hesabınızı oluşturun",
+        "Kayıt ol seçeneğini kullanın, ardından bilgilerinizi Lovegobuy'da girip doğrulayın."
+      ],
+      [
+        "Bir ürün açın",
+        "Buradan bir ürün seçin, ayrıntı sayfasını inceleyin ve ilgili Lovegobuy ilanını açın."
+      ],
+      [
+        "Ürün seçeneğinizi doğrulayın",
+        "Beden, renk ve adedi seçin. Sepete eklemeden önce satıcı açıklamasını okuyun."
+      ],
+      [
+        "Ürünlerin ödemesini yapın",
+        "Ürün bedelini ve yurt içi kargoyu kontrol edin. Uluslararası kargo ayrıca ödenir."
+      ],
+      [
+        "Depoya ulaşmasını bekleyin",
+        "Ürün teslim alınıp depoya yerleştirilene kadar satın alımı sipariş listenizden takip edin."
+      ],
+      [
+        "Kalite kontrolünüzü inceleyin",
+        "Depo fotoğraflarını açın. Ürün seçeneğini ve görünür durumunu kontrol edin; gönderimden önce sorunlar için destekle iletişime geçin."
+      ],
+      [
+        "Paket gönderim talebini oluşturun",
+        "Depodaki ürünleri seçin, adresinizi doğrulayın ve kargo ile paketleme seçeneklerini karşılaştırın."
+      ],
+      [
+        "Kargoyu ödeyin ve takip edin",
+        "Hesabınızda gösterilen kargo ücretini ödeyin. Varsa ücret düzeltmesini inceleyin, ardından takip güncellemelerini izleyin."
+      ]
+    ],
+    "faq": [
+      [
+        "Lovegobuy Sheet Lab resmî bir Lovegobuy sitesi mi?",
+        "Hayır. lovegobuysheetlab.com bağımsız bir ürün dizini ve satın alma rehberidir. İlanlara göz atmanıza ve süreci anlamanıza yardımcı oluruz; siparişinizi satmaz, denetlemez veya göndermeyiz. Hesap kaydı, ödeme, sipariş desteği ve paket işlemleri Lovegobuy'da gerçekleştirilir. Bazı dış bağlantılar iş ortaklığı bağlantılarıdır."
+      ],
+      [
+        "Bu ürün listesindeki ürünler nereden geliyor?",
+        "Ürünler, kaynak fiyatlar ve referans kalite kontrol fotoğrafları kakobuymake.com üzerinden alınır. Ana sayfa, kısa bir en yeni ürün seçkisini kategori önizlemeleriyle birleştirir. Daha fazla kaynak ilanı ve bunların ayrıntı sayfalarını görmek için Tüm ürünler bölümünü veya bir kategori sayfasını açın."
+      ],
+      [
+        "Bu sitede ürünleri nasıl bulup karşılaştırabilirim?",
+        "Bir kategoriyi veya Tüm ürünler bölümünü açın, anahtar kelime girin ve sonuçları inceleyin. Arama etkin değilken en yeni, fiyat veya en çok görüntülenen sıralamasını kullanın; masaüstü kullanıcıları sütun sayısını da değiştirebilir. Lovegobuy'a geçmeden önce özgün başlığı, Weidian kimliğini ve fotoğrafları karşılaştırmak için ayrıntı sayfasını açın."
+      ],
+      [
+        "Gösterilen fiyat neden Lovegobuy ödeme tutarından farklı olabilir?",
+        "Kaynak ürün fiyatını, isteğe bağlı referans kur dönüşümüyle gösteririz. Bu, teslimat dâhil fiyat teklifi değildir. Satıcı seçenekleri, stok değişimleri, yurt içi teslimat, uluslararası kargo, vergiler ve diğer ücretler ödeme tutarını etkileyebilir. Dönüşüm kullanılamıyorsa fiyatlar USD olarak kalır. Tam ürünü ve son ücretleri Lovegobuy'da doğrulayın."
+      ],
+      [
+        "Üstteki fotoğraf kaydırıcısı ile alttaki galeri arasındaki fark nedir?",
+        "Üstteki kaydırıcı, varsa ilgili Weidian ürününün satıcı ilan fotoğraflarını yükler. Alttaki galeri, ana sitedeki kaynak ilana eklenmiş fotoğrafları içerir; bunlar referans kalite kontrol fotoğrafları da olabilir. Bunlar ayrı koleksiyonlardır. Hiçbiri yeni verdiğiniz siparişin kalite kontrol kaydı değildir."
+      ],
+      [
+        "Bir üründe neden yalnızca tek fotoğraf var veya kalite kontrol fotoğrafı yok?",
+        "Satıcı galerisine erişilemediğinde sayfa kaynak kapak fotoğrafını korur ve bu yedek görüntüyü belirtir. Kaynak ilanda ek kalite kontrol fotoğrafları da bulunmayabilir. Eksikliği başka bir ürünün görselleriyle doldurmayız. Satıcı açıklamasını kontrol edin ve gereken fotoğrafları kendi Lovegobuy siparişiniz üzerinden isteyin."
+      ],
+      [
+        "Buradaki fotoğraflar orijinalliği, bedene uygunluğu veya ürün kalitesini garanti eder mi?",
+        "Hayır. Satıcı fotoğrafları ve referans kalite kontrol görselleri, görünür ayrıntıları karşılaştırmanıza yardımcı olur; ürünün orijinalliğini kanıtlayamaz, bir bedenin üzerinize nasıl oturacağını garanti edemez veya gelecekte teslim edilecek ürünün her yönünü doğrulayamaz. Satıcının açıklamasını ve ölçülerini okuyun, tam ürün seçeneğini belirleyin ve depodaki kendi ürününüzün kalite kontrol fotoğraflarını inceleyin."
+      ],
+      [
+        "Depodaki kendi ürünümün kalite kontrolünde neleri incelemeliyim?",
+        "Ürünü, rengi, beden etiketini ve adedi ödemesini yaptığınız siparişle eşleştirin. Görünür şekli, dikişleri, izleri ve istenen ölçüleri birden fazla açıdan kontrol edin. Bir ayrıntı belirsizse veya fotoğrafta önü kapanmışsa yurt dışı gönderimi onaylamadan önce Lovegobuy'dan açıklama veya yakın çekim isteyin. Görünmeyen kısımlar hakkında tahminde bulunmayın."
+      ],
+      [
+        "Bu site üzerinden bir ürünü nasıl satın alırım?",
+        "Dizinden bir ürün seçin, site içindeki ayrıntı sayfasını okuyun ve Lovegobuy'da aç seçeneğine tıklayın. Weidian kimliğini doğrulayın, bedeninizi, renginizi ve adedi orada seçin. Hesabınız yoksa Kayıt ol bağlantısını kullanın. Tüm alışveriş ve ödemeler bu dizinde değil, Lovegobuy'da tamamlanır."
+      ],
+      [
+        "Ürün ücretini ödedikten sonra ne olur?",
+        "Lovegobuy satıcıdan satın alımı düzenler ve ürünler Çin'deki deposuna gönderilir. İlerlemeyi hesabınızdaki siparişten takip edin. Teslim alma ve inceleme sonrasında kendi depo fotoğraflarınızı gözden geçirin ve paket talebi oluşturmadan önce sorunları çözün. Satıcının gönderim ve deponun işlem süreleri değişebilir."
+      ],
+      [
+        "Avrupa veya Kuzey Amerika'ya gönderimi nasıl planlamalıyım?",
+        "Gerçek varış adresinizi girin ve Lovegobuy hesabınızda o anda sunulan kargo hatlarını karşılaştırın. İzin verilen ürün türlerini, paket ağırlığını ve boyutlarını, tahmini taşıma süresini, paketlemeyi ve varsa sigorta koşullarını kontrol edin. Uluslararası kargo ürünlerden ayrı ödenir. Ödemeden önce varış yerindeki ücretleri ve olası kargo farklarını doğrulayın; hiçbir hat teslimatı veya gümrükten geçişi garanti etmez."
+      ],
+      [
+        "Yanlış ürün gelirse veya iade gerekirse ne yapmalıyım?",
+        "Uluslararası gönderimden önce ilgili sipariş üzerinden Lovegobuy ile iletişime geçip sipariş numarasını, seçilen ürün seçeneğini ve sorunu gösteren net fotoğrafları paylaşın. Kullanılabilir iade veya değişim sürecini ve son tarihlerini sorun. Uygunluk, ücretler ve onay satıcıya ve platformun güncel kurallarına bağlıdır; bu dizin geri ödeme onayı veremez."
+      ]
+    ],
+    "home": [
+      "En yeni ürünler",
+      "Bir sonraki keşfiniz burada başlar.",
+      "Ürünlere göz at",
+      "Keşfedilecek diğer kategoriler",
+      "Katalogdaki ayakkabıları keşfedin. Bir çift seçmeden önce ürün fotoğraflarını ve mevcut kalite kontrol görsellerini karşılaştırmak için ilanı açın.",
+      "Tişörtleri ve günlük üstleri keşfedin. Beden seçeneklerini inceleyin ve ilgili ürünün ayrıntılarına yakından bakın.",
+      "Günlük çantaları ve yeni modelleri karşılaştırın. Tam ilanı, ölçüleri ve mevcut referans fotoğraflarını kontrol edin."
+    ],
+    "guide": [
+      [
+        "Ürününüzü bulun",
+        "Kayıt ol seçeneğini kullanarak bir Lovegobuy hesabı oluşturun. Buradan bir ürün açıp kaynak ilanı, ürün kimliğini ve fotoğrafları inceleyin. Lovegobuy'a geçin veya özgün Weidian bağlantısını arama çubuğuna yapıştırın."
+      ],
+      [
+        "Tam ürün seçeneğini belirleyin",
+        "Satıcı açıklamasını okuyun ve beden tablosunu kontrol edin. İstediğiniz renk, beden ve adedi seçip ürünü sepetinize ekleyin veya Şimdi satın al seçeneğini kullanın. Önemli taleplerinizi sipariş notlarına yazın."
+      ],
+      [
+        "Ürünlerin ödemesini yapın",
+        "Seçilen ürün seçeneğini, ürün fiyatını ve satıcıdan Çin'deki depoya teslimatı gözden geçirin. Kullanılabilir bir ödeme yöntemi seçip ilk ödemeyi onaylayın. Bu ödeme uluslararası kargoyu kapsamaz."
+      ],
+      [
+        "Satın alımı takip edin",
+        "Lovegobuy satın alımı düzenler ve satıcı ürünleri depoya gönderir. Hesabınızdan sipariş durumunu takip edin ve aracı ek bilgi isterse yanıtlayın. Satın alma ve satıcının gönderim süreleri değişebilir."
+      ],
+      [
+        "Depo kalite kontrolünü inceleyin",
+        "Ürün depoya alındıktan sonra Kullanıcı Merkezi → Depo bölümünü açıp kendi ürün fotoğraflarınızı inceleyin. Beden etiketi, renk, adet ve görünür durumu siparişinizle karşılaştırın. Ürünü yurt dışı gönderime sunmadan önce sorunları bildirin veya daha net ayrıntı fotoğrafları isteyin."
+      ],
+      [
+        "Paketinizi oluşturun",
+        "Birlikte göndermek istediğiniz depodaki ürünleri seçip gönderim talebi oluşturun. Teslimat bilgilerinizi dikkatlice girin. Hizmet seçmeden önce uygun rotaları, paketleme seçeneklerini, ağırlığı ve paket boyutlarını karşılaştırın."
+      ],
+      [
+        "Uluslararası kargoyu ödeyin",
+        "Seçilen rota için gösterilen kargo tutarını kontrol edin ve isteğe bağlı hizmetleri inceleyin. Uluslararası kargo ücretini Lovegobuy üzerinden ödeyin. Hesabınıza sonradan yansıtılan düzeltmeleri doğrulayın; tahmini tutar, teslimatın son maliyeti değildir."
+      ],
+      [
+        "Gönderimi ve teslimatı takip edin",
+        "Lovegobuy paketinizi birleştirir, paketler ve gönderir. Paketler sayfasından durumu ve takip güncellemelerini izleyin. Sipariş ve paket kayıtlarınızı saklayın; gönderi için işlem gerekiyorsa platform desteğiyle iletişime geçin."
+      ]
+    ],
+    "messages": {
+      "sourceUnavailable": "Kaydedilmiş kaynak seçkisi. Canlı katalog yenileme geçici olarak kullanılamıyor.",
+      "officialScreenshots": "Lovegobuy resmî eğitiminden ekran görüntüleri. Güncel arayüz ve mevcut seçenekler farklı olabilir.",
+      "privacyText": "Kontrol listesi tercihlerini tarayıcınızda kaydederiz. Dil ve para birimi seçimleri URL içinde yer alır. Ürün görselleri özgün sunucularından yüklenir. Ödeme veya teslimat adresi bilgisi toplamayız.",
+      "sortLabel": "Sırala",
+      "photoLabel": "Fotoğraf",
+      "notFoundHeading": "Sayfa bulunamadı",
+      "productUnavailableTitle": "Ürüne erişilemiyor"
+    }
+  },
+  "ja": {
+    "name": "日本語",
+    "faqHeading": "Lovegobuy Sheet Lab よくある質問",
+    "faqIntro": "商品リストの閲覧、写真の比較、Lovegobuyでの注文計画に役立つ実用的な回答をまとめました。",
+    "faqGroups": [
+      [
+        "商品探しと価格",
+        "目的の商品ページを見つけ、表示価格の意味を確認しましょう。"
+      ],
+      [
+        "写真と品質確認",
+        "購入を決める前に、写真が何を示しているか理解しましょう。"
+      ],
+      [
+        "注文と配送",
+        "購入手続きから荷物の発送までの流れを確認しましょう。"
+      ]
+    ],
+    "nav": [
+      "商品を探す",
+      "購入ガイド",
+      "検品チェックリスト",
+      "よくある質問",
+      "新規登録",
+      "言語",
+      "通貨",
+      "メニュー"
+    ],
+    "hero": [
+      "LOVEGOBUY 活用ガイド",
+      "Lovegobuy 商品リスト",
+      "見つける。確かめる。発送する。",
+      "気になる商品を探し、細部を確認して、次の手順を把握しましょう。最初のリンクから次の荷物まで、わかりやすくご案内します。"
+    ],
+    "cats": [
+      "靴・スリッパ",
+      "Tシャツ",
+      "ファッション衣料",
+      "パーカー",
+      "パンツ・ズボン",
+      "革ベルト",
+      "ファッションバッグ",
+      "香水",
+      "電子機器",
+      "その他"
+    ],
+    "ui": [
+      "注目の商品",
+      "すべての商品を見る",
+      "商品ディレクトリ",
+      "カテゴリーから探す",
+      "ひとつのコレクション、10通りの探し方。",
+      "参照元の商品ページ",
+      "参考価格・送料別",
+      "商品を検索",
+      "検索",
+      "新着順",
+      "価格の安い順",
+      "価格の高い順",
+      "閲覧数順",
+      "列数",
+      "前へ",
+      "次へ",
+      "商品が見つかりませんでした。別のキーワードで検索してください。",
+      "商品データの参照元を一時的に利用できません。もう一度お試しください。",
+      "再試行",
+      "販売者の写真",
+      "ギャラリーを利用できないため、参照元の表紙画像を表示しています。",
+      "商品詳細",
+      "Lovegobuyで開く",
+      "検品・参照元ギャラリー",
+      "これらは参照元の商品ページに掲載されている写真です。発送前に正確な商品仕様と、ご自身の商品の倉庫検品写真を確認してください。",
+      "この商品ページには検品写真がありません。",
+      "Weidianリンクをコピー",
+      "リンクをコピーしました",
+      "次のステップ",
+      "購入ガイドを読む",
+      "発送の前に",
+      "大切な細部を確認しましょう。",
+      "注文内容と照合",
+      "サイズ、色、数量が支払い済みの注文と一致するか確認してください。",
+      "写真を確認",
+      "縫製、形、目に見える傷や汚れを確認し、必要に応じて接写を依頼してください。",
+      "荷物を確認",
+      "支払い前に配送ルート、重量、総額を比較してください。",
+      "よくある質問",
+      "購入手続きの前に疑問を解消。",
+      "独立した商品ディレクトリおよび購入ガイドです。Lovegobuyの公式サイトではありません。アフィリエイトリンクを通じて報酬を受け取る場合があります。",
+      "商品情報と検品・参照元写真はkakobuymake.comから取得しています。販売者のギャラリーは、利用可能な場合にWeidianから取得します。",
+      "商品価格は目安です。国際送料、税金、サービス手数料などは別途発生します。すべての費用をLovegobuyで確認してください。",
+      "すべての商品",
+      "ホーム",
+      "ここから始めるお買い物",
+      "商品リンクから配達まで、8つのステップ。",
+      "以下の手順をご確認ください。最新の選択肢と料金は、ご自身のLovegobuyアカウントで確認してください。",
+      "Lovegobuy公式チュートリアル",
+      "参照元の商品名",
+      "商品",
+      "表示中",
+      "商品一覧に戻る",
+      "参考為替レート",
+      "為替レートを取得できません。価格はUSDのまま表示します。",
+      "チェックリストの進捗",
+      "チェックリストをリセット",
+      "プライバシー",
+      "このブラウザーには言語、通貨、チェックリストの設定のみを保存します。決済情報や配送先住所は収集しません。商品画像は元の参照先から読み込みます。",
+      "Weidian ID",
+      "利用不可",
+      "販売者リンクを確認できませんでした。元の商品ページを確認してください。",
+      "参照元の商品写真",
+      "商品情報を更新しました",
+      "厳選した12商品",
+      "次のステップをご案内",
+      "すべてのカテゴリーを見る"
+    ],
+    "steps": [
+      [
+        "アカウントを作成",
+        "新規登録からLovegobuyに必要事項を入力し、確認を済ませてください。"
+      ],
+      [
+        "商品ページを開く",
+        "ここで商品を選び、詳細ページを確認してから、対応するLovegobuyの商品ページを開きます。"
+      ],
+      [
+        "商品仕様を確認",
+        "サイズ、色、数量を選びます。カートに追加する前に販売者の説明を読んでください。"
+      ],
+      [
+        "商品代金を支払う",
+        "商品代金と中国国内送料を確認します。国際送料は別途支払います。"
+      ],
+      [
+        "倉庫への到着を待つ",
+        "商品が受領され入庫するまで、注文一覧で購入状況を追跡します。"
+      ],
+      [
+        "検品写真を確認",
+        "倉庫写真を開き、商品仕様と外観を確認します。問題があれば発送前にサポートへ連絡してください。"
+      ],
+      [
+        "荷物の発送を申請",
+        "保管中の商品を選び、住所を確認して、配送方法と梱包方法を比較します。"
+      ],
+      [
+        "送料を支払い追跡",
+        "アカウントに表示された送料を支払います。金額の調整があれば確認し、追跡情報の更新を確認してください。"
+      ]
+    ],
+    "faq": [
+      [
+        "Lovegobuy Sheet LabはLovegobuyの公式サイトですか？",
+        "いいえ。lovegobuysheetlab.comは独立した商品ディレクトリおよび購入ガイドです。商品ページの閲覧や購入手順の理解をお手伝いしますが、ご注文の販売、検品、発送は行いません。アカウント登録、支払い、注文サポート、荷物の取り扱いはLovegobuyで行われます。一部の外部リンクはアフィリエイトリンクです。"
+      ],
+      [
+        "この商品リストの情報はどこから取得していますか？",
+        "商品、参照元価格、参考用の検品写真はkakobuymake.comから取得しています。ホームページには少数の新着商品とカテゴリーのプレビューを掲載しています。「すべての商品」またはカテゴリーのページを開くと、さらに多くの参照元商品と各詳細ページを閲覧できます。"
+      ],
+      [
+        "このサイトで商品を探し、比較するにはどうすればよいですか？",
+        "カテゴリーまたは「すべての商品」を開き、キーワードを入力して結果を確認してください。検索していないときは、新着順、価格順、閲覧数順で並べ替えられます。パソコンでは列数も変更できます。Lovegobuyへ進む前に詳細ページを開き、元の商品名、Weidian ID、写真を比較してください。"
+      ],
+      [
+        "表示価格がLovegobuyの決済金額と異なるのはなぜですか？",
+        "参照元の商品価格を表示しており、任意で参考レートによる通貨換算ができます。配達までの総額を示す見積もりではありません。販売者の商品仕様、在庫変動、中国国内配送、国際輸送、税金、その他の費用により決済金額が変わる場合があります。換算できない場合はUSDで表示します。正確な商品と最終的な費用はLovegobuyで確認してください。"
+      ],
+      [
+        "上のスライド写真と下のギャラリーは何が違いますか？",
+        "上のスライド写真は、対応するWeidian商品で利用できる販売者掲載写真を読み込みます。下のギャラリーにはメインサイトの参照元商品ページに付属する写真が表示され、参考用の検品写真が含まれる場合があります。両者は別の写真集です。どちらも、今ご自身が注文した商品の検品記録ではありません。"
+      ],
+      [
+        "写真が1枚しかない商品や、検品写真のない商品があるのはなぜですか？",
+        "販売者のギャラリーを取得できない場合は、参照元の表紙画像を残し、代替表示であることを示します。また、参照元の商品ページに追加の検品写真がない場合もあります。別の商品画像で補うことはありません。販売者の説明を確認し、必要な写真はご自身のLovegobuy注文から依頼してください。"
+      ],
+      [
+        "このサイトの写真は正規品であること、サイズの適合、品質を保証しますか？",
+        "いいえ。販売者の写真と参考用の検品写真は、見える細部の比較に役立ちますが、真贋の鑑定、サイズの着用感、今後届く商品のすべての状態を保証するものではありません。販売者の説明と寸法を読み、正確な商品仕様を選び、倉庫にあるご自身の商品の検品写真を確認してください。"
+      ],
+      [
+        "自分の商品の倉庫検品では何を確認すべきですか？",
+        "商品、色、サイズ表記、数量が支払い済みの注文と一致するか確認してください。複数の角度から形、縫製、傷や汚れ、依頼した採寸結果を確認します。細部が不鮮明、または隠れている場合は、海外発送を承認する前にLovegobuyへ説明や接写を依頼してください。見えない部分を推測で判断しないでください。"
+      ],
+      [
+        "このサイトで見つけた商品を購入するにはどうすればよいですか？",
+        "ディレクトリで商品を選び、サイト内の詳細ページを読んでから「Lovegobuyで開く」を選択します。移動先でWeidian IDを確認し、サイズ、色、数量を選んでください。アカウントが必要な場合は新規登録リンクをご利用ください。購入と支払いはすべてLovegobuyで完了し、このディレクトリでは行いません。"
+      ],
+      [
+        "商品代金を支払った後はどうなりますか？",
+        "Lovegobuyが販売者からの購入を手配し、商品は中国の倉庫へ送られます。アカウントの注文画面で進捗を確認してください。受領と検品後、ご自身の倉庫写真を確認し、問題を解決してから荷物の発送を申請します。販売者の発送や倉庫の処理にかかる時間は変動する場合があります。"
+      ],
+      [
+        "ヨーロッパや北米への配送はどのように計画すればよいですか？",
+        "実際の配送先を入力し、Lovegobuyアカウントで現在利用できる配送ルートを比較してください。送れる品目、荷物の重量と寸法、輸送日数の目安、梱包、保険条件があれば確認します。国際送料は商品代金とは別に支払います。支払う前に配送先で発生する費用や送料の調整を確認してください。いずれのルートも配達や通関を保証するものではありません。"
+      ],
+      [
+        "違う商品が届いた場合や、返品が必要な場合はどうすればよいですか？",
+        "国際発送前に、該当注文からLovegobuyへ連絡し、注文番号、選んだ商品仕様、問題がわかる鮮明な写真を提示してください。利用できる返品・交換手続きと期限を確認します。対象条件、費用、承認は販売者とプラットフォームの現行規則によって異なります。このディレクトリは返金を承認できません。"
+      ]
+    ],
+    "home": [
+      "新着商品",
+      "次のお気に入りはここから。",
+      "商品を見る",
+      "ほかのカテゴリーを探す",
+      "カタログから靴を探しましょう。1足を選ぶ前に商品ページを開き、商品写真と利用可能な検品写真を比較してください。",
+      "Tシャツや普段使いのトップスを探しましょう。サイズの選択肢を確認し、対応する商品の詳細をよくご覧ください。",
+      "普段使いのバッグや新しいスタイルを比較しましょう。正確な商品ページ、寸法、利用可能な参考写真を確認してください。"
+    ],
+    "guide": [
+      [
+        "商品を探す",
+        "新規登録からLovegobuyアカウントを作成します。ここで商品を開き、参照元の商品ページ、商品ID、写真を確認してください。Lovegobuyへ進むか、元のWeidianリンクを検索欄に貼り付けます。"
+      ],
+      [
+        "正確な商品仕様を選ぶ",
+        "販売者の説明を読み、サイズ表を確認します。希望する色、サイズ、数量を選び、カートに追加するか「今すぐ購入」を利用してください。重要な要望は注文の備考欄に記入します。"
+      ],
+      [
+        "商品代金を支払う",
+        "選んだ商品仕様、商品価格、販売者から中国の倉庫までの配送を確認します。利用可能な支払い方法を選び、最初の支払いを確定してください。この支払いに国際送料は含まれません。"
+      ],
+      [
+        "購入状況を確認",
+        "Lovegobuyが購入を手配し、販売者が倉庫へ商品を発送します。アカウントで注文状況を確認し、担当者から追加情報を求められた場合は回答してください。購入や販売者の発送にかかる時間は変動します。"
+      ],
+      [
+        "倉庫の検品写真を確認",
+        "入庫後、「ユーザーセンター → 倉庫」を開き、ご自身の商品写真を確認します。サイズ表記、色、数量、外観を注文内容と比較してください。海外発送を申請する前に、問題を報告するか、より鮮明な詳細写真を依頼します。"
+      ],
+      [
+        "荷物をまとめる",
+        "まとめて発送したい保管中の商品を選び、発送を申請します。配送先情報は慎重に入力してください。サービスを選ぶ前に、利用可能なルート、梱包方法、重量、荷物の寸法を比較します。"
+      ],
+      [
+        "国際送料を支払う",
+        "選んだルートの送料を確認し、任意サービスを見直します。Lovegobuyから国際送料を支払ってください。後からアカウントに表示される金額調整も確認します。見積もりは配達までの最終費用ではありません。"
+      ],
+      [
+        "発送と配達を確認",
+        "Lovegobuyが商品をまとめ、梱包し、発送します。「荷物」ページで状態と追跡情報の更新を確認してください。注文と荷物の記録を保管し、対応が必要な場合はプラットフォームのサポートへ連絡します。"
+      ]
+    ],
+    "messages": {
+      "sourceUnavailable": "保存済みの参照元商品を表示しています。最新カタログの更新は一時的に利用できません。",
+      "officialScreenshots": "Lovegobuy公式チュートリアルのスクリーンショットです。現在の画面や利用可能な選択肢とは異なる場合があります。",
+      "privacyText": "チェックリストの設定をブラウザーに保存します。言語と通貨の選択はURLに反映されます。商品画像は元の配信元から読み込みます。決済情報や配送先住所は収集しません。",
+      "sortLabel": "並べ替え",
+      "photoLabel": "写真",
+      "notFoundHeading": "ページが見つかりません",
+      "productUnavailableTitle": "商品を利用できません"
+    }
+  },
+  "ar": {
+    "name": "العربية",
+    "faqHeading": "الأسئلة الشائعة عن Lovegobuy Sheet Lab",
+    "faqIntro": "إجابات عملية لتصفح قائمة المنتجات هذه، ومقارنة الصور، والتخطيط لطلبك عبر Lovegobuy.",
+    "faqGroups": [
+      [
+        "التصفح والأسعار",
+        "اعثر على صفحة المنتج المناسبة وافهم السعر المعروض."
+      ],
+      [
+        "الصور وفحص الجودة",
+        "افهم ما تعرضه الصور قبل اتخاذ قرار الشراء."
+      ],
+      [
+        "الطلب والشحن",
+        "تعرّف على ما يحدث من إتمام الدفع إلى إرسال طردك."
+      ]
+    ],
+    "nav": [
+      "المنتجات المختارة",
+      "دليل الشراء",
+      "قائمة فحص الجودة",
+      "الأسئلة الشائعة",
+      "إنشاء حساب",
+      "اللغة",
+      "العملة",
+      "القائمة"
+    ],
+    "hero": [
+      "دليلك العملي إلى LOVEGOBUY",
+      "Lovegobuy قائمة المنتجات",
+      "اعثر عليه. افحصه. اشحنه.",
+      "اكتشف المنتجات المختارة، وتحقق من التفاصيل، واعرف خطوتك التالية. مسار أوضح من أول رابط إلى طردك القادم."
+    ],
+    "cats": [
+      "أحذية / نعال",
+      "قمصان تي شيرت",
+      "ملابس عصرية",
+      "سترات بغطاء للرأس",
+      "سراويل",
+      "أحزمة جلدية",
+      "حقائب عصرية",
+      "عطور",
+      "إلكترونيات",
+      "منتجات أخرى"
+    ],
+    "ui": [
+      "منتجات مميزة",
+      "تصفح جميع المنتجات",
+      "دليل المنتجات",
+      "استكشف حسب الفئة",
+      "مجموعة واحدة. عشر طرق للاكتشاف.",
+      "صفحة المنتج في المصدر",
+      "سعر استرشادي · لا يشمل الشحن",
+      "ابحث عن المنتجات",
+      "بحث",
+      "الأحدث",
+      "السعر: من الأقل إلى الأعلى",
+      "السعر: من الأعلى إلى الأقل",
+      "الأكثر مشاهدة",
+      "الأعمدة",
+      "السابق",
+      "التالي",
+      "لم نعثر على منتجات. جرّب بحثًا آخر.",
+      "مصدر المنتجات غير متاح مؤقتًا. يُرجى المحاولة مرة أخرى.",
+      "إعادة المحاولة",
+      "صور البائع",
+      "معرض الصور غير متاح. نعرض صورة الغلاف من المصدر.",
+      "تفاصيل المنتج",
+      "افتح في Lovegobuy",
+      "معرض فحص الجودة / المصدر",
+      "تخص هذه الصور صفحة المنتج هذه في المصدر. تأكد من الخيار المحدد وصور فحص الجودة لمنتجك في المستودع قبل الشحن.",
+      "لا تتوفر صور فحص جودة لهذه الصفحة.",
+      "نسخ رابط Weidian",
+      "تم نسخ الرابط",
+      "خطوتك التالية",
+      "اقرأ دليل الشراء",
+      "قبل الشحن",
+      "تحقق من التفاصيل المهمة.",
+      "طابق الطلب",
+      "تحقق من المقاس واللون والكمية بمقارنتها بالطلب المدفوع.",
+      "افحص الصور",
+      "انظر إلى الخياطة والشكل والعلامات الظاهرة. اطلب صورة مقرّبة عند الحاجة.",
+      "راجع الطرد",
+      "قارن مسار الشحن والوزن والتكلفة الإجمالية قبل الدفع.",
+      "الأسئلة الشائعة",
+      "إجابات أوضح قبل إتمام الشراء.",
+      "دليل منتجات وشراء مستقل. ليس موقعًا رسميًا تابعًا لـ Lovegobuy. قد نحصل على عمولة من روابط الإحالة.",
+      "تُجلب صفحات المنتجات وصور فحص الجودة أو المصدر من kakobuymake.com. وتُجلب معارض البائعين من Weidian عند توفرها.",
+      "أسعار المنتجات تقديرية. الشحن الدولي والضرائب ورسوم الخدمة المحتملة منفصلة. تأكد من جميع التكاليف في Lovegobuy.",
+      "جميع المنتجات",
+      "الرئيسية",
+      "التسوق يبدأ هنا",
+      "8 خطوات، من رابط المنتج إلى التسليم.",
+      "اتبع الخطوات أدناه. تحقق من الخيارات والرسوم الحالية في حسابك على Lovegobuy.",
+      "الشرح الرسمي من Lovegobuy",
+      "عنوان المنتج في المصدر",
+      "المنتج",
+      "المعروض",
+      "العودة إلى المنتجات",
+      "أسعار صرف استرشادية",
+      "أسعار الصرف غير متاحة. تبقى الأسعار بعملة USD.",
+      "تقدم قائمة الفحص",
+      "إعادة ضبط قائمة الفحص",
+      "الخصوصية",
+      "نحفظ في هذا المتصفح تفضيلات اللغة والعملة وقائمة الفحص فقط. لا نجمع بيانات الدفع أو عناوين الشحن. تُحمّل صور المنتجات من مصادرها الأصلية.",
+      "معرّف Weidian",
+      "غير متاح",
+      "تعذر التحقق من رابط البائع. يُرجى مراجعة صفحة المنتج الأصلية.",
+      "صور المنتج من المصدر",
+      "تم تحديث صفحة المنتج",
+      "تشكيلة منتقاة · 12 منتجًا",
+      "دليلك إلى الخطوة التالية",
+      "عرض جميع الفئات"
+    ],
+    "steps": [
+      [
+        "أنشئ حسابك",
+        "استخدم «إنشاء حساب»، ثم أدخل بياناتك وتحقق منها على Lovegobuy."
+      ],
+      [
+        "افتح منتجًا",
+        "اختر منتجًا هنا، وراجع صفحة تفاصيله، ثم افتح صفحة المنتج المطابقة على Lovegobuy."
+      ],
+      [
+        "أكد خيار المنتج",
+        "حدد المقاس واللون والكمية. اقرأ وصف البائع قبل الإضافة إلى السلة."
+      ],
+      [
+        "ادفع ثمن المنتجات",
+        "تحقق من ثمن المنتج والشحن المحلي. يُدفع الشحن الدولي بشكل منفصل."
+      ],
+      [
+        "انتظر الوصول إلى المستودع",
+        "تابع عملية الشراء في قائمة طلباتك حتى استلام المنتج وإدخاله إلى المستودع."
+      ],
+      [
+        "راجع فحص الجودة",
+        "افتح صور المستودع. تحقق من خيار المنتج وحالته الظاهرة، وتواصل مع الدعم بشأن أي مشكلة قبل الشحن."
+      ],
+      [
+        "قدّم طلب شحن الطرد",
+        "حدد المنتجات المخزنة، وأكد عنوانك، وقارن خيارات الشحن والتغليف."
+      ],
+      [
+        "ادفع الشحن وتابع الطرد",
+        "ادفع تكلفة الشحن المعروضة في حسابك. راجع أي تعديل، ثم تابع تحديثات التتبع."
+      ]
+    ],
+    "faq": [
+      [
+        "هل Lovegobuy Sheet Lab موقع رسمي تابع لـ Lovegobuy؟",
+        "لا. lovegobuysheetlab.com دليل منتجات وشراء مستقل. نساعدك على تصفح صفحات المنتجات وفهم الإجراءات؛ ولا نبيع طلبك أو نفحصه أو نشحنه. يجري إنشاء الحساب والدفع ودعم الطلبات والتعامل مع الطرود على Lovegobuy. بعض الروابط الخارجية روابط إحالة."
+      ],
+      [
+        "من أين تأتي المنتجات في هذه القائمة؟",
+        "تُجلب المنتجات وأسعار المصدر وصور فحص الجودة المرجعية من kakobuymake.com. تجمع الصفحة الرئيسية تشكيلة قصيرة من أحدث المنتجات مع معاينات للفئات. افتح «جميع المنتجات» أو صفحة إحدى الفئات لتصفح المزيد من المنتجات من المصدر وصفحات تفاصيلها."
+      ],
+      [
+        "كيف أعثر على المنتجات وأقارنها في هذا الموقع؟",
+        "افتح إحدى الفئات أو «جميع المنتجات»، وأدخل كلمة بحث وراجع النتائج. عند عدم إجراء بحث، يمكنك الترتيب حسب الأحدث أو السعر أو الأكثر مشاهدة؛ ويمكن لمستخدمي الحاسوب تغيير عدد الأعمدة أيضًا. افتح صفحة التفاصيل لمقارنة العنوان الأصلي ومعرّف Weidian والصور قبل الانتقال إلى Lovegobuy."
+      ],
+      [
+        "لماذا قد يختلف السعر المعروض عن مبلغ الدفع في Lovegobuy؟",
+        "نعرض سعر المنتج في المصدر مع إمكانية تحويل العملة بأسعار صرف استرشادية. هذا ليس عرض سعر شاملًا للتسليم. قد تؤثر خيارات البائع وتغيرات المخزون والشحن المحلي والدولي والضرائب والرسوم الأخرى في مبلغ الدفع. إذا تعذر التحويل، تبقى الأسعار بعملة USD. تأكد من المنتج المحدد والرسوم النهائية على Lovegobuy."
+      ],
+      [
+        "ما الفرق بين عارض الصور العلوي والمعرض السفلي؟",
+        "يحمّل العارض العلوي صور إعلان البائع من منتج Weidian المطابق عند توفرها. يحتوي المعرض السفلي على الصور المرفقة بصفحة المنتج في الموقع المصدر، وقد تتضمن صورًا مرجعية لفحص الجودة. هاتان مجموعتان منفصلتان. ولا تمثل أي منهما سجل فحص الجودة لطلب قدمته للتو."
+      ],
+      [
+        "لماذا يعرض منتج صورة واحدة فقط أو لا يعرض صور فحص جودة؟",
+        "قد لا يتوفر معرض البائع، فتحتفظ الصفحة بصورة الغلاف من المصدر وتوضح أنها الصورة البديلة. وقد لا تحتوي صفحة المصدر على صور إضافية لفحص الجودة. لا نعوض النقص بصور منتج آخر. راجع وصف البائع واطلب الصور التي تحتاجها من خلال طلبك الخاص على Lovegobuy."
+      ],
+      [
+        "هل تضمن الصور هنا الأصالة أو ملاءمة المقاس أو جودة المنتج؟",
+        "لا. تساعدك صور البائع وصور فحص الجودة المرجعية على مقارنة التفاصيل الظاهرة؛ لكنها لا تثبت أصالة المنتج، ولا تضمن ملاءمة المقاس، ولا تؤكد كل جوانب منتج سيُسلّم لاحقًا. اقرأ وصف البائع والقياسات، وحدد الخيار الدقيق، وراجع صور فحص الجودة لمنتجك الموجود في المستودع."
+      ],
+      [
+        "ما الذي ينبغي فحصه في صور الجودة لمنتجي في المستودع؟",
+        "طابق المنتج واللون وملصق المقاس والكمية مع طلبك المدفوع. افحص الشكل والخياطة والعلامات الظاهرة وأي قياسات طلبتها من عدة زوايا. إذا كانت إحدى التفاصيل غير واضحة أو محجوبة في الصورة، فاطلب من Lovegobuy توضيحًا أو صورة مقرّبة قبل الموافقة على الشحن إلى الخارج. لا تخمّن ما لا يظهر."
+      ],
+      [
+        "كيف أشتري منتجًا وجدته عبر هذا الموقع؟",
+        "اختر منتجًا من الدليل، واقرأ صفحة تفاصيله داخل الموقع، ثم اختر «افتح في Lovegobuy». تحقق هناك من معرّف Weidian وحدد المقاس واللون والكمية. استخدم رابط «إنشاء حساب» إن كنت بحاجة إلى حساب. تتم جميع المشتريات والمدفوعات على Lovegobuy، وليس في هذا الدليل."
+      ],
+      [
+        "ماذا يحدث بعد دفع ثمن المنتج؟",
+        "يرتب Lovegobuy الشراء من البائع، وتُنقل المنتجات إلى مستودعه في الصين. تابع التقدم من طلبك في حسابك. بعد الاستلام والفحص، راجع صور منتجك في المستودع وعالج أي مشكلات قبل تقديم طلب شحن الطرد. قد تختلف أوقات إرسال البائع ومعالجة المستودع."
+      ],
+      [
+        "كيف أخطط للشحن إلى أوروبا أو أمريكا الشمالية؟",
+        "أدخل وجهتك الفعلية وقارن مسارات الشحن المتاحة حاليًا في حسابك على Lovegobuy. تحقق من أنواع المنتجات المسموح بها ووزن الطرد وأبعاده ومدة النقل التقديرية والتغليف وأي شروط للتأمين. يُدفع الشحن الدولي بشكل منفصل عن ثمن المنتجات. تأكد من رسوم الوجهة وأي تعديل على تكلفة الشحن قبل الدفع؛ فلا يضمن أي مسار التسليم أو التخليص الجمركي."
+      ],
+      [
+        "ماذا أفعل إذا وصل منتج خاطئ أو احتجت إلى إرجاعه؟",
+        "قبل الشحن الدولي، تواصل مع Lovegobuy من خلال الطلب المعني، مع رقم الطلب والخيار الذي حددته وصور واضحة للمشكلة. اسأل عن إجراءات الإرجاع أو الاستبدال المتاحة ومواعيدها النهائية. تعتمد الأهلية والتكاليف والموافقة على البائع وقواعد المنصة الحالية؛ ولا يستطيع هذا الدليل الموافقة على استرداد الأموال."
+      ]
+    ],
+    "home": [
+      "أحدث المنتجات",
+      "اكتشافك القادم يبدأ هنا.",
+      "تصفح المنتجات",
+      "فئات أخرى لاكتشافها",
+      "استكشف الأحذية في الكتالوج. افتح صفحة المنتج لمقارنة صوره وصور فحص الجودة المتاحة قبل اختيار زوج.",
+      "اكتشف قمصان التي شيرت والقطع العلوية اليومية. راجع خيارات المقاسات وألقِ نظرة أقرب على تفاصيل المنتج المطابق.",
+      "قارن الحقائب للاستخدام اليومي والتصاميم الجديدة. تحقق من صفحة المنتج المحددة والأبعاد والصور المرجعية المتاحة."
+    ],
+    "guide": [
+      [
+        "اعثر على منتجك",
+        "أنشئ حساب Lovegobuy باستخدام «إنشاء حساب». افتح منتجًا هنا وراجع صفحته في المصدر ومعرّفه وصوره. انتقل إلى Lovegobuy، أو الصق رابط Weidian الأصلي في شريط البحث لديه."
+      ],
+      [
+        "حدد الخيار الدقيق",
+        "اقرأ وصف البائع وتحقق من جدول المقاسات. حدد اللون والمقاس والكمية المطلوبة، ثم أضف المنتج إلى سلتك أو استخدم «اشترِ الآن». دوّن المتطلبات المهمة في ملاحظات الطلب."
+      ],
+      [
+        "ادفع ثمن المنتجات",
+        "راجع الخيار المحدد وسعر المنتج والتوصيل من البائع إلى المستودع الصيني. اختر وسيلة دفع متاحة وأكد الدفعة الأولى. لا تشمل هذه الدفعة الشحن الدولي."
+      ],
+      [
+        "تابع عملية الشراء",
+        "يرتب Lovegobuy الشراء ويرسل البائع المنتجات إلى مستودعه. تابع حالة الطلب في حسابك وأجب إذا طلب الوكيل معلومات إضافية. قد تختلف مدة الشراء وإرسال البائع."
+      ],
+      [
+        "راجع فحص الجودة في المستودع",
+        "بعد إدخال المنتج إلى المخزون، افتح «مركز المستخدم ← المستودع» وافحص صور منتجك. قارن ملصق المقاس واللون والكمية والحالة الظاهرة بطلبك. أبلغ عن المشكلات أو اطلب صور تفاصيل أوضح قبل تقديم المنتج للشحن إلى الخارج."
+      ],
+      [
+        "جهّز طردك",
+        "حدد المنتجات المخزنة التي تريد إرسالها معًا وقدّمها للشحن. أدخل بيانات التسليم بعناية. قارن المسارات المؤهلة وخيارات التغليف ووزن الطرد وأبعاده قبل اختيار الخدمة."
+      ],
+      [
+        "ادفع الشحن الدولي",
+        "تحقق من مبلغ الشحن المعروض للمسار المحدد وراجع أي خدمات اختيارية. ادفع رسوم الشحن الدولي عبر Lovegobuy. أكد أي تعديل لاحق يظهر في حسابك؛ فالتقدير ليس التكلفة النهائية حتى التسليم."
+      ],
+      [
+        "تابع الإرسال والتسليم",
+        "يجمع Lovegobuy طردك ويغلّفه ويرسله. تابع الحالة وتحديثات التتبع في صفحة «الطرود». احتفظ بسجلات الطلب والطرد، وتواصل مع دعم المنصة إذا احتاجت الشحنة إلى متابعة."
+      ]
+    ],
+    "messages": {
+      "sourceUnavailable": "نعرض التشكيلة المحفوظة من المصدر. تحديث الكتالوج المباشر غير متاح مؤقتًا.",
+      "officialScreenshots": "لقطات شاشة من شرح Lovegobuy الرسمي. قد تختلف الواجهة الحالية والخيارات المتاحة.",
+      "privacyText": "نحفظ تفضيلات قائمة الفحص في متصفحك. تظهر اختيارات اللغة والعملة في عنوان URL. تُحمّل صور المنتجات من مستضيفيها الأصليين. لا نجمع بيانات الدفع أو عناوين الشحن.",
+      "sortLabel": "ترتيب",
+      "photoLabel": "صورة",
+      "notFoundHeading": "الصفحة غير موجودة",
+      "productUnavailableTitle": "المنتج غير متاح"
+    }
+  },
+  "th": {
+    "name": "ไทย",
+    "faqHeading": "คำถามที่พบบ่อยเกี่ยวกับ Lovegobuy Sheet Lab",
+    "faqIntro": "คำตอบที่นำไปใช้ได้จริงสำหรับการดูรายการสินค้า เปรียบเทียบรูปภาพ และวางแผนสั่งซื้อผ่าน Lovegobuy",
+    "faqGroups": [
+      [
+        "การเลือกดูและราคา",
+        "ค้นหาหน้าสินค้าที่ต้องการและเข้าใจราคาที่แสดง"
+      ],
+      [
+        "รูปภาพและการตรวจคุณภาพ",
+        "ทำความเข้าใจรูปภาพก่อนตัดสินใจซื้อ"
+      ],
+      [
+        "การสั่งซื้อและการจัดส่ง",
+        "ทำความเข้าใจขั้นตอนตั้งแต่ชำระเงินจนถึงการส่งพัสดุ"
+      ]
+    ],
+    "nav": [
+      "สินค้าน่าสนใจ",
+      "คู่มือการซื้อ",
+      "รายการตรวจคุณภาพ",
+      "คำถามที่พบบ่อย",
+      "สมัครสมาชิก",
+      "ภาษา",
+      "สกุลเงิน",
+      "เมนู"
+    ],
+    "hero": [
+      "คู่มือใช้งาน LOVEGOBUY",
+      "Lovegobuy รายการสินค้า",
+      "ค้นหา ตรวจสอบ ส่งสินค้า",
+      "สำรวจสินค้าน่าสนใจ ตรวจสอบรายละเอียด และเข้าใจขั้นตอนถัดไป เส้นทางที่ชัดเจนยิ่งขึ้นตั้งแต่ลิงก์แรกจนถึงพัสดุชิ้นถัดไป"
+    ],
+    "cats": [
+      "รองเท้า / รองเท้าแตะ",
+      "เสื้อยืด",
+      "เสื้อผ้าแฟชั่น",
+      "เสื้อฮู้ด",
+      "กางเกง",
+      "เข็มขัดหนัง",
+      "กระเป๋าแฟชั่น",
+      "น้ำหอม",
+      "อุปกรณ์อิเล็กทรอนิกส์",
+      "สินค้าอื่น ๆ"
+    ],
+    "ui": [
+      "สินค้าเด่น",
+      "ดูสินค้าทั้งหมด",
+      "สารบัญสินค้า",
+      "สำรวจตามหมวดหมู่",
+      "หนึ่งคอลเลกชัน สิบทางเลือกในการค้นหา",
+      "หน้าสินค้าต้นทาง",
+      "ราคาอ้างอิง · ไม่รวมค่าจัดส่ง",
+      "ค้นหาสินค้า",
+      "ค้นหา",
+      "ใหม่ล่าสุด",
+      "ราคา: ต่ำไปสูง",
+      "ราคา: สูงไปต่ำ",
+      "เข้าชมมากที่สุด",
+      "คอลัมน์",
+      "ก่อนหน้า",
+      "ถัดไป",
+      "ไม่พบสินค้า ลองค้นหาด้วยคำอื่น",
+      "แหล่งข้อมูลสินค้าไม่พร้อมใช้งานชั่วคราว โปรดลองอีกครั้ง",
+      "ลองอีกครั้ง",
+      "รูปภาพจากผู้ขาย",
+      "แกลเลอรีไม่พร้อมใช้งาน กำลังแสดงรูปปกจากต้นทาง",
+      "รายละเอียดสินค้า",
+      "เปิดใน Lovegobuy",
+      "แกลเลอรีตรวจคุณภาพ / ต้นทาง",
+      "รูปภาพเหล่านี้เป็นของหน้าสินค้าต้นทางนี้ โปรดยืนยันตัวเลือกสินค้าที่แน่นอนและรูปตรวจคุณภาพสินค้าของคุณเองในคลังก่อนจัดส่ง",
+      "ไม่มีรูปตรวจคุณภาพสำหรับหน้าสินค้านี้",
+      "คัดลอกลิงก์ Weidian",
+      "คัดลอกลิงก์แล้ว",
+      "ขั้นตอนถัดไปของคุณ",
+      "อ่านคู่มือการซื้อ",
+      "ก่อนจัดส่ง",
+      "ตรวจสอบรายละเอียดสำคัญ",
+      "เทียบกับคำสั่งซื้อ",
+      "ตรวจสอบขนาด สี และจำนวนให้ตรงกับคำสั่งซื้อที่ชำระแล้ว",
+      "ตรวจดูรูปภาพ",
+      "ดูตะเข็บ รูปทรง และรอยที่มองเห็น ขอรูประยะใกล้หากจำเป็น",
+      "ตรวจสอบพัสดุ",
+      "เปรียบเทียบเส้นทางขนส่ง น้ำหนัก และค่าใช้จ่ายรวมก่อนชำระเงิน",
+      "คำถามที่พบบ่อย",
+      "ทำความเข้าใจให้ชัดเจนก่อนชำระเงิน",
+      "สารบัญสินค้าและคู่มือการซื้ออิสระ ไม่ใช่เว็บไซต์ทางการของ Lovegobuy เราอาจได้รับค่าคอมมิชชันจากลิงก์พันธมิตร",
+      "รายการสินค้าและรูปตรวจคุณภาพหรือรูปจากต้นทางมาจาก kakobuymake.com ส่วนแกลเลอรีของผู้ขายจะดึงจาก Weidian เมื่อมีให้ใช้งาน",
+      "ราคาสินค้าเป็นราคาโดยประมาณ ค่าขนส่งระหว่างประเทศ ภาษี และค่าบริการที่อาจมีคิดแยกต่างหาก โปรดยืนยันค่าใช้จ่ายทั้งหมดใน Lovegobuy",
+      "สินค้าทั้งหมด",
+      "หน้าหลัก",
+      "เริ่มช้อปได้ที่นี่",
+      "8 ขั้นตอน จากลิงก์สินค้าจนถึงการรับสินค้า",
+      "ทำตามขั้นตอนด้านล่าง ตรวจสอบตัวเลือกและค่าธรรมเนียมปัจจุบันในบัญชี Lovegobuy ของคุณเอง",
+      "คู่มือทางการของ Lovegobuy",
+      "ชื่อสินค้าจากต้นทาง",
+      "สินค้า",
+      "กำลังแสดง",
+      "กลับไปยังสินค้า",
+      "อัตราแลกเปลี่ยนอ้างอิง",
+      "อัตราแลกเปลี่ยนไม่พร้อมใช้งาน ราคายังคงแสดงเป็น USD",
+      "ความคืบหน้ารายการตรวจสอบ",
+      "รีเซ็ตรายการตรวจสอบ",
+      "ความเป็นส่วนตัว",
+      "เราเก็บเฉพาะค่าภาษา สกุลเงิน และรายการตรวจสอบที่คุณเลือกไว้ในเบราว์เซอร์นี้ เราไม่เก็บข้อมูลการชำระเงินหรือที่อยู่จัดส่ง รูปสินค้าจะโหลดจากแหล่งต้นฉบับ",
+      "รหัส Weidian",
+      "ไม่พร้อมใช้งาน",
+      "ไม่สามารถยืนยันลิงก์ผู้ขายได้ โปรดตรวจสอบหน้าสินค้าต้นฉบับ",
+      "รูปสินค้าจากต้นทาง",
+      "รีเฟรชข้อมูลสินค้าแล้ว",
+      "คัดสรรมาให้ · 12 สินค้า",
+      "คู่มือสู่ขั้นตอนถัดไปของคุณ",
+      "ดูทุกหมวดหมู่"
+    ],
+    "steps": [
+      [
+        "สร้างบัญชีของคุณ",
+        "เลือกสมัครสมาชิก จากนั้นกรอกและยืนยันข้อมูลของคุณใน Lovegobuy"
+      ],
+      [
+        "เปิดหน้าสินค้า",
+        "เลือกสินค้าที่นี่ ดูหน้ารายละเอียด แล้วเปิดหน้าสินค้าที่ตรงกันใน Lovegobuy"
+      ],
+      [
+        "ยืนยันตัวเลือกสินค้า",
+        "เลือกขนาด สี และจำนวน อ่านคำอธิบายผู้ขายก่อนเพิ่มลงตะกร้า"
+      ],
+      [
+        "ชำระค่าสินค้า",
+        "ตรวจสอบค่าสินค้าและค่าจัดส่งภายในประเทศ ค่าจัดส่งระหว่างประเทศชำระแยกต่างหาก"
+      ],
+      [
+        "รอสินค้าเข้าคลัง",
+        "ติดตามการซื้อในรายการคำสั่งซื้อจนกว่าสินค้าจะได้รับและจัดเก็บเข้าคลัง"
+      ],
+      [
+        "ตรวจสอบรูปตรวจคุณภาพ",
+        "เปิดรูปจากคลัง ตรวจสอบตัวเลือกสินค้าและสภาพที่มองเห็น ติดต่อฝ่ายช่วยเหลือเกี่ยวกับปัญหาก่อนจัดส่ง"
+      ],
+      [
+        "ยื่นคำขอส่งพัสดุ",
+        "เลือกสินค้าที่เก็บในคลัง ยืนยันที่อยู่ แล้วเปรียบเทียบตัวเลือกขนส่งและบรรจุภัณฑ์"
+      ],
+      [
+        "ชำระค่าจัดส่งและติดตาม",
+        "ชำระค่าขนส่งที่แสดงในบัญชี ตรวจสอบยอดปรับปรุงหากมี แล้วติดตามการอัปเดตสถานะ"
+      ]
+    ],
+    "faq": [
+      [
+        "Lovegobuy Sheet Lab เป็นเว็บไซต์ทางการของ Lovegobuy หรือไม่?",
+        "ไม่ใช่ lovegobuysheetlab.com เป็นสารบัญสินค้าและคู่มือการซื้ออิสระ เราช่วยให้คุณดูรายการสินค้าและเข้าใจกระบวนการ แต่ไม่ได้ขาย ตรวจสินค้า หรือจัดส่งคำสั่งซื้อของคุณ การสมัครบัญชี การชำระเงิน การช่วยเหลือเกี่ยวกับคำสั่งซื้อ และการจัดการพัสดุดำเนินการใน Lovegobuy ลิงก์ภายนอกบางส่วนเป็นลิงก์พันธมิตร"
+      ],
+      [
+        "สินค้าในรายการนี้มาจากไหน?",
+        "สินค้า ราคาต้นทาง และรูปตรวจคุณภาพอ้างอิงมาจาก kakobuymake.com หน้าหลักรวมสินค้าล่าสุดที่คัดมาเล็กน้อยกับตัวอย่างแต่ละหมวดหมู่ เปิดสินค้าทั้งหมดหรือหน้าหมวดหมู่เพื่อดูรายการสินค้าต้นทางเพิ่มเติมและหน้ารายละเอียดของแต่ละรายการ"
+      ],
+      [
+        "ฉันจะค้นหาและเปรียบเทียบสินค้าในเว็บไซต์นี้ได้อย่างไร?",
+        "เปิดหมวดหมู่หรือสินค้าทั้งหมด ป้อนคำค้นแล้วดูผลลัพธ์ หากไม่ได้กำลังค้นหา คุณสามารถเรียงตามสินค้าใหม่ ราคา หรือยอดเข้าชม ผู้ใช้คอมพิวเตอร์เปลี่ยนจำนวนคอลัมน์ได้ด้วย เปิดหน้ารายละเอียดเพื่อเปรียบเทียบชื่อเดิม รหัส Weidian และรูปภาพก่อนเข้า Lovegobuy"
+      ],
+      [
+        "ทำไมราคาที่แสดงจึงอาจต่างจากยอดชำระใน Lovegobuy?",
+        "เราแสดงราคาสินค้าจากต้นทาง โดยเลือกแปลงสกุลเงินตามอัตราอ้างอิงได้ ราคานี้ไม่ใช่ใบเสนอราคารวมส่งถึงมือ ตัวเลือกจากผู้ขาย การเปลี่ยนแปลงสต็อก ค่าจัดส่งในประเทศ ค่าขนส่งระหว่างประเทศ ภาษี และค่าใช้จ่ายอื่นอาจมีผลต่อยอดชำระ หากแปลงสกุลเงินไม่ได้ ราคาจะยังเป็น USD โปรดยืนยันสินค้าที่แน่นอนและค่าใช้จ่ายสุดท้ายใน Lovegobuy"
+      ],
+      [
+        "แถบรูปด้านบนกับแกลเลอรีด้านล่างต่างกันอย่างไร?",
+        "แถบรูปด้านบนโหลดรูปที่ผู้ขายลงไว้สำหรับสินค้า Weidian ที่ตรงกันเมื่อมีให้ใช้งาน แกลเลอรีด้านล่างเป็นรูปที่แนบกับหน้าสินค้าต้นทางของเว็บไซต์หลัก ซึ่งอาจรวมรูปตรวจคุณภาพอ้างอิง ทั้งสองส่วนเป็นคนละชุดกัน และไม่มีส่วนใดเป็นบันทึกตรวจคุณภาพของคำสั่งซื้อที่คุณเพิ่งสั่ง"
+      ],
+      [
+        "ทำไมบางสินค้ามีรูปเดียวหรือไม่มีรูปตรวจคุณภาพ?",
+        "แกลเลอรีผู้ขายอาจไม่พร้อมใช้งาน หน้าเว็บจึงคงรูปปกจากต้นทางและระบุว่าเป็นรูปที่ใช้แทน หน้าสินค้าต้นทางอาจไม่มีรูปตรวจคุณภาพเพิ่มเติมเช่นกัน เราไม่นำรูปสินค้าอื่นมาเติมแทน โปรดตรวจสอบคำอธิบายผู้ขายและขอรูปที่ต้องการผ่านคำสั่งซื้อของคุณเองใน Lovegobuy"
+      ],
+      [
+        "รูปที่นี่รับประกันความแท้ ความพอดี หรือคุณภาพสินค้าไหม?",
+        "ไม่รับประกัน รูปจากผู้ขายและรูปตรวจคุณภาพอ้างอิงช่วยเปรียบเทียบรายละเอียดที่มองเห็น แต่ไม่สามารถรับรองความแท้ รับประกันว่าขนาดจะพอดี หรือยืนยันทุกส่วนของสินค้าที่จะได้รับในอนาคต อ่านคำอธิบายและขนาดที่ผู้ขายแจ้ง เลือกตัวเลือกให้ตรง และดูรูปตรวจคุณภาพของสินค้าคุณเองในคลัง"
+      ],
+      [
+        "ฉันควรตรวจอะไรในรูปตรวจคุณภาพของสินค้าตัวเองที่คลัง?",
+        "เทียบสินค้า สี ป้ายขนาด และจำนวนกับคำสั่งซื้อที่ชำระแล้ว ตรวจรูปทรง ตะเข็บ รอยที่มองเห็น และค่าที่ขอให้วัดจากหลายมุม หากรายละเอียดไม่ชัดหรือมีสิ่งบังรูป ให้ขอคำชี้แจงหรือรูประยะใกล้จาก Lovegobuy ก่อนอนุมัติส่งออกต่างประเทศ อย่าเดาส่วนที่มองไม่เห็น"
+      ],
+      [
+        "ฉันจะซื้อสินค้าที่พบผ่านเว็บไซต์นี้ได้อย่างไร?",
+        "เลือกสินค้าในสารบัญ อ่านหน้ารายละเอียดภายในเว็บไซต์ แล้วเลือกเปิดใน Lovegobuy ยืนยันรหัส Weidian และเลือกขนาด สี จำนวนที่นั่น หากยังไม่มีบัญชีให้ใช้ลิงก์สมัครสมาชิก การซื้อและชำระเงินทั้งหมดทำใน Lovegobuy ไม่ใช่ในสารบัญนี้"
+      ],
+      [
+        "หลังชำระค่าสินค้าแล้วจะเกิดอะไรขึ้น?",
+        "Lovegobuy ดำเนินการซื้อจากผู้ขาย แล้วสินค้าจะถูกส่งไปยังคลังในจีน ติดตามความคืบหน้าในส่วนคำสั่งซื้อของบัญชีคุณ หลังรับสินค้าและตรวจแล้ว ให้ดูรูปสินค้าของคุณเองในคลังและจัดการปัญหาให้เรียบร้อยก่อนยื่นคำขอส่งพัสดุ ระยะเวลาที่ผู้ขายส่งสินค้าและคลังดำเนินการอาจแตกต่างกัน"
+      ],
+      [
+        "ฉันควรวางแผนส่งไปยุโรปหรืออเมริกาเหนืออย่างไร?",
+        "กรอกปลายทางจริงและเปรียบเทียบเส้นทางขนส่งที่มีในบัญชี Lovegobuy ของคุณขณะนั้น ตรวจประเภทสินค้าที่อนุญาต น้ำหนักและขนาดพัสดุ ระยะเวลาขนส่งโดยประมาณ บรรจุภัณฑ์ และเงื่อนไขประกันหากมี ค่าขนส่งระหว่างประเทศชำระแยกจากค่าสินค้า ยืนยันค่าธรรมเนียมที่ปลายทางและยอดปรับค่าขนส่งก่อนจ่าย ไม่มีเส้นทางใดรับประกันการส่งถึงหรือการผ่านศุลกากร"
+      ],
+      [
+        "หากได้สินค้าผิดหรือต้องการคืนสินค้าควรทำอย่างไร?",
+        "ก่อนส่งออกต่างประเทศ ให้ติดต่อ Lovegobuy ผ่านคำสั่งซื้อที่มีปัญหา พร้อมหมายเลขคำสั่งซื้อ ตัวเลือกที่สั่ง และรูปปัญหาที่ชัดเจน สอบถามขั้นตอนคืนหรือเปลี่ยนสินค้าที่ใช้ได้และกำหนดเวลา สิทธิ์ ค่าใช้จ่าย และการอนุมัติขึ้นอยู่กับผู้ขายและกฎปัจจุบันของแพลตฟอร์ม สารบัญนี้ไม่สามารถอนุมัติคืนเงินได้"
+      ]
+    ],
+    "home": [
+      "สินค้าล่าสุด",
+      "เริ่มค้นพบสินค้าชิ้นถัดไปได้ที่นี่",
+      "เลือกดูสินค้า",
+      "หมวดหมู่อื่นที่น่าสำรวจ",
+      "สำรวจรองเท้าในแค็ตตาล็อก เปิดหน้าสินค้าเพื่อเปรียบเทียบรูปสินค้าและรูปตรวจคุณภาพที่มี ก่อนเลือกสักคู่",
+      "ค้นหาเสื้อยืดและเสื้อใส่ประจำวัน ดูตัวเลือกขนาดและตรวจรายละเอียดของสินค้าที่ตรงกันให้ชัดเจน",
+      "เปรียบเทียบกระเป๋าใช้ประจำวันและสไตล์ใหม่ ๆ ตรวจหน้าสินค้าที่ตรงรุ่น ขนาด และรูปอ้างอิงที่มี"
+    ],
+    "guide": [
+      [
+        "ค้นหาสินค้าของคุณ",
+        "สร้างบัญชี Lovegobuy ผ่านสมัครสมาชิก เปิดสินค้าที่นี่แล้วตรวจหน้าสินค้าต้นทาง รหัสสินค้า และรูปภาพ จากนั้นเข้า Lovegobuy หรือวางลิงก์ Weidian ต้นฉบับในช่องค้นหาของแพลตฟอร์ม"
+      ],
+      [
+        "เลือกตัวเลือกสินค้าให้ตรง",
+        "อ่านคำอธิบายผู้ขายและตรวจตารางขนาด เลือกสี ขนาด และจำนวนที่ต้องการ แล้วเพิ่มสินค้าลงตะกร้าหรือเลือกซื้อเลย ระบุข้อกำหนดสำคัญในหมายเหตุคำสั่งซื้อ"
+      ],
+      [
+        "ชำระค่าสินค้า",
+        "ตรวจตัวเลือกที่เลือก ราคาสินค้า และการจัดส่งจากผู้ขายไปคลังในจีน เลือกวิธีชำระเงินที่มีและยืนยันการชำระครั้งแรก เงินส่วนนี้ไม่ครอบคลุมค่าจัดส่งระหว่างประเทศ"
+      ],
+      [
+        "ติดตามการซื้อ",
+        "Lovegobuy ดำเนินการซื้อและผู้ขายส่งสินค้าไปคลัง ติดตามสถานะคำสั่งซื้อในบัญชีและตอบกลับหากเจ้าหน้าที่ขอข้อมูลเพิ่ม ระยะเวลาซื้อและการจัดส่งของผู้ขายอาจแตกต่างกัน"
+      ],
+      [
+        "ตรวจรูปคุณภาพจากคลัง",
+        "หลังสินค้าเข้าคลัง เปิดศูนย์ผู้ใช้ → คลังสินค้า และตรวจรูปสินค้าของคุณเอง เทียบป้ายขนาด สี จำนวน และสภาพที่มองเห็นกับคำสั่งซื้อ แจ้งปัญหาหรือขอรูปจุดต่าง ๆ ที่ชัดขึ้นก่อนยื่นสินค้าสำหรับส่งไปต่างประเทศ"
+      ],
+      [
+        "จัดพัสดุของคุณ",
+        "เลือกสินค้าที่เก็บในคลังซึ่งต้องการส่งรวมกัน แล้วยื่นคำขอจัดส่ง กรอกข้อมูลจัดส่งอย่างรอบคอบ เปรียบเทียบเส้นทางที่ใช้ได้ ตัวเลือกบรรจุภัณฑ์ น้ำหนัก และขนาดพัสดุก่อนเลือกบริการ"
+      ],
+      [
+        "ชำระค่าจัดส่งระหว่างประเทศ",
+        "ตรวจยอดค่าขนส่งของเส้นทางที่เลือกและทบทวนบริการเสริม ชำระค่าจัดส่งระหว่างประเทศผ่าน Lovegobuy ยืนยันยอดปรับภายหลังที่แสดงในบัญชี ราคาโดยประมาณไม่ใช่ค่าใช้จ่ายสุดท้ายจนถึงมือผู้รับ"
+      ],
+      [
+        "ติดตามการส่งและการรับสินค้า",
+        "Lovegobuy รวมสินค้า บรรจุ และส่งพัสดุของคุณ ติดตามสถานะและการอัปเดตการขนส่งในหน้าพัสดุ เก็บบันทึกคำสั่งซื้อและพัสดุ และติดต่อฝ่ายช่วยเหลือของแพลตฟอร์มหากการจัดส่งต้องได้รับการดูแล"
+      ]
+    ],
+    "messages": {
+      "sourceUnavailable": "กำลังแสดงรายการต้นทางที่บันทึกไว้ การรีเฟรชแค็ตตาล็อกสดไม่พร้อมใช้งานชั่วคราว",
+      "officialScreenshots": "ภาพหน้าจอจากคู่มือทางการของ Lovegobuy หน้าตาปัจจุบันและตัวเลือกที่มีอาจแตกต่างออกไป",
+      "privacyText": "เราบันทึกค่ารายการตรวจสอบไว้ในเบราว์เซอร์ของคุณ ภาษากับสกุลเงินที่เลือกจะแสดงใน URL รูปสินค้าโหลดจากโฮสต์ต้นฉบับ เราไม่เก็บข้อมูลการชำระเงินหรือที่อยู่จัดส่ง",
+      "sortLabel": "เรียงลำดับ",
+      "photoLabel": "รูปภาพ",
+      "notFoundHeading": "ไม่พบหน้านี้",
+      "productUnavailableTitle": "สินค้าไม่พร้อมใช้งาน"
+    }
+  }
+}
