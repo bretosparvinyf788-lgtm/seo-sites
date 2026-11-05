@@ -26,7 +26,8 @@
   ],
   "vars": {
     "GA_MEASUREMENT_ID": "G-EY5KH97XMY",
-    "GOOGLE_SITE_VERIFICATION": "0Sxd0Ccoc2np2iCWLSoqvayinclUfrCvspyG3tqek_0"
+    "GOOGLE_SITE_VERIFICATION": "0Sxd0Ccoc2np2iCWLSoqvayinclUfrCvspyG3tqek_0",
+    "BING_SITE_VERIFICATION": "4DD3B96656B794E764E803BEA592584F"
   },
   "observability": {
     "enabled": true,
