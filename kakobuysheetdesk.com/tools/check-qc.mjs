@@ -1,0 +1,41 @@
+import assert from 'node:assert/strict';
+import fs from 'node:fs';
+import app from '../worker/index.js';
+const fixture=fs.readFileSync('tools/fixtures/qc-source.html','utf8');
+const i18n=JSON.parse(fs.readFileSync('tools/content.json','utf8'));
+const snapshot=JSON.parse(fs.readFileSync('tools/main-qc.json','utf8'));
+const asset=JSON.parse(fs.readFileSync('tools/assets.json','utf8'));
+const calls=[];
+globalThis.fetch=async url=>{
+ const u=new URL(url);calls.push(u);
+ if(u.hostname==='weidian.com')throw Error('Seller unavailable');
+ assert.equal(u.hostname,'kakobuymake.com');
+ const aid=u.searchParams.get('aid');
+ if(aid==='4246')throw Error('Main source unavailable');
+ if(aid==='4250')return new Response('<a href="https://weidian.com/item.html?itemID=12345678">Source</a>');
+ if(aid==='4249')return new Response('<div class="product-gallery"><img src="/uploads/cover.jpg"><img src="/uploads/cover.jpg"></div><div class="product-details"><a href="https://weidian.com/item.html?itemID='+snapshot.items[aid].id+'">Source</a></div>');
+ const id=snapshot.items[aid]?.id||'7894429943';
+ return new Response('<!-- <a href="https://weidian.com/item.html?itemID=99999999">obsolete</a><img src="https://bad.example/old.jpg"> -->'+fixture.replaceAll('7894429943',id).replace('<div class="product-details">','<img src="/skin/images/lianxi1.jpg"><img src="https://bad.example/promo.jpg"><img src="https://kakobuymake.com.evil.example/uploads/fake.jpg"><img src="http://kakobuymake.com/uploads/insecure.jpg"><div class="product-details">'));
+};
+const page=async(aid,lang='en')=>{const r=await app.fetch(new Request('https://desk.test/product/'+aid+'?lang='+lang),{},{});assert.equal(r.status,200);return r.text();};
+const qcImages=h=>[...(h.split('<div class="qc-grid">')[1]?.split('</div>')[0]||'').matchAll(/<img src="([^"]+)"/g)].map(m=>m[1].replaceAll('&amp;','&'));
+const expected=aid=>snapshot.items[aid].qc.map(u=>asset[u]?'/asset/'+asset[u].key:'/image?url='+encodeURIComponent(u));
+const a=await page('4248'),qc=qcImages(a);
+assert.equal(qc.length,5,'ordinary catalog listing imports main-site QC even if seller is unavailable');
+assert(!qc.join().includes('1-2611101G910J4'),'cover is excluded');
+assert(!qc.join().includes('bad.example')&&!qc.join().includes('lianxi')&&!qc.join().includes('insecure')&&!qc.join().includes('evil.example'));
+assert(a.includes('itemID%3D7894429943'),'obsolete commented source ID is ignored');
+assert(!a.includes('id="gallery-data"'),'warehouse references never become seller carousel');
+assert((await page('4249')).includes(i18n.en.noQc),'a current source gallery with cover only has no additional QC');
+assert.deepEqual(qcImages(await page('4250')),expected('4250'),'source parse failure retains the matching snapshot');
+assert.deepEqual(qcImages(await page('4246')),expected('4246'),'source outage retains QC');
+for(const aid of ['4283','4298','4296']){
+ const before=calls.length,h=await page(aid,'zh-CN');
+ assert(calls.slice(before).some(u=>u.searchParams.get('aid')===aid),'homepage products also read the main source');
+ assert.equal(qcImages(h).length,5,'curated exclusions never override main-site QC');
+ assert(!h.includes('款式不完全匹配')&&!h.includes('qcUnmatched'));
+}
+const before=calls.length,sample=await page('7894400057');
+assert(calls.slice(before).some(u=>u.searchParams.get('aid')==='4232'),'sample resolves the real main-site listing by its Weidian ID');
+assert.equal(qcImages(sample).length,5);
+console.log('Passed QC regression: all listing paths read the main source, live refresh, outage fallback, safe parsing, independent seller gallery, sample ID mapping.');

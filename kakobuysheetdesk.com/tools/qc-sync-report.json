@@ -1,0 +1,191 @@
+{
+  "source": "https://kakobuymake.com/",
+  "syncedAt": "2026-11-11T08:47:39.926552+00:00",
+  "checkedListings": 4355,
+  "listingsWithQc": 4332,
+  "sourceListingsWithoutAdditionalQc": 23,
+  "qcImages": 14751,
+  "sourceErrors": 0,
+  "categories": {
+    "2": {
+      "listings": 1272,
+      "qcImages": 4517
+    },
+    "3": {
+      "listings": 1065,
+      "qcImages": 3578
+    },
+    "4": {
+      "listings": 270,
+      "qcImages": 962
+    },
+    "5": {
+      "listings": 495,
+      "qcImages": 1579
+    },
+    "6": {
+      "listings": 551,
+      "qcImages": 1850
+    },
+    "7": {
+      "listings": 61,
+      "qcImages": 182
+    },
+    "8": {
+      "listings": 180,
+      "qcImages": 567
+    },
+    "9": {
+      "listings": 8,
+      "qcImages": 23
+    },
+    "10": {
+      "listings": 41,
+      "qcImages": 120
+    },
+    "11": {
+      "listings": 412,
+      "qcImages": 1373
+    }
+  },
+  "sourceWithoutAdditionalQc": [
+    {
+      "aid": "4244",
+      "id": "7894183189",
+      "title": "PE版本 NOCTA X NK Glide合集",
+      "category": 2
+    },
+    {
+      "aid": "4238",
+      "id": "7897527612",
+      "title": "OG版本 乔1/乔3/乔4/乔5/乔11 DK腰果花TS 魔术贴特价 真正的顶尖",
+      "category": 2
+    },
+    {
+      "aid": "3922",
+      "id": "7887871269",
+      "title": "YH版本/匡*威 70S 低帮 帆布 川久 合集",
+      "category": 2
+    },
+    {
+      "aid": "3920",
+      "id": "7891116742",
+      "title": "* did*as Sp*ezi*l shoes series",
+      "category": 2
+    },
+    {
+      "aid": "3049",
+      "id": "7871018764",
+      "title": "百搭经典时尚板鞋",
+      "category": 2
+    },
+    {
+      "aid": "3021",
+      "id": "7871074320",
+      "title": "WL Batch J4 Discount Collection",
+      "category": 2
+    },
+    {
+      "aid": "3018",
+      "id": "7871091990",
+      "title": "莆田厂家男子户外跑步登山鞋男女潮流鞋网面透气越野鞋休闲运动鞋",
+      "category": 2
+    },
+    {
+      "aid": "3016",
+      "id": "7871006852",
+      "title": "G版本 DK福利特价  自主定制款式 非品牌",
+      "category": 2
+    },
+    {
+      "aid": "3098",
+      "id": "7871054448",
+      "title": "时尚休闲运动板鞋",
+      "category": 2
+    },
+    {
+      "aid": "3072",
+      "id": "7871002956",
+      "title": "UF 01 All fashion hot casual shoes-SQ",
+      "category": 2
+    },
+    {
+      "aid": "3068",
+      "id": "7871105816",
+      "title": "秒杀链接福利款（收藏更快发货，非质量问题不退不换）",
+      "category": 2
+    },
+    {
+      "aid": "3065",
+      "id": "7871103846",
+      "title": "时尚经典百搭鞋子",
+      "category": 2
+    },
+    {
+      "aid": "3061",
+      "id": "7871080318",
+      "title": "时尚潮流男女板鞋AD-001T",
+      "category": 2
+    },
+    {
+      "aid": "3729",
+      "id": "7890728982",
+      "title": "跨境专供纯棉潮牌印花短袖T恤男士夏季新款潮流宽松百搭圆领体恤",
+      "category": 3
+    },
+    {
+      "aid": "2838",
+      "id": "7755499725",
+      "title": "Ralph Lauren, Lacoste, Nike Ribbed Tank",
+      "category": 3
+    },
+    {
+      "aid": "3736",
+      "id": "7891196504",
+      "title": "运动服饰合集（外套与长裤）",
+      "category": 4
+    },
+    {
+      "aid": "1072",
+      "id": null,
+      "title": "Nike x Supreme Arc Corduroy jacket",
+      "category": 5
+    },
+    {
+      "aid": "1005",
+      "id": "13",
+      "title": "Nike Sportswear Hoodie/Sweater/Pants [22",
+      "category": 5
+    },
+    {
+      "aid": "4093",
+      "id": "7891987228",
+      "title": "短裤 纯色款",
+      "category": 6
+    },
+    {
+      "aid": "1889",
+      "id": "7738755306",
+      "title": "Burberry Shorts",
+      "category": 6
+    },
+    {
+      "aid": "3125",
+      "id": "7871914184",
+      "title": "DJ-jump6-工厂”限时“活动皮带合集-cl-",
+      "category": 7
+    },
+    {
+      "aid": "4171",
+      "id": "7894684348",
+      "title": "2026终活动时尚Watche DA（ 现货现发）",
+      "category": 11
+    },
+    {
+      "aid": "3569",
+      "id": "7877979425",
+      "title": "HYSTERIC GLAMOUR歇斯底里魅力地毯地垫坐垫防滑tufting植绒刺",
+      "category": 11
+    }
+  ]
+}

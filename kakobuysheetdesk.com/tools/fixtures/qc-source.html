@@ -1,0 +1,99 @@
+<div class="product-gallery">
+    <div class="main">
+        
+        <div class="main-image-container">
+            
+            <img id="mainImage" src="/uploads/allimg/20261110/1-2611101G910J4.jpg" alt="竞技场 anontop版 自主 EU40-46" class="main-image" onerror="this.src='skin/images/lianxi1.jpg'; this.alt='Image not available';">
+        </div>
+
+        
+        <div class="thumbnail-carousel">
+                                <img src="/uploads/allimg/20261110/1-2611101G910J4.jpg" 
+                         alt="竞技场 anontop版 自主 EU40-46" 
+                         class="thumbnail active" 
+                         onclick="switchMainImage(this)">
+                                    <img src="/uploads/allimg/20261110/1-2611101G911623.jpg" 
+                         alt="竞技场 anontop版 自主 EU40-46" 
+                         class="thumbnail " 
+                         onclick="switchMainImage(this)">
+                                    <img src="/uploads/allimg/20261110/1-2611101G911D2.jpg" 
+                         alt="竞技场 anontop版 自主 EU40-46" 
+                         class="thumbnail " 
+                         onclick="switchMainImage(this)">
+                                    <img src="/uploads/allimg/20261110/1-2611101G912341.jpg" 
+                         alt="竞技场 anontop版 自主 EU40-46" 
+                         class="thumbnail " 
+                         onclick="switchMainImage(this)">
+                                    <img src="/uploads/allimg/20261110/1-2611101G913P4.jpg" 
+                         alt="竞技场 anontop版 自主 EU40-46" 
+                         class="thumbnail " 
+                         onclick="switchMainImage(this)">
+                                    <img src="/uploads/allimg/20261110/1-2611101G914340.jpg" 
+                         alt="竞技场 anontop版 自主 EU40-46" 
+                         class="thumbnail " 
+                         onclick="switchMainImage(this)">
+                        </div>
+    </div>
+</div>
+
+
+
+
+
+<script>
+    // 确保所有代码都在 DOM 加载完成后执行
+    document.addEventListener('DOMContentLoaded', function() {
+
+        // 获取主图元素
+        const mainImage = document.getElementById('mainImage');
+
+        // 定义 switchMainImage 函数
+        function switchMainImage(thumbnail) {
+            if (mainImage && thumbnail) {
+                console.log('Switching to image:', thumbnail.src); // 调试信息
+                mainImage.src = thumbnail.src;
+                mainImage.alt = thumbnail.alt;
+
+                // 更新缩略图激活状态
+                const thumbnails = document.querySelectorAll('.thumbnail');
+                thumbnails.forEach(thumb => thumb.classList.remove('active'));
+                thumbnail.classList.add('active');
+            } else {
+                console.error('Main image or thumbnail element not found.');
+            }
+        }
+
+        // 为所有缩略图添加点击事件
+        const thumbnails = document.querySelectorAll('.thumbnail');
+        thumbnails.forEach(thumbnail => {
+            thumbnail.addEventListener('click', function() {
+                switchMainImage(this);
+            });
+
+            // （可选）添加鼠标悬停效果
+            thumbnail.addEventListener('mouseenter', function() {
+                if (!this.classList.contains('active')) {
+                    switchMainImage(this);
+                }
+            });
+        });
+
+        // 初始化：确保第一个缩略图是激活状态，并且主图显示第一个缩略图的图片
+        if (thumbnails.length > 0) {
+            const firstThumbnail = thumbnails[0];
+            if (!firstThumbnail.classList.contains('active')) {
+                firstThumbnail.classList.add('active');
+            }
+            // 将主图设置为第一个缩略图的图片
+            mainImage.src = firstThumbnail.src;
+            mainImage.alt = firstThumbnail.alt;
+            console.log('Initial main image set to:', firstThumbnail.src); // 调试信息
+        } else {
+            console.warn('No thumbnails found. Using default image.');
+            // 如果没有缩略图，主图保持默认值或触发 onerror
+        }
+    });
+</script>
+
+
+            <div class="product-details"><h1 class="product-title">Warehouse reference fixture</h1><span class="current-price price">$27.00</span><a href="https://weidian.com/item.html?itemID=7894429943">Source</a></div>
