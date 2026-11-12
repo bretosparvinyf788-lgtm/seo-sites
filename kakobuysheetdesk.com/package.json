@@ -5,6 +5,7 @@
   "scripts": {
     "build": "bash scripts/build.sh",
     "validate": "node scripts/validate-artifact.mjs",
-    "dev": "node tools/dev.mjs"
+    "dev": "node tools/dev.mjs",
+    "build:cloudflare": "python3 scripts/build-cloudflare.py"
   }
 }
