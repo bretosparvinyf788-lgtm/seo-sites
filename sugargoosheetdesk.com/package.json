@@ -1,0 +1,1 @@
+{"name":"sugargoosheetdesk","private":true,"type":"module","scripts":{"dev":"node tools/dev.mjs","build":"python3 tools/build.py","check":"node --check worker/index.js && node --check worker/client.js"}}
