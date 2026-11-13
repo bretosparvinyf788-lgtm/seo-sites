@@ -15,5 +15,15 @@
       "enabled": true,
       "head_sampling_rate": 0.1
     }
-  }
+  },
+  "routes": [
+    {
+      "pattern": "kakobuysheetdesk.com/*",
+      "zone_name": "kakobuysheetdesk.com"
+    },
+    {
+      "pattern": "www.kakobuysheetdesk.com/*",
+      "zone_name": "kakobuysheetdesk.com"
+    }
+  ]
 }
