@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "model": "clip-q8+dinov2-small-q8",
+  "source": "https://kakobuymake.com",
+  "updatedAt": "2026-11-17T06:46:15.649Z",
+  "total": 4562,
+  "indexed": 4562,
+  "unavailable": 0,
+  "failures": []
+}

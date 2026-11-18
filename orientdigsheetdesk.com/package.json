@@ -1,0 +1,1 @@
+{"name":"orientdigsheetdesk","private":true,"type":"module","scripts":{"dev":"node scripts/dev.mjs","build":"node scripts/build.mjs","validate":"node scripts/validate-artifact.mjs"}}
