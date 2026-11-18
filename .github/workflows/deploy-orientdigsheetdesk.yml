@@ -1,0 +1,37 @@
+name: Deploy OrientDig SheetDesk
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'orientdigsheetdesk.com/**'
+      - '.github/workflows/deploy-orientdigsheetdesk.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+  deployments: write
+concurrency:
+  group: deploy-orientdigsheetdesk-production
+  cancel-in-progress: false
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Build and validate
+        working-directory: orientdigsheetdesk.com
+        run: |
+          node scripts/build-pages.mjs
+          node scripts/validate-artifact.mjs
+          node scripts/check-sitemaps.mjs
+      - name: Deploy to the domain's Cloudflare account
+        uses: cloudflare/wrangler-action@v4
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN_WENGXIANXIAN2 || secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: '957cff16ad6c8cfb15c078cded9ac3dc'
+          workingDirectory: orientdigsheetdesk.com
+          command: pages deploy pages-dist --project-name=orientdigsheetdesk --branch=main --commit-hash=${{ github.sha }}
+          gitHubToken: ${{ secrets.GITHUB_TOKEN }}
