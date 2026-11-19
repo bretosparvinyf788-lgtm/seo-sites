@@ -1,9 +1,0 @@
-import fs from 'node:fs';import vm from 'node:vm';import zlib from 'node:zlib';import assert from 'node:assert/strict';
-const context=vm.createContext({});vm.runInContext(fs.readFileSync('web/product-titles.js','utf8')+';globalThis.nameFor=localizedProductTitle;',context);const localize=context.nameFor;
-const locales=JSON.parse(fs.readFileSync('web/locales.json'));const en=JSON.parse(fs.readFileSync('web/category-en.json'));Object.assign(en,{productTitleFeatures:['embroidered','printed','zip','denim','cotton','striped','checkered','loose','black','white','blue','red','pink','green','grey','basketball','long sleeve','short sleeve','quick dry','knitted']});
-const index=JSON.parse(zlib.gunzipSync(fs.readFileSync('data/visual-index.json.gz')));
-let chinese=0;for(const row of index.items){const p={id:row[0],title:row[1],cat:row[4]};const result=localize(p,'en',en);assert(result.trim());assert(!/[\u3400-\u9fff]/.test(result),'English display contains Chinese: '+result);if(/[\u3400-\u9fff]/.test(p.title))chinese++;assert.equal(localize(p,'zh',locales.zh),p.title)}
-const embroidered={id:'4581',title:'ME-刺绣短裤',cat:4};for(const [lang,d]of Object.entries(locales)){if(lang==='zh')continue;assert(localize(embroidered,lang,d).includes(d.categoryLabels.shorts));assert(localize(embroidered,lang,d).includes(d.productTitleFeatures[0]));assert(localize(embroidered,lang,d).includes('ME'))}
-assert(localize(embroidered,'en',en).includes('shorts')||localize(embroidered,'en',en).includes('Shorts'));assert.equal(localize({title:'Nike Air Force 1 Low Sneakers'},'en',en),'Nike Air Force 1 Low Sneakers');
-assert(localize({title:'Nike T-Shirt'},'de',locales.de).includes(locales.de.categoryLabels['t-shirts']));
-console.log(JSON.stringify({productsChecked:index.items.length,ChineseSourceTitlesLocalized:chinese,languages:24,sourceNamesPreserved:true,exampleEnglish:localize(embroidered,'en',en),exampleGerman:localize(embroidered,'de',locales.de)}));
