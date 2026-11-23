@@ -154,6 +154,7 @@ h1 { margin: 17px 0 18px; font-size: clamp(2.7rem, 6.2vw, 4.8rem); line-height: 
 .product-facts span { padding: 7px 11px; color: #5f5956; background: var(--soft); border: 1px solid var(--line); border-radius: 999px; font-size: .78rem; font-weight: 700; }
 .notice { padding: 15px 17px; color: #684738; background: #fff6f1; border: 1px solid #f1d3c5; border-radius: 12px; font-size: .9rem; }
 .detail-actions { display: grid; gap: 10px; margin-top: 22px; }
+.product-cta { width: 100%; min-height: 54px; font-size: 1rem; box-shadow: 0 12px 28px rgba(240, 47, 85, .2); }
 .detail-source { margin-top: 24px; color: var(--muted); font-size: .86rem; word-break: break-all; }
 .qc-reference { margin-top: 82px; padding-top: 62px; border-top: 1px solid var(--line); }
 .qc-reference-head { display: flex; justify-content: space-between; align-items: end; gap: 28px; margin-bottom: 26px; }
@@ -213,6 +214,7 @@ h1 { margin: 17px 0 18px; font-size: clamp(2.7rem, 6.2vw, 4.8rem); line-height: 
   .listing-tools { grid-template-columns: 1fr; }
   .sort-select { min-height: 50px; }
   .product-detail-grid { grid-template-columns: 1fr; }
+  .product-cta { position: sticky; bottom: 12px; z-index: 20; min-height: 58px; }
   .qc-reference { margin-top: 58px; padding-top: 44px; }
   .qc-reference-head { display: block; }
   .qc-reference-head > strong { display: block; margin-top: 12px; }

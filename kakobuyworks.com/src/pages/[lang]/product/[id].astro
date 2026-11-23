@@ -50,7 +50,19 @@ const structuredData = {
         <div class="product-facts"><span>{product.category}</span>{product.marketplaceId && <span>Weidian · {product.marketplaceId}</span>}</div>
         <p class="notice">{copy.product.currentNotice}</p>
         <div class="detail-actions">
-          {product.kakobuyUrl && <a class="button" href={product.kakobuyUrl} target="_blank" rel="nofollow sponsored">{copy.product.openKakobuy} →</a>}
+          {product.kakobuyUrl && <a
+            class="button product-cta"
+            href={product.kakobuyUrl}
+            target="_blank"
+            rel="nofollow sponsored"
+            data-track-event="click_kakobuy"
+            data-track-location="product_detail"
+            data-track-item-id={product.id}
+            data-track-item-name={product.title}
+            data-track-item-category={product.category}
+            data-track-currency={product.price ? 'USD' : undefined}
+            data-track-value={product.price ?? undefined}
+          >{copy.product.openKakobuy} →</a>}
         </div>
         <p class="detail-source">{copy.product.sourceRecord}: {product.id}{product.marketplaceId ? ` · ${product.marketplaceId}` : ''}</p>
       </div>
@@ -66,6 +78,26 @@ const structuredData = {
     </section>
   </section>
   <script>
+    const trackedCta = document.querySelector('[data-track-event="click_kakobuy"]');
+    const productAnalytics = trackedCta instanceof HTMLAnchorElement ? {
+      id: trackedCta.dataset.trackItemId || '',
+      name: trackedCta.dataset.trackItemName || '',
+      category: trackedCta.dataset.trackItemCategory || '',
+      price: Number(trackedCta.dataset.trackValue || 0)
+    } : null;
+    const analyticsWindow = window as Window & { gtag?: (...args: unknown[]) => void };
+    if (productAnalytics) analyticsWindow.gtag?.('event', 'view_item', {
+      currency: 'USD',
+      value: productAnalytics.price,
+      items: [{
+        item_id: productAnalytics.id,
+        item_name: productAnalytics.name,
+        item_category: productAnalytics.category,
+        price: productAnalytics.price,
+        quantity: 1
+      }]
+    });
+
     const mainImage = document.querySelector('#main-product-image');
     document.querySelectorAll('[data-image]').forEach((button) => {
       button.addEventListener('click', () => {

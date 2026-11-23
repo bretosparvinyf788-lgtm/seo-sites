@@ -35,7 +35,14 @@ const signupLabels: Record<Lang, string> = {
       <a class:list={{ active: isFaq }} aria-current={isFaq ? 'page' : undefined} href={`/${lang}/#faq`}>{copy.nav.faq}</a>
     </nav>
     <div class="nav-actions">
-      <a class="button button-small signup-button" href="https://ikako.vip/r/wtqaa" target="_blank" rel="nofollow sponsored">{signupLabels[lang]}</a>
+      <a
+        class="button button-small signup-button"
+        href="https://ikako.vip/r/wtqaa"
+        target="_blank"
+        rel="nofollow sponsored"
+        data-track-event="signup_click"
+        data-track-location="header"
+      >{signupLabels[lang]}</a>
       <details class="language-menu">
         <summary>{languages[lang].label} <small>{languages[lang].short}</small> <span aria-hidden="true">⌄</span></summary>
         <div class="language-list">

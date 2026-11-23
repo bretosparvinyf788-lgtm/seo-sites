@@ -24,7 +24,7 @@ export const onRequest = defineMiddleware(async ({ request, url }, next) => {
     headers.set('cache-control', 'public, max-age=3600, s-maxage=86400');
   }
 
-  headers.set('x-kakobuyworks-build', '20260929-3');
+  headers.set('x-kakobuyworks-build', '20261123-1');
   return new Response(response.body, {
     status: response.status,
     statusText: response.statusText,

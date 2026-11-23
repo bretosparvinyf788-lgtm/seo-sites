@@ -2,6 +2,7 @@ import { load } from 'cheerio';
 
 const runtimeEnv = (import.meta as ImportMeta & { env?: Record<string, string | undefined> }).env;
 const SOURCE_SITE = (runtimeEnv?.SOURCE_SITE || (typeof process !== 'undefined' ? process.env.SOURCE_SITE : undefined) || 'https://kakobuymake.com').replace(/\/$/, '');
+const KAKOBUY_AFFILIATE_CODE = 'wtqaa';
 
 // The source-wide catalog currently contains one live item without a category.
 // Keep it discoverable under Other Stuff without copying its product data.
@@ -58,6 +59,18 @@ function absoluteUrl(value?: string | null) {
   if (!value) return '';
   try {
     return new URL(value, `${SOURCE_SITE}/`).href;
+  } catch {
+    return '';
+  }
+}
+
+function withKakobuyAffiliateCode(value?: string | null) {
+  if (!value) return '';
+  try {
+    const url = new URL(value, `${SOURCE_SITE}/`);
+    if (!/(^|\.)kakobuy\.com$/i.test(url.hostname)) return url.href;
+    url.searchParams.set('affcode', KAKOBUY_AFFILIATE_CODE);
+    return url.href;
   } catch {
     return '';
   }
@@ -284,7 +297,7 @@ export async function getProduct(id: string): Promise<SourceProductDetail | null
     sourceUrl: `${SOURCE_SITE}${path}`,
     category,
     gallery,
-    kakobuyUrl: absoluteUrl(kakobuyUrl),
+    kakobuyUrl: withKakobuyAffiliateCode(kakobuyUrl),
     marketplaceId
   };
 }

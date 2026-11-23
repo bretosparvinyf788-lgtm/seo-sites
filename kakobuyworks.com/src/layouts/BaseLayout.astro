@@ -65,8 +65,33 @@ const bingVerification = import.meta.env.PUBLIC_BING_SITE_VERIFICATION || '';
     {gaId && <script is:inline define:vars={{ gaId }}>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
+      window.gtag = gtag;
       gtag('js', new Date());
       gtag('config', gaId, { anonymize_ip: true });
+
+      document.addEventListener('click', function (event) {
+        const target = event.target instanceof Element
+          ? event.target.closest('[data-track-event]')
+          : null;
+        if (!(target instanceof HTMLAnchorElement)) return;
+
+        const eventName = target.dataset.trackEvent;
+        if (!eventName) return;
+
+        const params = {
+          link_url: target.href,
+          link_text: (target.textContent || '').trim(),
+          item_id: target.dataset.trackItemId,
+          item_name: target.dataset.trackItemName,
+          item_category: target.dataset.trackItemCategory,
+          location: target.dataset.trackLocation,
+          currency: target.dataset.trackCurrency,
+          value: target.dataset.trackValue ? Number(target.dataset.trackValue) : undefined
+        };
+        gtag('event', eventName, Object.fromEntries(
+          Object.entries(params).filter(([, value]) => value !== undefined && value !== '')
+        ));
+      });
     </script>}
   </head>
   <body>
