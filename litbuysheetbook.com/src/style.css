@@ -57,3 +57,9 @@ footer{background:#f5f5f5;border-top:1px solid var(--line);padding:34px 0 23px}.
 @media(max-width:760px){
   .nav>.tools>.saved-link{top:14px;right:70px}
 }
+
+/* Keep the revenue action prominent, especially on narrow product pages. */
+.detail-copy .purchase-cta{box-shadow:0 12px 26px #7a5a001f;font-size:14px;font-weight:650}
+@media(max-width:760px){
+  .detail-copy .purchase-cta{position:sticky;bottom:12px;z-index:20;min-height:54px;box-shadow:0 10px 28px #0003}
+}
