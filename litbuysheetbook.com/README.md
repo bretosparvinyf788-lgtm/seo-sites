@@ -26,7 +26,9 @@ Catalog and QC data come from https://kakobuymake.com, with no separate product 
 
 Registration: https://litbuy.com/register?inviteCode=E32JME4UQ
 
-Purchase: https://litbuy.com/product/2/{verified_item_id}?inviteCode=7N6D4Y6EE
+Purchase: https://litbuy.com/product/2/{verified_item_id}?inviteCode=E32JME4UQ
+
+The owner confirmed `E32JME4UQ` for all registration and purchase referrals on 2026-11-25. Product links are normalized to this code, including source fixtures that retain their original referral parameters.
 
 ## Search metadata
 

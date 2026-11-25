@@ -1,6 +1,6 @@
 const ORIGIN='https://kakobuymake.com';
 const REGISTER='https://litbuy.com/register?inviteCode=E32JME4UQ';
-const PURCHASE_CODE='7N6D4Y6EE';
+const PURCHASE_CODE='E32JME4UQ';
 const DOMAIN='https://litbuysheetbook.com';
 const esc=(s='')=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 function decode(s=''){return s.replace(/&(?:amp|quot|#39|lt|gt|nbsp);|&#(?:x[0-9a-f]+|\d+);/gi,m=>{const d={'&amp;':'&','&quot;':'"','&#39;':"'",'&lt;':'<','&gt;':'>','&nbsp;':' '};if(d[m.toLowerCase()])return d[m.toLowerCase()];const n=m.startsWith('&#x')?parseInt(m.slice(3,-1),16):parseInt(m.slice(2,-1),10);return n>=0&&n<0x110000?String.fromCodePoint(n):'';})}
