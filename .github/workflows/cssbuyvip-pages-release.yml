@@ -1,0 +1,40 @@
+name: Publish verified CSSBuy VIP to Pages
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: ['.github/workflows/cssbuyvip-pages-release.yml']
+permissions:
+  contents: read
+concurrency:
+  group: cssbuyvip-pages-release
+  cancel-in-progress: false
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+      CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Verify existing target and credentials
+        shell: bash
+        run: |
+          test -n "$CLOUDFLARE_API_TOKEN"
+          test -n "$CLOUDFLARE_ACCOUNT_ID"
+          test "$CLOUDFLARE_ACCOUNT_ID" = "c37c7c3c0846d354bef5e1af0f292753"
+          response="$(curl -fsS -H "Authorization: Bearer $CLOUDFLARE_API_TOKEN" "https://api.cloudflare.com/client/v4/accounts/$CLOUDFLARE_ACCOUNT_ID/pages/projects/cssbuyvip-com")"
+          jq -e '.success == true and .result.name == "cssbuyvip-com" and any(.result.domains[]?; . == "cssbuyvip.com")' <<< "$response" > /dev/null
+      - name: Build and verify complete site
+        working-directory: cssbuyvip.com
+        run: |
+          python3 build.py
+          node --check dist/app.js
+          node --check dist/visual-search.js
+          python3 verify_site.py
+      - name: Publish verified dist to existing production project
+        run: npx --yes wrangler@4 pages deploy cssbuyvip.com/dist --project-name=cssbuyvip-com --branch=main --commit-hash="$GITHUB_SHA" --commit-dirty=true
