@@ -1,0 +1,14 @@
+{
+  "domain": "cssbuyvip.com",
+  "title": "CSSBuy VIP",
+  "analytics": {
+    "measurement_id": "G-S0L11KHDQ7",
+    "enabled": false,
+    "enable_when": "Formal custom-domain release only; no preview tracking"
+  },
+  "registration_url": "https://cssb.uy/2JLm",
+  "purchase_template": "https://www.cssbuy.com/item-micro-{weidian_id}.html?promotionCode=b949d0d72e6d7314",
+  "catalog_source": "https://kakobuymake.com",
+  "product_referral_source": "Current user message overrides earlier platform examples",
+  "preview_url": "https://cssbuyvip.bretosparvinyf788.chatgpt.site"
+}

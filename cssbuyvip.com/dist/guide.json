@@ -1,0 +1,342 @@
+{
+  "steps": [
+    {
+      "title": "Create your CSSBuy account",
+      "titleZh": "创建 CSSBuy 账号",
+      "where": "CSSBuy VIP → Join CSSBuy",
+      "whereZh": "CSSBuy VIP → Join CSSBuy",
+      "actions": [
+        "Select Join CSSBuy in the header. The registration link opens the official CSSBuy platform.",
+        "Use your own email address and a unique password. Complete the fields and verification shown by the current registration form.",
+        "Review the displayed terms yourself before submitting. Sign in and confirm you can see your own account menu."
+      ],
+      "actionsZh": [
+        "点击顶部 Join CSSBuy，打开 CSSBuy 官方注册页面。",
+        "填写自己的邮箱并设置独立密码，按当前注册表单完成必填项和验证。",
+        "自行阅读页面条款后提交，登录并确认可以看到自己的账户菜单。"
+      ],
+      "check": "You are signed into the account you intend to use for purchasing.",
+      "checkZh": "确认登录的是将要用于采购的账号。",
+      "image": "",
+      "width": 0,
+      "height": 0,
+      "imageTitle": "",
+      "imageTitleZh": "",
+      "imageAction": "",
+      "imageActionZh": "",
+      "phoneTip": "Open the phone menu and tap Join CSSBuy. After registration, return to the tab containing the product you chose.",
+      "phoneTipZh": "展开手机菜单并点击 Join CSSBuy。完成注册后，回到所选商品所在的标签页。"
+    },
+    {
+      "title": "Find the exact product",
+      "titleZh": "找到准确商品",
+      "where": "CSSBuy VIP → Spreadsheet → Product detail",
+      "whereZh": "CSSBuy VIP → Spreadsheet → 商品详情",
+      "actions": [
+        "Search an English product keyword or the exact Weidian item ID. Your supplied example is 7875678297.",
+        "Open the internal product page. Compare the original carousel, available style photos and historical QC references.",
+        "Confirm the product ID. Select Buy on CSSBuy; the linked product must keep that same item ID."
+      ],
+      "actionsZh": [
+        "搜索英文关键词或准确的微店商品 ID，本次提供的示例为 7875678297。",
+        "打开站内商品详情，分别查看原始轮播、款式图和历史 QC 参考。",
+        "核对商品 ID 后点击 Buy on CSSBuy，跳转后仍应为同一商品。"
+      ],
+      "check": "The destination item photo, name and marketplace ID describe the same listing.",
+      "checkZh": "跳转后的商品图片、名称和微店 ID 与所选商品一致。",
+      "image": "/assets/guide/official-step-2.webp",
+      "width": 958,
+      "height": 548,
+      "imageTitle": "Copy the original marketplace link",
+      "imageTitleZh": "复制原始商品链接",
+      "imageAction": "The official example shows copying an item URL from the browser address bar on a marketplace. It is an example from another marketplace, not the current Weidian item. Paste your own Weidian item URL into CSSBuy’s search field.",
+      "imageActionZh": "官方示例展示从浏览器地址栏复制电商商品 URL，图中为其他平台示例，并非当前微店商品。将自己准确的微店商品 URL 粘贴到 CSSBuy 搜索框。",
+      "sourceImage": "https://m.cssbuy.com/skin/images/shipforme/step1.jpg",
+      "phoneTip": "Tap a product photo or name to open its detail page. Swipe or tap the original-photo thumbnails, then tap Buy on CSSBuy for the same item.",
+      "phoneTipZh": "点击商品图片或名称进入详情，滑动或点击原始轮播缩略图，再点击 Buy on CSSBuy 打开同一商品。"
+    },
+    {
+      "title": "Select the style, size and quantity",
+      "titleZh": "选择款式、尺码和数量",
+      "where": "CSSBuy product page → Options",
+      "whereZh": "CSSBuy 商品页 → 规格选项",
+      "actions": [
+        "Select the exact colour or style thumbnail on CSSBuy, then choose the required size.",
+        "Compare the seller size chart with a similar garment or shoe that fits you. Confirm units and the meaning of each measurement.",
+        "Set quantity, check availability and read any minimum-quantity requirement. Scroll the full options area on a phone."
+      ],
+      "actionsZh": [
+        "在 CSSBuy 商品页选择准确的颜色或款式缩略图，再选择尺码。",
+        "将卖家尺码表与自己合适的衣物或鞋子对比，核对单位及每个尺寸的含义。",
+        "设置数量，检查库存和起订量。手机端应滚动检查完整规格区域。"
+      ],
+      "check": "Colour/style, size and quantity are selected, and the total reflects your choices.",
+      "checkZh": "颜色或款式、尺码、数量均已选定，总价对应这些选项。",
+      "image": "/assets/guide/official-step-3.webp",
+      "width": 486,
+      "height": 279,
+      "imageTitle": "Review the option selectors",
+      "imageTitleZh": "核对规格选择项",
+      "imageAction": "In this historical product example, inspect the style/size options and quantity beside the item. Use your own desired values; the example selection is not a recommendation.",
+      "imageActionZh": "查看历史商品示例中商品旁的款式、尺码与数量。按自己的需求填写，不要照抄示例值。",
+      "sourceImage": "https://m.cssbuy.com/skin/images/shipforme/buystep3.png",
+      "phoneTip": "Scroll through the full options area on your phone. Check the selected style, size and quantity; open the size chart at full size before deciding.",
+      "phoneTipZh": "在手机上滚动检查完整规格区域，核对款式、尺码和数量；选择前打开完整尺码表查看。"
+    },
+    {
+      "title": "Add a precise purchase note",
+      "titleZh": "填写明确的采购备注",
+      "where": "CSSBuy product page → Remark / Add note",
+      "whereZh": "CSSBuy 商品页 → Remark / Add note",
+      "actions": [
+        "Use the product remark field if the purchase needs a specific instruction. Example: “Please purchase black, size 42, one pair.”",
+        "Keep the note consistent with the selected style, size and quantity. A note does not guarantee a seller can provide an unavailable option.",
+        "Check any service choices and restrictions displayed by CSSBuy before adding the item to the cart."
+      ],
+      "actionsZh": [
+        "有特殊采购要求时在备注栏写清，例如“Please purchase black, size 42, one pair.”。",
+        "备注应与已选款式、尺码、数量一致；备注不能保证卖家提供缺货规格。",
+        "加入购物车前，检查 CSSBuy 展示的服务选项及限制。"
+      ],
+      "check": "The note is clear, specific and consistent with the form.",
+      "checkZh": "备注具体清楚，并与表单选择一致。",
+      "image": "",
+      "width": 0,
+      "height": 0,
+      "imageTitle": "",
+      "imageTitleZh": "",
+      "imageAction": "",
+      "imageActionZh": "",
+      "phoneTip": "Tap the remark field and enter a specific instruction. Dismiss the keyboard so you can recheck the selected variant before continuing.",
+      "phoneTipZh": "点击备注框输入具体要求。收起键盘后，重新检查已选规格再继续。"
+    },
+    {
+      "title": "Review the cart and pay for the item",
+      "titleZh": "核对购物车并支付商品费用",
+      "where": "CSSBuy → Cart / Checkout",
+      "whereZh": "CSSBuy → 购物车 / 结算",
+      "actions": [
+        "Open the cart or checkout from the selected product. Recheck item, style, size and quantity line by line.",
+        "Review the product price, seller-to-warehouse delivery and any selected services or payment charges. This is the item-purchase stage.",
+        "Choose an available payment method and complete payment yourself only after confirming the final order amount. Keep the order number."
+      ],
+      "actionsZh": [
+        "从所选商品进入购物车或结算页，逐项核对商品、款式、尺码和数量。",
+        "核对商品价格、卖家到仓库运费、所选服务及支付费用。这一阶段支付商品采购费用。",
+        "确认最终金额后，自行选择可用方式并完成付款，保留订单号。"
+      ],
+      "check": "A purchase order appears in your account with the correct item and payment status.",
+      "checkZh": "账号内出现对应采购订单，商品和付款状态正确。",
+      "image": "/assets/guide/official-step-5.webp",
+      "width": 486,
+      "height": 280,
+      "imageTitle": "Review the item-order confirmation",
+      "imageTitleZh": "核对商品订单确认页",
+      "imageAction": "Locate Confirm Purchase at the top and the item row below it. Recheck options, quantity, services and total before the Submit To Buy button. This confirmation screen is not a payment receipt.",
+      "imageActionZh": "找到顶部 Confirm Purchase 及其下商品行，在 Submit To Buy 前核对规格、数量、服务及总额。这是订单确认页，不是付款成功凭证。",
+      "sourceImage": "https://m.cssbuy.com/skin/images/shipforme/buystep5.png",
+      "phoneTip": "Scroll through the full cart and confirmation screen on your phone. Check every item row and the final total before you personally confirm payment.",
+      "phoneTipZh": "在手机上滚动查看完整购物车与确认页，核对每个商品及总额后，再自行确认付款。"
+    },
+    {
+      "title": "Follow the purchase and seller delivery",
+      "titleZh": "跟进采购和卖家发货",
+      "where": "CSSBuy account → Purchase order",
+      "whereZh": "CSSBuy 账户 → 采购订单",
+      "actions": [
+        "Open the matching order in your CSSBuy account and check its current status.",
+        "If CSSBuy needs missing information, open the order communication or Add note control and answer for that exact order.",
+        "Wait for the seller to deliver the item to the warehouse. Avoid submitting an international parcel before storage and QC are available."
+      ],
+      "actionsZh": [
+        "在 CSSBuy 账号打开对应采购订单，查看当前状态。",
+        "如 CSSBuy 需要补充信息，打开该订单的沟通或 Add note 控件并回复。",
+        "等待卖家将商品发到仓库。未入库且无 QC 前不要提交国际包裹。"
+      ],
+      "check": "The order progresses to a stored/warehouse state before you inspect it for shipping.",
+      "checkZh": "订单进入入库状态后，再检查并安排国际运输。",
+      "image": "/assets/guide/official-step-6.webp",
+      "width": 996,
+      "height": 200,
+      "imageTitle": "Understand the seller-purchase stage",
+      "imageTitleZh": "了解卖家采购阶段",
+      "imageAction": "This is CSSBuy’s process diagram: an item is selected, purchased and delivered by the seller. It does not show an actual order status. Read progress from your own purchase-order record.",
+      "imageActionZh": "这是 CSSBuy 官方流程示意图，展示选品、采购和卖家配送，不是实际订单状态。应在自己的采购订单记录查看进度。",
+      "sourceImage": "https://m.cssbuy.com/skin/images/shipforme/buystep6.png",
+      "phoneTip": "Open the matching purchase order from your CSSBuy account menu. Use that order’s note or support control for missing details; do not select an unrelated record.",
+      "phoneTipZh": "从 CSSBuy 账号菜单打开对应采购订单。补充资料时使用该订单的留言或支持入口，不要选错记录。"
+    },
+    {
+      "title": "Inspect your own warehouse QC",
+      "titleZh": "检查自己订单的仓库 QC",
+      "where": "User Center → My intl order / Warehouse",
+      "whereZh": "User Center → My intl order / 仓库",
+      "actions": [
+        "Open the stored item in your account and inspect all available photos of your actual unit.",
+        "Compare colour/style, labels, seams, quantity and visible damage with the intended order. Request a missing angle or a specific measurement when needed.",
+        "Resolve any issue through the matching order support controls before submitting the item for international delivery. Historical QC on this directory is a reference only."
+      ],
+      "actionsZh": [
+        "在账号打开已入库商品，检查自己这一件商品的所有可用照片。",
+        "对照订单检查颜色款式、标签、缝线、数量及明显损伤，必要时请求缺失角度或具体测量。",
+        "发现问题时通过对应订单沟通，在提交国际运输前解决。本站历史 QC 仅作参考。"
+      ],
+      "check": "You have inspected your own unit and resolved any question that matters before shipping.",
+      "checkZh": "已检查自己的商品，并在寄出前解决影响收货的疑问。",
+      "image": "/assets/guide/official-step-7.webp",
+      "width": 996,
+      "height": 181,
+      "imageTitle": "Understand the warehouse-inspection stage",
+      "imageTitleZh": "了解仓库检查阶段",
+      "imageAction": "This official process diagram places inspection before parcel submission. It is not a QC photo or proof of your unit being inspected. Open your own stored item to inspect the actual photos.",
+      "imageActionZh": "官方流程图说明入库检查在提交包裹之前。这不是 QC 实拍，也不能证明自己的商品已检查。应打开自己的入库商品查看实际照片。",
+      "sourceImage": "https://m.cssbuy.com/skin/images/shipforme/buystep5_1.png",
+      "phoneTip": "Open your stored item and tap each QC photo to inspect it at full size. Check front/back views, labels and measurements before choosing items to ship.",
+      "phoneTipZh": "打开自己的入库商品，逐张点击 QC 图查看大图，检查正反面、标签及测量结果后再选择寄出商品。"
+    },
+    {
+      "title": "Select stored items for one parcel",
+      "titleZh": "选择要合并寄出的入库商品",
+      "where": "My intl order → Select items → Submit for delivery",
+      "whereZh": "My intl order → 勾选商品 → Submit for delivery",
+      "actions": [
+        "This step requires eligible goods already stored in your account. Open My intl order or the current warehouse section.",
+        "Select only the items you intend to ship together. Check each row, unit quantity and any shipping restriction.",
+        "Choose the delivery submission control. Confirm that every selected item appears in the parcel form."
+      ],
+      "actionsZh": [
+        "此步骤需要账号内已有可提交的入库商品。进入 My intl order 或当前仓库页面。",
+        "仅勾选本次要一起寄出的商品，检查每行商品、件数和运输限制。",
+        "点击提交运输控件，核对包裹表单中列出的商品与刚才选择一致。"
+      ],
+      "check": "The parcel list contains exactly your intended stored items and quantities.",
+      "checkZh": "包裹清单仅包含本次打算寄出的商品和数量。",
+      "image": "/assets/guide/official-step-8.webp",
+      "width": 996,
+      "height": 491,
+      "imageTitle": "Start a parcel from the warehouse list",
+      "imageTitleZh": "从仓库清单创建包裹",
+      "imageAction": "In the official historical example, select the relevant item rows before using the submission button. A blank account cannot reproduce a populated warehouse list.",
+      "imageActionZh": "在官方历史示例中先勾选相应商品行，再使用提交按钮。空账号无法出现已有商品的仓库清单。",
+      "sourceImage": "https://m.cssbuy.com/skin/images/shipforme/buystep7.png",
+      "phoneTip": "Select the checkboxes beside the stored items you want to ship. On the narrow screen, scroll back through the selected rows and quantities before submission.",
+      "phoneTipZh": "勾选本次要寄出的入库商品。手机窄屏提交前，应再次滚动核对已选商品行与件数。"
+    },
+    {
+      "title": "Enter the delivery address",
+      "titleZh": "填写收件地址",
+      "where": "Parcel submission → Delivery details",
+      "whereZh": "包裹提交 → Delivery details",
+      "actions": [
+        "Choose or enter the final recipient and complete delivery address for this parcel. Use the destination fields shown on the current form.",
+        "Verify recipient name, phone, street/building/unit, city, region, destination and postal code. Match any required identity or customs fields to your own records.",
+        "Check the selected address again before comparing routes. A billing address is not automatically your delivery address."
+      ],
+      "actionsZh": [
+        "在此包裹表单选择或填写最终收件人与完整地址，按当前页面字段填写。",
+        "逐项核对姓名、电话、街道楼号房号、城市、地区、目的地及邮编；所需身份或申报信息应使用自己的准确资料。",
+        "比较线路前再次检查已选地址。账单地址不能自动当成收件地址。"
+      ],
+      "check": "The selected destination and postcode match the person and address that will receive the parcel.",
+      "checkZh": "已选目的地和邮编对应实际收件人与收货地址。",
+      "image": "/assets/guide/official-step-10.webp",
+      "width": 1116,
+      "height": 750,
+      "imageTitle": "Verify the selected delivery address",
+      "imageTitleZh": "核对已选收件地址",
+      "imageAction": "Find Shipping Address and the Select Your Address area. Confirm the recipient destination, postcode and contact fields on your own form, then check Select Shipping Method below. Example personal values have been concealed.",
+      "imageActionZh": "找到 Shipping Address 与 Select Your Address 区域，在自己的表单核对收件目的地、邮编及联系方式，再查看下方 Select Shipping Method。图中演示个人资料已遮挡。",
+      "phoneTip": "Check the selected recipient, address and postcode. If the keyboard covers the lower fields, dismiss it and inspect the full saved address before choosing a route.",
+      "phoneTipZh": "核对收件人、地址和邮编。如键盘挡住下方字段，收起键盘后检查完整保存地址，再选择线路。"
+    },
+    {
+      "title": "Compare routes and packaging",
+      "titleZh": "比较线路及包装服务",
+      "where": "Parcel submission → Shipping method / Services",
+      "whereZh": "包裹提交 → Shipping method / Services",
+      "actions": [
+        "Review routes available for your actual goods and destination. Compare restrictions, weight method, service scope and the current estimate.",
+        "Choose any packaging or insurance service based on your own requirements. Read the live service details before selecting.",
+        "Recheck the item list and delivery address after changing route or packaging. Tutorial prices and options are historical examples."
+      ],
+      "actionsZh": [
+        "根据实际商品与目的地查看可用线路，比较限制、计重方式、服务范围和当前报价。",
+        "按自己的需求选择包装或保险服务，勾选前阅读实时服务说明。",
+        "修改线路或包装后，重新检查商品清单及收件地址。教程价格和选项只是历史示例。"
+      ],
+      "check": "The route supports your goods, and the selected services and quote are understood.",
+      "checkZh": "所选线路支持实际商品，并已了解服务内容与报价。",
+      "image": "/assets/guide/official-step-10.webp",
+      "width": 1116,
+      "height": 750,
+      "imageTitle": "Read the historical shipping form",
+      "imageTitleZh": "阅读历史运输表单",
+      "imageAction": "Inspect the shipping options displayed in the official example and locate the destination, route and service areas. Use only options currently offered to your own parcel.",
+      "imageActionZh": "查看官方示例的运输选项，找到目的地、线路和服务区域。自己提交时只选择当前账号包裹实际可用的选项。",
+      "sourceImage": "https://m.cssbuy.com/skin/images/shipforme/buystep8.png",
+      "phoneTip": "Read the full route restrictions and service descriptions. Scroll the shipping form to compare packing options and the resulting quote before continuing.",
+      "phoneTipZh": "阅读完整线路限制及服务说明，滚动运输表单比较包装选项和对应报价后再继续。"
+    },
+    {
+      "title": "Confirm and pay international shipping",
+      "titleZh": "确认并支付国际运费",
+      "where": "Parcel review → Shipping payment",
+      "whereZh": "包裹核对 → 国际运费支付",
+      "actions": [
+        "Review the parcel item list, recipient, route, packing and the current payable international shipping amount.",
+        "Read the applicable declaration and service requirements. Enter accurate information where the form requires it.",
+        "Complete payment yourself when satisfied. Keep the parcel number and verify the actual payment status; a confirmation page alone is not a payment receipt."
+      ],
+      "actionsZh": [
+        "核对包裹商品、收件人、线路、包装及当前应付国际运费。",
+        "阅读适用的申报与服务要求，并按页面要求填写准确资料。",
+        "核实后自行付款，保留包裹号并查看实际付款状态；确认页本身不代表付款成功。"
+      ],
+      "check": "The parcel shows the expected payment/processing status in your own account.",
+      "checkZh": "自己账号中的包裹显示预期的付款或处理状态。",
+      "image": "/assets/guide/official-step-11.webp",
+      "width": 1116,
+      "height": 750,
+      "imageTitle": "Review parcel services and the total",
+      "imageTitleZh": "核对包裹服务和总额",
+      "imageAction": "The historical example shows Choose Packaging on the left and a fee summary with Submit To Ship on the right. Review each selected service and the payable total before continuing. It does not show a successful payment.",
+      "imageActionZh": "历史示例左侧为 Choose Packaging，右侧为费用汇总及 Submit To Ship。继续前核对所选服务及应付总额，图片不表示已付款。",
+      "sourceImage": "https://m.cssbuy.com/skin/images/shipforme/buystep9.png",
+      "phoneTip": "Scroll to the parcel summary and read the full payable amount. Confirm item list, destination and route before you personally complete the shipping payment.",
+      "phoneTipZh": "滚动到包裹汇总并查看完整应付金额，核对商品、目的地和线路后，再自行支付国际运费。"
+    },
+    {
+      "title": "Track delivery and check the received parcel",
+      "titleZh": "跟踪配送并检查收到的包裹",
+      "where": "User Center → My Parcel → Tracking / Add note",
+      "whereZh": "User Center → My Parcel → 物流 / Add note",
+      "actions": [
+        "After dispatch, open My Parcel and read tracking for the matching parcel number. A label creation event is not the same as physical carrier acceptance.",
+        "If an update needs action, use the corresponding parcel support controls and keep the parcel number and evidence.",
+        "When delivered, check the contents and quantity against the order. Retain packaging and photos if there is damage or a missing item before contacting support."
+      ],
+      "actionsZh": [
+        "发出后打开 My Parcel，查看对应包裹号的轨迹。创建面单不等于承运商实际收件。",
+        "出现需要处理的物流信息时，通过对应包裹沟通，保留包裹号和证据。",
+        "送达后对照订单检查商品和数量。如有破损或缺件，保留包装并拍照后联系支持。"
+      ],
+      "check": "The parcel number, tracking and received contents all refer to the same shipment.",
+      "checkZh": "包裹号、物流轨迹和收到的物品属于同一票运输。",
+      "image": "/assets/guide/official-step-12.webp",
+      "width": 996,
+      "height": 520,
+      "imageTitle": "Find tracking in My Parcel",
+      "imageTitleZh": "在 My Parcel 查看物流",
+      "imageAction": "Locate the parcel row and tracking control in this official historical screenshot. Open the tracking details for your own parcel; use its note/support control for a shipment-specific question.",
+      "imageActionZh": "在官方历史截图找到包裹行与物流入口。打开自己的包裹轨迹，针对该票运输的问题使用它的留言或支持入口。",
+      "sourceImage": "https://m.cssbuy.com/skin/images/shipforme/buystep11.png",
+      "phoneTip": "Open My Parcel from your CSSBuy account and tap the tracking entry for the correct parcel. Check the parcel number before sending a support note.",
+      "phoneTipZh": "从 CSSBuy 账号进入 My Parcel，点击对应包裹的物流记录。发送支持留言前核对包裹号。"
+    }
+  ],
+  "source": "https://m.cssbuy.com/buyforme",
+  "captured": "2026-11-27",
+  "image_status": "Official historical desktop images; phone screenshots pending",
+  "illustration_checked": true,
+  "phone_captures_complete": false
+}

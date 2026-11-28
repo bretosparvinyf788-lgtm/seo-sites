@@ -1,0 +1,8 @@
+{
+  "languages": 24,
+  "source_strings": 415,
+  "complete_string_coverage": true,
+  "method": "Offline M2M100 int8, protected original control names, curated Chinese and existing exact translations retained",
+  "native_speaker_proofread": false,
+  "last_reviewed_labels": "2026-11-28:404,retry,sorting,grid"
+}

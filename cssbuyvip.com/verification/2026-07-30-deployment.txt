@@ -1,2 +1,0 @@
-DEPLOYMENT BLOCKED
-Cloudflare API credentials are not available to this repository workflow.

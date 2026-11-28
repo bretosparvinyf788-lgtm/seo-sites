@@ -1,0 +1,1 @@
+Image embeddings: OpenAI CLIP, MIT; ONNX conversion by Xenova. Runtime: Microsoft ONNX Runtime Web, MIT. Uploaded photos are processed locally and are not transmitted.

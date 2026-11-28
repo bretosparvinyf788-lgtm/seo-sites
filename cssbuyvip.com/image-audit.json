@@ -1,0 +1,16 @@
+{
+  "complete": false,
+  "known_qr_contact_images_excluded": [
+    "https://si.geilicdn.com/pcitem1934717690-5b5700000198e6e197a60a20e2c5_682_737.jpg",
+    "https://si.geilicdn.com/pcitem1934717690-6afd00000198e6c7af5d0a8133cc_600_600.jpg",
+    "https://si.geilicdn.com/pcitem1934717690-676400000198e6c8e1200a23038e_600_600.jpg"
+  ],
+  "affected_products": [
+    {
+      "id": "7913134209",
+      "carousel_removed": 1,
+      "styles_removed": 2
+    }
+  ],
+  "scope": "Known contact/QR images found during visual QA; full photo audit remains pending"
+}

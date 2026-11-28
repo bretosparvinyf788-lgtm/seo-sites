@@ -1,0 +1,274 @@
+{
+  "date": "2026-11-28",
+  "domain": "cssbuyvip.com",
+  "project_id": "appgprj_6b0925935e048191b934bb992b3cbe10",
+  "preview_url": "https://cssbuyvip.bretosparvinyf788.chatgpt.site",
+  "completed": [
+    "Green and white responsive catalogue design",
+    "4771 products mapped from4777published source records",
+    "10 independent category pages, sorting and grid controls",
+    "12 homepage featured products",
+    "Independent product routes, original carousel, SKU photos, zoom and bottom QC",
+    "15-platform same-item modal, current CSSBuy first",
+    "24 full-name language choices and independent26-currency estimates",
+    "Join CSSBuy registration and same-item purchase links with user-supplied b949d0d72e6d7314 promotionCode",
+    "12-step CSSBuy-specific expanded guide,9unique official local historical assets,10image placements",
+    "Official local logo and favicon",
+    "Preview analytics disabled; G-S0L11KHDQ7 stored in config",
+    "Known3contact/QR images excluded from1product gallery",
+    "All12independent phone steps have real interface images and operation callouts:3own-site phone captures+5distinct official historical app sources;12placements;zero desktop image reuse",
+    "Phone header always shows language, currency and adjacent Join CSSBuy; hamburger only contains page navigation",
+    "Numbered pagination replaces Show more on spreadsheet, category and search lists:48items per page,total/current page,Previous/Next,numeric links and direct jump;all24language labels",
+    "Real local CLIP image matching for4771catalogue IDs, same-category ranking, max120results and48-item numbered pages",
+    "24-language interface, FAQ and both guide datasets: curated Chinese, existing translations and offline machine translations; not fully native-proofread",
+    "Route-specific data loading, one selected-language shard, content-versioned cacheable data and visual engine assets",
+    "Keyboard ArrowLeft/ArrowRight zoom navigation, pasted CSSBuy item URL search, robust invalid stored preferences",
+    "All guide illustrations keep full natural aspect ratios and link to original images",
+    "404functionalnavigation,strictunknown-routehandling,translatedloadretryandstartupcurrencyguard",
+    "Corruptimagevalidationbeforemodeldownload;strictphotoresultcategoryfamily;reviewedupload/change/erroroperationaltranslations"
+  ],
+  "validation": {
+    "javascript_syntax": "passed",
+    "source_mapping": "4777source records→4771products",
+    "all_purchase_ids_and_static_referrals": "passed4771products",
+    "all_gallery_ids": "passed4771products",
+    "responsive_widths": [
+      390,
+      320
+    ],
+    "mobile_overflow": "none; actual content clientWidths375and305matchscrollWidths",
+    "mobile_menu": "320/390px: language/currency/Join visible with hamburger closed or open;24language and26currency choices;two-column scrolling menus;English/French/Dutch/Arabic samples;EUR/HKD/USD switch and price update;no overflow;desktop navigation retained",
+    "product_interaction": "style selection updates main photo;original carousel loads;CSSBuy modal link includes correct ID and current promotionCode",
+    "guide": "Independent desktop and phone datasets; mobile app examples distinct from browser instructions; missing mobile forms explicitly labelled",
+    "mobile_guide": "Independent12phone steps,12relevant real interface illustrations, full natural ratios without focus crops. Current authenticated downstream forms still limited.",
+    "pagination": "Browser passed:4771products/100pages,48items each on pages1and2 withzero overlap,last page19items,page50andcategorypage2;searchhoodie304items/7pages,q/sort retained;sorting resetsfirst;refresh preservespage;single result clampspage999to1;empty result hasno pagination;390/320andArabic nooverflow;Chinese labels correct",
+    "full_static_audit": "verify_site.py:4771products,4777source records,71565platform URLs,allgallery IDs andlocalroutes pass",
+    "visual_search": "Browser: shoes120same-category results,pants120same-category results,currency switch during inference preserves results,page3has24items",
+    "category_pages": "All10visited:1404,1114,309,521,606,64,233,8,47,468",
+    "latest_regression": "All26currencies,24guide languages,10categories,12FAQ;pagination/sorting/grid/detail/gallery/platformcopy/mobile/photoerrorrecoverypassed"
+  },
+  "pending": [
+    "Optional newer authenticated phone captures: registration completion, final product checkout, opened QC viewer, expanded route selector and actual parcel tracking. Every step already has a relevant real interface image; entry views explicitly labelled.",
+    "Full contact/QR audit across all catalogue images",
+    "Formal GitHub→Cloudflare Pages custom-domain release, GSC/Bing setup and production-only Analytics enablement",
+    "Native-speaker editorial review of additional language translations"
+  ],
+  "source_snapshot": {
+    "date": "2026-11-26",
+    "origin": "kakobuymake.com catalogue imported via verified latest source snapshot",
+    "source_site_commit": "aca1d31c555ffeaf005cb25dd47029099c949b7e",
+    "live_refresh_this_turn": false,
+    "reason": "Main source directHTTP requests unavailable; source data was retrieved from latest persisted project repository"
+  },
+  "gallery_gaps": {
+    "no_separate_styles_in_original_source": 31,
+    "no_qc_in_source": 3
+  },
+  "analytics_enabled": false,
+  "publication": "Full regression fixes prepared for private preview publication",
+  "category_card_revision": {
+    "date": "2026-11-27",
+    "request": "就要刚刚那个卡片形式，现在这个卡片太长了",
+    "layout": "Restored compact natural-width icon/name cards, no stretching; automatic final-row orphan prevention",
+    "desktop_card_height_px": 34,
+    "desktop_card_width_range_px": [
+      90,
+      153
+    ],
+    "item_counts": "Removed from category markup",
+    "descriptions": "Retained on category index and as homepage card tooltips",
+    "validation": {
+      "desktop_browser": "10natural-widthcards,34pxheight,zero count elements;orphan row rebalanced to8+2",
+      "build": "passed",
+      "javascript_syntax": "passed",
+      "responsive_browser": {
+        "wide_desktop_width": 1794,
+        "wide_desktop_rows": [
+          10
+        ],
+        "phone_width": 390,
+        "phone_rows": [
+          2,
+          2,
+          2,
+          2,
+          2
+        ],
+        "narrow_width": 320,
+        "horizontal_overflow": false,
+        "category_counts": 0,
+        "narrow_phone_rows": [
+          2,
+          2,
+          1,
+          2,
+          1,
+          2
+        ],
+        "single_last_card": false
+      }
+    },
+    "publication": "pending"
+  },
+  "functional_audit": {
+    "date": "2026-11-27",
+    "report": "functional-audit.json",
+    "source_html_files": 4801,
+    "products": 4771,
+    "checked_platform_urls": 71565,
+    "static_failures": 0,
+    "browser": {
+      "home": {
+        "categories": 10,
+        "featured_products": 12,
+        "faq_items": 12,
+        "category_counts": 0,
+        "horizontal_overflow": false
+      },
+      "categories": {
+        "all_ten_visited": true,
+        "counts": [
+          1404,
+          1114,
+          309,
+          521,
+          606,
+          64,
+          233,
+          8,
+          47,
+          468
+        ],
+        "initial_limit": 48,
+        "load_more": 96,
+        "sort_low_high": "passed",
+        "grid_preference_persistence": "passed",
+        "phone_four_columns_no_overflow": true
+      },
+      "search": {
+        "exact_id": "7875678297→one correct product",
+        "keyword_and_empty_state": "passed",
+        "pasted_weidian_url": "one correct product after repair"
+      },
+      "locales": {
+        "all_24_selections": "passed; full native names; matching navigation; Arabic RTL",
+        "all_26_currency_selections": "passed display conversion",
+        "currency_rates": "Fixed indicative estimates, not live settlement rates",
+        "full_content_translations": false
+      },
+      "products": {
+        "original_carousel": "passed on sample",
+        "sku_switch": "passed",
+        "zoom_open_escape": "passed",
+        "zero_price": "Check current price, not free",
+        "source_qc_gap": "honest unavailable message",
+        "legacy_route": "source-2978→7757384431 correct same-item referral"
+      },
+      "platform_picker": {
+        "platforms": 15,
+        "icons_loaded": 15,
+        "CSSBuy_first": true,
+        "search_and_empty_state": "passed",
+        "copied_cssbuy_url": "https://www.cssbuy.com/item-micro-7875678297.html?promotionCode=b949d0d72e6d7314",
+        "escape_close": "passed",
+        "phone_dialog_client_and_scroll_width": 368
+      },
+      "faq": {
+        "all_12_click_open": "passed",
+        "keyboard_enter_close": "passed"
+      },
+      "guide": {
+        "steps": 12,
+        "image_placements": 10,
+        "desktop_phone_and_auto": "repaired and passed",
+        "phone_specific_instruction_tips": 12,
+        "english_chinese": "passed",
+        "phone_screenshots_complete": false,
+        "registration_remark_screenshot_gaps": 2
+      },
+      "mobile": {
+        "widths": [
+          390,
+          320
+        ],
+        "complete_menu": "passed;4navigationlinks,24languages,26currencies,adjacentJoinCSSBuy",
+        "image_and_platform_modal": "passed",
+        "guide_auto_phone": "passed",
+        "overflow": false
+      },
+      "analytics": "Disabled in preview, as requested",
+      "console": "No application errors observed; browser-extension metadata errors excluded",
+      "live_scope": "Private preview returned a ChatGPT sign-in gate in the QA browser; interaction tests used the matching local source, not an authenticated live-session test",
+      "registration_scope": "Registration href exactly matches user supplied https://cssb.uy/2JLm; shortlink final redirect was not independently verified this turn",
+      "payment_scope": "No purchase, registration submission, payment or commission-credit transaction performed"
+    },
+    "fixes": [
+      "Added no-referrer policy to list/QC/zoom images; all12featured images then loaded successfully",
+      "Guide Computer/Phone/Auto now changes actual view and adds12phone-specific instruction notes; historical desktop images stay explicitly labelled",
+      "Pasted Weidian item URLs resolve to their exact numeric item ID",
+      "Single-result label uses product rather than products",
+      "Guide validator preserves curated content and phone instructions"
+    ],
+    "pending": {
+      "photo_search": "Unavailable; honest placeholder, not matching",
+      "full_faq_guide_languages": "English/Simplified Chinese;22additional detailed language translations pending",
+      "guide_screenshots": "Phone screenshots and2current action screenshots pending",
+      "image_contact_qr_audit": "Incomplete across all source photos",
+      "production": "Custom domain/GitHub→Cloudflare Pages/GSC/Bing release not done;GAconfig-only disabled"
+    }
+  },
+  "mobile_header_revision": {
+    "date": "2026-11-27",
+    "request": "移动端导航栏上怎么没有语言和货币选项",
+    "cause": "Controls were nested in the collapsed hamburger",
+    "layout": "Logo/menu first row, visible language/currency/Join second row",
+    "currency_trigger": "Code only on phone; desktop retains code and symbol",
+    "qa": {
+      "widths": [
+        320,
+        390
+      ],
+      "small_screen_long_names": "Nederlands fully visible,97pxbutton,clientWidth=scrollWidth95",
+      "independent_pickers": "French stays selected after EUR switch; price39.43EUR from42.86USD",
+      "rtl": "Arabic,zero horizontal overflow,controls retain language/currency/Join order",
+      "menu_picker_mutual_exclusion": "passed;Escape closes picker",
+      "desktop": "Navigation and controls visible;hamburger hidden"
+    }
+  },
+  "pagination_revision": {
+    "date": "2026-11-27",
+    "request": "这个怎么没有页数",
+    "page_size": 48,
+    "total_catalog_products": 4771,
+    "total_catalog_pages": 100,
+    "last_page_products": 19,
+    "routes": [
+      "/spreadsheet/",
+      "/category/{category}/",
+      "/spreadsheet/?q={query}"
+    ],
+    "url_state": [
+      "page",
+      "q",
+      "sort"
+    ],
+    "new_sort_page_reset": true,
+    "invalid_page_clamped": true,
+    "zero_results": "No pagination",
+    "translations": 24,
+    "preview_qa": "Passed desktop,390px,320px,Chinese andRTLArabic"
+  },
+  "photo_search_presentation_revision": {
+    "date": "2026-11-28",
+    "request": "照片搜索不要这样显示很奇怪；还有导航栏也要照片搜索的按钮",
+    "layout": "Compact centred uploader with camera icon and in-panel selected-photo preview; no sample buttons, no empty results heading; results grid appears only after successful matching",
+    "navigation": "Desktop camera/text navigation item plus phone always-visible44pxcamera shortcut and hamburger menu item;existinglanguage/currency/Joinretained",
+    "matching_engine": "Unchanged real browser-local CLIP ranking and numbered result pages",
+    "validation": {
+      "desktop": "Camera/text nav present, centered compact upload, no samples or empty results",
+      "phone": "390/320px camera44px always visible, five navigation links,320px Chinese no horizontal overflow",
+      "actual_upload": "File chooser shoe photo: preview visible120shoe matches48onfirstpage24onpage3;currency switch retains120matchesandpreview"
+    }
+  },
+  "latest_full_audit": "functional-audit.json.latest_full_regression"
+}

@@ -1,0 +1,527 @@
+{
+  "device": "mobile",
+  "scope": "12 independent phone steps, each with real interface capture or explicitly labelled official historical app screen. Entry views are distinguished from downstream forms and transaction receipts.",
+  "steps": [
+    {
+      "title": "Open Join CSSBuy on your phone",
+      "titleZh": "在手机上打开 Join CSSBuy",
+      "where": "Phone browser · registration",
+      "whereZh": "手机浏览器 · 注册",
+      "actions": [
+        "Open this site in Safari or Chrome. Tap the visible Join CSSBuy button beside the currency control; the button below opens the same registration link.",
+        "Complete registration on CSSBuy and keep that account for the later order and warehouse stages. If a chat app opens an embedded browser, use its menu to open the page in your normal browser."
+      ],
+      "actionsZh": [
+        "在 Safari 或 Chrome 中打开本站，点击货币选项旁直接显示的 Join CSSBuy 按钮；下方按钮也会打开相同注册链接。",
+        "在 CSSBuy 完成注册，后续采购和仓库操作都使用该账号。如在聊天软件内打开，可通过其菜单转到系统浏览器。"
+      ],
+      "check": "The registration page is CSSBuy. Registration is not a product order.",
+      "checkZh": "确认当前为 CSSBuy 注册页面；注册不等于下单。",
+      "image": "/assets/guide/phone-register-entry.webp",
+      "width": 374,
+      "height": 440,
+      "imageTitle": "Find the Join CSSBuy registration button",
+      "imageTitleZh": "找到 Join CSSBuy 注册按钮",
+      "imageAction": "Tap the green Join CSSBuy button (加入 CSSBuy in this earlier capture). The current header shows Join CSSBuy directly beside the currency control. The registration form opens on CSSBuy.",
+      "imageActionZh": "点击绿色 Join CSSBuy 按钮（此历史截图中显示为“加入 CSSBuy”）。当前页头直接在货币选项旁显示该按钮，注册表单将在 CSSBuy 打开。",
+      "imageCaption": "Earlier CSSBuy VIP phone browser capture · Chinese display example. The current header exposes the registration button directly. Open to enlarge.",
+      "imageCaptionZh": "本站早期手机浏览器截图 · 中文显示示例；当前页头已直接显示注册按钮。点击查看原图。",
+      "imageHotspots": [
+        {
+          "x": 52,
+          "y": 46,
+          "w": 47,
+          "h": 11,
+          "label": "2"
+        }
+      ]
+    },
+    {
+      "title": "Find the item with touch controls",
+      "titleZh": "用手机搜索并查看商品",
+      "where": "CSSBuy VIP · phone browser",
+      "whereZh": "CSSBuy VIP · 手机网页",
+      "actions": [
+        "Tap Spreadsheet in the menu, or enter the item name or exact Weidian item ID in the search box and tap Search.",
+        "Tap the product card. On the detail page, tap thumbnails and style photos; open a photo to inspect it closely. Scroll to the reference QC at the bottom.",
+        "Keep this detail page open in a browser tab so you can compare it with the CSSBuy listing."
+      ],
+      "actionsZh": [
+        "点击菜单中的 Spreadsheet，或在搜索框输入商品名、完整微店商品 ID 后点击 Search。",
+        "点击商品卡片进入详情页；点缩略图切换款式，打开图片查看细节，再向下查看底部的参考 QC。",
+        "保留这个商品详情页的浏览器标签，方便与 CSSBuy 商品页面对照。"
+      ],
+      "check": "The item ID and selected style match the find you intended to buy. Reference QC is not your own order QC.",
+      "checkZh": "核对商品 ID 和预期款式；参考 QC 不代表自己的订单质检。",
+      "image": "/assets/guide/phone-search-results.webp",
+      "width": 375,
+      "height": 812,
+      "imageTitle": "Search an exact item ID, then open the result",
+      "imageTitleZh": "输入完整商品 ID，再打开结果",
+      "imageAction": "Enter 7875678297 and tap Search (搜索). The result count shows one matching item; tap its product card below.",
+      "imageActionZh": "输入 7875678297 并点击 Search（搜索），确认结果是对应商品，再点下方卡片。",
+      "imageCaption": "CSSBuy VIP phone browser capture · Chinese display example. Open to enlarge.",
+      "imageCaptionZh": "CSSBuy VIP 手机浏览器实拍 · 中文显示示例，点击放大。",
+      "imageHotspots": [
+        {
+          "x": 5,
+          "y": 33,
+          "w": 72,
+          "h": 6,
+          "label": "1"
+        },
+        {
+          "x": 77,
+          "y": 33,
+          "w": 13,
+          "h": 6,
+          "label": "2"
+        },
+        {
+          "x": 5,
+          "y": 72,
+          "w": 43,
+          "h": 20,
+          "label": "3"
+        }
+      ]
+    },
+    {
+      "title": "Open the same item on CSSBuy",
+      "titleZh": "在手机上打开 CSSBuy 同款页面",
+      "where": "Product detail · Buy on CSSBuy",
+      "whereZh": "商品详情 · Buy on CSSBuy",
+      "actions": [
+        "Tap Buy on CSSBuy on the product detail page. The outgoing link keeps that product’s item ID and this site’s promotion parameter.",
+        "In the new CSSBuy browser tab, check the item title, seller and item ID. Tap the size and colour options; do not assume a style selected on this directory is already selected on CSSBuy.",
+        "After signing in, return to the same item page if CSSBuy sends you to its homepage."
+      ],
+      "actionsZh": [
+        "在商品详情页点击 Buy on CSSBuy，链接会携带该商品 ID 和本站推广参数。",
+        "在新打开的 CSSBuy 浏览器标签里核对标题、卖家和商品 ID，重新点击尺码、颜色选项；本站看过的款式不会自动替你在 CSSBuy 选中。",
+        "登录后如回到 CSSBuy 首页，请返回原来的同款商品标签。"
+      ],
+      "check": "Check the current variant price and quantity before continuing.",
+      "checkZh": "继续前核对当前规格价格与数量。",
+      "image": "/assets/guide/phone-buy-entry.webp",
+      "width": 375,
+      "height": 812,
+      "imageTitle": "Open the same-item CSSBuy link",
+      "imageTitleZh": "点击同款 CSSBuy 购买按钮",
+      "imageAction": "Inspect the style thumbnails, then tap Buy on CSSBuy (在 CSSBuy 上购买). Confirm size and colour again on CSSBuy; the directory does not select them for you.",
+      "imageActionZh": "查看款式缩略图后，点击 Buy on CSSBuy（在 CSSBuy 上购买）；到 CSSBuy 后仍需重新确认尺码和颜色。",
+      "imageCaption": "CSSBuy VIP phone browser capture · Chinese display example. Open to enlarge.",
+      "imageCaptionZh": "CSSBuy VIP 手机浏览器实拍 · 中文显示示例，点击放大。",
+      "imageHotspots": [
+        {
+          "x": 5,
+          "y": 46,
+          "w": 86,
+          "h": 7,
+          "label": "1"
+        },
+        {
+          "x": 5,
+          "y": 69,
+          "w": 85,
+          "h": 25,
+          "label": "2"
+        }
+      ]
+    },
+    {
+      "title": "Know the phone app’s navigation",
+      "titleZh": "认清手机应用里的入口",
+      "where": "Optional CSSBuy app · Home / Account",
+      "whereZh": "可选 CSSBuy 应用 · Home / Account",
+      "actions": [
+        "You can continue in the mobile browser. If you already use the official CSSBuy app, sign in with the same account; the app examples below are separate from the browser interface.",
+        "In this official historical app example, Home is at the bottom left and Account is at the bottom right. The search field accepts a keyword or URL.",
+        "Use Account for your own orders and warehouse records. Do not create a second account just to switch devices."
+      ],
+      "actionsZh": [
+        "可以继续用手机浏览器。如果已使用官方 CSSBuy 应用，请登录同一个账号；下方应用示例与手机网页是不同界面。",
+        "这张官方历史应用图的底部左侧是 Home，右侧是 Account；顶部输入框可输入关键词或链接。",
+        "通过 Account 查看自己的订单和仓库记录，不需要为了换设备重新注册。"
+      ],
+      "check": "The app and browser use the same account; current app labels may differ from the historical example.",
+      "checkZh": "确认应用与浏览器登录同一个账号；当前版本入口名称可能变化。",
+      "image": "/assets/guide/phone-home.webp",
+      "width": 483,
+      "height": 562,
+      "imageTitle": "Home, search and the bottom navigation",
+      "imageTitleZh": "首页搜索框与底部导航",
+      "imageAction": "Find the search field at the top and the Home / Account tabs along the bottom. This is an official app interface example, not the CSSBuy mobile website.",
+      "imageActionZh": "先认清顶部搜索框和底部 Home / Account。这是官方应用界面示例，不是 CSSBuy 手机网页。",
+      "imageCaption": "Official CSSBuy historical phone app example. Current labels can differ. Open to enlarge.",
+      "imageCaptionZh": "CSSBuy 官方历史手机应用界面示例，当前入口可能变化，点击放大。",
+      "imageHotspots": [
+        {
+          "x": 29,
+          "y": 11,
+          "w": 43,
+          "h": 5,
+          "label": "1"
+        },
+        {
+          "x": 29,
+          "y": 86,
+          "w": 43,
+          "h": 6,
+          "label": "2"
+        }
+      ]
+    },
+    {
+      "title": "Estimate shipping before buying",
+      "titleZh": "先在手机上估算运费",
+      "where": "CSSBuy app · Cost Estimate example",
+      "whereZh": "CSSBuy 应用 · Cost Estimate 示例",
+      "actions": [
+        "Open the shipping estimate tool on CSSBuy. In the app example, select the destination, enter a realistic weight and, when available, parcel dimensions.",
+        "Tap the restrictions that apply to the goods, then tap Estimate. An estimate without the right destination or restrictions may show unsuitable routes.",
+        "Keep the estimate separate from the final warehouse parcel quote: packing size and measured weight can change the charge."
+      ],
+      "actionsZh": [
+        "打开 CSSBuy 运费估算工具。按应用示例选择目的地，填写合理的重量；已知包裹尺寸时再填写长宽高。",
+        "点击与商品相符的限制类型，再点 Estimate；目的地或限制条件错误，可能显示不适用的线路。",
+        "估算与入库后的最终包裹报价分开看，包装尺寸和实测重量都会影响费用。"
+      ],
+      "check": "An estimate is not a reserved route or a paid shipping label.",
+      "checkZh": "估算结果不代表已经预订线路或支付运费。",
+      "image": "/assets/guide/phone-estimate.webp",
+      "width": 664,
+      "height": 1440,
+      "imageTitle": "The phone shipping calculator",
+      "imageTitleZh": "手机运费估算表单",
+      "imageAction": "Read the destination, weight, dimensions and restrictions fields, then the Estimate button. The publisher’s example values are illustrative.",
+      "imageActionZh": "依次查看目的地、重量、尺寸、限制选项和 Estimate 按钮；图中数值仅为官方示例。",
+      "imageCaption": "Official CSSBuy historical phone app example. Current labels can differ. Open to enlarge.",
+      "imageCaptionZh": "CSSBuy 官方历史手机应用界面示例，当前入口可能变化，点击放大。",
+      "imageHotspots": [
+        {
+          "x": 17,
+          "y": 38,
+          "w": 65,
+          "h": 7,
+          "label": "1"
+        },
+        {
+          "x": 17,
+          "y": 46,
+          "w": 65,
+          "h": 24,
+          "label": "2"
+        },
+        {
+          "x": 17,
+          "y": 81,
+          "w": 65,
+          "h": 5,
+          "label": "3"
+        }
+      ]
+    },
+    {
+      "title": "Confirm options and the first payment",
+      "titleZh": "核对规格并支付第一笔采购费用",
+      "where": "CSSBuy · mobile checkout",
+      "whereZh": "CSSBuy · 手机结算",
+      "actions": [
+        "On the live CSSBuy product page, choose the size, colour and quantity, add any necessary purchase note, and review the checkout summary.",
+        "Review the item price, seller’s delivery fee and selected services. Read the final total before authorizing payment.",
+        "If CSSBuy asks you to recharge first, use a currently offered method and return to the order afterwards. A balance top-up alone does not confirm that a product order was placed."
+      ],
+      "actionsZh": [
+        "在 CSSBuy 当前商品页选择尺码、颜色、数量，填写必要备注，再核对结算摘要。",
+        "查看商品价、卖家运费及已勾选服务，确认最终总额后再自行支付。",
+        "如要求先充值，请使用当前提供的方式，充值后返回订单继续；余额充值成功不等于商品已经下单。"
+      ],
+      "check": "Verify an actual order record after paying. Do not treat this recharge illustration as an order confirmation or a list of guaranteed payment methods.",
+      "checkZh": "付款后查看实际订单记录；这张充值图不是下单成功页，也不保证图中每种方式当前均可用。",
+      "image": "/assets/guide/phone-payment.webp",
+      "width": 664,
+      "height": 1440,
+      "imageTitle": "Identify the recharge stage before completing the order",
+      "imageTitleZh": "辨认充值页面，再返回完成订单",
+      "imageAction": "This mobile Recharge example shows the funding stage. Choose only a method offered on the live page, then return to the product order. This image is not a checkout receipt.",
+      "imageActionZh": "这张手机 Recharge 示例展示充值阶段；使用当前实际可用的方式，之后返回商品订单继续。配图不是结算成功凭证。",
+      "imageCaption": "Official CSSBuy historical phone app example. Current labels can differ. Open to enlarge.",
+      "imageCaptionZh": "CSSBuy 官方历史手机应用界面示例，当前入口可能变化，点击放大。",
+      "imageHotspots": [
+        {
+          "x": 31,
+          "y": 32,
+          "w": 35,
+          "h": 5,
+          "label": "1"
+        },
+        {
+          "x": 18,
+          "y": 39,
+          "w": 63,
+          "h": 34,
+          "label": "2"
+        }
+      ]
+    },
+    {
+      "title": "Follow the order from your phone",
+      "titleZh": "在手机里查看采购进度",
+      "where": "CSSBuy app · Orders",
+      "whereZh": "CSSBuy 应用 · Orders",
+      "actions": [
+        "Open your account’s order list. Locate the item by its order number or title instead of relying only on the photo.",
+        "The official app example includes All, Unpaid, Processing and In Warehouse tabs. Read the status on your own record before taking action.",
+        "Processing is not the same as In Warehouse. Wait for the actual received status before trying to submit an international parcel."
+      ],
+      "actionsZh": [
+        "进入账号订单列表，通过订单编号或标题找到商品，不要只凭缩略图判断。",
+        "官方应用示例有 All、Unpaid、Processing、In Warehouse 等标签，以自己订单的实际状态为准。",
+        "Processing 不等于 In Warehouse；商品实际入库后才进入国际包裹提交阶段。"
+      ],
+      "check": "Your own order status and selected variant are correct. This publisher screenshot shows an example order, not your purchase.",
+      "checkZh": "核对自己的订单状态和规格；官方图中的订单仅是示例。",
+      "image": "/assets/guide/phone-orders.webp",
+      "width": 664,
+      "height": 1440,
+      "imageTitle": "Read the status of the matching order",
+      "imageTitleZh": "核对对应订单的状态",
+      "imageAction": "Read the status tabs and the In Warehouse badge. An item still in Processing is not yet a received warehouse item.",
+      "imageActionZh": "查看订单状态标签和 In Warehouse 标记；Processing 的商品仍未完成入库。",
+      "imageCaption": "Official CSSBuy historical phone app example. Current labels can differ. Open to enlarge.",
+      "imageCaptionZh": "CSSBuy 官方历史手机应用界面示例，当前入口可能变化，点击放大。",
+      "imageHotspots": [
+        {
+          "x": 19,
+          "y": 38,
+          "w": 64,
+          "h": 5,
+          "label": "1"
+        },
+        {
+          "x": 69,
+          "y": 46,
+          "w": 20,
+          "h": 3,
+          "label": "2"
+        }
+      ]
+    },
+    {
+      "title": "Open your own QC photos",
+      "titleZh": "打开自己的 QC 照片",
+      "where": "CSSBuy app · order Photo action",
+      "whereZh": "CSSBuy 应用 · 订单 Photo 入口",
+      "actions": [
+        "On the matching warehouse order, open its photo action. In the official order-card example above, the control is labelled Photo.",
+        "Open each received photo on the phone and zoom in to inspect the size label, colour, stitching, condition and included accessories. Compare with the exact ordered variant.",
+        "If something is wrong, contact support from that same order before submitting the parcel. Ask about the applicable return window and any extra photos you need."
+      ],
+      "actionsZh": [
+        "在对应的入库订单里打开照片入口；上一张官方订单卡片示例中，该按钮叫 Photo。",
+        "在手机上逐张打开并放大实收照片，检查尺码标、颜色、做工、状态和配件，与已下单规格对照。",
+        "有问题先从该订单联系支持，再决定是否提交包裹；同时确认适用退换期限及需要补拍的细节。"
+      ],
+      "check": "Use the QC attached to your own order, not the reference photos in this directory.",
+      "checkZh": "使用自己订单下的 QC，不要把本站参考照片当作本次订单质检。",
+      "image": "/assets/guide/phone-orders.webp",
+      "width": 664,
+      "height": 1440,
+      "imageTitle": "Tap Photo on your received order",
+      "imageTitleZh": "在已入库订单上点击 Photo",
+      "imageAction": "Find the exact order and tap Photo. This screenshot demonstrates the real photo-entry button; your own QC images open after that tap.",
+      "imageActionZh": "找到对应订单，再点 Photo。配图展示实际照片入口，点击后才会打开自己的 QC 照片。",
+      "imageCaption": "Official historical app · Photo entry shown, not an opened QC viewer. Open to enlarge.",
+      "imageCaptionZh": "官方历史应用 · 配图为 Photo 照片入口，不是已打开的 QC 查看页，点击放大。",
+      "imageHotspots": [
+        {
+          "x": 61,
+          "y": 79,
+          "w": 14,
+          "h": 5,
+          "label": "1"
+        }
+      ]
+    },
+    {
+      "title": "Select received items for one parcel",
+      "titleZh": "在手机里选择要合箱的入库商品",
+      "where": "CSSBuy · warehouse selection",
+      "whereZh": "CSSBuy · 仓库选择",
+      "actions": [
+        "Open the warehouse or received-items list for your account. Select only the goods you want in this shipment.",
+        "Check every selected row, quantity and variant before continuing. On a small screen, scroll through the whole selection to catch items below the fold.",
+        "If an item is still being processed, or you are waiting for a QC answer, leave it out of this parcel."
+      ],
+      "actionsZh": [
+        "进入账号仓库或已入库商品列表，只勾选本次准备寄出的商品。",
+        "逐行核对勾选商品、数量和规格；手机屏幕较小，需要滚到列表底部检查有没有误选。",
+        "还在采购处理、或正在等待 QC 答复的商品，先不要加入本次包裹。"
+      ],
+      "check": "Only the intended received items are selected; review the complete live selection before submitting.",
+      "checkZh": "只勾选本次要寄出的已入库商品，提交前检查完整勾选清单。",
+      "image": "/assets/guide/phone-orders.webp",
+      "width": 664,
+      "height": 1440,
+      "imageTitle": "Select a received item from its order card",
+      "imageTitleZh": "从订单卡片勾选已入库商品",
+      "imageAction": "Check the In Warehouse badge first, then select the circle beside Orders. Continue to parcel submission on the live page after reviewing all selected items.",
+      "imageActionZh": "先核对 In Warehouse 状态，再点 Orders 左侧选择圆圈；检查全部勾选商品后，在实际页面继续提交包裹。",
+      "imageCaption": "Official historical app · Item-selection control shown. Open to enlarge.",
+      "imageCaptionZh": "官方历史应用 · 配图展示商品勾选控件，点击放大。",
+      "imageHotspots": [
+        {
+          "x": 12,
+          "y": 45,
+          "w": 9,
+          "h": 5,
+          "label": "1"
+        },
+        {
+          "x": 69,
+          "y": 46,
+          "w": 20,
+          "h": 3,
+          "label": "2"
+        }
+      ]
+    },
+    {
+      "title": "Check the full address on the phone form",
+      "titleZh": "在手机表单中核对完整收件地址",
+      "where": "CSSBuy · parcel destination",
+      "whereZh": "CSSBuy · 包裹收件地址",
+      "actions": [
+        "On the parcel destination form, choose or add the recipient address. Verify the name, destination, region, city, postal code, street and any unit number.",
+        "Check the telephone country code and number. Close the keyboard, then scroll back through all fields so you can see values hidden below it.",
+        "Save the address and confirm the selected address in the parcel summary; an address saved to the account is not necessarily the one selected for this shipment."
+      ],
+      "actionsZh": [
+        "在包裹收件地址表单中选择或新增地址，核对姓名、目的地、州省、城市、邮编、街道和门牌或公寓号。",
+        "核对电话区号和号码；收起键盘后再滚动检查所有字段，避免漏看被键盘遮住的内容。",
+        "保存后回到包裹摘要确认实际选中的地址；账号里保存了地址不代表本次包裹已选用。"
+      ],
+      "check": "The full address selected in the parcel summary is correct, including postal code and telephone country code.",
+      "checkZh": "包裹摘要中的实际地址、邮编和电话区号均正确。",
+      "image": "/assets/guide/phone-parcel-form.webp",
+      "width": 431,
+      "height": 499,
+      "imageTitle": "Edit and check the parcel address",
+      "imageTitleZh": "点击 Edit，核对包裹收件地址",
+      "imageAction": "Tap Edit beside Delivery address, save your full address, then check the selected address here. The publisher’s example name, phone and address values have been redacted.",
+      "imageActionZh": "点击 Delivery address 右侧的 Edit，保存完整收件地址后，再回到这里核对实际选中地址。官方示例中的姓名、电话和地址值已遮挡。",
+      "imageCaption": "Official CSSBuy historical phone app example. Current labels can differ. Open to enlarge.",
+      "imageCaptionZh": "CSSBuy 官方历史手机应用界面示例，当前入口可能变化，点击放大。",
+      "imageHotspots": [
+        {
+          "x": 29,
+          "y": 42,
+          "w": 45,
+          "h": 5,
+          "label": "1"
+        },
+        {
+          "x": 29,
+          "y": 48,
+          "w": 45,
+          "h": 14,
+          "label": "2"
+        }
+      ]
+    },
+    {
+      "title": "Choose the route and pay international shipping",
+      "titleZh": "选择线路并确认国际运费",
+      "where": "CSSBuy · mobile parcel confirmation",
+      "whereZh": "CSSBuy · 手机包裹确认",
+      "actions": [
+        "Compare the routes actually offered for the selected destination and goods. Review weight rules, size limits, restrictions and the quoted charge.",
+        "Choose the required packing options. Scroll to the bottom of the phone form to review service selections and the final total before submitting.",
+        "Follow CSSBuy’s actual quote and payment instructions. If the measured parcel price changes, review the new amount rather than relying on the earlier estimate."
+      ],
+      "actionsZh": [
+        "比较当前目的地和商品实际可用的线路，查看计重方式、尺寸限制、货物限制和报价。",
+        "选择所需包装；在手机表单中滚到底部，再次核对服务勾选和最终总额。",
+        "按照 CSSBuy 实际报价与付款提示操作；如实测后费用变化，重新核对金额，不沿用之前估算。"
+      ],
+      "check": "International shipping is a separate payment stage. Confirm the current route, selected services and actual total before authorizing payment.",
+      "checkZh": "国际运费与商品采购分开支付，自行付款前核对当前线路、所选服务和实际总额。",
+      "image": "/assets/guide/phone-parcel-form.webp",
+      "width": 431,
+      "height": 499,
+      "imageTitle": "Edit the shipping method and review the payable total",
+      "imageTitleZh": "选择 Shipping method，再核对待付金额",
+      "imageAction": "Tap Edit beside Shipping method. Review the available route and packing options, then check the total beside Pay now. This is a historical submission form, not proof of payment.",
+      "imageActionZh": "点击 Shipping method 右侧 Edit，核对可用线路与包装选项，再查看 Pay now 旁的总额。这是历史提交表单，不是付款成功凭证。",
+      "imageCaption": "Official CSSBuy historical phone app example. Current labels can differ. Open to enlarge.",
+      "imageCaptionZh": "CSSBuy 官方历史手机应用界面示例，当前入口可能变化，点击放大。",
+      "imageHotspots": [
+        {
+          "x": 29,
+          "y": 63,
+          "w": 45,
+          "h": 6,
+          "label": "1"
+        },
+        {
+          "x": 29,
+          "y": 76,
+          "w": 45,
+          "h": 12,
+          "label": "2"
+        },
+        {
+          "x": 28,
+          "y": 91,
+          "w": 47,
+          "h": 6,
+          "label": "3"
+        }
+      ]
+    },
+    {
+      "title": "Track the parcel and ask about a specific order",
+      "titleZh": "在手机里追踪包裹并联系订单支持",
+      "where": "CSSBuy · Parcels / order support",
+      "whereZh": "CSSBuy · Parcels / 订单支持",
+      "actions": [
+        "After CSSBuy creates the parcel record, open your parcel list and select the matching parcel number to view its current tracking information.",
+        "For an item issue, return to the matching order’s Contact support action. Include the order number and a clear description; keep the reply with that order.",
+        "For a parcel issue, include the parcel number instead. A product’s seller-delivery tracking is different from the later international parcel tracking."
+      ],
+      "actionsZh": [
+        "CSSBuy 生成包裹记录后，进入包裹列表，按对应包裹编号查看当前物流信息。",
+        "商品问题从对应订单的 Contact support 入口询问，写清订单编号和问题，并保留回复记录。",
+        "包裹问题提供包裹编号；卖家发往仓库的物流，与之后的国际包裹物流是不同记录。"
+      ],
+      "check": "Keep the item order number and international parcel number separate when checking tracking or asking support.",
+      "checkZh": "查询物流或联系支持时，区分商品订单编号与国际包裹编号。",
+      "image": "/assets/guide/phone-orders.webp",
+      "width": 664,
+      "height": 1440,
+      "imageTitle": "Use Track or Contact support on the correct record",
+      "imageTitleZh": "从对应记录打开 Track 或 Contact support",
+      "imageAction": "The order card has Track and Contact support buttons. Track on an item can refer to seller-to-warehouse movement; for international delivery, open the separate parcel record.",
+      "imageActionZh": "订单卡片上有 Track 和 Contact support；商品订单上的 Track 可能指卖家到仓库的物流，国际运输应查看独立包裹记录。",
+      "imageCaption": "Official historical app · Tracking and support entry buttons, not a delivery confirmation. Open to enlarge.",
+      "imageCaptionZh": "官方历史应用 · 配图为物流与客服入口，不是签收确认页，点击放大。",
+      "imageHotspots": [
+        {
+          "x": 75,
+          "y": 79,
+          "w": 15,
+          "h": 5,
+          "label": "1"
+        },
+        {
+          "x": 35,
+          "y": 79,
+          "w": 26,
+          "h": 5,
+          "label": "2"
+        }
+      ]
+    }
+  ]
+}

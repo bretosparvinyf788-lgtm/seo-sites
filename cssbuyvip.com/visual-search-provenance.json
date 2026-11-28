@@ -1,0 +1,12 @@
+{
+  "date": "2026-11-27",
+  "index_source": "Verified4771-ID CLIP index from same catalogue snapshot in usfanssheetdesk repository; no other-brand UI/guide used",
+  "id_set_matches_catalogue": true,
+  "image_basis": "Source catalogue reference covers; CSSBuy catalogue may display original carousel covers instead",
+  "model": "Xenova/clip-vit-base-patch32",
+  "revision": "6b7c523703ae26e39be4b03774966f8571c7f523",
+  "runtime": "onnxruntime-web1.23.2",
+  "user_photo_transport": "Local browser preprocessing and inference; no image upload request",
+  "model_first_use_mb": 90,
+  "limits": "Similarity heuristic, no identity/authenticity guarantee. At most120results; tops grouped, trousers and shoes separate. Browser model download required."
+}

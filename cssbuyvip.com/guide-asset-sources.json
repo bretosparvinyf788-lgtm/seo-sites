@@ -1,0 +1,184 @@
+[
+  {
+    "step": 2,
+    "source": "https://m.cssbuy.com/skin/images/shipforme/step1.jpg",
+    "local": "/assets/guide/official-step-2.webp",
+    "width": 958,
+    "height": 548,
+    "masks": [],
+    "kind": "Official historical desktop screenshot"
+  },
+  {
+    "step": 3,
+    "source": "https://m.cssbuy.com/skin/images/shipforme/buystep3.png",
+    "local": "/assets/guide/official-step-3.webp",
+    "width": 486,
+    "height": 279,
+    "masks": [],
+    "kind": "Official historical desktop screenshot"
+  },
+  {
+    "step": 5,
+    "source": "https://m.cssbuy.com/skin/images/shipforme/buystep5.png",
+    "local": "/assets/guide/official-step-5.webp",
+    "width": 486,
+    "height": 280,
+    "masks": [],
+    "kind": "Official historical desktop screenshot"
+  },
+  {
+    "step": 6,
+    "source": "https://m.cssbuy.com/skin/images/shipforme/buystep6.png",
+    "local": "/assets/guide/official-step-6.webp",
+    "width": 996,
+    "height": 200,
+    "masks": [],
+    "kind": "Official process diagram"
+  },
+  {
+    "step": 7,
+    "source": "https://m.cssbuy.com/skin/images/shipforme/buystep5_1.png",
+    "local": "/assets/guide/official-step-7.webp",
+    "width": 996,
+    "height": 181,
+    "masks": [],
+    "kind": "Official process diagram"
+  },
+  {
+    "step": 8,
+    "source": "https://m.cssbuy.com/skin/images/shipforme/buystep7.png",
+    "local": "/assets/guide/official-step-8.webp",
+    "width": 996,
+    "height": 491,
+    "masks": [],
+    "kind": "Official historical desktop screenshot"
+  },
+  {
+    "step": 10,
+    "source": "https://m.cssbuy.com/skin/images/shipforme/buystep8.png",
+    "local": "/assets/guide/official-step-10.webp",
+    "width": 1116,
+    "height": 750,
+    "masks": [
+      [
+        302,
+        288,
+        490,
+        309
+      ],
+      [
+        368,
+        328,
+        492,
+        344
+      ],
+      [
+        368,
+        352,
+        450,
+        368
+      ],
+      [
+        368,
+        377,
+        435,
+        394
+      ],
+      [
+        368,
+        401,
+        450,
+        419
+      ],
+      [
+        368,
+        426,
+        437,
+        444
+      ],
+      [
+        368,
+        451,
+        483,
+        467
+      ]
+    ],
+    "kind": "Official historical desktop screenshot"
+  },
+  {
+    "step": 11,
+    "source": "https://m.cssbuy.com/skin/images/shipforme/buystep9.png",
+    "local": "/assets/guide/official-step-11.webp",
+    "width": 1116,
+    "height": 750,
+    "masks": [],
+    "kind": "Official historical desktop screenshot"
+  },
+  {
+    "step": 12,
+    "source": "https://m.cssbuy.com/skin/images/shipforme/buystep11.png",
+    "local": "/assets/guide/official-step-12.webp",
+    "width": 996,
+    "height": 520,
+    "masks": [],
+    "kind": "Official historical desktop screenshot"
+  },
+  {
+    "device": "mobile",
+    "verified": "2026-11-27",
+    "kind": "Official publisher historical mobile app illustrations, not current mobile-browser captures",
+    "source_pages": [
+      "https://m.cssbuy.com/appdownload.html",
+      "https://play.google.com/store/apps/details?id=cn.onebound.cssbuy&pli=1"
+    ],
+    "assets": [
+      "phone-home.webp",
+      "phone-estimate.webp",
+      "phone-payment.webp",
+      "phone-orders.webp",
+      "phone-support.webp"
+    ],
+    "unverified_forms": [
+      "registration",
+      "product checkout",
+      "QC viewer",
+      "warehouse selection",
+      "address",
+      "route selection",
+      "shipping payment confirmation",
+      "parcel tracking"
+    ]
+  },
+  {
+    "device": "mobile",
+    "source": "https://m.cssbuy.com/skin/images/appdownload/app2.png",
+    "local": "/assets/guide/phone-parcel-form.webp",
+    "kind": "Official historical mobile app parcel submission screenshot",
+    "masks": [
+      [
+        126,
+        241,
+        317,
+        306
+      ]
+    ],
+    "mask_reason": "Remove publisher example name, telephone and full address; retain field titles and Edit buttons"
+  },
+  {
+    "device": "mobile",
+    "source": "https://cssbuyvip.bretosparvinyf788.chatgpt.site",
+    "kind": "Actual 390x844 phone viewport captures, Chinese browser display",
+    "verified": "2026-11-27",
+    "assets": [
+      "phone-register-entry.webp",
+      "phone-search-results.webp",
+      "phone-buy-entry.webp"
+    ],
+    "ui_interactions": [
+      "menu open and Join CSSBuy entry",
+      "exact ID search7875678297",
+      "same-item product purchase link"
+    ],
+    "sensitive_data": "none"
+  }
+]

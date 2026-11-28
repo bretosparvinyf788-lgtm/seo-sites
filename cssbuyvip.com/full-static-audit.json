@@ -1,0 +1,27 @@
+{
+  "date": "2026-11-28",
+  "scope": "Full local source integrity and generated route/link checks, not live inventory or a paid transaction test",
+  "counts": {
+    "products": 4771,
+    "source_records": 4777,
+    "legacy_routes": 14,
+    "platform_urls": 71565,
+    "carousel_images": 40008,
+    "style_images": 119108,
+    "no_styles": 31,
+    "no_qc": 3,
+    "unknown_price": 1
+  },
+  "unique_internal_assets_and_routes_checked": 24,
+  "failures": [],
+  "visual_index": {
+    "count": 4771,
+    "bytes": 2442752,
+    "sha256": "88b91af6c38020064ffb7e1fa6f29009ebb54e6c1899d32a98da1dcd54dcb2fa"
+  },
+  "source_limitations": {
+    "no_qc": 3,
+    "no_styles": 31,
+    "all_images_contact_qr_content_audited": false
+  }
+}

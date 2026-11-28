@@ -1,0 +1,247 @@
+{
+  "date": "2026-11-28",
+  "scope": "Full static source audit; not a live inventory, payment, image-content audit or verification of every external destination",
+  "stats": {
+    "products": 4771,
+    "source_records": 4777,
+    "zero_price": 1,
+    "no_qc": 3,
+    "legacy_routes": 14,
+    "no_styles": 31,
+    "carousel_images": 40008,
+    "style_images": 119108,
+    "platform_links": 71565,
+    "html_files": 4801
+  },
+  "failures": [],
+  "partial_features": {
+    "guide_screenshots": "All12phone steps have relevant actual interface illustrations. Some are official historical examples/entry screens, not current authenticated downstream forms. Desktop2verified screenshot gaps explicitly labelled.",
+    "image_contact_qr_audit": "Incomplete across all40008carousel+119108style andQC photos",
+    "translation_quality": "24languages populated; additional languages machine-translated with selected editorial corrections, not fully native-proofread",
+    "production": "Formal custom domain/GitHub→Cloudflare Pages/GSC/Bing release not done;GAconfig-only disabled"
+  },
+  "translation_keys": {
+    "de": 769,
+    "fr": 770,
+    "es": 769,
+    "it": 769,
+    "pt": 769,
+    "nl": 769,
+    "pl": 769,
+    "sv": 769,
+    "da": 769,
+    "no": 769,
+    "fi": 769,
+    "cs": 769,
+    "ro": 769,
+    "hu": 769,
+    "el": 769,
+    "tr": 769,
+    "ru": 769,
+    "uk": 769,
+    "ar": 769,
+    "ja": 769,
+    "ko": 769,
+    "zh-CN": 498,
+    "th": 769
+  },
+  "browser": {
+    "home": {
+      "categories": 10,
+      "featured_products": 12,
+      "faq_items": 12,
+      "category_counts": 0,
+      "horizontal_overflow": false
+    },
+    "categories": {
+      "all_ten_visited": true,
+      "counts": [
+        1404,
+        1114,
+        309,
+        521,
+        606,
+        64,
+        233,
+        8,
+        47,
+        468
+      ],
+      "initial_limit": 48,
+      "load_more": 96,
+      "sort_low_high": "passed",
+      "grid_preference_persistence": "passed",
+      "phone_four_columns_no_overflow": true
+    },
+    "search": {
+      "exact_id": "7875678297→one correct product",
+      "keyword_and_empty_state": "passed",
+      "pasted_weidian_url": "one correct product after repair"
+    },
+    "locales": {
+      "all_24_selections": "passed; full native names; matching navigation; Arabic RTL",
+      "all_26_currency_selections": "passed display conversion",
+      "currency_rates": "Fixed indicative estimates, not live settlement rates",
+      "full_content_translations": false
+    },
+    "products": {
+      "original_carousel": "passed on sample",
+      "sku_switch": "passed",
+      "zoom_open_escape": "passed",
+      "zero_price": "Check current price, not free",
+      "source_qc_gap": "honest unavailable message",
+      "legacy_route": "source-2978→7757384431 correct same-item referral"
+    },
+    "platform_picker": {
+      "platforms": 15,
+      "icons_loaded": 15,
+      "CSSBuy_first": true,
+      "search_and_empty_state": "passed",
+      "copied_cssbuy_url": "https://www.cssbuy.com/item-micro-7875678297.html?promotionCode=b949d0d72e6d7314",
+      "escape_close": "passed",
+      "phone_dialog_client_and_scroll_width": 368
+    },
+    "faq": {
+      "all_12_click_open": "passed",
+      "keyboard_enter_close": "passed"
+    },
+    "guide": {
+      "steps": 12,
+      "image_placements": 10,
+      "desktop_phone_and_auto": "repaired and passed",
+      "phone_specific_instruction_tips": 12,
+      "english_chinese": "passed",
+      "phone_screenshots_complete": false,
+      "registration_remark_screenshot_gaps": 2
+    },
+    "mobile": {
+      "widths": [
+        390,
+        320
+      ],
+      "complete_menu": "passed;4navigationlinks,24languages,26currencies,adjacentJoinCSSBuy",
+      "image_and_platform_modal": "passed",
+      "guide_auto_phone": "passed",
+      "overflow": false
+    },
+    "analytics": "Disabled in preview, as requested",
+    "console": "No application errors observed; browser-extension metadata errors excluded",
+    "live_scope": "Private preview returned a ChatGPT sign-in gate in the QA browser; interaction tests used the matching local source, not an authenticated live-session test",
+    "registration_scope": "Registration href exactly matches user supplied https://cssb.uy/2JLm; shortlink final redirect was not independently verified this turn",
+    "payment_scope": "No purchase, registration submission, payment or commission-credit transaction performed",
+    "final_regression": {
+      "guide_languages": "All24choices switch real12-step guide titles/instructions. French separately reviewed; other23batch checked.",
+      "phone": "390pxguide12independentmobile steps12images0focuscrops;390/320nopageoverflow;visiblelanguage/currency/Join;Escclosesmenu;ArabicFAQtranslatedandnooverflow",
+      "pagination": "Lastpage100contains19items;current/totalpagecorrect",
+      "missing_data": "Unknownprice7734057264Checkcurrentprice;missingQC7738755306explicittranslatednotice",
+      "external_transactions": "Noactualregistration/order/paymentexecuted. Linkstructureschecked;notall externaldestinationsliveverified"
+    }
+  },
+  "fixed": [
+    "Added no-referrer policy to list/QC/zoom images; all12featured images then loaded successfully",
+    "Guide Computer/Phone/Auto now changes actual view and adds12phone-specific instruction notes; historical desktop images stay explicitly labelled",
+    "Pasted Weidian item URLs resolve to their exact numeric item ID",
+    "Single-result label uses product rather than products",
+    "Guide validator preserves curated content and phone instructions"
+  ],
+  "mobile_guide_revision": {
+    "request": "Every step needs an operation image",
+    "steps": 12,
+    "image_placements": 12,
+    "unique_images": 8,
+    "own_site_phone_captures": 3,
+    "official_historical_app_sources": 5,
+    "callouts": 26,
+    "desktop_image_overlap": 0,
+    "missing_image_panels": 0,
+    "browser_qa": "Passed12/12image loading,auto390/320,no overflow,manual desktop/phone switch",
+    "scope": "Real entry controls and historical form examples; not all images show the downstream screen or a completed transaction"
+  },
+  "mobile_header_revision": {
+    "status": "passed",
+    "controls_always_visible": true,
+    "widths": [
+      320,
+      390
+    ],
+    "language_options": 24,
+    "currency_options": 26,
+    "language_panel_columns": 2,
+    "language_panel_scrolls": true,
+    "currency_switch_updates_prices": true,
+    "long_label_and_RTL": "passed",
+    "header_menu_links": 4,
+    "menu_closes_when_picker_opens": true,
+    "escape_closes_picker": true,
+    "desktop_preserved": true
+  },
+  "pagination_revision": {
+    "status": "passed",
+    "catalog_pages": 100,
+    "page_size": 48,
+    "pages1and2_no_overlap": true,
+    "last_page_count": 19,
+    "refresh_preserves_page": true,
+    "sort_resets_page": true,
+    "search_preserves_q_and_sort": true,
+    "category_page2": "48items,page2of30for1404unique source-mapped shoes",
+    "single_page_and_invalid_page": "q7875678297,page999→1,one result",
+    "empty_result_has_no_pagination": true,
+    "narrow_widths": [
+      320,
+      390
+    ],
+    "overflow": false,
+    "all24_control_translations": true
+  },
+  "previous_feature_gaps_before_optimization": {
+    "photo_search": "Unavailable; honest placeholder, not matching",
+    "full_faq_guide_languages": "English/Simplified Chinese;22additional detailed language translations pending",
+    "guide_screenshots": "Phone screenshots and2current action screenshots pending",
+    "image_contact_qr_audit": "Incomplete across all source photos",
+    "production": "Custom domain/GitHub→Cloudflare Pages/GSC/Bing release not done;GAconfig-only disabled"
+  },
+  "optimization": {
+    "image_search": "Real4771-item local CLIP matching, same-category grouping, up to120matches,48per numberedpage. Browser verifiedshoe120+pants120, page3=24, currency switch during processing preserved results. First-use90MBmodelcached.",
+    "data_loading": "Guide/category index avoid catalogue fetch. Selected-language shard only. Versioned cacheable catalogue/guides/locales/galleries/visual index.",
+    "search": "Numeric item ID, keyword, pastedWeidian andCSSBuyitem-microlinks. Browser verifiedCSSBuyURL7875678297onecorrectresult.",
+    "accessibility": "ZoomLeft/Rightnavigation,Escapeclosesmodalandmobilemenu,ARIAmenulabels",
+    "guide_images": "Fullnaturalratios, nofocuscrops"
+  },
+  "latest_full_regression": {
+    "source_base": "62cd88a5f432efd1392681099a2027f6e606bc60",
+    "fixes": [
+      "404document keeps functional header and translated return link",
+      "Unknown routes no longer show catalogue results",
+      "Initial currency changes wait for data before rendering",
+      "Page loading failure exposes translated retry button",
+      "Unreadable images rejected before model initialization; no broken preview or unhelpful retry",
+      "Visual matches stay within detected category family; high-score outliers excluded",
+      "Reviewed operational upload/change/error labels in23languages;filled missing catalogue introduction;correctedChineseheadingandfooter",
+      "Navigation active state usesaria-current"
+    ],
+    "browser": {
+      "home": "12featured,10categoryentries,12FAQallopened",
+      "categories": "All10visited,counts1404,1114,309,521,606,64,233,8,47,468",
+      "currencies": "All26clicked and formatted item prices changed without changing language",
+      "languages": "All24guide modes selected and12steps rendered",
+      "pagination": "Page1and2each48,zerooverlap;page100=19;searchhoodie304andpriceasc;3columns;emptysearchnopages;single-resultpage999clampedto1",
+      "detail": "ID7875678297:14carousel,40styles;styleupdatesmain;zoomArrowRight+Escape;15platformsCSSBuyfirst;clipboardcopyexactIDandb949promotion",
+      "phone": "390/320nohorizontaloverflow;44pxcameraquicklink;menufiveentriesandEscapeclose;independent12phoneimages;Computer/Autotoggle12steps;ArabicRTLnooverflow",
+      "image_search": "CorruptJPEGgivesreaderror,previewhidden,retryhidden,resultsnotshown;subsequenttrousers120pantsmatches;replacewithshoes120shoematches;Chinese/EURrerenderpreservespreview;lastpage24",
+      "error_document": "/404.html ChinesePageNotFound,language/currencymenusfunctional;previewserverunknownpathrespondsCannotGET,soformalhostfallbacknotprovenhere"
+    },
+    "mathematical_checks": [
+      "No-evidencequeryreturnsempty",
+      "High-scoreothercategoryoutlierexcluded",
+      "Compatibletopsremainonefamily",
+      "Resultslimitedto120"
+    ],
+    "limits": [
+      "Externalpurchase/registrationlinkstructuresverified;noactualaccountcreationorpaidtransaction",
+      "Fullimagecontact/QRcontentauditincomplete",
+      "Machine-translatedguide/FAQnotfullynativeproofread",
+      "Formalcssbuyvip.com/CloudflarePages/GSC/Bing/productionAnalyticsnotreleased"
+    ]
+  }
+}
